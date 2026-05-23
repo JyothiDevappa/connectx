@@ -3,164 +3,367 @@
 @section('content')
 
 <style>
-	.media-wrapper img {
-    filter: none !important;
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-banner-one{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    /* pushes content below navbar */
+    padding: 160px 0 100px;
+
+    background: #000;
 }
+
+/* =========================
+   BACKGROUND IMAGE
+========================= */
+.hero-banner-one .hero-bg {
+    position: absolute;
+    inset: 0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ),
+    url('{{ asset("images/media/img_05.jpg") }}');
+
+    /* This ensures the image fills the area */
+    background-size: cover !important;
+
+    /* CHANGE THIS: 'top' anchors the image to the top edge */
+    background-position: top center;
+
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.hero-content{
+    position: relative;
+    z-index: 2;
+
+    /* moves text slightly down */
+    margin-top: 40px;
+}
+
+.hero-title{
+    font-size: 72px;
+    line-height: 1.08em;
+    font-weight: 800;
+    color: #fff;
+
+    margin-bottom: 28px;
+
+    letter-spacing: -2px;
+    max-width: 850px;
+}
+
+.hero-text{
+    font-size: 20px;
+    line-height: 1.9em;
+    color: rgba(255,255,255,0.88);
+
+    max-width: 760px;
+
+    margin-bottom: 45px;
+
+    font-weight: 400;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-btn-group{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.theme-btn-one{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+    color: #000;
+
+    padding: 18px 40px;
+    border-radius: 60px;
+
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.theme-btn-one:hover{
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.theme-btn-two{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #fff;
+    color: #fff;
+
+    padding: 18px 40px;
+    border-radius: 60px;
+
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.theme-btn-two:hover{
+    background: #fff;
+    color: #000;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px){
+
+    .hero-banner-one{
+        min-height: auto;
+        padding: 150px 0 90px;
+    }
+
+    .hero-content{
+        margin-top: 20px;
+    }
+
+    .hero-title{
+        font-size: 54px;
+        line-height: 1.15em;
+    }
+
+    .hero-text{
+        font-size: 18px;
+        line-height: 1.8em;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px){
+
+    .hero-banner-one{
+        padding: 130px 0 80px;
+    }
+
+    .hero-content{
+        margin-top: 10px;
+    }
+
+    .hero-title{
+        font-size: 40px;
+        line-height: 1.2em;
+        letter-spacing: -1px;
+    }
+
+    .hero-text{
+        font-size: 16px;
+        line-height: 1.8em;
+        margin-bottom: 35px;
+    }
+
+    .hero-btn-group{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .theme-btn-one,
+    .theme-btn-two{
+        width: 100%;
+        justify-content: center;
+        padding: 16px 24px;
+    }
+}
+
 
 .growth-points{
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 22px;
+    margin-top: 35px;
 }
 
 .growth-item{
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
+    position: relative;
+    padding-left: 48px;
 }
 
 .growth-item span{
-    width: 10px;
-    height: 10px;
-    background: #000;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
-    margin-top: 10px;
-    flex-shrink: 0;
+    background: #76583b; /* your bg color */
+}
+
+/* TICK */
+.growth-item span::before{
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #fff; /* white tick */
+    font-size: 11px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .growth-item p{
     margin: 0;
     font-size: 20px;
     line-height: 1.7;
+    font-weight: 500;
+    color: #111;
 }
 
-.closing-text{
-    font-size: 20px;
-    line-height: 1.8;
-    opacity: 0.8;
+/* ADD SPACE BEFORE FOOTER */
+
+.text-feature-one{
+    padding-bottom: 120px;
 }
 
-.border-radius-20{
-    border-radius: 20px;
+/* Mobile */
+@media (max-width: 991px){
+    .text-feature-one{
+        padding-bottom: 80px;
+    }
 }
-	</style>
+
+/* 1. Make the card a container and round the corners */
+.card-custom {
+    position: relative;
+    border-radius: 24px; /* The rounded look from the YC site */
+    overflow: hidden;    /* This is MUST - it clips the image to the radius */
+    width: 100%;
+    display: block;
+}
+
+/* 2. Fix the Image Wrapper */
+.card-img-wrapper {
+    position: relative;
+    width: 100%;
+    line-height: 0; /* Removes tiny gap at bottom of image */
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 3. Your Overlay: Moving it INSIDE the card */
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%; /* Covers the bottom half for readability */
+    background: linear-gradient(to top, 
+        rgba(0, 0, 0, 0.9) 0%, 
+        rgba(0, 0, 0, 0.5) 40%, 
+        transparent 100%);
+    z-index: 1;
+}
+
+/* 4. Moving the Text INSIDE the card at the bottom */
+.card-text1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px; /* Space from the bottom edge */
+    z-index: 2; /* Sits on top of the overlay */
+    text-align: center;
+}
+
+.card-text1 p {
+    color: #ffffff !important; /* Forces text to be white */
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+}
+</style>
 
 
+<!-- HERO SECTION START -->
+<section class="hero-banner-one">
 
-<div class="hero-banner-six pt-170 md-pt-110 position-relative">
-    <div class="container position-relative">
-        <div class="row justify-content-between">
+    <!-- Background -->
+    <div class="hero-bg"></div>
 
-            <div class="col-md-6 wow fadeInLeft">
-                <div class="pt-20 pb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-lg-9 col-md-11">
 
-                    <h1 class="hero-heading fw-bold">
-                        India’s Leadership Network for Speakers, Influencers & Professionals
+                <div class="hero-content">
+
+                    <h1 class="hero-title">
+                        Partner With the Future of Influence
                     </h1>
 
-                    <p class="text-lg pt-35 lg-pt-30 pb-35 lg-pb-20">
-                        A curated ecosystem where voices, ideas, and opportunities connect across industries.
+                    <p class="hero-text">
+                        Young Chanakya ConnectX collaborates with brands, media platforms, startups, studios, communities, and ecosystem partners to build one of the world’s fastest-growing creator and influencer networks.
                     </p>
 
-                    <div class="d-flex flex-wrap">
-                        <a href="{{ route('contact') }}" class="btn-eighteen tran3s me-4 mt-10">
-                            Join ConnectX
+                    <div class="hero-btn-group">
+
+                        <a href="#" class="theme-btn-one">
+                            Collaborate With ConnectX
                         </a>
 
-                        <a href="{{ route('contact') }}" class="btn-nineteen tran3s mt-10">
-                            Become a Speaker
+                        <a href="#" class="theme-btn-two">
+                            Become a Partner
                         </a>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-md-6 d-md-flex justify-content-end wow fadeInRight">
-                <div class="media-wrapper position-relative ms-lg-5">
-
-                    <!-- <img 
-                        src="{{ asset('images/lazy.svg') }}" 
-                        data-src="{{ asset('images/assets/screen_22.svg') }}" 
-                        alt="" 
-                        class="lazy-img shapes screen_01"
-                    >
-
-                    <img 
-                        src="{{ asset('images/lazy.svg') }}" 
-                        data-src="{{ asset('images/assets/screen_23.png') }}" 
-                        alt="" 
-                        class="lazy-img shapes screen_02"
-                    >
-
-                    <img 
-                        src="{{ asset('images/lazy.svg') }}" 
-                        data-src="{{ asset('images/shape/shape_43.svg') }}" 
-                        alt="" 
-                        class="lazy-img shapes bg-shape"
-                    > -->
-
-                </div>
-            </div>
-
-        </div>
-
-        <!-- <div class="row">
-            <div class="col-12">
-
-                <div class="partner-logo-one pt-60 md-pt-50">
-
-                    <p class="fw-500 text-dark mb-40">
-                        <span class="text-decoration-underline">Join 27,000+</span>
-                        professionals & brands already growing with ConnectX
-                    </p>
-
-                    <div class="partner-slider-one">
-
-                        <div class="item">
-                            <div class="logo d-flex align-items-center">
-                                <img src="{{ asset('images/logo/media_03.png') }}" alt="">
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="logo d-flex align-items-center">
-                                <img src="{{ asset('images/logo/media_04.png') }}" alt="">
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="logo d-flex align-items-center">
-                                <img src="{{ asset('images/logo/media_05.png') }}" alt="">
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="logo d-flex align-items-center">
-                                <img src="{{ asset('images/logo/media_01.png') }}" alt="">
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="logo d-flex align-items-center">
-                                <img src="{{ asset('images/logo/media_02.png') }}" alt="">
-                            </div>
-                        </div>
 
                     </div>
 
                 </div>
 
-            </div> -->
+            </div>
         </div>
     </div>
 
+</section>
+<!-- HERO SECTION END -->
 
 
 
-
-
-    <!-- SECOND SECTION -->
-
+<!-- SECOND SECTION -->
 
 <div class="text-feature-one mt-150 lg-mt-80">
     <div class="container">
@@ -171,45 +374,51 @@
             <div class="col-lg-6 wow fadeInLeft">
 
                 <div class="title-one">
-                    <h2>Why Most People Don’t Grow Fast Enough</h2>
+                    <div class="upper-title">About ConnectX</div>
+                    <h2>Young Chanakya ConnectX</h2>
                 </div>
 
                 <p class="text-lg mt-40 lg-mt-30 mb-35">
-                    Growth is not limited by talent. It is limited by access.
+                    Young Chanakya ConnectX is a digital-first creator ecosystem designed to bring influencers, content creators, public voices, and storytellers into one global network.
                 </p>
 
                 <div class="growth-points">
 
                     <div class="growth-item">
                         <span></span>
-                        <p>No access to the right network</p>
+                        <p>Collaborate</p>
                     </div>
 
                     <div class="growth-item">
                         <span></span>
-                        <p>Limited exposure to real-world thinking</p>
+                        <p>Build visibility</p>
                     </div>
 
                     <div class="growth-item">
                         <span></span>
-                        <p>Learning without practical application</p>
+                        <p>Speak on podcasts</p>
                     </div>
 
                     <div class="growth-item">
                         <span></span>
-                        <p>No direct connection to industry leaders</p>
+                        <p>Attend exclusive events</p>
+                    </div>
+
+                    <div class="growth-item">
+                        <span></span>
+                        <p>Share stories in front of audience & camera</p>
+                    </div>
+
+                    <div class="growth-item">
+                        <span></span>
+                        <p>Access creator lounges & networking rooms</p>
                     </div>
 
                 </div>
 
-                <p class="closing-text mt-45">
-                    Most people are surrounded by the same circle,
-                    the same ideas, and the same limitations.
-                </p>
-
-                <h5 class="fw-bold mt-25">
-                    Real growth begins when you enter the right network.
-                </h5>
+                <a href="#" class="btn-four mt-40">
+                    Join Connectx
+                </a>
 
             </div>
 
@@ -235,195 +444,993 @@
 
 
 
+<!-- third section -->
 
 
-<div class="block-feature-four position-relative mt-150 lg-mt-80 pb-150 lg-pb-80">
+<section class="section mt-50 mb-50">
     <div class="container">
+        <div class="row align-items-end">
+            <div class="col-12 text-center">
+                <h2 class="color-brand-1 mb-20 wow animate__ animate__fadeIn animated"
+                    data-wow-delay=".0s"
+                    style="visibility: visible; animation-delay: 0s; animation-name: fadeIn;">
+                    WHO CAN PARTNER WITH US
+                </h2>
 
-        <!-- HEADING -->
-        <div class="row align-items-center">
-            <div class="col-xl-8 col-lg-9 m-auto wow fadeInUp">
-                <div class="title-one text-center mb-60 lg-mb-30">
-                    <h2>Built for People Who Want More</h2>
-
-                    <p class="text-lg mt-25">
-                        A community designed for ambitious individuals who want
-                        stronger connections, better opportunities, and meaningful growth.
-                    </p>
-                </div>
+                <p class="font-lg color-gray-500 wow animate__ animate__fadeIn animated"
+                    data-wow-delay=".2s"
+                    style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                    Built for Modern Ecosystem Collaborations
+                </p>
             </div>
         </div>
 
-        <!-- CARDS -->
-        <div class="row gx-xxl-5 justify-content-center">
+        <div class="row d-flex justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-4 mt-50">
 
-            <!-- SPEAKERS -->
-            <div class="col-lg-4 col-md-6 d-flex wow fadeInUp">
-                <div class="card-style-six text-center vstack tran3s w-100 mt-30">
+            <!-- Card 1 -->
+            <div class="col mb-4">
+                <div class="card-custom wow animate__ animate__fadeInUp animated"
+                    data-wow-delay="0.0s"
+                    style="visibility: visible; animation-delay: 0s; animation-name: fadeInUp;">
+                    <div class="card-img-wrapper">
+                        <img src="{{ asset('images/media/chess.png') }}" alt="ConnectX" class="img-fluid">
 
-                    <div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto">
-                        <img src="{{ asset('images/icon/icon_20.svg') }}" alt="">
+                        <div class="card-overlay"></div>
+
+                        <div class="card-text1">
+                            <p>Business & Startup Voices</p>
+                        </div>
                     </div>
-
-                    <h4 class="fw-bold mt-40 md-mt-30 mb-20">
-                        Speakers
-                    </h4>
-
-                    <p class="mb-20">
-                        Share ideas, build presence, and influence meaningful conversations.
-                    </p>
-
-                    <a href="{{ url('/services-1') }}"
-                       class="arrow-btn tran3s m-auto stretched-link">
-
-                        <img src="{{ asset('images/icon/icon_09.svg') }}" alt="">
-                    </a>
-
                 </div>
             </div>
 
-            <!-- INFLUENCERS -->
-            <div class="col-lg-4 col-md-6 d-flex wow fadeInUp"
-                 data-wow-delay="0.1s">
+            <!-- Card 2 -->
+            <div class="col mb-4">
+                <div class="card-custom wow animate__ animate__fadeInUp animated"
+                    data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                    <div class="card-img-wrapper">
+                        <img src="{{ asset('images/media/chess.png') }}" alt="ConnectX" class="img-fluid">
 
-                <div class="card-style-six text-center vstack tran3s w-100 mt-30 active">
+                        <div class="card-overlay"></div>
 
-                    <div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto">
-                        <img src="{{ asset('images/icon/icon_21.svg') }}" alt="">
+                        <div class="card-text1">
+                            <p>Lifestyle & Wellness</p>
+                        </div>
                     </div>
-
-                    <h4 class="fw-bold mt-40 md-mt-30 mb-20">
-                        Influencers
-                    </h4>
-
-                    <p class="mb-20">
-                        Expand reach, collaborate across industries, and create impact.
-                    </p>
-
-                    <a href="{{ url('/services-1') }}"
-                       class="arrow-btn tran3s m-auto stretched-link">
-
-                        <img src="{{ asset('images/icon/icon_09.svg') }}" alt="">
-                    </a>
-
                 </div>
             </div>
 
-            <!-- FOUNDERS -->
-            <div class="col-lg-4 col-md-6 d-flex wow fadeInUp"
-                 data-wow-delay="0.2s">
+            <!-- Card 3 -->
+            <div class="col mb-4">
+                <div class="card-custom wow animate__ animate__fadeInUp animated"
+                    data-wow-delay="0.2s"
+                    style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    <div class="card-img-wrapper">
+                        <img src="{{ asset('images/media/chess.png') }}" alt="ConnectX" class="img-fluid">
 
-                <div class="card-style-six text-center vstack tran3s w-100 mt-30">
+                        <div class="card-overlay"></div>
 
-                    <div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto">
-                        <img src="{{ asset('images/icon/icon_22.svg') }}" alt="">
+                        <div class="card-text1">
+                            <p>Sports & Adventure</p>
+                        </div>
                     </div>
-
-                    <h4 class="fw-bold mt-40 md-mt-30 mb-20">
-                        Founders
-                    </h4>
-
-                    <p class="mb-20">
-                        Connect with like-minded individuals, explore opportunities, and grow your network.
-                    </p>
-
-                    <a href="{{ url('/services-1') }}"
-                       class="arrow-btn tran3s m-auto stretched-link">
-
-                        <img src="{{ asset('images/icon/icon_09.svg') }}" alt="">
-                    </a>
-
                 </div>
             </div>
 
-            <!-- PROFESSIONALS -->
-            <div class="col-lg-4 col-md-6 d-flex wow fadeInUp"
-                 data-wow-delay="0.3s">
+            <!-- Card 4 -->
+            <div class="col mb-4">
+                <div class="card-custom wow animate__ animate__fadeInUp animated"
+                    data-wow-delay="0.3s"
+                    style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                    <div class="card-img-wrapper">
+                        <img src="{{ asset('images/media/chess.png') }}" alt="ConnectX" class="img-fluid">
 
-                <div class="card-style-six text-center vstack tran3s w-100 mt-30">
+                        <div class="card-overlay"></div>
 
-                    <div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto">
-                        <img src="{{ asset('images/icon/icon_20.svg') }}" alt="">
+                        <div class="card-text1">
+                            <p>Digital Media Creators</p>
+                        </div>
                     </div>
-
-                    <h4 class="fw-bold mt-40 md-mt-30 mb-20">
-                        Professionals
-                    </h4>
-
-                    <p class="mb-20">
-                        Move beyond your role with better exposure, insights, and connections.
-                    </p>
-
-                    <a href="{{ url('/services-1') }}"
-                       class="arrow-btn tran3s m-auto stretched-link">
-
-                        <img src="{{ asset('images/icon/icon_09.svg') }}" alt="">
-                    </a>
-
                 </div>
             </div>
 
-            <!-- ASPIRING LEADERS -->
-            <div class="col-lg-4 col-md-6 d-flex wow fadeInUp"
-                 data-wow-delay="0.4s">
+            <!-- Card 5 -->
+            <div class="col mb-4">
+                <div class="card-custom wow animate__ animate__fadeInUp animated"
+                    data-wow-delay="0.4s"
+                    style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                    <div class="card-img-wrapper">
+                        <img src="{{ asset('images/media/chess.png') }}" alt="ConnectX" class="img-fluid">
 
-                <div class="card-style-six text-center vstack tran3s w-100 mt-30">
+                        <div class="card-overlay"></div>
 
-                    <div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto">
-                        <img src="{{ asset('images/icon/icon_21.svg') }}" alt="">
+                        <div class="card-text1">
+                            <p>News & Commentary</p>
+                        </div>
                     </div>
+                </div>
+            </div>
 
-                    <h4 class="fw-bold mt-40 md-mt-30 mb-20">
-                        Aspiring Leaders
-                    </h4>
+            <!-- Card 6 -->
+            <div class="col mb-4">
+                <div class="card-custom wow animate__ animate__fadeInUp animated"
+                    data-wow-delay="0.5s"
+                    style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                    <div class="card-img-wrapper">
+                        <img src="{{ asset('images/media/chess.png') }}" alt="ConnectX" class="img-fluid">
 
-                    <p class="mb-20">
-                        Gain clarity, direction, and access to people who are already building.
-                    </p>
+                        <div class="card-overlay"></div>
 
-                    <a href="{{ url('/services-1') }}"
-                       class="arrow-btn tran3s m-auto stretched-link">
+                        <div class="card-text1">
+                            <p>Motivation & Storytelling</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                        <img src="{{ asset('images/icon/icon_09.svg') }}" alt="">
-                    </a>
+            <!-- Card 7 -->
+            <div class="col mb-4">
+                <div class="card-custom wow animate__ animate__fadeInUp animated"
+                    data-wow-delay="0.6s"
+                    style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                    <div class="card-img-wrapper">
+                        <img src="{{ asset('images/media/chess.png') }}" alt="ConnectX" class="img-fluid">
 
+                        <div class="card-overlay"></div>
+
+                        <div class="card-text1">
+                            <p>Tech & Innovation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col mb-4">
+                <div class="card-custom wow animate__ animate__fadeInUp animated"
+                    data-wow-delay="0.7s"
+                    style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
+                    <div class="card-img-wrapper">
+                        <img src="{{ asset('images/media/chess.png') }}" alt="ConnectX" class="img-fluid">
+
+                        <div class="card-overlay"></div>
+
+                        <div class="card-text1">
+                            <p>Regional & Cultural Creators</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </div>
     </div>
+</section>
 
-    <!-- SHAPES -->
+
+
+
+
+<style>
+
+.connectx-cta-card{
+    background: #fff;
+    border: 1px solid #dfe7e2;
+    border-radius: 28px;
+    padding: 55px 50px;
+    min-height: 100%;
+    transition: 0.3s ease;
+}
+
+.connectx-cta-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+}
+
+.connectx-cta-card h3{
+    font-size: 38px;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 12px 0 22px;
+    color: #000;
+}
+
+.connectx-cta-card p{
+    font-size: 17px;
+    line-height: 1.9em;
+    color: #555;
+    margin-bottom: 35px;
+    max-width: 95%;
+}
+
+.connectx-cta-card .small-text{
+    font-size: 17px;
+    font-weight: 500;
+    color: #76583b;
+}
+
+/* BUTTON */
+
+.connectx-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #76583b;
+    color: #fff !important;
+    height: 62px;
+    padding: 0 34px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.connectx-btn:hover{
+    background: #5e442c;
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+/* SHAPES */
+
+.shape-circle{
+    position: absolute;
+    border-radius: 50%;
+    background: #f2e8db;
+}
+
+.top-circle{
+    width: 170px;
+    height: 170px;
+    top: -70px;
+    right: -30px;
+}
+
+.bottom-circle{
+    width: 240px;
+    height: 240px;
+    bottom: -140px;
+    left: 18%;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px){
+
+    .connectx-cta-card{
+        padding: 40px 30px;
+    }
+
+    .connectx-cta-card h3{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 576px){
+
+    .connectx-cta-card{
+        padding: 35px 25px;
+    }
+
+    .connectx-cta-card h3{
+        font-size: 26px;
+    }
+
+    .connectx-btn{
+        width: 100%;
+    }
+}
+
+</style>
+
+
+
+
+
+
+<div class="block-feature-one position-relative light-bg-deep mt-100 lg-mt-60 pt-120 lg-pt-60 pb-130 lg-pb-60">
+    <div class="container">
+
+        <div class="position-relative">
+
+            <div class="title-one text-center mb-40 lg-mb-10">
+                <div class="upper-title" style="color:#76583b;">
+                    ConnectX Experiences
+                </div>
+
+                <h2>
+                    Experiences That Create Influence
+                </h2>
+            </div>
+
+            <div class="row justify-content-center">
+
+                <!-- PODCASTS -->
+                <div class="col-lg-4 col-md-6 d-flex wow fadeInUp">
+
+                    <div class="card-style-two vstack tran3s w-100 mt-30">
+
+                        <i class="fas fa-podcast fa-3x mb-25"
+                           style="color:#76583b;"></i>
+
+                        <h4 class="fw-bold mb-20">
+                            Podcasts
+                        </h4>
+
+                        <p class="mb-0">
+                            Share your journey, insights, and opinions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- NETWORKING -->
+                <div class="col-lg-4 col-md-6 d-flex wow fadeInUp"
+                     data-wow-delay="0.1s">
+
+                    <div class="card-style-two vstack tran3s w-100 mt-30">
+
+                        <i class="fas fa-users fa-3x mb-25"
+                           style="color:#76583b;"></i>
+
+                        <h4 class="fw-bold mb-20">
+                            Networking
+                        </h4>
+
+                        <p class="mb-0">
+                            Meet creators, founders, and industry voices globally.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- AWARDS -->
+                <div class="col-lg-4 col-md-6 d-flex wow fadeInUp"
+                     data-wow-delay="0.2s">
+
+                    <div class="card-style-two vstack tran3s w-100 mt-30">
+
+                        <i class="fas fa-award fa-3x mb-25"
+                           style="color:#76583b;"></i>
+
+                        <h4 class="fw-bold mb-20">
+                            Awards
+                        </h4>
+
+                        <p class="mb-0">
+                            Recognition for impact, creativity, and influence.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- ROUNDTABLES -->
+                <div class="col-lg-4 col-md-6 d-flex wow fadeInUp">
+
+                    <div class="card-style-two vstack tran3s w-100 mt-30">
+
+                        <i class="fas fa-microphone fa-3x mb-25"
+                           style="color:#76583b;"></i>
+
+                        <h4 class="fw-bold mb-20">
+                            Roundtables
+                        </h4>
+
+                        <p class="mb-0">
+                            Focused discussions with creators and thought leaders.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- MEETUPS -->
+                <div class="col-lg-4 col-md-6 d-flex wow fadeInUp"
+                     data-wow-delay="0.1s">
+
+                    <div class="card-style-two vstack tran3s w-100 mt-30">
+
+                        <i class="fas fa-globe fa-3x mb-25"
+                           style="color:#76583b;"></i>
+
+                        <h4 class="fw-bold mb-20">
+                            Meetups
+                        </h4>
+
+                        <p class="mb-0">
+                            City-based and global creator gatherings.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CREATOR LOUNGES -->
+                <div class="col-lg-4 col-md-6 d-flex wow fadeInUp"
+                     data-wow-delay="0.2s">
+
+                    <div class="card-style-two vstack tran3s w-100 mt-30">
+
+                        <i class="fas fa-camera fa-3x mb-25"
+                           style="color:#76583b;"></i>
+
+                        <h4 class="fw-bold mb-20">
+                            Creator Lounges
+                        </h4>
+
+                        <p class="mb-0">
+                            Speak directly in front of audience & camera.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
     <img src="{{ asset('images/shape/shape_05.svg') }}"
          alt=""
-         class="shapes shape_01">
+         class="lazy-img shapes shape_01">
 
-    <img src="{{ asset('images/shape/shape_06.svg') }}"
+    <img src="{{ asset('images/shape/shape_05.svg') }}"
          alt=""
-         class="shapes shape_02">
+         class="lazy-img shapes shape_02">
+
+</div>
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+
+
+      
+
+
+
+<section class="connectx-cta-section position-relative pt-100 pb-100 lg-pt-80 lg-pb-80">
+    <div class="container">
+
+        <div class="row">
+
+            <!-- PARTNER -->
+            <div class="col-lg-6 d-flex wow fadeInUp">
+
+                <div class="connectx-cta-card w-100 position-relative overflow-hidden">
+
+                    <!-- Shapes -->
+                    <div class="shape-circle top-circle"></div>
+                    <div class="shape-circle bottom-circle"></div>
+
+                    <div class="position-relative z-1">
+
+                        <span class="small-text">
+                            Collaborate. Connect. Grow.
+                        </span>
+
+                        <h3>
+                            Become a Partner
+                        </h3>
+
+                        <p>
+                            Join hands with ConnectX to build impactful networks,
+                            share expertise, and shape the next generation of creators.
+                        </p>
+
+                        <a href="#"
+                           class="connectx-btn">
+
+                            Partner With Us
+
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SPONSOR -->
+            <div class="col-lg-6 d-flex wow fadeInUp"
+                 data-wow-delay="0.1s">
+
+                <div class="connectx-cta-card w-100 position-relative overflow-hidden">
+
+                    <!-- Shapes -->
+                    <div class="shape-circle top-circle"></div>
+                    <div class="shape-circle bottom-circle"></div>
+
+                    <div class="position-relative z-1">
+
+                        <span class="small-text">
+                            Support. Empower. Lead.
+                        </span>
+
+                        <h3>
+                            Become a Sponsor
+                        </h3>
+
+                        <p>
+                            Align your brand with a premium creator ecosystem,
+                            gain visibility, and support transformative experiences.
+                        </p>
+
+                        <a href="#"
+                           class="connectx-btn">
+
+                            Join as Sponsor
+
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<div class="blog-section-two position-relative mt-150 lg-mt-80 mb-150 lg-mb-80">
+    <div class="container">
+
+        <div class="position-relative">
+
+            <div class="row gx-xxl-5">
+
+                <!-- ITEM -->
+                <div class="col-md-6">
+                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
+
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                                style="background-image: url('{{ asset('images/blog/blog_img_03.jpg') }}');">
+
+                            <a href="#"
+                               class="stretched-link rounded-5 date tran3s">
+                                09 FEB
+                            </a>
+
+                        </figure>
+
+                        <div class="post-data">
+
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+                                <a href="#"
+                                   class="blog-title">
+
+                                    <h4>
+                                        Spending Habits, 13 Tips for grow Your Money.
+                                    </h4>
+
+                                </a>
+
+                                <a href="#"
+                                   class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+
+                                    <i class="bi bi-arrow-up-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+                </div>
+
+
+                <!-- ITEM -->
+                <div class="col-md-6">
+                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp"
+                             data-wow-delay="0.1s">
+
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                                style="background-image: url('{{ asset('images/blog/blog_img_04.jpg') }}');">
+
+                            <a href="#"
+                               class="stretched-link rounded-5 date tran3s">
+                                12 AUG
+                            </a>
+
+                        </figure>
+
+                        <div class="post-data">
+
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+                                <a href="#"
+                                   class="blog-title">
+
+                                    <h4>
+                                        Our Travel Card Makes you Happy.
+                                    </h4>
+
+                                </a>
+
+                                <a href="#"
+                                   class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+
+                                    <i class="bi bi-arrow-up-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+                </div>
+
+
+                <!-- ITEM -->
+                <div class="col-md-6">
+                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
+
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                                style="background-image: url('{{ asset('images/blog/blog_img_12.jpg') }}');">
+
+                            <a href="#"
+                               class="stretched-link rounded-5 date tran3s">
+                                09 FEB
+                            </a>
+
+                        </figure>
+
+                        <div class="post-data">
+
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+                                <a href="#"
+                                   class="blog-title">
+
+                                    <h4>
+                                        It’s easy to buildup your business with us
+                                    </h4>
+
+                                </a>
+
+                                <a href="#"
+                                   class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+
+                                    <i class="bi bi-arrow-up-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+                </div>
+
+
+                <!-- ITEM -->
+                <div class="col-md-6">
+                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp"
+                             data-wow-delay="0.1s">
+
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                                style="background-image: url('{{ asset('images/blog/blog_img_13.jpg') }}');">
+
+                            <a href="#"
+                               class="stretched-link rounded-5 date tran3s">
+                                12 AUG
+                            </a>
+
+                        </figure>
+
+                        <div class="post-data">
+
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+                                <a href="#"
+                                   class="blog-title">
+
+                                    <h4>
+                                        Manage your online banking & get rewarded
+                                    </h4>
+
+                                </a>
+
+                                <a href="#"
+                                   class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+
+                                    <i class="bi bi-arrow-up-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+                </div>
+
+
+                <!-- ITEM -->
+                <div class="col-md-6">
+                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
+
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                                style="background-image: url('{{ asset('images/blog/blog_img_14.jpg') }}');">
+
+                            <a href="#"
+                               class="stretched-link rounded-5 date tran3s">
+                                09 FEB
+                            </a>
+
+                        </figure>
+
+                        <div class="post-data">
+
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+                                <a href="#"
+                                   class="blog-title">
+
+                                    <h4>
+                                        Discover smarter ways to scale your brand
+                                    </h4>
+
+                                </a>
+
+                                <a href="#"
+                                   class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+
+                                    <i class="bi bi-arrow-up-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+                </div>
+
+
+                <!-- ITEM -->
+                <div class="col-md-6">
+                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp"
+                             data-wow-delay="0.1s">
+
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                                style="background-image: url('{{ asset('images/blog/blog_img_15.jpg') }}');">
+
+                            <a href="#"
+                               class="stretched-link rounded-5 date tran3s">
+                                12 AUG
+                            </a>
+
+                        </figure>
+
+                        <div class="post-data">
+
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+                                <a href="#"
+                                   class="blog-title">
+
+                                    <h4>
+                                        Creative networking events for future leaders
+                                    </h4>
+
+                                </a>
+
+                                <a href="#"
+                                   class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+
+                                    <i class="bi bi-arrow-up-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+                </div>
+
+            </div>
+
+
+            <!-- PAGINATION -->
+            <div class="pagination-one mt-20">
+
+                <ul class="style-none d-flex align-items-center justify-content-center">
+
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li>...</li>
+
+                    <li>
+                        <a href="#">
+                            Last <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
 </div>
 
 
 
 
+<!-- create section -->
 
+<div class="block-feature-fifteen mt-90">
+    <div class="container">
+        <div class="position-relative">
 
+            <!-- TITLE -->
+            <div class="row">
+                <div class="col-lg-8 m-auto">
+                    <div class="title-two text-center mb-30 sm-mb-10">
+                        <div class="upper-title-two mb-10">
+                            <!-- HOW CONNECTX WORKS -->
+                        </div>
 
+                        <h2 class="text-dark">
+How ConnectX Works                        </h2>
+                    </div>
+                </div>
+            </div>
 
+            <!-- STEPS -->
+            <div class="row justify-content-center">
 
+                <!-- STEP 1 -->
+                <div class="col-lg-3 col-md-6 d-flex wow fadeInUp">
+                    <div class="card-style-twentyOne mt-40 w-100">
 
+                        <div class="icon rounded-circle m-auto position-relative d-flex align-items-center justify-content-center">
 
+                            <img src="{{ asset('images/assets/ils_08.svg') }}" alt="">
 
+                            <span class="numb position-absolute d-flex align-items-center justify-content-center rounded-circle">
+                                01
+                            </span>
 
+                        </div>
 
-    <img 
-        src="{{ asset('images/lazy.svg') }}" 
-        data-src="{{ asset('images/shape/shape_42.svg') }}" 
-        alt="" 
-        class="lazy-img shapes shape_01"
-    >
+                        <p class="text-center text-lg mt-50 px-3">
+                            Build your creator identity and showcase your content,
+                            voice, category, and digital presence within the
+                            ConnectX ecosystem.
+                        </p>
+
+                        <h5 class="text-center mt-3">
+                            Create Your Profile
+                        </h5>
+
+                    </div>
+                </div>
+
+                <!-- STEP 2 -->
+                <div class="col-lg-3 col-md-6 d-flex wow fadeInUp"
+                    data-wow-delay="0.1s">
+
+                    <div class="card-style-twentyOne mt-40 w-100">
+
+                        <div class="icon rounded-circle m-auto position-relative d-flex align-items-center justify-content-center">
+
+                            <img src="{{ asset('images/assets/ils_09.svg') }}" alt="">
+
+                            <span class="numb position-absolute d-flex align-items-center justify-content-center rounded-circle">
+                                02
+                            </span>
+
+                        </div>
+
+                        <p class="text-center text-lg mt-50 px-3">
+                            Enter ConnectX Lounges, networking rooms,
+                            podcasts, roundtables, and creator experiences
+                            designed for visibility.
+                        </p>
+
+                        <h5 class="text-center mt-3">
+                            Access Creator Spaces
+                        </h5>
+
+                    </div>
+                </div>
+
+                <!-- STEP 3 -->
+                <div class="col-lg-3 col-md-6 d-flex wow fadeInUp"
+                    data-wow-delay="0.2s">
+
+                    <div class="card-style-twentyOne mt-40 w-100">
+
+                        <div class="icon rounded-circle m-auto position-relative d-flex align-items-center justify-content-center">
+
+                            <img src="{{ asset('images/assets/ils_10.svg') }}" alt="">
+
+                            <span class="numb position-absolute d-flex align-items-center justify-content-center rounded-circle">
+                                03
+                            </span>
+
+                        </div>
+
+                        <p class="text-center text-lg mt-50 px-3">
+                            Network with influencers, creators,
+                            communities, brands, and public voices
+                            across industries and countries.
+                        </p>
+
+                        <h5 class="text-center mt-3">
+                            Connect & Collaborate
+                        </h5>
+
+                    </div>
+                </div>
+
+                <!-- STEP 4 -->
+                <div class="col-lg-3 col-md-6 d-flex wow fadeInUp"
+                    data-wow-delay="0.3s">
+
+                    <div class="card-style-twentyOne mt-40 w-100">
+
+                        <div class="icon rounded-circle m-auto position-relative d-flex align-items-center justify-content-center">
+
+                            <img src="{{ asset('images/assets/ils_08.svg') }}" alt="">
+
+                            <span class="numb position-absolute d-flex align-items-center justify-content-center rounded-circle">
+                                04
+                            </span>
+
+                        </div>
+
+                        <p class="text-center text-lg mt-50 px-3">
+                            Increase visibility through collaborations,
+                            events, podcasts, creator opportunities,
+                            and ecosystem-driven exposure.
+                        </p>
+
+                        <h5 class="text-center mt-3">
+                            Grow Your Influence
+                        </h5>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- BUTTON -->
+            <div class="text-center mt-60 position-relative line-btn">
+                <a href="#" class="btn-twenty">
+                    Join ConnectX
+                </a>
+            </div>
+
+            <img src="{{ asset('images/shape/shape_05.svg') }}"
+                alt=""
+                class="shapes shape_01">
+
+        </div>
+    </div>
 </div>
-
-
 
 @endsection

@@ -13,8 +13,8 @@
 
                 <li class="d-flex align-items-center">
                     <img src="{{ asset('images/icon/icon_14.svg') }}" class="icon me-2">
-                    <a href="mailto:youngchanakya@gmail.com" class="fw-500">
-                        youngchanakya@gmail.com
+                    <a href="mailto:youngchanakyaconnect@gmail.com" class="fw-500">
+                        youngchanakyaconnect@gmail.com
                     </a>
                 </li>
 
@@ -176,8 +176,8 @@
                                 <ul class="dropdown-menu">
 
                                     <li>
-                                        <a href="{{ url('/about-1') }}" class="dropdown-item">
-                                            About Us V1
+                                        <a href="{{ url('/about') }}" class="dropdown-item">
+                                            About Us
                                         </a>
                                     </li>
 

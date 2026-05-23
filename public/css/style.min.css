@@ -12,14 +12,14 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #19352d;
+    background: #52381e;
     border-radius: 0
 }
 
 body {
     font-family: "Satoshi";
     font-weight: normal;
-    font-size: 20px;
+    font-size: 16px;
     position: relative;
     color: rgba(0, 0, 0, .7)
 }
@@ -41,24 +41,24 @@ h5,
 .h6,
 h6 {
     font-weight: 500;
-    color: #19352d
+    color: #52381e;
 }
 
 .h1,
 h1 {
-    font-size: 85px;
+    font-size: 45px !important;
     line-height: 1.023em
 }
 
 .h2,
 h2 {
-    font-size: 64px;
+    font-size: 36px;
     line-height: 1.1em
 }
 
 .h4,
 h4 {
-    font-size: 24px
+    font-size: 20px
 }
 
 p {
@@ -71,7 +71,7 @@ p {
 }
 
 .text-lg {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.583em
 }
 
@@ -126,7 +126,7 @@ hr {
 }
 
 .color-deep {
-    color: #1f5e59
+    color: #52381e;
 }
 
 .box-layout {
@@ -240,11 +240,11 @@ hr {
     right: 5px;
     z-index: 99;
     text-align: center;
-    color: #19352d;
+    color: #ffffff;
     font-size: 25px;
     cursor: pointer;
     border-radius: 50%;
-    background: #cfff45;
+    background: #76583b;
     transition: all .3s ease-in-out
 }
 
@@ -353,12 +353,12 @@ hr {
     text-align: center;
     border-radius: 50px;
     color: #fff;
-    background-color: #29594b;
+    background-color: #76583b;
     transition: all .3s ease-in-out 0s
 }
 
 .btn-four:hover {
-    background-color: #cfff45;
+    background-color: #76583b;
     color: #000
 }
 
@@ -492,7 +492,7 @@ hr {
 .btn-eleven .icon {
     width: 45px;
     height: 45px;
-    background: #000;
+    background: #76583b;
     margin-left: 38px;
     position: relative
 }
@@ -691,15 +691,15 @@ hr {
     padding: 0 45px;
     text-align: center;
     border-radius: 40px;
-    color: #1f5e59;
+    color: #ffffff;
     min-width: 175px;
-    background-color: #d0ff45;
+    background-color: #76583b;
     transition: all .3s ease-in-out 0s
 }
 
 .btn-twenty:hover {
-    background-color: #e6fd5a;
-    color: #000
+    background-color: #52381e;
+    color: #ffffff
 }
 
 .btn-twentyOne {
@@ -754,10 +754,10 @@ hr {
 }
 
 .title-two h2 {
-    font-size: 72px;
+    font-size: 52px;
     font-weight: 700;
     line-height: 1.027em;
-    color: #0e3e2f
+    color: #ffffff
 }
 
 .title-two h2 span {
@@ -777,13 +777,13 @@ hr {
     font-size: 14px;
     text-transform: uppercase;
     margin-bottom: 15px;
-    color: #1ca161
+    color: #76583b;
 }
 
 .title-three h2 {
     font-weight: 700;
     line-height: 1.03em;
-    color: #0e3e2f
+    color: #76583b;
 }
 
 .title-four h2 {
@@ -812,11 +812,10 @@ a:visited {
     outline: none
 }
 
-/* img {
+img {
     max-width: 100%;
     display: block
-} */
-
+}
 
 button {
     border: none;
@@ -885,7 +884,7 @@ iframe {
 }
 
 .pt-20 {
-    padding-top: 20px
+    padding-top: 10px
 }
 
 .pt-25 {
@@ -2747,7 +2746,7 @@ iframe {
 }
 
 .theme-main-menu {
-    background: #fff;
+    background: #928e8e;
     position: relative;
     z-index: 999;
     padding: 18px 40px;
@@ -2780,7 +2779,7 @@ iframe {
     position: relative;
     z-index: 99;
     border: none;
-    background: #cfff45
+    background: #fde8d3;
 }
 
 .theme-main-menu.menu-style-three .navbar-toggler {
@@ -2886,7 +2885,7 @@ iframe {
 
 .theme-main-menu.menu-style-two {
     padding: 0;
-    background: #edf1ee
+    background: #fff
 }
 
 .theme-main-menu.menu-style-two .info-row {
@@ -3034,10 +3033,10 @@ iframe {
 .theme-main-menu .signup-btn-one span {
     display: inline-block;
     font-weight: 500;
-    color: #19352d;
+    color: #000000;
     padding: 0 30px;
     line-height: 45px;
-    border: 2px solid #29594b;
+    border: 2px solid #52381e;
     border-radius: 30px;
     background: #fff;
     transition: all .2s ease-in-out 0s
@@ -3046,7 +3045,7 @@ iframe {
 .theme-main-menu .signup-btn-one .icon {
     width: 49px;
     height: 49px;
-    background: #29594b;
+    background: #52381e;
     color: #fff;
     font-size: 22px;
     margin-left: -12px;
@@ -3054,13 +3053,13 @@ iframe {
 }
 
 .theme-main-menu .signup-btn-one:hover span {
-    background: #29594b;
+    background: #52381e;
     color: #fff
 }
 
 .theme-main-menu .signup-btn-one:hover .icon {
-    background: #cfff45;
-    color: #29594b
+    background: #76583b;
+    color: #ffffff
 }
 
 .theme-main-menu .signup-btn-two {
@@ -3302,6 +3301,13 @@ iframe {
     background-repeat: no-repeat
 }
 
+
+
+
+
+
+
+
 .hero-banner-one .hero-slider-one .slick-list,
 .hero-banner-one .hero-slider-one .slick-track,
 .hero-banner-one .hero-slider-one .item {
@@ -3311,7 +3317,7 @@ iframe {
 .hero-banner-one .hero-heading {
     font-weight: 700;
     color: #000;
-    background: url(../images/shape/shape_01.html) no-repeat left top;
+    background: url(../images/shape/shape_01.svg) no-repeat left top;
     background-size: cover;
     padding: 11px 31px 25px 25px
 }
@@ -3535,20 +3541,22 @@ iframe {
 }
 
 .hero-banner-six .hero-heading {
-    font-size: 60px;
+    font-size: 40px;
     line-height: 1.05em;
     color: #044f3b
 }
-
 .hero-banner-six .media-wrapper {
-    background: url(../images/media/people-taking-part-high-protocol-event.jpg) no-repeat center;
+    background: url('/images/media/img_48.webp') no-repeat center center;
     background-size: cover;
     border-radius: 20px;
     max-width: 536px;
     width: 100%;
-    height: 100%
+    height: 650px;
+    position: relative;
 }
-
+.hero-banner-six{
+    padding: 170px 0 140px;
+}
 .hero-banner-six .media-wrapper .screen_01 {
     right: 4%;
     top: 4%;
@@ -3694,9 +3702,7 @@ iframe {
 }
 
 .hero-banner-eight .hero-heading {
-    /* font-size: 110px; */
-        font-size: 60px;
-
+    font-size: 110px;
     font-weight: 700;
     line-height: 1em
 }
@@ -3959,7 +3965,7 @@ iframe {
 }
 
 .fancy-banner-seven .bg-wrapper {
-    background: url(../images/media/img_50.html) no-repeat center;
+    background: url(../images/media/img_50.jpg) no-repeat center;
     background-size: cover
 }
 
@@ -3988,7 +3994,7 @@ iframe {
 
 .fancy-banner-seven .bg-wrapper li {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.5em;
     color: #000;
     padding: 18px 80px 25px 68px;
@@ -4004,7 +4010,7 @@ iframe {
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background: #29594b;
+    background: #76583b;
     left: 27px;
     top: 27px;
     transition: all .2s ease-in-out 0s
@@ -4022,11 +4028,11 @@ iframe {
 }
 
 .fancy-banner-seven .bg-wrapper li:hover:before {
-    background: #cfff45
+    background: #76583b;
 }
 
 .fancy-banner-seven .bg-wrapper li:hover:after {
-    color: #000
+    color: #ffffff
 }
 
 .fancy-banner-seven .bg-wrapper .shape_01 {
@@ -5210,12 +5216,12 @@ iframe {
     font-family: "bootstrap-icons";
     top: 6px;
     left: 14px;
-    color: #29594b;
+    color: #000000;
     transition: all .2s ease-in-out 0s
 }
 
 .text-feature-five li:hover:before {
-    background: #29594b
+    background: #76583b;
 }
 
 .text-feature-five li:hover:after {
@@ -5223,7 +5229,7 @@ iframe {
 }
 
 .text-feature-five .media-wrapper {
-    background: url(../images/media/img_20.html) no-repeat center;
+    background: url(/images/media/img_20.jpg) no-repeat center;
     background-size: cover;
     z-index: 1
 }
@@ -6174,7 +6180,7 @@ iframe {
 .pagination-one ul li:not(:last-child) a.active,
 .pagination-one ul li:not(:last-child) a:hover,
 .pagination-one ul li:not(:last-child) a:focus {
-    background: #29594b;
+    background: #76583b;
     color: #fff
 }
 
@@ -6258,8 +6264,9 @@ iframe {
 }
 
 .card-style-two:hover {
-    background: #cfff45;
-    border-color: #cfff45
+    color: #000000;
+    background: #e7e7e7;
+    border-color: #76583b
 }
 
 .card-style-two:hover .arrow-btn {
@@ -7966,7 +7973,7 @@ iframe {
 }
 
 .feedback-section-eight {
-    background: #144d41
+    background-color: #52381e;
 }
 
 .feedback-section-eight:before {
@@ -7981,7 +7988,7 @@ iframe {
 }
 
 .feedback-section-eight .wrapper {
-    background: #26685a;
+    background: #76583b;
     padding: 95px 80px;
     border-radius: 20px
 }
@@ -8012,16 +8019,17 @@ iframe {
 .feedback-block-eight .icon {
     width: 70px;
     height: 70px;
-    background: #ffdb1e
+    background: burlywood;
+;
 }
 
 .feedback-block-eight blockquote {
-    font-size: 50px;
-    line-height: 1.3em;
+    font-size: 36px;
+    line-height: 1em;
     font-weight: 800;
-    color: #fff;
+    color: white;
     font-style: italic;
-    margin: 30px 0 52px
+    margin: 10px 0 10px
 }
 
 .feedback-block-eight h6 {
@@ -8031,11 +8039,16 @@ iframe {
     margin: 0
 }
 
-.feedback-block-eight span {
-    font-size: 22px;
-    color: #fff
-}
 
+.feedback-block-eight span{
+    font-size: 13px !important;
+    color: #000;
+    background: #fff;
+    padding: 4px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
 .feedback-block-eight .rating li {
     margin-right: 6px
 }
@@ -8731,7 +8744,7 @@ iframe {
 .address-block-one .icon {
     width: 80px;
     height: 80px;
-    background: #29594b
+    background: #76583b;
 }
 
 .address-block-one .title {
@@ -8850,18 +8863,18 @@ iframe {
 }
 
 .footer-one {
-    background: #0c3a30;
+    background: #fff;
     padding-top: 95px
 }
 
 .footer-one .bottom-footer {
-    border-top: 1px dashed rgba(255, 255, 255, .25);
+    border-top: 1px dashed black;
     margin-top: 32px;
     padding: 40px 0 25px
 }
 
 .footer-one .social-icon a {
-    color: #fff;
+    color: white;
     font-size: 18px;
     width: 40px;
     height: 40px;
@@ -8870,7 +8883,7 @@ iframe {
     justify-content: center;
     margin-right: 10px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, .4);
+    background: #76583b;
     transition: all .2s ease-in-out 0s
 }
 
@@ -8881,12 +8894,12 @@ iframe {
 
 .footer-one .footer-title {
     font-size: 24px;
-    color: #fff;
+    color: #76583b;
     margin-bottom: 15px
 }
 
 .footer-one .footer-nav-link a {
-    color: rgba(255, 255, 255, .7);
+    color: #000;
     line-height: 46px;
     transition: all .2s ease-in-out 0s
 }
@@ -8905,11 +8918,11 @@ iframe {
     width: 100%;
     height: 100%;
     font-size: 18px;
-    color: rgba(255, 255, 255, .7);
+    color: #000;
     padding: 0 80px 0 30px;
     border: none;
     border-radius: 35px;
-    background: rgba(255, 255, 255, .1)
+    background: black
 }
 
 .footer-one .footer-newsletter form input::-webkit-input-placeholder {
@@ -8934,8 +8947,8 @@ iframe {
     font-weight: 900;
     text-align: center;
     border-radius: 50%;
-    background: #cfff45;
-    color: #29594b;
+    background: #76583b;
+    color: #fff;
     position: absolute;
     right: 0;
     top: 2px;
@@ -8948,7 +8961,7 @@ iframe {
 
 .footer-one .copyright {
     font-size: 18px;
-    color: rgba(255, 255, 255, .7)
+    color: #000;
 }
 
 .footer-one .bottom-nav {
@@ -8959,7 +8972,7 @@ iframe {
     font-size: 18px;
     font-weight: 500;
     margin: 0 12px;
-    color: rgba(255, 255, 255, .7)
+    color: #000;
 }
 
 .footer-one .bottom-nav a:hover {

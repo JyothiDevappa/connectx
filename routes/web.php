@@ -17,7 +17,7 @@ Route::get('/home-8', fn() => view('index-8'));
 // =========================
 // ABOUT
 // =========================
-Route::get('/about-1', fn() => view('about-us-v1'));
+Route::get('/about', fn() => view('about-us'));
 Route::get('/about-2', fn() => view('about-us-v2'));
 
 // =========================
@@ -67,3 +67,21 @@ Route::get('/pricing', fn() => view('pricing'));
 Route::get('/faq', fn() => view('faq'));
 Route::get('/contact', fn() => view('contact'))->name('contact');
 Route::get('/404', fn() => view('404'));
+
+
+
+
+
+Route::get('/connecters-list', function () {
+    return view('connecters-list');
+});
+
+Route::get('/become-a-sponser', function () {
+    return view('become-a-sponser');
+});
+
+
+Route::get('/become-a-partner', function () {
+    return view('become-a-partner');
+});
+
