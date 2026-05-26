@@ -225,7 +225,7 @@
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background: #76583b; /* your bg color */
+    background: #ffd2b1; /* your bg color */
 }
 
 /* TICK */
@@ -233,7 +233,7 @@
     content: "\f00c";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
-    color: #fff; /* white tick */
+    color: #76583b; /* white tick */
     font-size: 11px;
 
     position: absolute;
@@ -248,6 +248,18 @@
     line-height: 1.7;
     font-weight: 500;
     color: #111;
+}
+
+/* GLOBAL SECTION HEADING STYLE */
+.section-heading-main {
+    font-family: 'Satoshi', sans-serif !important;
+    font-size: 48px !important;
+    font-weight: 700 !important;
+    text-transform: lowercase !important;
+}
+
+.section-heading-main::first-letter {
+    text-transform: uppercase;
 }
 
 /* ADD SPACE BEFORE FOOTER */
@@ -266,8 +278,8 @@
 /* 1. Make the card a container and round the corners */
 .card-custom {
     position: relative;
-    border-radius: 24px; /* The rounded look from the YC site */
-    overflow: hidden;    /* This is MUST - it clips the image to the radius */
+    border-radius: 24px; 
+    overflow: hidden;    
     width: 100%;
     display: block;
 }
@@ -315,8 +327,118 @@
     font-weight: 600;
     font-size: 16px;
     margin: 0;
-    font-family: 'Manrope', sans-serif;
 }
+
+/* card section */
+.connectx-cta-card{
+    background: #fff;
+    border: 1px solid #dfe7e2;
+    border-radius: 28px;
+    padding: 55px 50px;
+    min-height: 100%;
+    transition: 0.3s ease;
+}
+
+.connectx-cta-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+}
+
+.connectx-cta-card h3{
+    font-size: 38px;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 12px 0 22px;
+    color: #000;
+}
+
+.connectx-cta-card p{
+    font-size: 17px;
+    line-height: 1.9em;
+    color: #555;
+    margin-bottom: 35px;
+    max-width: 95%;
+}
+
+.connectx-cta-card .small-text{
+    font-size: 17px;
+    font-weight: 500;
+    color: #76583b;
+}
+
+/* BUTTON */
+
+.connectx-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #76583b;
+    color: #fff !important;
+    height: 62px;
+    padding: 0 34px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.connectx-btn:hover{
+    background: #5e442c;
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+/* SHAPES */
+
+.shape-circle{
+    position: absolute;
+    border-radius: 50%;
+    background: #f2e8db;
+}
+
+.top-circle{
+    width: 170px;
+    height: 170px;
+    top: -70px;
+    right: -30px;
+}
+
+.bottom-circle{
+    width: 240px;
+    height: 240px;
+    bottom: -140px;
+    left: 18%;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px){
+
+    .connectx-cta-card{
+        padding: 40px 30px;
+    }
+
+    .connectx-cta-card h3{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 576px){
+
+    .connectx-cta-card{
+        padding: 35px 25px;
+    }
+
+    .connectx-cta-card h3{
+        font-size: 26px;
+    }
+
+    .connectx-btn{
+        width: 100%;
+    }
+}
+
 </style>
 
 
@@ -365,7 +487,7 @@
 
 <!-- SECOND SECTION -->
 
-<div class="text-feature-one mt-150 lg-mt-80">
+<div class="text-feature-one position-relative" style="background-color: #f8f0e6; padding: 60px 0; margin-top: 0;">
     <div class="container">
 
         <div class="row align-items-center">
@@ -375,7 +497,7 @@
 
                 <div class="title-one">
                     <div class="upper-title">About ConnectX</div>
-                    <h2>Young Chanakya ConnectX</h2>
+                    <h2 class="section-heading-main">Young chanakya connectx</h2>
                 </div>
 
                 <p class="text-lg mt-40 lg-mt-30 mb-35">
@@ -451,10 +573,10 @@
     <div class="container">
         <div class="row align-items-end">
             <div class="col-12 text-center">
-                <h2 class="color-brand-1 mb-20 wow animate__ animate__fadeIn animated"
+                <h2 class="color-brand-1 mb-20 wow animate__ animate__fadeIn animated section-heading-main"
                     data-wow-delay=".0s"
                     style="visibility: visible; animation-delay: 0s; animation-name: fadeIn;">
-                    WHO CAN PARTNER WITH US
+                    Who can partner with us
                 </h2>
 
                 <p class="font-lg color-gray-500 wow animate__ animate__fadeIn animated"
@@ -611,120 +733,6 @@
 
 
 
-<style>
-
-.connectx-cta-card{
-    background: #fff;
-    border: 1px solid #dfe7e2;
-    border-radius: 28px;
-    padding: 55px 50px;
-    min-height: 100%;
-    transition: 0.3s ease;
-}
-
-.connectx-cta-card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
-}
-
-.connectx-cta-card h3{
-    font-size: 38px;
-    line-height: 1.2em;
-    font-weight: 700;
-    margin: 12px 0 22px;
-    color: #000;
-}
-
-.connectx-cta-card p{
-    font-size: 17px;
-    line-height: 1.9em;
-    color: #555;
-    margin-bottom: 35px;
-    max-width: 95%;
-}
-
-.connectx-cta-card .small-text{
-    font-size: 17px;
-    font-weight: 500;
-    color: #76583b;
-}
-
-/* BUTTON */
-
-.connectx-btn{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: #76583b;
-    color: #fff !important;
-    height: 62px;
-    padding: 0 34px;
-    border-radius: 16px;
-    font-size: 16px;
-    font-weight: 600;
-    transition: 0.3s ease;
-    text-decoration: none;
-}
-
-.connectx-btn:hover{
-    background: #5e442c;
-    color: #fff !important;
-    transform: translateY(-2px);
-}
-
-/* SHAPES */
-
-.shape-circle{
-    position: absolute;
-    border-radius: 50%;
-    background: #f2e8db;
-}
-
-.top-circle{
-    width: 170px;
-    height: 170px;
-    top: -70px;
-    right: -30px;
-}
-
-.bottom-circle{
-    width: 240px;
-    height: 240px;
-    bottom: -140px;
-    left: 18%;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 991px){
-
-    .connectx-cta-card{
-        padding: 40px 30px;
-    }
-
-    .connectx-cta-card h3{
-        font-size: 30px;
-    }
-}
-
-@media (max-width: 576px){
-
-    .connectx-cta-card{
-        padding: 35px 25px;
-    }
-
-    .connectx-cta-card h3{
-        font-size: 26px;
-    }
-
-    .connectx-btn{
-        width: 100%;
-    }
-}
-
-</style>
-
-
 
 
 
@@ -739,8 +747,8 @@
                     ConnectX Experiences
                 </div>
 
-                <h2>
-                    Experiences That Create Influence
+                <h2 class="section-heading-main">
+                    Experiences that create influence
                 </h2>
             </div>
 
@@ -982,6 +990,172 @@
 
     </div>
 </section>
+
+
+
+
+
+
+
+
+
+<!-- fourth section -->
+
+<!-- create section -->
+
+<div class="block-feature-fifteen mt-90" style="background-color: #f8f0e6;">
+    <div class="container py-5">
+        <div class="position-relative">
+
+            <!-- TITLE -->
+            <div class="row">
+                <div class="col-lg-8 m-auto">
+                    <div class="title-two text-center mb-30 sm-mb-10">
+                        <div class="upper-title-two mb-10">
+                            <!-- HOW CONNECTX WORKS -->
+                        </div>
+
+                        <h2 class="text-dark section-heading-main">
+How connectx works</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEPS -->
+            <div class="row justify-content-center">
+
+                <!-- STEP 1 -->
+                <div class="col-lg-3 col-md-6 d-flex wow fadeInUp">
+                    <div class="card-style-twentyOne mt-40 w-100">
+
+                        <div class="icon rounded-circle m-auto position-relative d-flex align-items-center justify-content-center">
+
+                            <img src="{{ asset('images/assets/ils_08.svg') }}" alt="">
+
+                            <span class="numb position-absolute d-flex align-items-center justify-content-center rounded-circle">
+                                01
+                            </span>
+
+                        </div>
+
+                        <p class="text-center text-lg mt-50 px-3">
+                            Build your creator identity and showcase your content,
+                            voice, category, and digital presence within the
+                            ConnectX ecosystem.
+                        </p>
+
+                        <h5 class="text-center mt-3">
+                            Create Your Profile
+                        </h5>
+
+                    </div>
+                </div>
+
+                <!-- STEP 2 -->
+                <div class="col-lg-3 col-md-6 d-flex wow fadeInUp"
+                    data-wow-delay="0.1s">
+
+                    <div class="card-style-twentyOne mt-40 w-100">
+
+                        <div class="icon rounded-circle m-auto position-relative d-flex align-items-center justify-content-center">
+
+                            <img src="{{ asset('images/assets/ils_09.svg') }}" alt="">
+
+                            <span class="numb position-absolute d-flex align-items-center justify-content-center rounded-circle">
+                                02
+                            </span>
+
+                        </div>
+
+                        <p class="text-center text-lg mt-50 px-3">
+                            Enter ConnectX Lounges, networking rooms,
+                            podcasts, roundtables, and creator experiences
+                            designed for visibility.
+                        </p>
+
+                        <h5 class="text-center mt-3">
+                            Access Creator Spaces
+                        </h5>
+
+                    </div>
+                </div>
+
+                <!-- STEP 3 -->
+                <div class="col-lg-3 col-md-6 d-flex wow fadeInUp"
+                    data-wow-delay="0.2s">
+
+                    <div class="card-style-twentyOne mt-40 w-100">
+
+                        <div class="icon rounded-circle m-auto position-relative d-flex align-items-center justify-content-center">
+
+                            <img src="{{ asset('images/assets/ils_10.svg') }}" alt="">
+
+                            <span class="numb position-absolute d-flex align-items-center justify-content-center rounded-circle">
+                                03
+                            </span>
+
+                        </div>
+
+                        <p class="text-center text-lg mt-50 px-3">
+                            Network with influencers, creators,
+                            communities, brands, and public voices
+                            across industries and countries.
+                        </p>
+
+                        <h5 class="text-center mt-3">
+                            Connect & Collaborate
+                        </h5>
+
+                    </div>
+                </div>
+
+                <!-- STEP 4 -->
+                <div class="col-lg-3 col-md-6 d-flex wow fadeInUp"
+                    data-wow-delay="0.3s">
+
+                    <div class="card-style-twentyOne mt-40 w-100">
+
+                        <div class="icon rounded-circle m-auto position-relative d-flex align-items-center justify-content-center">
+
+                            <img src="{{ asset('images/assets/ils_11.svg') }}" alt="">
+
+                            <span class="numb position-absolute d-flex align-items-center justify-content-center rounded-circle">
+                                04
+                            </span>
+
+                        </div>
+
+                        <p class="text-center text-lg mt-50 px-3">
+                            Increase visibility through collaborations,
+                            events, podcasts, creator opportunities,
+                            and ecosystem-driven exposure.
+                        </p>
+
+                        <h5 class="text-center mt-3">
+                            Grow Your Influence
+                        </h5>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- BUTTON -->
+            <div class="text-center mt-60 position-relative line-btn">
+                <a href="#" class="btn-twenty">
+                    Join ConnectX
+                </a>
+            </div>
+
+            <img src="{{ asset('images/shape/shape_05.svg') }}"
+                alt=""
+                class="shapes shape_01">
+
+        </div>
+    </div>
+</div>
+
+
 
 
 
@@ -1277,160 +1451,5 @@
 </div>
 
 
-
-
-<!-- create section -->
-
-<div class="block-feature-fifteen mt-90">
-    <div class="container">
-        <div class="position-relative">
-
-            <!-- TITLE -->
-            <div class="row">
-                <div class="col-lg-8 m-auto">
-                    <div class="title-two text-center mb-30 sm-mb-10">
-                        <div class="upper-title-two mb-10">
-                            <!-- HOW CONNECTX WORKS -->
-                        </div>
-
-                        <h2 class="text-dark">
-How ConnectX Works                        </h2>
-                    </div>
-                </div>
-            </div>
-
-            <!-- STEPS -->
-            <div class="row justify-content-center">
-
-                <!-- STEP 1 -->
-                <div class="col-lg-3 col-md-6 d-flex wow fadeInUp">
-                    <div class="card-style-twentyOne mt-40 w-100">
-
-                        <div class="icon rounded-circle m-auto position-relative d-flex align-items-center justify-content-center">
-
-                            <img src="{{ asset('images/assets/ils_08.svg') }}" alt="">
-
-                            <span class="numb position-absolute d-flex align-items-center justify-content-center rounded-circle">
-                                01
-                            </span>
-
-                        </div>
-
-                        <p class="text-center text-lg mt-50 px-3">
-                            Build your creator identity and showcase your content,
-                            voice, category, and digital presence within the
-                            ConnectX ecosystem.
-                        </p>
-
-                        <h5 class="text-center mt-3">
-                            Create Your Profile
-                        </h5>
-
-                    </div>
-                </div>
-
-                <!-- STEP 2 -->
-                <div class="col-lg-3 col-md-6 d-flex wow fadeInUp"
-                    data-wow-delay="0.1s">
-
-                    <div class="card-style-twentyOne mt-40 w-100">
-
-                        <div class="icon rounded-circle m-auto position-relative d-flex align-items-center justify-content-center">
-
-                            <img src="{{ asset('images/assets/ils_09.svg') }}" alt="">
-
-                            <span class="numb position-absolute d-flex align-items-center justify-content-center rounded-circle">
-                                02
-                            </span>
-
-                        </div>
-
-                        <p class="text-center text-lg mt-50 px-3">
-                            Enter ConnectX Lounges, networking rooms,
-                            podcasts, roundtables, and creator experiences
-                            designed for visibility.
-                        </p>
-
-                        <h5 class="text-center mt-3">
-                            Access Creator Spaces
-                        </h5>
-
-                    </div>
-                </div>
-
-                <!-- STEP 3 -->
-                <div class="col-lg-3 col-md-6 d-flex wow fadeInUp"
-                    data-wow-delay="0.2s">
-
-                    <div class="card-style-twentyOne mt-40 w-100">
-
-                        <div class="icon rounded-circle m-auto position-relative d-flex align-items-center justify-content-center">
-
-                            <img src="{{ asset('images/assets/ils_10.svg') }}" alt="">
-
-                            <span class="numb position-absolute d-flex align-items-center justify-content-center rounded-circle">
-                                03
-                            </span>
-
-                        </div>
-
-                        <p class="text-center text-lg mt-50 px-3">
-                            Network with influencers, creators,
-                            communities, brands, and public voices
-                            across industries and countries.
-                        </p>
-
-                        <h5 class="text-center mt-3">
-                            Connect & Collaborate
-                        </h5>
-
-                    </div>
-                </div>
-
-                <!-- STEP 4 -->
-                <div class="col-lg-3 col-md-6 d-flex wow fadeInUp"
-                    data-wow-delay="0.3s">
-
-                    <div class="card-style-twentyOne mt-40 w-100">
-
-                        <div class="icon rounded-circle m-auto position-relative d-flex align-items-center justify-content-center">
-
-                            <img src="{{ asset('images/assets/ils_08.svg') }}" alt="">
-
-                            <span class="numb position-absolute d-flex align-items-center justify-content-center rounded-circle">
-                                04
-                            </span>
-
-                        </div>
-
-                        <p class="text-center text-lg mt-50 px-3">
-                            Increase visibility through collaborations,
-                            events, podcasts, creator opportunities,
-                            and ecosystem-driven exposure.
-                        </p>
-
-                        <h5 class="text-center mt-3">
-                            Grow Your Influence
-                        </h5>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- BUTTON -->
-            <div class="text-center mt-60 position-relative line-btn">
-                <a href="#" class="btn-twenty">
-                    Join ConnectX
-                </a>
-            </div>
-
-            <img src="{{ asset('images/shape/shape_05.svg') }}"
-                alt=""
-                class="shapes shape_01">
-
-        </div>
-    </div>
-</div>
 
 @endsection

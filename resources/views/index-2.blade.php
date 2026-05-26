@@ -5,7 +5,713 @@
 @section('content')
 
 
+<style>
 
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-banner-one{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    /* pushes content below navbar */
+    padding: 160px 0 100px;
+
+    background: #000;
+}
+
+/* =========================
+   BACKGROUND IMAGE
+========================= */
+.hero-banner-one .hero-bg {
+    position: absolute;
+    inset: 0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ),
+    url('{{ asset("images/media/img_05.jpg") }}');
+
+    /* This ensures the image fills the area */
+    background-size: cover !important;
+
+    /* CHANGE THIS: 'top' anchors the image to the top edge */
+    background-position: top center;
+
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.hero-content{
+    position: relative;
+    z-index: 2;
+
+    /* moves text slightly down */
+    margin-top: 40px;
+}
+
+.hero-title{
+    font-size: 72px;
+    line-height: 1.08em;
+    font-weight: 800;
+    color: #fff;
+
+    margin-bottom: 28px;
+
+    letter-spacing: -2px;
+    max-width: 850px;
+}
+
+.hero-text{
+    font-size: 20px;
+    line-height: 1.9em;
+    color: rgba(255,255,255,0.88);
+
+    max-width: 760px;
+
+    margin-bottom: 45px;
+
+    font-weight: 400;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-btn-group{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.theme-btn-one{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+    color: #000;
+
+    padding: 18px 40px;
+    border-radius: 60px;
+
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.theme-btn-one:hover{
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.theme-btn-two{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #fff;
+    color: #fff;
+
+    padding: 18px 40px;
+    border-radius: 60px;
+
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.theme-btn-two:hover{
+    background: #fff;
+    color: #000;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px){
+
+    .hero-banner-one{
+        min-height: auto;
+        padding: 150px 0 90px;
+    }
+
+    .hero-content{
+        margin-top: 20px;
+    }
+
+    .hero-title{
+        font-size: 54px;
+        line-height: 1.15em;
+    }
+
+    .hero-text{
+        font-size: 18px;
+        line-height: 1.8em;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px){
+
+    .hero-banner-one{
+        padding: 130px 0 80px;
+    }
+
+    .hero-content{
+        margin-top: 10px;
+    }
+
+    .hero-title{
+        font-size: 40px;
+        line-height: 1.2em;
+        letter-spacing: -1px;
+    }
+
+    .hero-text{
+        font-size: 16px;
+        line-height: 1.8em;
+        margin-bottom: 35px;
+    }
+
+    .hero-btn-group{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .theme-btn-one,
+    .theme-btn-two{
+        width: 100%;
+        justify-content: center;
+        padding: 16px 24px;
+    }
+}
+
+/* second section */
+
+        /* SECTION */
+
+        .connectx-about {
+            padding: 120px 0;
+            background: linear-gradient(135deg,
+                    #fffdfb 0%,
+                    #fff5ec 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .connectx-about::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: #ffd2b1;
+            opacity: .25;
+            border-radius: 50%;
+            top: -180px;
+            right: -120px;
+            filter: blur(100px);
+        }
+
+        .connectx-about::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: #76583b;
+            opacity: .08;
+            border-radius: 50%;
+            bottom: -150px;
+            left: -100px;
+            filter: blur(100px);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        /* LEFT */
+
+        .tag {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #52381e;
+            color: white;
+            border-radius: 50px;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 28px;
+        }
+
+        .title {
+            font-size: 42px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #52381e;
+            margin-bottom: 22px;
+        }
+
+        .title span {
+            color: #76583b;
+            position: relative;
+        }
+
+        .title span::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 4px;
+            background: #ffd2b1;
+            border-radius: 20px;
+        }
+
+        .desc {
+            font-size: 18px;
+            line-height: 1.9;
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 620px;
+        }
+
+        .sub-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #52381e;
+            margin-bottom: 25px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-bottom: 45px;
+        }
+
+        .feature {
+            background: white;
+            padding: 20px;
+            border-radius: 22px;
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, .05);
+            color: #52381e;
+            font-weight: 500;
+        }
+
+        .feature span {
+            color: #76583b;
+            margin-right: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 36px;
+            background: #52381e;
+            color: white;
+            text-decoration: none;
+            border-radius: 60px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: #76583b;
+            transform: translateY(-4px);
+        }
+
+        /* RIGHT */
+
+        .visual {
+            position: relative;
+        }
+
+        .main-image {
+            height: 650px;
+            border-radius: 35px;
+            overflow: hidden;
+            box-shadow:
+                0 35px 80px rgba(82, 56, 30, .18);
+        }
+
+        .main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .float-card {
+            position: absolute;
+            background: white;
+            padding: 16px 24px;
+            border-radius: 18px;
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, .08);
+            font-weight: 600;
+            color: #52381e;
+        }
+
+        .card1 {
+            top: 50px;
+            left: -30px;
+        }
+
+        .card2 {
+            right: -20px;
+            top: 240px;
+        }
+
+        .card3 {
+            left: 20px;
+            bottom: 40px;
+        }
+
+        @media(max-width:991px) {
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .title {
+                font-size: 34px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .main-image {
+                height: 500px;
+            }
+
+            .float-card {
+                position: relative;
+                left: auto;
+                right: auto;
+                top: auto;
+                bottom: auto;
+                margin-top: 15px;
+            }
+
+        }
+
+/* third section */
+
+
+/* 1. Make the card a container and round the corners */
+.card-custom {
+    position: relative;
+    border-radius: 24px; 
+    overflow: hidden;    
+    width: 100%;
+    display: block;
+}
+
+/* 2. Fix the Image Wrapper */
+.card-img-wrapper {
+    position: relative;
+    width: 100%;
+    line-height: 0; /* Removes tiny gap at bottom of image */
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 3. Your Overlay: Moving it INSIDE the card */
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%; /* Covers the bottom half for readability */
+    background: linear-gradient(to top, 
+        rgba(0, 0, 0, 0.9) 0%, 
+        rgba(0, 0, 0, 0.5) 40%, 
+        transparent 100%);
+    z-index: 1;
+}
+
+/* 4. Moving the Text INSIDE the card at the bottom */
+.card-text1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px; /* Space from the bottom edge */
+    z-index: 2; /* Sits on top of the overlay */
+    text-align: center;
+}
+
+.card-text1 p {
+    color: #ffffff !important; /* Forces text to be white */
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+
+
+/* fourth section */
+
+
+
+		 /* sixth section */
+
+        .connectx-work {
+            padding: 110px 0;
+            background: #f3efe9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1280px;
+            margin: auto;
+        }
+
+        .section-head {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .main-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #52381e;
+            margin-bottom: 18px;
+        }
+
+        .section-head p {
+            font-size: 17px;
+            color: #666;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .work-card {
+            background: white;
+            padding: 35px 28px;
+            border-radius: 28px;
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, .05);
+            transition: .3s;
+            text-align: center;
+            border-top: 5px solid #76583b;
+        }
+
+        .work-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .icon-box {
+            width: 110px;
+            height: 110px;
+            margin: auto;
+            margin-bottom: 28px;
+            background: #fff6ef;
+            border-radius: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-box img {
+            width: 75px;
+            height: 75px;
+            object-fit: contain;
+        }
+
+        .work-card h3 {
+            font-size: 24px;
+            color: #52381e;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .work-card p {
+            font-size: 15px;
+            line-height: 1.9;
+            color: #666;
+        }
+
+        @media(max-width:1100px) {
+
+            .work-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media(max-width:768px) {
+
+            .connectx-work {
+                padding: 80px 0;
+            }
+
+            .main-title {
+                font-size: 34px;
+            }
+
+            .work-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+		/* fifth section */
+
+		
+/* card section */
+.connectx-cta-card{
+    background: #fff;
+    border: 1px solid #dfe7e2;
+    border-radius: 28px;
+    padding: 55px 50px;
+    min-height: 100%;
+    transition: 0.3s ease;
+}
+
+.connectx-cta-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+}
+
+.connectx-cta-card h3{
+    font-size: 38px;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 12px 0 22px;
+    color: #000;
+}
+
+.connectx-cta-card p{
+    font-size: 17px;
+    line-height: 1.9em;
+    color: #555;
+    margin-bottom: 35px;
+    max-width: 95%;
+}
+
+.connectx-cta-card .small-text{
+    font-size: 17px;
+    font-weight: 500;
+    color: #76583b;
+}
+
+/* BUTTON */
+
+.connectx-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #76583b;
+    color: #fff !important;
+    height: 62px;
+    padding: 0 34px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.connectx-btn:hover{
+    background: #5e442c;
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+/* SHAPES */
+
+.shape-circle{
+    position: absolute;
+    border-radius: 50%;
+    background: #f2e8db;
+}
+
+.top-circle{
+    width: 170px;
+    height: 170px;
+    top: -70px;
+    right: -30px;
+}
+
+.bottom-circle{
+    width: 240px;
+    height: 240px;
+    bottom: -140px;
+    left: 18%;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px){
+
+    .connectx-cta-card{
+        padding: 40px 30px;
+    }
+
+    .connectx-cta-card h3{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 576px){
+
+    .connectx-cta-card{
+        padding: 35px 25px;
+    }
+
+    .connectx-cta-card h3{
+        font-size: 26px;
+    }
+
+    .connectx-btn{
+        width: 100%;
+    }
+}
+	</style>
 
 
 
@@ -15,907 +721,972 @@
     Hero Banner
 ============================================== 
 -->
-<div class="hero-banner-one pt-225 xl-pt-200 lg-pt-150 pb-150 lg-pb-100 position-relative">
-
-    <!-- HERO SLIDER -->
-    <div class="hero-slider-one m0">
-        
-        <!-- SLIDE 1 -->
-        <div class="item m0">
-            <div class="hero-img" style="background-image: url('{{ asset('images/media/img_01.jpg') }}');"></div>
-        </div>
-
-        <!-- SLIDE 2 -->
-        <div class="item m0">
-            <div class="hero-img" style="background-image: url('{{ asset('images/media/img_02.jpg') }}');"></div>
-        </div>
-
-        <!-- SLIDE 3 -->
-        <div class="item m0">
-            <div class="hero-img" style="background-image: url('{{ asset('images/media/img_03.jpg') }}');"></div>
-        </div>
-
-    </div>
-    <!-- /.hero-slider-one -->
 
 
-    <!-- HERO CONTENT -->
-    <div class="container position-relative">
+
+<!-- HERO SECTION START -->
+<section class="hero-banner-one">
+
+    <!-- Background -->
+    <div class="hero-bg"></div>
+
+    <div class="container">
         <div class="row">
-            <div class="col-xl-6 col-lg-7 ms-auto">
+            <div class="col-xl-8 col-lg-9 col-md-11">
 
-                <h1 class="hero-heading d-inline-block position-relative wow fadeInUp">
-                    Your business <br>
-                    Consultant & <br>
-                    Solution.
-                </h1>
+                <div class="hero-content">
 
-                <p class="text-xl text-white pt-35 pb-25 wow fadeInUp" data-wow-delay="0.1s">
-                    Empowering businesses with innovative strategies and actionable recommendations
-                </p>
+                    <h1 class="hero-title">
+                        Partner With the Future of Influence
+                    </h1>
 
-                <a href="{{ url('/contact') }}" class="btn-two icon-link wow fadeInUp" data-wow-delay="0.2s">
-                    <span>Let’s Talk</span>
+                    <p class="hero-text">
+                        Young Chanakya ConnectX collaborates with brands, media platforms, startups, studios, communities, and ecosystem partners to build one of the world’s fastest-growing creator and influencer networks.
+                    </p>
 
-                    <img 
-                        src="{{ asset('images/lazy.svg') }}"
-                        data-src="{{ asset('images/icon/icon_02.svg') }}"
-                        alt=""
-                        class="lazy-img icon ms-2"
-                    >
-                </a>
+                    <div class="hero-btn-group">
+
+                        <a href="#" class="theme-btn-one">
+                            Collaborate With ConnectX
+                        </a>
+
+                        <a href="#" class="theme-btn-two">
+                            Become a Partner
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
         </div>
     </div>
 
+</section>
+<!-- HERO SECTION END -->
 
-    <!-- SIDE BUTTON -->
-    <a href="{{ url('/contact') }}"
-       class="more-btn rounded-circle d-flex align-items-center justify-content-center tran3s wow fadeInLeft">
+<!-- second section about  -->
+<section class="connectx-about">
 
-        <i class="bi bi-arrow-up-right"></i>
-    </a>
+<div class="container">
+
+<div class="about-grid">
+
+<!-- LEFT -->
+
+<div>
+
+<div class="tag">
+ABOUT CONNECTX
+</div>
+
+<h2 class="title">
+About <span>ConnectX</span>
+</h2>
+
+<p class="desc">
+Young Chanakya ConnectX is a digital-first creator ecosystem designed to bring influencers, content creators, public voices, and storytellers into one global network.
+</p>
+
+<h3 class="sub-title">
+ConnectX creates opportunities for creators to:
+</h3>
+
+<div class="features">
+
+<div class="feature">
+<span>✔</span>
+Collaborate
+</div>
+
+<div class="feature">
+<span>✔</span>
+Build Visibility
+</div>
+
+<div class="feature">
+<span>✔</span>
+Speak on podcasts
+</div>
+
+<div class="feature">
+<span>✔</span>
+Attend exclusive events
+</div>
+
+<div class="feature">
+<span>✔</span>
+Share stories in front of audience & camera
+</div>
+
+<div class="feature">
+<span>✔</span>
+Access creator lounges & networking rooms
+</div>
 
 </div>
-<!-- /.hero-banner-one -->
-		<!-- 
-		=============================================
-			Fancy Banner One
-		============================================== 
-		-->
-		<div class="fancy-banner-one position-relative pt-30 md-pt-20 pb-40 md-pb-20 bg-white">
-			<div class="row align-items-center">
-				<div class="col-md-6 text-center text-md-end">
-					<h2 class="pe-xl-5 pe-md-4 sm-pb-50">Let’s <span>Discuss & Start</span></h2>
-				</div>
-				<div class="col-md-6">
-					<div class="ps-xl-5 ps-md-4 pe-xxl-5 d-flex align-items-center justify-content-between">
-						<div>
-							<h3 class="fw-bold">1.75 million+</h3>
-							<p class="text-md m0">Worldwide clients</p>
-						</div>
-						<img src="images/lazy.svg" data-src="images/assets/screen_01.png" alt="" class="lazy-img screen me-xxl-5">
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /.fancy-banner-one -->
 
+<a href="#" class="btn">
+Join ConnectX
+</a>
 
-		<!-- 
-		=============================================
-			BLock Feature One
-		============================================== 
-		-->
-		<div class="block-feature-one position-relative pt-75">
-			<div class="upper-wrapper mb-110 lg-mb-80">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-4 wow fadeInUp">
-							<div class="card-style-one d-flex w-100 mb-35">
-								<div class="icon tran3s rounded-circle d-flex align-items-center justify-content-center"><img src="images/lazy.svg" data-src="images/icon/icon_03.svg" alt="" class="lazy-img"></div>
-								<div class="text ps-4">
-									<h4 class="fw-bold">Low Fees</h4>
-									<p class="pe-xl-4">cupidatat non proident, sunt in culpa qui officia deserunt</p>
-								</div>
-							</div>
-							<!-- /.card-style-one -->
-						</div>
-						<div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-							<div class="card-style-one d-flex w-100 mb-35">
-								<div class="icon tran3s rounded-circle d-flex align-items-center justify-content-center"><img src="images/lazy.svg" data-src="images/icon/icon_04.svg" alt="" class="lazy-img"></div>
-								<div class="text ps-4">
-									<h4 class="fw-bold">Expert Advisor</h4>
-									<p class="pe-xl-4">Elit esse cillum dolore eu fugiat nulla pariatur</p>
-								</div>
-							</div>
-							<!-- /.card-style-one -->
-						</div>
-						<div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-							<div class="card-style-one d-flex w-100 mb-35">
-								<div class="icon tran3s rounded-circle d-flex align-items-center justify-content-center"><img src="images/lazy.svg" data-src="images/icon/icon_05.svg" alt="" class="lazy-img"></div>
-								<div class="text ps-4">
-									<h4 class="fw-bold">Effective Support</h4>
-									<p class="pe-xl-4">quis nostrud exerct ullamo ea nisi ut aliqui com dolor</p>
-								</div>
-							</div>
-							<!-- /.card-style-one -->
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- /.upper-wrapper -->
+</div>
 
-			<div class="container">
-				<div class="position-relative">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="title-one text-center text-md-start mb-30 sm-mb-10">
-								<h2>Provide quality Services.</h2>
-							</div>
-							<!-- /.title-one -->
-						</div>
-					</div>
-					<div class="row justify-content-center">
-						<div class="col-lg-4 col-md-6 d-flex wow fadeInUp">
-							<div class="card-style-two vstack tran3s w-100 mt-30">
-								<img src="images/lazy.svg" data-src="images/icon/icon_06.svg" alt="" class="lazy-img icon me-auto">
-								<h4 class="fw-bold mt-30 mb-25">Expense Report</h4>
-								<p class="mb-20">Maximize convenience by paying for ads, subscriptions, and inventory with Mastercard®.</p>
-								<a href="service-details.html" class="arrow-btn tran3s mt-auto stretched-link"><img src="images/lazy.svg" data-src="images/icon/icon_09.svg" alt="" class="lazy-img"></a>
-							</div>
-							<!-- /.card-style-two -->
-						</div>
-						<div class="col-lg-4 col-md-6 d-flex wow fadeInUp" data-wow-delay="0.1s">
-							<div class="card-style-two vstack tran3s w-100 mt-30">
-								<img src="images/lazy.svg" data-src="images/icon/icon_07.svg" alt="" class="lazy-img icon me-auto">
-								<h4 class="fw-bold mt-30 mb-25">Tax Preparation</h4>
-								<p class="mb-20">Use receiving accounts in a growing number of currencies and get paid like a local.</p>
-								<a href="service-details.html" class="arrow-btn tran3s mt-auto stretched-link"><img src="images/lazy.svg" data-src="images/icon/icon_09.svg" alt="" class="lazy-img"></a>
-							</div>
-							<!-- /.card-style-two -->
-						</div>
-						<div class="col-lg-4 col-md-6 d-flex wow fadeInUp" data-wow-delay="0.2s">
-							<div class="card-style-two vstack tran3s w-100 mt-30">
-								<img src="images/lazy.svg" data-src="images/icon/icon_08.svg" alt="" class="lazy-img icon me-auto">
-								<h4 class="fw-bold mt-30 mb-25">Book keeping</h4>
-								<p class="mb-20">Use receiving accounts in a growing number of currencies and get paid like a local.</p>
-								<a href="service-details.html" class="arrow-btn tran3s mt-auto stretched-link"><img src="images/lazy.svg" data-src="images/icon/icon_09.svg" alt="" class="lazy-img"></a>
-							</div>
-							<!-- /.card-style-two -->
-						</div>
-					</div>
+<!-- RIGHT -->
 
-					<div class="section-subheading sm-mt-40">
-						<p class="text-lg">Inciddnt ut labore et dolor magna aliu. enim ad mim venam, quis nostru </p>
-						<a href="service-v1.html" class="btn-three icon-link">
-							<span>See All Services</span>
-							<img src="images/lazy.svg" data-src="images/icon/icon_09.svg" alt="" class="lazy-img icon ms-1">
-						</a>
-					</div>
-					<!-- /.section-subheading -->
-				</div>
-			</div>
-		</div>
-		<!-- /.block-feature-one -->
-		
+<div class="visual">
 
+<div class="main-image">
 
-		<!--
-		=====================================================
-			Text Feature One
-		=====================================================
-		-->
-		<div class="text-feature-one mt-150 lg-mt-100">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-xl-5 col-lg-6 wow fadeInLeft">
-						<div class="title-one">
-							<div class="upper-title">About us</div>
-							<h2>15k+ Client using Our Services.</h2>
-						</div>
-						<!-- /.title-one -->
-						<p class="text-lg mt-45 lg-mt-30 mb-35 lg-mb-20">Your success is our mission. As business advisors, we offer expert guidance, unlocking your potential for growth and profitability</p>
-						<div class="d-inline-flex flex-wrap align-items-center">
-							<a href="about-us-v1.html" class="btn-four mt-15 me-4">More About us</a>
-							<a href="contact.html" class="btn-three icon-link mt-15">
-								<span>Request a Callback</span>
-								<img src="images/lazy.svg" data-src="images/icon/icon_09.svg" alt="" class="lazy-img icon ms-1">
-							</a>
-						</div>
-					</div>
-					<div class="col-xl-7 col-lg-6 wow fadeInRight">
-						<div class="media-list-item ms-auto pe-xxl-5 pe-4 ps-xxl-5 ps-4 pb-35 md-mt-60 d-flex align-items-end">
-							<ul class="style-none">
-								<li>Mobile app easy management & access</li>
-								<li>Ton’s of features for handle the card easily</li>
-								<li>Strong security system.</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /.text-feature-one -->
+<img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200"
+alt="connectx">
 
+</div>
 
-		<!--
-		=====================================================
-			BLock Feature Two
-		=====================================================
-		-->
-		<div class="block-feature-two mt-80">
-			<div class="container">
-				<div class="wrapper">
-					<div class="row align-items-center">
-						<div class="col-md-4">
-							<div class="card-style-three pt-45 md-pt-30 pb-35 sm-pb-30">
-								<img src="images/lazy.svg" data-src="images/icon/icon_10.svg" alt="" class="lazy-img icon">
-								<h4 class="fw-bold mt-40 sm-mt-20 mb-20">Our Mission</h4>
-								<p>Optimize expense tracking across platforms, & product lines using multiple cards.</p>
-							</div>
-							<!-- /.card-style-three -->
-						</div>
-						<div class="col-md-5">
-							<div class="border-line h-100 ps-lg-5 pe-lg-5 ps-md-3 pe-md-3">
-								<div class="card-style-three pt-45 md-pt-30 pb-35 sm-pb-30">
-									<img src="images/lazy.svg" data-src="images/icon/icon_11.svg" alt="" class="lazy-img icon">
-									<h4 class="fw-bold mt-40 sm-mt-20 mb-20">Our company vision.</h4>
-									<p>Optimize expense tracking across platforms, & product lines using multiple cards.</p>
-								</div>
-								<!-- /.card-style-three -->
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="ps-lg-5 sm-pb-30 sm-pt-30">
-								<div class="numb fw-500"><span class="counter">13</span>+</div>
-								<p class="m0">Years Experience <br> with proud.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /.block-feature-two -->
-		
+<div class="float-card card1">
+🎙 Podcast Sessions
+</div>
 
+<div class="float-card card2">
+🤝 Creator Networking
+</div>
 
-		<!--
-		=====================================================
-			BLock Feature Three
-		=====================================================
-		-->
-		<div class="block-feature-three position-relative mt-150 lg-mt-80 pb-150 lg-pb-80 sm-pb-60">
-			<div class="container">
-				<div class="position-relative">
-					<div class="row">
-						<div class="col-md-6 wow fadeInLeft">
-							<div class="title-one mb-90 lg-mb-50">
-								<h2>Our client Success Stories.</h2>
-							</div>
-							<!-- /.title-one -->
-						</div>
-					</div>
+<div class="float-card card3">
+🌍 Global Community
+</div>
 
-					<div class="row gx-xxl-5">
-						<div class="col-lg-8">
-							<div class="block-one pt-45 lg-pt-30 pb-20 ps-3 ps-xl-5 pe-xl-5 pe-3 position-relative border-30 wow fadeInUp">
-								<div class="row">
-									<div class="col-lg-5">
-										<div class="tag d-inline-block border-30 fw-500 text-uppercase mb-15">Consulting</div>
-										<div class="date text-dark"><span class="fw-500">Featured -</span> 18 Jul 2023</div>
-									</div>
-									<div class="col-lg-7">
-										<h3 class="block-title d-inline-block position-relative"><a href="project-details-v1.html">Manage your online banking and get rewarded</a></h3>
-									</div>
-								</div>
-							</div>
-							<!-- /.block-one -->
+</div>
 
-							<div class="block-two border-30 d-flex mt-45 lg-mt-30 wow fadeInUp">
-								<div class="img-wrapper"></div>
-								<div class="text-wrapper bg-white">
-									<div class="date">18 Jul 2023</div>
-									<h3 class="block-title d-inline-block position-relative mt-5 mb-40 lg-mb-30"><a href="project-details-v1.html">Gold card user will get priority pass for <br class="d-none d-lg-block"> Airport.</a></h3>
-									<div class="d-flex align-items-center justify-content-between">
-										<div class="tag text-uppercase fw-500">Payments</div>
-										<a href="project-details-v1.html" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"><i class="bi bi-arrow-up-right"></i></a>
-									</div>
-								</div>
-								<!-- /.text-wrapper -->
-							</div>
-							<!-- /.block-two -->
-						</div>
+</div>
 
-						<div class="col-lg-4">
-							<div class="block-three border-30 ps-lg-4 ps-3 pe-lg-4 pe-3 pt-40 lg-pt-30 pb-30 md-mt-30 wow fadeInUp" data-wow-delay="0.2s">
-								<div class="date">3 Aug 2023</div>
-								<h3 class="block-title d-inline-block position-relative mt-20 mb-80 lg-mb-50"><a href="project-details-v1.html">Gold card user will get priority pass for Airport.</a></h3>
-								<div class="d-flex align-items-center justify-content-between">
-									<div class="tag text-uppercase fw-500">DESIGN</div>
-									<a href="project-details-v1.html" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"><i class="bi bi-arrow-up-right"></i></a>
-								</div>
-							</div>
-							<!-- /.block-three -->
-							<div class="block-four border-30 ps-lg-4 ps-3 pe-lg-4 pe-3 pt-15 pb-30 mt-45 lg-mt-30 wow fadeInUp" data-wow-delay="0.2s">
-								<h3 class="block-title d-inline-block position-relative mt-20 mb-250 lg-mb-150 sm-mb-100"><a href="project-details-v1.html">Our Travel Card Makes <br class="d-none d-xl-block">you Happy.</a></h3>
-								<div class="d-flex align-items-center justify-content-between">
-									<div class="tag text-uppercase fw-500">DESIGN</div>
-									<a href="project-details-v1.html" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"><i class="bi bi-arrow-up-right"></i></a>
-								</div>
-							</div>
-							<!-- /.block-four -->
-						</div>
-					</div>
+</div>
 
-					<div class="section-btn sm-mt-40">
-						<a href="project-v1.html" class="btn-five icon-link">
-							<span class="text">See all stories</span>
-							<div class="icon tran3s rounded-circle d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-right"></i></div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /.block-feature-three -->
+</section>
 
 
 
-		<!-- 
-		=============================================
-			Feedback Section One
-		============================================== 
-		-->
-		<div class="feedback-section-one mt-150 lg-mt-80 pb-80">
-			<div class="container">
-				<div class="position-relative">
-					<div class="title-one sm-mb-40">
-						<h2>Words from <br> clients.</h2>
-					</div>
-					<!-- /.title-one -->
-					<div class="feedback-slider-one">
-						<div class="item">
-							<div class="feedback-block-one">
-								<div class="row align-items-end">
-									<div class="col-md-7 ms-auto order-md-last">
-										<blockquote>"Efficient problem-solving, insightful market analysis, and actionable plans made the consulting experience invaluable to our business's success."</blockquote>
-										<div class="d-flex align-items-center">
-											<img src="images/media/img_08.jpg" alt="" class="avatar rounded-circle">
-											<div class="ps-4">
-												<div class="name fw-bold text-dark">James Bond.</div>
-												<p class="fs-6 m0">CEO & Head of Sky Tech Inc.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4 order-md-first">
-										<div class="d-flex align-items-center justify-content-between sm-mt-40">
-											<div class="line"></div>
-											<div class="count fw-500"><span class="text-dark">01</span>  /  03</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="feedback-block-one">
-								<div class="row align-items-end">
-									<div class="col-md-7 ms-auto order-md-last">
-										<blockquote>"Lorem ipsum, dolor sit amet consectetur elit. Asperiores unde inventore tenetur. Accusantium tenetur id cupiditate quibusdam."</blockquote>
-										<div class="d-flex align-items-center">
-											<img src="images/media/img_08.jpg" alt="" class="avatar rounded-circle">
-											<div class="ps-4">
-												<div class="name fw-bold text-dark">Rashed Kabir.</div>
-												<p class="fs-6 m0">CEO & Head of Sky Tech Inc.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4 order-md-first">
-										<div class="d-flex align-items-center justify-content-between sm-mt-40">
-											<div class="line"></div>
-											<div class="count fw-500"><span class="text-dark">02</span>  /  03</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="feedback-block-one">
-								<div class="row align-items-end">
-									<div class="col-md-7 ms-auto order-md-last">
-										<blockquote>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga sed nobis eveniet nisi provident aut excepturi reiciendis officiis quo."</blockquote>
-										<div class="d-flex align-items-center">
-											<img src="images/media/img_08.jpg" alt="" class="avatar rounded-circle">
-											<div class="ps-4">
-												<div class="name fw-bold text-dark">Zubayer Hasan.</div>
-												<p class="fs-6 m0">CEO & Head of Sky Tech Inc.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4 order-md-first">
-										<div class="d-flex align-items-center justify-content-between sm-mt-40">
-											<div class="line"></div>
-											<div class="count fw-500"><span class="text-dark">03</span>  /  03</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="icon d-flex align-items-center justify-content-center rounded-circle"><img src="images/lazy.svg" data-src="images/icon/icon_12.svg" alt="" class="lazy-img"></div>
-				</div>
-			</div>
-		</div>
-		<!-- /.feedback-section-one -->
+<!-- third section -->
 
 
+<section class="section mt-50 mb-50">
+    <div class="container">
+        <div class="row align-items-end">
+            <div class="col-12 text-center">
+                <h2 class="color-brand-1 mb-20 wow animate__ animate__fadeIn animated section-heading-main"
+                    data-wow-delay=".0s"
+                    style="visibility: visible; animation-delay: 0s; animation-name: fadeIn;">
+                    Who can partner with us
+                </h2>
 
-		<!--
-		=====================================================
-			Team Section One
-		=====================================================
-		-->
-		<div class="team-section-one mt-150 lg-mt-80">
-			<div class="container">
-				<div class="position-relative">
-					<div class="title-one mb-40 lg-mb-20 wow fadeInUp">
-						<h2>Our Advisor.</h2>
-					</div>
-					<!-- /.title-one -->
-
-					<div class="row">
-						<div class="col-lg-3 col-sm-6 wow fadeInUp">
-							<div class="card-style-four mt-35">
-								<div class="media d-flex align-items-center justify-content-center position-relative overflow-hidden">
-									<img src="images/lazy.svg" data-src="images/media/img_09.jpg" alt="" class="lazy-img w-100">
-									<a href="team-details.html" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"><i class="bi bi-arrow-up-right"></i></a>
-								</div>
-								<h4 class="fw-500 pt-20 m0">Rashed kabir</h4>
-								<div class="fs-6">Manager</div>
-							</div>
-							<!-- /.card-style-four -->
-						</div>
-						<div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-							<div class="card-style-four mt-35">
-								<div class="media d-flex align-items-center justify-content-center position-relative overflow-hidden">
-									<img src="images/lazy.svg" data-src="images/media/img_10.jpg" alt="" class="lazy-img w-100">
-									<a href="team-details.html" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"><i class="bi bi-arrow-up-right"></i></a>
-								</div>
-								<h4 class="fw-500 pt-20 m0">Angelina Jolie</h4>
-								<div class="fs-6">Marketing Expert</div>
-							</div>
-							<!-- /.card-style-four -->
-						</div>
-						<div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
-							<div class="card-style-four mt-35">
-								<div class="media d-flex align-items-center justify-content-center position-relative overflow-hidden">
-									<img src="images/lazy.svg" data-src="images/media/img_11.jpg" alt="" class="lazy-img w-100">
-									<a href="team-details.html" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"><i class="bi bi-arrow-up-right"></i></a>
-								</div>
-								<h4 class="fw-500 pt-20 m0">Zubayer Hasan</h4>
-								<div class="fs-6">Analysis</div>
-							</div>
-							<!-- /.card-style-four -->
-						</div>
-						<div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-							<div class="card-style-four mt-35">
-								<div class="media d-flex align-items-center justify-content-center position-relative overflow-hidden">
-									<img src="images/lazy.svg" data-src="images/media/img_12.jpg" alt="" class="lazy-img w-100">
-									<a href="team-details.html" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"><i class="bi bi-arrow-up-right"></i></a>
-								</div>
-								<h4 class="fw-500 pt-20 m0">Maria Escolova</h4>
-								<div class="fs-6">Senior Officer</div>
-							</div>
-							<!-- /.card-style-four -->
-						</div>
-					</div>
-
-					<div class="section-btn sm-mt-40">
-						<a href="team-v1.html" class="btn-five icon-link">
-							<span class="text">See all Experts</span>
-							<div class="icon tran3s rounded-circle d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-right"></i></div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /.team-section-one -->
-		
-
-		<!--
-		=====================================================
-			FAQ Section One
-		=====================================================
-		-->
-		<div class="faq-section-one mt-150 lg-mt-120 md-mt-80">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-5 wow fadeInLeft">
-						<div class="title-one mb-40 lg-mb-20">
-							<h2>Questions & Answers</h2>
-						</div>
-						<!-- /.title-one -->
-						<p class="text-lg mb-40 lg-mb-20">Don’t find the answer? We can help</p>
-						<a href="contact.html" class="btn-four">Contact us</a>
-					</div>
-
-					<div class="col-lg-7">
-						<div class="accordion accordion-style-one mt-15 md-mt-50" id="accordionOne">
-							<div class="accordion-item">
-								<h2 class="accordion-header">
-									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-										How does the free trial work?
-									</button>
-							  	</h2>
-							  	<div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionOne">
-									<div class="accordion-body">
-										<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit .</p>
-									</div>
-							  	</div>
-							</div>
-							<div class="accordion-item">
-								<h2 class="accordion-header">
-									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-										How do you find different criteria in your process?
-									</button>
-								</h2>
-								<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionOne">
-									<div class="accordion-body">
-										<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit .</p>
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item">
-								<h2 class="accordion-header">
-									<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-										What do you look for in a founding team?
-									</button>
-								</h2>
-								<div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="#accordionOne">
-									<div class="accordion-body">
-										<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit .</p>
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item">
-								<h2 class="accordion-header">
-									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-										Do you recommend Pay as you go or Pre pay?
-									</button>
-								</h2>
-								<div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionOne">
-									<div class="accordion-body">
-										<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit .</p>
-									</div>
-								</div>
-							</div>
-							<div class="accordion-item">
-								<h2 class="accordion-header">
-									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-										What do I get for $0 with my plan?
-									</button>
-								</h2>
-								<div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionOne">
-									<div class="accordion-body">
-										<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit .</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /.faq-section-one -->
-
-
-		<!--
-		=====================================================
-			Blog Section One
-		=====================================================
-		-->
-		<div class="blog-section-one position-relative mt-150 lg-mt-80 pt-120 lg-pt-80">
-			<div class="container">
-				<div class="position-relative">
-					<div class="title-one mb-20 lg-mb-10">
-						<h2>Latest News.</h2>
-					</div>
-					<!-- /.title-one -->
-					<p class="text-lg mb-40 lg-mb-10">Get the latest update, trips & tricks from our expert.</p>
-
-					<div class="row gx-xxl-5">
-						<div class="col-md-6">
-							<article class="blog-meta-one mt-35 sm-mt-30 wow fadeInUp">
-								<div class="post-data">
-									<div class="post-info"><span class="fw-500 text-dark">Rashed Ka -</span> 18 Jul 2023</div>
-									<a href="blog-details.html" class="mt-15"><h4 class="tran3s blog-title">Wise Spending Habits, 13 Tips for Maximizing Your Money.</h4></a>
-								</div>
-								<figure class="post-img position-relative d-flex justify-content-end align-items-end m0" style="background-image: url(images/blog/blog_img_01.html);">
-									<a href="blog-details.html" class="round-btn stretched-link rounded-circle d-flex align-items-center justify-content-center tran3s"><i class="bi bi-arrow-up-right"></i></a>
-								</figure>
-							</article>
-							<!-- /.blog-meta-one -->
-						</div>
-						<div class="col-md-6">
-							<article class="blog-meta-one mt-35 sm-mt-30 wow fadeInUp" data-wow-delay="0.1s">
-								<div class="post-data">
-									<div class="post-info"><span class="fw-500 text-dark">Mark Joe -</span> 09 Feb 2023</div>
-									<a href="blog-details.html" class="mt-15"><h4 class="tran3s blog-title">Lessons from Visionary Leaders for Success in Business.</h4></a>
-								</div>
-								<figure class="post-img position-relative d-flex justify-content-end align-items-end m0" style="background-image: url(images/blog/blog_img_02.html);">
-									<a href="blog-details.html" class="round-btn stretched-link rounded-circle d-flex align-items-center justify-content-center tran3s"><i class="bi bi-arrow-up-right"></i></a>
-								</figure>
-							</article>
-							<!-- /.blog-meta-one -->
-						</div>
-					</div>
-
-					<div class="section-btn sm-mt-40">
-						<a href="blog-v2.html" class="btn-five icon-link">
-							<span class="text">See all blogs</span>
-							<div class="icon tran3s rounded-circle d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-right"></i></div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /.blog-section-one -->
-
-
-		<!--
-		=====================================================
-			Fancy Banner Two
-		=====================================================
-		-->
-		<div class="fancy-banner-two mt-150 lg-mt-80 mb-150 lg-mb-60">
-			<div class="container">
-				<div class="text-center wow fadeInUp">
-					<div class="row">
-						<div class="col-lg-8 m-auto">
-							<div class="title-one">
-								<h2>Want to chat? Feel free to contact our team.</h2>
-							</div>
-							<!-- /.title-one -->
-							<p class="text-lg mt-40 lg-mt-30 mb-30">Contact our friendly team for quick and helpful answers.</p>
-							<div class="d-inline-flex flex-wrap justify-content-center">
-								<a href="contact.html" class="btn-four mt-10 me-2">Get a Quote</a>
-								<a href="contact.html" class="btn-six mt-10 ms-2">Contact</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /.fancy-banner-two -->
-
-
-
-
-		<!--
-		=====================================================
-			Footer One
-		=====================================================
-		-->
-		<div class="footer-one">
-			<div class="container">
-				<div class="inner-wrapper">
-					<div class="row justify-content-between">
-						<div class="col-xl-4 col-md-3 footer-intro mb-30">
-							<div class="logo mb-15">
-								<a href="index.html" class="d-inline-block d-lg-none">
-									<img src="images/logo/logo_01.html" alt="">
-								</a>
-							</div> 
-							<!-- logo -->
-							<p class="text-white lh-sm mb-35">Top-rated <span class="opacity-50">business <br> consultancy for your success</span></p>
-							<ul class="style-none d-flex align-items-center social-icon">
-								<li><a href="#"><i class="bi bi-facebook"></i></a></li>
-								<li><a href="#"><i class="bi bi-dribbble"></i></a></li>
-								<li><a href="#"><i class="bi bi-instagram"></i></a></li>
-							</ul>
-						</div>
-						<div class="col-xl-2 col-md-3 col-sm-4 mb-20">
-							<h5 class="footer-title">Links</h5>
-							<ul class="footer-nav-link style-none">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="pricing.html">Pricing Plan</a></li>
-								<li><a href="about-us-v1.html">About us</a></li>
-								<li><a href="service-v1.html">Our services</a></li>
-							</ul>
-						</div>
-						<div class="col-xl-2 col-md-3 col-sm-4 mb-20">
-							<h5 class="footer-title">Company</h5>
-							<ul class="footer-nav-link style-none">
-								<li><a href="about-us-v2.html">About us</a></li>
-								<li><a href="blog-v1.html">Blogs</a></li>
-								<li><a href="faq.html">FAQ’s</a></li>
-								<li><a href="contact.html">Contact</a></li>
-							</ul>
-						</div>
-						<div class="col-xl-2 col-md-3 col-sm-4 mb-20">
-							<h5 class="footer-title">Support</h5>
-							<ul class="footer-nav-link style-none">
-								<li><a href="contact.html">Terms of use</a></li>
-								<li><a href="contact.html">Terms & conditions</a></li>
-								<li><a href="contact.html">Privacy</a></li>
-								<li><a href="contact.html">Cookie policy</a></li>
-							</ul>
-						</div>
-					</div>
-				</div> <!-- /.inner-wrapper -->
-			</div>
-			<div class="container">
-				<div class="bottom-footer">
-					<div class="row align-items-center">
-						<div class="col-lg-5 order-lg-last mb-15">
-							<div class="footer-newsletter float-xl-end">
-								<h5 class="footer-title">Subscribe Newsletter</h5>
-								<form action="#">
-									<input type="email" placeholder="Enter your email address">
-									<button><i class="bi bi-arrow-right"></i></button>
-								</form>
-							</div>
-						</div>
-						<div class="col-lg-7 order-lg-first mb-15">
-							<a href="index.html" class="d-none d-lg-inline-block mb-25">
-								<img src="images/logo/logo_01.html" alt="">
-							</a>
-							<div class="d-xl-flex align-items-center">
-								<ul class="style-none bottom-nav d-flex flex-wrap justify-content-center justify-content-lg-start order-lg-last">
-									<li><a href="#">Privacy & Terms</a></li>
-									<li><a href="#">Cookies</a></li>
-									<li><a href="#">Contact Us</a></li>
-								</ul>
-								<div class="copyright me-xl-4 lg-mt-10 order-lg-first">Copyright @2023 babun inc.</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /.bottom-footer -->
-			</div>
-		</div> <!-- /.footer-one -->
-
-
-
-
-
-
-
-
-
-
-
-		
-
-		<!-- Modal -->
-        <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen modal-dialog-centered">
-                <div class="container">
-                    <div class="user-data-form modal-content">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						<div class="form-wrapper m-auto">
-							<ul class="nav nav-tabs border-0 w-100" role="tablist">
-								<li class="nav-item" role="presentation">
-									<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#fc1" role="tab">Login</button>
-								</li>
-								<li class="nav-item" role="presentation">
-									<button class="nav-link" data-bs-toggle="tab" data-bs-target="#fc2" role="tab">Signup</button>
-								</li>
-							</ul>
-							<div class="tab-content mt-30">
-								<div class="tab-pane show active" role="tabpanel" id="fc1">
-									<div class="text-center mb-20">
-										<h2>Hi, Welcome Back!</h2>
-										<p>Still don't have an account? <a href="#">Sign up</a></p>
-									</div>
-									<form action="#">
-										<div class="row">
-											<div class="col-12">
-												<div class="input-group-meta position-relative mb-25">
-													<label>Email*</label>
-													<input type="email" placeholder="Youremail@gmail.com">
-												</div>
-											</div>
-											<div class="col-12">
-												<div class="input-group-meta position-relative mb-20">
-													<label>Password*</label>
-													<input type="password" placeholder="Enter Password" class="pass_log_id">
-													<span class="placeholder_icon"><span class="passVicon"><img src="images/icon/icon_13.svg" alt=""></span></span>
-												</div>
-											</div>
-											<div class="col-12">
-												<div class="agreement-checkbox d-flex justify-content-between align-items-center">
-													<div>
-														<input type="checkbox" id="remember">
-														<label for="remember">Keep me logged in</label>
-													</div>
-													<a href="#">Forget Password?</a>
-												</div> <!-- /.agreement-checkbox -->
-											</div>
-											<div class="col-12">
-												<button class="btn-four w-100 tran3s d-block mt-20">Login</button>
-											</div>
-										</div>
-									</form>
-								</div>
-								<!-- /.tab-pane -->
-								<div class="tab-pane" role="tabpanel" id="fc2">
-									<div class="text-center mb-20">
-										<h2>Register</h2>
-										<p>Already have an account? <a href="#">Login</a></p>
-									</div>
-									<form action="#">
-										<div class="row">
-											<div class="col-12">
-												<div class="input-group-meta position-relative mb-25">
-													<label>Name*</label>
-													<input type="text" placeholder="Zubayer Hasan">
-												</div>
-											</div>
-											<div class="col-12">
-												<div class="input-group-meta position-relative mb-25">
-													<label>Email*</label>
-													<input type="email" placeholder="zubayerhasan@gmail.com">
-												</div>
-											</div>
-											<div class="col-12">
-												<div class="input-group-meta position-relative mb-20">
-													<label>Password*</label>
-													<input type="password" placeholder="Enter Password" class="pass_log_id">
-													<span class="placeholder_icon"><span class="passVicon"><img src="images/icon/icon_13.svg" alt=""></span></span>
-												</div>
-											</div>
-											<div class="col-12">
-												<div class="agreement-checkbox d-flex justify-content-between align-items-center">
-													<div>
-														<input type="checkbox" id="remember2">
-														<label for="remember2">By hitting the "Register" button, you agree to the <a href="#">Terms conditions</a> & <a href="#">Privacy Policy</a></label>
-													</div>
-												</div> <!-- /.agreement-checkbox -->
-											</div>
-											<div class="col-12">
-												<button class="btn-four w-100 tran3s d-block mt-20">Sign up</button>
-											</div>
-										</div>
-									</form>
-								</div>
-								<!-- /.tab-pane -->
-							</div>
-							
-							<div class="d-flex align-items-center mt-30 mb-10">
-								<div class="line"></div>
-								<span class="pe-3 ps-3 fs-6">OR</span>
-								<div class="line"></div>
-							</div>
-							<div class="row">
-								<div class="col-sm-6">
-									<a href="#" class="social-use-btn d-flex align-items-center justify-content-center tran3s w-100 mt-10">
-										<img src="images/icon/google.png" alt="">
-										<span class="ps-3">Signup with Google</span>
-									</a>
-								</div>
-								<div class="col-sm-6">
-									<a href="#" class="social-use-btn d-flex align-items-center justify-content-center tran3s w-100 mt-10">
-										<img src="images/icon/facebook.png" alt="">
-										<span class="ps-3">Signup with Facebook</span>
-									</a>
-								</div>
-							</div>
-						</div>
-						<!-- /.form-wrapper -->
-                    </div>
-                    <!-- /.user-data-form -->
-                </div>
+                <p class="font-lg color-gray-500 wow animate__ animate__fadeIn animated"
+                    data-wow-delay=".2s"
+                    style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+                    Built for Modern Ecosystem Collaborations
+                </p>
             </div>
         </div>
 
+        <div class="row d-flex justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-4 mt-50">
 
-		<button class="scroll-top">
-			<i class="bi bi-arrow-up-short"></i>
-		</button>
+            <!-- Card 1 -->
+            <div class="col mb-4">
+                <div class="card-custom wow animate__ animate__fadeInUp animated"
+                    data-wow-delay="0.0s"
+                    style="visibility: visible; animation-delay: 0s; animation-name: fadeInUp;">
+                    <div class="card-img-wrapper">
+                        <img src="{{ asset('images/media/chess.png') }}" alt="ConnectX" class="img-fluid">
+
+                        <div class="card-overlay"></div>
+
+                        <div class="card-text1">
+                            <p>Business & Startup Voices</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col mb-4">
+                <div class="card-custom wow animate__ animate__fadeInUp animated"
+                    data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                    <div class="card-img-wrapper">
+                        <img src="{{ asset('images/media/chess.png') }}" alt="ConnectX" class="img-fluid">
+
+                        <div class="card-overlay"></div>
+
+                        <div class="card-text1">
+                            <p>Lifestyle & Wellness</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col mb-4">
+                <div class="card-custom wow animate__ animate__fadeInUp animated"
+                    data-wow-delay="0.2s"
+                    style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    <div class="card-img-wrapper">
+                        <img src="{{ asset('images/media/chess.png') }}" alt="ConnectX" class="img-fluid">
+
+                        <div class="card-overlay"></div>
+
+                        <div class="card-text1">
+                            <p>Sports & Adventure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col mb-4">
+                <div class="card-custom wow animate__ animate__fadeInUp animated"
+                    data-wow-delay="0.3s"
+                    style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                    <div class="card-img-wrapper">
+                        <img src="{{ asset('images/media/chess.png') }}" alt="ConnectX" class="img-fluid">
+
+                        <div class="card-overlay"></div>
+
+                        <div class="card-text1">
+                            <p>Digital Media Creators</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col mb-4">
+                <div class="card-custom wow animate__ animate__fadeInUp animated"
+                    data-wow-delay="0.4s"
+                    style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                    <div class="card-img-wrapper">
+                        <img src="{{ asset('images/media/chess.png') }}" alt="ConnectX" class="img-fluid">
+
+                        <div class="card-overlay"></div>
+
+                        <div class="card-text1">
+                            <p>News & Commentary</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col mb-4">
+                <div class="card-custom wow animate__ animate__fadeInUp animated"
+                    data-wow-delay="0.5s"
+                    style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                    <div class="card-img-wrapper">
+                        <img src="{{ asset('images/media/chess.png') }}" alt="ConnectX" class="img-fluid">
+
+                        <div class="card-overlay"></div>
+
+                        <div class="card-text1">
+                            <p>Motivation & Storytelling</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="col mb-4">
+                <div class="card-custom wow animate__ animate__fadeInUp animated"
+                    data-wow-delay="0.6s"
+                    style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                    <div class="card-img-wrapper">
+                        <img src="{{ asset('images/media/chess.png') }}" alt="ConnectX" class="img-fluid">
+
+                        <div class="card-overlay"></div>
+
+                        <div class="card-text1">
+                            <p>Tech & Innovation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col mb-4">
+                <div class="card-custom wow animate__ animate__fadeInUp animated"
+                    data-wow-delay="0.7s"
+                    style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
+                    <div class="card-img-wrapper">
+                        <img src="{{ asset('images/media/chess.png') }}" alt="ConnectX" class="img-fluid">
+
+                        <div class="card-overlay"></div>
+
+                        <div class="card-text1">
+                            <p>Regional & Cultural Creators</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 
+<!-- fourth section -->
+
+
+<div class="block-feature-one position-relative light-bg-deep mt-100 lg-mt-60 pt-120 lg-pt-60 pb-130 lg-pb-60">
+    <div class="container">
+
+        <div class="position-relative">
+
+            <div class="title-one text-center mb-40 lg-mb-10">
+                <div class="upper-title" style="color:#76583b;">
+                    ConnectX Experiences
+                </div>
+
+                <h2 class="section-heading-main">
+                    Experiences that create influence
+                </h2>
+            </div>
+
+            <div class="row justify-content-center">
+
+                <!-- PODCASTS -->
+                <div class="col-lg-4 col-md-6 d-flex wow fadeInUp">
+
+                    <div class="card-style-two vstack tran3s w-100 mt-30">
+
+                        <i class="fas fa-podcast fa-3x mb-25"
+                           style="color:#76583b;"></i>
+
+                        <h4 class="fw-bold mb-20">
+                            Podcasts
+                        </h4>
+
+                        <p class="mb-0">
+                            Share your journey, insights, and opinions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- NETWORKING -->
+                <div class="col-lg-4 col-md-6 d-flex wow fadeInUp"
+                     data-wow-delay="0.1s">
+
+                    <div class="card-style-two vstack tran3s w-100 mt-30">
+
+                        <i class="fas fa-users fa-3x mb-25"
+                           style="color:#76583b;"></i>
+
+                        <h4 class="fw-bold mb-20">
+                            Networking
+                        </h4>
+
+                        <p class="mb-0">
+                            Meet creators, founders, and industry voices globally.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- AWARDS -->
+                <div class="col-lg-4 col-md-6 d-flex wow fadeInUp"
+                     data-wow-delay="0.2s">
+
+                    <div class="card-style-two vstack tran3s w-100 mt-30">
+
+                        <i class="fas fa-award fa-3x mb-25"
+                           style="color:#76583b;"></i>
+
+                        <h4 class="fw-bold mb-20">
+                            Awards
+                        </h4>
+
+                        <p class="mb-0">
+                            Recognition for impact, creativity, and influence.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- ROUNDTABLES -->
+                <div class="col-lg-4 col-md-6 d-flex wow fadeInUp">
+
+                    <div class="card-style-two vstack tran3s w-100 mt-30">
+
+                        <i class="fas fa-microphone fa-3x mb-25"
+                           style="color:#76583b;"></i>
+
+                        <h4 class="fw-bold mb-20">
+                            Roundtables
+                        </h4>
+
+                        <p class="mb-0">
+                            Focused discussions with creators and thought leaders.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- MEETUPS -->
+                <div class="col-lg-4 col-md-6 d-flex wow fadeInUp"
+                     data-wow-delay="0.1s">
+
+                    <div class="card-style-two vstack tran3s w-100 mt-30">
+
+                        <i class="fas fa-globe fa-3x mb-25"
+                           style="color:#76583b;"></i>
+
+                        <h4 class="fw-bold mb-20">
+                            Meetups
+                        </h4>
+
+                        <p class="mb-0">
+                            City-based and global creator gatherings.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CREATOR LOUNGES -->
+                <div class="col-lg-4 col-md-6 d-flex wow fadeInUp"
+                     data-wow-delay="0.2s">
+
+                    <div class="card-style-two vstack tran3s w-100 mt-30">
+
+                        <i class="fas fa-camera fa-3x mb-25"
+                           style="color:#76583b;"></i>
+
+                        <h4 class="fw-bold mb-20">
+                            Creator Lounges
+                        </h4>
+
+                        <p class="mb-0">
+                            Speak directly in front of audience & camera.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <img src="{{ asset('images/shape/shape_05.svg') }}"
+         alt=""
+         class="lazy-img shapes shape_01">
+
+    <img src="{{ asset('images/shape/shape_05.svg') }}"
+         alt=""
+         class="lazy-img shapes shape_02">
+
+</div>
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+
+
+
+
+	  <!-- fifth section -->
+	   
+
+<section class="connectx-cta-section position-relative pt-100 pb-100 lg-pt-80 lg-pb-80">
+    <div class="container">
+
+        <div class="row">
+
+            <!-- PARTNER -->
+            <div class="col-lg-6 d-flex wow fadeInUp">
+
+                <div class="connectx-cta-card w-100 position-relative overflow-hidden">
+
+                    <!-- Shapes -->
+                    <div class="shape-circle top-circle"></div>
+                    <div class="shape-circle bottom-circle"></div>
+
+                    <div class="position-relative z-1">
+
+                        <span class="small-text">
+                            Collaborate. Connect. Grow.
+                        </span>
+
+                        <h3>
+                            Become a Partner
+                        </h3>
+
+                        <p>
+                            Join hands with ConnectX to build impactful networks,
+                            share expertise, and shape the next generation of creators.
+                        </p>
+
+                        <a href="#"
+                           class="connectx-btn">
+
+                            Partner With Us
+
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SPONSOR -->
+            <div class="col-lg-6 d-flex wow fadeInUp"
+                 data-wow-delay="0.1s">
+
+                <div class="connectx-cta-card w-100 position-relative overflow-hidden">
+
+                    <!-- Shapes -->
+                    <div class="shape-circle top-circle"></div>
+                    <div class="shape-circle bottom-circle"></div>
+
+                    <div class="position-relative z-1">
+
+                        <span class="small-text">
+                            Support. Empower. Lead.
+                        </span>
+
+                        <h3>
+                            Become a Sponsor
+                        </h3>
+
+                        <p>
+                            Align your brand with a premium creator ecosystem,
+                            gain visibility, and support transformative experiences.
+                        </p>
+
+                        <a href="#"
+                           class="connectx-btn">
+
+                            Join as Sponsor
+
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- sixth section  -->
+
+
+
+    <section class="connectx-work">
+
+        <div class="container">
+
+            <div class="section-head">
+
+                <h2 class="main-title">
+                    How ConnectX Works
+                </h2>
+
+                <!-- <p>
+A creator journey built for visibility, collaboration,
+networking and growth.
+</p> -->
+
+            </div>
+
+            <div class="work-grid">
+
+                <!-- CARD 1 -->
+
+                <div class="work-card">
+
+                    <div class="icon-box">
+                        <img src="images/ils_09.svg" alt="">
+                    </div>
+
+                    <h3>Create Your Profile</h3>
+
+                    <p>
+                        Build your creator identity and showcase your content,
+                        voice, category, and digital presence within the
+                        ConnectX ecosystem.
+                    </p>
+
+                </div>
+
+                <!-- CARD 2 -->
+
+                <div class="work-card">
+
+                    <div class="icon-box">
+                        <img src="images/ils_09.svg" alt="">
+                    </div>
+
+                    <h3>Access Creator Spaces</h3>
+
+                    <p>
+                        Enter ConnectX Lounges, networking rooms,
+                        podcasts, roundtables and creator-first experiences
+                        designed for engagement.
+                    </p>
+
+                </div>
+
+                <!-- CARD 3 -->
+
+                <div class="work-card">
+
+                    <div class="icon-box">
+                        <img src="images/ils_09.svg" alt="">
+                    </div>
+
+                    <h3>Connect & Collaborate</h3>
+
+                    <p>
+                        Network with influencers, creators,
+                        communities, brands and public voices across
+                        industries and countries.
+                    </p>
+
+                </div>
+
+                <!-- CARD 4 -->
+
+                <div class="work-card">
+
+                    <div class="icon-box">
+                        <img src="images/ils_09.svg" alt="">
+                    </div>
+
+                    <h3>Grow Your Influence</h3>
+
+                    <p>
+                        Increase visibility through collaborations,
+                        events, podcasts, creator opportunities and
+                        ecosystem exposure.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+	<!-- last section -->
+
+	
+
+
+
+<div class="blog-section-two position-relative mt-150 lg-mt-80 mb-150 lg-mb-80">
+    <div class="container">
+
+        <div class="position-relative">
+
+            <div class="row gx-xxl-5">
+
+                <!-- ITEM -->
+                <div class="col-md-6">
+                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
+
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                                style="background-image: url('{{ asset('images/blog/blog_img_03.jpg') }}');">
+
+                            <a href="#"
+                               class="stretched-link rounded-5 date tran3s">
+                                09 FEB
+                            </a>
+
+                        </figure>
+
+                        <div class="post-data">
+
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+                                <a href="#"
+                                   class="blog-title">
+
+                                    <h4>
+                                        Spending Habits, 13 Tips for grow Your Money.
+                                    </h4>
+
+                                </a>
+
+                                <a href="#"
+                                   class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+
+                                    <i class="bi bi-arrow-up-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+                </div>
+
+
+                <!-- ITEM -->
+                <div class="col-md-6">
+                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp"
+                             data-wow-delay="0.1s">
+
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                                style="background-image: url('{{ asset('images/blog/blog_img_04.jpg') }}');">
+
+                            <a href="#"
+                               class="stretched-link rounded-5 date tran3s">
+                                12 AUG
+                            </a>
+
+                        </figure>
+
+                        <div class="post-data">
+
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+                                <a href="#"
+                                   class="blog-title">
+
+                                    <h4>
+                                        Our Travel Card Makes you Happy.
+                                    </h4>
+
+                                </a>
+
+                                <a href="#"
+                                   class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+
+                                    <i class="bi bi-arrow-up-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+                </div>
+
+
+                <!-- ITEM -->
+                <div class="col-md-6">
+                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
+
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                                style="background-image: url('{{ asset('images/blog/blog_img_12.jpg') }}');">
+
+                            <a href="#"
+                               class="stretched-link rounded-5 date tran3s">
+                                09 FEB
+                            </a>
+
+                        </figure>
+
+                        <div class="post-data">
+
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+                                <a href="#"
+                                   class="blog-title">
+
+                                    <h4>
+                                        It’s easy to buildup your business with us
+                                    </h4>
+
+                                </a>
+
+                                <a href="#"
+                                   class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+
+                                    <i class="bi bi-arrow-up-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+                </div>
+
+
+                <!-- ITEM -->
+                <div class="col-md-6">
+                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp"
+                             data-wow-delay="0.1s">
+
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                                style="background-image: url('{{ asset('images/blog/blog_img_13.jpg') }}');">
+
+                            <a href="#"
+                               class="stretched-link rounded-5 date tran3s">
+                                12 AUG
+                            </a>
+
+                        </figure>
+
+                        <div class="post-data">
+
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+                                <a href="#"
+                                   class="blog-title">
+
+                                    <h4>
+                                        Manage your online banking & get rewarded
+                                    </h4>
+
+                                </a>
+
+                                <a href="#"
+                                   class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+
+                                    <i class="bi bi-arrow-up-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+                </div>
+
+
+                <!-- ITEM -->
+                <div class="col-md-6">
+                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
+
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                                style="background-image: url('{{ asset('images/blog/blog_img_14.jpg') }}');">
+
+                            <a href="#"
+                               class="stretched-link rounded-5 date tran3s">
+                                09 FEB
+                            </a>
+
+                        </figure>
+
+                        <div class="post-data">
+
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+                                <a href="#"
+                                   class="blog-title">
+
+                                    <h4>
+                                        Discover smarter ways to scale your brand
+                                    </h4>
+
+                                </a>
+
+                                <a href="#"
+                                   class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+
+                                    <i class="bi bi-arrow-up-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+                </div>
+
+
+                <!-- ITEM -->
+                <div class="col-md-6">
+                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp"
+                             data-wow-delay="0.1s">
+
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                                style="background-image: url('{{ asset('images/blog/blog_img_15.jpg') }}');">
+
+                            <a href="#"
+                               class="stretched-link rounded-5 date tran3s">
+                                12 AUG
+                            </a>
+
+                        </figure>
+
+                        <div class="post-data">
+
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+                                <a href="#"
+                                   class="blog-title">
+
+                                    <h4>
+                                        Creative networking events for future leaders
+                                    </h4>
+
+                                </a>
+
+                                <a href="#"
+                                   class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+
+                                    <i class="bi bi-arrow-up-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+                </div>
+
+            </div>
+
+
+            <!-- PAGINATION -->
+            <div class="pagination-one mt-20">
+
+                <ul class="style-none d-flex align-items-center justify-content-center">
+
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li>...</li>
+
+                    <li>
+                        <a href="#">
+                            Last <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
 
 
 

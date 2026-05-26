@@ -1,101 +1,213 @@
-<!-- Footer One -->
-<div class="footer-one">
+<!-- Footer Two -->
+<div class="footer-two no-bg">
     <div class="container">
-        <div class="inner-wrapper">
-            <div class="row justify-content-between">
+        <div class="bg-wrapper position-relative">
 
-                <!-- LEFT -->
-                <div class="col-xl-4 col-md-3 footer-intro mb-30">
-                    <div class="logo mb-15">
-                        <a href="{{ url('/') }}" class="d-inline-block d-lg-none">
-                            <img src="{{ asset('images/logo/logo_01.png') }}" alt="">
-                        </a>
+            <div class="container">
+                <div class="row justify-content-between">
+
+                    <!-- LEFT -->
+                    <div class="col-xl-3 col-lg-4 footer-intro mb-30">
+
+                        <div class="logo mb-35 md-mb-20">
+                            <a href="{{ url('/') }}">
+                                <img src="{{ asset('images/logo/connectx1.png') }}" alt="ConnectX Logo">
+
+
+                            </a>
+                        </div>
+
+                        <!-- <div class="logo mb-35 md-mb-20">
+    <a href="{{ url('/') }}">
+        <img src="{{ asset('images/logo/connectx1.svg') }}" 
+             alt="ConnectX Logo" 
+             width="40" 
+             height="40" 
+             style="object-fit: contain; display: block;">
+    </a>
+</div> -->
+
+
+                        <p class="lh-sm mb-40 md-mb-20">
+                        Follow Us
+
+                        </p>
+
+                        <ul class="style-none d-flex align-items-center social-icon">
+                            <li>
+                                <a href="#">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="bi bi-dribbble"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+
                     </div>
 
-                    <p class="text-white lh-sm mb-35">
-                        Top-rated <span class="opacity-50">business <br> consultancy for your success</span>
-                    </p>
+                    <!-- LINKS -->
+                    <div class="col-lg-2 col-sm-4 mb-20">
 
-                    <ul class="style-none d-flex align-items-center social-icon">
-                        <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                        <li><a href="#"><i class="bi bi-dribbble"></i></a></li>
-                        <li><a href="#"><i class="bi bi-instagram"></i></a></li>
-                    </ul>
-                </div>
+                        <h5 class="footer-title">
+                            Links
+                        </h5>
 
-                <!-- LINKS -->
-                <div class="col-xl-2 col-md-3 col-sm-4 mb-20">
-                    <h5 class="footer-title">Links</h5>
-                    <ul class="footer-nav-link style-none">
-                        <li><a href="{{ url('/') }}">Home</a></li>
-                        <li><a href="#">Pricing Plan</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Our services</a></li>
-                    </ul>
-                </div>
+                        <ul class="footer-nav-link style-none">
 
-                <!-- COMPANY -->
-                <div class="col-xl-2 col-md-3 col-sm-4 mb-20">
-                    <h5 class="footer-title">Company</h5>
-                    <ul class="footer-nav-link style-none">
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Blogs</a></li>
-                        <li><a href="#">FAQ’s</a></li>
-                        <li><a href="{{ url('/contact') }}">Contact</a></li>
-                    </ul>
-                </div>
+                            <li>
+                                <a href="{{ url('/') }}">
+                                    Home
+                                </a>
+                            </li>
 
-                <!-- SUPPORT -->
-                <div class="col-xl-2 col-md-3 col-sm-4 mb-20">
-                    <h5 class="footer-title">Support</h5>
-                    <ul class="footer-nav-link style-none">
-                        <li><a href="#">Terms of use</a></li>
-                        <li><a href="#">Terms & conditions</a></li>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Cookie policy</a></li>
-                    </ul>
-                </div>
+                            <li>
+                                <a href="#">
+                                    Pricing Plan
+                                </a>
+                            </li>
 
-            </div>
-        </div>
-    </div>
+                            <li>
+                                <a href="#">
+                                    About Us
+                                </a>
+                            </li>
 
-    <!-- BOTTOM -->
-    <div class="container">
-        <div class="bottom-footer">
-            <div class="row align-items-center">
+                            <li>
+                                <a href="#">
+                                    Services
+                                </a>
+                            </li>
 
-                <!-- NEWSLETTER -->
-                <div class="col-lg-5 order-lg-last mb-15">
-                    <div class="footer-newsletter float-xl-end">
-                        <h5 class="footer-title">Subscribe Newsletter</h5>
-                        <form action="#">
-                            <input type="email" placeholder="Enter your email address">
-                            <button><i class="bi bi-arrow-right"></i></button>
-                        </form>
+                            <li>
+                                <a href="#">
+                                    Portfolio
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Careers
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Features
+                                </a>
+                            </li>
+
+                        </ul>
+
                     </div>
+
+                    <!-- COMPANY -->
+                    <div class="col-lg-2 col-sm-4 mb-20">
+
+                        <h5 class="footer-title">
+                            Company
+                        </h5>
+
+                        <ul class="footer-nav-link style-none">
+
+                            <li>
+                                <a href="#">
+                                    About Us
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Blogs
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    FAQ’s
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ url('/contact') }}">
+                                    Contact
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- SUPPORT -->
+                    <div class="col-xxl-2 col-lg-3 col-sm-4 mb-20">
+
+                        <h5 class="footer-title">
+                            Support
+                        </h5>
+
+                        <ul class="footer-nav-link style-none">
+
+                            <li>
+                                <a href="#">
+                                    Terms of Use
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Terms & Conditions
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Privacy
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Cookie Policy
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Self Service
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
                 </div>
 
                 <!-- COPYRIGHT -->
-                <div class="col-lg-7 order-lg-first mb-15">
-                    <a href="{{ url('/') }}" class="d-none d-lg-inline-block mb-25">
-                        <img src="{{ asset('images/logo/logo_01.png') }}" alt="">
-                    </a>
-
-                    <div class="d-xl-flex align-items-center">
-                        <ul class="style-none bottom-nav d-flex flex-wrap justify-content-center justify-content-lg-start order-lg-last">
-                            <li><a href="#">Privacy & Terms</a></li>
-                            <li><a href="#">Cookies</a></li>
-                            <li><a href="{{ url('/contact') }}">Contact Us</a></li>
-                        </ul>
-
-                        <div class="copyright me-xl-4 lg-mt-10 order-lg-first">
-                            © {{ date('Y') }} connectX. All Rights Reserved.
-                        </div>
-                    </div>
+                <div class="copyright text-center">
+                    © {{ date('Y') }} ConnectX. All Rights Reserved.
                 </div>
 
             </div>
+
+            <!-- SHAPES -->
+            <img src="{{ asset('images/shape/shape_06.svg') }}"
+                 alt=""
+                 class="lazy-img shapes shape_01">
+
+            <img src="{{ asset('images/shape/shape_06.svg') }}"
+                 alt=""
+                 class="lazy-img shapes shape_02">
+
         </div>
     </div>
 </div>
@@ -105,7 +217,7 @@
     <i class="bi bi-arrow-up-short"></i>
 </button>
 
-<!-- JS FILES (CRITICAL FIX) -->
+<!-- JS FILES -->
 <script src="{{ asset('vendor/jquery.min.js') }}"></script>
 <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('vendor/wow/wow.min.js') }}"></script>
