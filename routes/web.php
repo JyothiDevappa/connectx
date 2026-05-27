@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 // =========================
 // HOME PAGES
 // =========================
-Route::get('/', fn() => view('index'));
+Route::get('/', fn() => view('index-2'));
 Route::get('/home-2', fn() => view('index-2'));
 Route::get('/home-3', fn() => view('index-3'));
 Route::get('/home-4', fn() => view('index-4'));
