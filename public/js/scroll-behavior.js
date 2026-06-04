@@ -53,10 +53,6 @@
     // Mobile menu toggle
     const hambBtn = document.getElementById('hambBtn');
     const fsMenu = document.getElementById('fsMenu');
-    
-    if (hambBtn) {
-        hambBtn.addEventListener('click', toggleMenu);
-    }
 
     window.toggleMenu = function() {
         if (fsMenu) {
@@ -64,6 +60,10 @@
             document.body.style.overflow = fsMenu.classList.contains('open') ? 'hidden' : '';
         }
     };
+
+    if (hambBtn) {
+        hambBtn.addEventListener('click', toggleMenu);
+    }
 
     // Close menu when clicking nav items
     const fsNavItems = document.querySelectorAll('.fs-nav-item');
