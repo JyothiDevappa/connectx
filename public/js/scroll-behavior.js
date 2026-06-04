@@ -54,15 +54,21 @@
     const hambBtn = document.getElementById('hambBtn');
     const fsMenu = document.getElementById('fsMenu');
 
+    console.log('Scroll Behavior: hambBtn found?', !!hambBtn);
+    console.log('Scroll Behavior: fsMenu found?', !!fsMenu);
+
     window.toggleMenu = function() {
+        console.log('toggleMenu called');
         if (fsMenu) {
             fsMenu.classList.toggle('open');
+            console.log('Menu open class?', fsMenu.classList.contains('open'));
             document.body.style.overflow = fsMenu.classList.contains('open') ? 'hidden' : '';
         }
     };
 
     if (hambBtn) {
         hambBtn.addEventListener('click', toggleMenu);
+        console.log('Event listener attached to hamburger button');
     }
 
     // Close menu when clicking nav items
