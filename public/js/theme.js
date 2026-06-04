@@ -5,6 +5,12 @@
 // Version      : 1.0.
 // Developed by : (me@heloshape.com) / (www.me.heloshape.com)
 
+function toggleMenu() {
+  const menu = document.getElementById('fsMenu');
+  if (menu) {
+    menu.classList.toggle('open');
+  }
+}
 
 (function($) {
     "use strict";
