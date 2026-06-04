@@ -7,7 +7,7 @@
 
     <meta name="description" content="Babun is a beautiful website template designed for Business & Consulting websites.">
 
-    <meta property="og:site_name" content="Babun">
+    <meta property="og:site_name" content="connectx">
     <meta property="og:url" content="https://creativegigstf.com/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Babun - Business & Consulting HTML5 Template">

@@ -41,7 +41,7 @@ h5,
 .h6,
 h6 {
     font-weight: 500;
-    color: #52381e;
+    color: #0c3a30;
 }
 
 .h1,
@@ -6180,7 +6180,7 @@ iframe {
 .pagination-one ul li:not(:last-child) a.active,
 .pagination-one ul li:not(:last-child) a:hover,
 .pagination-one ul li:not(:last-child) a:focus {
-    background: #76583b;
+    background: #ffd2b1;
     color: #fff
 }
 

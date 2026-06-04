@@ -92,6 +92,9 @@
     <!-- Theme JS -->
     <script src="{{ asset('js/theme.js') }}"></script>
 
+    <!-- Global Scroll Behavior -->
+    <script src="{{ asset('js/scroll-behavior.js') }}"></script>
+
     @stack('scripts')
 
 </body>
