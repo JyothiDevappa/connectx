@@ -95,6 +95,9 @@
     <!-- Global Scroll Behavior -->
     <script src="{{ asset('js/scroll-behavior.js') }}"></script>
 
+    <!-- Global Scripts (Navbar, Menu, Scroll Effects) -->
+    <script src="{{ asset('js/global-scripts.js') }}"></script>
+
     @stack('scripts')
 
 </body>

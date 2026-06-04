@@ -42,47 +42,40 @@
     <div class="fs-right">
         <div class="fs-close" onclick="toggleMenu()">Close</div>
 
-        <nav class="fs-nav">
+      <nav class="fs-nav">
 
-            <a href="/about-us" class="fs-nav-item" onclick="toggleMenu()">
-                <span class="fs-nav-name">About ConnectX</span>
-                <span class="fs-nav-arrow">→</span>
-                <span class="fs-nav-num">01</span>
-            </a>
+    <a href="{{ url('/about') }}" class="fs-nav-item" onclick="toggleMenu()">
+        <span class="fs-nav-name">About ConnectX</span>
+        <span class="fs-nav-arrow">→</span>
+        <span class="fs-nav-num">01</span>
+    </a>
 
-            <a href="#partner" class="fs-nav-item" onclick="toggleMenu()">
-                <span class="fs-nav-name">Who Can Partner</span>
-                <span class="fs-nav-arrow">→</span>
-                <span class="fs-nav-num">02</span>
-            </a>
+    <a href="{{ url('/become-a-partner') }}" class="fs-nav-item" onclick="toggleMenu()">
+        <span class="fs-nav-name">Who Can Partner</span>
+        <span class="fs-nav-arrow">→</span>
+        <span class="fs-nav-num">02</span>
+    </a>
 
-            <a href="#how" class="fs-nav-item" onclick="toggleMenu()">
-                <span class="fs-nav-name">How It Works</span>
-                <span class="fs-nav-arrow">→</span>
-                <span class="fs-nav-num">03</span>
-            </a>
+    <a href="{{ url('/become-a-sponser') }}" class="fs-nav-item" onclick="toggleMenu()">
+        <span class="fs-nav-name">Community & Sponsors</span>
+        <span class="fs-nav-arrow">→</span>
+        <span class="fs-nav-num">03</span>
+    </a>
 
-            <a href="#exp" class="fs-nav-item" onclick="toggleMenu()">
-                <span class="fs-nav-name">Community & Sponsors</span>
-                <span class="fs-nav-arrow">→</span>
-                <span class="fs-nav-num">04</span>
-            </a>
+    <!-- Events page pending -->
+    <a href="javascript:void(0)" class="fs-nav-item">
+        <span class="fs-nav-name">Events</span>
+        <span class="fs-nav-arrow">→</span>
+        <span class="fs-nav-num">04</span>
+    </a>
 
-            <a href="#events" class="fs-nav-item" onclick="toggleMenu()">
-                <span class="fs-nav-name">Events</span>
-                <span class="fs-nav-arrow">→</span>
-                <span class="fs-nav-num">05</span>
-            </a>
+    <a href="{{ url('/contact') }}" class="fs-nav-item" onclick="toggleMenu()">
+        <span class="fs-nav-name">Contact</span>
+        <span class="fs-nav-arrow">→</span>
+        <span class="fs-nav-num">05</span>
+    </a>
 
-            <a href="/contact" class="fs-nav-item" onclick="toggleMenu()">
-                <span class="fs-nav-name">contact</span>
-                <span class="fs-nav-arrow">→</span>
-                <span class="fs-nav-num">06</span>
-            </a>
-
-        </nav>
-
-
+</nav>
     </div>
 </div>
 

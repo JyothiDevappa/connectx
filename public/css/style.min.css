@@ -244,7 +244,7 @@ hr {
     font-size: 25px;
     cursor: pointer;
     border-radius: 50%;
-    background: #76583b;
+    background: #29594b;
     transition: all .3s ease-in-out
 }
 
@@ -6180,7 +6180,7 @@ iframe {
 .pagination-one ul li:not(:last-child) a.active,
 .pagination-one ul li:not(:last-child) a:hover,
 .pagination-one ul li:not(:last-child) a:focus {
-    background: #ffd2b1;
+    background:#29594b;
     color: #fff
 }
 
@@ -6648,7 +6648,7 @@ iframe {
 .card-style-sixteen .icon {
     width: 60px;
     height: 60px;
-    background: #ffe86b
+    background: #0c3a30;
 }
 
 .card-style-sixteen .text {
@@ -6658,7 +6658,7 @@ iframe {
 
 .card-style-sixteen:hover .icon,
 .card-style-sixteen.active .icon {
-    background: #cfff45
+    background: #0c3a30;
 }
 
 .card-style-sixteen.arrow:before,

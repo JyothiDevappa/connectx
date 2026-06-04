@@ -12,12 +12,15 @@
         <div class="row align-items-center gy-5">
             <div class="col-lg-6">
                 <div class="eyebrow">About ConnectX</div>
-                <h1>Creators, conversations, and confidence — built for the next era.</h1>
+                <h1>Creators, conversations, and confidence built for the next era.</h1>
                 <p class="hero-copy">ConnectX is a premium digital ecosystem for creators, voices, and brands who want structured influence, real collaborations, and a stronger stage for stories.</p>
-                <div class="hero-actions">
-                    <a href="#partner" class="btn btn-dark btn-lg">Explore Our Ecosystem</a>
-                    <a href="#contact" class="btn btn-outline-dark btn-lg">Partner With ConnectX</a>
-                </div>
+              
+                <div class="about-hero-buttons">
+    <a href="#partner" class="about-btn-1">Explore Our Ecosystem</a>
+    <a href="#contact" class="about-btn-2">Partner With ConnectX</a>
+</div>
+
+
                 <div class="hero-pill-row">
                     <span class="hero-pill">Creator Growth</span>
                     <span class="hero-pill">Podcast Visibility</span>
@@ -36,117 +39,282 @@
         </div>
     </div>
 </div>
-
-<div id="partner" class="about-section bg-light">
-    <div class="container">
-        <div class="row align-items-center gy-5">
-            <div class="col-lg-6">
-                <h2>Why ConnectX Feels Premium</h2>
-                <p class="lead">We combine elevated storytelling, curated creator experiences, and strategic ecosystem growth to deliver measurable visibility and engagement.</p>
-                <div class="feature-panel">
-                    <ul>
-                        <li>Curated creator circles and events</li>
-                        <li>Professional content and podcast stages</li>
-                        <li>Brand-aligned collaborations with impact</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="side-panel">
-                    <h3>Designed for creators who want more than attention.</h3>
-                    <p>ConnectX is not just another network — it is a structured launchpad where creators and communicators build credibility, expand reach, and create meaningful influence.</p>
-                </div>
-            </div>
-        </div>
+ 
+<!-- FOUNDER STATEMENT -->
+<section class="founder-section">
+  <div class="bg-text">ConnectX</div>
+  <div class="founder-inner">
+    <div class="section-label light">Founder Statement</div>
+    <h2 class="section-title light">Why We<br>Built This</h2>
+    <span class="quote-mark">"</span>
+    <p class="founder-quote">
+      ConnectX is built to bring creators together in a structured ecosystem where they can <em>connect, collaborate, and be seen.</em> Our focus is simple — create spaces for real conversations, enable meaningful collaborations, and help creators grow their influence through content and community.
+    </p>
+    <div class="founder-byline">
+      <div class="byline-avatar">YC</div>
+      <div class="byline-text">
+        <div class="name">Young Chanakya</div>
+        <div class="role">Founder & Visionary, ConnectX</div>
+      </div>
     </div>
+  </div>
+</section>
+
+
+<div class="vm-section">
+  <div class="vm-block vision-block">
+    <div class="section-label dark">Our Direction</div>
+    <h2 class="section-title dark">Vision</h2>
+    <p class="body-text">To build one of the world's largest digital creator and influencer ecosystems, connecting voices across countries and industries, where influence is structured, scalable, and collaborative.</p>
+    <ul class="check-list">
+      <li>Global creator connectivity</li>
+      <li>Collaboration across global ecosystems</li>
+      <li>Cross-industry influence network</li>
+      <li>Content-led ecosystem growth</li>
+    </ul>
+    <span class="vm-number">01</span>
+  </div>
+  <div class="vm-block mission-block">
+    <div class="section-label light">Our Purpose</div>
+    <h2 class="section-title light">Mission</h2>
+    <p class="body-text">To create a platform where creators can consistently access opportunities to speak, collaborate, and grow their influence through structured digital experiences.</p>
+    <ul class="check-list">
+      <li>Enable creator-to-creator networking</li>
+      <li>Provide stages through podcasts, lounges &amp; events</li>
+      <li>Create visibility through content &amp; collaborations</li>
+      <li>Connect communities, brands, and creators</li>
+    </ul>
+    <span class="vm-number">02</span>
+  </div>
 </div>
 
-<div class="about-section">
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-                <div class="power-card h-100">
-                    <span class="tag">Perspective</span>
-                    <h4>Creator-led Identity</h4>
-                    <p>We place creators at the center of every experience, helping them shape strong, consistent digital brands.</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="power-card h-100">
-                    <span class="tag">Experience</span>
-                    <h4>Exclusive Collaborations</h4>
-                    <p>Connect with storytellers, podcasts, and premium partners who value authentic narratives over noise.</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="power-card h-100">
-                    <span class="tag">Impact</span>
-                    <h4>Long-term Visibility</h4>
-                    <p>Every ConnectX program is built to turn creator moments into ongoing influence and measurable growth.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="about-section bg-light">
-    <div class="container">
-        <div class="stats-row">
-            <div class="stats-card">
-                <strong>10K+</strong>
-                <span>Creator engagements</span>
-            </div>
-            <div class="stats-card">
-                <strong>85%</strong>
-                <span>Partner satisfaction</span>
-            </div>
-            <div class="stats-card">
-                <strong>40+</strong>
-                <span>Curated events held</span>
-            </div>
-            <div class="stats-card">
-                <strong>Global</strong>
-                <span>Creator reach</span>
-            </div>
-        </div>
-    </div>
-</div>
+<div class="block-feature-ten position-relative mt-150 lg-mt-80 pb-100 lg-pb-60">
 
-<div class="quote-section">
     <div class="container">
-        <div class="quote-card">
-            <div>
-                <div class="quote-mark">“</div>
-                <div class="quote-copy">ConnectX was created so every creator can step into a premium space that values ideas, connection, and quality over viral moments. Here, your voice meets opportunity.</div>
-                <div class="quote-author mt-4">
-                    <div class="avatar">
-                        <img src="{{ asset('images/media/img_20.jpg') }}" alt="Founder">
+
+        <!-- TITLE -->
+        <div class="row align-items-center">
+
+            <div class="col-lg-8 wow fadeInUp" style="visibility: visible;">
+
+                <div class="title-one mb-50 lg-mb-20">
+
+                    <div class="upper-title">
+                        ConnectX
                     </div>
-                    <div class="info">
-                        <strong>Founding Team</strong>
-                        <span>Young Chanakya ConnectX</span>
-                    </div>
+
+                    <h2>
+                        Our Core Values
+                    </h2>
+
                 </div>
+
             </div>
-            <div class="side-panel">
-                <h3>What makes us different</h3>
-                <p>We integrate creator storytelling, partner strategy, and curated distribution to make every collaboration feel premium and purposeful.</p>
-            </div>
+
         </div>
+
+
+        <!-- VALUES -->
+        <div class="line-wrapper position-relative">
+
+            <div class="row gx-lg-5">
+
+                <!-- VALUE 1 -->
+                <div class="col-xl-4 col-md-6 wow fadeInUp" style="visibility: visible;">
+
+                    <div class="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10">
+
+                        <div class="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
+
+                            <img src="images/icon/about.svg" alt="" class="lazy-img">
+
+                        </div>
+
+                        <div class="text">
+
+                            <h4 class="fw-bold mb-20 sm-mb-10">
+                                Access Over Exclusivity
+                            </h4>
+
+                            <p class="m0">
+                                We create access to meaningful opportunities, networks, and platforms.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VALUE 2 -->
+                <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s;">
+
+                    <div class="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10">
+
+                        <div class="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
+
+                            <img src="images/icon/about.svg" alt="" class="lazy-img">
+
+                        </div>
+
+                        <div class="text">
+
+                            <h4 class="fw-bold mb-20 sm-mb-10">
+                                Content First
+                            </h4>
+
+                            <p class="m0">
+                                Every interaction, event, and collaboration is designed to generate content and visibility.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VALUE 3 -->
+                <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s;">
+
+                    <div class="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10">
+
+                        <div class="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
+
+                            <img src="images/icon/about.svg" alt="" class="lazy-img">
+
+                        </div>
+
+                        <div class="text">
+
+                            <h4 class="fw-bold mb-20 sm-mb-10">
+                                Collaboration Over Competition
+                            </h4>
+
+                            <p class="m0">
+                                Growth happens faster when creators work together.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VALUE 4 -->
+                <div class="col-xl-4 col-md-6 wow fadeInUp" style="visibility: visible;">
+
+                    <div class="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10 pt-25 lg-pt-10">
+
+                        <div class="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
+
+                            <img src="images/icon/about.svg" alt="" class="lazy-img">
+
+                        </div>
+
+                        <div class="text">
+
+                            <h4 class="fw-bold mb-20 sm-mb-10">
+                                Real Conversations
+                            </h4>
+
+                            <p class="m0">
+                                We value authentic discussions over scripted narratives.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VALUE 5 -->
+                <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s;">
+
+                    <div class="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10 pt-25 lg-pt-10">
+
+                        <div class="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
+
+                            <img src="images/icon/about.svg" alt="" class="lazy-img">
+
+                        </div>
+
+                        <div class="text">
+
+                            <h4 class="fw-bold mb-20 sm-mb-10">
+                                Global Mindset
+                            </h4>
+
+                            <p class="m0">
+                                ConnectX is built without geographic limitations.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VALUE 6 -->
+                <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s;">
+
+                    <div class="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10 pt-25 lg-pt-10">
+
+                        <div class="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
+
+                            <img src="images/icon/about.svg" alt="" class="lazy-img">
+
+                        </div>
+
+                        <div class="text">
+
+                            <h4 class="fw-bold mb-20 sm-mb-10">
+                                Consistent Growth
+                            </h4>
+
+                            <p class="m0">
+                                Opportunities are not one-time — they are continuous.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
+
 </div>
 
-<div id="contact" class="cta-banner">
-    <div class="container">
-        <div class="cta-panel">
-            <h3>Ready to join a premium creator ecosystem?</h3>
-            <div class="cta-actions">
-                <a href="#contact" class="btn btn-white">Join ConnectX</a>
-                <a href="#partner" class="btn btn-outline-light">Book a Meet</a>
-            </div>
-        </div>
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-bg-ring r1"></div>
+    <div class="cta-bg-ring r2"></div>
+    <div class="cta-bg-ring r3"></div>
+    <div class="cta-inner">
+      <div class="section-label light">Ready to Grow?</div>
+      <h2 class="section-title light">Your Voice Deserves<br>a <span class="italic-accent">Bigger Stage</span></h2>
+      <p class="cta-tagline">If you are a creator, influencer, speaker, or community builder — ConnectX is built for
+        you.</p>
+      <div class="cta-features">
+        <span class="pill">Join the Ecosystem</span>
+        <span class="pill">Access Creator Lounges</span>
+        <span class="pill">Speak & Collaborate</span>
+        <span class="pill">Build Beyond Platforms</span>
+      </div>
+      <button class="cta-btn">Join ConnectX</button>
     </div>
-</div>
+  </section>
 
+  
 @endsection
 

@@ -2,6 +2,9 @@
 
 @section('content')
 
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
+@endpush
 <style>
 
 /* =========================================
@@ -42,7 +45,7 @@
     font-size: 50px;
     line-height: 1.15em;
     font-weight: 700;
-    color: #000;
+    color: #0c3a30;
     margin-bottom: 22px;
     letter-spacing: -1px;
 }
@@ -118,7 +121,7 @@
     height: 58px;
     border: none;
     border-radius: 12px;
-    background: #76583b;
+    background: #19352d;
     color: #fff;
     font-size: 16px;
     font-weight: 600;

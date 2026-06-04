@@ -172,7 +172,7 @@ header.scrolled .hamburger span {
 .fs-menu {
     position: fixed;
     inset: 0;
-    background: var(--brown-deeper);
+    background: #ffd2b1;
     z-index: 5000;
     opacity: 0;
     pointer-events: none;
@@ -201,7 +201,7 @@ header.scrolled .hamburger span {
 .fs-brand-desc p {
     font-size: 14px;
     line-height: 1.85;
-    color: rgba(255, 255, 255, 0.45);
+    color: rgba(30, 18, 8, 0.65);
     font-weight: 400;
     max-width: 300px;
     margin: 16px 0 28px;
@@ -238,12 +238,12 @@ header.scrolled .hamburger span {
 .fs-social {
     width: 36px;
     height: 36px;
-    border: 1px solid rgba(255, 210, 177, 0.2);
+    border: 1px solid rgba(30, 18, 8, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(30, 18, 8, 0.5);
     font-size: 12px;
     font-weight: 700;
     text-decoration: none;
@@ -335,7 +335,7 @@ header.scrolled .hamburger span {
     position: absolute;
     top: 36px;
     right: 48px;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(30, 18, 8, 0.5);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -348,7 +348,7 @@ header.scrolled .hamburger span {
 }
 
 .fs-close:hover {
-    color: var(--orange);
+    color: var(--brown-deeper);
 }
 
 .fs-close::before {
@@ -418,14 +418,14 @@ header.scrolled .hamburger span {
 .fs-nav-name {
     font-size: 20px;
     font-weight: 800;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(30, 18, 8, 0.85);
     letter-spacing: -0.5px;
 }
 
 .fs-nav-num {
     font-size: 11px;
     font-weight: 600;
-    color: rgba(255, 210, 177, 0.3);
+    color: rgba(30, 18, 8, 0.4);
     letter-spacing: 1px;
 }
 
