@@ -261,7 +261,7 @@ SPONSOR CARDS
 
     transition:.3s ease;
 
-    border:1px solid #76583b;
+    border:1px solid #19352d;
 }
 
 .btn-become-sponsor:hover{

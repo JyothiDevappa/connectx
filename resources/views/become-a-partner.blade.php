@@ -6,415 +6,415 @@
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
 @endpush
 <style>
-
-/* =========================================
+    /* =========================================
    PARTNER CONTACT PAGE
 ========================================= */
-.main-title{
-    font-weight: 900;
-    line-height: 1.15;
-    letter-spacing: -2px;
-    color: #0c3a30;
-    font-size: clamp(34px, 4vw, 56px);
-}
-.partner-contact-section{
-    position: relative;
-    padding: 180px 0 100px;
-    background: #f8f6f2;
-    overflow: hidden;
-}
-
-@media (max-width: 991px){
-    .partner-contact-section{
-        padding: 140px 0 70px;
-    }
-}
-
-/* LEFT CONTENT */
-
-.partner-content{
-    padding-right: 50px;
-}
-
-.partner-tag{
-    display: inline-block;
-    padding: 8px 18px;
-    border-radius: 30px;
-    background: rgba(118,88,59,0.10);
-    color: #76583b;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 18px;
-}
-
-.partner-content h1{
-    font-size: 50px;
-    line-height: 1.15em;
-    font-weight: 700;
-    color: #0c3a30;
-    margin-bottom: 22px;
-    letter-spacing: -1px;
-}
-
-.partner-content p{
-    font-size: 16px;
-    line-height: 1.9em;
-    color: #555;
-    margin-bottom: 0;
-}
-
-@media (max-width: 991px){
-
-    .partner-content{
-        padding-right: 0;
-        margin-bottom: 40px;
+    .main-title {
+        font-weight: 900;
+        line-height: 1.15;
+        letter-spacing: -2px;
+        color: #0c3a30;
+        font-size: clamp(34px, 4vw, 56px);
     }
 
-    .partner-content h1{
-        font-size: 38px;
+    .partner-contact-section {
+        position: relative;
+        padding: 180px 0 100px;
+        background: #f8f6f2;
+        overflow: hidden;
     }
-}
 
-@media (max-width: 576px){
-
-    .partner-content h1{
-        font-size: 30px;
+    @media (max-width: 991px) {
+        .partner-contact-section {
+            padding: 140px 0 70px;
+        }
     }
-}
 
-/* FORM BOX */
+    /* LEFT CONTENT */
 
-.partner-form-box{
-    background: #fff;
-    padding: 40px;
-    border-radius: 22px;
-    box-shadow: 0 15px 60px rgba(0,0,0,0.08);
-    position: relative;
-}
-
-@media (max-width: 576px){
-
-    .partner-form-box{
-        padding: 25px;
+    .partner-content {
+        padding-right: 50px;
     }
-}
 
-/* INPUTS */
+    .partner-tag {
+        display: inline-block;
+        padding: 8px 18px;
+        border-radius: 30px;
+        background: rgba(118, 88, 59, 0.10);
+        color: #76583b;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 18px;
+    }
+
+    .partner-content h1 {
+        font-size: 50px;
+        line-height: 1.15em;
+        font-weight: 700;
+        color: #0c3a30;
+        margin-bottom: 22px;
+        letter-spacing: -1px;
+    }
+
+    .partner-content p {
+        font-size: 16px;
+        line-height: 1.9em;
+        color: #555;
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 991px) {
+
+        .partner-content {
+            padding-right: 0;
+            margin-bottom: 40px;
+        }
+
+        .partner-content h1 {
+            font-size: 38px;
+        }
+    }
+
+    @media (max-width: 576px) {
+
+        .partner-content h1 {
+            font-size: 30px;
+        }
+    }
+
+    /* FORM BOX */
 
-.partner-form-box .form-control,
-.partner-form-box select{
-    height: 58px;
-    border-radius: 12px;
-    border: 1px solid #e5e5e5;
-    padding: 0 18px;
-    font-size: 15px;
-    color: #000;
-    box-shadow: none;
-    transition: all .3s ease;
-    background: #fff;
-}
+    .partner-form-box {
+        background: #fff;
+        padding: 40px;
+        border-radius: 22px;
+        box-shadow: 0 15px 60px rgba(0, 0, 0, 0.08);
+        position: relative;
+    }
 
-.partner-form-box .form-control:focus,
-.partner-form-box select:focus{
-    border-color: #76583b;
-    box-shadow: 0 0 0 3px rgba(118,88,59,0.10);
-}
+    @media (max-width: 576px) {
 
-/* BUTTON */
+        .partner-form-box {
+            padding: 25px;
+        }
+    }
 
-.partner-submit-btn{
-    width: 100%;
-    height: 58px;
-    border: none;
-    border-radius: 12px;
-    background: #19352d;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    transition: all .3s ease;
-}
+    /* INPUTS */
 
-.partner-submit-btn:hover{
-    background: #5e442d;
-    color: #fff;
-}
+    .partner-form-box .form-control,
+    .partner-form-box select {
+        height: 58px;
+        border-radius: 12px;
+        border: 1px solid #e5e5e5;
+        padding: 0 18px;
+        font-size: 15px;
+        color: #000;
+        box-shadow: none;
+        transition: all .3s ease;
+        background: #fff;
+    }
 
-/* SHAPE */
+    .partner-form-box .form-control:focus,
+    .partner-form-box select:focus {
+        border-color: #76583b;
+        box-shadow: 0 0 0 3px rgba(118, 88, 59, 0.10);
+    }
 
-.partner-contact-section::before{
-    content: "";
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    background: rgba(118,88,59,0.05);
-    top: -180px;
-    right: -180px;
-}
+    /* BUTTON */
 
+    .partner-submit-btn {
+        width: 100%;
+        height: 58px;
+        border: none;
+        border-radius: 12px;
+        background: #19352d;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        transition: all .3s ease;
+    }
 
+    .partner-submit-btn:hover {
+        background: #5e442d;
+        color: #fff;
+    }
 
+    /* SHAPE */
 
-/* WHO WE WORK WITH */
+    .partner-contact-section::before {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: rgba(118, 88, 59, 0.05);
+        top: -180px;
+        right: -180px;
+    }
 
-.connectx-work-card{
 
-    background:#fff;
 
-    padding:45px 35px;
 
-    border-radius:30px;
+    /* WHO WE WORK WITH */
 
-    margin-bottom:30px;
+    .connectx-work-card {
 
-    height:100%;
+        background: #fff;
 
-    transition:.35s;
+        padding: 45px 35px;
 
-    border:1px solid rgba(118,88,59,.12);
+        border-radius: 30px;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.04);
-}
+        margin-bottom: 30px;
 
-.connectx-work-card:hover{
+        height: 100%;
 
-    transform:translateY(-8px);
+        transition: .35s;
 
-    box-shadow:0 20px 50px rgba(0,0,0,.08);
-}
+        border: 1px solid rgba(118, 88, 59, .12);
 
-.connectx-work-card .icon-box{
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .04);
+    }
 
-    width:70px;
-    height:70px;
+    .connectx-work-card:hover {
 
-    background:#76583b;
+        transform: translateY(-8px);
 
-    border-radius:50%;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, .08);
+    }
 
-    display:flex;
+    .connectx-work-card .icon-box {
 
-    align-items:center;
+        width: 70px;
+        height: 70px;
 
-    justify-content:center;
+        background: #76583b;
 
-    margin-bottom:25px;
-}
+        border-radius: 50%;
 
-.connectx-work-card .icon-box span{
+        display: flex;
 
-    color:#fff;
+        align-items: center;
 
-    font-size:18px;
+        justify-content: center;
 
-    font-weight:700;
-}
+        margin-bottom: 25px;
+    }
 
-.connectx-work-card h4{
+    .connectx-work-card .icon-box span {
 
-    margin-bottom:18px;
+        color: #fff;
 
-    font-size:24px;
+        font-size: 18px;
 
-    font-weight:600;
-}
+        font-weight: 700;
+    }
 
-.connectx-work-card p{
+    .connectx-work-card h4 {
 
-    margin:0;
+        margin-bottom: 18px;
 
-    line-height:1.8em;
+        font-size: 24px;
 
-    color:#666;
-}
+        font-weight: 600;
+    }
 
-@media(max-width:991px){
+    .connectx-work-card p {
 
-.connectx-work-card{
+        margin: 0;
 
-padding:35px 25px;
+        line-height: 1.8em;
 
-}
+        color: #666;
+    }
 
-.connectx-work-card h4{
+    @media(max-width:991px) {
 
-font-size:21px;
+        .connectx-work-card {
 
-}
+            padding: 35px 25px;
 
-}
+        }
 
+        .connectx-work-card h4 {
 
+            font-size: 21px;
 
-/* cards */
-/* CARDS */
+        }
 
-.connectx-card{
+    }
 
-background:#fff;
 
-padding:40px;
 
-border-radius:30px;
+    /* cards */
+    /* CARDS */
 
-height:100%;
+    .connectx-card {
 
-box-shadow:0 10px 30px rgba(0,0,0,.04);
+        background: #fff;
 
-transition:.35s;
-}
+        padding: 40px;
 
-.connectx-card:hover{
+        border-radius: 30px;
 
-transform:translateY(-8px);
+        height: 100%;
 
-}
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .04);
 
-.icon-box{
+        transition: .35s;
+    }
 
-width:75px;
+    .connectx-card:hover {
 
-height:75px;
+        transform: translateY(-8px);
 
-background: #0c3a30;
+    }
 
-border-radius:50%;
+    .icon-box {
 
-display:flex;
+        width: 75px;
 
-align-items:center;
+        height: 75px;
 
-justify-content:center;
+        background: #0c3a30;
 
-margin-bottom:25px;
-}
+        border-radius: 50%;
 
-.icon-box i{
+        display: flex;
 
-color:#fff;
+        align-items: center;
 
-font-size:24px;
+        justify-content: center;
 
-}
+        margin-bottom: 25px;
+    }
 
-.connectx-card ul li,
-.expand-list li{
+    .icon-box i {
 
-position:relative;
+        color: #fff;
 
-padding-left:40px;
+        font-size: 24px;
 
-margin-bottom:16px;
-}
+    }
 
-.connectx-card ul li:before,
-.expand-list li:before{
+    .connectx-card ul li,
+    .expand-list li {
 
-content:"✓";
+        position: relative;
 
-position:absolute;
+        padding-left: 40px;
 
-left:0;
+        margin-bottom: 16px;
+    }
 
-top:2px;
+    .connectx-card ul li:before,
+    .expand-list li:before {
 
-width:24px;
+        content: "✓";
 
-height:24px;
+        position: absolute;
 
-background: #ffd2b1;
+        left: 0;
 
-color:#fff;
+        top: 2px;
 
-border-radius:50%;
+        width: 24px;
 
-display:flex;
+        height: 24px;
 
-align-items:center;
+        background: #ffd2b1;
 
-justify-content:center;
+        color: #fff;
 
-font-size:11px;
-}
+        border-radius: 50%;
 
-/* EXPANSION */
+        display: flex;
 
-.connectx-expand-points{
+        align-items: center;
 
-padding:0;
+        justify-content: center;
 
-margin:0;
-}
+        font-size: 11px;
+    }
 
-.connectx-expand-points li{
+    /* EXPANSION */
 
-position:relative;
+    .connectx-expand-points {
 
-padding-left:52px;
+        padding: 0;
 
-margin-bottom:18px;
+        margin: 0;
+    }
 
-font-size:17px;
+    .connectx-expand-points li {
 
-line-height:1.8em;
+        position: relative;
 
-color:#222;
-}
+        padding-left: 52px;
 
-.connectx-expand-points li:last-child{
+        margin-bottom: 18px;
 
-margin-bottom:0;
-}
+        font-size: 17px;
 
-.connectx-expand-points li:before{
+        line-height: 1.8em;
 
-content:"✓";
+        color: #222;
+    }
 
-position:absolute;
+    .connectx-expand-points li:last-child {
 
-left:0;
+        margin-bottom: 0;
+    }
 
-top:2px;
+    .connectx-expand-points li:before {
 
-width:32px;
+        content: "✓";
 
-height:32px;
+        position: absolute;
 
-background:#76583b;
+        left: 0;
 
-color:#fff;
+        top: 2px;
 
-border-radius:50%;
+        width: 32px;
 
-display:flex;
+        height: 32px;
 
-align-items:center;
+        background: #ffd2b1;
 
-justify-content:center;
 
-font-size:12px;
+        color: #fff;
 
-font-weight:700;
-}
+        border-radius: 50%;
 
-@media(max-width:991px){
+        display: flex;
 
-.connectx-expand-points li{
+        align-items: center;
 
-padding-left:48px;
+        justify-content: center;
 
-font-size:16px;
+        font-size: 12px;
 
-}
+        font-weight: 700;
+    }
 
-}
+    @media(max-width:991px) {
 
-.partner-page or .become-partner-section */
-.partner-page,
-.become-partner-section {
-    margin-bottom: 20px; /* or 40px if you want more space */
-}
+        .connectx-expand-points li {
 
+            padding-left: 48px;
+
+            font-size: 16px;
+
+        }
+
+    }
+
+    .partner-page or .become-partner-section */ .partner-page,
+    .become-partner-section {
+        margin-bottom: 20px;
+        /* or 40px if you want more space */
+    }
 </style>
 
 
@@ -461,50 +461,50 @@ font-size:16px;
 
                             <div class="col-md-6 mb-3">
                                 <input type="text"
-                                       class="form-control"
-                                       name="name"
-                                       placeholder="Full Name">
+                                    class="form-control"
+                                    name="name"
+                                    placeholder="Full Name">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <input type="email"
-                                       class="form-control"
-                                       name="email"
-                                       placeholder="Email Address">
+                                    class="form-control"
+                                    name="email"
+                                    placeholder="Email Address">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <input type="text"
-                                       class="form-control"
-                                       name="phone"
-                                       placeholder="Phone / WhatsApp">
+                                    class="form-control"
+                                    name="phone"
+                                    placeholder="Phone / WhatsApp">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <input type="text"
-                                       class="form-control"
-                                       name="company"
-                                       placeholder="Organization / Company Name">
+                                    class="form-control"
+                                    name="company"
+                                    placeholder="Organization / Company Name">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <input type="text"
-                                       class="form-control"
-                                       name="designation"
-                                       placeholder="Designation / Role">
+                                    class="form-control"
+                                    name="designation"
+                                    placeholder="Designation / Role">
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <input type="url"
-                                       class="form-control"
-                                       name="linkedin"
-                                       placeholder="LinkedIn Profile">
+                                    class="form-control"
+                                    name="linkedin"
+                                    placeholder="LinkedIn Profile">
                             </div>
 
                             <div class="col-12 mb-3">
 
                                 <select class="form-control"
-                                        name="partnership_type">
+                                    name="partnership_type">
 
                                     <option selected disabled>
                                         -- Partnership Type --
@@ -528,16 +528,16 @@ font-size:16px;
                             <div class="col-12 mb-4">
 
                                 <input type="url"
-                                       class="form-control"
-                                       name="website"
-                                       placeholder="Website URL">
+                                    class="form-control"
+                                    name="website"
+                                    placeholder="Website URL">
 
                             </div>
 
                             <div class="col-12">
 
                                 <button type="submit"
-                                        class="partner-submit-btn">
+                                    class="partner-submit-btn">
                                     Submit
                                 </button>
 
@@ -572,7 +572,7 @@ font-size:16px;
             </div> -->
 
             <h2 class="text-dark">
-Who We Work With
+                Who We Work With
 
             </h2>
 
@@ -736,7 +736,7 @@ Who We Work With
                         <div class="title-one">
 
                             <div class="upper-title-two mb-15">
-Why Partner with ConnectX                            </div>
+                                Why Partner with ConnectX </div>
 
                             <h2 class="text-dark">
 
@@ -749,7 +749,7 @@ Why Partner with ConnectX                            </div>
 
                         <p class="text-lg text-dark mt-25 mb-35">
 
-                           ConnectX connects partners and creators through meaningful collaboration, engagement, and growth
+                            ConnectX connects partners and creators through meaningful collaboration, engagement, and growth
 
                         </p>
 
@@ -763,7 +763,7 @@ Why Partner with ConnectX                            </div>
 
                             <li>Structured opportunities for co-creation</li>
 
-                        
+
 
                         </ul>
 
@@ -778,8 +778,8 @@ Why Partner with ConnectX                            </div>
                     <div class="media-wrapper w-100 d-flex align-items-center justify-content-center position-relative">
 
                         <img src="images/assets/screen_07.svg"
-                             alt=""
-                             class="lazy-img shapes screen_01">
+                            alt=""
+                            class="lazy-img shapes screen_01">
 
                     </div>
 
@@ -811,12 +811,12 @@ CONNECTX PARTNERSHIP OPPORTUNITIES
 
             <div class="title-style-one">
 
-              
-               <h2 class="main-title">
-    ConnectX Partnership Opportunities
-</h2>
 
-        
+                <h2 class="main-title">
+                    ConnectX Partnership Opportunities
+                </h2>
+
+
 
 
             </div>
@@ -1013,59 +1013,59 @@ EXPANDING ACROSS INDUSTRIES
 <section class="connectx-expand-section pt-120 pb-120">
     <div class="row align-items-center">
 
-    <!-- CONTENT SIDE -->
+        <!-- CONTENT SIDE -->
 
-    <div class="col-lg-6 order-lg-last wow fadeInRight">
+        <div class="col-lg-6 order-lg-last wow fadeInRight">
 
-        <div class="ps-xl-5 ms-xxl-4">
+            <div class="ps-xl-5 ms-xxl-4">
 
-            <div class="title-three mb-35 md-mb-20">
+                <div class="title-three mb-35 md-mb-20">
 
-                <!-- <div class="upper-title">
+                    <!-- <div class="upper-title">
                     EXPANDING ACROSS INDUSTRIES & REGIONS
                 </div> -->
 
-                <h2>
+                    <h2>
 
-                Expanding Across Industries <br> and Regions
+                        Expanding Across Industries <br> and Regions
 
-                </h2>
+                    </h2>
 
-            </div>
+                </div>
 
-            <p class="text-lg mb-40 lg-mb-30">
+                <p class="text-lg mb-40 lg-mb-30">
 
-            ConnectX is building a network of creators, voices, and collaborators across industries and geographies, enabling partners to access a diverse and growing ecosystem.
+                    ConnectX is building a network of creators, voices, and collaborators across industries and geographies, enabling partners to access a diverse and growing ecosystem.
 
 
 
-            </p>
+                </p>
 
-            <ul class="style-none connectx-expand-points">
+                <ul class="style-none connectx-expand-points">
 
-                <li>
-                    Multi-industry creator ecosystem
-                </li>
+                    <li>
+                        Multi-industry creator ecosystem
+                    </li>
 
-                <li>
-                    Cross-border collaboration opportunities
-                </li>
+                    <li>
+                        Cross-border collaboration opportunities
+                    </li>
 
-                <li>
-                    Digital-first scalable network
-                </li>
+                    <li>
+                        Digital-first scalable network
+                    </li>
 
-                <li>
-                    Continuous onboarding of new voices
-                </li>
+                    <li>
+                        Continuous onboarding of new voices
+                    </li>
 
-                <li>
-                    Expanding content and engagement formats
-                </li>
+                    <!-- <li>
+                        Expanding content and engagement formats
+                    </li> -->
 
-            </ul>
+                </ul>
 
-            <!-- <div class="d-flex justify-content-between align-items-center mt-65 lg-mt-50">
+                <!-- <div class="d-flex justify-content-between align-items-center mt-65 lg-mt-50">
 
                 <a href="#"
                    class="btn-thirteen tran3 flex-fill">
@@ -1083,23 +1083,28 @@ EXPANDING ACROSS INDUSTRIES
 
             </div> -->
 
-        </div>
-
-    </div>
-
-    <!-- IMAGE SIDE -->
-
-    <div class="col-lg-6 col-md-8 m-auto wow fadeInLeft">
-
-        <div class="media-wrapper md-mt-60">
-
-            <img src="images/assets/screen_16.webp"
-                 alt=""
-                 class="lazy-img">
+            </div>
 
         </div>
 
-    </div>
+        <!-- IMAGE SIDE -->
 
-</div>
-@endsection
+        <div class="col-lg-6 col-md-8 m-auto wow fadeInLeft">
+
+            <div class="media-wrapper md-mt-60">
+
+                <!-- <img src="images/assets/screen_16.webp"
+                    alt=""
+                    class="lazy-img"> -->
+
+              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80"
+     alt="Global business collaboration"
+     class="lazy-img">
+
+     
+            </div>
+
+        </div>
+
+    </div>
+    @endsection

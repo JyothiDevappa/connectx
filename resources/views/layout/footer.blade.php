@@ -94,17 +94,17 @@
                                 </a>
                             </li>
 
-                            <li>
+                            <!-- <li>
                                 <a href="#">
                                     Careers
                                 </a>
-                            </li>
+                            </li> -->
 
-                            <li>
+                            <!-- <li>
                                 <a href="#">
                                     Features
                                 </a>
-                            </li>
+                            </li> -->
 
                         </ul>
 
