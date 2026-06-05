@@ -10,7 +10,13 @@
 /* =========================================
    PARTNER CONTACT PAGE
 ========================================= */
-
+.main-title{
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -2px;
+    color: #0c3a30;
+    font-size: clamp(34px, 4vw, 56px);
+}
 .partner-contact-section{
     position: relative;
     padding: 180px 0 100px;
@@ -270,7 +276,7 @@ width:75px;
 
 height:75px;
 
-background:#76583b;
+background: #0c3a30;
 
 border-radius:50%;
 
@@ -316,7 +322,7 @@ width:24px;
 
 height:24px;
 
-background:#76583b;
+background: #ffd2b1;
 
 color:#fff;
 
@@ -402,6 +408,13 @@ font-size:16px;
 }
 
 }
+
+.partner-page or .become-partner-section */
+.partner-page,
+.become-partner-section {
+    margin-bottom: 20px; /* or 40px if you want more space */
+}
+
 </style>
 
 
@@ -559,7 +572,7 @@ font-size:16px;
             </div> -->
 
             <h2 class="text-dark">
-                               WHO WE WORK WITH
+Who We Work With
 
             </h2>
 
@@ -723,8 +736,7 @@ font-size:16px;
                         <div class="title-one">
 
                             <div class="upper-title-two mb-15">
-                                WHY PARTNER WITH CONNECTX
-                            </div>
+Why Partner with ConnectX                            </div>
 
                             <h2 class="text-dark">
 
@@ -737,10 +749,7 @@ font-size:16px;
 
                         <p class="text-lg text-dark mt-25 mb-35">
 
-                            ConnectX is designed to enable structured
-                            collaboration between partners and creators,
-                            ensuring engagement, content integration
-                            and long-term ecosystem value.
+                           ConnectX connects partners and creators through meaningful collaboration, engagement, and growth
 
                         </p>
 
@@ -754,9 +763,7 @@ font-size:16px;
 
                             <li>Structured opportunities for co-creation</li>
 
-                            <li>Scalable digital visibility framework</li>
-
-                            <li>Long-term ecosystem alignment</li>
+                        
 
                         </ul>
 
@@ -805,12 +812,9 @@ CONNECTX PARTNERSHIP OPPORTUNITIES
             <div class="title-style-one">
 
               
-                <h2 class="main-title fw-700">
-
-                  ConnectX Partnership Opportunities
-
-
-                </h2>
+               <h2 class="main-title">
+    ConnectX Partnership Opportunities
+</h2>
 
         
 
@@ -1006,8 +1010,8 @@ CONNECTX PARTNERSHIP OPPORTUNITIES
 <!-- =========================
 EXPANDING ACROSS INDUSTRIES
 ========================= -->
-
-<div class="row align-items-center">
+<section class="connectx-expand-section pt-120 pb-120">
+    <div class="row align-items-center">
 
     <!-- CONTENT SIDE -->
 

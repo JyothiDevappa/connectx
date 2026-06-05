@@ -2,6 +2,10 @@
 
 @section('content')
 
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
+@endpush
+
 <style>
 
 /* =========================================
@@ -103,7 +107,7 @@
     height: 58px;
     border: none;
     border-radius: 12px;
-    background: #76583b;
+    background: #19352d;
     color: #fff;
     font-size: 16px;
     font-weight: 600;
@@ -161,7 +165,7 @@ SPONSOR CARDS
 
     border-radius:20px;
 
-    background:#76583b;
+    background: #19352d;
 
     color:#fff;
 
@@ -216,7 +220,7 @@ SPONSOR CARDS
     width:18px;
     height:18px;
 
-    background:#76583b;
+    background: #ffd2b1;
 
     border-radius:50%;
 
@@ -244,7 +248,7 @@ SPONSOR CARDS
 
     padding:16px 34px;
 
-    background:#76583b;
+    background: #19352d;
 
     color:#fff;
 
@@ -314,7 +318,7 @@ WHY CONNECTX SECTION
 
     border-radius:18px;
 
-    background:#76583b;
+    background: #19352d;
 
     color:#fff;
 
@@ -420,7 +424,12 @@ WHY CONNECTX SECTION
 }
 
 .title-style-one .main-title{
-    color:#000 !important;
+    font-size: clamp(34px, 4vw, 56px);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -2px;
+    color: #0c3a30;
+    margin-bottom: 24px;
 }
 /* ==========================
 CTA SECTION
@@ -693,8 +702,7 @@ WHY CONNECT WITH CONNECTX
                 </div> -->
 
                 <h2 class="main-title fw-700">
-                   WHY CONNECT WITH CONNECTX
-                </h2>
+Why Connect With ConnectX                </h2>
 
                 <p class="mt-25">
                    Position your brand within a structured creator ecosystem designed for consistent visibility, engagement, and collaboration

@@ -492,7 +492,7 @@ hr {
 .btn-eleven .icon {
     width: 45px;
     height: 45px;
-    background: #76583b;
+    background: #29594b;
     margin-left: 38px;
     position: relative
 }
@@ -529,7 +529,7 @@ hr {
     text-align: center;
     border-radius: 40px;
     color: #000;
-    background-color: #e6fd5a;
+    background-color: #37665c;
     transition: all .3s ease-in-out 0s
 }
 
@@ -754,14 +754,15 @@ hr {
 }
 
 .title-two h2 {
-    font-size: 52px;
-    font-weight: 700;
-    line-height: 1.027em;
-    color: #ffffff
+       font-size: clamp(34px, 4vw, 56px);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -2px;
+    color: #ffffff;
 }
 
 .title-two h2 span {
-    color: #e6fd5a
+    color: #19352d;
 }
 
 .title-two .upper-title-two {
@@ -2105,7 +2106,8 @@ iframe {
     }
 
     .md-mt-60 {
-        margin-top: 60px !important
+        margin-top: 50px !important
+        
     }
 
     .md-mt-70 {
@@ -5184,7 +5186,7 @@ iframe {
 }
 
 .text-feature-five .bg-wrapper {
-    background: #fff2ac
+    background: #ffd2b1;
 }
 
 .text-feature-five li {
@@ -5201,10 +5203,10 @@ iframe {
 .text-feature-five li:before {
     content: "";
     position: absolute;
-    width: 28px;
-    height: 28px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
-    background: #fff2ac;
+    background: #37665c;
     left: 10px;
     top: 7px;
     transition: all .2s ease-in-out 0s
@@ -5214,9 +5216,9 @@ iframe {
     content: "";
     position: absolute;
     font-family: "bootstrap-icons";
-    top: 6px;
+    top: 8px;
     left: 14px;
-    color: #000000;
+    color: #ffffff;
     transition: all .2s ease-in-out 0s
 }
 
@@ -9290,7 +9292,7 @@ iframe {
 }
 
 .footer-four .bottom-footer .social-icon a:hover {
-    color: #e6fd5a
+    color: #e6fd5a;
 }
 
 .footer-five {
