@@ -201,7 +201,7 @@ header.scrolled .hamburger span {
 .fs-brand-desc p {
     font-size: 14px;
     line-height: 1.85;
-    color: rgba(30, 18, 8, 0.65);
+    color: rgba(0, 0, 0, 0.65);
     font-weight: 400;
     max-width: 300px;
     margin: 16px 0 28px;
@@ -366,7 +366,7 @@ header.scrolled .hamburger span {
     align-items: center;
     justify-content: space-between;
     padding: 18px 0;
-    border-bottom: 1px solid rgba(255, 210, 177, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     text-decoration: none;
     transition: all 0.3s ease;
     opacity: 0;
@@ -418,7 +418,7 @@ header.scrolled .hamburger span {
 .fs-nav-name {
     font-size: 20px;
     font-weight: 800;
-    color: rgba(30, 18, 8, 0.85);
+    color: rgba(0, 0, 0, 0.85);
     letter-spacing: -0.5px;
 }
 

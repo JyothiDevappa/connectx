@@ -174,6 +174,7 @@
         border: 1px solid rgba(118, 88, 59, .12);
 
         box-shadow: 0 10px 30px rgba(0, 0, 0, .04);
+
     }
 
     .connectx-work-card:hover {

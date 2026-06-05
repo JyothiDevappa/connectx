@@ -45,18 +45,24 @@
   <div class="bg-text">ConnectX</div>
   <div class="founder-inner">
     <div class="section-label light">Founder Statement</div>
-    <h2 class="section-title light">Why We<br>Built This</h2>
+    <h2 class="founder-title">Why We Built This</h2>
     <span class="quote-mark">"</span>
     <p class="founder-quote">
       ConnectX is built to bring creators together in a structured ecosystem where they can <em>connect, collaborate, and be seen.</em> Our focus is simple — create spaces for real conversations, enable meaningful collaborations, and help creators grow their influence through content and community.
     </p>
-    <div class="founder-byline">
-      <div class="byline-avatar">YC</div>
-      <div class="byline-text">
+
+    
+ <div class="founder-byline">
+    <div class="byline-avatar">
+        <img src="{{ asset('images/media/founder.png') }}" alt="Young Chanakya">
+    </div>
+
+    <div class="byline-text">
         <div class="name">Young Chanakya</div>
         <div class="role">Founder & Visionary, ConnectX</div>
-      </div>
     </div>
+</div>
+
   </div>
 </section>
 

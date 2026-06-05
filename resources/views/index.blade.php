@@ -366,14 +366,14 @@
             <div class="eyebrow rv">Event Listing</div>
             <h2 class="sec-title rv">Curated events for every creator journey</h2>
         </div>
+
         <div class="position-relative">
             <div class="row gx-xxl-5">
+
                 <div class="col-md-6">
                     <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
                         <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
-
-                            style="background-image: url('{{ asset('images/media/img.jpg') }}');">
-
+                            style="background-image: url('{{ asset("images/media/people-taking-part-high-protocol-event.jpg") }}');">
                             <a href="#" class="stretched-link rounded-5 date tran3s">09 FEB</a>
                         </figure>
                         <div class="post-data">
@@ -381,15 +381,19 @@
                                 <a href="#" class="blog-title">
                                     <h4>Creator Growth Masterclass</h4>
                                 </a>
-                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"><i class="bi bi-arrow-up-right"></i></a>
+                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
                             </div>
-                            <div class="post-info">ConnectX Team . 6 hrs . Masterclass</div>
+                            <!-- <div class="post-info">ConnectX Team . 6 hrs . Masterclass</div> -->
                         </div>
                     </article>
                 </div>
+
                 <div class="col-md-6">
                     <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp" data-wow-delay="0.1s">
-                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0" style="background-image: url('{{ asset('images/blog/blog_img_04.jpg') }}');">
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                            style="background-image: url('{{ asset("images/blog/blog_img_04.jpg") }}');">
                             <a href="#" class="stretched-link rounded-5 date tran3s">12 AUG</a>
                         </figure>
                         <div class="post-data">
@@ -397,15 +401,19 @@
                                 <a href="#" class="blog-title">
                                     <h4>Voices of Influence Roundtable</h4>
                                 </a>
-                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"><i class="bi bi-arrow-up-right"></i></a>
+                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
                             </div>
-                            <div class="post-info">Live Panel . 4 hrs . Roundtable</div>
+                            <!-- <div class="post-info">Live Panel . 4 hrs . Roundtable</div> -->
                         </div>
                     </article>
                 </div>
+
                 <div class="col-md-6">
                     <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
-                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0" style="background-image: url('{{ asset('images/media/img_50.jpg') }}');">
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                            style="background-image: url('{{ asset("images/media/img_50.jpg") }}');">
                             <a href="#" class="stretched-link rounded-5 date tran3s">18 SEP</a>
                         </figure>
                         <div class="post-data">
@@ -413,15 +421,19 @@
                                 <a href="#" class="blog-title">
                                     <h4>Networking & Collab Night</h4>
                                 </a>
-                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"><i class="bi bi-arrow-up-right"></i></a>
+                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
                             </div>
-                            <div class="post-info">Community Hub . 5 hrs . Networking</div>
+                            <!-- <div class="post-info">Community Hub . 5 hrs . Networking</div> -->
                         </div>
                     </article>
                 </div>
+
                 <div class="col-md-6">
                     <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp" data-wow-delay="0.1s">
-                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0" style="background-image: url('{{ asset('images/media/img_48.webp') }}');">
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                            style="background-image: url('{{ asset("images/media/img_48.webp") }}');">
                             <a href="#" class="stretched-link rounded-5 date tran3s">22 OCT</a>
                         </figure>
                         <div class="post-data">
@@ -429,15 +441,19 @@
                                 <a href="#" class="blog-title">
                                     <h4>Meetup Market Mixer</h4>
                                 </a>
-                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"><i class="bi bi-arrow-up-right"></i></a>
+                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
                             </div>
-                            <div class="post-info">City Event . 3 hrs . Meetups</div>
+                            <!-- <div class="post-info">City Event . 3 hrs . Meetups</div> -->
                         </div>
                     </article>
                 </div>
+
                 <div class="col-md-6">
                     <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
-                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0" style="background-image: url('{{ asset('images/media/img_58.webp') }}');">
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                            style="background-image: url('{{ asset("images/media/img_58.webp") }}');">
                             <a href="#" class="stretched-link rounded-5 date tran3s">05 NOV</a>
                         </figure>
                         <div class="post-data">
@@ -445,15 +461,19 @@
                                 <a href="#" class="blog-title">
                                     <h4>Creator Lounge Live</h4>
                                 </a>
-                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"><i class="bi bi-arrow-up-right"></i></a>
+                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
                             </div>
-                            <div class="post-info">Studio Stream . 2 hrs . Lounge</div>
+                            <!-- <div class="post-info">Studio Stream . 2 hrs . Lounge</div> -->
                         </div>
                     </article>
                 </div>
+
                 <div class="col-md-6">
                     <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp" data-wow-delay="0.1s">
-                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0" style="background-image: url('{{ asset('images/media/img_20.jpg') }}');">
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                            style="background-image: url('{{ asset("images/media/img_20.jpg") }}');">
                             <a href="#" class="stretched-link rounded-5 date tran3s">15 DEC</a>
                         </figure>
                         <div class="post-data">
@@ -461,30 +481,19 @@
                                 <a href="#" class="blog-title">
                                     <h4>Awards Showcase Evening</h4>
                                 </a>
-                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s"><i class="bi bi-arrow-up-right"></i></a>
+                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
                             </div>
-                            <div class="post-info">Showcase . 4 hrs . Awards</div>
+                            <!-- <div class="post-info">Showcase . 4 hrs . Awards</div> -->
                         </div>
                     </article>
-
                 </div>
 
-                <div class="pagination-one mt-20">
-                    <ul class="style-none d-flex align-items-center justify-content-center">
-                        <li><a href="#" class="active">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li>...</li>
-                        <li><a href="#">Last <i class="bi bi-arrow-right"></i></a></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
 </section>
-
-
 
 <!-- COMMUNITY & SPONSOR -->
 <section class="community-sec" id="community">
