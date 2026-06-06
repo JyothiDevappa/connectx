@@ -1,0 +1,196 @@
+<style>
+  @keyframes lineGrow {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes circlePop {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+
+    70% {
+      transform: scale(1.18);
+      opacity: 1;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .cx-line-track {
+    position: absolute;
+    left: 22px;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 3px;
+    background: #1f5a45;
+    border-radius: 2px;
+    z-index: 0;
+  }
+
+  .cx-line-fill {
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 3px;
+    background: #ffd2b1;
+    border-radius: 2px;
+    width: 0;
+    animation: lineGrow 1.2s cubic-bezier(.4, 0, .2, 1) 0.2s forwards;
+    z-index: 1;
+  }
+
+  .cx-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #ffd2b1;
+    color: #0c3a30;
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  .cx-c1 {
+    animation: circlePop 0.45s cubic-bezier(.34, 1.56, .64, 1) 0.35s forwards;
+  }
+
+  .cx-c2 {
+    animation: circlePop 0.45s cubic-bezier(.34, 1.56, .64, 1) 0.75s forwards;
+  }
+
+  .cx-c3 {
+    animation: circlePop 0.45s cubic-bezier(.34, 1.56, .64, 1) 1.15s forwards;
+  }
+
+  .cx-c4 {
+    animation: circlePop 0.45s cubic-bezier(.34, 1.56, .64, 1) 1.55s forwards;
+  }
+
+  .cx-text {
+    opacity: 0;
+  }
+
+  .cx-t1 {
+    animation: fadeUp 0.5s ease 0.55s forwards;
+  }
+
+  .cx-t2 {
+    animation: fadeUp 0.5s ease 0.95s forwards;
+  }
+
+  .cx-t3 {
+    animation: fadeUp 0.5s ease 1.35s forwards;
+  }
+
+  .cx-t4 {
+    animation: fadeUp 0.5s ease 1.75s forwards;
+  }
+
+  .cx-heading {
+    opacity: 0;
+    animation: fadeUp 0.5s ease 0.05s forwards;
+  }
+</style>
+
+<h2 class="sr-only">How ConnectX Works — 4 steps: Create Your Profile, Access Creator Spaces, Connect & Collaborate,
+  Grow Your Influence.</h2>
+
+<div style="background:#0c3a30; border-radius:16px; padding:44px 36px 52px; font-family:var(--font-sans);">
+
+  <p class="cx-heading" style="color:#ffffff; font-size:24px; font-weight:400; margin:0 0 52px; letter-spacing:-0.3px;">
+    How ConnectX <span style="font-style:italic; font-weight:500; color:#ffd2b1;">Works</span>
+  </p>
+
+  <div style="position:relative; margin-bottom:52px;">
+    <div class="cx-line-track"></div>
+    <div class="cx-line-fill"></div>
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); position:relative; z-index:2;">
+      <div style="display:flex; justify-content:flex-start;">
+        <div class="cx-circle cx-c1">01</div>
+      </div>
+      <div style="display:flex; justify-content:center;">
+        <div class="cx-circle cx-c2">02</div>
+      </div>
+      <div style="display:flex; justify-content:center;">
+        <div class="cx-circle cx-c3">03</div>
+      </div>
+      <div style="display:flex; justify-content:flex-end;">
+        <div class="cx-circle cx-c4">04</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:28px;">
+
+    <div class="cx-text cx-t1">
+      <p
+        style="color:#ffd2b1; font-size:11px; font-weight:500; letter-spacing:1.2px; margin:0 0 8px; text-transform:uppercase;">
+        01 — Create</p>
+      <p style="color:#ffffff; font-size:15px; font-weight:500; margin:0 0 10px; line-height:1.35;">Create Your Profile
+      </p>
+      <p style="color:#7ab8a0; font-size:12.5px; line-height:1.65; margin:0;">Build your creator identity and showcase
+        your content, voice, category, and digital presence within the ConnectX ecosystem.</p>
+    </div>
+
+    <div class="cx-text cx-t2">
+      <p
+        style="color:#ffd2b1; font-size:11px; font-weight:500; letter-spacing:1.2px; margin:0 0 8px; text-transform:uppercase;">
+        02 — Access</p>
+      <p style="color:#ffffff; font-size:15px; font-weight:500; margin:0 0 10px; line-height:1.35;">Access Creator
+        Spaces</p>
+      <p style="color:#7ab8a0; font-size:12.5px; line-height:1.65; margin:0;">Enter ConnectX Lounges, networking rooms,
+        podcasts, roundtables, and creator-first experiences designed for visibility and engagement.</p>
+    </div>
+
+    <div class="cx-text cx-t3">
+      <p
+        style="color:#ffd2b1; font-size:11px; font-weight:500; letter-spacing:1.2px; margin:0 0 8px; text-transform:uppercase;">
+        03 — Connect</p>
+      <p style="color:#ffffff; font-size:15px; font-weight:500; margin:0 0 10px; line-height:1.35;">Connect &
+        Collaborate</p>
+      <p style="color:#7ab8a0; font-size:12.5px; line-height:1.65; margin:0;">Network with influencers, creators,
+        communities, brands, and public voices across industries and countries.</p>
+    </div>
+
+    <div class="cx-text cx-t4">
+      <p
+        style="color:#ffd2b1; font-size:11px; font-weight:500; letter-spacing:1.2px; margin:0 0 8px; text-transform:uppercase;">
+        04 — Grow</p>
+      <p style="color:#ffffff; font-size:15px; font-weight:500; margin:0 0 10px; line-height:1.35;">Grow Your Influence
+      </p>
+      <p style="color:#7ab8a0; font-size:12.5px; line-height:1.65; margin:0;">Increase your visibility through
+        collaborations, events, podcasts, creator opportunities, and ecosystem-driven exposure.</p>
+    </div>
+
+  </div>
+</div>

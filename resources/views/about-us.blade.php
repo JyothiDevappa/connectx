@@ -1,6 +1,5 @@
 @extends('layout.app')
 @push('styles')
-<link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
 
 <link rel="stylesheet" href="{{ asset('css/about-us.css') }}">
 @endpush

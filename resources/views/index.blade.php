@@ -2,6 +2,8 @@
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
+<link rel="stylesheet" href="{{ asset('css/custom-header.css') }}">
+
 @endpush
 
 @section('content')
@@ -164,6 +166,7 @@
             </div>
             <div class="p-arrow">↗</div>
         </div>
+
         <div class="p-card rv" style="transition-delay:0.49s">
             <img src="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=600&q=80" alt="Regional">
             <div class="p-card-ov">
@@ -172,55 +175,197 @@
             </div>
             <div class="p-arrow">↗</div>
         </div>
+
+
+        <div class="p-card rv" style="transition-delay:0.56s">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Education">
+            <div class="p-card-ov">
+                <div class="p-cat">09</div>
+                <div class="p-name">Education & Learning</div>
+            </div>
+            <div class="p-arrow">↗</div>
+        </div>
+
+        <div class="p-card rv" style="transition-delay:0.63s">
+            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80" alt="Entertainment">
+            <div class="p-card-ov">
+                <div class="p-cat">10</div>
+                <div class="p-name">Entertainment & Pop Culture</div>
+            </div>
+            <div class="p-arrow">↗</div>
+        </div>
+
+
     </div>
 </section>
+
 
 <!-- HOW CONNECTX WORKS -->
-<section class="how-works" id="how">
-    <div class="container-how">
-        <div class="how-header">
-            <!-- <p class="how-label">PROCESS</p> -->
-            <h2 class="how-title">How ConnectX Works</h2>
-        </div>
-        <div class="how-grid">
-            <article class="how-card" style="transition-delay:0s">
-                <div class="how-icon">
-                    <img src="{{ asset('images/assets/ils_08.svg') }}" alt="Create Profile">
-                </div>
-                <div class="how-step-num">1</div>
-                <h3>Create Your Profile</h3>
-                <p>Build your creator identity and showcase your content, voice, category, and digital presence within the ConnectX ecosystem.</p>
-            </article>
-            <article class="how-card" style="transition-delay:0.08s">
-                <div class="how-icon">
-                    <img src="{{ asset('images/assets/ils_09.svg') }}" alt="Access Creator Spaces">
-                </div>
-                <div class="how-step-num">2</div>
-                <h3>Access Creator Spaces</h3>
-                <p>Enter ConnectX Lounges, networking rooms, podcasts, roundtables, and creator-first experiences designed for visibility and engagement.</p>
-            </article>
-            <article class="how-card" style="transition-delay:0.16s">
-                <div class="how-icon">
-                    <img src="{{ asset('images/assets/ils_10.svg') }}" alt="Connect & Collaborate">
-                </div>
-                <div class="how-step-num">3</div>
-                <h3>Connect & Collaborate</h3>
-                <p>Network with influencers, creators, communities, brands, and public voices across industries and countries.</p>
-            </article>
-            <article class="how-card" style="transition-delay:0.24s">
-                <div class="how-icon">
-                    <img src="{{ asset('images/assets/ils_11.svg') }}" alt="Grow Your Influence">
-                </div>
-                <div class="how-step-num">4</div>
-                <h3>Grow Your Influence</h3>
-                <p>Increase your visibility through collaborations, events, podcasts, creator opportunities, and ecosystem-driven exposure.</p>
-            </article>
-        </div>
-    </div>
-</section>
 
 <style>
+    @keyframes lineGrow {
+        from {
+            transform: scaleX(0);
+        }
 
+        to {
+            transform: scaleX(1);
+        }
+    }
+
+    @keyframes circlePop {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        70% {
+            transform: scale(1.18);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(14px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .cx-heading {
+        opacity: 0;
+        animation: fadeUp 0.5s ease 0.05s forwards;
+    }
+
+    .cx-circle {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: #ffd2b1;
+        color: #0c3a30;
+        font-size: 18px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    .cx-c1 {
+        animation: circlePop 0.45s cubic-bezier(.34, 1.56, .64, 1) 0.35s forwards;
+    }
+
+    .cx-c2 {
+        animation: circlePop 0.45s cubic-bezier(.34, 1.56, .64, 1) 0.75s forwards;
+    }
+
+    .cx-c3 {
+        animation: circlePop 0.45s cubic-bezier(.34, 1.56, .64, 1) 1.15s forwards;
+    }
+
+    .cx-c4 {
+        animation: circlePop 0.45s cubic-bezier(.34, 1.56, .64, 1) 1.55s forwards;
+    }
+
+    .cx-text {
+        opacity: 0;
+    }
+
+    .cx-t1 {
+        animation: fadeUp 0.5s ease 0.55s forwards;
+    }
+
+    .cx-t2 {
+        animation: fadeUp 0.5s ease 0.95s forwards;
+    }
+
+    .cx-t3 {
+        animation: fadeUp 0.5s ease 1.35s forwards;
+    }
+
+    .cx-t4 {
+        animation: fadeUp 0.5s ease 1.75s forwards;
+    }
+</style>
+
+<h2 class="sr-only">How ConnectX Works — 4 steps to create, access, connect, and grow.</h2>
+
+<div style="background:#0c3a30; border-radius:16px; padding:44px 36px 52px; font-family:var(--font-sans);">
+
+    <p class="cx-heading" style="color:#ffffff;     font-size: clamp(34px, 4vw, 56px);
+ font-weight:400; margin:0 0 48px; letter-spacing:-0.3px;">
+        How ConnectX <span style="font-style:italic; font-weight:500; color:#ffd2b1;">Works</span>
+    </p>
+
+    <div style="position:relative;">
+
+        <div
+            style="position:absolute; top:24px; left:24px; right:24px; height:3px; background:#1f5a45; border-radius:2px; z-index:0;">
+        </div>
+        <div
+            style="position:absolute; top:24px; left:24px; right:24px; height:3px; background:#ffd2b1; border-radius:2px; z-index:1; transform-origin:left; transform:scaleX(0); animation: lineGrow 1.2s cubic-bezier(.4,0,.2,1) 0.2s forwards;">
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:28px; position:relative; z-index:2;">
+
+            <div style="display:flex; flex-direction:column; gap:20px;">
+                <div class="cx-circle cx-c1">1</div>
+                <div class="cx-text cx-t1">
+                    <p style="color:#ffffff; font-size:15px; font-weight:500; margin:0 0 8px; line-height:1.35;">Create Your
+                        Profile</p>
+                    <p style="color:#7ab8a0; font-size:12.5px; line-height:1.65; margin:0;">Create your creator profile and
+                        showcase your content within ConnectX.</p>
+                </div>
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:20px;">
+                <div class="cx-circle cx-c2">2</div>
+                <div class="cx-text cx-t2">
+                    <p style="color:#ffffff; font-size:15px; font-weight:500; margin:0 0 8px; line-height:1.35;">Access Creator
+                        Spaces</p>
+                    <p style="color:#7ab8a0; font-size:12.5px; line-height:1.65; margin:0;">Access creator lounges, networking
+                        spaces, podcasts, and exclusive experiences.</p>
+                </div>
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:20px;">
+                <div class="cx-circle cx-c3">3</div>
+                <div class="cx-text cx-t3">
+                    <p style="color:#ffffff; font-size:15px; font-weight:500; margin:0 0 8px; line-height:1.35;">Connect &
+                        Collaborate</p>
+                    <p style="color:#7ab8a0; font-size:12.5px; line-height:1.65; margin:0;">Connect with creators, influencers,
+                        brands, and communities worldwide.</p>
+                </div>
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap:20px;">
+                <div class="cx-circle cx-c4">4</div>
+                <div class="cx-text cx-t4">
+                    <p style="color:#ffffff; font-size:15px; font-weight:500; margin:0 0 8px; line-height:1.35;">Grow Your
+                        Influence</p>
+                    <p style="color:#7ab8a0; font-size:12.5px; line-height:1.65; margin:0;">Grow your visibility through
+                        collaborations, events, and creator opportunities.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<style>
 </style>
 
 <!-- EXPERIENCES -->
@@ -335,30 +480,6 @@
     </div>
 </section>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const targetSection = document.querySelector(".cx-premium-viewport");
-        const glowCursor = document.querySelector(".cx-custom-cursor");
-
-        if (targetSection && glowCursor && window.matchMedia("(pointer: fine)").matches) {
-            window.addEventListener("mousemove", (e) => {
-                glowCursor.style.left = `${e.clientX}px`;
-                glowCursor.style.top = `${e.clientY}px`;
-            });
-
-            targetSection.addEventListener("mouseenter", () => {
-                glowCursor.style.transform = "translate(-50%, -50%) scale(1)";
-                glowCursor.style.opacity = "1";
-            });
-
-            targetSection.addEventListener("mouseleave", () => {
-                glowCursor.style.transform = "translate(-50%, -50%) scale(0)";
-                glowCursor.style.opacity = "0";
-            });
-        }
-    });
-</script>
-
 <!-- EVENT LISTING -->
 <section class="blog-section-two position-relative mt-150 lg-mt-80 mb-150 lg-mb-80" id="events">
     <div class="container">
@@ -370,10 +491,10 @@
         <div class="position-relative">
             <div class="row gx-xxl-5">
 
-                <div class="col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
                         <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
-                            style="background-image: url('{{ asset("images/media/people-taking-part-high-protocol-event.jpg") }}');">
+                            style="background-image: url('{{ asset("images/media/img.jpg") }}');">
                             <a href="#" class="stretched-link rounded-5 date tran3s">09 FEB</a>
                         </figure>
                         <div class="post-data">
@@ -390,7 +511,7 @@
                     </article>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp" data-wow-delay="0.1s">
                         <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
                             style="background-image: url('{{ asset("images/blog/blog_img_04.jpg") }}');">
@@ -410,7 +531,7 @@
                     </article>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
                         <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
                             style="background-image: url('{{ asset("images/media/img_50.jpg") }}');">
@@ -430,7 +551,7 @@
                     </article>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp" data-wow-delay="0.1s">
                         <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
                             style="background-image: url('{{ asset("images/media/img_48.webp") }}');">
@@ -450,7 +571,7 @@
                     </article>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
                         <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
                             style="background-image: url('{{ asset("images/media/img_58.webp") }}');">
@@ -470,7 +591,7 @@
                     </article>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp" data-wow-delay="0.1s">
                         <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
                             style="background-image: url('{{ asset("images/media/img_20.jpg") }}');">

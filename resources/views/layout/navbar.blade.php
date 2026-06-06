@@ -2,9 +2,9 @@
     <div class="fs-left">
         <div>
             <a href="{{ url('/') }}" class="logo">
-                <img src="{{ asset('images/logo/connectx.png') }}" 
-                     alt="ConnectX Logo" 
-                     class="menu-logo">
+                <img src="{{ asset('images/logo/yc.png') }}"
+                    alt="ConnectX Logo"
+                    class="menu-logo">
             </a>
 
             <div class="fs-brand-desc">
@@ -17,6 +17,7 @@
                 <a href="{{ url('/') }}" class="fs-website-btn">
                     Explore ConnectX ↗
                 </a>
+                <h3> Follow Us </h3>
 
                 <div class="fs-socials">
                     <a href="#" class="fs-social">
@@ -42,40 +43,53 @@
     <div class="fs-right">
         <div class="fs-close" onclick="toggleMenu()">Close</div>
 
-      <nav class="fs-nav">
+        <div class="fs-right-top">
+            <img src="{{ asset('images/logo/connectx.png') }}"
+                alt="ConnectX"
+                class="fs-right-logo">
 
-    <a href="{{ url('/about') }}" class="fs-nav-item" onclick="toggleMenu()">
-        <span class="fs-nav-name">About ConnectX</span>
-        <span class="fs-nav-arrow">→</span>
-        <span class="fs-nav-num">01</span>
-    </a>
+            <div class="fs-right-socials">
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
 
-    <a href="{{ url('/become-a-partner') }}" class="fs-nav-item" onclick="toggleMenu()">
-        <span class="fs-nav-name">Who Can Partner</span>
-        <span class="fs-nav-arrow">→</span>
-        <span class="fs-nav-num">02</span>
-    </a>
+        <nav class="fs-nav">
 
-    <a href="{{ url('/become-a-sponser') }}" class="fs-nav-item" onclick="toggleMenu()">
-        <span class="fs-nav-name">Community & Sponsors</span>
-        <span class="fs-nav-arrow">→</span>
-        <span class="fs-nav-num">03</span>
-    </a>
+            <a href="{{ url('/about') }}" class="fs-nav-item" onclick="toggleMenu()">
+                <span class="fs-nav-name">About ConnectX</span>
+                <span class="fs-nav-arrow">→</span>
+                <span class="fs-nav-num">01</span>
+            </a>
 
-    <!-- Events page pending -->
-    <a href="javascript:void(0)" class="fs-nav-item">
-        <span class="fs-nav-name">Events</span>
-        <span class="fs-nav-arrow">→</span>
-        <span class="fs-nav-num">04</span>
-    </a>
+            <a href="{{ url('/become-a-partner') }}" class="fs-nav-item" onclick="toggleMenu()">
+                <span class="fs-nav-name">Who Can Partner</span>
+                <span class="fs-nav-arrow">→</span>
+                <span class="fs-nav-num">02</span>
+            </a>
 
-    <a href="{{ url('/contact') }}" class="fs-nav-item" onclick="toggleMenu()">
-        <span class="fs-nav-name">Contact</span>
-        <span class="fs-nav-arrow">→</span>
-        <span class="fs-nav-num">05</span>
-    </a>
+            <a href="{{ url('/become-a-sponser') }}" class="fs-nav-item" onclick="toggleMenu()">
+                <span class="fs-nav-name">Community & Sponsors</span>
+                <span class="fs-nav-arrow">→</span>
+                <span class="fs-nav-num">03</span>
+            </a>
 
-</nav>
+            <!-- Events page pending -->
+            <a href="javascript:void(0)" class="fs-nav-item">
+                <span class="fs-nav-name">Events</span>
+                <span class="fs-nav-arrow">→</span>
+                <span class="fs-nav-num">04</span>
+            </a>
+
+            <a href="{{ url('/contact') }}" class="fs-nav-item" onclick="toggleMenu()">
+                <span class="fs-nav-name">Contact</span>
+                <span class="fs-nav-arrow">→</span>
+                <span class="fs-nav-num">05</span>
+            </a>
+
+        </nav>
     </div>
 </div>
 
@@ -83,8 +97,8 @@
 
     <a href="{{ url('/') }}" class="logo">
         <img src="{{ asset('images/logo/connectx.png') }}"
-             alt="ConnectX"
-             class="site-logo">
+            alt="ConnectX"
+            class="site-logo">
     </a>
 
     <div class="header-right">
