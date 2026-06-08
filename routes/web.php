@@ -70,8 +70,6 @@ Route::get('/404', fn() => view('404'));
 
 
 
-
-
 Route::get('/connecters-list', function () {
     return view('connecters-list');
 });
@@ -85,3 +83,5 @@ Route::get('/become-a-partner', function () {
     return view('become-a-partner');
 });
 
+
+Route::get('/events', fn() => view('events'));

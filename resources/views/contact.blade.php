@@ -4,7 +4,17 @@
 @endpush
 @section('content')
 
+<style>
+.hero-heading {
+    color: #ffffff !important; /* Forces the text to white */
+    position: relative;
+}
 
+/* If the underline shape is also causing issues, ensure it has high contrast */
+.hero-heading img {
+    filter: brightness(0) invert(1); /* This turns your shape image white */
+}
+	</style>
 		<!-- 
 		=============================================
 			Inner Banner
@@ -160,50 +170,6 @@
 		<button class="scroll-top">
 			<i class="bi bi-arrow-up-short"></i>
 		</button>
-
-
-
-
-		<!-- Optional JavaScript _____________________________  -->
-
-		<!-- jQuery first, then Bootstrap JS -->
-		<!-- jQuery -->
-		<script src="vendor/jquery.min.js"></script>
-		<!-- Bootstrap JS -->
-		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<!-- WOW js -->
-		<script src="vendor/wow/wow.min.js"></script>
-		<!-- Slick Slider -->
-		<script src="vendor/slick/slick.min.js"></script>
-		<!-- Fancybox -->
-		<script src="vendor/fancybox/dist/jquery.fancybox.min.js"></script>
-		<!-- Lazy -->
-		<script src="vendor/jquery.lazy.min.js"></script>
-		<!-- js Counter -->
-		<script src="vendor/jquery.counterup.min.js"></script>
-		<script src="vendor/jquery.waypoints.min.js"></script>
-		
-		<!-- validator js -->
-		<script src="vendor/validator.js"></script>
-
-		<!-- Theme js -->
-		<script src="js/theme.js"></script>
-	</div> <!-- /.main-page-wrapper -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

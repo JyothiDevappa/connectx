@@ -29,7 +29,7 @@
 
 
                         <p class="lh-sm mb-40 md-mb-20">
-                        Follow Us
+                            Follow Us
 
                         </p>
 
@@ -201,15 +201,19 @@
 
             <!-- SHAPES -->
             <img src="{{ asset('images/shape/shape_06.svg') }}"
-                 alt=""
-                 class="lazy-img shapes shape_01">
+                alt=""
+                class="lazy-img shapes shape_01">
 
             <img src="{{ asset('images/shape/shape_06.svg') }}"
-                 alt=""
-                 class="lazy-img shapes shape_02">
+                alt=""
+                class="lazy-img shapes shape_02">
 
         </div>
     </div>
+</div>
+
+<div class="footer-copyright text-center">
+    © 2026 ConnectX. All Rights Reserved.
 </div>
 
 <!-- Scroll Top -->

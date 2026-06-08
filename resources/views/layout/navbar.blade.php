@@ -77,16 +77,22 @@
             </a>
 
             <!-- Events page pending -->
-            <a href="javascript:void(0)" class="fs-nav-item">
+            <a href="{{ url('/events') }}" class="fs-nav-item" onclick="toggleMenu()">
                 <span class="fs-nav-name">Events</span>
                 <span class="fs-nav-arrow">→</span>
-                <span class="fs-nav-num">04</span>
+                <span class="fs-nav-num">05</span>
+            </a>
+
+            <a href="{{ url('/connecters-list') }}" class="fs-nav-item" onclick="toggleMenu()">
+                <span class="fs-nav-name">Connecters Directory</span>
+                <span class="fs-nav-arrow">→</span>
+                <span class="fs-nav-num">06</span>
             </a>
 
             <a href="{{ url('/contact') }}" class="fs-nav-item" onclick="toggleMenu()">
                 <span class="fs-nav-name">Contact</span>
                 <span class="fs-nav-arrow">→</span>
-                <span class="fs-nav-num">05</span>
+                <span class="fs-nav-num">07</span>
             </a>
 
         </nav>

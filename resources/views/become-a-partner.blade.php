@@ -157,7 +157,7 @@
 
     /* WHO WE WORK WITH */
 
-    .connectx-work-card {
+    /* .connectx-work-card {
 
         background: #fff;
 
@@ -243,7 +243,7 @@
 
         }
 
-    }
+    } */
 
 
 
@@ -416,6 +416,160 @@
         margin-bottom: 20px;
         /* or 40px if you want more space */
     }
+
+    /* second section */
+/* ==========================================================================
+   ConnectX Completely Isolated "How Works" Grid Stylesheet
+   ========================================================================= */
+
+/* Main wrapper spacing rules if needed */
+.connectx-how-works-section-wrapper {
+    position: relative;
+}
+
+/* Unique Main Title Class */
+.how-work-main-heading {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    color: #37665c !important;
+    margin: 0 !important;
+}
+
+/* Outer grid container wrapping all cards together */
+.how-works-section-cards-container {
+    border: 1px solid rgba(55, 102, 92, 0.15) !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    box-shadow: 0 20px 40px rgba(55, 102, 92, 0.04) !important;
+}
+
+/* Base card container styling */
+.how-works-section-card {
+    padding: 3rem 2.5rem !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important; 
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Background grid block style variants */
+.how-works-bg-light {
+    background-color: #ffffff !important;
+}
+.how-works-bg-tint {
+    background-color: rgba(255, 210, 177, 0.12) !important; /* 12% opacity tint of #ffd2b1 */
+}
+
+/* CRITICAL FIX: The wrapper layout strictly locking items to a horizontal row */
+.how-works-header-flex-row {
+    display: flex !important;
+    flex-direction: row !important;      /* Forces inline row flow layout */
+    align-items: center !important;     /* Centers everything vertically inline */
+    justify-content: flex-start !important;
+    gap: 12px !important;                /* Distance between badge element and h4 text */
+    margin-bottom: 1.5rem !important;
+    width: 100% !important;
+}
+
+/* Custom isolated text header class */
+.how-works-h4 {
+    font-size: 1.35rem !important;
+    font-weight: 600 !important;
+    color: #37665c !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.2 !important;
+    display: inline-block !important;   /* Nullifies global block behaviors dropping lines */
+    vertical-align: middle !important;
+    transition: color 0.3s ease !important;
+}
+
+/* Custom isolated badge element */
+.how-works-badge-num {
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+    color: #37665c !important;
+    letter-spacing: 0.05em !important;
+    background: rgba(255, 210, 177, 0.4) !important; /* Default soft accent */
+    padding: 4px 12px !important;
+    border-radius: 30px !important;
+    transition: all 0.3s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;          /* Prevents text container from crushing badge dimensions */
+    height: 32px !important;
+    vertical-align: middle !important;
+}
+
+/* Custom isolated description block paragraphs */
+.how-works-p-desc {
+    font-size: 0.98rem !important;
+    color: #555555 !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+    transition: color 0.3s ease !important;
+}
+
+/* ==========================================================================
+   Interactive Hover Elements Transitions
+   ========================================================================== */
+
+/* Main card hover block */
+.how-works-section-card:hover {
+    background-color: #37665c !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 15px 30px rgba(55, 102, 92, 0.2) !important;
+    z-index: 2 !important;
+}
+
+/* Heading element updates to clean white text on active hover layout */
+.how-works-section-card:hover .how-works-h4 {
+    color: #ffffff !important;
+}
+
+/* Paragraph element description text transitions on active hover */
+.how-works-section-card:hover .how-works-p-desc {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Flipped Hover Requirement: Number background becomes Green, number text shifts to Orange */
+.how-works-section-card:hover .how-works-badge-num {
+    background: #37665c !important;
+    color: #ffd2b1 !important;
+    border: 1px solid rgba(255, 210, 177, 0.3) !important;
+}
+
+/* ==========================================================================
+   Clean Grid Layout Borders Viewport Mixins
+   ========================================================================== */
+
+@media (min-width: 992px) {
+    .hw-grid-border-end-lg { border-right: 1px solid rgba(55, 102, 92, 0.15) !important; }
+    .hw-grid-border-end-md { border-right: 1px solid rgba(55, 102, 92, 0.15) !important; }
+    .hw-grid-border-bottom-md { border-bottom: 1px solid rgba(55, 102, 92, 0.15) !important; }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hw-grid-border-end-md { border-right: 1px solid rgba(55, 102, 92, 0.15) !important; }
+    .hw-grid-border-bottom-md { border-bottom: 1px solid rgba(55, 102, 92, 0.15) !important; }
+    .hw-grid-border-bottom-sm { border-bottom: 1px solid rgba(55, 102, 92, 0.15) !important; }
+}
+
+@media (max-width: 767.98px) {
+    .how-works-section-card {
+        border-bottom: 1px solid rgba(55, 102, 92, 0.15) !important;
+        padding: 2.5rem 1.5rem !important;
+    }
+    .how-works-section-cards-container .col-md-6:last-child .how-works-section-card {
+        border-bottom: none !important;
+    }
+}
+    
 </style>
 
 
@@ -560,166 +714,91 @@
 
 
 <!-- second section -->
-<section class="connectx-work-section pt-150 lg-pt-80 pb-120 lg-pb-80">
 
+<section class="connectx-how-works-section-wrapper pt-150 lg-pt-80 pb-120 lg-pb-80">
     <div class="container">
 
-        <!-- TITLE -->
-
-        <div class="title-two text-center mb-70">
-
-            <!-- <div class="upper-title-two mb-15">
-                WHO WE WORK WITH
-            </div> -->
-
-            <h2 class="text-dark">
-                Who We Work With
-
-            </h2>
-
+        <div class="how-work-main-heading-box text-center mb-70">
+            <h2 class="how-work-main-heading">Who We Work With</h2>
         </div>
 
-        <!-- CARDS -->
+        <div class="row g-0 how-works-section-cards-container">
 
-        <div class="row gx-4">
-
-            <!-- CARD 1 -->
-            <div class="col-lg-4 col-md-6">
-
-                <div class="connectx-work-card">
-
-                    <div class="icon-box">
-                        <span>01</span>
+            <div class="col-lg-4 col-md-6 hw-grid-border-end-md hw-grid-border-bottom-md">
+                <div class="how-works-section-card how-works-bg-light">
+                    <div class="how-works-header-flex-row">
+                        <span class="how-works-badge-num">01</span>
+                        <h4 class="how-works-h4">Content Platforms</h4>
                     </div>
-
-                    <h4>Content Platforms</h4>
-
-                    <p>
-                        Organizations focused on digital content,
-                        publishing, and audience engagement
-                        across formats.
+                    <p class="how-works-p-desc">
+                        Organizations focused on digital content, publishing, and audience engagement across formats.
                     </p>
-
                 </div>
-
             </div>
 
-            <!-- CARD 2 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="connectx-work-card">
-
-                    <div class="icon-box">
-                        <span>02</span>
+            <div class="col-lg-4 col-md-6 hw-grid-border-end-lg hw-grid-border-bottom-md">
+                <div class="how-works-section-card how-works-bg-tint">
+                    <div class="how-works-header-flex-row">
+                        <span class="how-works-badge-num">02</span>
+                        <h4 class="how-works-h4">Creator Networks</h4>
                     </div>
-
-                    <h4>Creator Networks</h4>
-
-                    <p>
-                        Communities and groups working with
-                        creators, influencers and digital
-                        storytellers.
+                    <p class="how-works-p-desc">
+                        Communities and groups working with creators, influencers and digital storytellers.
                     </p>
-
                 </div>
-
             </div>
 
-            <!-- CARD 3 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="connectx-work-card">
-
-                    <div class="icon-box">
-                        <span>03</span>
+            <div class="col-lg-4 col-md-6 hw-grid-border-bottom-md">
+                <div class="how-works-section-card how-works-bg-light">
+                    <div class="how-works-header-flex-row">
+                        <span class="how-works-badge-num">03</span>
+                        <h4 class="how-works-h4">Media & Production Teams</h4>
                     </div>
-
-                    <h4>Media & Production Teams</h4>
-
-                    <p>
-                        Studios and teams involved in podcasts,
-                        video production and content creation.
+                    <p class="how-works-p-desc">
+                        Studios and teams involved in podcasts, video production and content creation.
                     </p>
-
                 </div>
-
             </div>
 
-            <!-- CARD 4 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="connectx-work-card">
-
-                    <div class="icon-box">
-                        <span>04</span>
+            <div class="col-lg-4 col-md-6 hw-grid-border-end-md hw-grid-border-bottom-sm">
+                <div class="how-works-section-card how-works-bg-tint">
+                    <div class="how-works-header-flex-row">
+                        <span class="how-works-badge-num">04</span>
+                        <h4 class="how-works-h4">Community Builders</h4>
                     </div>
-
-                    <h4>Community Builders</h4>
-
-                    <p>
-                        Groups building active communities,
-                        engagement systems and networking
-                        ecosystems.
+                    <p class="how-works-p-desc">
+                        Groups building active communities, engagement systems and networking ecosystems.
                     </p>
-
                 </div>
-
             </div>
 
-            <!-- CARD 5 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="connectx-work-card">
-
-                    <div class="icon-box">
-                        <span>05</span>
+            <div class="col-lg-4 col-md-6 hw-grid-border-end-lg">
+                <div class="how-works-section-card how-works-bg-light">
+                    <div class="how-works-header-flex-row">
+                        <span class="how-works-badge-num">05</span>
+                        <h4 class="how-works-h4">Agencies & Growth Teams</h4>
                     </div>
-
-                    <h4>Agencies & Growth Teams</h4>
-
-                    <p>
-                        Teams focused on campaigns,
-                        creator partnerships and
-                        brand visibility growth.
+                    <p class="how-works-p-desc">
+                        Teams focused on campaigns, creator partnerships and brand visibility growth.
                     </p>
-
                 </div>
-
             </div>
 
-            <!-- CARD 6 -->
-
             <div class="col-lg-4 col-md-6">
-
-                <div class="connectx-work-card">
-
-                    <div class="icon-box">
-                        <span>06</span>
+                <div class="connectx-premium-card how-works-section-card how-works-bg-tint">
+                    <div class="how-works-header-flex-row">
+                        <span class="how-works-badge-num">06</span>
+                        <h4 class="how-works-h4">Ecosystem Enablers</h4>
                     </div>
-
-                    <h4>Ecosystem Enablers</h4>
-
-                    <p>
-                        Organizations supporting startups,
-                        innovation communities and
-                        professional networks.
+                    <p class="how-works-p-desc">
+                        Organizations supporting startups, innovation communities and professional networks.
                     </p>
-
                 </div>
-
             </div>
 
         </div>
-
     </div>
-
 </section>
-
-
 
 <div class="text-feature-five position-relative mt-150 lg-mt-80 pb-50">
 

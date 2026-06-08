@@ -1,314 +1,321 @@
 @extends('layout.app')
 
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
+@endpush
+
 @section('content')
-
-<!-- 
-=============================================
-    Inner Banner
-============================================== 
--->
-<div class="inner-banner-one pt-225 lg-pt-200 md-pt-150 pb-100 md-pb-70 position-relative"
-    style="background-image: url(images/media/img_26.jpg);">
+<style>
+    /* CONNECTORS AUTHORITY DESIGN SYSTEM */
+    .authority-hero-section {
+        min-height: 80vh;
+        background-image: linear-gradient(180deg, rgba(9, 13, 22, 0.7) 0%, #090d16 100%), 
+                          url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .trust-headline {
+        font-size: clamp(36px, 5vw, 64px);
+        font-weight: 900;
+        line-height: 1.1;
+        letter-spacing: -2px;
+        background: linear-gradient(135deg, #ffffff 40%, #ffd2b1 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
     
-    <div class="container position-relative">
-        <div class="row align-items-center">
-            <div class="col-lg-7">
-                <h1 class="hero-heading d-inline-block position-relative me-xl-4">
-                    YC ConnectX Connector’s List
-                    <img src="images/shape/shape_25.svg" alt="">
-                </h1>
-            </div>
+    /* Trust Metric Counters Block */
+    .trust-badge-pill {
+        background: rgba(255, 210, 177, 0.1);
+        border: 1px solid rgba(255, 210, 177, 0.2);
+        color: #ffd2b1;
+        padding: 6px 16px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        border-radius: 50px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .trust-metric-box {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+        border-radius: 20px;
+        padding: 24px;
+        transition: transform 0.3s ease;
+    }
+    .trust-metric-box:hover {
+        transform: translateY(-4px);
+        border-color: rgba(255, 210, 177, 0.3);
+    }
+</style>
 
-            <div class="col-xl-4 col-lg-5 ms-auto">
-                <p class="text-white text-lg mb-70 lg-mb-40">
-                    Explore the diverse ecosystem of leaders, innovators, founders, creators, experts, and changemakers connected through Young Chanakya ConnectX.
+<div class="authority-hero-section d-flex align-items-center position-relative">
+    <div class="container pt-150 pb-100">
+        <div class="row align-items-center g-5">
+            <div class="col-xl-7 col-lg-8">
+                
+                <div class="trust-badge-pill mb-4">
+                    <i class="bi bi-shield-check-fill"></i> Institutional Ecosystem Directory
+                </div>
+
+                <h1 class="trust-headline mb-4">The verified nexus of market leadership.</h1>
+                <p class="text-white opacity-75 fs-5 mb-5" style="max-width: 600px; line-height: 1.6;">
+                    ConnectX orchestrates premium structural access to vetted visionaries, enterprise owners, and specialized policy framework architects globally.
                 </p>
 
-                <ul class="style-none d-inline-flex pager">
-                    <li><a href="{{ url('/') }}">Home</a></li>
-                    <li>/</li>
-                    <li>Connector’s List</li>
-                </ul>
+                <div class="d-flex flex-wrap align-items-center gap-4 text-white opacity-50" style="font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;">
+                    <span class="d-flex align-items-center gap-2"><i class="bi bi-patch-check fs-5 text-warning"></i> 100% VETTED ENTRANTS</span>
+                    <span class="d-flex align-items-center gap-2"><i class="bi bi-lock fs-5 text-warning"></i> SECURE NDAs ENFORCED</span>
+                </div>
+            </div>
+
+            <div class="col-xl-5 col-lg-4">
+                <div class="row g-3">
+                    <div class="col-sm-6 col-lg-12">
+                        <div class="trust-metric-box">
+                            <h4 class="display-6 fw-bold text-white mb-1" style="letter-spacing: -1px;">500+</h4>
+                            <p class="text-uppercase tracking-wider text-muted m-0" style="font-size: 0.7rem; font-weight: 700; color: #ffd2b1 !important;">Active C-Suite Founders</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-12">
+                        <div class="trust-metric-box">
+                            <h4 class="display-6 fw-bold text-white mb-1" style="letter-spacing: -1px;">12+</h4>
+                            <p class="text-uppercase tracking-wider text-muted m-0" style="font-size: 0.7rem; font-weight: 700; color: #ffd2b1 !important;">Industrial Verticals</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="trust-metric-box" style="background: linear-gradient(135deg, rgba(255,210,177,0.05) 0%, rgba(9,13,22,0) 100%); border-color: rgba(255,210,177,0.15);">
+                            <p class="text-white small m-0" style="line-height: 1.5; opacity: 0.8;">
+                                <i class="bi bi-info-circle me-1 text-warning"></i> Access to specific ecosystem segments requires verified profile clearance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<!-- 
-=============================================
-    Connector Categories
-============================================== 
--->
-<div class="faq-section-one position-relative mt-150 lg-mt-80 mb-150 lg-mb-80">
-    <div class="container">
+<!-- second section -->
 
-        <div class="title-one text-center mb-60 lg-mb-40">
-            <h2>Explore Our Connector Ecosystem</h2>
-            <p class="text-lg mt-20">
-                A curated network of professionals, entrepreneurs, innovators, educators, creators, and leaders across industries.
-            </p>
-        </div>
 
-        <div class="accordion accordion-style-two" id="accordionOne">
+<div class="showcase-content-wrapper py-5" style="background-color: #f8fafc;">
+    <div class="container py-5">
+        <div class="row g-5 align-items-stretch"> <div class="col-lg-4 d-flex flex-column">
+                <div class="sticky-sidebar-menu h-100 d-flex flex-column">
+                    <div class="sidebar-wrapper-shield p-4 rounded-4 d-flex flex-column justify-content-between h-100" style="background: #ffffff; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.02); min-height: 100%;">
+                        
+                        <div class="h-100 d-flex flex-column">
+                            <div class="mb-4 ps-2">
+                                <span class="text-uppercase fw-bold text-muted" style="font-size: 0.75rem; letter-spacing: 1.5px;">Ecosystem Verticals</span>
+                            </div>
+                            
+                            <div class="nav flex-column nav-pills justify-content-between h-100 gap-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <button class="sidebar-anchor-link active text-start border-0 w-100" id="v-pills-biz-tab" data-bs-toggle="pill" data-bs-target="#v-pills-biz" type="button" role="tab" aria-controls="v-pills-biz" aria-selected="true">
+                                    <span class="d-flex align-items-center gap-3">
+                                        <span class="sidebar-num-badge">01</span>
+                                        <span>Business & Growth</span>
+                                    </span>
+                                    <i class="bi bi-chevron-right"></i>
+                                </button>
+                                
+                                <button class="sidebar-anchor-link text-start border-0 w-100" id="v-pills-tech-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tech" type="button" role="tab" aria-controls="v-pills-tech" aria-selected="false">
+                                    <span class="d-flex align-items-center gap-3">
+                                        <span class="sidebar-num-badge">02</span>
+                                        <span>Innovation & Tech</span>
+                                    </span>
+                                    <i class="bi bi-chevron-right"></i>
+                                </button>
+                                
+                                <button class="sidebar-anchor-link text-start border-0 w-100" id="v-pills-fin-tab" data-bs-toggle="pill" data-bs-target="#v-pills-fin" type="button" role="tab" aria-controls="v-pills-fin" aria-selected="false">
+                                    <span class="d-flex align-items-center gap-3">
+                                        <span class="sidebar-num-badge">03</span>
+                                        <span>Finance & Policy</span>
+                                    </span>
+                                    <i class="bi bi-chevron-right"></i>
+                                </button>
+                                
+                                <button class="sidebar-anchor-link text-start border-0 w-100" id="v-pills-creative-tab" data-bs-toggle="pill" data-bs-target="#v-pills-creative" type="button" role="tab" aria-controls="v-pills-creative" aria-selected="false">
+                                    <span class="d-flex align-items-center gap-3">
+                                        <span class="sidebar-num-badge">04</span>
+                                        <span>Creative & Media</span>
+                                    </span>
+                                    <i class="bi bi-chevron-right"></i>
+                                </button>
+                                
+                                <button class="sidebar-anchor-link text-start border-0 w-100" id="v-pills-impact-tab" data-bs-toggle="pill" data-bs-target="#v-pills-impact" type="button" role="tab" aria-controls="v-pills-impact" aria-selected="false">
+                                    <span class="d-flex align-items-center gap-3">
+                                        <span class="sidebar-num-badge">05</span>
+                                        <span>Social & Academic</span>
+                                    </span>
+                                    <i class="bi bi-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar-insight-quote mt-4 p-4 rounded-4 position-relative overflow-hidden" style="background-color: #090d16; border: 1px solid rgba(255, 210, 177, 0.1);">
+                            <div class="position-absolute top-0 end-0 p-3 opacity-10">
+                                <i class="bi bi-quote text-white h1"></i>
+                            </div>
+                            <span class="text-uppercase fw-bold d-block mb-2" style="font-size: 0.65rem; color: #ffd2b1; letter-spacing: 2px;">Institutional Mandate</span>
+                            <p class="m-0 fw-normal" style="font-size: 0.8rem; line-height: 1.5; color: rgba(255, 255, 255, 0.75);">
+                                "Connecting verified structural leadership to accelerate enterprise and industrial ecosystem growth architectures."
+                            </p>
+                        </div>
 
-            <!-- Business & Entrepreneurship -->
-            <div class="accordion-item">
-                <div class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Business & Entrepreneurship
-                    </button>
+                    </div>
                 </div>
+            </div>
 
-                <div id="collapseOne" class="accordion-collapse collapse show"
-                    aria-labelledby="headingOne" data-bs-parent="#accordionOne">
-
-                    <div class="accordion-body">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <ul class="style-none list-item">
-                                    <li>Startup Founders</li>
-                                    <li>Women Entrepreneurs</li>
-                                    <li>Businessmen</li>
-                                    <li>Businesswomen</li>
-                                    <li>Business Strategists</li>
-                                    <li>Family Business Owners</li>
-                                    <li>MSME Leaders</li>
-                                </ul>
-                            </div>
-
-                            <div class="col-lg-4">
-                                <ul class="style-none list-item">
-                                    <li>Franchisors & Consultants</li>
-                                    <li>D2C Brand Founders</li>
-                                    <li>Retail & E-commerce Leaders</li>
-                                    <li>Export-Import Specialists</li>
-                                    <li>Supply Chain Experts</li>
-                                    <li>Industrialists</li>
-                                    <li>Manufacturing Innovators</li>
-                                </ul>
-                            </div>
-
-                            <div class="col-lg-4">
-                                <ul class="style-none list-item">
-                                    <li>FMCG Leaders</li>
-                                    <li>Corporate CXOs</li>
-                                    <li>Billionaires</li>
-                                    <li>Business Coaches</li>
-                                    <li>Leadership Consultants</li>
-                                    <li>Entrepreneurs in Residence (EIRs)</li>
-                                </ul>
+            <div class="col-lg-8">
+                <div class="tab-content h-100" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active h-100" id="v-pills-biz" role="tabpanel" aria-labelledby="v-pills-biz-tab">
+                        <div class="network-cluster-card h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="panel-hero-image mb-4 rounded-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(9,13,22,0.2), #090d16), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
+                                
+                                <div class="d-flex align-items-center gap-3 mb-4">
+                                    <div class="cluster-title-icon"><i class="bi bi-building-gear"></i></div>
+                                    <div>
+                                        <span class="text-uppercase fw-bold text-muted small tracking-wide">Segment 01</span>
+                                        <h2 class="h4 fw-bold m-0 text-dark" style="font-weight: 800;">Business & Entrepreneurship</h2>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mb-4">Scale engines, industrial innovators, enterprise owners, and market strategists managing global expansions.</p>
+                                <div class="d-flex flex-wrap gap-2 mb-2">
+                                    @php $biz = ['Startup Founders', 'Women Entrepreneurs', 'Business Strategists', 'Family Business Owners', 'MSME Leaders', 'Franchisors & Consultants', 'D2C Brand Founders', 'Retail & E-commerce Leaders', 'Export-Import Specialists', 'Industrialists', 'Manufacturing Innovators', 'FMCG Leaders', 'Corporate CXOs', 'Billionaires', 'Business Coaches', 'Entrepreneurs in Residence']; @endphp
+                                    @foreach($biz as $index => $item)
+                                        <a href="#" class="connector-node-pill"><span class="node-index">{{ $index + 1 }}</span> {{ $item }}</a>
+                                    @endforeach
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-
-            <!-- Innovation & Technology -->
-            <div class="accordion-item">
-                <div class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo">
-                        Innovation & Technology
-                    </button>
-                </div>
-
-                <div id="collapseTwo" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionOne">
-
-                    <div class="accordion-body">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <ul class="style-none list-item">
-                                    <li>Technology Innovators</li>
-                                    <li>AI & Data Science Experts</li>
-                                    <li>Cybersecurity Specialists</li>
-                                    <li>Blockchain & Web3 Entrepreneurs</li>
-                                    <li>FinTech Founders</li>
-                                </ul>
-                            </div>
-
-                            <div class="col-lg-4">
-                                <ul class="style-none list-item">
-                                    <li>SaaS Entrepreneurs</li>
-                                    <li>HealthTech Innovators</li>
-                                    <li>EdTech Founders</li>
-                                    <li>AgriTech Entrepreneurs</li>
-                                    <li>CleanTech & GreenTech Leaders</li>
-                                </ul>
-                            </div>
-
-                            <div class="col-lg-4">
-                                <ul class="style-none list-item">
-                                    <li>DeepTech Researchers</li>
-                                    <li>Product Managers & Tech Strategists</li>
-                                    <li>Robotics & Automation Experts</li>
-                                    <li>IoT Innovators</li>
-                                    <li>AR/VR Entrepreneurs</li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
-                </div>
-            </div>
-
-
-            <!-- Finance -->
-            <div class="accordion-item">
-                <div class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree">
-                        Finance, Investment & Policy
-                    </button>
-                </div>
-
-                <div id="collapseThree" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionOne">
-
-                    <div class="accordion-body">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <ul class="style-none list-item">
-                                    <li>Investors & Venture Capitalists</li>
-                                    <li>Angel Investors</li>
-                                    <li>Wealth Managers</li>
-                                    <li>Chartered Accountants & Auditors</li>
-                                    <li>Taxation Experts</li>
-                                    <li>Stock Market & Equity Traders</li>
-                                    <li>Banking Leaders</li>
-                                </ul>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <ul class="style-none list-item">
-                                    <li>Insurance Experts</li>
-                                    <li>Financial Experts</li>
-                                    <li>Corporate Lawyers</li>
-                                    <li>Policy Makers & Bureaucrats</li>
-                                    <li>Government Advisors</li>
-                                    <li>Economists</li>
-                                    <li>Legal & Compliance Specialists</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Leadership -->
-            <div class="accordion-item">
-                <div class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour">
-                        Leadership, People & Growth
-                    </button>
-                </div>
-
-                <div id="collapseFour" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionOne">
-
-                    <div class="accordion-body">
-                        <ul class="style-none list-item">
-                            <li>Industry Experts</li>
-                            <li>Leadership Trainers</li>
-                            <li>HR Leaders & Talent Managers</li>
-                            <li>Diversity & Inclusion Advocates</li>
-                            <li>Career Counselors & Student Mentors</li>
-                            <li>Life Coaches & Mentors</li>
-                            <li>Communication Coaches</li>
-                            <li>Workplace Culture Architects</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Creative -->
-            <div class="accordion-item">
-                <div class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive">
-                        Creative, Media & Marketing
-                    </button>
-                </div>
-
-                <div id="collapseFive" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionOne">
-
-                    <div class="accordion-body">
-                        <ul class="style-none list-item">
-                            <li>Marketing Gurus</li>
-                            <li>Branding Experts</li>
-                            <li>PR & Communications Specialists</li>
-                            <li>Content Creators & Influencers</li>
-                            <li>Authors & Business Writers</li>
-                            <li>Film & Media Entrepreneurs</li>
-                            <li>Podcast Hosts & Storytellers</li>
-                            <li>Community Builders & Networkers</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Social Impact -->
-            <div class="accordion-item">
-                <div class="accordion-header" id="headingSix">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseSix">
-                        Social Impact
-                    </button>
-                </div>
-
-                <div id="collapseSix" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionOne">
-
-                    <div class="accordion-body">
-                        <ul class="style-none list-item">
-                            <li>Social Entrepreneurs</li>
-                            <li>Sustainability Champions</li>
-                            <li>Philanthropists</li>
-                            <li>Environmental Activists</li>
-                            <li>Climate Tech Founders</li>
-                            <li>Impact Investors</li>
-                            <li>Non-Profit Leaders</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Academic -->
-            <div class="accordion-item">
-                <div class="accordion-header" id="headingSeven">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseSeven">
-                        Academic
-                    </button>
-                </div>
-
-                <div id="collapseSeven" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionOne">
-
-                    <div class="accordion-body">
-                        <ul class="style-none list-item">
-                            <li>Academic Experts & Educators</li>
-                            <li>Professors & Scholars</li>
-                            <li>Researchers & Innovators</li>
-                            <li>Education Policy Experts</li>
-                            <li>School & College Leaders</li>
-                            <li>Student Leaders & Innovators</li>
-                            <li>Career Development Experts</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
 
         </div>
     </div>
 </div>
+
+<style>
+    .sticky-sidebar-menu {
+        position: sticky;
+        top: 40px; 
+        z-index: 10;
+    }
+    
+    /* Elegant, taller sidebar links to take up more presence */
+    .sidebar-anchor-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 24px; /* Increased vertical padding to make buttons look bigger and high-end */
+        color: #64748b;
+        font-weight: 700;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        border-radius: 14px;
+        background: #ffffff;
+        border: 1px solid #e2e8f0 !important;
+        flex-grow: 1; /* Allows links to organically adapt and fill up the layout height gap evenly */
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .sidebar-num-badge {
+        font-size: 0.75rem;
+        opacity: 0.4;
+        font-weight: 800;
+        font-family: monospace;
+    }
+    
+    .sidebar-anchor-link:hover {
+        background: #f8fafc;
+        color: #090d16;
+        padding-left: 28px;
+    }
+    
+    .sidebar-anchor-link.active {
+        background: #090d16 !important;
+        color: #ffd2b1 !important; 
+        border-color: #090d16 !important;
+        padding-left: 30px;
+        box-shadow: 0 8px 20px -6px rgba(9, 13, 22, 0.12);
+    }
+    
+    .sidebar-anchor-link.active .sidebar-num-badge {
+        opacity: 0.9;
+        color: #ffd2b1;
+    }
+    
+    /* Right Card Content Layout Elements */
+    .network-cluster-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 32px;
+        padding: 40px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    }
+    .cluster-title-icon {
+        width: 56px;
+        height: 56px;
+        background: #090d16;
+        color: #ffd2b1;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+    .panel-hero-image {
+        box-shadow: inset 0 0 100px rgba(0,0,0,0.4);
+        background-blend-mode: multiply;
+        transition: transform 0.6s ease;
+    }
+    .network-cluster-card:hover .panel-hero-image {
+        transform: scale(1.01);
+    }
+
+    .connector-node-pill {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 100px;
+        padding: 12px 22px;
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: #334155;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        text-decoration: none;
+    }
+    .connector-node-pill:hover {
+        background: #090d16;
+        border-color: #090d16;
+        color: #ffd2b1 !important;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px -5px rgba(9, 13, 22, 0.1);
+    }
+    .node-index {
+        font-size: 0.7rem;
+        opacity: 0.5;
+        background: rgba(0,0,0,0.05);
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
 
 @endsection
