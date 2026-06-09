@@ -46,7 +46,7 @@
     }
     .custom-pill-nav .nav-link-item.active, 
     .custom-pill-nav .nav-link-item:hover {
-        color: #090d16 !important;
+        color: #0c3a30 !important;
         background: #ffd2b1;
     }
     .ux-curated-card {
@@ -229,7 +229,7 @@
     </div>
 </div>
 
-<div class="filter-strip-wrapper bg-dark py-4 position-sticky top-0" style="z-index: 99; background-color: #090d16 !important; border-bottom: 1px solid rgba(255,255,255,0.05);">
+<div class="filter-strip-wrapper bg-dark py-4 position-sticky top-0" style="z-index: 99; background-color: #0c3a30 !important; border-bottom: 1px solid rgba(255,255,255,0.05);">
     <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
         <span class="text-white opacity-50 text-uppercase fw-bold tracking-wider" style="font-size: 0.75rem; letter-spacing: 1.5px;">
             Filter Active Experiences
@@ -259,14 +259,14 @@
                             
                             <div class="d-flex align-items-center gap-3 text-uppercase fw-bold text-muted mb-2" style="font-size: 0.72rem; letter-spacing: 1px;">
                                 <span class="d-flex align-items-center gap-1">
-                                    <i class="bi bi-calendar3" style="color: #090d16;"></i> {{ $event['date'] }}
+                                    <i class="bi bi-calendar3" style="color: #0c3a30;"></i> {{ $event['date'] }}
                                 </span>
                                 <span class="d-flex align-items-center gap-1">
-                                    <i class="bi bi-geo-alt" style="color: #090d16;"></i> {{ $event['location'] }}
+                                    <i class="bi bi-geo-alt" style="color: #0c3a30;"></i> {{ $event['location'] }}
                                 </span>
                             </div>
 
-                            <h3 class="h5 fw-bold mb-3" style="color: #090d16; line-height: 1.35; font-weight: 800;">
+                            <h3 class="h5 fw-bold mb-3" style="color: #0c3a30; line-height: 1.35; font-weight: 800;">
                                 <a href="#" class="text-decoration-none text-dark transition-all">
                                     {{ $event['title'] }}
                                 </a>
@@ -279,7 +279,7 @@
                             <div class="mt-auto pt-3 border-top d-flex align-items-center justify-content-between">
                                 <div class="d-flex align-items-center gap-2">
                                     <div class="fw-bold d-flex align-items-center justify-content-center" 
-                                         style="width: 38px; height: 38px; background: #090d16; color: #ffd2b1; border-radius: 12px; font-size: 0.8rem;">
+                                         style="width: 38px; height: 38px; background: #0c3a30; color: #ffd2b1; border-radius: 12px; font-size: 0.8rem;">
                                         {{ strtoupper(substr($event['host'], 0, 2)) }}
                                     </div>
                                     <div>
