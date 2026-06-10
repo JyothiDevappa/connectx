@@ -653,24 +653,339 @@
     }
 
 
-@media (max-width: 991px) {
-    .about-hero {
-        padding: 90px 0 60px;
-    }
+    /* =============================================
+   TABLET — 768px to 1024px
+   ============================================= */
+@media (max-width: 1024px) {
 
-    .about-hero::after {
-        display: none;
-    }
+  /* About Hero */
+  .about-hero {
+    padding: 90px 0 70px;
+  }
+  .hero-visual {
+    min-height: 400px;
+  }
+  .hero-side-card {
+    width: min(320px, 92%);
+    padding: 20px;
+  }
 
-    .hero-visual {
-        min-height: auto;
-    }
+  /* Section common */
+  section {
+    padding: 90px 48px;
+  }
 
-    .hero-side-card {
-        position: static;
-        width: 100%;
-        margin-top: 24px;
-    }
+  /* Founder */
+  .founder-section {
+    padding: 90px 48px;
+  }
+  .founder-title {
+    margin-bottom: 40px;
+  }
 
- 
+  /* Vision Mission */
+  .vm-block {
+    padding: 80px 48px;
+  }
+  .vm-number {
+    font-size: 5rem;
+    right: 36px;
+    bottom: 28px;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 100px 48px;
+  }
+  .cta-bg-ring.r2 { width: 700px; height: 700px; }
+  .cta-bg-ring.r3 { width: 950px; height: 950px; }
+}
+
+/* =============================================
+   TABLET SMALL — 480px to 767px
+   ============================================= */
+@media (max-width: 767px) {
+
+  /* About Hero */
+  .about-hero {
+    padding: 80px 0 56px;
+  }
+  .about-hero::after {
+    width: 160px;
+    height: 160px;
+    right: -40px;
+  }
+  .about-hero h1 {
+    font-size: clamp(1.9rem, 6vw, 2.6rem);
+    letter-spacing: -0.03em;
+    margin-bottom: 18px;
+  }
+  .about-hero p.hero-copy {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+  .about-hero .eyebrow {
+    font-size: 0.78rem;
+    margin-bottom: 16px;
+  }
+  .about-hero-buttons {
+    gap: 12px;
+  }
+  .about-hero-buttons a {
+    padding: 12px 22px;
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
+  }
+  .hero-pill-row {
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .hero-pill {
+    font-size: 0.82rem;
+    padding: 9px 14px;
+  }
+  .hero-visual {
+    min-height: 300px;
+    margin-top: 40px;
+  }
+  .hero-image {
+    border-radius: 20px;
+  }
+  .hero-side-card {
+    position: static;
+    width: 100%;
+    margin-top: 16px;
+    border-radius: 16px;
+    padding: 20px;
+  }
+  .hero-side-card h5 {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+  }
+  .hero-side-card p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  /* About section */
+  .about-section {
+    padding: 64px 0;
+  }
+  .about-section h2 {
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+    margin-bottom: 14px;
+  }
+
+  /* Section common */
+  section {
+    padding: 72px 24px;
+  }
+  .section-label {
+    font-size: 0.62rem;
+    margin-bottom: 14px;
+  }
+  .hero-scroll-hint {
+    left: 24px;
+    bottom: 24px;
+    font-size: 0.6rem;
+  }
+
+  /* Founder */
+  .founder-section {
+    padding: 72px 24px;
+  }
+  .founder-section .bg-text {
+    font-size: 32vw;
+  }
+  .founder-inner {
+    max-width: 100%;
+  }
+  .founder-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: 28px;
+  }
+  .founder-section .section-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+  .quote-mark {
+    font-size: 5rem;
+    margin-bottom: 8px;
+  }
+  .founder-quote {
+    font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+    margin-bottom: 32px;
+  }
+  .founder-byline {
+    padding: 14px 20px;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .byline-avatar {
+    width: 56px;
+    height: 56px;
+  }
+  .byline-text .name {
+    font-size: 0.88rem;
+  }
+  .byline-text .role {
+    font-size: 0.75rem;
+  }
+
+  /* Vision Mission */
+  .vm-section {
+    grid-template-columns: 1fr;
+  }
+  .vm-block {
+    padding: 64px 24px;
+  }
+  .vm-block .section-title {
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+    margin-bottom: 16px;
+  }
+  .vm-block .body-text {
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+  }
+  .check-list li {
+    font-size: 0.85rem;
+  }
+  .vm-number {
+    font-size: 4rem;
+    bottom: 20px;
+    right: 24px;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 80px 24px;
+  }
+  .cta-section .section-title {
+    font-size: clamp(2.2rem, 7vw, 3.5rem);
+    margin-bottom: 12px;
+  }
+  .cta-tagline {
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+  }
+  .cta-features {
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+  .cta-btn {
+    padding: 16px 36px;
+    font-size: 0.8rem;
+    width: 100%;
+    max-width: 320px;
+  }
+  .cta-bg-ring.r1 { width: 320px; height: 320px; }
+  .cta-bg-ring.r2 { width: 520px; height: 520px; }
+  .cta-bg-ring.r3 { width: 720px; height: 720px; }
+}
+
+/* =============================================
+   MOBILE — up to 479px
+   ============================================= */
+@media (max-width: 479px) {
+
+  /* About Hero */
+  .about-hero {
+    padding: 64px 0 48px;
+  }
+  .about-hero h1 {
+    font-size: clamp(1.7rem, 8vw, 2.2rem);
+    letter-spacing: -0.03em;
+  }
+  .about-hero p.hero-copy {
+    font-size: 0.9rem;
+  }
+  .about-hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero-pill {
+    font-size: 0.78rem;
+    padding: 8px 12px;
+  }
+  .hero-visual {
+    min-height: 220px;
+  }
+  .hero-image {
+    border-radius: 14px;
+  }
+  .hero-side-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  /* Section common */
+  section {
+    padding: 56px 16px;
+  }
+
+  /* Founder */
+  .founder-section {
+    padding: 56px 16px;
+  }
+  .founder-quote {
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+  .founder-byline {
+    padding: 12px 16px;
+  }
+  .byline-avatar {
+    width: 48px;
+    height: 48px;
+  }
+  .quote-mark {
+    font-size: 4rem;
+  }
+
+  /* Vision Mission */
+  .vm-block {
+    padding: 48px 16px;
+  }
+  .vm-block .section-title {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+  }
+  .vm-block .body-text {
+    font-size: 0.9rem;
+    margin-bottom: 22px;
+  }
+  .check-list {
+    gap: 10px;
+  }
+  .check-list li {
+    font-size: 0.82rem;
+  }
+  .vm-number {
+    font-size: 3rem;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 64px 16px;
+  }
+  .cta-section .section-title {
+    font-size: clamp(1.9rem, 8vw, 2.8rem);
+  }
+  .cta-tagline {
+    font-size: 0.88rem;
+    margin-bottom: 32px;
+  }
+  .pill {
+    font-size: 0.62rem;
+    padding: 6px 13px;
+  }
+  .cta-btn {
+    padding: 14px 28px;
+    font-size: 0.75rem;
+    width: 100%;
+    max-width: 280px;
+  }
 }
