@@ -213,6 +213,16 @@
         }
     }
 
+    @keyframes lineGrowVertical {
+        from {
+            transform: translateX(-50%) scaleY(0);
+        }
+
+        to {
+            transform: translateX(-50%) scaleY(1);
+        }
+    }
+
     @keyframes circlePop {
         0% {
             transform: scale(0);
@@ -300,63 +310,225 @@
     }
 </style>
 
+<style>
+/* =============================================
+   HOW CONNECTX WORKS — RESPONSIVE
+   ============================================= */
+.hcw-wrapper {
+    background: #0c3a30;
+    border-radius: 16px;
+    padding: 44px 36px 52px;
+    font-family: var(--font-sans);
+    overflow: hidden;
+}
+
+.hcw-heading {
+    color: #ffffff;
+    font-size: clamp(28px, 4vw, 56px);
+    font-weight: 400;
+    margin: 0 0 48px;
+    letter-spacing: -0.3px;
+}
+
+.hcw-heading span {
+    font-style: italic;
+    font-weight: 500;
+    color: #ffd2b1;
+}
+
+.hcw-relative {
+    position: relative;
+}
+
+/* Connector lines — desktop only */
+.hcw-line-bg,
+.hcw-line-anim {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    right: 24px;
+    height: 3px;
+    border-radius: 2px;
+}
+.hcw-line-bg  { background: #1f5a45; z-index: 0; }
+.hcw-line-anim {
+    background: #ffd2b1;
+    z-index: 1;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: lineGrow 1.2s cubic-bezier(.4,0,.2,1) 0.2s forwards;
+}
+
+/* Steps grid */
+.hcw-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    position: relative;
+    z-index: 2;
+}
+
+.hcw-step {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hcw-step-title {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 8px;
+    line-height: 1.35;
+}
+
+.hcw-step-desc {
+    color: #7ab8a0;
+    font-size: 12.5px;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ---- Tablet & Mobile: Vertical Timeline (Single Column) ---- */
+@media (max-width: 767px) {
+    .hcw-wrapper {
+        padding: 36px 24px 44px;
+        border-radius: 14px;
+    }
+    .hcw-heading {
+        font-size: clamp(24px, 6vw, 36px);
+        margin: 0 0 36px;
+    }
+    /* Position connector lines vertically through the centers of circles */
+    .hcw-line-bg,
+    .hcw-line-anim {
+        display: block;
+        position: absolute;
+        left: 22px; /* Center of the 44px circle */
+        top: 22px; /* Center of the first circle */
+        bottom: 22px; /* Center of the last circle */
+        right: auto;
+        height: auto;
+        width: 3px;
+        border-radius: 2px;
+        transform: translateX(-50%);
+    }
+    .hcw-line-bg {
+        background: #1f5a45;
+        z-index: 0;
+    }
+    .hcw-line-anim {
+        background: #ffd2b1;
+        z-index: 1;
+        transform-origin: top;
+        transform: translateX(-50%) scaleY(0);
+        animation: lineGrowVertical 1.2s cubic-bezier(.4,0,.2,1) 0.2s forwards;
+    }
+    .hcw-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .hcw-step {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .cx-circle {
+        flex-shrink: 0;
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+        z-index: 2; /* Keep circle above the line */
+    }
+    .hcw-step-title {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+    .hcw-step-desc {
+        font-size: 12.5px;
+    }
+}
+
+/* ---- Mobile: Smaller Vertical Timeline ---- */
+@media (max-width: 480px) {
+    .hcw-wrapper {
+        padding: 28px 18px 36px;
+        border-radius: 12px;
+    }
+    .hcw-heading {
+        font-size: clamp(22px, 7vw, 30px);
+        margin: 0 0 28px;
+    }
+    .hcw-line-bg,
+    .hcw-line-anim {
+        left: 20px; /* Center of 40px circle */
+        top: 20px;
+        bottom: 20px;
+    }
+    .hcw-grid {
+        gap: 24px;
+    }
+    .hcw-step {
+        gap: 16px;
+    }
+    .cx-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .hcw-step-title {
+        font-size: 14px;
+    }
+    .hcw-step-desc {
+        font-size: 12px;
+    }
+}
+</style>
+
 <h2 class="sr-only">How ConnectX Works — 4 steps to create, access, connect, and grow.</h2>
 
-<div style="background:#0c3a30; border-radius:16px; padding:44px 36px 52px; font-family:var(--font-sans);">
+<div class="hcw-wrapper">
 
-    <p class="cx-heading" style="color:#ffffff;     font-size: clamp(34px, 4vw, 56px);
- font-weight:400; margin:0 0 48px; letter-spacing:-0.3px;">
-        How ConnectX <span style="font-style:italic; font-weight:500; color:#ffd2b1;">Works</span>
+    <p class="cx-heading hcw-heading">
+        How ConnectX <span>Works</span>
     </p>
 
-    <div style="position:relative;">
+    <div class="hcw-relative">
 
-        <div
-            style="position:absolute; top:24px; left:24px; right:24px; height:3px; background:#1f5a45; border-radius:2px; z-index:0;">
-        </div>
-        <div
-            style="position:absolute; top:24px; left:24px; right:24px; height:3px; background:#ffd2b1; border-radius:2px; z-index:1; transform-origin:left; transform:scaleX(0); animation: lineGrow 1.2s cubic-bezier(.4,0,.2,1) 0.2s forwards;">
-        </div>
+        <div class="hcw-line-bg"></div>
+        <div class="hcw-line-anim"></div>
 
-        <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:28px; position:relative; z-index:2;">
+        <div class="hcw-grid">
 
-            <div style="display:flex; flex-direction:column; gap:20px;">
+            <div class="hcw-step">
                 <div class="cx-circle cx-c1">1</div>
                 <div class="cx-text cx-t1">
-                    <p style="color:#ffffff; font-size:15px; font-weight:500; margin:0 0 8px; line-height:1.35;">Create Your
-                        Profile</p>
-                    <p style="color:#7ab8a0; font-size:12.5px; line-height:1.65; margin:0;">Create your creator profile and
-                        showcase your content within ConnectX.</p>
+                    <p class="hcw-step-title">Create Your Profile</p>
+                    <p class="hcw-step-desc">Create your creator profile and showcase your content within ConnectX.</p>
                 </div>
             </div>
 
-            <div style="display:flex; flex-direction:column; gap:20px;">
+            <div class="hcw-step">
                 <div class="cx-circle cx-c2">2</div>
                 <div class="cx-text cx-t2">
-                    <p style="color:#ffffff; font-size:15px; font-weight:500; margin:0 0 8px; line-height:1.35;">Access Creator
-                        Spaces</p>
-                    <p style="color:#7ab8a0; font-size:12.5px; line-height:1.65; margin:0;">Access creator lounges, networking
-                        spaces, podcasts, and exclusive experiences.</p>
+                    <p class="hcw-step-title">Access Creator Spaces</p>
+                    <p class="hcw-step-desc">Access creator lounges, networking spaces, podcasts, and exclusive experiences.</p>
                 </div>
             </div>
 
-            <div style="display:flex; flex-direction:column; gap:20px;">
+            <div class="hcw-step">
                 <div class="cx-circle cx-c3">3</div>
                 <div class="cx-text cx-t3">
-                    <p style="color:#ffffff; font-size:15px; font-weight:500; margin:0 0 8px; line-height:1.35;">Connect &
-                        Collaborate</p>
-                    <p style="color:#7ab8a0; font-size:12.5px; line-height:1.65; margin:0;">Connect with creators, influencers,
-                        brands, and communities worldwide.</p>
+                    <p class="hcw-step-title">Connect &amp; Collaborate</p>
+                    <p class="hcw-step-desc">Connect with creators, influencers, brands, and communities worldwide.</p>
                 </div>
             </div>
 
-            <div style="display:flex; flex-direction:column; gap:20px;">
+            <div class="hcw-step">
                 <div class="cx-circle cx-c4">4</div>
                 <div class="cx-text cx-t4">
-                    <p style="color:#ffffff; font-size:15px; font-weight:500; margin:0 0 8px; line-height:1.35;">Grow Your
-                        Influence</p>
-                    <p style="color:#7ab8a0; font-size:12.5px; line-height:1.65; margin:0;">Grow your visibility through
-                        collaborations, events, and creator opportunities.</p>
+                    <p class="hcw-step-title">Grow Your Influence</p>
+                    <p class="hcw-step-desc">Grow your visibility through collaborations, events, and creator opportunities.</p>
                 </div>
             </div>
 
@@ -367,6 +539,8 @@
 
 <style>
 </style>
+
+
 
 <!-- EXPERIENCES -->
 <section class="cx-premium-viewport">

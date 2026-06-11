@@ -546,6 +546,275 @@ CTA SECTION
 
 
 
+/* ==========================================
+   BECOME A SPONSOR — MOBILE RESPONSIVE
+   Breakpoints: 991px (tablet), 767px (mobile), 480px (small mobile)
+   ========================================== */
+
+/* ---- Hero / Sponsor Contact Section ---- */
+@media (max-width: 991px) {
+    .sponsor-contact-section {
+        padding: 130px 0 70px;
+    }
+    .sponsor-content {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .sponsor-content h1 {
+        font-size: 36px;
+    }
+    .sponsor-cta {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .sponsor-contact-section {
+        padding: 110px 0 60px;
+    }
+    .sponsor-content h1 {
+        font-size: 28px;
+    }
+    .sponsor-form-box {
+        padding: 28px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsor-contact-section {
+        padding: 100px 0 50px;
+    }
+    .sponsor-content h1 {
+        font-size: 24px;
+        letter-spacing: -0.5px;
+    }
+    .sponsor-form-box {
+        padding: 20px 14px;
+    }
+    .btn-sponsor-submit {
+        height: 52px;
+        font-size: 15px;
+    }
+    .btn-become-sponsor {
+        padding: 13px 24px;
+        font-size: 14px;
+    }
+}
+
+/* ---- Why ConnectX (Benefits) Section ---- */
+@media (max-width: 991px) {
+    .connectx-benefits-section.pt-120 {
+        padding-top: 70px;
+    }
+    .connectx-benefits-section.pb-120 {
+        padding-bottom: 70px;
+    }
+    .benefit-card {
+        padding: 28px;
+    }
+}
+
+@media (max-width: 767px) {
+    .connectx-benefits-section .main-title {
+        font-size: 28px;
+    }
+    .benefit-card {
+        padding: 24px 20px;
+    }
+    .benefit-card h4 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .connectx-benefits-section .main-title {
+        font-size: 22px;
+    }
+    .benefit-card {
+        padding: 20px 16px;
+    }
+    .icon-box {
+        width: 56px;
+        height: 56px;
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+}
+
+/* ---- Brand Presence Section ---- */
+@media (max-width: 991px) {
+    .connectx-brand-section .bg-wrapper {
+        min-height: auto !important;
+        padding: 60px 20px !important;
+    }
+    .connectx-points li {
+        font-size: 16px;
+        padding-left: 55px;
+    }
+    .connectx-brand-section .title-two h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 767px) {
+    .connectx-brand-section .bg-wrapper {
+        padding: 50px 16px !important;
+    }
+    .connectx-brand-section .title-two h2 {
+        font-size: 24px;
+    }
+    .connectx-brand-section .title-two p {
+        font-size: 14px;
+    }
+    .connectx-points li {
+        font-size: 15px;
+        padding-left: 52px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+    .connectx-points li::before {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+        top: 12px;
+    }
+    .connectx-brand-section .col-lg-5 {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .connectx-brand-section .title-two h2 {
+        font-size: 21px;
+    }
+    .connectx-points li {
+        font-size: 14px;
+        padding-left: 48px;
+    }
+    .connectx-points li::before {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
+
+/* ---- Sponsorship Categories Section ---- */
+@media (max-width: 991px) {
+    .sponsor-category-section.pt-120 {
+        padding-top: 70px;
+    }
+    .sponsor-category-section.pb-120 {
+        padding-bottom: 70px;
+    }
+    .sponsor-card {
+        padding: 30px 24px;
+    }
+    .title-style-one .main-title {
+        letter-spacing: -1px;
+    }
+}
+
+@media (max-width: 767px) {
+    .title-style-one .main-title {
+        font-size: 26px;
+        letter-spacing: -0.5px;
+    }
+    .sponsor-card {
+        padding: 24px 20px;
+    }
+    .sponsor-card h4 {
+        font-size: 20px;
+    }
+    .sponsor-card .icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-style-one .main-title {
+        font-size: 22px;
+    }
+    .sponsor-card {
+        padding: 20px 16px;
+    }
+    .sponsor-card h4 {
+        font-size: 18px;
+    }
+}
+
+/* ---- CTA / text-feature-five Section ---- */
+@media (max-width: 991px) {
+    .text-feature-five.mt-150 {
+        margin-top: 80px !important;
+    }
+    .connectx-cta-bg .text-wrapper {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+    .connectx-cta-bg .media-wrapper {
+        min-height: 260px;
+    }
+    .cta-wrapper {
+        padding: 40px;
+    }
+    .cta-content h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .text-feature-five.mt-150 {
+        margin-top: 60px !important;
+    }
+    .connectx-cta-bg .text-wrapper {
+        padding: 28px 20px !important;
+    }
+    .connectx-cta-bg .col-lg-6.order-lg-first {
+        order: 2 !important;
+    }
+    .connectx-cta-bg .col-lg-6.order-lg-last {
+        order: 1 !important;
+    }
+    .connectx-cta-bg .title-one h2.text-dark {
+        font-size: 24px;
+    }
+    .cta-wrapper {
+        padding: 30px 20px;
+    }
+    .cta-content h2 {
+        font-size: 26px;
+    }
+    .cta-points {
+        gap: 12px;
+    }
+    .point {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+    .btn-eleven {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .connectx-cta-bg .title-one h2.text-dark {
+        font-size: 20px;
+    }
+    .cta-content h2 {
+        font-size: 22px;
+    }
+    .cta-wrapper {
+        padding: 24px 14px;
+    }
+    .connectx-list li {
+        font-size: 14px;
+    }
+}
+
 /* fifth section */
 
 

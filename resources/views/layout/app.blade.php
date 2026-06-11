@@ -44,6 +44,31 @@
     <link rel="stylesheet" href="{{ asset('css/custom-header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     @stack('styles')
+
+    <!-- GLOBAL: prevent horizontal overflow on all pages -->
+    <style>
+        html, body {
+            overflow-x: hidden !important;
+            max-width: 100%;
+        }
+        /* Prevent any direct child of body from overflowing */
+        body > * {
+            max-width: 100%;
+        }
+        /* Bootstrap .row negative margins can cause horizontal scroll — fix globally */
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        /* But preserve Bootstrap grid gutters inside containers */
+        .container > .row,
+        .container-fluid > .row,
+        .container-xl > .row,
+        .container-xxl > .row {
+            margin-right: calc(var(--bs-gutter-x, 1.5rem) * -.5);
+            margin-left: calc(var(--bs-gutter-x, 1.5rem) * -.5);
+        }
+    </style>
 </head>
 
 <body>

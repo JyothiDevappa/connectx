@@ -141,6 +141,160 @@
         border-color: #090d16;
         color: #090d16;
     }
+
+    /* ==========================================
+       EVENTS PAGE — MOBILE RESPONSIVE
+       Breakpoints: 991px (tablet), 767px (mobile), 480px (small mobile)
+       ========================================== */
+
+    /* ---- Premium Hero Section ---- */
+    @media (max-width: 991px) {
+        .premium-hero-container {
+            min-height: 65vh;
+            background-attachment: scroll;
+        }
+        .premium-hero-container .container {
+            padding-top: 120px;
+            padding-bottom: 70px;
+        }
+        .text-glow-headline {
+            font-size: clamp(32px, 5vw, 56px);
+            letter-spacing: -2px;
+        }
+        .premium-hero-container p.fs-5 {
+            font-size: 16px !important;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .premium-hero-container {
+            min-height: 55vh;
+        }
+        .premium-hero-container .container {
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
+        .text-glow-headline {
+            font-size: clamp(26px, 7vw, 42px);
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+        }
+        .premium-hero-container p.fs-5 {
+            font-size: 15px !important;
+        }
+        .premium-hero-container ul.style-none {
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .premium-hero-container {
+            min-height: auto;
+        }
+        .premium-hero-container .container {
+            padding-top: 90px;
+            padding-bottom: 40px;
+        }
+        .text-glow-headline {
+            font-size: 26px;
+            letter-spacing: -1px;
+        }
+    }
+
+    /* ---- Filter Strip ---- */
+    @media (max-width: 767px) {
+        .filter-strip-wrapper {
+            padding: 12px 0 !important;
+        }
+        .filter-strip-wrapper .container {
+            flex-direction: column;
+            gap: 10px !important;
+            align-items: flex-start !important;
+        }
+        .custom-pill-nav {
+            width: 100%;
+            overflow-x: auto;
+            justify-content: flex-start;
+            padding: 4px;
+        }
+        .custom-pill-nav .nav-link-item {
+            padding: 8px 16px;
+            font-size: 0.78rem;
+            white-space: nowrap;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .filter-strip-wrapper .container > span {
+            font-size: 0.68rem;
+        }
+        .custom-pill-nav .nav-link-item {
+            padding: 7px 12px;
+            font-size: 0.72rem;
+        }
+    }
+
+    /* ---- Event Cards Grid ---- */
+    @media (max-width: 991px) {
+        .content-showcase-section .container.py-4 {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+        }
+        .ux-curated-card {
+            border-radius: 20px;
+        }
+        .card-frame-media {
+            height: 200px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .content-showcase-section {
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
+        }
+        .content-showcase-section .row.g-5 {
+            row-gap: 20px !important;
+        }
+        .card-frame-media {
+            height: 180px;
+        }
+        .ux-curated-card {
+            border-radius: 16px;
+        }
+        .ux-curated-card p.text-secondary {
+            font-size: 0.8rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .card-frame-media {
+            height: 160px;
+        }
+        .ux-curated-card .card-body-content {
+            padding-top: 14px !important;
+        }
+        .ux-curated-card h3.h5 {
+            font-size: 0.95rem;
+        }
+        .interactive-arrow-btn {
+            width: 38px;
+            height: 38px;
+        }
+    }
+
+    /* ---- Pagination ---- */
+    @media (max-width: 480px) {
+        .lux-pagination-item {
+            width: 40px;
+            height: 40px;
+            font-size: 0.8rem;
+        }
+        .d-inline-flex.align-items-center.gap-2 {
+            gap: 6px !important;
+        }
+    }
 </style>
 
 @php

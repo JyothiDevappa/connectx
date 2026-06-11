@@ -3,573 +3,224 @@
 @section('content')
 
 @push('styles')
+
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
+<link rel="stylesheet" href="{{ asset('css/partner-page.css') }}">
+
 @endpush
 <style>
-    /* =========================================
-   PARTNER CONTACT PAGE
-========================================= */
-    .main-title {
-        font-weight: 900;
-        line-height: 1.15;
-        letter-spacing: -2px;
-        color: #0c3a30;
-        font-size: clamp(34px, 4vw, 56px);
-    }
 
+/* ==========================================
+   BECOME A PARTNER — MOBILE RESPONSIVE
+   Breakpoints: 991px (tablet), 767px (mobile), 480px (small mobile)
+   ========================================== */
+
+/* ---- Hero / Contact Section ---- */
+@media (max-width: 991px) {
     .partner-contact-section {
-        position: relative;
-        padding: 180px 0 100px;
-        background: #f8f6f2;
-        overflow: hidden;
+        padding: 130px 0 70px;
     }
-
-    @media (max-width: 991px) {
-        .partner-contact-section {
-            padding: 140px 0 70px;
-        }
-    }
-
-    /* LEFT CONTENT */
-
     .partner-content {
-        padding-right: 50px;
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 36px;
     }
-
     .partner-tag {
-        display: inline-block;
-        padding: 8px 18px;
-        border-radius: 30px;
-        background: rgba(118, 88, 59, 0.10);
-        color: #76583b;
-        font-size: 14px;
-        font-weight: 600;
-        margin-bottom: 18px;
+        margin-left: auto;
+        margin-right: auto;
     }
+}
 
+@media (max-width: 767px) {
+    .partner-contact-section {
+        padding: 110px 0 60px;
+    }
     .partner-content h1 {
-        font-size: 50px;
-        line-height: 1.15em;
-        font-weight: 700;
-        color: #0c3a30;
-        margin-bottom: 22px;
-        letter-spacing: -1px;
+        font-size: 32px;
     }
-
     .partner-content p {
-        font-size: 16px;
-        line-height: 1.9em;
-        color: #555;
-        margin-bottom: 0;
-    }
-
-    @media (max-width: 991px) {
-
-        .partner-content {
-            padding-right: 0;
-            margin-bottom: 40px;
-        }
-
-        .partner-content h1 {
-            font-size: 38px;
-        }
-    }
-
-    @media (max-width: 576px) {
-
-        .partner-content h1 {
-            font-size: 30px;
-        }
-    }
-
-    /* FORM BOX */
-
-    .partner-form-box {
-        background: #fff;
-        padding: 40px;
-        border-radius: 22px;
-        box-shadow: 0 15px 60px rgba(0, 0, 0, 0.08);
-        position: relative;
-    }
-
-    @media (max-width: 576px) {
-
-        .partner-form-box {
-            padding: 25px;
-        }
-    }
-
-    /* INPUTS */
-
-    .partner-form-box .form-control,
-    .partner-form-box select {
-        height: 58px;
-        border-radius: 12px;
-        border: 1px solid #e5e5e5;
-        padding: 0 18px;
         font-size: 15px;
-        color: #000;
-        box-shadow: none;
-        transition: all .3s ease;
-        background: #fff;
     }
-
-    .partner-form-box .form-control:focus,
-    .partner-form-box select:focus {
-        border-color: #76583b;
-        box-shadow: 0 0 0 3px rgba(118, 88, 59, 0.10);
+    .partner-form-box {
+        padding: 28px 20px;
     }
+}
 
-    /* BUTTON */
-
+@media (max-width: 480px) {
+    .partner-content h1 {
+        font-size: 28px;
+    }
+    .partner-form-box {
+        padding: 22px 16px;
+    }
     .partner-submit-btn {
-        width: 100%;
-        height: 58px;
-        border: none;
-        border-radius: 12px;
-        background: #19352d;
-        color: #fff;
-        font-size: 16px;
-        font-weight: 600;
-        transition: all .3s ease;
+        font-size: 15px;
+        height: 52px;
     }
-
-    .partner-submit-btn:hover {
-        background: #5e442d;
-        color: #fff;
-    }
-
-    /* SHAPE */
-
-    .partner-contact-section::before {
-        content: "";
-        position: absolute;
-        width: 500px;
-        height: 500px;
-        border-radius: 50%;
-        background: rgba(118, 88, 59, 0.05);
-        top: -180px;
-        right: -180px;
-    }
-
-
-
-
-    /* WHO WE WORK WITH */
-
-    /* .connectx-work-card {
-
-        background: #fff;
-
-        padding: 45px 35px;
-
-        border-radius: 30px;
-
-        margin-bottom: 30px;
-
-        height: 100%;
-
-        transition: .35s;
-
-        border: 1px solid rgba(118, 88, 59, .12);
-
-        box-shadow: 0 10px 30px rgba(0, 0, 0, .04);
-
-    }
-
-    .connectx-work-card:hover {
-
-        transform: translateY(-8px);
-
-        box-shadow: 0 20px 50px rgba(0, 0, 0, .08);
-    }
-
-    .connectx-work-card .icon-box {
-
-        width: 70px;
-        height: 70px;
-
-        background: #76583b;
-
-        border-radius: 50%;
-
-        display: flex;
-
-        align-items: center;
-
-        justify-content: center;
-
-        margin-bottom: 25px;
-    }
-
-    .connectx-work-card .icon-box span {
-
-        color: #fff;
-
-        font-size: 18px;
-
-        font-weight: 700;
-    }
-
-    .connectx-work-card h4 {
-
-        margin-bottom: 18px;
-
-        font-size: 24px;
-
-        font-weight: 600;
-    }
-
-    .connectx-work-card p {
-
-        margin: 0;
-
-        line-height: 1.8em;
-
-        color: #666;
-    }
-
-    @media(max-width:991px) {
-
-        .connectx-work-card {
-
-            padding: 35px 25px;
-
-        }
-
-        .connectx-work-card h4 {
-
-            font-size: 21px;
-
-        }
-
-    } */
-
-
-
-    /* cards */
-    /* CARDS */
-
-    .connectx-card {
-
-        background: #fff;
-
-        padding: 40px;
-
-        border-radius: 30px;
-
-        height: 100%;
-
-        box-shadow: 0 10px 30px rgba(0, 0, 0, .04);
-
-        transition: .35s;
-    }
-
-    .connectx-card:hover {
-
-        transform: translateY(-8px);
-
-    }
-
-    .icon-box {
-
-        width: 75px;
-
-        height: 75px;
-
-        background: #0c3a30;
-
-        border-radius: 50%;
-
-        display: flex;
-
-        align-items: center;
-
-        justify-content: center;
-
-        margin-bottom: 25px;
-    }
-
-    .icon-box i {
-
-        color: #fff;
-
-        font-size: 24px;
-
-    }
-
-    .connectx-card ul li,
-    .expand-list li {
-
-        position: relative;
-
-        padding-left: 40px;
-
-        margin-bottom: 16px;
-    }
-
-    .connectx-card ul li:before,
-    .expand-list li:before {
-
-        content: "✓";
-
-        position: absolute;
-
-        left: 0;
-
-        top: 2px;
-
-        width: 24px;
-
-        height: 24px;
-
-        background: #ffd2b1;
-
-        color: #fff;
-
-        border-radius: 50%;
-
-        display: flex;
-
-        align-items: center;
-
-        justify-content: center;
-
-        font-size: 11px;
-    }
-
-    /* EXPANSION */
-
-    .connectx-expand-points {
-
-        padding: 0;
-
-        margin: 0;
-    }
-
-    .connectx-expand-points li {
-
-        position: relative;
-
-        padding-left: 52px;
-
-        margin-bottom: 18px;
-
-        font-size: 17px;
-
-        line-height: 1.8em;
-
-        color: #222;
-    }
-
-    .connectx-expand-points li:last-child {
-
-        margin-bottom: 0;
-    }
-
-    .connectx-expand-points li:before {
-
-        content: "✓";
-
-        position: absolute;
-
-        left: 0;
-
-        top: 2px;
-
-        width: 32px;
-
-        height: 32px;
-
-        background: #ffd2b1;
-
-
-        color: #fff;
-
-        border-radius: 50%;
-
-        display: flex;
-
-        align-items: center;
-
-        justify-content: center;
-
-        font-size: 12px;
-
-        font-weight: 700;
-    }
-
-    @media(max-width:991px) {
-
-        .connectx-expand-points li {
-
-            padding-left: 48px;
-
-            font-size: 16px;
-
-        }
-
-    }
-
-    .partner-page or .become-partner-section */ .partner-page,
-    .become-partner-section {
-        margin-bottom: 20px;
-        /* or 40px if you want more space */
-    }
-
-    /* second section */
-/* ==========================================================================
-   ConnectX Completely Isolated "How Works" Grid Stylesheet
-   ========================================================================= */
-
-/* Main wrapper spacing rules if needed */
-.connectx-how-works-section-wrapper {
-    position: relative;
 }
 
-/* Unique Main Title Class */
-.how-work-main-heading {
-    font-size: 2.5rem !important;
-    font-weight: 700 !important;
-    color: #37665c !important;
-    margin: 0 !important;
+/* ---- Who We Work With (How Works) Section ---- */
+@media (max-width: 991px) {
+    .how-work-main-heading {
+        font-size: 2rem !important;
+    }
+    .how-works-section-wrapper {
+        padding-top: 60px;
+    }
+    .mb-70 {
+        margin-bottom: 40px;
+    }
 }
 
-/* Outer grid container wrapping all cards together */
-.how-works-section-cards-container {
-    border: 1px solid rgba(55, 102, 92, 0.15) !important;
-    border-radius: 16px !important;
-    overflow: hidden !important;
-    background: #ffffff !important;
-    box-shadow: 0 20px 40px rgba(55, 102, 92, 0.04) !important;
-}
-
-/* Base card container styling */
-.how-works-section-card {
-    padding: 3rem 2.5rem !important;
-    height: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important; 
-    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
-    position: relative !important;
-    z-index: 1 !important;
-}
-
-/* Background grid block style variants */
-.how-works-bg-light {
-    background-color: #ffffff !important;
-}
-.how-works-bg-tint {
-    background-color: rgba(255, 210, 177, 0.12) !important; /* 12% opacity tint of #ffd2b1 */
-}
-
-/* CRITICAL FIX: The wrapper layout strictly locking items to a horizontal row */
-.how-works-header-flex-row {
-    display: flex !important;
-    flex-direction: row !important;      /* Forces inline row flow layout */
-    align-items: center !important;     /* Centers everything vertically inline */
-    justify-content: flex-start !important;
-    gap: 12px !important;                /* Distance between badge element and h4 text */
-    margin-bottom: 1.5rem !important;
-    width: 100% !important;
-}
-
-/* Custom isolated text header class */
-.how-works-h4 {
-    font-size: 1.35rem !important;
-    font-weight: 600 !important;
-    color: #37665c !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    line-height: 1.2 !important;
-    display: inline-block !important;   /* Nullifies global block behaviors dropping lines */
-    vertical-align: middle !important;
-    transition: color 0.3s ease !important;
-}
-
-/* Custom isolated badge element */
-.how-works-badge-num {
-    font-size: 0.9rem !important;
-    font-weight: 700 !important;
-    color: #37665c !important;
-    letter-spacing: 0.05em !important;
-    background: rgba(255, 210, 177, 0.4) !important; /* Default soft accent */
-    padding: 4px 12px !important;
-    border-radius: 30px !important;
-    transition: all 0.3s ease !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-shrink: 0 !important;          /* Prevents text container from crushing badge dimensions */
-    height: 32px !important;
-    vertical-align: middle !important;
-}
-
-/* Custom isolated description block paragraphs */
-.how-works-p-desc {
-    font-size: 0.98rem !important;
-    color: #555555 !important;
-    line-height: 1.6 !important;
-    margin: 0 !important;
-    transition: color 0.3s ease !important;
-}
-
-/* ==========================================================================
-   Interactive Hover Elements Transitions
-   ========================================================================== */
-
-/* Main card hover block */
-.how-works-section-card:hover {
-    background-color: #37665c !important;
-    transform: translateY(-4px) !important;
-    box-shadow: 0 15px 30px rgba(55, 102, 92, 0.2) !important;
-    z-index: 2 !important;
-}
-
-/* Heading element updates to clean white text on active hover layout */
-.how-works-section-card:hover .how-works-h4 {
-    color: #ffffff !important;
-}
-
-/* Paragraph element description text transitions on active hover */
-.how-works-section-card:hover .how-works-p-desc {
-    color: rgba(255, 255, 255, 0.8) !important;
-}
-
-/* Flipped Hover Requirement: Number background becomes Green, number text shifts to Orange */
-.how-works-section-card:hover .how-works-badge-num {
-    background: #37665c !important;
-    color: #ffd2b1 !important;
-    border: 1px solid rgba(255, 210, 177, 0.3) !important;
-}
-
-/* ==========================================================================
-   Clean Grid Layout Borders Viewport Mixins
-   ========================================================================== */
-
-@media (min-width: 992px) {
-    .hw-grid-border-end-lg { border-right: 1px solid rgba(55, 102, 92, 0.15) !important; }
-    .hw-grid-border-end-md { border-right: 1px solid rgba(55, 102, 92, 0.15) !important; }
-    .hw-grid-border-bottom-md { border-bottom: 1px solid rgba(55, 102, 92, 0.15) !important; }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .hw-grid-border-end-md { border-right: 1px solid rgba(55, 102, 92, 0.15) !important; }
-    .hw-grid-border-bottom-md { border-bottom: 1px solid rgba(55, 102, 92, 0.15) !important; }
-    .hw-grid-border-bottom-sm { border-bottom: 1px solid rgba(55, 102, 92, 0.15) !important; }
-}
-
-@media (max-width: 767.98px) {
+@media (max-width: 767px) {
+    .how-work-main-heading {
+        font-size: 1.7rem !important;
+    }
     .how-works-section-card {
-        border-bottom: 1px solid rgba(55, 102, 92, 0.15) !important;
-        padding: 2.5rem 1.5rem !important;
-    }
-    .how-works-section-cards-container .col-md-6:last-child .how-works-section-card {
-        border-bottom: none !important;
+        padding: 2rem 1.25rem !important;
     }
 }
-    
+
+@media (max-width: 480px) {
+    .how-work-main-heading {
+        font-size: 1.5rem !important;
+    }
+    .how-works-h4 {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* ---- Why Partner Section (text-feature-five) ---- */
+@media (max-width: 991px) {
+    .text-feature-five {
+        margin-top: 80px !important;
+    }
+    .connectx-partner-bg .text-wrapper {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+    .connectx-partner-bg .media-wrapper {
+        min-height: 280px;
+    }
+    .connectx-partner-list li {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .text-feature-five {
+        margin-top: 60px !important;
+    }
+    .connectx-partner-bg .col-lg-6.order-lg-first {
+        order: 2 !important;
+    }
+    .connectx-partner-bg .col-lg-6.order-lg-last {
+        order: 1 !important;
+    }
+    .connectx-partner-bg .text-wrapper {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .title-one h2.text-dark {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-one h2.text-dark {
+        font-size: 22px;
+    }
+    .connectx-partner-list li {
+        font-size: 14px;
+    }
+}
+
+/* ---- Partnership Opportunities Cards ---- */
+@media (max-width: 991px) {
+    .connectx-partnership-section.pt-120 {
+        padding-top: 70px;
+    }
+    .connectx-partnership-section.pb-120 {
+        padding-bottom: 70px;
+    }
+    .connectx-card {
+        padding: 30px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .connectx-card {
+        padding: 24px 20px !important;
+    }
+    .connectx-partnership-section .main-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .connectx-card {
+        padding: 20px 16px !important;
+    }
+    .connectx-card h4 {
+        font-size: 18px;
+    }
+    .connectx-partnership-section .main-title {
+        font-size: 24px;
+    }
+}
+
+/* ---- Expanding Across Industries Section ---- */
+@media (max-width: 991px) {
+    .connectx-expand-section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .connectx-expand-section .col-lg-6.order-lg-last {
+        order: 1;
+    }
+    .connectx-expand-section .col-lg-6.col-md-8 {
+        order: 2;
+    }
+    .connectx-expand-section .ps-xl-5 {
+        padding-left: 0 !important;
+    }
+    .connectx-expand-section .title-three h2 {
+        font-size: 28px;
+    }
+    .connectx-expand-section .media-wrapper {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .connectx-expand-section {
+        padding: 0 16px;
+    }
+    .connectx-expand-section .title-three h2 {
+        font-size: 24px;
+    }
+    .connectx-expand-section .text-lg {
+        font-size: 15px;
+    }
+    .connectx-expand-section .media-wrapper img {
+        border-radius: 16px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .connectx-expand-section .title-three h2 {
+        font-size: 21px;
+    }
+    .connectx-expand-points li {
+        font-size: 14px !important;
+        padding-left: 42px !important;
+    }
+}
+
 </style>
 
 
@@ -873,10 +524,6 @@
 
 </div>
 
-
-
-
-
 <!-- =========================
 CONNECTX PARTNERSHIP OPPORTUNITIES
 ========================= -->
@@ -1091,100 +738,48 @@ CONNECTX PARTNERSHIP OPPORTUNITIES
 EXPANDING ACROSS INDUSTRIES
 ========================= -->
 <section class="connectx-expand-section pt-120 pb-120">
-    <div class="row align-items-center">
+    <div class="container">
+        <div class="row align-items-center gy-5">
 
-        <!-- CONTENT SIDE -->
+            <!-- CONTENT SIDE -->
+            <div class="col-lg-6 order-lg-last wow fadeInRight">
 
-        <div class="col-lg-6 order-lg-last wow fadeInRight">
+                <div class="ps-xl-5 ms-xxl-4">
 
-            <div class="ps-xl-5 ms-xxl-4">
+                    <div class="title-three mb-35 md-mb-20">
+                        <h2>
+                            Expanding Across Industries <br> and Regions
+                        </h2>
+                    </div>
 
-                <div class="title-three mb-35 md-mb-20">
+                    <p class="text-lg mb-40 lg-mb-30">
+                        ConnectX is building a network of creators, voices, and collaborators across industries and geographies, enabling partners to access a diverse and growing ecosystem.
+                    </p>
 
-                    <!-- <div class="upper-title">
-                    EXPANDING ACROSS INDUSTRIES & REGIONS
-                </div> -->
-
-                    <h2>
-
-                        Expanding Across Industries <br> and Regions
-
-                    </h2>
+                    <ul class="style-none connectx-expand-points">
+                        <li>Multi-industry creator ecosystem</li>
+                        <li>Cross-border collaboration opportunities</li>
+                        <li>Digital-first scalable network</li>
+                        <li>Continuous onboarding of new voices</li>
+                    </ul>
 
                 </div>
 
-                <p class="text-lg mb-40 lg-mb-30">
+            </div>
 
-                    ConnectX is building a network of creators, voices, and collaborators across industries and geographies, enabling partners to access a diverse and growing ecosystem.
+            <!-- IMAGE SIDE -->
+            <div class="col-lg-6 col-md-10 m-auto wow fadeInLeft">
 
-
-
-                </p>
-
-                <ul class="style-none connectx-expand-points">
-
-                    <li>
-                        Multi-industry creator ecosystem
-                    </li>
-
-                    <li>
-                        Cross-border collaboration opportunities
-                    </li>
-
-                    <li>
-                        Digital-first scalable network
-                    </li>
-
-                    <li>
-                        Continuous onboarding of new voices
-                    </li>
-
-                    <!-- <li>
-                        Expanding content and engagement formats
-                    </li> -->
-
-                </ul>
-
-                <!-- <div class="d-flex justify-content-between align-items-center mt-65 lg-mt-50">
-
-                <a href="#"
-                   class="btn-thirteen tran3 flex-fill">
-
-                    Explore Opportunities
-
-                </a>
-
-                <a href="#"
-                   class="btn-fourteen tran3s">
-
-                    <i class="bi bi-arrow-right"></i>
-
-                </a>
-
-            </div> -->
+                <div class="media-wrapper md-mt-60">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80"
+                        alt="Global business collaboration"
+                        class="lazy-img w-100" style="border-radius: 16px;">
+                </div>
 
             </div>
 
         </div>
-
-        <!-- IMAGE SIDE -->
-
-        <div class="col-lg-6 col-md-8 m-auto wow fadeInLeft">
-
-            <div class="media-wrapper md-mt-60">
-
-                <!-- <img src="images/assets/screen_16.webp"
-                    alt=""
-                    class="lazy-img"> -->
-
-              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80"
-     alt="Global business collaboration"
-     class="lazy-img">
-
-     
-            </div>
-
-        </div>
-
     </div>
-    @endsection
+</section>
+
+@endsection

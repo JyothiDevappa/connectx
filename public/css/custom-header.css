@@ -579,25 +579,30 @@ header.scrolled .hamburger span {
     font-size: 12px;
   }
 
-  /* Fullscreen menu: stack into single column */
+  /* Fullscreen menu: stack into single column — NAV FIRST, BRAND SECOND */
   .fs-menu {
     flex-direction: column;
     overflow-y: auto;
   }
-  .fs-left {
+  /* Nav links side → order 1 = appears on TOP */
+  .fs-right {
+    order: 1;
     width: 100%;
-    padding: 80px 24px 32px;
+    padding: 72px 24px 32px;
+    justify-content: flex-start;
+  }
+  /* Brand/Young Chanakya side → order 2 = appears BELOW */
+  .fs-left {
+    order: 2;
+    width: 100%;
+    padding: 32px 24px 32px;
     border-right: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: none;
   }
   .fs-left > div {
     max-width: 100%;
     margin: 0;
-  }
-  .fs-right {
-    width: 100%;
-    padding: 32px 24px 40px;
-    justify-content: flex-start;
   }
   .fs-right-top {
     position: static;

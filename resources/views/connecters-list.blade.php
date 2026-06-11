@@ -61,6 +61,157 @@
         top: 40px;
         z-index: 10;
     }
+
+    /* ==========================================
+       CONNECTORS LIST — MOBILE RESPONSIVE
+       Breakpoints: 991px (tablet), 767px (mobile), 480px (small mobile)
+       ========================================== */
+
+    /* ---- Authority Hero Section ---- */
+    @media (max-width: 991px) {
+        .authority-hero-section {
+            min-height: 70vh;
+            background-attachment: scroll;
+        }
+        .authority-hero-section .container {
+            padding-top: 120px;
+            padding-bottom: 60px;
+        }
+        .trust-headline {
+            font-size: clamp(30px, 5vw, 48px);
+            letter-spacing: -1.5px;
+        }
+        .authority-hero-section .col-xl-5 {
+            margin-top: 30px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .authority-hero-section {
+            min-height: 60vh;
+        }
+        .authority-hero-section .container {
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
+        .trust-headline {
+            font-size: clamp(26px, 7vw, 36px);
+            letter-spacing: -1px;
+            line-height: 1.15;
+        }
+        .authority-hero-section p.fs-5 {
+            font-size: 15px !important;
+        }
+        .trust-metric-box {
+            padding: 18px;
+        }
+        .trust-metric-box h4 {
+            font-size: 1.8rem;
+        }
+        .trust-badge-pill {
+            font-size: 0.7rem;
+            padding: 5px 12px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .authority-hero-section {
+            min-height: auto;
+        }
+        .authority-hero-section .container {
+            padding-top: 90px;
+            padding-bottom: 40px;
+        }
+        .trust-headline {
+            font-size: 26px;
+            letter-spacing: -0.5px;
+        }
+        .authority-hero-section .d-flex.flex-wrap {
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+
+    /* ---- Sidebar + Content Layout ---- */
+    @media (max-width: 991px) {
+        .showcase-content-wrapper .col-lg-4 {
+            /* Show sidebar as horizontal scrollable nav on tablet */
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+        .sticky-sidebar-menu {
+            position: static !important;
+            top: auto !important;
+        }
+        #v-pills-tab {
+            flex-direction: row !important;
+            overflow-x: auto;
+            gap: 8px;
+            padding-bottom: 8px;
+            flex-wrap: nowrap !important;
+        }
+        .sidebar-anchor-link {
+            white-space: nowrap;
+            padding: 12px 18px !important;
+            font-size: 0.78rem !important;
+        }
+        .sidebar-anchor-link.active {
+            padding-left: 18px !important;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .showcase-content-wrapper.py-5 {
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
+        }
+        .showcase-content-wrapper .container.py-5 {
+            padding-top: 20px !important;
+            padding-bottom: 20px !important;
+        }
+        .network-cluster-card {
+            padding: 24px 20px !important;
+            border-radius: 20px !important;
+        }
+        .network-cluster-card .d-flex.align-items-center.gap-3.mb-4 {
+            flex-wrap: wrap;
+        }
+        .network-cluster-card h2.h4 {
+            font-size: 1.1rem;
+        }
+        .panel-hero-image {
+            height: 160px !important;
+        }
+        .connector-node-pill {
+            padding: 10px 16px !important;
+            font-size: 0.82rem !important;
+        }
+        .cluster-title-icon {
+            width: 44px;
+            height: 44px;
+            font-size: 1.2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .network-cluster-card {
+            padding: 18px 14px !important;
+        }
+        .panel-hero-image {
+            height: 130px !important;
+        }
+        .connector-node-pill {
+            padding: 8px 12px !important;
+            font-size: 0.78rem !important;
+        }
+        .sidebar-anchor-link {
+            padding: 10px 14px !important;
+            font-size: 0.72rem !important;
+        }
+        .network-cluster-card h2.h4 {
+            font-size: 1rem;
+        }
+    }
 </style>
 
 

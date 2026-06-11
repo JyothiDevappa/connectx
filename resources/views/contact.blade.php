@@ -6,13 +6,205 @@
 
 <style>
 .hero-heading {
-    color: #ffffff !important; /* Forces the text to white */
+    color: #ffffff !important;
     position: relative;
 }
 
-/* If the underline shape is also causing issues, ensure it has high contrast */
 .hero-heading img {
-    filter: brightness(0) invert(1); /* This turns your shape image white */
+    filter: brightness(0) invert(1);
+}
+
+/* ==========================================
+   CONTACT PAGE — MOBILE RESPONSIVE
+   Breakpoints: 991px (tablet), 767px (mobile), 480px (small mobile)
+   ========================================== */
+
+/* ---- Inner Banner ---- */
+@media (max-width: 991px) {
+    .inner-banner-one {
+        padding-top: 160px !important;
+        padding-bottom: 60px !important;
+    }
+    .inner-banner-one .hero-heading {
+        font-size: 36px;
+    }
+    .inner-banner-one .col-xl-4 {
+        margin-top: 20px;
+    }
+    .inner-banner-one .col-xl-4 p {
+        margin-bottom: 20px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .inner-banner-one {
+        padding-top: 130px !important;
+        padding-bottom: 50px !important;
+    }
+    .inner-banner-one .hero-heading {
+        font-size: 28px;
+    }
+    .inner-banner-one .col-xl-4 {
+        margin-left: 0 !important;
+    }
+    .pager {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .inner-banner-one {
+        padding-top: 110px !important;
+        padding-bottom: 40px !important;
+    }
+    .inner-banner-one .hero-heading {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+}
+
+/* ---- Contact Info Blocks ---- */
+@media (max-width: 767px) {
+    .contact-us-section {
+        padding-top: 60px !important;
+    }
+    .address-block-one {
+        padding: 0 10px;
+    }
+    .address-block-one .title {
+        font-size: 18px;
+    }
+    .address-block-one p {
+        font-size: 14px;
+    }
+    .address-block-one .webaddress {
+        font-size: 13px;
+        word-break: break-all;
+    }
+    .call {
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .address-block-one .icon {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    .address-block-one .icon img {
+        width: 28px;
+    }
+}
+
+/* ---- Contact Form Section ---- */
+@media (max-width: 991px) {
+    .bg-wrapper.light-bg.mt-80 {
+        margin-top: 40px !important;
+    }
+    .bg-wrapper.light-bg .col-lg-5 {
+        padding: 40px 30px 0;
+    }
+    .bg-wrapper.light-bg .col-lg-7 {
+        padding: 30px;
+    }
+    .form-style-one.ps-xl-5 {
+        padding-left: 0 !important;
+    }
+    .title-one h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 767px) {
+    .bg-wrapper.light-bg .col-lg-5 {
+        padding: 30px 20px 0;
+    }
+    .bg-wrapper.light-bg .col-lg-7 {
+        padding: 20px;
+    }
+    .title-one h2 {
+        font-size: 22px;
+    }
+    .btn-four {
+        font-size: 15px;
+        padding: 14px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bg-wrapper.light-bg .col-lg-5 {
+        padding: 20px 14px 0;
+    }
+    .bg-wrapper.light-bg .col-lg-7 {
+        padding: 14px;
+    }
+    .title-one h2 {
+        font-size: 20px;
+    }
+}
+
+/* ---- Map Section ---- */
+@media (max-width: 767px) {
+    .map-banner {
+        margin-top: 50px !important;
+    }
+    .map-banner .gmap_canvas {
+        height: 280px !important;
+    }
+    .gmap_iframe {
+        height: 280px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-banner .gmap_canvas {
+        height: 220px !important;
+    }
+    .gmap_iframe {
+        height: 220px !important;
+    }
+}
+
+/* ---- Newsletter Section ---- */
+@media (max-width: 991px) {
+    .newsletter-banner {
+        margin-top: 30px;
+    }
+    .newsletter-banner .main-wrapper {
+        padding: 30px 0;
+    }
+    .newsletter-banner h2 {
+        font-size: 28px;
+    }
+    .newsletter-banner .col-lg-6:last-child {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .newsletter-banner form .d-flex {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .newsletter-banner form input[type="email"] {
+        width: 100%;
+        border-radius: 12px;
+    }
+    .newsletter-banner form button {
+        align-self: flex-end;
+    }
+    .newsletter-banner h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .newsletter-banner h2 {
+        font-size: 20px;
+    }
+    .newsletter-banner p.text-lg {
+        font-size: 14px;
+    }
 }
 	</style>
 		<!-- 

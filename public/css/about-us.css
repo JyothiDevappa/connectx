@@ -318,6 +318,7 @@
       position: relative;
       overflow: hidden;
       padding: 120px 80px;
+      max-width: 100%;
     }
 
     .founder-section .bg-text {
@@ -419,6 +420,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0;
+      overflow: hidden;
     }
 
     .vm-block {
@@ -545,6 +547,7 @@
       text-align: center;
       position: relative;
       overflow: hidden;
+      max-width: 100%;
     }
 
     .cta-bg-ring {
