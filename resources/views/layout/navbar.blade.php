@@ -44,9 +44,11 @@
         <div class="fs-close" onclick="toggleMenu()">Close</div>
 
         <div class="fs-right-top">
-            <img src="{{ asset('images/logo/connectx.png') }}"
-                alt="ConnectX"
-                class="fs-right-logo">
+            <a href="{{ url('/') }}" style="display: inline-block; line-height: 0; text-decoration: none;">
+                <img src="{{ asset('images/logo/connectx.png') }}"
+                    alt="ConnectX"
+                    class="fs-right-logo">
+            </a>
 
             <div class="fs-right-socials">
                 <a href="#"><i class="bi bi-linkedin"></i></a>
