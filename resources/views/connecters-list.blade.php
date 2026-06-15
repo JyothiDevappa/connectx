@@ -229,10 +229,8 @@
                     ConnectX orchestrates premium structural access to vetted visionaries, enterprise owners, and specialized policy framework architects globally.
                 </p>
 
-                <div class="d-flex flex-wrap align-items-center gap-4 text-white opacity-50" style="font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;">
-                    <span class="d-flex align-items-center gap-2"><i class="bi bi-patch-check fs-5 text-warning"></i> 100% VETTED ENTRANTS</span>
-                    <span class="d-flex align-items-center gap-2"><i class="bi bi-lock fs-5 text-warning"></i> SECURE NDAs ENFORCED</span>
-                </div>
+                
+
             </div>
 
             <div class="col-xl-5 col-lg-4">
@@ -264,7 +262,7 @@
 
 
 <!-- second section -->
-<div class="showcase-content-wrapper py-5" style="background-color: #f8fafc;">
+<div class="showcase-content-wrapper py-5" style="background-color: #f8f6f2;">
     <div class="container py-5">
         <div class="row g-5">
 
@@ -298,11 +296,7 @@
 
                     <div class="tab-pane fade show active" id="v-pills-biz" role="tabpanel" aria-labelledby="v-pills-biz-tab">
                         <div class="network-cluster-card">
-                            <div class="panel-hero-image mb-4 rounded-4 overflow-hidden" style="height: 200px; background: linear-gradient(
-    to bottom,
-    rgba(9,13,22,0.2),
-    #090d16
-), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
+                            <div class="panel-hero-image mb-4 rounded-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
 
                             <div class="d-flex align-items-center gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-building-gear"></i></div>
@@ -323,7 +317,7 @@
 
                     <div class="tab-pane fade" id="v-pills-tech" role="tabpanel" aria-labelledby="v-pills-tech-tab">
                         <div class="network-cluster-card">
-                            <div class="panel-hero-image mb-4 rounded-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(9,13,22,0.2), #090d16), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
+                            <div class="panel-hero-image mb-4 rounded-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
 
                             <div class="d-flex align-items-center gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-cpu"></i></div>
@@ -344,7 +338,7 @@
 
                     <div class="tab-pane fade" id="v-pills-fin" role="tabpanel" aria-labelledby="v-pills-fin-tab">
                         <div class="network-cluster-card">
-                            <div class="panel-hero-image mb-4 rounded-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(9,13,22,0.2), #090d16), url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
+                            <div class="panel-hero-image mb-4 rounded-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
 
                             <div class="d-flex align-items-center gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-graph-up-arrow"></i></div>
@@ -365,7 +359,7 @@
 
                     <div class="tab-pane fade" id="v-pills-creative" role="tabpanel" aria-labelledby="v-pills-creative-tab">
                         <div class="network-cluster-card">
-                            <div class="panel-hero-image mb-4 rounded-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(9,13,22,0.2), #090d16), url('https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
+                            <div class="panel-hero-image mb-4 rounded-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
 
                             <div class="d-flex align-items-center gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-bezier2"></i></div>
@@ -386,7 +380,7 @@
 
                     <div class="tab-pane fade" id="v-pills-impact" role="tabpanel" aria-labelledby="v-pills-impact-tab">
                         <div class="network-cluster-card">
-                            <div class="panel-hero-image mb-4 rounded-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(9,13,22,0.2), #090d16), url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
+                            <div class="panel-hero-image mb-4 rounded-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
 
                             <div class="d-flex align-items-center gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-globe-central-south"></i></div>
@@ -438,17 +432,17 @@
     }
 
     .sidebar-anchor-link:hover {
-        background: #f8fafc;
-        color: #090d16;
+        background: #f8f6f2;
+        color: #0c3a30;
         padding-left: 28px;
     }
 
     .sidebar-anchor-link.active {
-        background: #090d16 !important;
+        background: #0c3a30 !important;
         color: #ffd2b1 !important;
-        border-color: #090d16 !important;
+        border-color: #0c3a30 !important;
         padding-left: 32px;
-        box-shadow: 0 10px 25px -5px rgba(9, 13, 22, 0.15);
+        box-shadow: 0 10px 25px -5px rgba(12, 58, 48, 0.15);
     }
 
     /* Content Layout Elements */
@@ -463,8 +457,9 @@
     .cluster-title-icon {
         width: 56px;
         height: 56px;
-        background: #090d16;
-        color: #ffd2b1;
+        background: linear-gradient(135deg, #ffffff 0%, #ffd2b1 100%);
+        color: #0c3a30;
+        border: 1px solid rgba(255, 210, 177, 0.5);
         border-radius: 16px;
         display: flex;
         align-items: center;
@@ -484,13 +479,13 @@
 
     /* Interactive List Badges */
     .connector-node-pill {
-        background: #f8fafc;
-        border: 1px solid #e2e8f0;
+        background: linear-gradient(135deg, #ffffff 0%, #ffd2b1 100%);
+        border: 1px solid rgba(255, 210, 177, 0.5);
         border-radius: 100px;
         padding: 12px 22px;
         font-size: 0.88rem;
         font-weight: 600;
-        color: #334155;
+        color: #0c3a30;
         display: inline-flex;
         align-items: center;
         gap: 10px;
@@ -499,11 +494,11 @@
     }
 
     .connector-node-pill:hover {
-        background: #090d16;
-        border-color: #090d16;
+        background: #0c3a30;
+        border-color: #0c3a30;
         color: #ffd2b1 !important;
         transform: translateY(-3px);
-        box-shadow: 0 10px 20px -5px rgba(9, 13, 22, 0.1);
+        box-shadow: 0 10px 20px -5px rgba(12, 58, 48, 0.1);
     }
 
     .node-index {

@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @push('styles')
-<link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
+<link rel="stylesheet" href="{{ asset('css/custom-home.css') }}?v={{ time() }}">
 <link rel="stylesheet" href="{{ asset('css/custom-header.css') }}">
 
 @endpush
@@ -12,43 +12,77 @@
 <!-- HERO -->
 <section class="hero" id="home">
     <div class="hero-slides">
+        <!-- Slide 1 -->
         <div class="hero-slide active">
-            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1800&q=80" alt="Hero 1">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1800&q=80" alt="Partner With the Future of Influence">
+            <div class="hero-overlay"></div>
+            <div class="hero-grain"></div>
+            <div class="hero-content">
+                <h1>Partner With the<br><em>Future of Influence</em></h1>
+                <p class="hero-desc">Young Chanakya ConnectX collaborates with brands, media platforms, startups, studios,
+                    communities, and ecosystem partners to build one of the world's fastest-growing creator and influencer
+                    networks.
+                </p>
+                <div class="hero-btns">
+                    <button class="btn-hero-primary" onclick="document.getElementById('partner').scrollIntoView({behavior: 'smooth'})">Collaborate With ConnectX →</button>
+                    <button class="btn-hero-outline" onclick="window.location.href='/become-a-partner'">Become a Partner</button>
+                </div>
+            </div>
         </div>
+
+        <!-- Slide 2 -->
         <div class="hero-slide">
-            <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=1800&q=80" alt="Hero 2">
+            <img src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=1800&q=80" alt="Empower Your Creator Journey">
+            <div class="hero-overlay"></div>
+            <div class="hero-grain"></div>
+            <div class="hero-content">
+                <h1>Empowering the Next<br><em>Generation of Creators</em></h1>
+                <p class="hero-desc">We provide creators with state-of-the-art lounges, professional recording studios, live panel roundtables, and a global network of peers to scale their reach and impact.
+                </p>
+                <div class="hero-btns">
+                    <button class="btn-hero-primary" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Join the Community →</button>
+                    <button class="btn-hero-outline" onclick="document.getElementById('events').scrollIntoView({behavior: 'smooth'})">Explore Creator Spaces</button>
+                </div>
+            </div>
         </div>
+
+        <!-- Slide 3 -->
         <div class="hero-slide">
-            <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1800&q=80" alt="Hero 3">
-        </div>
-        <div class="hero-slide">
-            <img src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=1800&q=80" alt="Hero 4">
+            <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1800&q=80" alt="High-Impact Brand Partnerships">
+            <div class="hero-overlay"></div>
+            <div class="hero-grain"></div>
+            <div class="hero-content">
+                <h1>High-Impact Brand<br><em>Partnerships &amp; Events</em></h1>
+                <p class="hero-desc">Connect your brand with highly engaged audiences through curated sponsorships, regional creator meetups, annual showcase awards, and co-branded experiences.
+                </p>
+                <div class="hero-btns">
+                    <button class="btn-hero-primary" onclick="document.getElementById('community').scrollIntoView({behavior: 'smooth'})">Explore Sponsorships →</button>
+                    <button class="btn-hero-outline" onclick="document.getElementById('events').scrollIntoView({behavior: 'smooth'})">View Our Events</button>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="hero-overlay"></div>
-    <div class="hero-grain"></div>
-    <div class="hero-content">
-        <h1>Partner With the<br><em>Future of Influence</em></h1>
-        <p class="hero-desc">Young Chanakya ConnectX collaborates with brands, media platforms, startups, studios,
-            communities, and ecosystem partners to build one of the world's fastest-growing creator and influencer
-            networks.
-        </p>
-        <div class="hero-btns">
-            <button class="btn-hero-primary">Collaborate With ConnectX →</button>
-            <button class="btn-hero-outline">Become a Partner</button>
-        </div>
-    </div>
+
+    <!-- Navigation Arrows -->
+    <button class="hero-arrow prev-btn" aria-label="Previous Slide">
+        <i class="bi bi-chevron-left"></i>
+    </button>
+    <button class="hero-arrow next-btn" aria-label="Next Slide">
+        <i class="bi bi-chevron-right"></i>
+    </button>
+
     <div class="hero-scroll">
         <div class="scroll-line"></div>
         <span class="scroll-txt">Scroll to explore</span>
     </div>
+    
     <div class="hero-dots">
         <div class="hdot on" data-i="0"></div>
         <div class="hdot" data-i="1"></div>
         <div class="hdot" data-i="2"></div>
-        <div class="hdot" data-i="3"></div>
     </div>
 </section>
+
 
 <!-- MARQUEE -->
 <div class="marquee-wrap">
@@ -85,7 +119,7 @@
         </div> -->
         </div>
         <div class="about-content rv-r">
-            <div class="eyebrow">About ConnectX</div>
+            <div class="eyebrow rv">About ConnectX</div>
             <h2 class="sec-title">A Digital-First<br>Creator Ecosystem</h2>
             <p class="sec-desc">Young Chanakya ConnectX is designed to bring influencers, content creators, public
                 voices,
@@ -108,6 +142,7 @@
     <div class="partner-head">
         <div class="eyebrow rv">Who Can Partner With Us</div>
         <h2 class="sec-title rv">Built for Modern<br>Ecosystem Collaborations</h2>
+        <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px;">We connect diverse creators, brands, and ecosystem partners to unlock shared visibility, audience reach, and growth.</p>
     </div>
     <div class="partner-grid">
         <div class="p-card rv" style="transition-delay:0s">
@@ -314,6 +349,11 @@
 /* =============================================
    HOW CONNECTX WORKS — RESPONSIVE
    ============================================= */
+.hcw-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
 .hcw-wrapper {
     background: #0c3a30;
     border-radius: 16px;
@@ -322,18 +362,26 @@
     overflow: hidden;
 }
 
-.hcw-heading {
-    color: #ffffff;
-    font-size: clamp(28px, 4vw, 56px);
-    font-weight: 400;
-    margin: 0 0 48px;
-    letter-spacing: -0.3px;
+.hcw-wrapper .eyebrow {
+    color: #ffd2b1 !important;
 }
 
-.hcw-heading span {
-    font-style: italic;
-    font-weight: 500;
-    color: #ffd2b1;
+.hcw-wrapper .eyebrow::before {
+    background: #ffd2b1 !important;
+}
+
+.hcw-wrapper .hcw-heading {
+    color: #ffffff !important;
+    font-size: clamp(28px, 4vw, 56px) !important;
+    font-weight: 400 !important;
+    margin: 0 0 48px;
+    letter-spacing: -0.3px !important;
+}
+
+.hcw-wrapper .hcw-heading span {
+    font-style: italic !important;
+    font-weight: 500 !important;
+    color: #ffd2b1 !important;
 }
 
 .hcw-relative {
@@ -374,23 +422,27 @@
     gap: 20px;
 }
 
-.hcw-step-title {
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 500;
+.hcw-wrapper .hcw-step-title {
+    color: #ffffff !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
     margin: 0 0 8px;
-    line-height: 1.35;
+    line-height: 1.35 !important;
 }
 
-.hcw-step-desc {
-    color: #7ab8a0;
-    font-size: 12.5px;
-    line-height: 1.65;
+.hcw-wrapper .hcw-step-desc {
+    color: #ffffff !important;
+    font-size: 12.5px !important;
+    line-height: 1.65 !important;
     margin: 0;
 }
 
 /* ---- Tablet & Mobile: Vertical Timeline (Single Column) ---- */
 @media (max-width: 767px) {
+    .hcw-container {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
     .hcw-wrapper {
         padding: 36px 24px 44px;
         border-radius: 14px;
@@ -451,6 +503,10 @@
 
 /* ---- Mobile: Smaller Vertical Timeline ---- */
 @media (max-width: 480px) {
+    .hcw-container {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
     .hcw-wrapper {
         padding: 28px 18px 36px;
         border-radius: 12px;
@@ -487,51 +543,56 @@
 
 <h2 class="sr-only">How ConnectX Works — 4 steps to create, access, connect, and grow.</h2>
 
-<div class="hcw-wrapper">
-
-    <p class="cx-heading hcw-heading">
-        How ConnectX <span>Works</span>
-    </p>
-
-    <div class="hcw-relative">
-
-        <div class="hcw-line-bg"></div>
-        <div class="hcw-line-anim"></div>
-
-        <div class="hcw-grid">
-
-            <div class="hcw-step">
-                <div class="cx-circle cx-c1">1</div>
-                <div class="cx-text cx-t1">
-                    <p class="hcw-step-title">Create Your Profile</p>
-                    <p class="hcw-step-desc">Create your creator profile and showcase your content within ConnectX.</p>
+<div class="container hcw-container">
+    <div class="hcw-wrapper">
+        <div class="eyebrow rv">Our Process</div>
+        <p class="cx-heading hcw-heading">
+            How ConnectX <span>Works</span>
+        </p>
+        <p class="sec-desc rv" style="color: rgba(255, 255, 255, 0.75) !important; max-width: 600px; margin-top: -20px; margin-bottom: 44px;">
+            Follow these simple steps to join the ConnectX network, access premium lounges, and launch high-impact collaborations.
+        </p>
+    
+        <div class="hcw-relative">
+    
+            <div class="hcw-line-bg"></div>
+            <div class="hcw-line-anim"></div>
+    
+            <div class="hcw-grid">
+    
+                <div class="hcw-step">
+                    <div class="cx-circle cx-c1">1</div>
+                    <div class="cx-text cx-t1">
+                        <p class="hcw-step-title">Create Your Profile</p>
+                        <p class="hcw-step-desc">Create your creator profile and showcase your content within ConnectX.</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="hcw-step">
-                <div class="cx-circle cx-c2">2</div>
-                <div class="cx-text cx-t2">
-                    <p class="hcw-step-title">Access Creator Spaces</p>
-                    <p class="hcw-step-desc">Access creator lounges, networking spaces, podcasts, and exclusive experiences.</p>
+    
+                <div class="hcw-step">
+                    <div class="cx-circle cx-c2">2</div>
+                    <div class="cx-text cx-t2">
+                        <p class="hcw-step-title">Access Creator Spaces</p>
+                        <p class="hcw-step-desc">Access creator lounges, networking spaces, podcasts, and exclusive experiences.</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="hcw-step">
-                <div class="cx-circle cx-c3">3</div>
-                <div class="cx-text cx-t3">
-                    <p class="hcw-step-title">Connect &amp; Collaborate</p>
-                    <p class="hcw-step-desc">Connect with creators, influencers, brands, and communities worldwide.</p>
+    
+                <div class="hcw-step">
+                    <div class="cx-circle cx-c3">3</div>
+                    <div class="cx-text cx-t3">
+                        <p class="hcw-step-title">Connect &amp; Collaborate</p>
+                        <p class="hcw-step-desc">Connect with creators, influencers, brands, and communities worldwide.</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="hcw-step">
-                <div class="cx-circle cx-c4">4</div>
-                <div class="cx-text cx-t4">
-                    <p class="hcw-step-title">Grow Your Influence</p>
-                    <p class="hcw-step-desc">Grow your visibility through collaborations, events, and creator opportunities.</p>
+    
+                <div class="hcw-step">
+                    <div class="cx-circle cx-c4">4</div>
+                    <div class="cx-text cx-t4">
+                        <p class="hcw-step-title">Grow Your Influence</p>
+                        <p class="hcw-step-desc">Grow your visibility through collaborations, events, and creator opportunities.</p>
+                    </div>
                 </div>
+    
             </div>
-
         </div>
     </div>
 </div>
@@ -548,8 +609,9 @@
 
     <div class="cx-wrapper">
         <div class="cx-editorial-header">
-            <span class="cx-tagline">ConnectX Experiences</span>
+            <div class="eyebrow rv">ConnectX Experiences</div>
             <h2 class="cx-main-heading">Experiences That Create Influence</h2>
+            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px;">From high-quality recording lounges to city meetups, we offer unmatched offline and online opportunities to scale your reach.</p>
         </div>
 
         <div class="cx-viewport-grid">
@@ -572,7 +634,7 @@
 
             <div class="cx-premium-card cx-col-square">
                 <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1531058020387-3be344559be6?auto=format&fit=crop&q=80&w=600" alt="Awards" class="cx-surface-img">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=600" alt="Awards" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
@@ -588,7 +650,7 @@
 
             <div class="cx-premium-card cx-col-square">
                 <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=600" alt="Roundtables" class="cx-surface-img">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600" alt="Roundtables" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
@@ -620,7 +682,7 @@
 
             <div class="cx-premium-card cx-col-square">
                 <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=600" alt="Creator Lounges" class="cx-surface-img">
+                    <img src="https://images.unsplash.com/photo-1610116306796-6fea9f4fae38?auto=format&fit=crop&q=80&w=600" alt="Creator Lounges" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
@@ -636,7 +698,7 @@
 
             <div class="cx-premium-card cx-col-wide">
                 <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&q=80&w=1000" alt="Networking" class="cx-surface-img">
+                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1000" alt="Networking" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
@@ -660,6 +722,7 @@
         <div class="section-head">
             <div class="eyebrow rv">Event Listing</div>
             <h2 class="sec-title rv">Curated events for every creator journey</h2>
+            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-bottom: 0; margin-left: auto; margin-right: auto;">Explore upcoming panels, awards gala ceremonies, regional conferences, and exclusive brand sponsorship opportunities.</p>
         </div>
 
         <div class="position-relative">
@@ -795,8 +858,9 @@
     <div class="section-container">
 
         <div class="section-head">
-            <!-- <div class="eyebrow rv">Community & Sponsor</div> -->
+            <div class="eyebrow rv">Ecosystem Network</div>
             <h2 class="sec-title rv">Community & Sponsor</h2>
+            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-bottom: 0; margin-left: auto; margin-right: auto;">Whether you are an independent creator or a high-growth brand, ConnectX has the right space and network to support your journey.</p>
         </div>
 
         <div class="community-grid">

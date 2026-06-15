@@ -18,15 +18,16 @@
     .text-glow-headline {
         font-size: clamp(38px, 5.5vw, 72px);
         font-weight: 900;
-        line-height: 1.05;
+        line-height: 1.2;
+        padding-bottom: 15px;
         letter-spacing: -3px;
         background: linear-gradient(135deg, #ffffff 30%, #ffd2b1 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     .custom-pill-nav {
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: rgba(15, 23, 42, 0.6);
+        border: 1px solid rgba(12, 58, 48, 0.1);
+        background: #f8f6f2;
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         padding: 6px;
@@ -34,7 +35,8 @@
         display: inline-flex;
     }
     .custom-pill-nav .nav-link-item {
-        color: #94a3b8;
+        color: #0c3a30;
+        opacity: 0.7;
         padding: 10px 24px;
         font-size: 0.85rem;
         font-weight: 600;
@@ -46,6 +48,7 @@
     }
     .custom-pill-nav .nav-link-item.active, 
     .custom-pill-nav .nav-link-item:hover {
+        opacity: 1;
         color: #0c3a30 !important;
         background: #ffd2b1;
     }
@@ -88,14 +91,14 @@
         position: absolute;
         bottom: 16px;
         left: 16px;
-        background: rgba(9, 13, 22, 0.75);
+        background: #ffd2b1;
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #0c3a30;
         padding: 6px 16px;
         font-size: 0.7rem;
-        font-weight: 700;
+        font-weight: 800;
         letter-spacing: 1.5px;
         text-transform: uppercase;
         border-radius: 8px;
@@ -112,7 +115,7 @@
         transition: all 0.3s ease;
     }
     .ux-curated-card:hover .interactive-arrow-btn {
-        background: #090d16;
+        background: #0c3a30;
         color: #ffd2b1;
         transform: rotate(-45deg);
     }
@@ -132,14 +135,14 @@
         transition: all 0.3s ease;
     }
     .lux-pagination-item.active {
-        background: #090d16;
-        border-color: #090d16;
+        background: #0c3a30;
+        border-color: #0c3a30;
         color: #ffd2b1;
     }
     .lux-pagination-item:hover:not(.active) {
         background: #f8fafc;
-        border-color: #090d16;
-        color: #090d16;
+        border-color: #0c3a30;
+        color: #0c3a30;
     }
 
     /* ==========================================
@@ -177,7 +180,8 @@
         .text-glow-headline {
             font-size: clamp(26px, 7vw, 42px);
             letter-spacing: -1.5px;
-            line-height: 1.1;
+            line-height: 1.25;
+            padding-bottom: 10px;
         }
         .premium-hero-container p.fs-5 {
             font-size: 15px !important;
@@ -375,7 +379,7 @@
                 </ul>
 
                 <h1 class="text-glow-headline mb-4">Elite business spaces for market changemakers.</h1>
-                <p class="text-white opacity-75 fs-5 mb-0" style="max-width: 650px; line-height: 1.6; font-weight: 400;">
+                <p class="fs-5 mb-0" style="max-width: 650px; line-height: 1.6; font-weight: 500; color: #ffffff; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">
                     Unlocking strategies, scaling models, and building high-performance systems alongside leading business operators.
                 </p>
             </div>
@@ -386,7 +390,7 @@
 <div class="filter-strip-wrapper bg-dark py-4 position-sticky top-0" style="z-index: 99; background-color: #0c3a30 !important; border-bottom: 1px solid rgba(255,255,255,0.05);">
     <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
         <span class="text-white opacity-50 text-uppercase fw-bold tracking-wider" style="font-size: 0.75rem; letter-spacing: 1.5px;">
-            Filter Active Experiences
+            Browse Upcoming Events
         </span>
         <div class="custom-pill-nav">
             <a href="#" class="nav-link-item active">All Events</a>
@@ -397,7 +401,7 @@
     </div>
 </div>
 
-<div class="content-showcase-section py-5" style="background-color: #f8fafc;">
+<div class="content-showcase-section py-5" style="background-color: #f8f6f2;">
     <div class="container py-4">
         <div class="row g-5">
             @foreach($curatedEvents as $event)

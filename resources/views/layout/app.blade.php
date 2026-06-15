@@ -43,6 +43,8 @@
     <link rel="stylesheet" href="{{ asset('css/style.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/custom-header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+    <!-- GLOBAL TYPOGRAPHY — loaded last so it overrides page-specific CSS -->
+    <link rel="stylesheet" href="{{ asset('css/typography.css') }}">
     @stack('styles')
 
     <!-- GLOBAL: prevent horizontal overflow on all pages -->
@@ -121,7 +123,7 @@
     <script src="{{ asset('js/scroll-behavior.js') }}"></script>
 
     <!-- Global Scripts (Navbar, Menu, Scroll Effects) -->
-    <script src="{{ asset('js/global-scripts.js') }}"></script>
+    <script src="{{ asset('js/global-scripts.js') }}?v={{ time() }}"></script>
 
     @stack('scripts')
 

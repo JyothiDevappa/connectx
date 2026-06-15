@@ -2,7 +2,10 @@
     <div class="fs-left">
         <div>
             <a href="{{ url('/') }}" class="logo">
-                <img src="{{ asset('images/logo/yc.png') }}"
+                <!-- <img src="{{ asset('images/logo/yc.png') }}"
+                    alt="ConnectX Logo"
+                    class="menu-logo"> -->
+                <img src="{{ asset('images/logo/logo.png') }}"
                     alt="ConnectX Logo"
                     class="menu-logo">
             </a>
@@ -45,7 +48,7 @@
 
         <div class="fs-right-top">
             <a href="{{ url('/') }}" style="display: inline-block; line-height: 0; text-decoration: none;">
-                <img src="{{ asset('images/logo/connectx.png') }}"
+                <img src="{{ asset('images/logo/yc.png') }}"
                     alt="ConnectX"
                     class="fs-right-logo">
             </a>
@@ -60,38 +63,38 @@
 
         <nav class="fs-nav">
 
-            <a href="{{ url('/about') }}" class="fs-nav-item" onclick="toggleMenu()">
+            <a href="{{ url('/about') }}" class="fs-nav-item {{ request()->is('about') ? 'active' : '' }}" onclick="toggleMenu()">
                 <span class="fs-nav-name">About ConnectX</span>
                 <span class="fs-nav-arrow">→</span>
                 <span class="fs-nav-num">01</span>
             </a>
 
-            <a href="{{ url('/become-a-partner') }}" class="fs-nav-item" onclick="toggleMenu()">
+            <a href="{{ url('/become-a-partner') }}" class="fs-nav-item {{ request()->is('become-a-partner') ? 'active' : '' }}" onclick="toggleMenu()">
                 <span class="fs-nav-name">Who Can Partner</span>
                 <span class="fs-nav-arrow">→</span>
                 <span class="fs-nav-num">02</span>
             </a>
 
-            <a href="{{ url('/become-a-sponser') }}" class="fs-nav-item" onclick="toggleMenu()">
+            <a href="{{ url('/become-a-sponser') }}" class="fs-nav-item {{ request()->is('become-a-sponser') ? 'active' : '' }}" onclick="toggleMenu()">
                 <span class="fs-nav-name">Community & Sponsors</span>
                 <span class="fs-nav-arrow">→</span>
                 <span class="fs-nav-num">03</span>
             </a>
 
             <!-- Events page pending -->
-            <a href="{{ url('/events') }}" class="fs-nav-item" onclick="toggleMenu()">
+            <a href="{{ url('/events') }}" class="fs-nav-item {{ request()->is('events') ? 'active' : '' }}" onclick="toggleMenu()">
                 <span class="fs-nav-name">Events</span>
                 <span class="fs-nav-arrow">→</span>
                 <span class="fs-nav-num">05</span>
             </a>
 
-            <a href="{{ url('/connecters-list') }}" class="fs-nav-item" onclick="toggleMenu()">
+            <a href="{{ url('/connecters-list') }}" class="fs-nav-item {{ request()->is('connecters-list') ? 'active' : '' }}" onclick="toggleMenu()">
                 <span class="fs-nav-name">Connecters Directory</span>
                 <span class="fs-nav-arrow">→</span>
                 <span class="fs-nav-num">06</span>
             </a>
 
-            <a href="{{ url('/contact') }}" class="fs-nav-item" onclick="toggleMenu()">
+            <a href="{{ url('/contact') }}" class="fs-nav-item {{ request()->is('contact') ? 'active' : '' }}" onclick="toggleMenu()">
                 <span class="fs-nav-name">Contact</span>
                 <span class="fs-nav-arrow">→</span>
                 <span class="fs-nav-num">07</span>
@@ -104,7 +107,7 @@
 <header id="hdr" class="sticky-menu">
 
     <a href="{{ url('/') }}" class="logo">
-        <img src="{{ asset('images/logo/connectx.png') }}"
+        <img src="{{ asset('images/logo/logo.png') }}"
             alt="ConnectX"
             class="site-logo">
     </a>
@@ -112,8 +115,7 @@
     <div class="header-right">
 
         <button class="btn-join">
-            Become a Partner
-        </button>
+Connet with Us         </button>
 
         <div class="hamburger" id="hambBtn" onclick="toggleMenu()">
             <span></span>

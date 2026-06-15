@@ -46,19 +46,20 @@
     }
 
     .partner-content h1 {
-        font-size: 50px;
+        font-size: clamp(32px, 4.5vw, 52px);
         line-height: 1.15em;
-        font-weight: 700;
+        font-weight: 900;
         color: #0c3a30;
         margin-bottom: 22px;
-        letter-spacing: -1px;
+        letter-spacing: -2px;
     }
 
     .partner-content p {
         font-size: 16px;
-        line-height: 1.9em;
-        color: #555;
+        line-height: 1.85em;
+        color: #6b7280;
         margin-bottom: 0;
+        font-weight: 400;
     }
 
     @media (max-width: 991px) {
@@ -228,9 +229,9 @@
 
         height: 24px;
 
-        background: #ffd2b1;
+        background: #0c3a30;
 
-        color: #fff;
+        color: #ffd2b1;
 
         border-radius: 50%;
 
@@ -286,10 +287,10 @@
 
         height: 32px;
 
-        background: #ffd2b1;
+        background: #0c3a30;
 
 
-        color: #fff;
+        color: #ffd2b1;
 
         border-radius: 50%;
 
@@ -334,10 +335,12 @@
 
     /* Unique Main Title Class */
     .how-work-main-heading {
-        font-size: 2.5rem !important;
-        font-weight: 700 !important;
-        color: #37665c !important;
+        font-size: clamp(28px, 3.5vw, 48px) !important;
+        font-weight: 900 !important;
+        color: #0c3a30 !important;
         margin: 0 !important;
+        letter-spacing: -1.5px !important;
+        line-height: 1.15 !important;
     }
 
     /* Outer grid container wrapping all cards together */
@@ -387,23 +390,22 @@
 
     /* Custom isolated text header class */
     .how-works-h4 {
-        font-size: 1.35rem !important;
-        font-weight: 600 !important;
-        color: #37665c !important;
+        font-size: 1.1rem !important;
+        font-weight: 700 !important;
+        color: #0c3a30 !important;
         margin: 0 !important;
         padding: 0 !important;
-        line-height: 1.2 !important;
+        line-height: 1.25 !important;
         display: inline-block !important;
-        /* Nullifies global block behaviors dropping lines */
         vertical-align: middle !important;
         transition: color 0.3s ease !important;
     }
 
     /* Custom isolated badge element */
     .how-works-badge-num {
-        font-size: 0.9rem !important;
+        font-size: 0.82rem !important;
         font-weight: 700 !important;
-        color: #37665c !important;
+        color: #0c3a30 !important;
         letter-spacing: 0.05em !important;
         background: rgba(255, 210, 177, 0.4) !important;
         /* Default soft accent */
@@ -421,9 +423,9 @@
 
     /* Custom isolated description block paragraphs */
     .how-works-p-desc {
-        font-size: 0.98rem !important;
-        color: #555555 !important;
-        line-height: 1.6 !important;
+        font-size: 0.95rem !important;
+        color: #6b7280 !important;
+        line-height: 1.75 !important;
         margin: 0 !important;
         transition: color 0.3s ease !important;
     }

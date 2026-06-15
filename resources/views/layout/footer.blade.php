@@ -4,29 +4,71 @@
    Breakpoints: 991px (tablet), 767px (mobile), 480px (small mobile)
    ========================================== */
 
-/* ---- Green Copyright Bar ---- */
+/* ---- Light Copyright Bar ---- */
 .footer-copyright-bar {
     background: #0c3a30;
-    color: rgba(255, 255, 255, 0.75);
-    text-align: center;
+    color: #c5c5c5;
+    border-top: none;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.3px;
-    padding: 16px 20px;
+    padding: 24px 0;
     width: 100%;
+}
+
+.footer-copyright-bar a {
+    color: #c5c5c5;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer-copyright-bar a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-copyright-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-copyright-links span {
+    color: rgba(255, 255, 255, 0.25);
 }
 
 @media (max-width: 767px) {
     .footer-copyright-bar {
-        font-size: 13px;
-        padding: 13px 16px;
+        padding: 18px 12px;
     }
 }
 
-@media (max-width: 480px) {
-    .footer-copyright-bar {
-        font-size: 12px;
-        padding: 11px 12px;
+/* ---- Footer brand description ---- */
+.footer-brand-desc {
+    font-size: 14px;
+    line-height: 1.85;
+    color: #6b7280 !important;
+    font-weight: 400;
+    max-width: 320px;
+    margin: 0 0 28px 0;
+}
+
+.footer-nav-link a {
+    color: #6b7280 !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-nav-link a:hover {
+    color: #0c3a30 !important;
+}
+
+@media (max-width: 767px) {
+    .footer-brand-desc {
+        font-size: 13px;
+        max-width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
     }
 }
 
@@ -207,7 +249,7 @@
 
                         <div class="logo mb-35 md-mb-20">
                             <a href="{{ url('/') }}">
-                                <img src="{{ asset('images/logo/connectx1.png') }}" alt="ConnectX Logo">
+                                <img src="{{ asset('images/logo/logo.png') }}" alt="ConnectX Logo">
 
 
                             </a>
@@ -224,10 +266,7 @@
 </div> -->
 
 
-                        <p class="lh-sm mb-40 md-mb-20">
-                            Follow Us
-
-                        </p>
+                        <p class="footer-brand-desc">ConnectX is a global creator ecosystem connecting creators, influencers, speakers, podcasters &amp; founders through live events, collaborations, and meaningful experiences.</p>
 
                         <ul class="style-none d-flex align-items-center social-icon">
                             <li>
@@ -238,7 +277,13 @@
 
                             <li>
                                 <a href="#">
-                                    <i class="bi bi-dribbble"></i>
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="bi bi-twitter"></i>
                                 </a>
                             </li>
 
@@ -354,19 +399,19 @@
 
                             <li>
                                 <a href="#">
-                                    Terms of Use
+                                    Privacy Policy
                                 </a>
                             </li>
 
                             <li>
                                 <a href="#">
-                                    Terms & Conditions
+                                    Terms of Service
                                 </a>
                             </li>
 
                             <li>
                                 <a href="#">
-                                    Privacy
+                                    Community Ethics
                                 </a>
                             </li>
 
@@ -407,7 +452,23 @@
 
 <!-- COPYRIGHT BAR -->
 <div class="footer-copyright-bar">
-    &copy; {{ date('Y') }} ConnectX. All Rights Reserved.
+    <div class="container">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 text-center text-md-start">
+            <div class="copyright-left">
+                Copyright &copy; {{ date('Y') }} Young Chanakya. All rights reserved.
+            </div>
+            <!-- <div class="footer-copyright-links justify-content-center">
+                <a href="#">Privacy Policy</a>
+                <span>|</span>
+                <a href="#">Terms of Service</a>
+                <span>|</span>
+                <a href="#">Community Ethics</a>
+            </div> -->
+            <div class="copyright-right">
+                Partners : <a href="#">FintechGie</a> &amp; <a href="#">Wegeni</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Scroll Top -->

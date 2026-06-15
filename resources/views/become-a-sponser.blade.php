@@ -96,8 +96,8 @@
 
 .sponsor-form-box .form-control:focus,
 .sponsor-form-box select:focus{
-    border-color: #76583b;
-    box-shadow: 0 0 0 3px rgba(118,88,59,0.10);
+    border-color: #0c3a30;
+    box-shadow: 0 0 0 3px rgba(12,58,48,0.12);
 }
 
 /* BUTTON */
@@ -115,7 +115,7 @@
 }
 
 .btn-sponsor-submit:hover{
-    background: #5e442d;
+    background: #071f1a;
     color: #fff;
 }
 
@@ -220,7 +220,7 @@ SPONSOR CARDS
     width:18px;
     height:18px;
 
-    background: #ffd2b1;
+    background: #0c3a30;
 
     border-radius:50%;
 
@@ -267,7 +267,7 @@ SPONSOR CARDS
 .btn-become-sponsor:hover{
     background:transparent;
 
-    color:#76583b;
+    color:#ffd2b1;
 
     transform:translateY(-3px);
 }
@@ -351,70 +351,211 @@ WHY CONNECTX SECTION
 
 
 
-/* /* CONNECTX BRAND SECTION */
+/* =============================================
+   CONNECTX BRAND SECTION — OVERRIDES
+   ============================================= */
 
-.connectx-brand-section .bg-wrapper{
-    min-height: 620px;
+/* Override global bg image with our professional conference photo */
+.connectx-brand-section.fancy-banner-seven .bg-wrapper {
+    background: url('../images/media/here-is-my-colleague.jpg') no-repeat center center !important;
+    background-size: cover !important;
+    min-height: 680px;
+    position: relative;
 }
 
-.connectx-points{
-    padding-left:0;
-    margin:0;
+/* Strong dark overlay so all text is crisp and readable */
+.connectx-brand-section.fancy-banner-seven .bg-wrapper::before,
+.connectx-brand-section.fancy-banner-seven .bg-wrapper::after {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    transform: none !important;
+    z-index: 0 !important;
 }
 
-.connectx-points li{
-    position:relative;
-    color:#fff;
-    font-size:20px;
-    line-height:1.8em;
-
-    padding:18px 0 18px 70px;
-
-    border-bottom:1px solid rgba(255,255,255,0.12);
+.connectx-brand-section.fancy-banner-seven .bg-wrapper::before {
+    background: rgba(0, 0, 0, 0.70) !important;
 }
 
-.connectx-points li:last-child{
-    border-bottom:none;
+.connectx-brand-section.fancy-banner-seven .bg-wrapper::after {
+    background: rgba(0, 0, 0, 0.25) !important;
 }
 
-/* Tick icon */
+/* Ensure z-index stacking works for content */
+.connectx-brand-section .bg-wrapper .container {
+    position: relative;
+    z-index: 2;
+}
 
-.connectx-points li::before{
-    content:"✓";
+/* ---- Left heading block ---- */
+.connectx-brand-section .brand-tag {
+    display: inline-block;
+    background: rgba(118,88,59,0.30);
+    border: 1px solid rgba(118,88,59,0.60);
+    color: #e8c89a;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 30px;
+    margin-bottom: 22px;
+}
 
-    position:absolute;
+.connectx-brand-section .brand-heading {
+    font-size: clamp(30px, 4vw, 52px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
 
-    left:0;
-    top:16px;
+.connectx-brand-section .brand-heading span {
+    color: #e8c89a;
+}
 
-    width:42px;
-    height:42px;
+.connectx-brand-section .brand-desc {
+    font-size: 17px;
+    line-height: 1.85;
+    color: rgba(255,255,255,0.80);
+    margin-bottom: 36px;
+    max-width: 480px;
+}
 
-    background:#76583b;
+/* CTA button for brand section */
+.btn-brand-explore {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 36px;
+    background: #0c3a30;
+    color: #ffd2b1;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 2px solid #0c3a30;
+    transition: all .3s ease;
+    letter-spacing: 0.3px;
+}
 
-    border-radius:50%;
+.btn-brand-explore i {
+    font-size: 14px;
+    transition: transform .3s ease;
+}
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.btn-brand-explore:hover {
+    background: transparent;
+    color: #ffd2b1;
+    border-color: #ffd2b1;
+}
 
-    color:#fff;
+.btn-brand-explore:hover i {
+    transform: translateX(4px);
+}
 
-    font-size:18px;
-    font-weight:700;
+/* ---- Points list — high specificity to override global fancy-banner-seven li styles ---- */
+.connectx-brand-section .bg-wrapper .connectx-points,
+.connectx-points {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Override the white-card style from style.min.css for fancy-banner-seven .bg-wrapper li */
+.connectx-brand-section .bg-wrapper .connectx-points li,
+.connectx-brand-section.fancy-banner-seven .bg-wrapper li.connectx-points-item,
+.connectx-points li {
+    position: relative !important;
+    color: #ffffff !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+    padding: 18px 20px 18px 68px !important;
+    margin-bottom: 10px !important;
+    border-radius: 14px !important;
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.13) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    transition: background .25s ease, border-color .25s ease !important;
+}
+
+.connectx-brand-section .bg-wrapper .connectx-points li:hover,
+.connectx-points li:hover {
+    background: rgba(255,255,255,0.14) !important;
+    border-color: rgba(232,200,154,0.40) !important;
+}
+
+.connectx-brand-section .bg-wrapper .connectx-points li:last-child,
+.connectx-points li:last-child {
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.13) !important;
+}
+
+/* Override the orange/peach bullet from style.min.css fancy-banner-seven .bg-wrapper li:before */
+.connectx-brand-section .bg-wrapper .connectx-points li::before,
+.connectx-brand-section.fancy-banner-seven .bg-wrapper .connectx-points li::before,
+.connectx-points li::before {
+    content: "✓" !important;
+    position: absolute !important;
+    left: 16px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 36px !important;
+    height: 36px !important;
+    background: #0c3a30 !important;
+    border: 2px solid rgba(232,200,154,0.50) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #e8c89a !important;
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    font-family: inherit !important;
+}
+
+/* Override the after pseudo-element (check icon overlay from global) */
+.connectx-brand-section .bg-wrapper .connectx-points li::after,
+.connectx-brand-section.fancy-banner-seven .bg-wrapper .connectx-points li::after,
+.connectx-points li::after {
+    display: none !important;
 }
 
 @media(max-width:991px){
-
-    .connectx-brand-section .bg-wrapper{
-        min-height:auto;
+    .connectx-brand-section.fancy-banner-seven .bg-wrapper {
+        min-height: auto;
     }
-
-    .connectx-points li{
-        font-size:17px;
-        padding-left:60px;
+    .connectx-brand-section .brand-desc {
+        max-width: 100%;
     }
+    .connectx-brand-section .bg-wrapper .connectx-points li,
+    .connectx-points li {
+        font-size: 15px !important;
+        padding-left: 60px !important;
+    }
+}
 
+@media(max-width:767px){
+    .connectx-brand-section .brand-heading {
+        font-size: 26px;
+    }
+    .connectx-brand-section .bg-wrapper .connectx-points li,
+    .connectx-points li {
+        font-size: 14px !important;
+        padding: 14px 16px 14px 56px !important;
+    }
+    .connectx-brand-section .bg-wrapper .connectx-points li::before,
+    .connectx-points li::before {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 13px !important;
+        left: 14px !important;
+    }
 }
 
 /* *4. Sponsorship Categories* */
@@ -451,7 +592,7 @@ CTA SECTION
 }
 
 .cta-content .sc-title{
-    color:#76583b;
+    color:#0c3a30;
 
     margin-bottom:15px;
 
@@ -503,7 +644,7 @@ CTA SECTION
 
     height:28px;
 
-    background:#76583b;
+    background:#0c3a30;
 
     color:#fff;
 
@@ -815,6 +956,55 @@ CTA SECTION
     }
 }
 
+/* ---- Checklist Style (Speaker page matching layout) ---- */
+.checklist-style {
+    padding: 0;
+    margin: 25px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+}
+
+.checklist-style li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #10221c;
+}
+
+.checklist-style .check-icon {
+    width: 24px;
+    height: 24px;
+    background: #0c3a30;
+    color: #ffffff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+@media (max-width: 991px) {
+    .checklist-style {
+        display: inline-flex;
+        text-align: left;
+        align-items: flex-start;
+        margin: 25px auto 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .checklist-style li {
+        font-size: 15px;
+    }
+}
+
 /* fifth section */
 
 
@@ -829,7 +1019,7 @@ CTA SECTION
             <!-- LEFT CONTENT -->
             <div class="col-lg-6">
 
-                <div class="sponsor-content wow fadeInUp">
+                <div class="sponsor-content wow fadeInUp d-flex flex-column">
 
                     <h1>
                         Partner in Shaping India’s <br>
@@ -842,11 +1032,27 @@ CTA SECTION
                         visibility, influence, and meaningful engagement with
                         future-ready talent and ecosystems.
                     </p>
-<div class="sponsor-cta">
-    <a href="#sponsor-form" class="btn-become-sponsor">
-        Become a Sponsor
-    </a>
-</div>
+
+                    <ul class="checklist-style style-none mb-30">
+                        <li>
+                            <span class="check-icon"><i class="bi bi-check-lg"></i></span>
+                            <span>Strategic Entrepreneurial Guidance & Growth Support</span>
+                        </li>
+                        <li>
+                            <span class="check-icon"><i class="bi bi-check-lg"></i></span>
+                            <span>Networking with Industry Experts & Global Leaders</span>
+                        </li>
+                        <li>
+                            <span class="check-icon"><i class="bi bi-check-lg"></i></span>
+                            <span>Access to attend premium startup & leadership events</span>
+                        </li>
+                    </ul>
+
+                    <div class="sponsor-cta">
+                        <a href="#sponsor-form" class="btn-become-sponsor">
+                            Become a Sponsor
+                        </a>
+                    </div>
                 </div>
 
             </div>
@@ -1098,55 +1304,53 @@ Why Connect With ConnectX                </h2>
 
 
 
-<!-- third section -->
+<!-- third section — Brand Presence -->
 <section class="fancy-banner-seven box-layout connectx-brand-section pt-120 lg-pt-80">
 
-    <div class="bg-wrapper border-40 position-relative z-1 overflow-hidden pt-140 pb-140 lg-pt-90 lg-pb-90">
+    <div class="bg-wrapper border-40 position-relative z-1 overflow-hidden pt-120 pb-120 lg-pt-80 lg-pb-80">
 
-        <div class="container position-relative z-2">
+        <div class="container position-relative" style="z-index:2;">
 
-            <div class="row align-items-center">
+            <div class="row align-items-center gy-5">
 
                 <!-- LEFT CONTENT -->
                 <div class="col-lg-6">
 
-                    <div class="title-two mb-40">
+                    <span class="brand-tag">Sponsorship Exposure</span>
 
-                        <!-- <div class="upper-title-two text-white mb-15">
-                            BRAND PRESENCE ACROSS CONNECTX
-                        </div> -->
+                    <h2 class="brand-heading">
+                        Your Brand, Everywhere<br>
+                        <span>ConnectX Shows Up</span>
+                    </h2>
 
-                        <h2 class="text-white">
-                          BRAND PRESENCE ACROSS CONNECTX
-                        </h2>
+                    <p class="brand-desc">
+                        As a ConnectX sponsor, your brand is woven into every
+                        high-impact format — from podcasts and digital campaigns
+                        to live events, creator lounges, and award platforms.
+                        Real visibility. Real reach. Real results.
+                    </p>
 
-                        <p class="text-white mt-25 opacity-75">
-                           Your brand is integrated across all high-engagement formats within ConnectX
-
-                        </p>
-
-                    </div>
-
-                    <!-- <a href="#" class="btn-twenty">
-                        Become a Sponsor
-                    </a> -->
+                    <a href="#sponsor-form" class="btn-brand-explore">
+                        Explore Sponsorship Packages
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
 
                 </div>
 
                 <!-- RIGHT LIST -->
                 <div class="col-lg-5 ms-auto">
 
-                    <ul class="style-none connectx-points lg-mt-50">
+                    <ul class="style-none connectx-points">
 
-                        <li>Podcasts & Video Content</li>
+                        <li>Podcasts &amp; Video Content</li>
 
-                        <li>Creator Lounges & Networking Spaces</li>
+                        <li>Creator Lounges &amp; Networking Spaces</li>
 
-                        <li>Meetups & Roundtables</li>
+                        <li>Meetups &amp; Roundtables</li>
 
-                        <li>Awards & Recognition Platforms</li>
+                        <li>Awards &amp; Recognition Platforms</li>
 
-                        <li>Digital Campaigns & Collaborations</li>
+                        <li>Digital Campaigns &amp; Collaborations</li>
 
                     </ul>
 
@@ -1155,10 +1359,6 @@ Why Connect With ConnectX                </h2>
             </div>
 
         </div>
-
-        <img src="images/shape/shape_50.svg"
-             alt=""
-             class="lazy-img shapes shape_01">
 
     </div>
 

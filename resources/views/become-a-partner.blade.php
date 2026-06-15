@@ -221,6 +221,98 @@
     }
 }
 
+/* ---- Checklist Style (Speaker page matching layout) ---- */
+.checklist-style {
+    padding: 0;
+    margin: 25px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+}
+
+/* ---- Expanding Section Professional Adjustments ---- */
+.connectx-expand-pro-img {
+    border-radius: 20px;
+    box-shadow: 0 24px 50px rgba(12, 58, 48, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.connectx-expand-pro-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 32px 60px rgba(12, 58, 48, 0.12);
+}
+
+.connectx-expand-section .title-three h2 {
+    font-size: clamp(32px, 3.5vw, 44px);
+    font-weight: 800;
+    color: #0c3a30;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.connectx-expand-section .text-lg {
+    font-size: 17px;
+    color: #54615a;
+    line-height: 1.7;
+}
+
+/* Override the list sizes for a more sleek look */
+.connectx-expand-points li {
+    font-size: 16px !important;
+    line-height: 1.6em !important;
+    padding-left: 42px !important;
+    margin-bottom: 14px !important;
+    color: #10221c !important;
+    font-weight: 500;
+}
+
+.connectx-expand-points li:before {
+    width: 26px !important;
+    height: 26px !important;
+    font-size: 11px !important;
+    top: 0 !important;
+}
+
+.checklist-style li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #10221c;
+}
+
+.checklist-style .check-icon {
+    width: 24px;
+    height: 24px;
+    background: #0c3a30;
+    color: #ffffff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+@media (max-width: 991px) {
+    .checklist-style {
+        display: inline-flex;
+        text-align: left;
+        align-items: flex-start;
+        margin: 25px auto 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .checklist-style li {
+        font-size: 15px;
+    }
+}
+
 </style>
 
 
@@ -233,7 +325,7 @@
             <!-- LEFT SIDE -->
             <div class="col-lg-5">
 
-                <div class="partner-content wow fadeInUp">
+                <div class="partner-content wow fadeInUp d-flex flex-column">
 
                     <span class="partner-tag">
                         Growth Partner
@@ -249,6 +341,21 @@
                         with us, you become a part of a vibrant ecosystem that
                         nurtures future leaders, entrepreneurs, and changemakers.
                     </p>
+
+                    <ul class="checklist-style style-none">
+                        <li>
+                            <span class="check-icon"><i class="bi bi-check-lg"></i></span>
+                            <span>Strategic Entrepreneurial Guidance & Growth Support</span>
+                        </li>
+                        <li>
+                            <span class="check-icon"><i class="bi bi-check-lg"></i></span>
+                            <span>Networking with Industry Experts & Global Leaders</span>
+                        </li>
+                        <li>
+                            <span class="check-icon"><i class="bi bi-check-lg"></i></span>
+                            <span>Access to attend premium startup & leadership events</span>
+                        </li>
+                    </ul>
 
                 </div>
 
@@ -746,13 +853,13 @@ EXPANDING ACROSS INDUSTRIES
 
                 <div class="ps-xl-5 ms-xxl-4">
 
-                    <div class="title-three mb-35 md-mb-20">
+                    <div class="title-three mb-25 md-mb-20">
                         <h2>
                             Expanding Across Industries <br> and Regions
                         </h2>
                     </div>
 
-                    <p class="text-lg mb-40 lg-mb-30">
+                    <p class="text-lg mb-35 lg-mb-25">
                         ConnectX is building a network of creators, voices, and collaborators across industries and geographies, enabling partners to access a diverse and growing ecosystem.
                     </p>
 
@@ -770,10 +877,10 @@ EXPANDING ACROSS INDUSTRIES
             <!-- IMAGE SIDE -->
             <div class="col-lg-6 col-md-10 m-auto wow fadeInLeft">
 
-                <div class="media-wrapper md-mt-60">
+                <div class="media-wrapper md-mt-60 pe-xl-4">
                     <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80"
                         alt="Global business collaboration"
-                        class="lazy-img w-100" style="border-radius: 16px;">
+                        class="lazy-img w-100 connectx-expand-pro-img">
                 </div>
 
             </div>
