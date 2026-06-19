@@ -14,8 +14,8 @@ $seo = [
 @extends('layout.app')
 
 @push('seo')
-{{-- ── Events Page: EventSeries + Individual Event JSON-LD ─── --}}
 <script type="application/ld+json">
+@verbatim
 {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -98,6 +98,7 @@ $seo = [
         }
     ]
 }
+@endverbatim
 </script>
 @endpush
 

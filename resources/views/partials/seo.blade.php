@@ -1,20 +1,11 @@
-{{--
+<!--
     ============================================================
-    SEO PARTIAL — resources/views/partials/seo.blade.php
+    SEO PARTIAL - resources/views/partials/seo.blade.php
     ============================================================
     Usage: include at the top of every page layout.
-    Each page can pass a $seo[] array via @php before @extends:
-
-    @php $seo = [
-        'title'       => 'Page Title | ConnectX',
-        'description' => 'A compelling 150-160 char description.',
-        'keywords'    => 'keyword1, keyword2, keyword3',
-        'image'       => asset('images/assets/ogg.png'),
-        'type'        => 'website',          // og:type
-        'robots'      => 'index, follow',
-    ]; @endphp
+    Each page can pass a $seo[] array via php before extends.
     ============================================================
---}}
+-->
 
 @php
     // ── Site-wide defaults ──────────────────────────────────────
@@ -61,8 +52,8 @@
 
 {{-- ── Twitter Card ─────────────────────────────────────────── --}}
 <meta name="twitter:card"        content="summary_large_image">
-<meta name="twitter:site"        content="@ConnectX">
-<meta name="twitter:creator"     content="@YoungChanakya">
+<meta name="twitter:site"        content="@@ConnectX">
+<meta name="twitter:creator"     content="@@YoungChanakya">
 <meta name="twitter:title"       content="{{ $title }}">
 <meta name="twitter:description" content="{{ $description }}">
 <meta name="twitter:image"       content="{{ $ogImage }}">

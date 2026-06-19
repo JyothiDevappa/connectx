@@ -17,8 +17,8 @@ $seo = [
 @extends('layout.app')
 
 @push('seo')
-{{-- ── Homepage: WebSite + Organization Schema.org JSON-LD ─── --}}
 <script type="application/ld+json">
+@verbatim
 {
     "@context": "https://schema.org",
     "@graph": [
@@ -72,8 +72,10 @@ $seo = [
         }
     ]
 }
+@endverbatim
 </script>
 @endpush
+
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}?v={{ time() }}">

@@ -14,8 +14,8 @@ $seo = [
 @extends('layout.app')
 
 @push('seo')
-{{-- ── Partner Page: Service Schema.org JSON-LD ─── --}}
 <script type="application/ld+json">
+@verbatim
 {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -44,6 +44,7 @@ $seo = [
         ]
     }
 }
+@endverbatim
 </script>
 @endpush
 

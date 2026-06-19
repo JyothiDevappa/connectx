@@ -14,8 +14,8 @@ $seo = [
 @extends('layout.app')
 
 @push('seo')
-{{-- ── Connecters List: CollectionPage + ItemList Schema.org JSON-LD ─── --}}
 <script type="application/ld+json">
+@verbatim
 {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -34,6 +34,7 @@ $seo = [
         "url": "https://connectx.youngchanakya.com/"
     }
 }
+@endverbatim
 </script>
 @endpush
 
@@ -555,6 +556,137 @@ $seo = [
         background: rgba(255, 255, 255, 0.15);
         opacity: 1;
     }
+
+    /* Application Form Styles */
+    .cx-input {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+        padding: 14px 18px;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+    }
+    .cx-input:focus {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: #ffd2b1;
+        box-shadow: 0 0 0 3px rgba(255, 210, 177, 0.15);
+        color: #ffffff;
+    }
+    .cx-input::placeholder {
+        color: rgba(255, 255, 255, 0.4);
+    }
+    .form-select.cx-input {
+        background-color: rgba(255, 255, 255, 0.05);
+        color: rgba(255, 255, 255, 0.7);
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 16px 12px;
+        appearance: none;
+        -webkit-appearance: none;
+    }
+    .form-select.cx-input option {
+        background: #090d16;
+        color: #ffffff;
+    }
+    .application-submit-btn {
+        background: linear-gradient(135deg, #ffffff 0%, #ffd2b1 100%);
+        color: #0c3a30;
+        border: none;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+    }
+    .application-submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(255, 210, 177, 0.2);
+        color: #0c3a30;
+    }
+    .cx-label {
+        color: #ffd2b1;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        display: block;
+    }
+    @media (max-width: 767px) {
+        .application-section {
+            padding-top: 60px !important;
+            padding-bottom: 60px !important;
+        }
+        .application-section h2.trust-headline {
+            font-size: 28px;
+        }
+    }
 </style>
+
+<!-- APPLICATION FORM SECTION -->
+<div class="application-section py-5 position-relative" style="background-color: #090d16; margin-top: 80px; border-top: 1px solid rgba(255,210,177,0.1);">
+    <div class="container py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-5">
+                <div class="trust-badge-pill mb-4">
+                    <i class="bi bi-person-lines-fill"></i> Join the Directory
+                </div>
+                <h2 class="trust-headline mb-4" style="font-size: clamp(32px, 4vw, 48px);">Apply to be featured in the ecosystem.</h2>
+                <p class="text-white opacity-75 fs-6 mb-5" style="max-width: 500px; line-height: 1.6;">
+                    Are you a founder, creator, investor, or industry leader? Submit your profile for verification. Once approved, you will join an exclusive network of market leaders and innovators.
+                </p>
+                <ul class="style-none connectx-partner-list text-white opacity-75" style="list-style: none; padding: 0;">
+                    <li class="mb-3 d-flex align-items-center"><i class="bi bi-check2-circle me-3" style="color: #ffd2b1; font-size: 1.2rem;"></i> Gain global ecosystem visibility</li>
+                    <li class="mb-3 d-flex align-items-center"><i class="bi bi-check2-circle me-3" style="color: #ffd2b1; font-size: 1.2rem;"></i> Access exclusive collaborative opportunities</li>
+                    <li class="mb-3 d-flex align-items-center"><i class="bi bi-check2-circle me-3" style="color: #ffd2b1; font-size: 1.2rem;"></i> Network with verified C-Suite leaders</li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-7">
+                <div class="trust-metric-box">
+                    <form action="#" method="POST">
+                        @csrf
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label class="cx-label">Full Name *</label>
+                                <input type="text" class="form-control cx-input" name="full_name" placeholder="E.g. John Doe" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="cx-label">Professional Email *</label>
+                                <input type="email" class="form-control cx-input" name="email" placeholder="john@company.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="cx-label">LinkedIn Profile URL *</label>
+                                <input type="url" class="form-control cx-input" name="linkedin" placeholder="https://linkedin.com/in/..." required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="cx-label">Ecosystem Vertical *</label>
+                                <select class="form-select cx-input" name="vertical" required>
+                                    <option value="" selected disabled>Select your segment</option>
+                                    <option value="Business & Growth">Business & Growth</option>
+                                    <option value="Innovation & Tech">Innovation & Tech</option>
+                                    <option value="Finance & Policy">Finance & Policy</option>
+                                    <option value="Creative & Media">Creative & Media</option>
+                                    <option value="Social & Academic">Social & Academic</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="cx-label">Current Role & Company *</label>
+                                <input type="text" class="form-control cx-input" name="role_company" placeholder="E.g. Founder at TechCorp" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="cx-label">Why should you be featured? (Impact) *</label>
+                                <textarea class="form-control cx-input" name="bio" rows="3" placeholder="Briefly describe your market impact, achievements, or ecosystem contribution..." required></textarea>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn w-100 py-3 fw-bold text-uppercase application-submit-btn" style="letter-spacing: 1px; font-size: 0.9rem;">
+                                    Submit Application <i class="bi bi-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @endsection
