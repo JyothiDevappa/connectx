@@ -1,2 +1,32 @@
+# robots.txt — ConnectX (https://connectx.youngchanakya.com)
+# Last updated: 2026-06-19
+
+# ── Allow all search engine crawlers ─────────────────────────────
 User-agent: *
-Disallow:
+
+# Allow all public pages
+Allow: /
+Allow: /about
+Allow: /become-a-partner
+Allow: /become-a-sponser
+Allow: /connecters-list
+Allow: /events
+Allow: /contact
+
+# ── Disallow private/system paths ────────────────────────────────
+Disallow: /storage/
+Disallow: /bootstrap/
+Disallow: /.env
+Disallow: /config/
+Disallow: /database/
+Disallow: /vendor/
+Disallow: /node_modules/
+Disallow: /artisan
+Disallow: /composer.json
+Disallow: /composer.lock
+
+# ── Sitemap location ─────────────────────────────────────────────
+Sitemap: https://connectx.youngchanakya.com/sitemap.xml
+
+# ── Crawl-delay (optional, courtesy for bots) ────────────────────
+Crawl-delay: 10

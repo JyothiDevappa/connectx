@@ -1,10 +1,86 @@
+@php
+/**
+ * Homepage SEO Data
+ * ─────────────────
+ * Defines dynamic meta title, description, keywords, and OG image
+ * consumed by resources/views/partials/seo.blade.php (included in layout/app.blade.php).
+ */
+$seo = [
+    'title'       => 'ConnectX — Global Creator Ecosystem by Young Chanakya',
+    'description' => 'ConnectX is a premium global creator ecosystem connecting influencers, podcasters, speakers, founders, and brands through collaborations, exclusive events, and creator lounges. Partner with the future of influence.',
+    'keywords'    => 'ConnectX, Young Chanakya ConnectX, creator ecosystem, influencer network, brand partnerships, creator lounges, podcasts, roundtables, India creator network, digital creators, become a partner',
+    'image'       => asset('images/assets/ogg.png'),
+    'type'        => 'website',
+];
+@endphp
+
 @extends('layout.app')
+
+@push('seo')
+{{-- ── Homepage: WebSite + Organization Schema.org JSON-LD ─── --}}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebSite",
+            "@id": "https://connectx.youngchanakya.com/#website",
+            "name": "ConnectX",
+            "url": "https://connectx.youngchanakya.com/",
+            "description": "Global creator ecosystem by Young Chanakya connecting influencers, podcasters, speakers, and brands.",
+            "inLanguage": "en-IN",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://connectx.youngchanakya.com/connecters-list?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+            }
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://connectx.youngchanakya.com/#organization",
+            "name": "ConnectX by Young Chanakya",
+            "url": "https://connectx.youngchanakya.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://connectx.youngchanakya.com/images/logo/connectx.png",
+                "width": 400,
+                "height": 100
+            },
+            "image": "https://connectx.youngchanakya.com/images/assets/ogg.png",
+            "description": "ConnectX is a premium global creator ecosystem connecting influencers, podcasters, speakers, founders, and brands through collaborations, exclusive events, and creator lounges.",
+            "foundingDate": "2024",
+            "founder": {
+                "@type": "Person",
+                "name": "Young Chanakya",
+                "jobTitle": "Founder & Visionary"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "youngchanakyaconnect@gmail.com",
+                "contactType": "customer service",
+                "availableLanguage": ["English", "Hindi"]
+            },
+            "sameAs": [
+                "https://www.linkedin.com/company/connectx",
+                "https://www.instagram.com/connectx",
+                "https://twitter.com/connectx",
+                "https://www.youtube.com/@connectx"
+            ]
+        }
+    ]
+}
+</script>
+@endpush
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}?v={{ time() }}">
 <link rel="stylesheet" href="{{ asset('css/custom-header.css') }}">
-
 @endpush
+
+
 
 @section('content')
 
@@ -146,7 +222,7 @@
     </div>
     <div class="partner-grid">
         <div class="p-card rv" style="transition-delay:0s">
-            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80" alt="Business">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80" alt="Business and Startup Voices — ConnectX Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-cat">01</div>
                 <div class="p-name">Business & Startup Voices</div>
@@ -154,7 +230,7 @@
             <div class="p-arrow">↗</div>
         </div>
         <div class="p-card rv" style="transition-delay:0.07s">
-            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt="Lifestyle">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt="Lifestyle and Wellness Creators — ConnectX Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-cat">02</div>
                 <div class="p-name">Lifestyle & Wellness</div>
@@ -162,7 +238,7 @@
             <div class="p-arrow">↗</div>
         </div>
         <div class="p-card rv" style="transition-delay:0.14s">
-            <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&q=80" alt="Sports">
+            <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&q=80" alt="Sports and Adventure Creators — ConnectX Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-cat">03</div>
                 <div class="p-name">Sports & Adventure</div>
@@ -170,7 +246,7 @@
             <div class="p-arrow">↗</div>
         </div>
         <div class="p-card rv" style="transition-delay:0.21s">
-            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80" alt="Digital Media">
+            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80" alt="Digital Media Creators — ConnectX Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-cat">04</div>
                 <div class="p-name">Digital Media Creators</div>
@@ -178,7 +254,7 @@
             <div class="p-arrow">↗</div>
         </div>
         <div class="p-card rv" style="transition-delay:0.28s">
-            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=600&q=80" alt="News">
+            <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=600&q=80" alt="News and Commentary Creators — ConnectX Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-cat">05</div>
                 <div class="p-name">News & Commentary</div>
@@ -186,7 +262,7 @@
             <div class="p-arrow">↗</div>
         </div>
         <div class="p-card rv" style="transition-delay:0.35s">
-            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&q=80" alt="Motivation">
+            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&q=80" alt="Motivation and Storytelling Creators — ConnectX Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-cat">06</div>
                 <div class="p-name">Motivation & Storytelling</div>
@@ -194,7 +270,7 @@
             <div class="p-arrow">↗</div>
         </div>
         <div class="p-card rv" style="transition-delay:0.42s">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Tech">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Tech and Innovation Creators — ConnectX Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-cat">07</div>
                 <div class="p-name">Tech & Innovation</div>
@@ -203,7 +279,7 @@
         </div>
 
         <div class="p-card rv" style="transition-delay:0.49s">
-            <img src="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=600&q=80" alt="Regional">
+            <img src="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=600&q=80" alt="Regional and Cultural Creators — ConnectX Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-cat">08</div>
                 <div class="p-name">Regional & Cultural Creators</div>
@@ -213,7 +289,7 @@
 
 
         <div class="p-card rv" style="transition-delay:0.56s">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Education">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Education and Learning Creators — ConnectX Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-cat">09</div>
                 <div class="p-name">Education & Learning</div>

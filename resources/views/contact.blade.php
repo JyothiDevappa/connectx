@@ -1,10 +1,67 @@
+@php
+/**
+ * Contact Page SEO Data
+ */
+$seo = [
+    'title'       => 'Contact ConnectX — Get in Touch with Our Team',
+    'description' => 'Contact ConnectX to inquire about partnerships, sponsorships, creator collaborations, or any questions about our global creator ecosystem. Email us at youngchanakyaconnect@gmail.com.',
+    'keywords'    => 'contact ConnectX, ConnectX email, ConnectX partnership inquiry, reach ConnectX, Young Chanakya contact, creator platform contact',
+    'image'       => asset('images/assets/ogg.png'),
+    'type'        => 'website',
+    'robots'      => 'index, follow',
+];
+@endphp
+
 @extends('layout.app')
+
+@push('seo')
+{{-- ── Contact Page: ContactPage + LocalBusiness JSON-LD ─── --}}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": "https://connectx.youngchanakya.com/contact#webpage",
+    "url": "https://connectx.youngchanakya.com/contact",
+    "name": "Contact ConnectX — Get in Touch",
+    "description": "Contact ConnectX for partnership, sponsorship, and creator collaboration inquiries.",
+    "inLanguage": "en-IN",
+    "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://connectx.youngchanakya.com/#website"
+    },
+    "mainEntity": {
+        "@type": "Organization",
+        "name": "ConnectX by Young Chanakya",
+        "url": "https://connectx.youngchanakya.com/",
+        "email": "youngchanakyaconnect@gmail.com",
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "email": "youngchanakyaconnect@gmail.com",
+                "availableLanguage": ["English", "Hindi"]
+            },
+            {
+                "@type": "ContactPoint",
+                "contactType": "sales",
+                "email": "youngchanakyaconnect@gmail.com",
+                "contactOption": "TollFree",
+                "availableLanguage": ["English", "Hindi"]
+            }
+        ]
+    }
+}
+</script>
+@endpush
+
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
 @endpush
+
 @section('content')
 
 <style>
+
 .hero-heading {
     color: #ffffff !important;
     position: relative;

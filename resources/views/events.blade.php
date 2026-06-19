@@ -1,8 +1,111 @@
+@php
+/**
+ * Events Page SEO Data
+ */
+$seo = [
+    'title'       => 'Events — Roundtables, Podcasts & Creator Sessions | ConnectX',
+    'description' => 'Explore upcoming ConnectX events — exclusive roundtables, podcast recordings, keynote speakers, and creator networking sessions. Join elite business spaces for market changemakers.',
+    'keywords'    => 'ConnectX events, creator roundtables, podcast sessions, keynote speakers, networking events, creator sessions India, ConnectX sessions 2026',
+    'image'       => asset('images/assets/ogg.png'),
+    'type'        => 'website',
+];
+@endphp
+
 @extends('layout.app')
+
+@push('seo')
+{{-- ── Events Page: EventSeries + Individual Event JSON-LD ─── --}}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "ConnectX Upcoming Events 2026",
+    "description": "Exclusive roundtables, podcast sessions, keynote speakers, and creator networking sessions by ConnectX.",
+    "url": "https://connectx.youngchanakya.com/events",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@type": "Event",
+                "name": "C-Suite Strategy: Transcending Market Vulnerabilities",
+                "description": "A closed-door collective for legacy operators and enterprise founders managing tier-1 capital models.",
+                "startDate": "2026-07-18",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "location": {
+                    "@type": "Place",
+                    "name": "Bengaluru Hub",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Bengaluru",
+                        "addressCountry": "IN"
+                    }
+                },
+                "organizer": {
+                    "@type": "Organization",
+                    "name": "ConnectX by Young Chanakya",
+                    "url": "https://connectx.youngchanakya.com"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@type": "Event",
+                "name": "ConnectX Paradigm Shift: Building Scalable Infrastructure",
+                "description": "Deconstructing modern tech architectures with elite specialists deploying reliable, global structures.",
+                "startDate": "2026-07-24",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+                "location": {
+                    "@type": "VirtualLocation",
+                    "url": "https://connectx.youngchanakya.com/events"
+                },
+                "organizer": {
+                    "@type": "Organization",
+                    "name": "ConnectX by Young Chanakya",
+                    "url": "https://connectx.youngchanakya.com"
+                }
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+                "@type": "Event",
+                "name": "Keynote: Scaling Systems and Institutional Funding",
+                "description": "An open-floor assembly pulling back the curtain on valuation strategies and board allocations.",
+                "startDate": "2026-08-02",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "location": {
+                    "@type": "Place",
+                    "name": "Leela Palace",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Bengaluru",
+                        "addressCountry": "IN"
+                    }
+                },
+                "organizer": {
+                    "@type": "Organization",
+                    "name": "ConnectX by Young Chanakya",
+                    "url": "https://connectx.youngchanakya.com"
+                }
+            }
+        }
+    ]
+}
+</script>
+@endpush
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
 @endpush
+
+
 
 @section('content')
 <style>

@@ -1,13 +1,59 @@
+@php
+/**
+ * Become a Partner Page SEO Data
+ */
+$seo = [
+    'title'       => 'Become a Partner — Join the ConnectX Creator Ecosystem',
+    'description' => 'Partner with ConnectX by Young Chanakya to access a premium creator ecosystem. Content partnerships, brand collaborations, media partnerships, and community connections await.',
+    'keywords'    => 'become a ConnectX partner, creator partnership, brand collaboration ConnectX, media partnership India, content creator partner, Young Chanakya partner',
+    'image'       => asset('images/assets/ogg.png'),
+    'type'        => 'website',
+];
+@endphp
+
 @extends('layout.app')
+
+@push('seo')
+{{-- ── Partner Page: Service Schema.org JSON-LD ─── --}}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "ConnectX Partnership Program",
+    "url": "https://connectx.youngchanakya.com/become-a-partner",
+    "description": "Partner with ConnectX to access a premium global creator ecosystem. Content partnerships, brand collaborations, media partnerships, and community connections.",
+    "provider": {
+        "@type": "Organization",
+        "name": "ConnectX by Young Chanakya",
+        "url": "https://connectx.youngchanakya.com/"
+    },
+    "serviceType": "Creator Ecosystem Partnership",
+    "areaServed": {
+        "@type": "Country",
+        "name": "India"
+    },
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Partnership Types",
+        "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Content Partnerships"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Brand Collaborations"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Media Partnerships"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Community Partnerships"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Event Partnerships"}}
+        ]
+    }
+}
+</script>
+@endpush
+
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
+<link rel="stylesheet" href="{{ asset('css/partner-page.css') }}">
+@endpush
 
 @section('content')
 
-@push('styles')
-
-<link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
-<link rel="stylesheet" href="{{ asset('css/partner-page.css') }}">
-
-@endpush
 <style>
 
 /* ==========================================

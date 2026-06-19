@@ -1,10 +1,57 @@
+@php
+/**
+ * Become a Sponsor Page SEO Data
+ */
+$seo = [
+    'title'       => 'Become a Sponsor — Community & Sponsorship Opportunities | ConnectX',
+    'description' => 'Sponsor ConnectX events and creator programs to amplify your brand reach. Access title sponsorships, event sponsorships, community sponsorships, and creator ecosystem packages.',
+    'keywords'    => 'ConnectX sponsorship, sponsor ConnectX, event sponsorship India, brand visibility creator events, community sponsor Young Chanakya, creator platform sponsorship',
+    'image'       => asset('images/assets/ogg.png'),
+    'type'        => 'website',
+];
+@endphp
+
 @extends('layout.app')
 
-@section('content')
+@push('seo')
+{{-- ── Sponsor Page: Service Schema.org JSON-LD ─── --}}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "ConnectX Sponsorship Program",
+    "url": "https://connectx.youngchanakya.com/become-a-sponser",
+    "description": "Sponsor ConnectX events and creator programs to amplify your brand reach. Access title, event, community, and ecosystem sponsorship packages.",
+    "provider": {
+        "@type": "Organization",
+        "name": "ConnectX by Young Chanakya",
+        "url": "https://connectx.youngchanakya.com/"
+    },
+    "serviceType": "Event & Creator Ecosystem Sponsorship",
+    "areaServed": {
+        "@type": "Country",
+        "name": "India"
+    },
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Sponsorship Packages",
+        "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Title Sponsorship"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Event Sponsorship"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Community Sponsorship"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Creator Ecosystem Sponsorship"}}
+        ]
+    }
+}
+</script>
+@endpush
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
 @endpush
+
+@section('content')
+
 
 <style>
 

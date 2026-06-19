@@ -1,10 +1,48 @@
+@php
+/**
+ * Connecters Directory Page SEO Data
+ */
+$seo = [
+    'title'       => 'Connecters Directory — Verified Ecosystem Leaders & Creators | ConnectX',
+    'description' => 'Browse the ConnectX verified directory of ecosystem leaders, creators, entrepreneurs, innovators, and industry experts across business, tech, finance, media, and social impact sectors.',
+    'keywords'    => 'ConnectX directory, creator directory, influencer list, ecosystem leaders India, verified creators ConnectX, business leaders directory, entrepreneur network India',
+    'image'       => asset('images/assets/ogg.png'),
+    'type'        => 'website',
+];
+@endphp
+
 @extends('layout.app')
+
+@push('seo')
+{{-- ── Connecters List: CollectionPage + ItemList Schema.org JSON-LD ─── --}}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://connectx.youngchanakya.com/connecters-list#webpage",
+    "url": "https://connectx.youngchanakya.com/connecters-list",
+    "name": "Connecters Directory — Verified Ecosystem Leaders & Creators | ConnectX",
+    "description": "Browse the ConnectX verified directory of ecosystem leaders, creators, entrepreneurs, innovators, and industry experts.",
+    "inLanguage": "en-IN",
+    "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://connectx.youngchanakya.com/#website"
+    },
+    "about": {
+        "@type": "Organization",
+        "name": "ConnectX by Young Chanakya",
+        "url": "https://connectx.youngchanakya.com/"
+    }
+}
+</script>
+@endpush
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
 @endpush
 
 @section('content')
+
 <style>
     /* CONNECTORS AUTHORITY DESIGN SYSTEM */
     .authority-hero-section {

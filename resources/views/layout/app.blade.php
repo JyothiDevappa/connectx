@@ -4,56 +4,53 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="keywords" content="Digital marketing agency, Digital marketing company, Digital marketing services">
+    {{-- ============================================================
+         SEO PARTIAL — Dynamic title, description, OG, Twitter Card,
+         canonical URL, favicon, robots. Overridden per-page via $seo[].
+         ============================================================ --}}
+    @include('partials.seo')
 
-    <meta name="description" content="Babun is a beautiful website template designed for Business & Consulting websites.">
+    {{-- ── Page-level structured data (JSON-LD) injected here ── --}}
+    @stack('seo')
 
-    <meta property="og:site_name" content="Babun">
-    <meta property="og:url" content="https://creativegigstf.com/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Babun - Business & Consulting HTML5 Template">
-    <meta property="og:image" content="{{ asset('images/assets/ogg.png') }}">
+    {{-- ── Google Analytics GA4 (G-0JS1J2H2MQ) ─────────────── --}}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ env('GA_MEASUREMENT_ID', 'G-0JS1J2H2MQ') }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ env('GA_MEASUREMENT_ID', 'G-0JS1J2H2MQ') }}', {
+            'anonymize_ip': true
+        });
+    </script>
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="theme-color" content="#1A4137">
-    <meta name="msapplication-navbutton-color" content="#1A4137">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#1A4137">
-
-    <title>ConnectX</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="56x56"
-        href="{{ asset('images/fav-icon/icon.png') }}">
-
-    <!-- Google Fonts -->
+    {{-- ── Google Fonts ──────────────────────────────────────── --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+    {{-- ── Icon Libraries ────────────────────────────────────── --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- CSS FILES -->
+    {{-- ── Core CSS ───────────────────────────────────────────── --}}
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/custom-header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
-    <!-- GLOBAL TYPOGRAPHY — loaded last so it overrides page-specific CSS -->
+    {{-- Global typography loaded last to override page-specific CSS --}}
     <link rel="stylesheet" href="{{ asset('css/typography.css') }}">
+
+    {{-- ── Page-level styles pushed by child views ───────────── --}}
     @stack('styles')
 
-    <!-- GLOBAL: prevent horizontal overflow on all pages -->
+    {{-- ── Global overflow & layout fixes ───────────────────── --}}
     <style>
         html, body {
             overflow-x: hidden !important;
             max-width: 100%;
         }
-        /* Prevent any direct child of body from overflowing */
         body > * {
             max-width: 100%;
         }
@@ -62,7 +59,7 @@
             margin-right: 0;
             margin-left: 0;
         }
-        /* But preserve Bootstrap grid gutters inside containers */
+        /* Preserve Bootstrap grid gutters inside containers */
         .container > .row,
         .container-fluid > .row,
         .container-xl > .row,
@@ -75,56 +72,40 @@
 
 <body>
 
-    <!-- NAVBAR -->
+    {{-- ── Navbar ─────────────────────────────────────────────── --}}
     @include('layout.navbar')
 
-    <!-- PAGE CONTENT -->
-    <main class="main">
-
+    {{-- ── Page Content ──────────────────────────────────────── --}}
+    <main class="main" id="main-content" role="main">
         @yield('content')
-
     </main>
 
-    <!-- FOOTER -->
+    {{-- ── Footer ─────────────────────────────────────────────── --}}
     @include('layout.footer')
 
-
-
-    <!-- JS FILES -->
-
+    {{-- ── Vendor JS ──────────────────────────────────────────── --}}
     <script src="{{ asset('vendor/jquery.min.js') }}"></script>
-
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-
-    <!-- WOW js -->
+    <!-- WOW.js scroll animations -->
     <script src="{{ asset('vendor/wow/wow.min.js') }}"></script>
-
     <!-- Slick Slider -->
     <script src="{{ asset('vendor/slick/slick.min.js') }}"></script>
-
-    <!-- Fancybox -->
+    <!-- Fancybox lightbox -->
     <script src="{{ asset('vendor/fancybox/dist/jquery.fancybox.min.js') }}"></script>
-
-    <!-- Lazy -->
+    <!-- Lazy load images -->
     <script src="{{ asset('vendor/jquery.lazy.min.js') }}"></script>
-
-    <!-- Counter -->
+    <!-- Counter animation -->
     <script src="{{ asset('vendor/jquery.counterup.min.js') }}"></script>
-
     <script src="{{ asset('vendor/jquery.waypoints.min.js') }}"></script>
-
-    <!-- Validator -->
+    <!-- Form validation -->
     <script src="{{ asset('vendor/validator.js') }}"></script>
 
-    <!-- Theme JS -->
+    {{-- ── Theme & Global Scripts ──────────────────────────── --}}
     <script src="{{ asset('js/theme.js') }}"></script>
-
-    <!-- Global Scroll Behavior -->
     <script src="{{ asset('js/scroll-behavior.js') }}"></script>
-
-    <!-- Global Scripts (Navbar, Menu, Scroll Effects) -->
     <script src="{{ asset('js/global-scripts.js') }}?v={{ time() }}"></script>
 
+    {{-- ── Page-level scripts pushed by child views ─────────── --}}
     @stack('scripts')
 
 </body>

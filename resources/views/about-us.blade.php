@@ -1,10 +1,63 @@
+@php
+/**
+ * About Page SEO Data
+ */
+$seo = [
+    'title'       => 'About ConnectX — Our Vision, Mission & Creator Ecosystem Story',
+    'description' => 'Learn about ConnectX by Young Chanakya — a premium global creator ecosystem built to connect influencers, podcasters, speakers, and brands. Our mission is structured, scalable influence for every creator.',
+    'keywords'    => 'about ConnectX, Young Chanakya vision, creator ecosystem mission, ConnectX story, who is ConnectX, global creator platform, influencer community India',
+    'image'       => asset('images/assets/ogg.png'),
+    'type'        => 'website',
+];
+@endphp
+
 @extends('layout.app')
+
+@push('seo')
+{{-- ── About Page: AboutPage + Organization Schema.org JSON-LD ── --}}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": "https://connectx.youngchanakya.com/about#webpage",
+    "url": "https://connectx.youngchanakya.com/about",
+    "name": "About ConnectX — Our Vision, Mission & Creator Ecosystem Story",
+    "description": "Learn about ConnectX by Young Chanakya — a premium global creator ecosystem built to connect influencers, podcasters, speakers, and brands.",
+    "inLanguage": "en-IN",
+    "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://connectx.youngchanakya.com/#website"
+    },
+    "about": {
+        "@type": "Organization",
+        "name": "ConnectX by Young Chanakya",
+        "url": "https://connectx.youngchanakya.com/",
+        "founder": {
+            "@type": "Person",
+            "name": "Young Chanakya",
+            "jobTitle": "Founder & Visionary",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "ConnectX"
+            }
+        },
+        "foundingDate": "2024",
+        "description": "ConnectX is built to bring creators together in a structured ecosystem where they can connect, collaborate, and be seen.",
+        "numberOfEmployees": {
+            "@type": "QuantitativeValue",
+            "minValue": 1
+        }
+    }
+}
+</script>
+@endpush
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
-
 <link rel="stylesheet" href="{{ asset('css/about-us.css') }}">
 @endpush
+
+
 
 @section('content')
 
