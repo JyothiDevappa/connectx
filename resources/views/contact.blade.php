@@ -3,9 +3,9 @@
  * Contact Page SEO Data
  */
 $seo = [
-    'title'       => 'Contact ConnectX — Get in Touch with Our Team',
-    'description' => 'Contact ConnectX to inquire about partnerships, sponsorships, creator collaborations, or any questions about our global creator ecosystem. Email us at youngchanakyaconnect@gmail.com.',
-    'keywords'    => 'contact ConnectX, ConnectX email, ConnectX partnership inquiry, reach ConnectX, Young Chanakya contact, creator platform contact',
+    'title'       => 'Contact Young Chanakya X — Get in Touch with Our Team',
+    'description' => 'Contact Young Chanakya X to inquire about partnerships, sponsorships, creator collaborations, or any questions about our global creator ecosystem. Email us at youngchanakyaconnect@gmail.com.',
+    'keywords'    => 'contact Young Chanakya X, Young Chanakya X email, Young Chanakya X partnership inquiry, reach Young Chanakya X, Young Chanakya contact, creator platform contact',
     'image'       => asset('images/assets/ogg.png'),
     'type'        => 'website',
     'robots'      => 'index, follow',
@@ -22,8 +22,8 @@ $seo = [
     "@type": "ContactPage",
     "@id": "https://connectx.youngchanakya.com/contact#webpage",
     "url": "https://connectx.youngchanakya.com/contact",
-    "name": "Contact ConnectX — Get in Touch",
-    "description": "Contact ConnectX for partnership, sponsorship, and creator collaboration inquiries.",
+    "name": "Contact Young Chanakya X — Get in Touch",
+    "description": "Contact Young Chanakya X for partnership, sponsorship, and creator collaboration inquiries.",
     "inLanguage": "en-IN",
     "isPartOf": {
         "@type": "WebSite",
@@ -31,7 +31,7 @@ $seo = [
     },
     "mainEntity": {
         "@type": "Organization",
-        "name": "ConnectX by Young Chanakya",
+        "name": "Young Chanakya X",
         "url": "https://connectx.youngchanakya.com/",
         "email": "youngchanakyaconnect@gmail.com",
         "contactPoint": [

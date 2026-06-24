@@ -3,9 +3,9 @@
  * Connecters Directory Page SEO Data
  */
 $seo = [
-    'title'       => 'Connecters Directory — Verified Ecosystem Leaders & Creators | ConnectX',
-    'description' => 'Browse the ConnectX verified directory of ecosystem leaders, creators, entrepreneurs, innovators, and industry experts across business, tech, finance, media, and social impact sectors.',
-    'keywords'    => 'ConnectX directory, creator directory, influencer list, ecosystem leaders India, verified creators ConnectX, business leaders directory, entrepreneur network India',
+    'title'       => 'Connecters Directory — Verified Ecosystem Leaders & Creators | Young Chanakya X',
+    'description' => 'Browse the Young Chanakya X verified directory of ecosystem leaders, creators, entrepreneurs, innovators, and industry experts across business, tech, finance, media, and social impact sectors.',
+    'keywords'    => 'Young Chanakya X directory, creator directory, influencer list, ecosystem leaders India, verified creators Young Chanakya X, business leaders directory, entrepreneur network India',
     'image'       => asset('images/assets/ogg.png'),
     'type'        => 'website',
 ];
@@ -21,8 +21,8 @@ $seo = [
     "@type": "CollectionPage",
     "@id": "https://connectx.youngchanakya.com/connecters-list#webpage",
     "url": "https://connectx.youngchanakya.com/connecters-list",
-    "name": "Connecters Directory — Verified Ecosystem Leaders & Creators | ConnectX",
-    "description": "Browse the ConnectX verified directory of ecosystem leaders, creators, entrepreneurs, innovators, and industry experts.",
+    "name": "Connecters Directory — Verified Ecosystem Leaders & Creators | Young Chanakya X",
+    "description": "Browse the Young Chanakya X verified directory of ecosystem leaders, creators, entrepreneurs, innovators, and industry experts.",
     "inLanguage": "en-IN",
     "isPartOf": {
         "@type": "WebSite",
@@ -30,7 +30,7 @@ $seo = [
     },
     "about": {
         "@type": "Organization",
-        "name": "ConnectX by Young Chanakya",
+        "name": "Young Chanakya X",
         "url": "https://connectx.youngchanakya.com/"
     }
 }
@@ -265,7 +265,7 @@ $seo = [
 
                 <h1 class="trust-headline mb-4">The verified nexus of market leadership.</h1>
                 <p class="text-white opacity-75 fs-5 mb-5" style="max-width: 600px; line-height: 1.6;">
-                    ConnectX orchestrates premium structural access to vetted visionaries, enterprise owners, and specialized policy framework architects globally.
+                    Young Chanakya X orchestrates premium structural access to vetted visionaries, enterprise owners, and specialized policy framework architects globally.
                 </p>
 
                 

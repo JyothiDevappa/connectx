@@ -9,7 +9,7 @@
 
 @php
     // ── Site-wide defaults ──────────────────────────────────────
-    $siteName    = 'ConnectX';
+    $siteName    = 'Young Chanakya X';
     $siteUrl     = config('app.url');
     $defaultImg  = asset('images/assets/ogg.png');
     $canonical   = url()->current();
@@ -17,13 +17,13 @@
     // Merge page-specific overrides with defaults
     $seo = $seo ?? [];
 
-    $title       = $seo['title']       ?? 'ConnectX — Global Creator Ecosystem by Young Chanakya';
-    $description = $seo['description'] ?? 'ConnectX is a premium global creator ecosystem by Young Chanakya connecting influencers, podcasters, speakers, founders, and brands through collaborations, events, and exclusive experiences.';
-    $keywords    = $seo['keywords']    ?? 'ConnectX, Young Chanakya, creator ecosystem, influencer network, podcast, brand partnerships, creator lounges, digital creators, India';
+    $title       = $seo['title']       ?? 'Young Chanakya X — Global Creator Ecosystem by Young Chanakya';
+    $description = $seo['description'] ?? 'Young Chanakya X is a premium global creator ecosystem by Young Chanakya connecting influencers, podcasters, speakers, founders, and brands through collaborations, events, and exclusive experiences.';
+    $keywords    = $seo['keywords']    ?? 'Young Chanakya X, Young Chanakya, creator ecosystem, influencer network, podcast, brand partnerships, creator lounges, digital creators, India';
     $ogImage     = $seo['image']       ?? $defaultImg;
     $ogType      = $seo['type']        ?? 'website';
     $robots      = $seo['robots']      ?? 'index, follow';
-    $author      = $seo['author']      ?? 'ConnectX by Young Chanakya';
+    $author      = $seo['author']      ?? 'Young Chanakya X';
 @endphp
 
 {{-- ── Core Meta ──────────────────────────────────────────────── --}}
@@ -52,7 +52,7 @@
 
 {{-- ── Twitter Card ─────────────────────────────────────────── --}}
 <meta name="twitter:card"        content="summary_large_image">
-<meta name="twitter:site"        content="@@ConnectX">
+<meta name="twitter:site"        content="@@YoungChanakyaX">
 <meta name="twitter:creator"     content="@@YoungChanakya">
 <meta name="twitter:title"       content="{{ $title }}">
 <meta name="twitter:description" content="{{ $description }}">
@@ -74,3 +74,4 @@
 {{-- ── Mobile / Viewport ────────────────────────────────────── --}}
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport"              content="width=device-width, initial-scale=1.0">
+

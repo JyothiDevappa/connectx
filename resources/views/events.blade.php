@@ -3,9 +3,9 @@
  * Events Page SEO Data
  */
 $seo = [
-    'title'       => 'Events — Roundtables, Podcasts & Creator Sessions | ConnectX',
-    'description' => 'Explore upcoming ConnectX events — exclusive roundtables, podcast recordings, keynote speakers, and creator networking sessions. Join elite business spaces for market changemakers.',
-    'keywords'    => 'ConnectX events, creator roundtables, podcast sessions, keynote speakers, networking events, creator sessions India, ConnectX sessions 2026',
+    'title'       => 'Events — Roundtables, Podcasts & Creator Sessions | Young Chanakya X',
+    'description' => 'Explore upcoming Young Chanakya X events — exclusive roundtables, podcast recordings, keynote speakers, and creator networking sessions. Join elite business spaces for market changemakers.',
+    'keywords'    => 'Young Chanakya X events, creator roundtables, podcast sessions, keynote speakers, networking events, creator sessions India, Young Chanakya X sessions 2026',
     'image'       => asset('images/assets/ogg.png'),
     'type'        => 'website',
 ];
@@ -19,8 +19,8 @@ $seo = [
 {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "ConnectX Upcoming Events 2026",
-    "description": "Exclusive roundtables, podcast sessions, keynote speakers, and creator networking sessions by ConnectX.",
+    "name": "Young Chanakya X Upcoming Events 2026",
+    "description": "Exclusive roundtables, podcast sessions, keynote speakers, and creator networking sessions by Young Chanakya X.",
     "url": "https://connectx.youngchanakya.com/events",
     "itemListElement": [
         {
@@ -44,7 +44,7 @@ $seo = [
                 },
                 "organizer": {
                     "@type": "Organization",
-                    "name": "ConnectX by Young Chanakya",
+                    "name": "Young Chanakya X",
                     "url": "https://connectx.youngchanakya.com"
                 }
             }
@@ -54,7 +54,7 @@ $seo = [
             "position": 2,
             "item": {
                 "@type": "Event",
-                "name": "ConnectX Paradigm Shift: Building Scalable Infrastructure",
+                "name": "Young Chanakya X Paradigm Shift: Building Scalable Infrastructure",
                 "description": "Deconstructing modern tech architectures with elite specialists deploying reliable, global structures.",
                 "startDate": "2026-07-24",
                 "eventStatus": "https://schema.org/EventScheduled",
@@ -65,7 +65,7 @@ $seo = [
                 },
                 "organizer": {
                     "@type": "Organization",
-                    "name": "ConnectX by Young Chanakya",
+                    "name": "Young Chanakya X",
                     "url": "https://connectx.youngchanakya.com"
                 }
             }
@@ -91,7 +91,7 @@ $seo = [
                 },
                 "organizer": {
                     "@type": "Organization",
-                    "name": "ConnectX by Young Chanakya",
+                    "name": "Young Chanakya X",
                     "url": "https://connectx.youngchanakya.com"
                 }
             }
@@ -420,7 +420,7 @@ $seo = [
         ],
         [
             'category' => 'Podcasts',
-            'title' => 'ConnectX Paradigm Shift: Building Scalable Infrastructure',
+            'title' => 'Young Chanakya X Paradigm Shift: Building Scalable Infrastructure',
             'desc' => 'Deconstructing modern tech architectures with elite specialists deploying reliable, global structures.',
             'date' => 'JUL 24, 2026',
             'location' => 'EPISODE 42',
@@ -450,7 +450,7 @@ $seo = [
         ],
         [
             'category' => 'Podcasts',
-            'title' => 'ConnectX Paradigm Shift: High-End Consumer Behavior',
+            'title' => 'Young Chanakya X Paradigm Shift: High-End Consumer Behavior',
             'desc' => 'Dissecting how premium brands build conversion architectures that generate recurring market demand.',
             'date' => 'AUG 29, 2026',
             'location' => 'EPISODE 43',
@@ -479,7 +479,7 @@ $seo = [
                 <ul class="style-none d-flex align-items-center gap-2 p-0 mb-4 text-uppercase tracking-wider" style="font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; list-style: none;">
                     <li><a href="#" class="text-white opacity-60 text-decoration-none hover-opacity-100">Home</a></li>
                     <li class="text-white opacity-40">/</li>
-                    <li class="text-white" style="color: #ffd2b1 !important;">ConnectX Sessions</li>
+                    <li class="text-white" style="color: #ffd2b1 !important;">Young Chanakya X Sessions</li>
                 </ul>
 
                 <h1 class="text-glow-headline mb-4">Elite business spaces for market changemakers.</h1>

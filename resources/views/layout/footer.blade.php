@@ -249,7 +249,7 @@
 
                         <div class="logo mb-35 md-mb-20">
                             <a href="{{ url('/') }}">
-                                <img src="{{ asset('images/logo/logo.png') }}" alt="ConnectX Logo">
+                                <img src="{{ asset('images/logo/logo.png') }}" alt="Young Chanakya X Logo">
 
 
                             </a>
@@ -258,7 +258,7 @@
                         <!-- <div class="logo mb-35 md-mb-20">
     <a href="{{ url('/') }}">
         <img src="{{ asset('images/logo/connectx1.svg') }}" 
-             alt="ConnectX Logo" 
+             alt="Young Chanakya X Logo" 
              width="40" 
              height="40" 
              style="object-fit: contain; display: block;">
@@ -266,7 +266,7 @@
 </div> -->
 
 
-                        <p class="footer-brand-desc">ConnectX is a global creator ecosystem connecting creators, influencers, speakers, podcasters &amp; founders through live events, collaborations, and meaningful experiences.</p>
+                        <p class="footer-brand-desc">Young Chanakya X is a global creator ecosystem connecting creators, influencers, speakers, podcasters &amp; founders through live events, collaborations, and meaningful experiences.</p>
 
                         <ul class="style-none d-flex align-items-center social-icon">
                             <li>

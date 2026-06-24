@@ -3,9 +3,9 @@
  * Become a Partner Page SEO Data
  */
 $seo = [
-    'title'       => 'Become a Partner — Join the ConnectX Creator Ecosystem',
-    'description' => 'Partner with ConnectX by Young Chanakya to access a premium creator ecosystem. Content partnerships, brand collaborations, media partnerships, and community connections await.',
-    'keywords'    => 'become a ConnectX partner, creator partnership, brand collaboration ConnectX, media partnership India, content creator partner, Young Chanakya partner',
+    'title'       => 'Become a Partner — Join the Young Chanakya X Creator Ecosystem',
+    'description' => 'Partner with Young Chanakya X to access a premium creator ecosystem. Content partnerships, brand collaborations, media partnerships, and community connections await.',
+    'keywords'    => 'become a Young Chanakya X partner, creator partnership, brand collaboration Young Chanakya X, media partnership India, content creator partner, Young Chanakya partner',
     'image'       => asset('images/assets/ogg.png'),
     'type'        => 'website',
 ];
@@ -19,12 +19,12 @@ $seo = [
 {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "ConnectX Partnership Program",
+    "name": "Young Chanakya X Partnership Program",
     "url": "https://connectx.youngchanakya.com/become-a-partner",
-    "description": "Partner with ConnectX to access a premium global creator ecosystem. Content partnerships, brand collaborations, media partnerships, and community connections.",
+    "description": "Partner with Young Chanakya X to access a premium global creator ecosystem. Content partnerships, brand collaborations, media partnerships, and community connections.",
     "provider": {
         "@type": "Organization",
-        "name": "ConnectX by Young Chanakya",
+        "name": "Young Chanakya X",
         "url": "https://connectx.youngchanakya.com/"
     },
     "serviceType": "Creator Ecosystem Partnership",
@@ -621,7 +621,7 @@ $seo = [
                         <div class="title-one">
 
                             <div class="upper-title-two mb-15">
-                                Why Partner with ConnectX </div>
+                                Why Partner with Young Chanakya X </div>
 
                             <h2 class="text-dark">
 
@@ -634,7 +634,7 @@ $seo = [
 
                         <p class="text-lg text-dark mt-25 mb-35">
 
-                            ConnectX connects partners and creators through meaningful collaboration, engagement, and growth
+                            Young Chanakya X connects partners and creators through meaningful collaboration, engagement, and growth
 
                         </p>
 
@@ -694,7 +694,7 @@ CONNECTX PARTNERSHIP OPPORTUNITIES
 
 
                 <h2 class="main-title">
-                    ConnectX Partnership Opportunities
+                    Young Chanakya X Partnership Opportunities
                 </h2>
 
 
@@ -907,7 +907,7 @@ EXPANDING ACROSS INDUSTRIES
                     </div>
 
                     <p class="text-lg mb-35 lg-mb-25">
-                        ConnectX is building a network of creators, voices, and collaborators across industries and geographies, enabling partners to access a diverse and growing ecosystem.
+                        Young Chanakya X is building a network of creators, voices, and collaborators across industries and geographies, enabling partners to access a diverse and growing ecosystem.
                     </p>
 
                     <ul class="style-none connectx-expand-points">

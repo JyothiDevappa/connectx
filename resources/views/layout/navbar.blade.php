@@ -3,22 +3,22 @@
         <div>
             <a href="{{ url('/') }}" class="logo">
                 <!-- <img src="{{ asset('images/logo/yc.png') }}"
-                    alt="ConnectX Logo"
+                    alt="Young Chanakya X Logo"
                     class="menu-logo"> -->
                 <img src="{{ asset('images/logo/logo.png') }}"
-                    alt="ConnectX Logo"
+                    alt="Young Chanakya X Logo"
                     class="menu-logo">
             </a>
 
             <div class="fs-brand-desc">
                 <p>
-                    ConnectX is a global creator ecosystem built to connect creators,
+                    Young Chanakya X is a global creator ecosystem built to connect creators,
                     influencers, speakers, podcasters, founders, and modern digital voices
                     through meaningful collaborations, networking, and experiences.
                 </p>
 
                 <a href="{{ url('/') }}" class="fs-website-btn">
-                    Explore ConnectX ↗
+                    Explore Young Chanakya X ↗
                 </a>
                 <h3> Follow Us </h3>
 
@@ -49,7 +49,7 @@
         <div class="fs-right-top">
             <a href="{{ url('/') }}" style="display: inline-block; line-height: 0; text-decoration: none;">
                 <img src="{{ asset('images/logo/yc.png') }}"
-                    alt="ConnectX"
+                    alt="Young Chanakya X"
                     class="fs-right-logo">
             </a>
 
@@ -64,7 +64,7 @@
         <nav class="fs-nav">
 
             <a href="{{ url('/about') }}" class="fs-nav-item {{ request()->is('about') ? 'active' : '' }}" onclick="toggleMenu()">
-                <span class="fs-nav-name">About ConnectX</span>
+                <span class="fs-nav-name">About Young Chanakya X</span>
                 <span class="fs-nav-arrow">→</span>
                 <span class="fs-nav-num">01</span>
             </a>
@@ -108,7 +108,7 @@
 
     <a href="{{ url('/') }}" class="logo">
         <img src="{{ asset('images/logo/logo.png') }}"
-            alt="ConnectX"
+            alt="Young Chanakya X"
             class="site-logo">
     </a>
 

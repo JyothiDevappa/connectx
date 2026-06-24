@@ -3,9 +3,9 @@
  * Become a Sponsor Page SEO Data
  */
 $seo = [
-    'title'       => 'Become a Sponsor — Community & Sponsorship Opportunities | ConnectX',
-    'description' => 'Sponsor ConnectX events and creator programs to amplify your brand reach. Access title sponsorships, event sponsorships, community sponsorships, and creator ecosystem packages.',
-    'keywords'    => 'ConnectX sponsorship, sponsor ConnectX, event sponsorship India, brand visibility creator events, community sponsor Young Chanakya, creator platform sponsorship',
+    'title'       => 'Become a Sponsor — Community & Sponsorship Opportunities | Young Chanakya X',
+    'description' => 'Sponsor Young Chanakya X events and creator programs to amplify your brand reach. Access title sponsorships, event sponsorships, community sponsorships, and creator ecosystem packages.',
+    'keywords'    => 'Young Chanakya X sponsorship, sponsor Young Chanakya X, event sponsorship India, brand visibility creator events, community sponsor Young Chanakya, creator platform sponsorship',
     'image'       => asset('images/assets/ogg.png'),
     'type'        => 'website',
 ];
@@ -19,12 +19,12 @@ $seo = [
 {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "ConnectX Sponsorship Program",
+    "name": "Young Chanakya X Sponsorship Program",
     "url": "https://connectx.youngchanakya.com/become-a-sponser",
-    "description": "Sponsor ConnectX events and creator programs to amplify your brand reach. Access title, event, community, and ecosystem sponsorship packages.",
+    "description": "Sponsor Young Chanakya X events and creator programs to amplify your brand reach. Access title, event, community, and ecosystem sponsorship packages.",
     "provider": {
         "@type": "Organization",
-        "name": "ConnectX by Young Chanakya",
+        "name": "Young Chanakya X",
         "url": "https://connectx.youngchanakya.com/"
     },
     "serviceType": "Event & Creator Ecosystem Sponsorship",
@@ -791,7 +791,7 @@ CTA SECTION
     }
 }
 
-/* ---- Why ConnectX (Benefits) Section ---- */
+/* ---- Why Young Chanakya X (Benefits) Section ---- */
 @media (max-width: 991px) {
     .connectx-benefits-section.pt-120 {
         padding-top: 70px;
@@ -1225,7 +1225,7 @@ WHY CONNECT WITH CONNECTX
                 </div> -->
 
                 <h2 class="main-title fw-700">
-Why Connect With ConnectX                </h2>
+Why Connect With Young Chanakya X                </h2>
 
                 <p class="mt-25">
                    Position your brand within a structured creator ecosystem designed for consistent visibility, engagement, and collaboration
@@ -1368,11 +1368,11 @@ Why Connect With ConnectX                </h2>
 
                     <h2 class="brand-heading">
                         Your Brand, Everywhere<br>
-                        <span>ConnectX Shows Up</span>
+                        <span>Young Chanakya X Shows Up</span>
                     </h2>
 
                     <p class="brand-desc">
-                        As a ConnectX sponsor, your brand is woven into every
+                        As a Young Chanakya X sponsor, your brand is woven into every
                         high-impact format — from podcasts and digital campaigns
                         to live events, creator lounges, and award platforms.
                         Real visibility. Real reach. Real results.
@@ -1446,7 +1446,7 @@ SPONSORSHIP CATEGORIES
                     <h4>Sponsor</h4>
 
                     <p>
-                        Primary brand visibility across major ConnectX initiatives
+                        Primary brand visibility across major Young Chanakya X initiatives
                     </p>
 
                     <ul>
@@ -1611,7 +1611,7 @@ SPONSORSHIP CATEGORIES
 
                             <h2 class="text-dark">
                                 Start Building Consistent <br>
-                                Brand Visibility Through ConnectX
+                                Brand Visibility Through Young Chanakya X
                             </h2>
 
                         </div>

@@ -3,9 +3,9 @@
  * About Page SEO Data
  */
 $seo = [
-    'title'       => 'About ConnectX — Our Vision, Mission & Creator Ecosystem Story',
-    'description' => 'Learn about ConnectX by Young Chanakya — a premium global creator ecosystem built to connect influencers, podcasters, speakers, and brands. Our mission is structured, scalable influence for every creator.',
-    'keywords'    => 'about ConnectX, Young Chanakya vision, creator ecosystem mission, ConnectX story, who is ConnectX, global creator platform, influencer community India',
+    'title'       => 'About Young Chanakya X — Our Vision, Mission & Creator Ecosystem Story',
+    'description' => 'Learn about Young Chanakya X — a premium global creator ecosystem built to connect influencers, podcasters, speakers, and brands. Our mission is structured, scalable influence for every creator.',
+    'keywords'    => 'about Young Chanakya X, Young Chanakya vision, creator ecosystem mission, Young Chanakya X story, who is Young Chanakya X, global creator platform, influencer community India',
     'image'       => asset('images/assets/ogg.png'),
     'type'        => 'website',
 ];
@@ -21,8 +21,8 @@ $seo = [
     "@type": "AboutPage",
     "@id": "https://connectx.youngchanakya.com/about#webpage",
     "url": "https://connectx.youngchanakya.com/about",
-    "name": "About ConnectX — Our Vision, Mission & Creator Ecosystem Story",
-    "description": "Learn about ConnectX by Young Chanakya — a premium global creator ecosystem built to connect influencers, podcasters, speakers, and brands.",
+    "name": "About Young Chanakya X — Our Vision, Mission & Creator Ecosystem Story",
+    "description": "Learn about Young Chanakya X — a premium global creator ecosystem built to connect influencers, podcasters, speakers, and brands.",
     "inLanguage": "en-IN",
     "isPartOf": {
         "@type": "WebSite",
@@ -30,7 +30,7 @@ $seo = [
     },
     "about": {
         "@type": "Organization",
-        "name": "ConnectX by Young Chanakya",
+        "name": "Young Chanakya X",
         "url": "https://connectx.youngchanakya.com/",
         "founder": {
             "@type": "Person",
@@ -38,11 +38,11 @@ $seo = [
             "jobTitle": "Founder & Visionary",
             "worksFor": {
                 "@type": "Organization",
-                "name": "ConnectX"
+                "name": "Young Chanakya X"
             }
         },
         "foundingDate": "2024",
-        "description": "ConnectX is built to bring creators together in a structured ecosystem where they can connect, collaborate, and be seen.",
+        "description": "Young Chanakya X is built to bring creators together in a structured ecosystem where they can connect, collaborate, and be seen.",
         "numberOfEmployees": {
             "@type": "QuantitativeValue",
             "minValue": 1
@@ -66,13 +66,13 @@ $seo = [
     <div class="container">
         <div class="row align-items-center gy-5">
             <div class="col-lg-6">
-                <div class="eyebrow">About ConnectX</div>
+                <div class="eyebrow">About Young Chanakya X</div>
                 <h1>Creators, conversations, and confidence built for the next era.</h1>
-                <p class="hero-copy">ConnectX is a premium digital ecosystem for creators, voices, and brands who want structured influence, real collaborations, and a stronger stage for stories.</p>
+                <p class="hero-copy">Young Chanakya X is a premium digital ecosystem for creators, voices, and brands who want structured influence, real collaborations, and a stronger stage for stories.</p>
               
                 <div class="about-hero-buttons">
     <a href="#partner" class="about-btn-1">Explore Our Ecosystem</a>
-    <a href="#contact" class="about-btn-2">Partner With ConnectX</a>
+    <a href="#contact" class="about-btn-2">Partner With Young Chanakya X</a>
 </div>
 
 
@@ -84,7 +84,7 @@ $seo = [
             </div>
             <div class="col-lg-6">
                 <div class="hero-visual">
-                    <img class="hero-image" src="{{ asset('images/media/img_20.jpg') }}" alt="ConnectX premium experience">
+                    <img class="hero-image" src="{{ asset('images/media/img_20.jpg') }}" alt="Young Chanakya X premium experience">
                     <div class="hero-side-card">
                         <h5>Signature Initiative</h5>
                         <p>A creator-first platform designed to connect public voices, podcasts, and community events with trusted partners.</p>
@@ -97,13 +97,13 @@ $seo = [
  
 <!-- FOUNDER STATEMENT -->
 <section class="founder-section">
-  <div class="bg-text">ConnectX</div>
+  <div class="bg-text">Young Chanakya X</div>
   <div class="founder-inner">
     <div class="section-label light">Founder Statement</div>
     <h2 class="founder-title">Why We Built This</h2>
     <span class="quote-mark">"</span>
     <p class="founder-quote">
-      ConnectX is built to bring creators together in a structured ecosystem where they can <em>connect, collaborate, and be seen.</em> Our focus is simple — create spaces for real conversations, enable meaningful collaborations, and help creators grow their influence through content and community.
+      Young Chanakya X is built to bring creators together in a structured ecosystem where they can <em>connect, collaborate, and be seen.</em> Our focus is simple — create spaces for real conversations, enable meaningful collaborations, and help creators grow their influence through content and community.
     </p>
 
     
@@ -114,7 +114,7 @@ $seo = [
 
     <div class="byline-text">
         <div class="name">Young Chanakya</div>
-        <div class="role">Founder & Visionary, ConnectX</div>
+        <div class="role">Founder & Visionary, Young Chanakya X</div>
     </div>
 </div>
 
@@ -162,7 +162,7 @@ $seo = [
                 <div class="title-one mb-50 lg-mb-20">
 
                     <div class="upper-title">
-                        ConnectX
+                        Young Chanakya X
                     </div>
 
                     <h2>
@@ -311,7 +311,7 @@ $seo = [
                             </h4>
 
                             <p class="m0">
-                                ConnectX is built without geographic limitations.
+                                Young Chanakya X is built without geographic limitations.
                             </p>
 
                         </div>
@@ -364,7 +364,7 @@ $seo = [
     <div class="cta-inner">
       <div class="section-label light">Ready to Grow?</div>
       <h2 class="section-title light">Your Voice Deserves<br>a <span class="italic-accent">Bigger Stage</span></h2>
-      <p class="cta-tagline">If you are a creator, influencer, speaker, or community builder — ConnectX is built for
+      <p class="cta-tagline">If you are a creator, influencer, speaker, or community builder — Young Chanakya X is built for
         you.</p>
       <div class="cta-features">
         <span class="pill">Join the Ecosystem</span>
@@ -372,10 +372,11 @@ $seo = [
         <span class="pill">Speak & Collaborate</span>
         <span class="pill">Build Beyond Platforms</span>
       </div>
-      <button class="cta-btn">Join ConnectX</button>
+      <button class="cta-btn">Join Young Chanakya X</button>
     </div>
   </section>
 
   
 @endsection
+
 

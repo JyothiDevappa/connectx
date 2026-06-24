@@ -21,6 +21,7 @@ Route::get('/home-5', fn() => view('index-5'));
 Route::get('/home-6', fn() => view('index-6'));
 Route::get('/home-7', fn() => view('index-7'));
 Route::get('/home-8', fn() => view('index-8'));
+Route::get('/home-2-new', fn() => view('home-2'));
 
 // =========================
 // ABOUT

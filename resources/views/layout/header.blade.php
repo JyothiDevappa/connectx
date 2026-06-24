@@ -21,7 +21,7 @@
     <meta name="msapplication-navbutton-color" content="#1A4137">
     <meta name="apple-mobile-web-app-status-bar-style" content="#1A4137">
 
-    <title>ConnectX</title>
+    <title>Young Chanakya X</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="56x56"
