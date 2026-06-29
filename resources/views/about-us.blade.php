@@ -67,8 +67,8 @@ $seo = [
         <div class="row align-items-center gy-5">
             <div class="col-lg-6">
                 <div class="eyebrow">About Young Chanakya X</div>
-                <h1>Creators, conversations, and confidence built for the next era.</h1>
-                <p class="hero-copy">Young Chanakya X is a premium digital ecosystem for creators, voices, and brands who want structured influence, real collaborations, and a stronger stage for stories.</p>
+                <h1>One Platform. Endless Possibilities.</h1>
+                <p class="hero-copy">Young Chanakya X is a digital-first leadership and community platform where ambitious individuals come together to share stories, exchange knowledge, build meaningful relationships, and unlock real opportunities. We believe growth happens when people connect, learn, and collaborate through authentic experiences.</p>
               
                 <div class="about-hero-buttons">
     <a href="#partner" class="about-btn-1">Explore Our Ecosystem</a>
@@ -124,26 +124,28 @@ $seo = [
 
 <div class="vm-section">
   <div class="vm-block vision-block">
-    <div class="section-label dark">Our Direction</div>
-    <h2 class="section-title dark">Vision</h2>
-    <p class="body-text">To build one of the world's largest digital creator and influencer ecosystems, connecting voices across countries and industries, where influence is structured, scalable, and collaborative.</p>
+    <div class="section-label dark">A Trusted Global Platform for Leadership & Growth</div>
+    <h2 class="section-title dark">Our Vision</h2>
+    <p class="body-text">To become the world’s most trusted platform for leadership, entrepreneurship, knowledge sharing, and professional collaboration by empowering individuals to learn from each other and create meaningful impact.</p>
     <ul class="check-list ps-0">
-      <li>Global creator connectivity</li>
-      <li>Collaboration across global ecosystems</li>
-      <li>Cross-industry influence network</li>
-      <li>Content-led ecosystem growth</li>
+      <li>Build global trust in leadership and collaboration</li>
+      <li>Empower individuals through peer-to-peer learning</li>
+      <li>Strengthen entrepreneurship and innovation ecosystems</li>
+      <li>Enable meaningful professional and industry connections</li>
+      <li>Create long-term social and economic impact through knowledge sharing</li>
     </ul>
     {{-- <span class="vm-number">01</span> --}}
   </div>
   <div class="vm-block mission-block">
-    <div class="section-label light">Our Purpose</div>
-    <h2 class="section-title light">Mission</h2>
-    <p class="body-text">To create a platform where creators can consistently access opportunities to speak, collaborate, and grow their influence through structured digital experiences.</p>
+    <div class="section-label light">Connecting People, Knowledge & Opportunities</div>
+    <h2 class="section-title light">Our Mission</h2>
+    <p class="body-text">We are committed to building a dynamic ecosystem where ambitious individuals from diverse backgrounds come together to learn, share, and grow through authentic relationships and collaboration.</p>
     <ul class="check-list ps-0">
-      <li>Enable creator-to-creator networking</li>
-      <li>Provide stages through podcasts, lounges &amp; events</li>
-      <li>Create visibility through content &amp; collaborations</li>
-      <li>Connect communities, brands, and creators</li>
+      <li>Connect ambitious people across industries and generations</li>
+      <li>Create a trusted space for authentic conversations and storytelling</li>
+      <li>Bridge education, entrepreneurship, technology, and industry</li>
+      <li>Promote continuous learning through shared real-world experiences</li>
+      <li>Enable collaborations that generate opportunities and long-term value</li>
     </ul>
     {{-- <span class="vm-number">02</span> --}}
   </div>
@@ -155,11 +157,11 @@ $seo = [
     <div class="container">
 
         <!-- TITLE -->
-        <div class="row align-items-center">
+        <div class="row">
 
-            <div class="col-lg-8 wow fadeInUp" style="visibility: visible;">
+            <div class="col-lg-8 mx-auto text-center wow fadeInUp" style="visibility: visible;">
 
-                <div class="title-one mb-50 lg-mb-20">
+                <div class="title-one mb-50 lg-mb-20 text-center">
 
                     <div class="upper-title">
                         Young Chanakya X
@@ -168,6 +170,10 @@ $seo = [
                     <h2>
                         Our Core Values
                     </h2>
+                    
+                    <p class="mt-3 px-xl-5" style="color: #687588; font-size: 1.15rem; line-height: 1.75;">
+                        Our core values define the principles that guide our choices, shape our community, and drive our vision to build a trusted global platform for leadership and growth.
+                    </p>
 
                 </div>
 
@@ -177,32 +183,28 @@ $seo = [
 
 
         <!-- VALUES -->
-        <div class="line-wrapper position-relative">
+        <div class="values-grid position-relative">
 
-            <div class="row gx-lg-5">
+            <div class="row gx-lg-4">
 
                 <!-- VALUE 1 -->
                 <div class="col-xl-4 col-md-6 wow fadeInUp" style="visibility: visible;">
 
-                    <div class="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10">
+                    <div class="core-value-card">
 
-                        <div class="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
+                        <div class="core-value-icon-wrapper">
 
-                            <img src="images/icon/about.svg" alt="" class="lazy-img">
-
-                        </div>
-
-                        <div class="text">
-
-                            <h4 class="fw-bold mb-20 sm-mb-10">
-                                Access Over Exclusivity
-                            </h4>
-
-                            <p class="m0">
-                                We create access to meaningful opportunities, networks, and platforms.
-                            </p>
+                            <i class="bi bi-door-open"></i>
 
                         </div>
+
+                        <h4 class="core-value-title">
+                            Access Over Exclusivity
+                        </h4>
+
+                        <p class="core-value-desc">
+                            We create access to meaningful opportunities, networks, and platforms.
+                        </p>
 
                     </div>
 
@@ -212,25 +214,21 @@ $seo = [
                 <!-- VALUE 2 -->
                 <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s;">
 
-                    <div class="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10">
+                    <div class="core-value-card">
 
-                        <div class="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
+                        <div class="core-value-icon-wrapper">
 
-                            <img src="images/icon/about.svg" alt="" class="lazy-img">
-
-                        </div>
-
-                        <div class="text">
-
-                            <h4 class="fw-bold mb-20 sm-mb-10">
-                                Content First
-                            </h4>
-
-                            <p class="m0">
-                                Every interaction, event, and collaboration is designed to generate content and visibility.
-                            </p>
+                            <i class="bi bi-collection-play"></i>
 
                         </div>
+
+                        <h4 class="core-value-title">
+                            Content First
+                        </h4>
+
+                        <p class="core-value-desc">
+                            Every interaction, event, and collaboration is designed to generate content and visibility.
+                        </p>
 
                     </div>
 
@@ -240,25 +238,21 @@ $seo = [
                 <!-- VALUE 3 -->
                 <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s;">
 
-                    <div class="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10">
+                    <div class="core-value-card">
 
-                        <div class="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
+                        <div class="core-value-icon-wrapper">
 
-                            <img src="images/icon/about.svg" alt="" class="lazy-img">
-
-                        </div>
-
-                        <div class="text">
-
-                            <h4 class="fw-bold mb-20 sm-mb-10">
-                                Collaboration Over Competition
-                            </h4>
-
-                            <p class="m0">
-                                Growth happens faster when creators work together.
-                            </p>
+                            <i class="bi bi-people"></i>
 
                         </div>
+
+                        <h4 class="core-value-title">
+                            Collaboration Over Competition
+                        </h4>
+
+                        <p class="core-value-desc">
+                            Growth happens faster when creators work together.
+                        </p>
 
                     </div>
 
@@ -268,25 +262,21 @@ $seo = [
                 <!-- VALUE 4 -->
                 <div class="col-xl-4 col-md-6 wow fadeInUp" style="visibility: visible;">
 
-                    <div class="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10 pt-25 lg-pt-10">
+                    <div class="core-value-card">
 
-                        <div class="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
+                        <div class="core-value-icon-wrapper">
 
-                            <img src="images/icon/about.svg" alt="" class="lazy-img">
-
-                        </div>
-
-                        <div class="text">
-
-                            <h4 class="fw-bold mb-20 sm-mb-10">
-                                Real Conversations
-                            </h4>
-
-                            <p class="m0">
-                                We value authentic discussions over scripted narratives.
-                            </p>
+                            <i class="bi bi-chat-quote"></i>
 
                         </div>
+
+                        <h4 class="core-value-title">
+                            Real Conversations
+                        </h4>
+
+                        <p class="core-value-desc">
+                            We value authentic discussions over scripted narratives.
+                        </p>
 
                     </div>
 
@@ -296,25 +286,21 @@ $seo = [
                 <!-- VALUE 5 -->
                 <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s;">
 
-                    <div class="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10 pt-25 lg-pt-10">
+                    <div class="core-value-card">
 
-                        <div class="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
+                        <div class="core-value-icon-wrapper">
 
-                            <img src="images/icon/about.svg" alt="" class="lazy-img">
-
-                        </div>
-
-                        <div class="text">
-
-                            <h4 class="fw-bold mb-20 sm-mb-10">
-                                Global Mindset
-                            </h4>
-
-                            <p class="m0">
-                                Young Chanakya X is built without geographic limitations.
-                            </p>
+                            <i class="bi bi-globe"></i>
 
                         </div>
+
+                        <h4 class="core-value-title">
+                            Global Mindset
+                        </h4>
+
+                        <p class="core-value-desc">
+                            Young Chanakya X is built without geographic limitations.
+                        </p>
 
                     </div>
 
@@ -324,25 +310,21 @@ $seo = [
                 <!-- VALUE 6 -->
                 <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s;">
 
-                    <div class="card-style-sixteen d-flex mt-60 lg-mt-40 mb-60 lg-mb-10 pt-25 lg-pt-10">
+                    <div class="core-value-card">
 
-                        <div class="icon tran3s rounded-circle d-flex align-items-center justify-content-center">
+                        <div class="core-value-icon-wrapper">
 
-                            <img src="images/icon/about.svg" alt="" class="lazy-img">
-
-                        </div>
-
-                        <div class="text">
-
-                            <h4 class="fw-bold mb-20 sm-mb-10">
-                                Consistent Growth
-                            </h4>
-
-                            <p class="m0">
-                                Opportunities are not one-time — they are continuous.
-                            </p>
+                            <i class="bi bi-graph-up-arrow"></i>
 
                         </div>
+
+                        <h4 class="core-value-title">
+                            Consistent Growth
+                        </h4>
+
+                        <p class="core-value-desc">
+                            Opportunities are not one-time — they are continuous.
+                        </p>
 
                     </div>
 
