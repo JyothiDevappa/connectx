@@ -357,7 +357,7 @@ select::placeholder {
 /* ── 16. Marquee ─────────────────────────────────────────── */
 .mq-item {
     font-family: 'Manrope', sans-serif !important;
-    font-size: 11px !important;
+    font-size: 13px !important;
     font-weight: 700 !important;
     letter-spacing: 2.5px !important;
     text-transform: uppercase !important;
@@ -389,13 +389,13 @@ select::placeholder {
 }
 
 /* ── 18. About-Us page specifics ─────────────────────────── */
-.founder-quote {
+/* .founder-quote {
     font-family: 'Manrope', sans-serif !important;
     font-size: clamp(1.2rem, 2.2vw, 1.75rem) !important;
     font-style: italic !important;
     font-weight: 500 !important;
     line-height: 1.65 !important;
-}
+} */
 
 .section-label {
     font-family: 'Manrope', sans-serif !important;
