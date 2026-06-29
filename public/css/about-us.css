@@ -5,7 +5,7 @@
   --accent: #1f4f3d;
   --accent-soft: #d5e8df;
   --accent-light: #f9f2e8;
-  --text: #10221c;
+  --text: #0c3a30;
   --text-muted: #54615a;
   --border: rgba(16, 34, 28, 0.08);
   --shadow: rgba(16, 34, 28, 0.12);
@@ -29,7 +29,7 @@
 
 .about-hero {
   position: relative;
-  padding: 120px 0 90px;
+  padding: 160px 0 90px;
   background: radial-gradient(circle at top left, rgba(255, 238, 213, 0.55), transparent 35%), linear-gradient(180deg, #fffdfa 0%, #f4ede4 100%);
 }
 
@@ -98,6 +98,7 @@
   font-size: 1rem;
   font-weight: 600;
   transition: all .3s ease;
+  border-radius: 50px;
 }
 
 /* Green Button */
@@ -149,11 +150,13 @@
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 520px;
+  min-height: 420px;
 }
 
 .hero-image {
   width: 100%;
+  height: 480px;
+  object-fit: cover;
   border-radius: 36px;
   overflow: hidden;
   box-shadow: 0 36px 90px rgba(16, 34, 28, 0.14);
@@ -369,9 +372,9 @@ section {
 
 .founder-quote {
   font-family: 'Manrope', sans-serif;
-  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
   font-style: italic;
-  color: var(--white);
+  color: var(--white) !important;
   line-height: 1.6;
   margin-bottom: 48px;
 }
@@ -389,6 +392,7 @@ section {
   border: 1px solid rgba(255, 202, 149, 0.2);
   padding: 16px 28px;
   border-radius: 2px;
+  text-align: left;
 }
 
 .byline-avatar {
@@ -439,6 +443,7 @@ section {
 
 .vm-block.mission-block {
   background: white;
+  border-bottom: 1px solid #ededed;
 }
 
 .vm-block .section-title {
@@ -544,7 +549,7 @@ section {
 
 .cta-features .pill {
   border-color: rgba(137, 178, 168, 0.3);
-  color: #89b2a8;
+  color: #fff;
 }
 
 .cta-section {
@@ -597,7 +602,7 @@ section {
 }
 
 .cta-section .section-title {
-  font-size: clamp(3rem, 6vw, 6rem);
+  font-size: clamp(3rem, 5vw, 5rem);
   margin-bottom: 16px;
   color: #89b2a8;
 }
@@ -609,7 +614,7 @@ section {
 
 .cta-tagline {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.6) !important;
   font-weight: 300;
   margin-bottom: 60px;
 }
@@ -634,7 +639,7 @@ section {
   text-transform: uppercase;
   padding: 20px 52px;
   border: none;
-  border-radius: 2px;
+  border-radius: 50px;
   cursor: pointer;
   position: relative;
   overflow: hidden;

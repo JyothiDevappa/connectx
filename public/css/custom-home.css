@@ -125,7 +125,9 @@ body {
 .hero-slide h1 {
   font-size: clamp(44px, 5vw, 60px);
   font-weight: 900;
-  color: #fff;
+  background: linear-gradient(135deg, #ffffff 20%, #ffbe8e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   line-height: 1.15;
   letter-spacing: -3px;
   margin-bottom: 32px;
@@ -136,7 +138,9 @@ body {
 
 .hero-slide h1 em {
   font-style: normal;
-  color: var(--orange);
+  background: inherit;
+  -webkit-background-clip: inherit;
+  -webkit-text-fill-color: inherit;
 }
 
 .hero-slide .hero-desc {
@@ -405,7 +409,7 @@ body {
 
 .about-img-side img {
   width: 100%;
-  height: 100%;
+  height: 90%;
   object-fit: cover;
   transition: transform 0.8s ease;
 }
@@ -524,7 +528,7 @@ body {
   content: '✓';
   width: 20px;
   height: 20px;
-  background: #0c3a30;
+  background: #447f72;
   color: #ffffff;
   border-radius: 50%;
   display: flex;

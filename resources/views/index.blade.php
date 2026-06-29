@@ -166,20 +166,24 @@ $seo = [
 <!-- MARQUEE -->
 <div class="marquee-wrap">
     <div class="marquee-track">
-        <div class="mq-item">Creator Ecosystem</div>
-        <div class="mq-item">Global Network</div>
-        <div class="mq-item">Podcasts & Roundtables</div>
-        <div class="mq-item">Creator Lounges</div>
-        <div class="mq-item">Industry Collaboration</div>
-        <div class="mq-item">Influence & Impact</div>
-        <div class="mq-item">Young Chanakya X</div>
-        <div class="mq-item">Creator Ecosystem</div>
-        <div class="mq-item">Global Network</div>
-        <div class="mq-item">Podcasts & Roundtables</div>
-        <div class="mq-item">Creator Lounges</div>
-        <div class="mq-item">Industry Collaboration</div>
-        <div class="mq-item">Influence & Impact</div>
-        <div class="mq-item">Young Chanakya X</div>
+        <div class="mq-item">Explore</div>
+        <div class="mq-item">Exchange</div>
+        <div class="mq-item">Express</div>
+        <div class="mq-item">Experience</div>
+        <div class="mq-item">Expand</div>
+        <div class="mq-item">Excel</div>
+        <div class="mq-item">Explore</div>
+        <div class="mq-item">Exchange</div>
+        <div class="mq-item">Express</div>
+        <div class="mq-item">Experience</div>
+        <div class="mq-item">Expand</div>
+        <div class="mq-item">Excel</div>
+        <div class="mq-item">Explore</div>
+        <div class="mq-item">Exchange</div>
+        <div class="mq-item">Express</div>
+        <div class="mq-item">Experience</div>
+        <div class="mq-item">Expand</div>
+        <div class="mq-item">Excel</div>
     </div>
 </div>
 
@@ -225,14 +229,11 @@ $seo = [
             <img src="/images/media/img_20.jpg" alt="About Young Chanakya X">
             <div class="about-img-overlay"></div>
         </div>
-        <div class="about-content rv-r" style="display: flex; flex-direction: column; justify-content: center;">
+        <div class="about-content rv-r" >
             <div class="eyebrow rv">About Young Chanakya X</div>
-            <h2 class="sec-title rv">A Digital-First<br><em>Leadership Platform</em></h2>
-            <p class="sec-desc rv" style="max-width: 520px; font-size: 1.05rem; line-height: 1.8;">
-                Young Chanakya X brings together students, entrepreneurs, creators, educators, and mentors into a single, high-value ecosystem.
-                <br><br>
-                Through intentional networking, dynamic conversations, and structured knowledge sharing, we empower changemakers to connect, collaborate, and build lasting impact.
-            </p>
+            <h2 class="sec-title rv">A Digital-First Leadership Platform</h2>
+            <p class="sec-desc rv">Young Chanakya X is a digital-first leadership and community platform that connects ambitious individuals through meaningful conversations, authentic storytelling, knowledge sharing, networking, mentorship, and collaboration.</p>
+            <p class="sec-desc rv">We believe that every individual has a story worth sharing, knowledge worth passing on, and experiences that can inspire others. By bringing together students, entrepreneurs, founders, professionals, creators, mentors, educators, and changemakers, Young Chanakya X creates an ecosystem where learning happens through people and opportunities are created through relationships.</p>
         </div>
     </div>
 </section>

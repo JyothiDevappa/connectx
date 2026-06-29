@@ -76,11 +76,11 @@ $seo = [
 </div>
 
 
-                <div class="hero-pill-row">
+                {{-- <div class="hero-pill-row">
                     <span class="hero-pill">Creator Growth</span>
                     <span class="hero-pill">Podcast Visibility</span>
                     <span class="hero-pill">Brand Collaboration</span>
-                </div>
+                </div> --}}
             </div>
             <div class="col-lg-6">
                 <div class="hero-visual">
@@ -109,12 +109,12 @@ $seo = [
     
  <div class="founder-byline">
     <div class="byline-avatar">
-        <img src="{{ asset('images/media/founder.png') }}" alt="Young Chanakya">
+        <img src="{{ asset('images/media/founder.png') }}" alt="Kishorekumar Chandrasekaran">
     </div>
 
     <div class="byline-text">
-        <div class="name">Young Chanakya</div>
-        <div class="role">Founder & Visionary, Young Chanakya X</div>
+        <div class="name">Kishorekumar Chandrasekaran</div>
+        <div class="role">Founder and CEO</div>
     </div>
 </div>
 
@@ -127,25 +127,25 @@ $seo = [
     <div class="section-label dark">Our Direction</div>
     <h2 class="section-title dark">Vision</h2>
     <p class="body-text">To build one of the world's largest digital creator and influencer ecosystems, connecting voices across countries and industries, where influence is structured, scalable, and collaborative.</p>
-    <ul class="check-list">
+    <ul class="check-list ps-0">
       <li>Global creator connectivity</li>
       <li>Collaboration across global ecosystems</li>
       <li>Cross-industry influence network</li>
       <li>Content-led ecosystem growth</li>
     </ul>
-    <span class="vm-number">01</span>
+    {{-- <span class="vm-number">01</span> --}}
   </div>
   <div class="vm-block mission-block">
     <div class="section-label light">Our Purpose</div>
     <h2 class="section-title light">Mission</h2>
     <p class="body-text">To create a platform where creators can consistently access opportunities to speak, collaborate, and grow their influence through structured digital experiences.</p>
-    <ul class="check-list">
+    <ul class="check-list ps-0">
       <li>Enable creator-to-creator networking</li>
       <li>Provide stages through podcasts, lounges &amp; events</li>
       <li>Create visibility through content &amp; collaborations</li>
       <li>Connect communities, brands, and creators</li>
     </ul>
-    <span class="vm-number">02</span>
+    {{-- <span class="vm-number">02</span> --}}
   </div>
 </div>
 
