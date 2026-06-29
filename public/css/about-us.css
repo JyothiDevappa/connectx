@@ -315,9 +315,6 @@ section {
   color: var(--green);
 }
 
-.section-title.light {
-  color: #10221c;
-}
 
 
 /* ─── FOUNDER SECTION ─── */
@@ -332,9 +329,9 @@ section {
 .founder-section .bg-text {
   position: absolute;
   font-family: 'Manrope', sans-serif;
-  font-size: 22vw;
+  font-size: 10vw;
   font-weight: 900;
-  color: rgba(255, 202, 149, 0.04);
+  color: #336a5c24  ;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -388,16 +385,16 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 16px;
-  background: rgba(255, 202, 149, 0.08);
-  border: 1px solid rgba(255, 202, 149, 0.2);
+  background: #2a544a;
+  /* border: 1px solid rgba(255, 202, 149, 0.2); */
   padding: 16px 28px;
-  border-radius: 2px;
+  border-radius: 15px;
   text-align: left;
 }
 
 .byline-avatar {
-  width: 72px;
-  height: 72px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
@@ -413,12 +410,12 @@ section {
 .byline-text .name {
   font-weight: 600;
   color: var(--white);
-  font-size: 1rem;
+  font-size: 25px;
 }
 
 .byline-text .role {
   color: var(--orange);
-  font-size: 0.8rem;
+  font-size: 17px;
 }
 
 /* founder css ended */
@@ -433,7 +430,7 @@ section {
 }
 
 .vm-block {
-  padding: 100px 80px;
+  padding: 75px 80px;
   position: relative;
 }
 
@@ -449,6 +446,7 @@ section {
 .vm-block .section-title {
   font-size: clamp(2rem, 3vw, 3.2rem);
   margin-bottom: 24px;
+  color: var(--text);
 }
 
 .vm-block .body-text {
@@ -1078,4 +1076,62 @@ section {
     width: 100%;
     max-width: 280px;
   }
+}
+
+/* ==========================================================================
+   CUSTOM PREMIUM CORE VALUES GRID
+   ========================================================================== */
+.values-grid {
+  margin-top: 20px;
+}
+
+.core-value-card {
+  background: linear-gradient(135deg, #fffcf9 0%, #ffeada 100%);
+  border: 1px solid rgba(12, 58, 48, 0.06);
+  border-radius: 24px;
+  padding: 40px 32px;
+  height: calc(100% - 30px);
+  margin-bottom: 30px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(12, 58, 48, 0.02);
+}
+
+.core-value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(12, 58, 48, 0.08);
+  border-color: rgba(12, 58, 48, 0.15);
+}
+
+.core-value-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: rgba(12, 58, 48, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  color: #0c3a30;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.core-value-card:hover .core-value-icon-wrapper {
+  transform: scale(1.05);
+}
+
+.core-value-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0c3a30;
+  margin-bottom: 16px;
+}
+
+.core-value-desc {
+  font-size: 0.95rem;
+  color: #687588;
+  line-height: 1.6;
+  margin: 0;
 }
