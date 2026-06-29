@@ -399,17 +399,18 @@ body {
 .about-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 90vh;
+  /* Removed min-height: 90vh so it relies on content height for better proportions */
 }
 
 .about-img-side {
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
 
 .about-img-side img {
   width: 100%;
-  height: 90%;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.8s ease;
 }
@@ -454,6 +455,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
+}
+
+#about-ycx .about-content {
+  background-color: var(--cream);
 }
 
 .eyebrow {

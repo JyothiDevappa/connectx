@@ -234,6 +234,7 @@ input[type="button"] {
     font-weight: 700 !important;
     letter-spacing: 0.2px !important;
     line-height: 1.4 !important;
+    border-radius: 50px !important;
 }
 
 /* Hero buttons keep their larger size */

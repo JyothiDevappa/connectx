@@ -453,8 +453,7 @@ header.scrolled .hamburger span {
 }
 
 .fs-nav-item:hover .fs-nav-arrow {
-  opacity: 1;
-  transform: translateX(4px);
+  color: var(--orange);
 }
 
 .fs-nav-name {
@@ -473,22 +472,15 @@ header.scrolled .hamburger span {
 
 .fs-nav-arrow {
   font-size: 14px;
-  color: black;
-  opacity: 0;
-  transform: translateX(-4px);
+  color: rgba(0, 0, 0, 0.75);
+  opacity: 1;
   transition: all 0.3s ease;
 }
 
 .fs-nav-item.active .fs-nav-name,
-.fs-nav-item.active .fs-nav-num {
-  color: #0c884a !important;
-  /* Green color as requested */
-}
-
+.fs-nav-item.active .fs-nav-num,
 .fs-nav-item.active .fs-nav-arrow {
-  color: #0c884a !important;
-  opacity: 1 !important;
-  transform: translateX(4px) !important;
+  color: var(--orange) !important;
 }
 
 
