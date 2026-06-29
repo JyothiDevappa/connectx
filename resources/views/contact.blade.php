@@ -17,6 +17,7 @@ $seo = [
 @push('seo')
 {{-- ── Contact Page: ContactPage + LocalBusiness JSON-LD ─── --}}
 <script type="application/ld+json">
+@verbatim
 {
     "@context": "https://schema.org",
     "@type": "ContactPage",
@@ -51,6 +52,7 @@ $seo = [
         ]
     }
 }
+@endverbatim
 </script>
 @endpush
 

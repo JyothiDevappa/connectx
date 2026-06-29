@@ -40,6 +40,39 @@ $seo = [
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/css/intlTelInput.css">
+<style>
+    .iti {
+        width: 100%;
+        display: block;
+    }
+    .iti__country-list {
+        background-color: #2c323f !important;
+        border: 1px solid rgba(255, 210, 177, 0.2) !important;
+        color: #ffffff !important;
+    }
+    .iti__search-input {
+        background-color: #1e222b !important;
+        color: #ffffff !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    .iti__country {
+        padding: 10px 12px !important;
+    }
+    .iti__country:hover, .iti__country.iti__highlight {
+        background-color: rgba(255, 210, 177, 0.1) !important;
+    }
+    .iti__selected-dial-code {
+        color: #ffffff !important;
+        margin-left: 6px;
+    }
+    .iti__arrow {
+        border-top-color: #ffffff !important;
+    }
+    .iti__arrow--up {
+        border-bottom-color: #ffffff !important;
+    }
+</style>
 @endpush
 
 @section('content')
@@ -257,42 +290,117 @@ $seo = [
 <div class="authority-hero-section d-flex align-items-center position-relative">
     <div class="container pt-150 pb-100">
         <div class="row align-items-center g-5">
-            <div class="col-xl-7 col-lg-8">
+            <div class="col-lg-6">
 
                 <div class="trust-badge-pill mb-4">
                     <i class="bi bi-shield-check-fill"></i> Institutional Ecosystem Directory
                 </div>
 
                 <h1 class="trust-headline mb-4">The verified nexus of market leadership.</h1>
-                <p class="text-white opacity-75 fs-5 mb-5" style="max-width: 600px; line-height: 1.6;">
+                <p class="text-white opacity-75 fs-5 mb-4" style="max-width: 600px; line-height: 1.6;">
                     Young Chanakya X orchestrates premium structural access to vetted visionaries, enterprise owners, and specialized policy framework architects globally.
                 </p>
 
-                
+                <ul class="style-none mt-4 text-white opacity-75" style="list-style: none; padding: 0;">
+                    <li class="mb-3 d-flex align-items-center" style="font-size: 0.95rem; line-height: 1.4;">
+                        <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #0c3a30; color: #ffffff; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.15);">
+                            <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
+                        </span>
+                        Strategic Entrepreneurial Guidance & Growth Support
+                    </li>
+                    <li class="mb-3 d-flex align-items-center" style="font-size: 0.95rem; line-height: 1.4;">
+                        <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #0c3a30; color: #ffffff; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.15);">
+                            <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
+                        </span>
+                        Networking with Industry Experts & Global Leaders
+                    </li>
+                    <li class="mb-3 d-flex align-items-center" style="font-size: 0.95rem; line-height: 1.4;">
+                        <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #0c3a30; color: #ffffff; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.15);">
+                            <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
+                        </span>
+                        Access to attend premium startup & leadership events
+                    </li>
+                </ul>
 
             </div>
 
-            <div class="col-xl-5 col-lg-4">
-                <div class="row g-3">
-                    <div class="col-sm-6 col-lg-12">
-                        <div class="trust-metric-box">
-                            <h4 class="display-6 fw-bold text-white mb-1" style="letter-spacing: -1px;">500+</h4>
-                            <p class="text-uppercase tracking-wider text-muted m-0" style="font-size: 0.7rem; font-weight: 700; color: #ffd2b1 !important;">Active C-Suite Founders</p>
+            <div class="col-lg-6">
+                <div class="trust-metric-box">
+                    <h4 class="text-white h5 mb-4" style="color: #ffd2b1 !important; border-bottom: 1px solid rgba(255, 210, 177, 0.15); padding-bottom: 15px;">
+                        <i class="bi bi-person-lines-fill me-2"></i> Join the Directory
+                    </h4>
+
+
+                    @if (session('error') || $errors->any())
+                        <div class="alert alert-danger mb-4" style="font-weight: 500;">
+                            <i class="bi bi-exclamation-triangle-fill me-2"></i> 
+                            @if (session('error'))
+                                {{ session('error') }}
+                            @else
+                                Please correct the errors in the form below.
+                            @endif
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-12">
-                        <div class="trust-metric-box">
-                            <h4 class="display-6 fw-bold text-white mb-1" style="letter-spacing: -1px;">12+</h4>
-                            <p class="text-uppercase tracking-wider text-muted m-0" style="font-size: 0.7rem; font-weight: 700; color: #ffd2b1 !important;">Industrial Verticals</p>
+                    @endif
+
+                    <form action="{{ route('connecters.apply') }}" method="POST">
+                        @csrf
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="cx-label">Full Name *</label>
+                                <input type="text" class="form-control cx-input" name="full_name" value="{{ old('full_name') }}" placeholder="E.g. John Doe" required>
+                                @error('full_name')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-md-6">
+                                <label class="cx-label">Phone Number *</label>
+                                <input type="tel" class="form-control cx-input" name="phone" value="{{ old('phone') }}" placeholder="E.g. +91 98765 43210" required>
+                                @error('phone')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-12">
+                                <label class="cx-label">Email ID *</label>
+                                <input type="email" class="form-control cx-input" name="email" value="{{ old('email') }}" placeholder="john@company.com" required>
+                                @error('email')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-12">
+                                <label class="cx-label">LinkedIn URL *</label>
+                                <input type="url" class="form-control cx-input" name="linkedin" value="{{ old('linkedin') }}" placeholder="https://linkedin.com/in/..." required>
+                                @error('linkedin')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-md-6">
+                                <label class="cx-label">Current Designation *</label>
+                                <input type="text" class="form-control cx-input" name="designation" value="{{ old('designation') }}" placeholder="E.g. Founder & CEO" required>
+                                @error('designation')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-md-6">
+                                <label class="cx-label">Field of Expertise *</label>
+                                <input type="text" class="form-control cx-input" name="expertise" value="{{ old('expertise') }}" placeholder="E.g. Tech, Finance, Marketing" required>
+                                @error('expertise')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-12">
+                                <label class="cx-label">Describe Yourself *</label>
+                                <textarea class="form-control cx-input" name="bio" rows="3" placeholder="Briefly describe your market impact, achievements, or ecosystem contribution..." required>{{ old('bio') }}</textarea>
+                                @error('bio')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-12 mt-3">
+                                <button type="submit" class="btn w-100 py-3 fw-bold text-uppercase application-submit-btn" style="letter-spacing: 1px; font-size: 0.85rem;">
+                                    Submit Application <i class="bi bi-arrow-right ms-2"></i>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="trust-metric-box" style="background: linear-gradient(135deg, rgba(255,210,177,0.05) 0%, rgba(9,13,22,0) 100%); border-color: rgba(255,210,177,0.15);">
-                            <p class="text-white small m-0" style="line-height: 1.5; opacity: 0.8;">
-                                <i class="bi bi-info-circle me-1 text-warning"></i> Access to specific ecosystem segments requires verified profile clearance.
-                            </p>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -621,72 +729,58 @@ $seo = [
     }
 </style>
 
-<!-- APPLICATION FORM SECTION -->
-<div class="application-section py-5 position-relative" style="background-color: #090d16; margin-top: 80px; border-top: 1px solid rgba(255,210,177,0.1);">
-    <div class="container py-5">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-5">
-                <div class="trust-badge-pill mb-4">
-                    <i class="bi bi-person-lines-fill"></i> Join the Directory
+@if (session('success'))
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background: linear-gradient(135deg, #fffcf9 0%, #ffeada 100%); border: 1px solid rgba(12, 58, 48, 0.15); border-radius: 20px;">
+            <div class="modal-body text-center p-5">
+                <div class="mb-4">
+                    <i class="bi bi-check-circle-fill" style="font-size: 4rem; color: #0c3a30;"></i>
                 </div>
-                <h2 class="trust-headline mb-4" style="font-size: clamp(32px, 4vw, 48px);">Apply to be featured in the ecosystem.</h2>
-                <p class="text-white opacity-75 fs-6 mb-5" style="max-width: 500px; line-height: 1.6;">
-                    Are you a founder, creator, investor, or industry leader? Submit your profile for verification. Once approved, you will join an exclusive network of market leaders and innovators.
+                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; line-height: 1.3; color: #0c3a30;">You're One Step Closer to Meaningful Connections</h3>
+                <p class="mb-4" style="line-height: 1.6; font-size: 0.95rem; color: #687588;">
+                    Thank you for reaching out. Your request has been received, and our team will connect with you soon. We're excited to help you explore new conversations, meaningful connections, and opportunities for growth.
                 </p>
-                <ul class="style-none connectx-partner-list text-white opacity-75" style="list-style: none; padding: 0;">
-                    <li class="mb-3 d-flex align-items-center"><i class="bi bi-check2-circle me-3" style="color: #ffd2b1; font-size: 1.2rem;"></i> Gain global ecosystem visibility</li>
-                    <li class="mb-3 d-flex align-items-center"><i class="bi bi-check2-circle me-3" style="color: #ffd2b1; font-size: 1.2rem;"></i> Access exclusive collaborative opportunities</li>
-                    <li class="mb-3 d-flex align-items-center"><i class="bi bi-check2-circle me-3" style="color: #ffd2b1; font-size: 1.2rem;"></i> Network with verified C-Suite leaders</li>
-                </ul>
-            </div>
-            
-            <div class="col-lg-7">
-                <div class="trust-metric-box">
-                    <form action="#" method="POST">
-                        @csrf
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <label class="cx-label">Full Name *</label>
-                                <input type="text" class="form-control cx-input" name="full_name" placeholder="E.g. John Doe" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="cx-label">Professional Email *</label>
-                                <input type="email" class="form-control cx-input" name="email" placeholder="john@company.com" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="cx-label">LinkedIn Profile URL *</label>
-                                <input type="url" class="form-control cx-input" name="linkedin" placeholder="https://linkedin.com/in/..." required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="cx-label">Ecosystem Vertical *</label>
-                                <select class="form-select cx-input" name="vertical" required>
-                                    <option value="" selected disabled>Select your segment</option>
-                                    <option value="Business & Growth">Business & Growth</option>
-                                    <option value="Innovation & Tech">Innovation & Tech</option>
-                                    <option value="Finance & Policy">Finance & Policy</option>
-                                    <option value="Creative & Media">Creative & Media</option>
-                                    <option value="Social & Academic">Social & Academic</option>
-                                </select>
-                            </div>
-                            <div class="col-12">
-                                <label class="cx-label">Current Role & Company *</label>
-                                <input type="text" class="form-control cx-input" name="role_company" placeholder="E.g. Founder at TechCorp" required>
-                            </div>
-                            <div class="col-12">
-                                <label class="cx-label">Why should you be featured? (Impact) *</label>
-                                <textarea class="form-control cx-input" name="bio" rows="3" placeholder="Briefly describe your market impact, achievements, or ecosystem contribution..." required></textarea>
-                            </div>
-                            <div class="col-12 mt-4">
-                                <button type="submit" class="btn w-100 py-3 fw-bold text-uppercase application-submit-btn" style="letter-spacing: 1px; font-size: 0.9rem;">
-                                    Submit Application <i class="bi bi-arrow-right ms-2"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                <a href="{{ url('/') }}" class="btn px-5 py-3 fw-bold text-uppercase w-100 d-block text-center" style="text-decoration: none; background-color: #0c3a30; color: #ffffff; border-radius: 12px; border: none; transition: all 0.3s ease;">
+                    Continue Exploring
+                </a>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var successModalElement = document.getElementById('successModal');
+        if (successModalElement) {
+            var myModal = new bootstrap.Modal(successModalElement);
+            myModal.show();
+        }
+    });
+</script>
+@endif
+
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/js/intlTelInput.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var phoneInput = document.querySelector('input[name="phone"]');
+        if (phoneInput) {
+            var iti = window.intlTelInput(phoneInput, {
+                initialCountry: "in",
+                separateDialCode: true,
+                utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/js/utils.js"
+            });
+
+            // On submit, update phone input value with the full international number
+            var form = phoneInput.closest('form');
+            if (form) {
+                form.addEventListener('submit', function() {
+                    phoneInput.value = iti.getNumber();
+                });
+            }
+        }
+    });
+</script>
 
 @endsection

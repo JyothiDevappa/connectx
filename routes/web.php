@@ -79,9 +79,13 @@ Route::get('/404', fn() => view('404'));
 
 
 
+use App\Http\Controllers\ApplicationController;
+
 Route::get('/connecters-list', function () {
     return view('connecters-list');
-});
+})->name('connecters.list');
+
+Route::post('/connecters-list/apply', [ApplicationController::class, 'submit'])->name('connecters.apply');
 
 Route::get('/become-a-sponser', function () {
     return view('become-a-sponser');
