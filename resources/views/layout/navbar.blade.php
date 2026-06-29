@@ -5,20 +5,19 @@
                 <!-- <img src="{{ asset('images/logo/yc.png') }}"
                     alt="Young Chanakya X Logo"
                     class="menu-logo"> -->
-                <img src="{{ asset('images/logo/logo.png') }}"
-                    alt="Young Chanakya X Logo"
+                <img src="{{ asset('images/logo/yc.png') }}"
+                    alt="Young Chanakya"
                     class="menu-logo">
             </a>
 
             <div class="fs-brand-desc">
                 <p>
-                    Young Chanakya X is a global creator ecosystem built to connect creators,
-                    influencers, speakers, podcasters, founders, and modern digital voices
-                    through meaningful collaborations, networking, and experiences.
+                   
+                Young Chanakya is a Business Leadership Launchpad dedicated to empowering the next generation of entrepreneurs, innovators, and leaders. Through mentorship, industry networking, practical learning, startup support, and leadership experiences, it bridges the gap between education and real-world success, helping ambitious individuals build impactful careers and businesses.
                 </p>
 
                 <a href="{{ url('/') }}" class="fs-website-btn">
-                    Explore Young Chanakya X ↗
+                    Explore Young Chanakya ↗
                 </a>
                 <h3> Follow Us </h3>
 
@@ -48,7 +47,7 @@
 
         <div class="fs-right-top">
             <a href="{{ url('/') }}" style="display: inline-block; line-height: 0; text-decoration: none;">
-                <img src="{{ asset('images/logo/yc.png') }}"
+                <img src="{{ asset('images/logo/logo.png') }}"
                     alt="Young Chanakya X"
                     class="fs-right-logo">
             </a>
@@ -66,38 +65,38 @@
             <a href="{{ url('/about') }}" class="fs-nav-item {{ request()->is('about') ? 'active' : '' }}" onclick="toggleMenu()">
                 <span class="fs-nav-name">About Young Chanakya X</span>
                 <span class="fs-nav-arrow">→</span>
-                <span class="fs-nav-num">01</span>
+                <!-- <span class="fs-nav-num">01</span> -->
             </a>
 
             <a href="{{ url('/become-a-partner') }}" class="fs-nav-item {{ request()->is('become-a-partner') ? 'active' : '' }}" onclick="toggleMenu()">
                 <span class="fs-nav-name">Who Can Partner</span>
                 <span class="fs-nav-arrow">→</span>
-                <span class="fs-nav-num">02</span>
+                <!-- <span class="fs-nav-num">02</span> -->
             </a>
 
             <a href="{{ url('/become-a-sponser') }}" class="fs-nav-item {{ request()->is('become-a-sponser') ? 'active' : '' }}" onclick="toggleMenu()">
                 <span class="fs-nav-name">Community & Sponsors</span>
                 <span class="fs-nav-arrow">→</span>
-                <span class="fs-nav-num">03</span>
+                <!-- <span class="fs-nav-num">03</span> -->
             </a>
 
             <!-- Events page pending -->
             <a href="{{ url('/events') }}" class="fs-nav-item {{ request()->is('events') ? 'active' : '' }}" onclick="toggleMenu()">
                 <span class="fs-nav-name">Events</span>
                 <span class="fs-nav-arrow">→</span>
-                <span class="fs-nav-num">05</span>
+                <!-- <span class="fs-nav-num">05</span> -->
             </a>
 
             <a href="{{ url('/connecters-list') }}" class="fs-nav-item {{ request()->is('connecters-list') ? 'active' : '' }}" onclick="toggleMenu()">
                 <span class="fs-nav-name">Connecters Directory</span>
                 <span class="fs-nav-arrow">→</span>
-                <span class="fs-nav-num">06</span>
+                <!-- <span class="fs-nav-num">06</span> -->
             </a>
 
             <a href="{{ url('/contact') }}" class="fs-nav-item {{ request()->is('contact') ? 'active' : '' }}" onclick="toggleMenu()">
                 <span class="fs-nav-name">Contact</span>
                 <span class="fs-nav-arrow">→</span>
-                <span class="fs-nav-num">07</span>
+                <!-- <span class="fs-nav-num">07</span> -->
             </a>
 
         </nav>

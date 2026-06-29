@@ -187,6 +187,65 @@ $seo = [
     </div>
 </div>
 
+<!-- FOUNDER SECTION -->
+<section class="about founder-section" id="founder" style="background-color: var(--clr-white); border-bottom: 1px solid rgba(0,0,0,0.05); padding: 100px 0;">
+    <style>
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 1.35fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        @media (max-width: 991px) {
+            .founder-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
+    <div class="container">
+        <div class="founder-grid">
+            <div class="about-content rv-l" style="padding: 0;">
+                <div class="eyebrow rv">Meet The Founder</div>
+<h2 class="sec-title rv"
+    style="font-size: clamp(24px, 2.8vw, 42px) !important;
+           line-height: 1.15 !important;
+           letter-spacing: -1px !important;
+           max-width: 650px !important;
+           width: 100% !important;
+           white-space: normal !important;">
+    Shaping the Next Generation of Startup Leaders
+</h2>                <p class="sec-desc rv" style="margin-bottom: 24px; font-size: 1.05rem;">The greatest empires weren’t built by followers—they were built by thinkers, strategists, and doers. At Young Chanakya X, our mission is to cultivate modern-day Chanakyas who lead with wisdom, adaptability, and impact.</p>
+                
+                <div class="rv" style="border-left: 3px solid var(--orange); padding-left: 20px; margin-bottom: 30px;">
+                    <p style="font-size: 1.15rem; font-style: italic; font-weight: 500; color: #0c3a30; margin-bottom: 0; line-height: 1.6;">
+                        "If you chase Saraswati (Knowledge), Lakshmi (Wealth) will chase you. Knowledge is Power, Information is Wealth."
+                    </p>
+                </div>
+
+                <p class="sec-desc rv" style="margin-bottom: 40px; font-size: 1.05rem;">I’ve always believed that success is not about where you start, but how you scale. And for that, you need the right ecosystem, the right people, and the right mindset. If you dare to dream and are ready to hustle, you are in the right place.</p>
+                
+                <div class="rv">
+                    <a href="https://www.linkedin.com/in/kishorekumarceo" target="_blank" class="btn-main" style="text-decoration: none;"><i class="bi bi-linkedin" style="margin-right: 8px;"></i>Connect with me</a>
+                </div>
+            </div>
+            
+            <div class="rv-r" style="border-radius: 24px; overflow: hidden; max-width: 480px; width: 100%; margin: 0 auto; box-shadow: 0 24px 48px rgba(12, 58, 48, 0.12); position: relative; aspect-ratio: 4/5;">
+                <img src="{{ asset('images/media/founder.png') }}" alt="Kishorekumar Chandrasekeran" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                
+                <!-- Gradient Overlay -->
+                <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%); pointer-events: none; z-index: 1;"></div>
+                
+                <!-- Text Overlay -->
+                <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 40px 32px 20px 32px; z-index: 2;">
+                    <strong style="display: block; color: #fff; font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.15; font-weight: 800; margin-bottom: 12px; text-shadow: 0 4px 12px rgba(0,0,0,0.5);">Kishorekumar Chandrasekeran</strong>
+                    <span style="display: inline-block; background: var(--orange); color: #0c3a30; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; padding: 6px 16px; border-radius: 100px;">Founder | Serial Entrepreneur</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {{-- 
 <!-- ABOUT -->
 <section class="about" id="about">
@@ -263,14 +322,28 @@ $seo = [
                 <div class="h2-xm__hub-tagline">Where Everything Intersects</div>
             </div>
 
-            {{-- Connection Lines (SVG) --}}
+            {{-- Connection Lines (SVG) — x2/y2 targets the center of each node's icon circle --}}
             <svg class="h2-xm__lines" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-                <line class="h2-xm__line" x1="600" y1="450" x2="210" y2="140" stroke-dasharray="6 4"/>
-                <line class="h2-xm__line" x1="600" y1="450" x2="990" y2="140" stroke-dasharray="6 4"/>
-                <line class="h2-xm__line" x1="600" y1="450" x2="100" y2="500" stroke-dasharray="6 4"/>
-                <line class="h2-xm__line" x1="600" y1="450" x2="1100" y2="500" stroke-dasharray="6 4"/>
-                <line class="h2-xm__line" x1="600" y1="450" x2="260" y2="790" stroke-dasharray="6 4"/>
-                <line class="h2-xm__line" x1="600" y1="450" x2="940" y2="790" stroke-dasharray="6 4"/>
+                <defs>
+                    <marker id="icon-dot-default" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                        <circle cx="3" cy="3" r="2.5" fill="rgba(12,58,48,0.25)"/>
+                    </marker>
+                    <marker id="icon-dot-hover" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                        <circle cx="3" cy="3" r="2.5" fill="rgba(255,210,177,0.9)"/>
+                    </marker>
+                </defs>
+                {{-- explore: node top:40 left:100, icon center = (100+110, 40+34) = (210,74) scaled ~(221,78) --}}
+                <line class="h2-xm__line h2-xm__line--explore"    x1="600" y1="450" x2="221" y2="78"  stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- exchange: node top:40 right:100 → left=820, icon center = (820+110, 74) = (930,74) scaled ~(979,78) --}}
+                <line class="h2-xm__line h2-xm__line--exchange"   x1="600" y1="450" x2="979" y2="78"  stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- express: node top:380 left:-10, icon center = (100, 414) scaled ~(105,436) --}}
+                <line class="h2-xm__line h2-xm__line--express"    x1="600" y1="450" x2="105" y2="436" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- experience: node top:380 right:-10 → left=930, icon center = (1040,414) scaled ~(1095,436) --}}
+                <line class="h2-xm__line h2-xm__line--experience" x1="600" y1="450" x2="1095" y2="436" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- expand: node bottom:20 left:150, icon center = (260, ~754) scaled ~(274,794) --}}
+                <line class="h2-xm__line h2-xm__line--expand"     x1="600" y1="450" x2="274" y2="794" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- excel: node bottom:20 right:150 → left=770, icon center = (880,~754) scaled ~(926,794) --}}
+                <line class="h2-xm__line h2-xm__line--excel"      x1="600" y1="450" x2="926" y2="794" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
             </svg>
 
             {{-- Concept Nodes --}}
@@ -858,7 +931,7 @@ $seo = [
     position: absolute;
     top: 24px;
     left: 24px;
-    right: 24px;
+    width: 75%; /* Reaches exactly to the center of the 4th circle (75% across the 4-column grid) */
     height: 3px;
     border-radius: 2px;
 }

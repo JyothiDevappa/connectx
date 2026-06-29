@@ -402,7 +402,10 @@ $seo = [
                         </div>
                     </form>
                 </div>
-            </div>
+            </div> -->
+
+
+
         </div>
     </div>
 </div>
@@ -448,7 +451,7 @@ $seo = [
                             <div class="d-flex align-items-center gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-building-gear"></i></div>
                                 <div>
-                                    <span class="text-uppercase fw-bold text-muted small tracking-wide">Segment 01</span>
+                                    <!-- <span class="text-uppercase fw-bold text-muted small tracking-wide">Segment</span> -->
                                     <h2 class="h4 fw-bold m-0 text-dark" style="font-weight: 800;">Business & Entrepreneurship</h2>
                                 </div>
                             </div>
@@ -456,7 +459,7 @@ $seo = [
                             <div class="d-flex flex-wrap gap-2">
                                 @php $biz = ['Startup Founders', 'Women Entrepreneurs', 'Business Strategists', 'Family Business Owners', 'MSME Leaders', 'Franchisors & Consultants', 'D2C Brand Founders', 'Retail & E-commerce Leaders', 'Export-Import Specialists', 'Industrialists', 'Manufacturing Innovators', 'FMCG Leaders', 'Corporate CXOs', 'Billionaires', 'Business Coaches', 'Entrepreneurs in Residence']; @endphp
                                 @foreach($biz as $index => $item)
-                                <a href="#" class="connector-node-pill"><span class="node-index">{{ $index + 1 }}</span> {{ $item }}</a>
+                                <a href="#" class="connector-node-pill">{{ $item }}</a>
                                 @endforeach
                             </div>
                         </div>
@@ -469,7 +472,7 @@ $seo = [
                             <div class="d-flex align-items-center gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-cpu"></i></div>
                                 <div>
-                                    <span class="text-uppercase fw-bold text-muted small tracking-wide">Segment 02</span>
+                                    <!-- <span class="text-uppercase fw-bold text-muted small tracking-wide">Segment</span> -->
                                     <h2 class="h4 fw-bold m-0 text-dark" style="font-weight: 800;">Innovation & Technology</h2>
                                 </div>
                             </div>
@@ -477,7 +480,7 @@ $seo = [
                             <div class="d-flex flex-wrap gap-2">
                                 @php $tech = ['Technology Innovators', 'AI & Data Science Experts', 'Cybersecurity Specialists', 'Blockchain & Web3 Founders', 'FinTech Founders', 'SaaS Entrepreneurs', 'HealthTech Innovators', 'EdTech Founders', 'AgriTech Leaders', 'DeepTech Researchers', 'Product Managers', 'Robotics & Automation Experts', 'IoT Innovators']; @endphp
                                 @foreach($tech as $index => $item)
-                                <a href="#" class="connector-node-pill"><span class="node-index">{{ $index + 1 }}</span> {{ $item }}</a>
+                                <a href="#" class="connector-node-pill">{{ $item }}</a>
                                 @endforeach
                             </div>
                         </div>
@@ -490,7 +493,7 @@ $seo = [
                             <div class="d-flex align-items-center gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-graph-up-arrow"></i></div>
                                 <div>
-                                    <span class="text-uppercase fw-bold text-muted small tracking-wide">Segment 03</span>
+                                    <!-- <span class="text-uppercase fw-bold text-muted small tracking-wide">Segment 03</span> -->
                                     <h2 class="h4 fw-bold m-0 text-dark" style="font-weight: 800;">Finance, Investment & Policy</h2>
                                 </div>
                             </div>
@@ -498,7 +501,7 @@ $seo = [
                             <div class="d-flex flex-wrap gap-2">
                                 @php $fin = ['Investors & Venture Capitalists', 'Angel Investors', 'Wealth Managers', 'Chartered Accountants', 'Taxation Experts', 'Stock Market Architects', 'Banking Leaders', 'Corporate Lawyers', 'Policy Makers & Bureaucrats', 'Government Advisors', 'Legal & Compliance Specialists']; @endphp
                                 @foreach($fin as $index => $item)
-                                <a href="#" class="connector-node-pill"><span class="node-index">{{ $index + 1 }}</span> {{ $item }}</a>
+                                <a href="#" class="connector-node-pill">{{ $item }}</a>
                                 @endforeach
                             </div>
                         </div>
@@ -511,7 +514,7 @@ $seo = [
                             <div class="d-flex align-items-center gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-bezier2"></i></div>
                                 <div>
-                                    <span class="text-uppercase fw-bold text-muted small tracking-wide">Segment 04</span>
+                                    <!-- <span class="text-uppercase fw-bold text-muted small tracking-wide">Segment 04</span> -->
                                     <h2 class="h4 fw-bold m-0 text-dark" style="font-weight: 800;">Creative, Media & Marketing</h2>
                                 </div>
                             </div>
@@ -519,7 +522,7 @@ $seo = [
                             <div class="d-flex flex-wrap gap-2">
                                 @php $media = ['Marketing Gurus', 'Branding Experts', 'PR & Communications Specialists', 'Content Creators & Influencers', 'Authors & Business Writers', 'Design Thinkers & UX Experts', 'Advertising Leaders', 'Podcast Hosts & Storytellers', 'Trend Analysts & Futurists', 'Community Builders']; @endphp
                                 @foreach($media as $index => $item)
-                                <a href="#" class="connector-node-pill"><span class="node-index">{{ $index + 1 }}</span> {{ $item }}</a>
+                                <a href="#" class="connector-node-pill">{{ $item }}</a>
                                 @endforeach
                             </div>
                         </div>
@@ -532,7 +535,7 @@ $seo = [
                             <div class="d-flex align-items-center gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-globe-central-south"></i></div>
                                 <div>
-                                    <span class="text-uppercase fw-bold text-muted small tracking-wide">Segment 05</span>
+                                    <!-- <span class="text-uppercase fw-bold text-muted small tracking-wide">Segment 05</span> -->
                                     <h2 class="h4 fw-bold m-0 text-dark" style="font-weight: 800;">Social Impact & Academic Research</h2>
                                 </div>
                             </div>
@@ -540,7 +543,7 @@ $seo = [
                             <div class="d-flex flex-wrap gap-2">
                                 @php $social = ['Social Entrepreneurs', 'Sustainability Champions', 'Philanthropists', 'Impact Investors', 'Non-Profit Leaders', 'CSR Heads', 'Academic Experts & Educators', 'Professors & Scholars', 'Researchers & Innovators', 'Global Education Advisors']; @endphp
                                 @foreach($social as $index => $item)
-                                <a href="#" class="connector-node-pill"><span class="node-index">{{ $index + 1 }}</span> {{ $item }}</a>
+                                <a href="#" class="connector-node-pill">{{ $item }}</a>
                                 @endforeach
                             </div>
                         </div>
