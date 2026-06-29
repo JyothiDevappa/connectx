@@ -1118,14 +1118,15 @@
 }
 
 /* Hover-activated line glow (via sibling effect on parent hover) */
-.h2-xm__constellation:has(.h2-xm__node--explore:hover) .h2-xm__line:nth-child(1),
-.h2-xm__constellation:has(.h2-xm__node--exchange:hover) .h2-xm__line:nth-child(2),
-.h2-xm__constellation:has(.h2-xm__node--express:hover) .h2-xm__line:nth-child(3),
-.h2-xm__constellation:has(.h2-xm__node--experience:hover) .h2-xm__line:nth-child(4),
-.h2-xm__constellation:has(.h2-xm__node--expand:hover) .h2-xm__line:nth-child(5),
-.h2-xm__constellation:has(.h2-xm__node--excel:hover) .h2-xm__line:nth-child(6) {
-    stroke: rgba(255,210,177,0.7);
+.h2-xm__constellation:has(.h2-xm__node--explore:hover)    .h2-xm__line--explore,
+.h2-xm__constellation:has(.h2-xm__node--exchange:hover)   .h2-xm__line--exchange,
+.h2-xm__constellation:has(.h2-xm__node--express:hover)    .h2-xm__line--express,
+.h2-xm__constellation:has(.h2-xm__node--experience:hover) .h2-xm__line--experience,
+.h2-xm__constellation:has(.h2-xm__node--expand:hover)     .h2-xm__line--expand,
+.h2-xm__constellation:has(.h2-xm__node--excel:hover)      .h2-xm__line--excel {
+    stroke: rgba(255,210,177,0.85);
     stroke-width: 2.5;
+    marker-end: url(#icon-dot-hover);
 }
 
 /* Staggered entrance animation */

@@ -232,6 +232,8 @@ $seo = [
                 Young Chanakya X brings together students, entrepreneurs, creators, educators, and mentors into a single, high-value ecosystem.
                 <br><br>
                 Through intentional networking, dynamic conversations, and structured knowledge sharing, we empower changemakers to connect, collaborate, and build lasting impact.
+                <br><br>
+                By bridging the gap between ambition and opportunity, we provide a dynamic space where modern leaders can thrive, innovate, and shape the future of their respective industries.
             </p>
         </div>
     </div>
@@ -262,14 +264,28 @@ $seo = [
                 <div class="h2-xm__hub-tagline">Where Everything Intersects</div>
             </div>
 
-            {{-- Connection Lines (SVG) --}}
+            {{-- Connection Lines (SVG) — x2/y2 targets the center of each node's icon circle --}}
             <svg class="h2-xm__lines" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-                <line class="h2-xm__line" x1="600" y1="450" x2="210" y2="140" stroke-dasharray="6 4"/>
-                <line class="h2-xm__line" x1="600" y1="450" x2="990" y2="140" stroke-dasharray="6 4"/>
-                <line class="h2-xm__line" x1="600" y1="450" x2="100" y2="500" stroke-dasharray="6 4"/>
-                <line class="h2-xm__line" x1="600" y1="450" x2="1100" y2="500" stroke-dasharray="6 4"/>
-                <line class="h2-xm__line" x1="600" y1="450" x2="260" y2="790" stroke-dasharray="6 4"/>
-                <line class="h2-xm__line" x1="600" y1="450" x2="940" y2="790" stroke-dasharray="6 4"/>
+                <defs>
+                    <marker id="icon-dot-default" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                        <circle cx="3" cy="3" r="2.5" fill="rgba(12,58,48,0.25)"/>
+                    </marker>
+                    <marker id="icon-dot-hover" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                        <circle cx="3" cy="3" r="2.5" fill="rgba(255,210,177,0.9)"/>
+                    </marker>
+                </defs>
+                {{-- explore: node top:40 left:100, icon center = (100+110, 40+34) = (210,74) scaled ~(221,78) --}}
+                <line class="h2-xm__line h2-xm__line--explore"    x1="600" y1="450" x2="221" y2="78"  stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- exchange: node top:40 right:100 → left=820, icon center = (820+110, 74) = (930,74) scaled ~(979,78) --}}
+                <line class="h2-xm__line h2-xm__line--exchange"   x1="600" y1="450" x2="979" y2="78"  stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- express: node top:380 left:-10, icon center = (100, 414) scaled ~(105,436) --}}
+                <line class="h2-xm__line h2-xm__line--express"    x1="600" y1="450" x2="105" y2="436" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- experience: node top:380 right:-10 → left=930, icon center = (1040,414) scaled ~(1095,436) --}}
+                <line class="h2-xm__line h2-xm__line--experience" x1="600" y1="450" x2="1095" y2="436" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- expand: node bottom:20 left:150, icon center = (260, ~754) scaled ~(274,794) --}}
+                <line class="h2-xm__line h2-xm__line--expand"     x1="600" y1="450" x2="274" y2="794" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- excel: node bottom:20 right:150 → left=770, icon center = (880,~754) scaled ~(926,794) --}}
+                <line class="h2-xm__line h2-xm__line--excel"      x1="600" y1="450" x2="926" y2="794" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
             </svg>
 
             {{-- Concept Nodes --}}
@@ -857,7 +873,7 @@ $seo = [
     position: absolute;
     top: 24px;
     left: 24px;
-    right: 24px;
+    width: 75%; /* Reaches exactly to the center of the 4th circle (75% across the 4-column grid) */
     height: 3px;
     border-radius: 2px;
 }
