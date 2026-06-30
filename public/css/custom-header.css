@@ -183,13 +183,17 @@ header.scrolled .hamburger span {
 }
 
 .fs-left>div {
-  max-width: 400px;
+  max-width: 460px;
   width: 100%;
 }
 
-.menu-logo,
+.menu-logo {
+  width: 170px;
+  height: auto;
+  display: block;
+}
 .fs-right-logo {
-  width: 130px;
+  width: 90px;
   height: auto;
   display: block;
 }
@@ -480,7 +484,7 @@ header.scrolled .hamburger span {
 .fs-nav-item.active .fs-nav-name,
 .fs-nav-item.active .fs-nav-num,
 .fs-nav-item.active .fs-nav-arrow {
-  color: var(--orange) !important;
+  color: #0c3a30 !important;
 }
 
 

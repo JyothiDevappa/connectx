@@ -396,7 +396,7 @@ $seo = [
 </section>
 
 
-<!-- WHY YOUNG CHANAKYA X -->
+{{-- <!-- WHY YOUNG CHANAKYA X -->
 <style>
     .why-ycx {
         padding: 120px 0;
@@ -649,7 +649,7 @@ $seo = [
         </div>
 
     </div>
-</section>
+</section> --}}
 
 <!-- HOW CONNECTX WORKS -->
 
@@ -811,7 +811,7 @@ $seo = [
     top: 24px;
     left: 24px;
     width: 75%; /* Reaches exactly to the center of the 4th circle (75% across the 4-column grid) */
-    height: 3px;
+    height: 1px;
     border-radius: 2px;
 }
 .hcw-line-bg  { background: #1f5a45; z-index: 0; }
@@ -1038,8 +1038,9 @@ $seo = [
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
+                    <span class="cx-premium-badge">PODCASTS</span>
                     <h3 class="cx-premium-title">Podcasts</h3>
-                    <p class="cx-premium-text">Share your journey, insights, and opinions.</p>
+                    <p class="cx-premium-text">Conversations with founders, CEOs, creators, and innovators. Real experiences. Practical lessons. Shared on record.</p>
                 </div>
                 <div class="cx-arrow-token">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1050,12 +1051,13 @@ $seo = [
 
             <div class="cx-premium-card cx-col-square">
                 <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=600" alt="Awards" class="cx-surface-img">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=600" alt="Stories" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
-                    <h3 class="cx-premium-title">Awards</h3>
-                    <p class="cx-premium-text">Recognition for impact, creativity, and influence.</p>
+                    <span class="cx-premium-badge">STORIES</span>
+                    <h3 class="cx-premium-title">Story Sharing</h3>
+                    <p class="cx-premium-text">Every journey matters. Publish startup stories, career experiences, and personal transformations.</p>
                 </div>
                 <div class="cx-arrow-token">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1066,12 +1068,13 @@ $seo = [
 
             <div class="cx-premium-card cx-col-square">
                 <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600" alt="Roundtables" class="cx-surface-img">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600" alt="Network" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
-                    <h3 class="cx-premium-title">Roundtables</h3>
-                    <p class="cx-premium-text">Focused discussions with creators and thought leaders.</p>
+                    <span class="cx-premium-badge">NETWORK</span>
+                    <h3 class="cx-premium-title">Networking</h3>
+                    <p class="cx-premium-text">Relationships across industries. Students, professionals, investors, mentors — all in one space.</p>
                 </div>
                 <div class="cx-arrow-token">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1082,12 +1085,13 @@ $seo = [
 
             <div class="cx-premium-card cx-col-square">
                 <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=600" alt="Meetups" class="cx-surface-img">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=600" alt="Mentorship" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
-                    <h3 class="cx-premium-title">Meetups</h3>
-                    <p class="cx-premium-text">City-based and global creator gatherings.</p>
+                    <span class="cx-premium-badge">MENTORSHIP</span>
+                    <h3 class="cx-premium-title">Mentorship</h3>
+                    <p class="cx-premium-text">The right conversation changes everything. Connect with mentors who've navigated the path you're on.</p>
                 </div>
                 <div class="cx-arrow-token">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1098,12 +1102,13 @@ $seo = [
 
             <div class="cx-premium-card cx-col-square">
                 <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1610116306796-6fea9f4fae38?auto=format&fit=crop&q=80&w=600" alt="Creator Lounges" class="cx-surface-img">
+                    <img src="https://images.unsplash.com/photo-1610116306796-6fea9f4fae38?auto=format&fit=crop&q=80&w=600" alt="Live Events" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
-                    <h3 class="cx-premium-title" style="color: var(--color-orange);">Creator Lounges</h3>
-                    <p class="cx-premium-text">Speak directly in front of audience & camera.</p>
+                    <span class="cx-premium-badge">LIVE EVENTS</span>
+                    <h3 class="cx-premium-title">Live Experiences</h3>
+                    <p class="cx-premium-text">Where ideas become action. Webinars, summits, roundtables, fireside chats, and meetups.</p>
                 </div>
                 <div class="cx-arrow-token">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1114,12 +1119,13 @@ $seo = [
 
             <div class="cx-premium-card cx-col-wide">
                 <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1000" alt="Networking" class="cx-surface-img">
+                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1000" alt="Collaborate" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
-                    <h3 class="cx-premium-title">Networking</h3>
-                    <p class="cx-premium-text">Meet creators, founders, and industry voices globally.</p>
+                    <span class="cx-premium-badge">COLLABORATE</span>
+                    <h3 class="cx-premium-title">Collaboration</h3>
+                    <p class="cx-premium-text">Build with people who share your vision. Partnerships for startups, research, content, and innovation.</p>
                 </div>
                 <div class="cx-arrow-token">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1128,6 +1134,49 @@ $seo = [
                 </div>
             </div>
 
+        </div>
+    </div>
+</section>
+
+<!-- WAYS TO GET INVOLVED -->
+<section class="ways-to-involve-sec">
+    <div class="container">
+        <div class="section-head text-center" style="margin-bottom: 50px;">
+            <div class="eyebrow rv">Ways to Engage</div>
+            <h2 class="sec-title rv" style="color: var(--primary-dark);">Be Part of the Experience</h2>
+            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">Explore a range of initiatives designed to connect you with industry leaders, ideas, and opportunities.</p>
+        </div>
+    </div>
+
+    <div class="marquee-container" style="padding-bottom: 0;">
+        <div class="marquee-track">
+            @php
+                $marqueeRow1 = [
+                    'Founder Spotlight', 'CEO Conversations', 'Startup Stories', 'Community Podcasts', 
+                    'Student Leadership Series', 'Women in Leadership', 'Creator Sessions'
+                ];
+                $marqueeRow2 = [
+                    'Industry Roundtables', 'Campus Chapters', 'Mentor Connect', 'Innovation Talks', 
+                    'Networking Meetups', 'Workshops', 'Fireside Chats', 'Leadership Summit'
+                ];
+            @endphp
+            @foreach($marqueeRow1 as $item)
+                <div class="marquee-chip">{{ $item }}</div>
+            @endforeach
+            @foreach($marqueeRow1 as $item)
+                <div class="marquee-chip">{{ $item }}</div>
+            @endforeach
+        </div>
+    </div>
+    
+    <div class="marquee-container" style="padding-top: 15px;">
+        <div class="marquee-track marquee-track-reverse">
+            @foreach($marqueeRow2 as $item)
+                <div class="marquee-chip">{{ $item }}</div>
+            @endforeach
+            @foreach($marqueeRow2 as $item)
+                <div class="marquee-chip">{{ $item }}</div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -1269,55 +1318,6 @@ $seo = [
     </div>
 </section>
 
-<!-- COMMUNITY & SPONSOR -->
-<section class="community-sec" id="community">
-    <div class="section-container">
-
-        <div class="section-head">
-            <div class="eyebrow rv">Ecosystem Network</div>
-            <h2 class="sec-title rv">Community & Sponsor</h2>
-            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-bottom: 0; margin-left: auto; margin-right: auto;">Whether you are an independent creator or a high-growth brand, Young Chanakya X has the right space and network to support your journey.</p>
-        </div>
-
-        <div class="community-grid">
-
-            <!-- Card 1: Creator Community -->
-            <article class="com-card creative-left rv" style="transition-delay:0s">
-                <div class="card-meta">
-                    <span class="card-num">01 /</span>
-                    <h3>Creator Community</h3>
-                    <p>Join a global community built for creators, storytellers and ecosystem builders ready to grow together.</p>
-                    <div class="card-action">
-                        <button class="btn-main">Join the Community</button>
-                    </div>
-                </div>
-                <div class="card-visual">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Creator">
-                    </div>
-                </div>
-            </article>
-
-            <!-- Card 2: Sponsor Opportunities -->
-            <article class="com-card creative-right rv" style="transition-delay:0.08s">
-                <div class="card-meta">
-                    <span class="card-num">02 /</span>
-                    <h3>Sponsor Opportunities</h3>
-                    <p>Partner with high-value creators and platforms through curated sponsor relationships and showcase programs.</p>
-                    <div class="card-action">
-                        <button class="btn-main">Explore Sponsorship</button>
-                    </div>
-                </div>
-                <div class="card-visual">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80" alt="Sponsorship">
-                    </div>
-                </div>
-            </article>
-
-        </div>
-    </div>
-</section>
 <!-- THE DNA OF CONNECTX -->
 <section class="h2-section h2-section--white h2-xmeaning" id="what-x-means">
     <div class="container">
@@ -1361,10 +1361,10 @@ $seo = [
                 <line class="h2-xm__line h2-xm__line--express"    x1="600" y1="450" x2="105" y2="436" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
                 {{-- experience: node top:380 right:-10 → left=930, icon center = (1040,414) scaled ~(1095,436) --}}
                 <line class="h2-xm__line h2-xm__line--experience" x1="600" y1="450" x2="1095" y2="436" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
-                {{-- expand: node bottom:20 left:150, icon center = (260, ~754) scaled ~(274,794) --}}
-                <line class="h2-xm__line h2-xm__line--expand"     x1="600" y1="450" x2="274" y2="794" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
-                {{-- excel: node bottom:20 right:150 → left=770, icon center = (880,~754) scaled ~(926,794) --}}
-                <line class="h2-xm__line h2-xm__line--excel"      x1="600" y1="450" x2="926" y2="794" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- expand: node bottom:20 left:150, icon center = (260, ~754) scaled ~(274,734) --}}
+                <line class="h2-xm__line h2-xm__line--expand"     x1="600" y1="450" x2="274" y2="734" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- excel: node bottom:20 right:150 → left=770, icon center = (880,~754) scaled ~(926,734) --}}
+                <line class="h2-xm__line h2-xm__line--excel"      x1="600" y1="450" x2="926" y2="734" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
             </svg>
 
             {{-- Concept Nodes --}}
@@ -1438,6 +1438,52 @@ $seo = [
         </div>
 
     </div>
+</section>
+
+
+<section class="membership-section position-relative mt-150 lg-mt-80 mb-150 lg-mb-80" id="membership">
+  <div class="container">
+    <div class="section-head text-center" style="margin-bottom: 50px;">
+        <div class="eyebrow rv">Membership</div>
+        <h2 class="sec-title rv" style="color: #0c3a30;">Find your role in the ecosystem.</h2>
+    </div>
+    <div class="mem-grid">
+      <div class="mem-card">
+        <div class="mem-role">Community Member</div>
+        <h3>Member</h3>
+        <p class="mem-desc">Access stories, events, discussions, and networking across the platform.</p>
+      </div>
+      <div class="mem-card featured">
+        <div class="mem-role">Knowledge Leader</div>
+        <h3>Creator / Mentor</h3>
+        <p class="mem-desc">Share articles, stories, and thought leadership — or guide aspiring professionals as a mentor.</p>
+        <span class="mem-badge">Most Popular</span>
+      </div>
+      <div class="mem-card">
+        <div class="mem-role">Platform Voice</div>
+        <h3>Speaker</h3>
+        <p class="mem-desc">Participate in podcasts, events, and educational sessions to amplify your expertise.</p>
+      </div>
+      <div class="mem-card">
+        <div class="mem-role">Community Leader</div>
+        <h3>Ambassador</h3>
+        <p class="mem-desc">Represent Young Chanakya X within campuses or regional communities.</p>
+      </div>
+      <div class="mem-card">
+        <div class="mem-role">Organizational</div>
+        <h3>Partner</h3>
+        <p class="mem-desc">Collaborate through events, programs, sponsorships, and strategic initiatives.</p>
+      </div>
+      <div class="mem-card" style="background:rgba(12,58,48,0.04); border-style:dashed; display:flex; align-items:center; justify-content:center; text-align:center;">
+        <div>
+          <div style="font-size:32px; margin-bottom:12px;">✨</div>
+          <div style="font-size:18px; color:#0c3a30; font-weight:700; margin-bottom:8px;">Not sure where you fit?</div>
+          <div style="font-size:14px; color:#6b7280;">Join and discover your role within the community.</div>
+          <a href="#" class="btn-primary" style="margin-top:20px; display:inline-block; font-size:13px; padding:10px 24px;">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 @push('scripts')

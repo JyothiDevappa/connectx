@@ -12,8 +12,7 @@
 
             <div class="fs-brand-desc">
                 <p>
-                   
-                Young Chanakya is a Business Leadership Launchpad dedicated to empowering the next generation of entrepreneurs, innovators, and leaders. Through mentorship, industry networking, practical learning, startup support, and leadership experiences, it bridges the gap between education and real-world success, helping ambitious individuals build impactful careers and businesses.
+                    Young Chanakya is a Business Leadership Launchpad dedicated to empowering the next generation of entrepreneurs, innovators, and leaders. We bridge the gap between education and real-world success, helping ambitious individuals build impactful careers and businesses.
                 </p>
 
                 <a href="{{ url('/') }}" class="fs-website-btn">
@@ -69,13 +68,13 @@
             </a>
 
             <a href="{{ url('/become-a-partner') }}" class="fs-nav-item {{ request()->is('become-a-partner') ? 'active' : '' }}" onclick="toggleMenu()">
-                <span class="fs-nav-name">Who Can Partner</span>
+                <span class="fs-nav-name">Become a Partner</span>
                 <span class="fs-nav-arrow">→</span>
                 <!-- <span class="fs-nav-num">02</span> -->
             </a>
 
             <a href="{{ url('/become-a-sponser') }}" class="fs-nav-item {{ request()->is('become-a-sponser') ? 'active' : '' }}" onclick="toggleMenu()">
-                <span class="fs-nav-name">Community & Sponsors</span>
+                <span class="fs-nav-name">Become a Sponsor</span>
                 <span class="fs-nav-arrow">→</span>
                 <!-- <span class="fs-nav-num">03</span> -->
             </a>

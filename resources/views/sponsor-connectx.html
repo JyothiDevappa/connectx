@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sponsor ConnectX — Partner With Our Creator Ecosystem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green: #0c3a30;
+    --green-mid: #1a5c48;
+    --green-light: #2e7d62;
+    --peach: #ffd2b1;
+    --peach-dark: #f4b98a;
+    --cream: #fdf9f5;
+    --ink: #111;
+    --muted: #5a5a5a;
+    --border: rgba(12,58,48,0.12);
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --mono: 'DM Mono', monospace;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--cream); color: var(--ink); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5vw; height: 68px;
+    background: rgba(253,249,245,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo-mark {
+    width: 38px; height: 38px; background: var(--green); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-size: 17px; font-weight: 700; color: var(--peach);
+  }
+  .nav-logo-text { font-family: var(--serif); font-size: 16px; font-weight: 700; color: var(--green); line-height: 1.2; }
+  .nav-logo-text span { display: block; font-size: 11px; font-style: italic; font-weight: 400; color: var(--muted); }
+  .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+  .nav-links a { font-size: 14px; font-weight: 500; color: var(--green); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--green-light); }
+  .nav-cta { background: var(--green); color: var(--peach) !important; padding: 8px 22px; border-radius: 100px; font-size: 14px !important; transition: background 0.2s !important; }
+  .nav-cta:hover { background: var(--green-mid) !important; }
+
+  section { padding: 100px 5vw; }
+  .section-eyebrow {
+    font-family: var(--mono); font-size: 12px; font-weight: 500;
+    color: var(--green-light); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px;
+  }
+  .section-title { font-family: var(--serif); font-size: clamp(32px, 4vw, 54px); font-weight: 700; color: var(--green); line-height: 1.15; margin-bottom: 20px; }
+  .section-sub { font-size: 17px; font-weight: 300; color: var(--muted); line-height: 1.75; max-width: 560px; }
+
+  .btn-primary {
+    background: var(--green); color: var(--peach); padding: 14px 32px; border-radius: 100px;
+    font-size: 15px; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.2s;
+    border: none; cursor: pointer;
+  }
+  .btn-primary:hover { background: var(--green-mid); transform: translateY(-1px); }
+  .btn-outline {
+    border: 1.5px solid var(--green); color: var(--green); padding: 14px 32px; border-radius: 100px;
+    font-size: 15px; font-weight: 500; text-decoration: none; display: inline-block; transition: all 0.2s;
+  }
+  .btn-outline:hover { background: var(--green); color: var(--peach); }
+
+  /* HERO */
+  .hero {
+    min-height: 94vh; display: grid; grid-template-columns: 1.1fr 0.9fr; padding-top: 68px; overflow: hidden;
+  }
+  .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 70px 5vw 70px 8vw; }
+  .hero-eyebrow {
+    font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--green-light);
+    letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 22px; display: flex; align-items: center; gap: 10px;
+  }
+  .hero-eyebrow::before { content: ''; display: inline-block; width: 32px; height: 1.5px; background: var(--green-light); }
+  .hero-headline { font-family: var(--serif); font-size: clamp(38px, 4.6vw, 60px); font-weight: 900; line-height: 1.1; color: var(--green); margin-bottom: 22px; }
+  .hero-sub { font-size: 17px; font-weight: 300; color: var(--muted); line-height: 1.7; max-width: 480px; margin-bottom: 32px; }
+
+  .hero-checks { list-style: none; margin-bottom: 40px; display: flex; flex-direction: column; gap: 12px; }
+  .hero-checks li { display: flex; align-items: flex-start; gap: 12px; font-size: 14.5px; color: var(--green); font-weight: 500; line-height: 1.5; }
+  .hero-check-mark {
+    width: 22px; height: 22px; flex-shrink: 0; border-radius: 50%; background: var(--green);
+    color: var(--peach); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; margin-top: 1px;
+  }
+
+  .hero-right { position: relative; overflow: hidden; background: var(--green); }
+  .hero-img-main { width: 100%; height: 100%; object-fit: cover; opacity: 0.78; display: block; }
+  .hero-img-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(12,58,48,0.55) 0%, rgba(12,58,48,0.1) 60%); }
+  .hero-floating-card {
+    position: absolute; bottom: 48px; left: -28px; background: var(--cream); border-radius: 16px;
+    padding: 20px 24px; width: 230px; box-shadow: 0 20px 60px rgba(12,58,48,0.25);
+  }
+  .hero-floating-card .label { font-size: 11px; font-weight: 600; color: var(--green-light); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
+  .hero-floating-card .title { font-family: var(--serif); font-size: 14px; font-weight: 700; color: var(--green); line-height: 1.3; }
+  .hero-floating-card .meta { font-size: 12px; color: var(--muted); margin-top: 8px; }
+
+  /* WHY CONNECT */
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 56px; max-width: 1200px; margin-left:auto; margin-right:auto; }
+  .why-card { background: var(--cream); border: 1.5px solid var(--border); border-radius: 20px; padding: 36px 30px; transition: all 0.25s; }
+  .why-card:hover { border-color: var(--green); transform: translateY(-3px); box-shadow: 0 20px 50px rgba(12,58,48,0.1); }
+  .why-icon { font-size: 30px; margin-bottom: 18px; }
+  .why-card h3 { font-family: var(--serif); font-size: 19px; color: var(--green); margin-bottom: 10px; }
+  .why-card p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+  /* PHOTO STRIP */
+  .photo-strip { display: grid; grid-template-columns: 1fr 2fr 1fr; height: 360px; gap: 4px; margin: 0 5vw; }
+  .photo-strip img { width: 100%; height: 100%; object-fit: cover; border-radius: 16px; }
+
+  /* TIERS */
+  .tiers-section { max-width: 1300px; margin: 0 auto; padding: 100px 5vw; }
+  .tiers-header { text-align: center; margin-bottom: 56px; }
+  .tiers-header .section-title { max-width: 600px; margin: 0 auto 16px; }
+  .tiers-header .section-sub { margin: 0 auto; text-align: center; }
+
+  .tier-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .tier-grid + .tier-grid { margin-top: 24px; }
+
+  .tier-card { border: 1.5px solid var(--border); border-radius: 20px; padding: 36px 30px; transition: all 0.25s; position: relative; display: flex; flex-direction: column; }
+  .tier-card:hover { border-color: var(--green); transform: translateY(-3px); box-shadow: 0 24px 60px rgba(12,58,48,0.12); }
+  .tier-card.featured { background: var(--green); color: var(--cream); border-color: var(--green); }
+  .tier-badge {
+    position: absolute; top: -14px; right: 28px; background: var(--peach); color: var(--green);
+    border-radius: 100px; padding: 6px 16px; font-size: 12px; font-weight: 700;
+  }
+  .tier-name { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-light); margin-bottom: 10px; }
+  .tier-card.featured .tier-name { color: var(--peach); }
+  .tier-title { font-family: var(--serif); font-size: 24px; font-weight: 700; color: var(--green); margin-bottom: 6px; }
+  .tier-card.featured .tier-title { color: var(--cream); }
+  .tier-tagline { font-size: 13px; color: var(--muted); margin-bottom: 22px; line-height: 1.5; }
+  .tier-card.featured .tier-tagline { color: rgba(253,249,245,0.7); }
+  .tier-list { list-style: none; margin-bottom: 26px; flex-grow: 1; }
+  .tier-list li {
+    font-size: 13.5px; color: var(--muted); padding: 7px 0; border-bottom: 1px solid var(--border);
+    display: flex; align-items: flex-start; gap: 9px; line-height: 1.5;
+  }
+  .tier-card.featured .tier-list li { color: rgba(253,249,245,0.8); border-color: rgba(255,255,255,0.12); }
+  .tier-list li:last-child { border-bottom: none; }
+  .tier-list li::before { content: '✓'; color: var(--green-light); font-weight: 700; flex-shrink: 0; }
+  .tier-card.featured .tier-list li::before { color: var(--peach); }
+  .tier-list.collapsed li:nth-child(n+5) { display: none; }
+  .tier-toggle {
+    background: none; border: none; color: var(--green-light); font-size: 13px; font-weight: 600;
+    cursor: pointer; padding: 0 0 22px; text-align: left; text-decoration: underline;
+  }
+  .tier-card.featured .tier-toggle { color: var(--peach); }
+
+  /* PROCESS */
+  .process-section { padding: 100px 5vw; background: var(--peach); }
+  .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 64px; max-width: 1000px; margin-left: auto; margin-right: auto; position: relative; }
+  .process-steps::before { content: ''; position: absolute; top: 30px; left: 10%; right: 10%; height: 1px; background: rgba(12,58,48,0.2); }
+  .process-step { text-align: center; padding: 0 16px; }
+  .process-num {
+    width: 60px; height: 60px; background: var(--green); color: var(--peach); border-radius: 50%;
+    font-family: var(--serif); font-size: 22px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 24px; position: relative; z-index: 2; box-shadow: 0 0 0 8px rgba(12,58,48,0.08);
+  }
+  .process-step h3 { font-family: var(--serif); font-size: 19px; font-weight: 700; color: var(--green); margin-bottom: 10px; }
+  .process-step p { font-size: 14px; color: var(--green); opacity: 0.75; line-height: 1.6; }
+
+  /* CTA */
+  .cta-section { padding: 120px 5vw; text-align: center; background: linear-gradient(160deg, rgba(12,58,48,0.04) 0%, var(--cream) 60%); }
+  .cta-section .section-title { font-size: clamp(34px, 5vw, 56px); max-width: 760px; margin: 0 auto 24px; }
+  .cta-checks {
+    list-style: none; display: flex; gap: 32px; justify-content: center; flex-wrap: wrap;
+    margin: 0 auto 44px; max-width: 700px;
+  }
+  .cta-checks li { display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: var(--green); font-weight: 500; }
+  .cta-checks .hero-check-mark { width: 20px; height: 20px; font-size: 11px; }
+  .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+  /* FOOTER */
+  footer { background: var(--green); color: rgba(253,249,245,0.75); padding: 80px 8vw 40px; }
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 64px; }
+  .footer-brand .logo-mark {
+    width: 44px; height: 44px; background: var(--peach); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-size: 20px; font-weight: 700; color: var(--green); margin-bottom: 20px;
+  }
+  .footer-brand p { font-size: 14px; line-height: 1.75; max-width: 280px; }
+  .footer-brand .tagline { font-family: var(--serif); font-style: italic; color: var(--peach); font-size: 16px; margin-top: 16px; display: block; }
+  footer h4 { font-family: var(--serif); font-size: 16px; font-weight: 700; color: var(--cream); margin-bottom: 20px; }
+  footer ul { list-style: none; }
+  footer li { margin-bottom: 10px; }
+  footer a { color: rgba(253,249,245,0.65); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+  footer a:hover { color: var(--peach); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 32px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: rgba(253,249,245,0.4); }
+
+  @media (max-width: 960px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-right { height: 50vw; }
+    .hero-floating-card { display: none; }
+    .why-grid { grid-template-columns: 1fr 1fr; }
+    .tier-grid { grid-template-columns: 1fr 1fr; }
+    .process-steps { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .process-steps::before { display: none; }
+    .photo-strip { grid-template-columns: 1fr; height: auto; }
+    .photo-strip img { height: 220px; }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .nav-links { display: none; }
+    .cta-checks { flex-direction: column; align-items: flex-start; gap: 14px; }
+  }
+  @media (max-width: 600px) {
+    .hero-left { padding: 56px 6vw; }
+    .why-grid { grid-template-columns: 1fr; }
+    .tier-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">CX</div>
+    <div class="nav-logo-text">ConnectX<span>Young Chanakya</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="#why">Why ConnectX</a></li>
+    <li><a href="#tiers">Sponsor Tiers</a></li>
+    <li><a href="#cta" class="nav-cta">Become a Sponsor</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Sponsorship &amp; Partnerships</div>
+    <h1 class="hero-headline">Become a Sponsor</h1>
+    <p class="hero-sub">Partner with Young Chanakya ConnectX to position your brand within a fast-growing global network of creators, influencers, speakers, and digital voices.</p>
+    <ul class="hero-checks">
+      <li><span class="hero-check-mark">✓</span> Direct access to high-visibility creator ecosystem</li>
+      <li><span class="hero-check-mark">✓</span> Brand integration across content, podcasts, and events</li>
+      <li><span class="hero-check-mark">✓</span> Consistent exposure through structured engagement formats</li>
+      <li><span class="hero-check-mark">✓</span> Association with a growing cross-industry digital network</li>
+    </ul>
+    <a href="#tiers" class="btn-primary">View Sponsor Tiers</a>
+  </div>
+  <div class="hero-right">
+    <img class="hero-img-main" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&auto=format&fit=crop&q=80" alt="Creator network event" />
+    <div class="hero-img-overlay"></div>
+    <div class="hero-floating-card">
+      <div class="label">Creator Ecosystem</div>
+      <div class="title">Influencers · Speakers · Digital Voices</div>
+      <div class="meta">Now onboarding sponsors</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CONNECT -->
+<section id="why">
+  <div style="text-align:center;">
+    <div class="section-eyebrow" style="justify-content:center; display:flex;">Why Connect With ConnectX</div>
+    <h2 class="section-title" style="max-width:680px; margin:0 auto 16px;">A structured creator ecosystem, built for consistent visibility.</h2>
+    <p class="section-sub" style="margin:0 auto; text-align:center;">Position your brand within an environment designed for ongoing engagement and collaboration — not one-off impressions.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">📡</div>
+      <h3>Consistent Visibility</h3>
+      <p>Maintain ongoing brand presence across podcasts, events, and digital content formats.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🎯</div>
+      <h3>Curated Creator Access</h3>
+      <p>Connect directly with selected influencers, speakers, and content creators across industries.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">📣</div>
+      <h3>Multi-Channel Exposure</h3>
+      <p>Extend your brand reach through podcasts, meetups, roundtables, and digital campaigns.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🤝</div>
+      <h3>Active Engagement</h3>
+      <p>Participate in real conversations, collaborations, and creator-led interactions.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🌍</div>
+      <h3>Scalable Presence</h3>
+      <p>Expand your brand visibility across regions through a growing global network.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🗓</div>
+      <h3>Structured Opportunities</h3>
+      <p>Leverage planned and recurring formats for predictable and measurable brand exposure.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO STRIP -->
+<div class="photo-strip">
+  <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=500&auto=format&fit=crop&q=80" alt="Mentoring session" />
+  <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=900&auto=format&fit=crop&q=80" alt="Creator collaboration" />
+  <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=500&auto=format&fit=crop&q=80" alt="Workshop session" />
+</div>
+
+<!-- TIERS -->
+<section class="tiers-section" id="tiers">
+  <div class="tiers-header">
+    <div class="section-eyebrow" style="justify-content:center; display:flex;">Sponsorship Tiers</div>
+    <h2 class="section-title">Choose how you show up.</h2>
+    <p class="section-sub">From single-event support to year-round brand integration — there's a tier built for your goals.</p>
+  </div>
+
+  <div class="tier-grid">
+    <div class="tier-card featured">
+      <div class="tier-badge">Flagship</div>
+      <div class="tier-name">Top Tier</div>
+      <div class="tier-title">Title Sponsor</div>
+      <div class="tier-tagline">Primary brand visibility across major ConnectX initiatives</div>
+      <ul class="tier-list collapsed">
+        <li>Naming rights across flagship events and properties</li>
+        <li>Highest logo visibility across all formats</li>
+        <li>Premium positioning in podcasts, events, and lounges</li>
+        <li>Opening and closing mention in key sessions</li>
+        <li>Dedicated brand integration in major campaigns</li>
+        <li>Priority access to top creators and influencers</li>
+        <li>Exclusive collaboration opportunities</li>
+        <li>Brand-led sessions or keynote opportunities</li>
+        <li>Featured across all promotional materials</li>
+        <li>Maximum visibility across the ConnectX ecosystem</li>
+      </ul>
+      <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+      <a href="#cta" class="btn-primary" style="width:100%; text-align:center; background:var(--peach); color:var(--green);">Become Title Sponsor</a>
+    </div>
+
+    <div class="tier-card">
+      <div class="tier-name">Secondary Tier</div>
+      <div class="tier-title">Powered By Sponsor</div>
+      <div class="tier-tagline">Secondary headline branding with strong ecosystem presence</div>
+      <ul class="tier-list collapsed">
+        <li>"Powered By" branding across key initiatives</li>
+        <li>Prominent logo placement across platforms</li>
+        <li>Integration in podcasts and content series</li>
+        <li>Visibility in events and networking lounges</li>
+        <li>Co-branded campaign opportunities</li>
+        <li>Access to creator collaborations</li>
+        <li>Mentions in promotional activities</li>
+        <li>Participation in select sessions and formats</li>
+        <li>Strong presence across digital channels</li>
+        <li>Consistent exposure across programs</li>
+      </ul>
+      <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+      <a href="#cta" class="btn-outline" style="width:100%; text-align:center;">Become Powered By Sponsor</a>
+    </div>
+
+    <div class="tier-card">
+      <div class="tier-name">Shared Tier</div>
+      <div class="tier-title">Co-Sponsor</div>
+      <div class="tier-tagline">Supporting partner across shared initiatives</div>
+      <ul class="tier-list collapsed">
+        <li>Shared branding across events and activities</li>
+        <li>Logo placement alongside other sponsors</li>
+        <li>Participation in collaborative campaigns</li>
+        <li>Visibility in selected content formats</li>
+        <li>Access to networking opportunities</li>
+        <li>Inclusion in event promotions</li>
+        <li>Brand mentions in shared communications</li>
+        <li>Limited access to creator collaborations</li>
+        <li>Presence in joint initiatives</li>
+        <li>Support-level visibility across ecosystem</li>
+      </ul>
+      <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+      <a href="#cta" class="btn-outline" style="width:100%; text-align:center;">Become Co-Sponsor</a>
+    </div>
+  </div>
+
+  <div class="tier-grid">
+    <div class="tier-card">
+      <div class="tier-name">Premium Tier</div>
+      <div class="tier-title">Platinum Sponsor</div>
+      <div class="tier-tagline">High-level presence across multiple formats and touchpoints</div>
+      <ul class="tier-list collapsed">
+        <li>High-visibility branding across events and content</li>
+        <li>Integration in podcasts and digital formats</li>
+        <li>Logo placement in key promotional assets</li>
+        <li>Access to curated creators and influencers</li>
+        <li>Participation in networking sessions</li>
+        <li>Brand inclusion in campaigns and collaborations</li>
+        <li>Visibility in lounges and meetups</li>
+        <li>Priority placement in selected initiatives</li>
+        <li>Multi-channel exposure across ConnectX</li>
+        <li>Consistent brand engagement opportunities</li>
+      </ul>
+      <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+      <a href="#cta" class="btn-outline" style="width:100%; text-align:center;">Become Platinum Sponsor</a>
+    </div>
+
+    <div class="tier-card">
+      <div class="tier-name">Mid Tier</div>
+      <div class="tier-title">Gold Sponsor</div>
+      <div class="tier-tagline">Strong visibility in selected events and content formats</div>
+      <ul class="tier-list collapsed">
+        <li>Branding across selected events and sessions</li>
+        <li>Logo presence in content and campaigns</li>
+        <li>Participation in creator collaborations</li>
+        <li>Visibility in meetups and roundtables</li>
+        <li>Access to networking opportunities</li>
+        <li>Brand mentions in promotional materials</li>
+        <li>Inclusion in digital campaigns</li>
+        <li>Presence in specific content formats</li>
+        <li>Moderate exposure across channels</li>
+        <li>Engagement-driven visibility</li>
+      </ul>
+      <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+      <a href="#cta" class="btn-outline" style="width:100%; text-align:center;">Become Gold Sponsor</a>
+    </div>
+
+    <div class="tier-card">
+      <div class="tier-name">Entry Tier</div>
+      <div class="tier-title">Silver Sponsor</div>
+      <div class="tier-tagline">Focused exposure in specific programs or segments</div>
+      <ul class="tier-list collapsed">
+        <li>Branding in selected programs or sessions</li>
+        <li>Logo placement in limited formats</li>
+        <li>Participation in specific campaigns</li>
+        <li>Access to targeted networking opportunities</li>
+        <li>Visibility in select content pieces</li>
+        <li>Inclusion in event-specific promotions</li>
+        <li>Brand mentions in curated activities</li>
+        <li>Limited creator collaboration access</li>
+        <li>Presence in niche segments</li>
+        <li>Focused visibility within defined scope</li>
+      </ul>
+      <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+      <a href="#cta" class="btn-outline" style="width:100%; text-align:center;">Become Silver Sponsor</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section">
+  <div style="text-align:center;">
+    <div class="section-eyebrow" style="color:var(--green-light); justify-content:center; display:flex;">How It Works</div>
+    <h2 class="section-title">From conversation to launch.</h2>
+  </div>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="process-num">1</div>
+      <h3>Connect</h3>
+      <p>Share your goals with our partnerships team and explore the right fit.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-num">2</div>
+      <h3>Choose a Tier</h3>
+      <p>Select the sponsorship level that matches your brand's objectives.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-num">3</div>
+      <h3>Co-Create</h3>
+      <p>We design content and touchpoints that feel native to the ecosystem.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-num">4</div>
+      <h3>Go Live</h3>
+      <p>Your brand reaches creators and audiences across every format.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="cta">
+  <div class="section-eyebrow" style="justify-content:center; display:flex;">Let's Build Something Together</div>
+  <h2 class="section-title">Ready to put your brand in front of tomorrow's leaders?</h2>
+  <ul class="cta-checks">
+    <li><span class="hero-check-mark">✓</span> Connect with creators</li>
+    <li><span class="hero-check-mark">✓</span> Build visibility through content</li>
+    <li><span class="hero-check-mark">✓</span> Participate in active engagement formats</li>
+  </ul>
+  <div class="cta-actions">
+    <a href="mailto:partnerships@youngchanakyaconnectx.com" class="btn-primary">Email Our Team</a>
+    <a href="index.html" class="btn-outline">Back to Home</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo-mark">CX</div>
+      <p>A fast-growing global network connecting creators, influencers, speakers, and digital voices through structured engagement and collaboration.</p>
+      <span class="tagline">"Where Creators, Brands & Audiences Connect."</span>
+    </div>
+    <div>
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#experiences">Experiences</a></li>
+        <li><a href="index.html#programs">Programs</a></li>
+        <li><a href="index.html#membership">Membership</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Sponsors</h4>
+      <ul>
+        <li><a href="#why">Why ConnectX</a></li>
+        <li><a href="#tiers">Sponsor Tiers</a></li>
+        <li><a href="#cta">Get In Touch</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Join</h4>
+      <ul>
+        <li><a href="index.html#join">Become a Member</a></li>
+        <li><a href="index.html#join">Apply as Speaker</a></li>
+        <li><a href="index.html#join">Become a Mentor</a></li>
+        <li><a href="#cta">Partner with Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Young Chanakya ConnectX. All rights reserved.</span>
+    <span>Think. Connect. Lead.</span>
+  </div>
+</footer>
+
+<script>
+  function toggleTier(btn) {
+    const list = btn.previousElementSibling;
+    const collapsed = list.classList.toggle('collapsed');
+    btn.textContent = collapsed ? 'Show all benefits' : 'Show less';
+  }
+</script>
+
+</body>
+</html>
