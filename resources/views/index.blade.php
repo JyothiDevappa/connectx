@@ -234,7 +234,7 @@ $seo = [
                 <img src="{{ asset('images/media/founder.png') }}" alt="Kishorekumar Chandrasekeran" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
                 
                 <!-- Gradient Overlay -->
-                <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%); pointer-events: none; z-index: 1;"></div>
+                <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background: linear-gradient(to top, rgba(12, 58, 48, 0.95) 0%, rgba(12, 58, 48, 0.5) 60%, transparent 100%); pointer-events: none; z-index: 1;"></div>
                 
                 <!-- Text Overlay -->
                 <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 40px 32px 20px 32px; z-index: 2;">

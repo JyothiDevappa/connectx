@@ -20,18 +20,24 @@ class ApplicationController extends Controller
         ]);
 
         try {
+            \Illuminate\Support\Facades\Log::info('--- CONNECTORS LIST SUBMISSION START ---');
+            \Illuminate\Support\Facades\Log::info('Sending admin email...');
             // 1. Email to Admin
             Mail::send('emails.directory-application', $validated, function ($message) use ($validated) {
                 $message->to('youngchanakya.x@gmail.com')
                         ->subject('New Directory Application: ' . $validated['full_name'])
                         ->replyTo($validated['email'], $validated['full_name']);
             });
+            \Illuminate\Support\Facades\Log::info('Admin email sent.');
 
+            \Illuminate\Support\Facades\Log::info('Sending user email to: '.$validated['email']);
             // 2. Email to User (Confirmation)
             Mail::send('emails.user-confirmation', $validated, function ($message) use ($validated) {
                 $message->to($validated['email'])
                         ->subject('Application Received - Young Chanakya X');
             });
+            \Illuminate\Support\Facades\Log::info('User email sent.');
+            \Illuminate\Support\Facades\Log::info('--- CONNECTORS LIST SUBMISSION END ---');
 
             return back()->with('success', 'Your application has been submitted successfully for verification!');
         } catch (\Exception $e) {
@@ -39,6 +45,86 @@ class ApplicationController extends Controller
             logger()->error('SMTP Directory Application failure: ' . $e->getMessage());
             
             return back()->withInput()->with('error', 'Unable to send application via SMTP. Please check mailer settings.');
+        }
+    }
+
+    public function submitPartner(Request $request)
+    {
+        $validated = $request->validate([
+            'name'             => 'required|string|max:255',
+            'email'            => 'required|email|max:255',
+            'phone'            => 'required|string|max:50',
+            'company'          => 'required|string|max:255',
+            'designation'      => 'required|string|max:255',
+            'linkedin'         => 'required|url|max:255',
+            'partnership_type' => 'required|string|max:255',
+            'website'          => 'nullable|url|max:255',
+        ]);
+
+        try {
+            \Illuminate\Support\Facades\Log::info('--- PARTNER SUBMISSION START ---');
+            \Illuminate\Support\Facades\Log::info('Sending admin email...');
+            // 1. Email to Admin
+            Mail::send('emails.partner-application', $validated, function ($message) use ($validated) {
+                $message->to('youngchanakya.x@gmail.com')
+                        ->subject('New Partnership Application: ' . $validated['name'])
+                        ->replyTo($validated['email'], $validated['name']);
+            });
+            \Illuminate\Support\Facades\Log::info('Admin email sent.');
+
+            \Illuminate\Support\Facades\Log::info('Sending user email to: '.$validated['email']);
+            // 2. Email to User (Confirmation)
+            Mail::send('emails.partner-confirmation', $validated, function ($message) use ($validated) {
+                $message->to($validated['email'])
+                        ->subject('Partnership Application Received - Young Chanakya X');
+            });
+            \Illuminate\Support\Facades\Log::info('User email sent.');
+            \Illuminate\Support\Facades\Log::info('--- PARTNER SUBMISSION END ---');
+
+            return back()->with('success', 'Your partnership application has been submitted successfully!');
+        } catch (\Exception $e) {
+            logger()->error('SMTP Partnership Application failure: ' . $e->getMessage());
+            return back()->withInput()->with('error', 'Unable to send application via SMTP. Please try again.');
+        }
+    }
+
+    public function submitSponsor(Request $request)
+    {
+        $validated = $request->validate([
+            'name'              => 'required|string|max:255',
+            'email'             => 'required|email|max:255',
+            'phone'             => 'required|string|max:50',
+            'company'           => 'required|string|max:255',
+            'designation'       => 'required|string|max:255',
+            'linkedin'          => 'required|url|max:255',
+            'sponsorship_level' => 'required|string|max:255',
+            'website'           => 'nullable|url|max:255',
+        ]);
+
+        try {
+            \Illuminate\Support\Facades\Log::info('--- SPONSOR SUBMISSION START ---');
+            \Illuminate\Support\Facades\Log::info('Sending admin email...');
+            // 1. Email to Admin
+            Mail::send('emails.sponsor-application', $validated, function ($message) use ($validated) {
+                $message->to('youngchanakya.x@gmail.com')
+                        ->subject('New Sponsorship Application: ' . $validated['name'])
+                        ->replyTo($validated['email'], $validated['name']);
+            });
+            \Illuminate\Support\Facades\Log::info('Admin email sent.');
+
+            \Illuminate\Support\Facades\Log::info('Sending user email to: '.$validated['email']);
+            // 2. Email to User (Confirmation)
+            Mail::send('emails.sponsor-confirmation', $validated, function ($message) use ($validated) {
+                $message->to($validated['email'])
+                        ->subject('Sponsorship Application Received - Young Chanakya X');
+            });
+            \Illuminate\Support\Facades\Log::info('User email sent.');
+            \Illuminate\Support\Facades\Log::info('--- SPONSOR SUBMISSION END ---');
+
+            return back()->with('success', 'Your sponsorship application has been submitted successfully!');
+        } catch (\Exception $e) {
+            logger()->error('SMTP Sponsorship Application failure: ' . $e->getMessage());
+            return back()->withInput()->with('error', 'Unable to send application via SMTP. Please try again.');
         }
     }
 }

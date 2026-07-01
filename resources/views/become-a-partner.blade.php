@@ -444,7 +444,18 @@ $seo = [
 
                 <div class="partner-form-box wow fadeInUp">
 
-                    <form action="#" method="POST">
+                    @if (session('error') || $errors->any())
+                        <div class="alert alert-danger mb-4" style="font-weight: 500;">
+                            <i class="bi bi-exclamation-triangle-fill me-2"></i> 
+                            @if (session('error'))
+                                {{ session('error') }}
+                            @else
+                                Please correct the errors in the form below.
+                            @endif
+                        </div>
+                    @endif
+
+                    <form action="{{ route('partner.apply') }}" method="POST">
                         @csrf
 
                         <div class="row">
@@ -453,65 +464,85 @@ $seo = [
                                 <input type="text"
                                     class="form-control"
                                     name="name"
-                                    placeholder="Full Name">
+                                    value="{{ old('name') }}"
+                                    placeholder="Full Name" required>
+                                @error('name')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <input type="email"
                                     class="form-control"
                                     name="email"
-                                    placeholder="Email Address">
+                                    value="{{ old('email') }}"
+                                    placeholder="Email Address" required>
+                                @error('email')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <input type="text"
                                     class="form-control"
                                     name="phone"
-                                    placeholder="Phone / WhatsApp">
+                                    value="{{ old('phone') }}"
+                                    placeholder="Phone / WhatsApp" required>
+                                @error('phone')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <input type="text"
                                     class="form-control"
                                     name="company"
-                                    placeholder="Organization / Company Name">
+                                    value="{{ old('company') }}"
+                                    placeholder="Organization / Company Name" required>
+                                @error('company')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <input type="text"
                                     class="form-control"
                                     name="designation"
-                                    placeholder="Designation / Role">
+                                    value="{{ old('designation') }}"
+                                    placeholder="Designation / Role" required>
+                                @error('designation')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <input type="url"
                                     class="form-control"
                                     name="linkedin"
-                                    placeholder="LinkedIn Profile">
+                                    value="{{ old('linkedin') }}"
+                                    placeholder="LinkedIn Profile" required>
+                                @error('linkedin')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-12 mb-3">
 
                                 <select class="form-control"
-                                    name="partnership_type">
+                                    name="partnership_type" required>
 
-                                    <option selected disabled>
+                                    <option value="" disabled {{ old('partnership_type') ? '' : 'selected' }}>
                                         -- Partnership Type --
                                     </option>
 
-                                    <option>Media Partners</option>
-                                    <option>Digital Partners</option>
-                                    <option>Consulting Partners</option>
-                                    <option>Knowledge Partners</option>
-                                    <option>Industry Partners</option>
-                                    <option>Innovation & Technology Partners</option>
-                                    <option>Community Partners</option>
-                                    <option>Learning & Development Partners</option>
-                                    <option>Event Partners</option>
-                                    <option>Finance & Growth Partners</option>
+                                    @foreach(['Media Partners', 'Digital Partners', 'Consulting Partners', 'Knowledge Partners', 'Industry Partners', 'Innovation & Technology Partners', 'Community Partners', 'Learning & Development Partners', 'Event Partners', 'Finance & Growth Partners'] as $type)
+                                        <option value="{{ $type }}" {{ old('partnership_type') == $type ? 'selected' : '' }}>{{ $type }}</option>
+                                    @endforeach
 
                                 </select>
+                                @error('partnership_type')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
 
                             </div>
 
@@ -520,7 +551,11 @@ $seo = [
                                 <input type="url"
                                     class="form-control"
                                     name="website"
+                                    value="{{ old('website') }}"
                                     placeholder="Website URL">
+                                @error('website')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
 
                             </div>
 
@@ -920,8 +955,39 @@ EXPANDING ACROSS INDUSTRIES
 
             </div>
 
-        </div>
     </div>
 </section>
+
+@if (session('success'))
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background: linear-gradient(135deg, #fffcf9 0%, #ffeada 100%); border: 1px solid rgba(12, 58, 48, 0.15); border-radius: 20px;">
+            <div class="modal-body text-center p-5">
+                <div class="mb-4">
+                    <i class="bi bi-check-circle-fill" style="font-size: 4rem; color: #0c3a30;"></i>
+                </div>
+                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; line-height: 1.3; color: #0c3a30;">The Start of a Powerful Collaboration</h3>
+                <p class="mb-4" style="line-height: 1.6; font-size: 0.95rem; color: #687588;">
+                    Your partnership application has been successfully received. Our team is currently reviewing your profile and will connect with you shortly to explore how we can align our visions for mutual growth. We look forward to building something extraordinary together.
+                </p>
+                <a href="{{ url('/') }}" class="btn px-5 py-3 fw-bold text-uppercase w-100 d-block text-center" style="text-decoration: none; background-color: #0c3a30; color: #ffffff; border-radius: 12px; border: none; transition: all 0.3s ease;">
+                    Continue Exploring
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var successModalElement = document.getElementById('successModal');
+        if (successModalElement) {
+            var myModal = new bootstrap.Modal(successModalElement);
+            myModal.show();
+        }
+    });
+</script>
+@endif
 
 @endsection

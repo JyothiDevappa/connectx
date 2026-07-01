@@ -90,11 +90,10 @@ Route::post('/connecters-list/apply', [ApplicationController::class, 'submit'])-
 Route::get('/become-a-sponser', function () {
     return view('become-a-sponser');
 });
-
+Route::post('/become-a-sponser/apply', [ApplicationController::class, 'submitSponsor'])->name('sponsor.apply');
 
 Route::get('/become-a-partner', function () {
     return view('become-a-partner');
 });
-
-
+Route::post('/become-a-partner/apply', [ApplicationController::class, 'submitPartner'])->name('partner.apply');
 Route::get('/events', fn() => view('events'));

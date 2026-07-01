@@ -1140,7 +1140,20 @@ CTA SECTION
 
                 <div class="sponsor-form-box wow fadeInUp">
 
-                    <form action="#" method="POST">
+                <div class="sponsor-form-box wow fadeInUp">
+
+                    @if (session('error') || $errors->any())
+                        <div class="alert alert-danger mb-4" style="font-weight: 500;">
+                            <i class="bi bi-exclamation-triangle-fill me-2"></i> 
+                            @if (session('error'))
+                                {{ session('error') }}
+                            @else
+                                Please correct the errors in the form below.
+                            @endif
+                        </div>
+                    @endif
+
+                    <form action="{{ route('sponsor.apply') }}" method="POST">
                         @csrf
 
                         <div class="row">
@@ -1149,75 +1162,94 @@ CTA SECTION
                                 <input type="text"
                                        class="form-control"
                                        name="name"
-                                       placeholder="Full Name">
+                                       value="{{ old('name') }}"
+                                       placeholder="Full Name" required>
+                                @error('name')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <input type="email"
                                        class="form-control"
                                        name="email"
-                                       placeholder="Email Address">
+                                       value="{{ old('email') }}"
+                                       placeholder="Email Address" required>
+                                @error('email')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <input type="text"
                                        class="form-control"
                                        name="phone"
-                                       placeholder="Phone / WhatsApp">
+                                       value="{{ old('phone') }}"
+                                       placeholder="Phone / WhatsApp" required>
+                                @error('phone')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <input type="text"
                                        class="form-control"
                                        name="company"
-                                       placeholder="Company Name">
+                                       value="{{ old('company') }}"
+                                       placeholder="Company Name" required>
+                                @error('company')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <input type="text"
                                        class="form-control"
                                        name="designation"
-                                       placeholder="Designation / Role">
+                                       value="{{ old('designation') }}"
+                                       placeholder="Designation / Role" required>
+                                @error('designation')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-md-6 mb-3">
                                 <input type="url"
                                        class="form-control"
                                        name="linkedin"
-                                       placeholder="LinkedIn Profile">
+                                       value="{{ old('linkedin') }}"
+                                       placeholder="LinkedIn Profile" required>
+                                @error('linkedin')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-12 mb-3">
-                                <select class="form-control" name="sponsorship_level">
+                                <select class="form-control" name="sponsorship_level" required>
 
-                                    <option selected disabled>
+                                    <option value="" disabled {{ old('sponsorship_level') ? '' : 'selected' }}>
                                         -- Sponsor Type --
                                     </option>
 
-                                    <option>Sponsor</option>
-                                    <option>Co-Sponsor</option>
-                                    <option>Powered by Sponsor</option>
-                                    <option>Associate Sponsor</option>
-                                    <option>Supporting Sponsor</option>
-                                    <option>Education Sponsor</option>
-                                    <option>Innovation Sponsor</option>
-                                    <option>Hospitality Sponsor</option>
-                                    <option>Merchandise Sponsor</option>
-                                    <option>Logistics Sponsor</option>
-                                    <option>Financial Sponsor</option>
-                                    <option>Wellness Sponsor</option>
-                                    <option>Career Sponsor</option>
-                                    <option>Green Sponsor</option>
-                                    <option>Networking Sponsor</option>
+                                    @foreach(['Sponsor', 'Co-Sponsor', 'Powered by Sponsor', 'Associate Sponsor', 'Supporting Sponsor', 'Education Sponsor', 'Innovation Sponsor', 'Hospitality Sponsor', 'Merchandise Sponsor', 'Logistics Sponsor', 'Financial Sponsor', 'Wellness Sponsor', 'Career Sponsor', 'Green Sponsor', 'Networking Sponsor'] as $type)
+                                        <option value="{{ $type }}" {{ old('sponsorship_level') == $type ? 'selected' : '' }}>{{ $type }}</option>
+                                    @endforeach
 
                                 </select>
+                                @error('sponsorship_level')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-12 mb-4">
                                 <input type="url"
                                        class="form-control"
                                        name="website"
+                                       value="{{ old('website') }}"
                                        placeholder="Website URL (Optional)">
+                                @error('website')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <div class="col-12">
@@ -1664,5 +1696,37 @@ function toggleTier(btn) {
     </div>
 
 </div>
+
+@if (session('success'))
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background: linear-gradient(135deg, #fffcf9 0%, #ffeada 100%); border: 1px solid rgba(12, 58, 48, 0.15); border-radius: 20px;">
+            <div class="modal-body text-center p-5">
+                <div class="mb-4">
+                    <i class="bi bi-check-circle-fill" style="font-size: 4rem; color: #0c3a30;"></i>
+                </div>
+                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; line-height: 1.3; color: #0c3a30;">Together, We Drive Meaningful Impact</h3>
+                <p class="mb-4" style="line-height: 1.6; font-size: 0.95rem; color: #687588;">
+                    Your sponsorship application has been successfully received. We are reviewing your details and will reach out shortly to design a tailored experience that amplifies your brand. Thank you for your commitment to empowering the next generation of leaders.
+                </p>
+                <a href="{{ url('/') }}" class="btn px-5 py-3 fw-bold text-uppercase w-100 d-block text-center" style="text-decoration: none; background-color: #0c3a30; color: #ffffff; border-radius: 12px; border: none; transition: all 0.3s ease;">
+                    Continue Exploring
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var successModalElement = document.getElementById('successModal');
+        if (successModalElement) {
+            var myModal = new bootstrap.Modal(successModalElement);
+            myModal.show();
+        }
+    });
+</script>
+@endif
 
 @endsection
