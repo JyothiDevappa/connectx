@@ -55,6 +55,9 @@ $seo = [
 
 
 <style>
+#hdr:not(.scrolled) .hamburger span {
+    background: #0c3a30 !important;
+}
 
 /* =========================================
    SPONSOR SECTION
@@ -1395,156 +1398,7 @@ WHY CONNECT WITH CONNECTX
 <!-- Image Carousel Section -->
 @include('partials.image-carousel')
 
-<!-- =========================
-SPONSORSHIP CATEGORIES REPLACED WITH TIERS
-========================= -->
-<section class="tiers-section position-relative pt-120 pb-120" id="tiers">
-  <div class="container">
-    <div class="section-head text-center" style="margin-bottom: 50px;">
-        <div class="eyebrow rv">Sponsorship Tiers</div>
-        <h2 class="sec-title rv" style="color: #0c3a30;">Choose how you show up.</h2>
-        <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">From single-event support to year-round brand integration — there's a tier built for your goals.</p>
-    </div>
 
-    <div class="tier-grid">
-      <div class="tier-card featured">
-        <div class="tier-badge">Flagship</div>
-        <div class="tier-name">Top Tier</div>
-        <div class="tier-title">Title Sponsor</div>
-        <div class="tier-tagline">Primary brand visibility across major ConnectX initiatives</div>
-        <ul class="tier-list collapsed">
-          <li>Naming rights across flagship events and properties</li>
-          <li>Highest logo visibility across all formats</li>
-          <li>Premium positioning in podcasts, events, and lounges</li>
-          <li>Opening and closing mention in key sessions</li>
-          <li>Dedicated brand integration in major campaigns</li>
-          <li>Priority access to top creators and influencers</li>
-          <li>Exclusive collaboration opportunities</li>
-          <li>Brand-led sessions or keynote opportunities</li>
-          <li>Featured across all promotional materials</li>
-          <li>Maximum visibility across the ConnectX ecosystem</li>
-        </ul>
-        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponsor-form" class="tier-btn-primary" style="width:100%; text-align:center;">Become Title Sponsor</a>
-      </div>
-
-      <div class="tier-card">
-        <div class="tier-name">Secondary Tier</div>
-        <div class="tier-title">Powered By Sponsor</div>
-        <div class="tier-tagline">Secondary headline branding with strong ecosystem presence</div>
-        <ul class="tier-list collapsed">
-          <li>"Powered By" branding across key initiatives</li>
-          <li>Prominent logo placement across platforms</li>
-          <li>Integration in podcasts and content series</li>
-          <li>Visibility in events and networking lounges</li>
-          <li>Co-branded campaign opportunities</li>
-          <li>Access to creator collaborations</li>
-          <li>Mentions in promotional activities</li>
-          <li>Participation in select sessions and formats</li>
-          <li>Strong presence across digital channels</li>
-          <li>Consistent exposure across programs</li>
-        </ul>
-        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become Powered By Sponsor</a>
-      </div>
-
-      <div class="tier-card">
-        <div class="tier-name">Shared Tier</div>
-        <div class="tier-title">Co-Sponsor</div>
-        <div class="tier-tagline">Supporting partner across shared initiatives</div>
-        <ul class="tier-list collapsed">
-          <li>Shared branding across events and activities</li>
-          <li>Logo placement alongside other sponsors</li>
-          <li>Participation in collaborative campaigns</li>
-          <li>Visibility in selected content formats</li>
-          <li>Access to networking opportunities</li>
-          <li>Inclusion in event promotions</li>
-          <li>Brand mentions in shared communications</li>
-          <li>Limited access to creator collaborations</li>
-          <li>Presence in joint initiatives</li>
-          <li>Support-level visibility across ecosystem</li>
-        </ul>
-        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become Co-Sponsor</a>
-      </div>
-    </div>
-
-    <div class="tier-grid">
-      <div class="tier-card">
-        <div class="tier-name">Premium Tier</div>
-        <div class="tier-title">Platinum Sponsor</div>
-        <div class="tier-tagline">High-level presence across multiple formats and touchpoints</div>
-        <ul class="tier-list collapsed">
-          <li>High-visibility branding across events and content</li>
-          <li>Integration in podcasts and digital formats</li>
-          <li>Logo placement in key promotional assets</li>
-          <li>Access to curated creators and influencers</li>
-          <li>Participation in networking sessions</li>
-          <li>Brand inclusion in campaigns and collaborations</li>
-          <li>Visibility in lounges and meetups</li>
-          <li>Priority placement in selected initiatives</li>
-          <li>Multi-channel exposure across ConnectX</li>
-          <li>Consistent brand engagement opportunities</li>
-        </ul>
-        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become Platinum Sponsor</a>
-      </div>
-
-      <div class="tier-card">
-        <div class="tier-name">Mid Tier</div>
-        <div class="tier-title">Gold Sponsor</div>
-        <div class="tier-tagline">Strong visibility in selected events and content formats</div>
-        <ul class="tier-list collapsed">
-          <li>Branding across selected events and sessions</li>
-          <li>Logo presence in content and campaigns</li>
-          <li>Participation in creator collaborations</li>
-          <li>Visibility in meetups and roundtables</li>
-          <li>Access to networking opportunities</li>
-          <li>Brand mentions in promotional materials</li>
-          <li>Inclusion in digital campaigns</li>
-          <li>Presence in specific content formats</li>
-          <li>Moderate exposure across channels</li>
-          <li>Engagement-driven visibility</li>
-        </ul>
-        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become Gold Sponsor</a>
-      </div>
-
-      <div class="tier-card">
-        <div class="tier-name">Entry Tier</div>
-        <div class="tier-title">Silver Sponsor</div>
-        <div class="tier-tagline">Focused exposure in specific programs or segments</div>
-        <ul class="tier-list collapsed">
-          <li>Branding in selected programs or sessions</li>
-          <li>Logo placement in limited formats</li>
-          <li>Participation in specific campaigns</li>
-          <li>Access to targeted networking opportunities</li>
-          <li>Visibility in select content pieces</li>
-          <li>Inclusion in event-specific promotions</li>
-          <li>Brand mentions in curated activities</li>
-          <li>Limited creator collaboration access</li>
-          <li>Presence in niche segments</li>
-          <li>Focused visibility within defined scope</li>
-        </ul>
-        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become Silver Sponsor</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script>
-function toggleTier(btn) {
-  const list = btn.previousElementSibling;
-  if (list.classList.contains('collapsed')) {
-    list.classList.remove('collapsed');
-    btn.textContent = 'Show fewer benefits';
-  } else {
-    list.classList.add('collapsed');
-    btn.textContent = 'Show all benefits';
-  }
-}
-</script>
 
 
 

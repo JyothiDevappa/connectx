@@ -57,6 +57,9 @@ $seo = [
 @section('content')
 
 <style>
+#hdr:not(.scrolled) .hamburger span {
+    background: #0c3a30 !important;
+}
 
 /* ==========================================
    BECOME A PARTNER — MOBILE RESPONSIVE

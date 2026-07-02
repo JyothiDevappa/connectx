@@ -270,60 +270,79 @@ $seo = [
    THEME STYLE & COLOR BALANCE CUSTOMIZATIONS
    ========================================== */
 
-.inner-banner-one {
-    background-image: linear-gradient(135deg, rgba(12, 58, 48, 0.9) 0%, rgba(7, 31, 26, 0.95) 100%), 
-                      url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&q=80&w=1920') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    position: relative;
+.premium-hero-container {
+    min-height: 75vh;
+    background-image: linear-gradient(180deg, rgba(12, 58, 48, 0.55) 0%, #090d16 100%), 
+                      url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.text-glow-headline {
+    font-size: clamp(38px, 5.5vw, 72px);
+    font-weight: 900;
+    line-height: 1.2;
+    padding-bottom: 15px;
+    letter-spacing: -3px;
+    background: linear-gradient(135deg, #ffffff 30%, #ffd2b1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.inner-banner-one::before,
-.inner-banner-one::after {
-    display: none !important;
+/* ---- Premium Hero Section ---- */
+@media (max-width: 991px) {
+    .premium-hero-container {
+        min-height: 65vh;
+        background-attachment: scroll;
+    }
+    .premium-hero-container .container {
+        padding-top: 150px;
+        padding-bottom: 70px;
+    }
+    .text-glow-headline {
+        font-size: clamp(32px, 5vw, 56px);
+        letter-spacing: -2px;
+    }
+    .premium-hero-container p.fs-5 {
+        font-size: 16px !important;
+    }
 }
 
-.inner-banner-one .hero-heading {
-    font-size: clamp(36px, 5vw, 56px) !important;
-    font-weight: 800 !important;
-    line-height: 1.15 !important;
-    letter-spacing: -2px !important;
-    background: linear-gradient(135deg, #ffffff 40%, #ffd2b1 100%) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    padding: 0 !important;
-    margin: 0 !important;
+@media (max-width: 767px) {
+    .premium-hero-container {
+        min-height: 55vh;
+    }
+    .premium-hero-container .container {
+        padding-top: 130px;
+        padding-bottom: 50px;
+    }
+    .text-glow-headline {
+        font-size: clamp(26px, 7vw, 42px);
+        letter-spacing: -1.5px;
+        line-height: 1.25;
+        padding-bottom: 10px;
+    }
+    .premium-hero-container p.fs-5 {
+        font-size: 15px !important;
+    }
+    .premium-hero-container ul.style-none {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
 }
 
-.inner-banner-one p {
-    color: rgba(255, 255, 255, 0.9) !important;
-    font-size: 1.1rem !important;
-    line-height: 1.6 !important;
-}
-
-.inner-banner-one .pager {
-    border-bottom: 1px solid rgba(255, 210, 177, 0.25) !important;
-    padding-bottom: 4px !important;
-}
-
-.inner-banner-one .pager li {
-    color: rgba(255, 255, 255, 0.6) !important;
-    font-weight: 600 !important;
-}
-
-.inner-banner-one .pager li a {
-    color: rgba(255, 255, 255, 0.8) !important;
-    font-weight: 600 !important;
-    text-decoration: none !important;
-    transition: color 0.3s ease !important;
-}
-
-.inner-banner-one .pager li a:hover {
-    color: #ffd2b1 !important;
-}
-
-.inner-banner-one .pager li:last-child {
-    color: #ffd2b1 !important;
+@media (max-width: 480px) {
+    .premium-hero-container {
+        min-height: auto;
+    }
+    .premium-hero-container .container {
+        padding-top: 110px;
+        padding-bottom: 40px;
+    }
+    .text-glow-headline {
+        font-size: 26px;
+        letter-spacing: -1px;
+    }
 }
 
 /* Custom Form Submit Button */
@@ -400,20 +419,22 @@ $seo = [
 			Inner Banner
 		============================================== 
 		-->
-		<div class="inner-banner-one pt-225 lg-pt-200 md-pt-150 pb-100 md-pb-70 position-relative">
-			<div class="container position-relative">
+		<div class="premium-hero-container d-flex align-items-center position-relative">
+			<div class="container pt-200 pb-100">
 				<div class="row align-items-center">
-					<div class="col-lg-7">
-						<h1 class="hero-heading d-inline-block position-relative">Contact us for inquiries <img src="images/shape/shape_33.html" alt=""></h1>
+					<div class="col-xl-8 col-lg-10">
+						
+						<ul class="style-none d-flex align-items-center gap-2 p-0 mb-4 text-uppercase tracking-wider" style="font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; list-style: none;">
+							<li><a href="{{ url('/') }}" class="text-white opacity-60 text-decoration-none hover-opacity-100">Home</a></li>
+							<li class="text-white opacity-40">/</li>
+							<li class="text-white" style="color: #ffd2b1 !important;">Contact Us</li>
+						</ul>
+
+						<h1 class="text-glow-headline mb-4">Let's build the future of influence together.</h1>
+						<p class="fs-5 mb-0" style="max-width: 650px; line-height: 1.6; font-weight: 500; color: #ffffff; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">
+							Have questions about partnerships, sponsorships, or joining the ecosystem? Reach out and start a conversation.
+						</p>
 					</div>
-                    <div class="col-xl-4 col-lg-5 ms-auto">
-                        <p class="text-white text-lg mb-70 lg-mb-40">Get our all info and also can message us directly from here</p>
-                        <ul class="style-none d-inline-flex pager">
-                            <li><a href="{{ url('/') }}">Home</a></li>
-                            <li>/</li>
-                            <li>Contact</li>
-                        </ul>
-                    </div>
 				</div>
 			</div>
 		</div>
@@ -437,21 +458,21 @@ $seo = [
 									<div class="address-block-one text-center mb-40 wow fadeInUp">
 										<div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto"><img src="images/lazy.svg" data-src="images/icon/icon_90.svg" alt="" class="lazy-img"></div>
 										<h5 class="title">Our Address</h5>
-										<p>1012 Pebda Parkway, Mirpur 2 <br>Dhaka, Bangladesh</p>
+										<p>Tiruchengode, <br>India</p>
 									</div> <!-- /.address-block-one -->
 								</div>
 								<div class="col-md-4">
 									<div class="address-block-one text-center mb-40 wow fadeInUp">
 										<div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto"><img src="images/lazy.svg" data-src="images/icon/icon_91.svg" alt="" class="lazy-img"></div>
 										<h5 class="title">Contact Info</h5>
-										<p>give us call at <br><a href="tel:310.841.5500" class="call text-lg fw-500">310.841.5500</a></p>
+										<p>Give us a call at <br><a href="tel:8667205661" class="call text-lg fw-500">8667205661</a></p>
 									</div> <!-- /.address-block-one -->
 								</div>
 								<div class="col-md-4">
 									<div class="address-block-one text-center mb-40 wow fadeInUp">
 										<div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto"><img src="images/lazy.svg" data-src="images/icon/icon_92.svg" alt="" class="lazy-img"></div>
 										<h5 class="title">Mail Us</h5>
-										<p>send a mail to<br><a href="#" class="webaddress">youngchanakyaconnect@gmail.com</a></p>
+										<p>Send a mail to<br><a href="mailto:youngchanakya.x@gmail.com" class="webaddress">youngchanakya.x@gmail.com</a></p>
 									</div> <!-- /.address-block-one -->
 								</div>
 							</div>
@@ -473,7 +494,8 @@ $seo = [
                             </div>
                             <div class="col-lg-7">
                                 <div class="form-style-one ps-xl-5">
-                                    <form action="https://html.creativegigstf.com/babun/babun/inc/contact.php" id="contact-form" data-toggle="validator">
+                                    <form action="{{ route('contact.submit') }}" method="POST" id="contact-form" data-toggle="validator">
+                                        @csrf
                                         <div class="messages"></div>
                                         <div class="row controls">
                                             <div class="col-12">
@@ -487,6 +509,13 @@ $seo = [
                                                 <div class="input-group-meta form-group mb-40">
                                                     <label for="">Email*</label>
                                                     <input type="email" placeholder="Email Address*" name="email" required="required" data-error="Valid email is required.">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="input-group-meta form-group mb-40">
+                                                    <label for="">Phone Number*</label>
+                                                    <input type="text" placeholder="Phone Number*" name="phone" required="required" data-error="Phone number is required.">
                                                     <div class="help-block with-errors"></div>
                                                 </div>
                                             </div>

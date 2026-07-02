@@ -12,7 +12,7 @@
 
             <div class="fs-brand-desc">
                 <p>
-                    Young Chanakya is a Business Leadership Launchpad dedicated to empowering the next generation of entrepreneurs, innovators, and leaders. We bridge the gap between education and real-world success, helping ambitious individuals build impactful careers and businesses.
+                    Young Chanakya is a Business Leadership Launchpad dedicated to empowering the next generation of entrepreneurs, innovators, and leaders. We bridge the gap between education and real-world success.
                 </p>
 
                 <a href="{{ url('/') }}" class="fs-website-btn">
@@ -44,61 +44,63 @@
     <div class="fs-right">
         <div class="fs-close" onclick="toggleMenu()">Close</div>
 
-        <div class="fs-right-top">
-            <a href="{{ url('/') }}" style="display: inline-block; line-height: 0; text-decoration: none;">
-                <img src="{{ asset('images/logo/logo.png') }}"
-                    alt="Young Chanakya X"
-                    class="fs-right-logo">
-            </a>
+        <div class="fs-right-content">
+            <div class="fs-right-top">
+                <a href="{{ url('/') }}" style="display: inline-block; line-height: 0; text-decoration: none;">
+                    <img src="{{ asset('images/logo/logo.png') }}"
+                        alt="Young Chanakya X"
+                        class="fs-right-logo">
+                </a>
 
-            <div class="fs-right-socials">
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-                <a href="#"><i class="bi bi-twitter-x"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-youtube"></i></a>
+                <div class="fs-right-socials">
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-youtube"></i></a>
+                </div>
             </div>
+
+            <nav class="fs-nav">
+
+                <a href="{{ url('/about') }}" class="fs-nav-item {{ request()->is('about') ? 'active' : '' }}" onclick="toggleMenu()">
+                    <span class="fs-nav-name">About Young Chanakya X</span>
+                    <span class="fs-nav-arrow">→</span>
+                    <!-- <span class="fs-nav-num">01</span> -->
+                </a>
+
+                <a href="{{ url('/become-a-partner') }}" class="fs-nav-item {{ request()->is('become-a-partner') ? 'active' : '' }}" onclick="toggleMenu()">
+                    <span class="fs-nav-name">Become a Partner</span>
+                    <span class="fs-nav-arrow">→</span>
+                    <!-- <span class="fs-nav-num">02</span> -->
+                </a>
+
+                <a href="{{ url('/become-a-sponser') }}" class="fs-nav-item {{ request()->is('become-a-sponser') ? 'active' : '' }}" onclick="toggleMenu()">
+                    <span class="fs-nav-name">Become a Sponsor</span>
+                    <span class="fs-nav-arrow">→</span>
+                    <!-- <span class="fs-nav-num">03</span> -->
+                </a>
+
+                <!-- Events page pending -->
+                <a href="{{ url('/events') }}" class="fs-nav-item {{ request()->is('events') ? 'active' : '' }}" onclick="toggleMenu()">
+                    <span class="fs-nav-name">Events</span>
+                    <span class="fs-nav-arrow">→</span>
+                    <!-- <span class="fs-nav-num">05</span> -->
+                </a>
+
+                <a href="{{ url('/connecters-list') }}" class="fs-nav-item {{ request()->is('connecters-list') ? 'active' : '' }}" onclick="toggleMenu()">
+                    <span class="fs-nav-name">Connecters Directory</span>
+                    <span class="fs-nav-arrow">→</span>
+                    <!-- <span class="fs-nav-num">06</span> -->
+                </a>
+
+                <a href="{{ url('/contact') }}" class="fs-nav-item {{ request()->is('contact') ? 'active' : '' }}" onclick="toggleMenu()">
+                    <span class="fs-nav-name">Contact</span>
+                    <span class="fs-nav-arrow">→</span>
+                    <!-- <span class="fs-nav-num">07</span> -->
+                </a>
+
+            </nav>
         </div>
-
-        <nav class="fs-nav">
-
-            <a href="{{ url('/about') }}" class="fs-nav-item {{ request()->is('about') ? 'active' : '' }}" onclick="toggleMenu()">
-                <span class="fs-nav-name">About Young Chanakya X</span>
-                <span class="fs-nav-arrow">→</span>
-                <!-- <span class="fs-nav-num">01</span> -->
-            </a>
-
-            <a href="{{ url('/become-a-partner') }}" class="fs-nav-item {{ request()->is('become-a-partner') ? 'active' : '' }}" onclick="toggleMenu()">
-                <span class="fs-nav-name">Become a Partner</span>
-                <span class="fs-nav-arrow">→</span>
-                <!-- <span class="fs-nav-num">02</span> -->
-            </a>
-
-            <a href="{{ url('/become-a-sponser') }}" class="fs-nav-item {{ request()->is('become-a-sponser') ? 'active' : '' }}" onclick="toggleMenu()">
-                <span class="fs-nav-name">Become a Sponsor</span>
-                <span class="fs-nav-arrow">→</span>
-                <!-- <span class="fs-nav-num">03</span> -->
-            </a>
-
-            <!-- Events page pending -->
-            <a href="{{ url('/events') }}" class="fs-nav-item {{ request()->is('events') ? 'active' : '' }}" onclick="toggleMenu()">
-                <span class="fs-nav-name">Events</span>
-                <span class="fs-nav-arrow">→</span>
-                <!-- <span class="fs-nav-num">05</span> -->
-            </a>
-
-            <a href="{{ url('/connecters-list') }}" class="fs-nav-item {{ request()->is('connecters-list') ? 'active' : '' }}" onclick="toggleMenu()">
-                <span class="fs-nav-name">Connecters Directory</span>
-                <span class="fs-nav-arrow">→</span>
-                <!-- <span class="fs-nav-num">06</span> -->
-            </a>
-
-            <a href="{{ url('/contact') }}" class="fs-nav-item {{ request()->is('contact') ? 'active' : '' }}" onclick="toggleMenu()">
-                <span class="fs-nav-name">Contact</span>
-                <span class="fs-nav-arrow">→</span>
-                <!-- <span class="fs-nav-num">07</span> -->
-            </a>
-
-        </nav>
     </div>
 </div>
 

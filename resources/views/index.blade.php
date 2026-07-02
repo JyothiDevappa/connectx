@@ -973,6 +973,7 @@ $seo = [
 .hcw-wrapper .hcw-step-title {
     color: #ffffff !important;
     font-size: 20px !important;
+    font-size: 20px !important;
     font-weight: 500 !important;
     margin: 0 0 8px;
     line-height: 1.35 !important;
