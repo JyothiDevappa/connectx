@@ -381,68 +381,7 @@ $seo = [
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="hero-visual">
-                    <img class="hero-image" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" alt="Partnership and Collaboration">
-                    <div class="hero-side-card">
-                        <h5>Strategic Partnerships</h5>
-                        <p>Gain exclusive access to our thriving global creator network and media ecosystem.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<section class="partner-contact-section" style="padding-top: 80px;" id="partner-form">
-
-    <div class="container">
-
-        <div class="row align-items-center">
-
-            <!-- LEFT SIDE -->
-            <div class="col-lg-5">
-
-                <div class="partner-content wow fadeInUp d-flex flex-column">
-
-                    <span class="partner-tag">
-                        Growth Partner
-                    </span>
-
-                    <h1>
-                        Become a Partner
-                    </h1>
-
-                    <p>
-                        At Young Chanakya, we believe in collaboration that drives
-                        opportunities, growth, and meaningful change. By partnering
-                        with us, you become a part of a vibrant ecosystem that
-                        nurtures future leaders, entrepreneurs, and changemakers.
-                    </p>
-
-                    <ul class="checklist-style style-none">
-                        <li>
-                            <span class="check-icon"><i class="bi bi-check-lg"></i></span>
-                            <span>Strategic Entrepreneurial Guidance & Growth Support</span>
-                        </li>
-                        <li>
-                            <span class="check-icon"><i class="bi bi-check-lg"></i></span>
-                            <span>Networking with Industry Experts & Global Leaders</span>
-                        </li>
-                        <li>
-                            <span class="check-icon"><i class="bi bi-check-lg"></i></span>
-                            <span>Access to attend premium startup & leadership events</span>
-                        </li>
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-            <!-- RIGHT SIDE FORM -->
-            <div class="col-lg-7">
-
-                <div class="partner-form-box wow fadeInUp">
+                <div class="partner-form-box" id="partner-form">
 
                     @if (session('error') || $errors->any())
                         <div class="alert alert-danger mb-4" style="font-weight: 500;">
@@ -573,14 +512,10 @@ $seo = [
                     </form>
 
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
-</section>
+</div>
 
 
 <!-- second section -->
@@ -911,8 +846,6 @@ function toggleTier(btn) {
 }
 </script>
 
-<!-- Image Carousel Section -->
-@include('partials.image-carousel')
 
 <!-- =========================
 EXPANDING ACROSS INDUSTRIES
@@ -957,6 +890,10 @@ EXPANDING ACROSS INDUSTRIES
 
     </div>
 </section>
+
+
+<!-- Image Carousel Section -->
+@include('partials.image-carousel')
 
 @if (session('success'))
 <!-- Success Modal -->

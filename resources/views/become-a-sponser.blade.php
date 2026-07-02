@@ -1076,71 +1076,7 @@ CTA SECTION
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="hero-visual">
-                    <img class="hero-image" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" alt="Sponsor Networking and Collaboration">
-                    <div class="hero-side-card">
-                        <h5>Premium Exposure</h5>
-                        <p>Connect your brand with highly engaged audiences across all flagship properties.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<section class="sponsor-contact-section" style="padding-top: 80px;" id="sponsor-form">
-    <div class="container">
-
-        <div class="row align-items-center">
-
-            <!-- LEFT CONTENT -->
-            <div class="col-lg-6">
-
-                <div class="sponsor-content wow fadeInUp d-flex flex-column">
-
-                    <h1>
-                        Partner in Shaping India’s <br>
-                        Next Business Era
-                    </h1>
-
-                    <p>
-                        Associate your brand with India’s next wave of changemakers,
-                        entrepreneurs, and innovation-driven programs — while gaining
-                        visibility, influence, and meaningful engagement with
-                        future-ready talent and ecosystems.
-                    </p>
-
-                    <ul class="checklist-style style-none mb-30">
-                        <li>
-                            <span class="check-icon"><i class="bi bi-check-lg"></i></span>
-                            <span>Strategic Entrepreneurial Guidance & Growth Support</span>
-                        </li>
-                        <li>
-                            <span class="check-icon"><i class="bi bi-check-lg"></i></span>
-                            <span>Networking with Industry Experts & Global Leaders</span>
-                        </li>
-                        <li>
-                            <span class="check-icon"><i class="bi bi-check-lg"></i></span>
-                            <span>Access to attend premium startup & leadership events</span>
-                        </li>
-                    </ul>
-
-                    <div class="sponsor-cta">
-                        <a href="#sponsor-form" class="btn-become-sponsor">
-                            Become a Sponsor
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <!-- RIGHT FORM -->
-            <div class="col-lg-6">
-
-                <div class="sponsor-form-box wow fadeInUp">
-
-                <div class="sponsor-form-box wow fadeInUp">
+                <div class="sponsor-form-box" id="sponsor-form">
 
                     @if (session('error') || $errors->any())
                         <div class="alert alert-danger mb-4" style="font-weight: 500;">
@@ -1263,12 +1199,10 @@ CTA SECTION
                     </form>
 
                 </div>
-
             </div>
-
         </div>
     </div>
-</section>
+</div>
 
 <!-- ===================================
 WHY CONNECT WITH CONNECTX
@@ -1696,6 +1630,9 @@ function toggleTier(btn) {
     </div>
 
 </div>
+
+<!-- Image Carousel Section -->
+@include('partials.image-carousel')
 
 @if (session('success'))
 <!-- Success Modal -->

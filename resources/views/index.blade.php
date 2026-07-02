@@ -297,6 +297,167 @@ $seo = [
     </div>
 </section>
 
+<!-- EXPERIENCES -->
+<section class="cx-premium-viewport">
+    <div class="cx-custom-cursor"></div>
+
+    <div class="cx-wrapper">
+        <div class="cx-editorial-header">
+            <div class="eyebrow rv">Young Chanakya X Experiences</div>
+            <h2 class="cx-main-heading">Experiences That Create Influence</h2>
+            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px;">From high-quality recording lounges to city meetups, we offer unmatched offline and online opportunities to scale your reach.</p>
+        </div>
+
+        <div class="cx-viewport-grid">
+
+            <div class="cx-premium-card cx-col-wide">
+                <div class="cx-img-container">
+                    <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=1000" alt="Podcasts" class="cx-surface-img">
+                    <div class="cx-surface-overlay"></div>
+                </div>
+                <div class="cx-premium-body">
+                    <span class="cx-premium-badge">PODCASTS</span>
+                    <h3 class="cx-premium-title">Podcasts</h3>
+                    <p class="cx-premium-text">Conversations with founders, CEOs, creators, and innovators. Real experiences. Practical lessons. Shared on record.</p>
+                </div>
+                <div class="cx-arrow-token">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="cx-premium-card cx-col-square">
+                <div class="cx-img-container">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=600" alt="Stories" class="cx-surface-img">
+                    <div class="cx-surface-overlay"></div>
+                </div>
+                <div class="cx-premium-body">
+                    <span class="cx-premium-badge">STORIES</span>
+                    <h3 class="cx-premium-title">Story Sharing</h3>
+                    <p class="cx-premium-text">Every journey matters. Publish startup stories, career experiences, and personal transformations.</p>
+                </div>
+                <div class="cx-arrow-token">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="cx-premium-card cx-col-square">
+                <div class="cx-img-container">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600" alt="Network" class="cx-surface-img">
+                    <div class="cx-surface-overlay"></div>
+                </div>
+                <div class="cx-premium-body">
+                    <span class="cx-premium-badge">NETWORK</span>
+                    <h3 class="cx-premium-title">Networking</h3>
+                    <p class="cx-premium-text">Relationships across industries. Students, professionals, investors, mentors — all in one space.</p>
+                </div>
+                <div class="cx-arrow-token">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="cx-premium-card cx-col-square">
+                <div class="cx-img-container">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=600" alt="Mentorship" class="cx-surface-img">
+                    <div class="cx-surface-overlay"></div>
+                </div>
+                <div class="cx-premium-body">
+                    <span class="cx-premium-badge">MENTORSHIP</span>
+                    <h3 class="cx-premium-title">Mentorship</h3>
+                    <p class="cx-premium-text">The right conversation changes everything. Connect with mentors who've navigated the path you're on.</p>
+                </div>
+                <div class="cx-arrow-token">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="cx-premium-card cx-col-square">
+                <div class="cx-img-container">
+                    <img src="https://images.unsplash.com/photo-1610116306796-6fea9f4fae38?auto=format&fit=crop&q=80&w=600" alt="Live Events" class="cx-surface-img">
+                    <div class="cx-surface-overlay"></div>
+                </div>
+                <div class="cx-premium-body">
+                    <span class="cx-premium-badge">LIVE EVENTS</span>
+                    <h3 class="cx-premium-title">Live Experiences</h3>
+                    <p class="cx-premium-text">Where ideas become action. Webinars, summits, roundtables, fireside chats, and meetups.</p>
+                </div>
+                <div class="cx-arrow-token">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="cx-premium-card cx-col-wide">
+                <div class="cx-img-container">
+                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1000" alt="Collaborate" class="cx-surface-img">
+                    <div class="cx-surface-overlay"></div>
+                </div>
+                <div class="cx-premium-body">
+                    <span class="cx-premium-badge">COLLABORATE</span>
+                    <h3 class="cx-premium-title">Collaboration</h3>
+                    <p class="cx-premium-text">Build with people who share your vision. Partnerships for startups, research, content, and innovation.</p>
+                </div>
+                <div class="cx-arrow-token">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- WAYS TO GET INVOLVED -->
+<section class="ways-to-involve-sec">
+    <div class="container">
+        <div class="section-head text-center" style="margin-bottom: 50px;">
+            <div class="eyebrow rv">Ways to Engage</div>
+            <h2 class="sec-title rv" style="color: var(--primary-dark);">Be Part of the Experience</h2>
+            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">Explore a range of initiatives designed to connect you with industry leaders, ideas, and opportunities.</p>
+        </div>
+    </div>
+
+    <div class="marquee-container" style="padding-bottom: 0;">
+        <div class="marquee-track">
+            @php
+                $marqueeRow1 = [
+                    'Founder Spotlight', 'CEO Conversations', 'Startup Stories', 'Community Podcasts', 
+                    'Student Leadership Series', 'Women in Leadership', 'Creator Sessions'
+                ];
+                $marqueeRow2 = [
+                    'Industry Roundtables', 'Campus Chapters', 'Mentor Connect', 'Innovation Talks', 
+                    'Networking Meetups', 'Workshops', 'Fireside Chats', 'Leadership Summit'
+                ];
+            @endphp
+            @foreach($marqueeRow1 as $item)
+                <div class="marquee-chip">{{ $item }}</div>
+            @endforeach
+            @foreach($marqueeRow1 as $item)
+                <div class="marquee-chip">{{ $item }}</div>
+            @endforeach
+        </div>
+    </div>
+    
+    <div class="marquee-container" style="padding-top: 15px;">
+        <div class="marquee-track marquee-track-reverse">
+            @foreach($marqueeRow2 as $item)
+                <div class="marquee-chip">{{ $item }}</div>
+            @endforeach
+            @foreach($marqueeRow2 as $item)
+                <div class="marquee-chip">{{ $item }}</div>
+            @endforeach
+        </div>
+    </div>
+</section>
 
 <!-- EXPERIENCES -->
 <section class="cx-premium-viewport">
@@ -1507,5 +1668,3 @@ $seo = [
 
 
 @endsection
-
-
