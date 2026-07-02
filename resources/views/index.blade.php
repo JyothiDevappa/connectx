@@ -79,7 +79,7 @@ $seo = [
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}?v={{ time() }}">
-<link rel="stylesheet" href="{{ asset('css/custom-header.css') }}?v={{ time() }}">
+<link rel="stylesheet" href="{{ asset('css/custom-header.css') }}">
 <link rel="stylesheet" href="{{ asset('css/home-2.css') }}?v={{ time() }}">
 @endpush
 
@@ -302,10 +302,16 @@ $seo = [
     <div class="cx-custom-cursor"></div>
 
     <div class="cx-wrapper">
-        <div class="cx-editorial-header text-center d-flex flex-column align-items-center">
-            <div class="eyebrow rv mx-auto">Young Chanakya X Experiences</div>
-            <h2 class="cx-main-heading text-center">Experiences That Create Influence</h2>
-            <p class="sec-desc rv text-center" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">From high-quality recording lounges to city meetups, we offer unmatched offline and online opportunities to scale your reach.</p>
+        <div class="cx-editorial-header">
+            <div class="row align-items-end justify-content-between">
+                <div class="col-lg-6 col-md-7 text-start">
+                    <div class="eyebrow rv text-start" style="margin-bottom: 12px;">Young Chanakya X Experiences</div>
+                    <h2 class="cx-main-heading text-start" style="margin-bottom: 0;">Creator Spaces & Events</h2>
+                </div>
+                <div class="col-lg-5 col-md-5 text-start">
+                    <p class="sec-desc rv text-start" style="margin-bottom: 0; line-height: 1.6; max-width: 100%;">We provide professional recording studios, creative lounges, and city meetups to help you create content, meet people, and grow your audience.</p>
+                </div>
+            </div>
         </div>
 
         <div class="cx-viewport-grid">
@@ -386,50 +392,9 @@ $seo = [
     </div>
 </section>
 
-<!-- WAYS TO GET INVOLVED -->
-<section class="ways-to-involve-sec">
-    <div class="container">
-        <div class="section-head text-center" style="margin-bottom: 50px;">
-            <div class="eyebrow rv">Ways to Engage</div>
-            <h2 class="sec-title rv" style="color: var(--primary-dark);">Be Part of the Experience</h2>
-            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">Explore a range of initiatives designed to connect you with industry leaders, ideas, and opportunities.</p>
-        </div>
-    </div>
 
-    <div class="marquee-container" style="padding-bottom: 10px; padding-top: 30px;">
-        <div class="marquee-track">
-            @php
-                $marqueeRow1 = [
-                    'Founder Spotlight', 'CEO Conversations', 'Startup Stories', 'Community Podcasts', 
-                    'Student Leadership Series', 'Women in Leadership', 'Creator Sessions'
-                ];
-                $marqueeRow2 = [
-                    'Industry Roundtables', 'Campus Chapters', 'Mentor Connect', 'Innovation Talks', 
-                    'Networking Meetups', 'Workshops', 'Fireside Chats', 'Leadership Summit'
-                ];
-            @endphp
-            @foreach($marqueeRow1 as $item)
-                <div class="marquee-chip">{{ $item }}</div>
-            @endforeach
-            @foreach($marqueeRow1 as $item)
-                <div class="marquee-chip">{{ $item }}</div>
-            @endforeach
-        </div>
-    </div>
-    
-    <div class="marquee-container" style="padding-top: 25px; padding-bottom: 30px;">
-        <div class="marquee-track marquee-track-reverse">
-            @foreach($marqueeRow2 as $item)
-                <div class="marquee-chip">{{ $item }}</div>
-            @endforeach
-            @foreach($marqueeRow2 as $item)
-                <div class="marquee-chip">{{ $item }}</div>
-            @endforeach
-        </div>
-    </div>
-</section>
 
-<!-- WHO CAN PARTNER -->
+{{-- <!-- WHY YOUNG CHANAKYA X -->
 <style>
     .why-ycx {
         padding: 120px 0;
@@ -1181,50 +1146,142 @@ $seo = [
     </div>
 </div>
 
-<section class="membership-section position-relative mt-150 lg-mt-80 mb-150 lg-mb-80" id="membership">
-  <div class="container">
-    <div class="section-head text-center" style="margin-bottom: 50px;">
-        <div class="eyebrow rv">Membership</div>
-        <h2 class="sec-title rv" style="color: #0c3a30; margin-bottom: 0;">Find your role in the ecosystem.</h2>
-        <p class="sec-desc rv text-center" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">Explore the different pathways to join our community, share your knowledge, represent our values, or build strategic organizational partnerships.</p>
-    </div>
-    <div class="mem-grid">
-      <div class="mem-card">
-        <div class="mem-role">Community Member</div>
-        <h3>Member</h3>
-        <p class="mem-desc">Access stories, events, discussions, and networking across the platform.</p>
-      </div>
-      <div class="mem-card featured">
-        <div class="mem-role">Knowledge Leader</div>
-        <h3>Creator / Mentor</h3>
-        <p class="mem-desc">Share articles, stories, and thought leadership — or guide aspiring professionals as a mentor.</p>
-        <span class="mem-badge">Most Popular</span>
-      </div>
-      <div class="mem-card">
-        <div class="mem-role">Platform Voice</div>
-        <h3>Speaker</h3>
-        <p class="mem-desc">Participate in podcasts, events, and educational sessions to amplify your expertise.</p>
-      </div>
-      <div class="mem-card">
-        <div class="mem-role">Community Leader</div>
-        <h3>Ambassador</h3>
-        <p class="mem-desc">Represent Young Chanakya X within campuses or regional communities.</p>
-      </div>
-      <div class="mem-card">
-        <div class="mem-role">Organizational</div>
-        <h3>Partner</h3>
-        <p class="mem-desc">Collaborate through events, programs, sponsorships, and strategic initiatives.</p>
-      </div>
-      <div class="mem-card" style="background:rgba(12,58,48,0.04); border-style:dashed; display:flex; align-items:center; justify-content:center; text-align:center;">
-        <div>
-          <div style="font-size:32px; margin-bottom:12px;">✨</div>
-          <div style="font-size:18px; color:#0c3a30; font-weight:700; margin-bottom:8px;">Not sure where you fit?</div>
-          <div style="font-size:14px; color:#6b7280;">Join and discover your role within the community.</div>
-          <a href="#" class="btn-primary" style="margin-top:20px; display:inline-block; font-size:13px; padding:10px 24px;">Get Started</a>
+
+<!-- EVENT LISTING -->
+<section class="blog-section-two position-relative mt-70 lg-mt-80" id="events">
+    <div class="container">
+        <div class="section-head">
+            <div class="eyebrow rv">Event Listing</div>
+            <h2 class="sec-title rv">Curated Events for Every Creator Journey</h2>
+            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-bottom: 0; margin-left: auto; margin-right: auto;">Explore upcoming panels, awards gala ceremonies, regional conferences, and exclusive brand sponsorship opportunities.</p>
         </div>
-      </div>
+
+        <div class="position-relative">
+            <div class="row gx-xxl-5">
+
+                <div class="col-lg-4 col-md-6">
+                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                            style="background-image: url('{{ asset("images/media/img.jpg") }}');">
+                            <a href="#" class="stretched-link rounded-5 date tran3s">09 FEB</a>
+                        </figure>
+                        <div class="post-data">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                <a href="#" class="blog-title">
+                                    <h3>Creator Growth Masterclass</h3>
+                                </a>
+                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <!-- <div class="post-info">Young Chanakya X Team . 6 hrs . Masterclass</div> -->
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp" data-wow-delay="0.1s">
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                            style="background-image: url('{{ asset("images/blog/blog_img_04.jpg") }}');">
+                            <a href="#" class="stretched-link rounded-5 date tran3s">12 AUG</a>
+                        </figure>
+                        <div class="post-data">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                <a href="#" class="blog-title">
+                                    <h3>Voices of Influence Roundtable</h3>
+                                </a>
+                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <!-- <div class="post-info">Live Panel . 4 hrs . Roundtable</div> -->
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                            style="background-image: url('{{ asset("images/media/img_50.jpg") }}');">
+                            <a href="#" class="stretched-link rounded-5 date tran3s">18 SEP</a>
+                        </figure>
+                        <div class="post-data">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                <a href="#" class="blog-title">
+                                    <h3>Networking & Collab Night</h3>
+                                </a>
+                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <!-- <div class="post-info">Community Hub . 5 hrs . Networking</div> -->
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp" data-wow-delay="0.1s">
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                            style="background-image: url('{{ asset("images/media/img_48.webp") }}');">
+                            <a href="#" class="stretched-link rounded-5 date tran3s">22 OCT</a>
+                        </figure>
+                        <div class="post-data">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                <a href="#" class="blog-title">
+                                    <h3>Meetup Market Mixer</h3>
+                                </a>
+                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <!-- <div class="post-info">City Event . 3 hrs . Meetups</div> -->
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                            style="background-image: url('{{ asset("images/media/img_58.webp") }}');">
+                            <a href="#" class="stretched-link rounded-5 date tran3s">05 NOV</a>
+                        </figure>
+                        <div class="post-data">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                <a href="#" class="blog-title">
+                                    <h3>Creator Lounge Live</h3>
+                                </a>
+                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <!-- <div class="post-info">Studio Stream . 2 hrs . Lounge</div> -->
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp" data-wow-delay="0.1s">
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                            style="background-image: url('{{ asset("images/media/img_20.jpg") }}');">
+                            <a href="#" class="stretched-link rounded-5 date tran3s">15 DEC</a>
+                        </figure>
+                        <div class="post-data">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                <a href="#" class="blog-title">
+                                    <h3>Awards Showcase Evening</h3>
+                                </a>
+                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+                            <!-- <div class="post-info">Showcase . 4 hrs . Awards</div> -->
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 <!-- THE DNA OF CONNECTX -->
