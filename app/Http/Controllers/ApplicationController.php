@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Contact;
 
 class ApplicationController extends Controller
 {
@@ -125,6 +126,63 @@ class ApplicationController extends Controller
         } catch (\Exception $e) {
             logger()->error('SMTP Sponsorship Application failure: ' . $e->getMessage());
             return back()->withInput()->with('error', 'Unable to send application via SMTP. Please try again.');
+        }
+    }
+
+    public function submitContact(Request $request)
+    {
+        $validated = $request->validate([
+            'name'    => 'required|string|max:255',
+            'email'   => 'required|email|max:255',
+            'phone'   => 'required|string|max:50',
+            'subject' => 'nullable|string|max:255',
+            'message' => 'required|string|max:2000',
+        ]);
+
+        try {
+            \Illuminate\Support\Facades\Log::info('--- CONTACT SUBMISSION START ---');
+
+            // 1. Save to Database
+            $contact = Contact::create($validated);
+            \Illuminate\Support\Facades\Log::info('Saved to database. ID: ' . $contact->id);
+
+            // 2. Email to Admin
+            \Illuminate\Support\Facades\Log::info('Sending admin inquiry email...');
+            Mail::send('emails.contact-inquiry', $validated, function ($message) use ($validated) {
+                $message->to('youngchanakya.x@gmail.com')
+                        ->subject('New Contact Inquiry: ' . ($validated['subject'] ?? 'General Inquiry'))
+                        ->replyTo($validated['email'], $validated['name']);
+            });
+            \Illuminate\Support\Facades\Log::info('Admin email sent.');
+
+            // 3. Email to User (Confirmation)
+            \Illuminate\Support\Facades\Log::info('Sending user confirmation email to: ' . $validated['email']);
+            Mail::send('emails.contact-confirmation', $validated, function ($message) use ($validated) {
+                $message->to($validated['email'])
+                        ->subject('Contact Inquiry Received - Young Chanakya X');
+            });
+            \Illuminate\Support\Facades\Log::info('User email sent.');
+            \Illuminate\Support\Facades\Log::info('--- CONTACT SUBMISSION END ---');
+
+            if ($request->ajax()) {
+                return response()->json([
+                    'type'    => 'success',
+                    'message' => 'Thank you for your inquiry! Our team will contact you shortly.'
+                ]);
+            }
+
+            return back()->with('success', 'Thank you for your inquiry! Our team will contact you shortly.');
+        } catch (\Exception $e) {
+            logger()->error('SMTP Contact Inquiry failure: ' . $e->getMessage());
+
+            if ($request->ajax()) {
+                return response()->json([
+                    'type'    => 'danger',
+                    'message' => 'Unable to send message via SMTP. Please check mailer settings.'
+                ], 500);
+            }
+
+            return back()->withInput()->with('error', 'Unable to send message via SMTP. Please check mailer settings.');
         }
     }
 }

@@ -56,6 +56,48 @@ $seo = [
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
 <link rel="stylesheet" href="{{ asset('css/about-us.css') }}">
+<style>
+    #hdr:not(.scrolled) .hamburger span {
+        background: #0c3a30 !important;
+    }
+    .com-card {
+        border-radius: 24px !important;
+    }
+    .com-btn {
+        display: inline-block;
+        padding: 12px 28px;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        border-radius: 50px;
+        text-decoration: none;
+        margin-top: 24px;
+        align-self: flex-start;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+    .com-btn-green {
+        background-color: #0c3a30;
+        color: #ffd2b1;
+        border: 1px solid #0c3a30;
+    }
+    .com-btn-green:hover {
+        background-color: #ffd2b1;
+        color: #0c3a30;
+        border-color: #ffd2b1;
+    }
+    .com-btn-peach {
+        background-color: #ffd2b1;
+        color: #0c3a30;
+        border: 1px solid #ffd2b1;
+    }
+    .com-btn-peach:hover {
+        background-color: #0c3a30;
+        color: #ffd2b1;
+        border-color: #0c3a30;
+    }
+</style>
 @endpush
 
 

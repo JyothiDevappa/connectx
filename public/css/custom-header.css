@@ -174,10 +174,10 @@ header.scrolled .hamburger span {
 
 .fs-left {
   width: 50%;
-  padding: 60px 80px;
+  padding: 60px 32px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   border-right: 1px solid rgba(0, 0, 0, .08);
 }
@@ -185,6 +185,8 @@ header.scrolled .hamburger span {
 .fs-left>div {
   max-width: 460px;
   width: 100%;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .menu-logo {
@@ -246,22 +248,22 @@ header.scrolled .hamburger span {
 .fs-social {
   width: 42px;
   height: 42px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(12, 58, 48, 0.25);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(0, 0, 0, 0.4);
-  font-size: 12px;
+  color: #0c3a30;
+  font-size: 14px;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .fs-social:hover {
-  background: var(--orange);
-  color: var(--brown);
-  border-color: var(--orange);
+  background: #0c3a30;
+  color: var(--orange);
+  border-color: #0c3a30;
 }
 
 .fs-events-label {
@@ -358,11 +360,21 @@ header.scrolled .hamburger span {
 
 .fs-right {
   width: 50%;
-  padding: 60px 80px;
+  padding: 60px 32px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media (min-width: 901px) {
+  .fs-right {
+    align-items: flex-start;
+  }
+  .fs-right-content {
+    max-width: 460px;
+    width: 100%;
+  }
 }
 
 .fs-right-top {
@@ -384,22 +396,23 @@ header.scrolled .hamburger span {
 .fs-right-socials a {
   width: 42px;
   height: 42px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(12, 58, 48, 0.25);
   border-radius: 50%;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  color: rgba(0, 0, 0, 0.55);
+  color: #0c3a30;
+  font-size: 14px;
   text-decoration: none;
   transition: all .3s ease;
 }
 
 .fs-right-socials a:hover {
-  background: var(--orange);
-  border-color: var(--orange);
-  color: var(--brown);
+  background: #0c3a30;
+  border-color: #0c3a30;
+  color: var(--orange);
 }
 
 .fs-nav {
@@ -508,6 +521,9 @@ header.scrolled .hamburger span {
     width: 50%;
     padding: 80px 40px 40px;
     align-items: center;
+  }
+  .fs-left>div {
+    margin: 0 auto;
   }
 
   .fs-right {

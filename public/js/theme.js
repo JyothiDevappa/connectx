@@ -353,7 +353,7 @@
 
                 // if the validator does not prevent form submit
                 if (!e.isDefaultPrevented()) {
-                    var url = "inc/contact.html";
+                    var url = $(this).attr('action') || "inc/contact.html";
 
                     // POST values in the background the the script URL
                     $.ajax({
@@ -371,13 +371,31 @@
                             // let's compose Bootstrap alert box HTML
                             var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
 
-                            // If we have messageAlert and messageText
-                            if (messageAlert && messageText) {
-                                // inject the alert to .messages div in our form
-                                $('#contact-form').find('.messages').html(alertBox);
-                                // empty the form
-                                $('#contact-form')[0].reset();
-                            }
+                             // If we have messageAlert and messageText
+                             if (messageAlert && messageText) {
+                                 // inject the alert to .messages div in our form
+                                 $('#contact-form').find('.messages').html(alertBox);
+                                 
+                                 // Trigger Google Analytics lead generation tracking event
+                                 if (data.type === 'success' && typeof gtag === 'function') {
+                                     var formName = $('#contact-form [name="name"]').val();
+                                     var formEmail = $('#contact-form [name="email"]').val();
+                                     var formPhone = $('#contact-form [name="phone"]').val();
+                                     gtag('event', 'generate_lead', {
+                                         'event_category': 'Contact',
+                                         'event_label': 'Contact Form Submission',
+                                         'lead_type': 'Contact',
+                                         'value': 1.0,
+                                         'currency': 'USD',
+                                         'user_name': formName,
+                                         'user_email': formEmail,
+                                         'user_phone': formPhone
+                                     });
+                                 }
+
+                                 // empty the form
+                                 $('#contact-form')[0].reset();
+                             }
                         }
                     });
                     return false;

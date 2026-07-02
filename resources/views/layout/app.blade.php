@@ -37,7 +37,7 @@
     {{-- ── Core CSS ───────────────────────────────────────────── --}}
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/custom-header.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/custom-header.css') }}?v={{ time() }}">
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     {{-- Global typography loaded last to override page-specific CSS --}}
     <link rel="stylesheet" href="{{ asset('css/typography.css') }}">
