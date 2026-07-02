@@ -6,7 +6,7 @@ $seo = [
     'title'       => 'Become a Sponsor — Community & Sponsorship Opportunities | Young Chanakya X',
     'description' => 'Sponsor Young Chanakya X events and creator programs to amplify your brand reach. Access title sponsorships, event sponsorships, community sponsorships, and creator ecosystem packages.',
     'keywords'    => 'Young Chanakya X sponsorship, sponsor Young Chanakya X, event sponsorship India, brand visibility creator events, community sponsor Young Chanakya, creator platform sponsorship',
-    'image'       => asset('images/assets/ogg.png'),
+    'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];
 @endphp
@@ -1087,8 +1087,7 @@ CTA SECTION
                 <p class="hero-copy">Position your brand within a structured creator ecosystem designed for consistent visibility, engagement, and collaboration. Sponsor our events and creator programs to amplify your reach to tomorrow's industry leaders.</p>
               
                 <div class="about-hero-buttons">
-                    <a href="#tiers" class="about-btn-1">Explore Sponsorships</a>
-                    <a href="#sponsor-form" class="about-btn-2">Contact Our Team</a>
+                    <a href="#partnership-opportunities" class="about-btn-2">View Opportunities</a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -1366,7 +1365,7 @@ WHY CONNECT WITH CONNECTX
 
 
 <!-- third section — Brand Presence -->
-<section class="fancy-banner-seven box-layout connectx-brand-section pt-60 lg-pt-30 pb-40" style="max-width: 96% !important; margin: 0 auto !important; width: 100% !important;">
+<section class="fancy-banner-seven box-layout connectx-brand-section pt-60 lg-pt-30 pb-40" id="partnership-opportunities" style="max-width: 96% !important; margin: 0 auto !important; width: 100% !important;">
 
     <div class="bg-wrapper border-40 position-relative z-1 overflow-hidden pt-120 pb-120 lg-pt-80 lg-pb-80" style="max-width: 100% !important; width: 100% !important;">
 

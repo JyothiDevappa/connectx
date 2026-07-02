@@ -6,7 +6,7 @@ $seo = [
     'title'       => 'About Young Chanakya X — Our Vision, Mission & Creator Ecosystem Story',
     'description' => 'Learn about Young Chanakya X — a premium global creator ecosystem built to connect influencers, podcasters, speakers, and brands. Our mission is structured, scalable influence for every creator.',
     'keywords'    => 'about Young Chanakya X, Young Chanakya vision, creator ecosystem mission, Young Chanakya X story, who is Young Chanakya X, global creator platform, influencer community India',
-    'image'       => asset('images/assets/ogg.png'),
+    'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];
 @endphp
@@ -113,9 +113,9 @@ $seo = [
                 <p class="hero-copy">Young Chanakya X is a digital-first leadership and community platform where ambitious individuals come together to share stories, exchange knowledge, build meaningful relationships, and unlock real opportunities. We believe growth happens when people connect, learn, and collaborate through authentic experiences.</p>
               
                 <div class="about-hero-buttons">
-    <a href="#partner" class="about-btn-1">Explore Our Ecosystem</a>
-    <a href="#contact" class="about-btn-2">Partner With Young Chanakya X</a>
-</div>
+                    <a href="/become-a-sponser" class="about-btn-1">Become a Sponsor</a>
+                    <a href="/become-a-partner" class="about-btn-2">Become a Partner</a>
+                </div>
 
 
                 {{-- <div class="hero-pill-row">
@@ -396,7 +396,7 @@ $seo = [
         <span class="pill">Speak & Collaborate</span>
         <span class="pill">Build Beyond Platforms</span>
       </div>
-      <button class="cta-btn">Join Young Chanakya X</button>
+      <button class="cta-btn" onclick="window.location.href='/connecters-list'">Join Young Chanakya X</button>
     </div>
   </section>
 

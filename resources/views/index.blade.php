@@ -9,7 +9,7 @@ $seo = [
     'title'       => 'Young Chanakya X — Global Creator Ecosystem by Young Chanakya',
     'description' => 'Young Chanakya X is a premium global creator ecosystem connecting influencers, podcasters, speakers, founders, and brands through collaborations, exclusive events, and creator lounges. Partner with the future of influence.',
     'keywords'    => 'Young Chanakya X, creator ecosystem, influencer network, brand partnerships, creator lounges, podcasts, roundtables, India creator network, digital creators, become a partner',
-    'image'       => asset('images/assets/ogg.png'),
+    'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];
 @endphp
@@ -817,7 +817,7 @@ $seo = [
     </div>
     <div class="partner-grid">
         <div class="p-card rv" style="transition-delay:0s">
-            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&q=80" alt="Students — Young Chanakya X Partner Category" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Students — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-name">Students</div>
                 <div class="p-desc">Connect with peers, build practical skills, and access leadership programs.</div>
@@ -825,7 +825,7 @@ $seo = [
             <div class="p-arrow">↗</div>
         </div>
         <div class="p-card rv" style="transition-delay:0.07s">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=80" alt="Entrepreneurs — Young Chanakya X Partner Category" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80" alt="Entrepreneurs — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-name">Entrepreneurs</div>
                 <div class="p-desc">Network with experts, share your vision, and scale your business ventures.</div>
@@ -857,7 +857,7 @@ $seo = [
             <div class="p-arrow">↗</div>
         </div>
         <div class="p-card rv" style="transition-delay:0.35s">
-            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80" alt="Influencers — Young Chanakya X Partner Category" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=600&q=80" alt="Influencers — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-name">Influencers</div>
                 <div class="p-desc">Amplify brand voice, reach active audiences, and host live sessions.</div>

@@ -21,20 +21,24 @@
                 <h3> Follow Us </h3>
 
                 <div class="fs-socials">
-                    <a href="#" class="fs-social">
+                    <a href="https://www.linkedin.com/company/youngchanakya" target="_blank" class="fs-social">
                         <i class="bi bi-linkedin"></i>
                     </a>
 
-                    <a href="#" class="fs-social">
+                    <a href="https://x.com/youngchanakya" target="_blank" class="fs-social">
                         <i class="bi bi-twitter-x"></i>
                     </a>
 
-                    <a href="#" class="fs-social">
+                    <a href="https://www.instagram.com/youngchanakya/" target="_blank" class="fs-social">
                         <i class="bi bi-instagram"></i>
                     </a>
 
-                    <a href="#" class="fs-social">
+                    <a href="https://www.youtube.com/youngchanakya" target="_blank" class="fs-social">
                         <i class="bi bi-youtube"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/youngchanakya/" target="_blank" class="fs-social">
+                        <i class="bi bi-facebook"></i>
                     </a>
                 </div>
             </div>
@@ -53,10 +57,10 @@
                 </a>
 
                 <div class="fs-right-socials">
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-                    <a href="#"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.linkedin.com/showcase/young-chanakya-x/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://x.com/YoungChanakyaX" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.youtube.com/channel/UCunrW6XIpxgonRXd6CjQ9eQ" target="_blank"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.threads.net/@youngchanakyax" target="_blank"><i class="bi bi-threads"></i></a>
                 </div>
             </div>
 
@@ -114,8 +118,9 @@
 
     <div class="header-right">
 
-        <button class="btn-join">
-Connet with Us         </button>
+        <button class="btn-join" onclick="window.location.href='/connecters-list'">
+            Connect with Us
+        </button>
 
         <div class="hamburger" id="hambBtn" onclick="toggleMenu()">
             <span></span>

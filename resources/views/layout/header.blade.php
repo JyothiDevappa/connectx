@@ -11,7 +11,7 @@
     <meta property="og:url" content="https://creativegigstf.com/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Babun - Business & Consulting HTML5 Template">
-    <meta property="og:image" content="{{ asset('images/assets/ogg.png') }}">
+    <meta property="og:image" content="{{ asset('images/assets/seo-share.jpg') }}">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 

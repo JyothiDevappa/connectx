@@ -245,7 +245,7 @@
                 <div class="row justify-content-between">
 
                     <!-- LEFT -->
-                    <div class="col-xl-3 col-lg-4 footer-intro mb-30">
+                    <div class="col-xl-3 col-lg-3 col-md-6 footer-intro mb-30">
 
                         <div class="logo mb-35 md-mb-20">
                             <a href="{{ url('/') }}">
@@ -270,26 +270,26 @@
 
                         <ul class="style-none d-flex align-items-center social-icon">
                             <li>
-                                <a href="#">
-                                    <i class="bi bi-facebook"></i>
+                                <a href="https://www.linkedin.com/showcase/young-chanakya-x/" target="_blank">
+                                    <i class="bi bi-linkedin"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="#">
+                                <a href="https://x.com/YoungChanakyaX" target="_blank">
+                                    <i class="bi bi-twitter-x"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCunrW6XIpxgonRXd6CjQ9eQ" target="_blank">
                                     <i class="bi bi-youtube"></i>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="#">
-                                    <i class="bi bi-twitter"></i>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <i class="bi bi-instagram"></i>
+                                <a href="https://www.threads.net/@youngchanakyax" target="_blank">
+                                    <i class="bi bi-threads"></i>
                                 </a>
                             </li>
                         </ul>
@@ -297,7 +297,7 @@
                     </div>
 
                     <!-- LINKS -->
-                    <div class="col-lg-2 col-sm-4 mb-20">
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 mb-20">
 
                         <h5 class="footer-title">
                             Links
@@ -312,75 +312,51 @@
                             </li>
 
                             <li>
-                                <a href="#">
-                                    Pricing Plan
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
+                                <a href="{{ url('/about') }}">
                                     About Us
                                 </a>
                             </li>
 
                             <li>
-                                <a href="#">
-                                    Services
+                                <a href="{{ url('/events') }}">
+                                    Events
                                 </a>
                             </li>
 
                             <li>
-                                <a href="#">
-                                    Portfolio
+                                <a href="{{ url('/connecters-list') }}">
+                                    Directory
                                 </a>
                             </li>
-
-                            <!-- <li>
-                                <a href="#">
-                                    Careers
-                                </a>
-                            </li> -->
-
-                            <!-- <li>
-                                <a href="#">
-                                    Features
-                                </a>
-                            </li> -->
 
                         </ul>
 
                     </div>
 
-                    <!-- COMPANY -->
-                    <div class="col-lg-2 col-sm-4 mb-20">
+                    <!-- PROGRAMS -->
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 mb-20">
 
                         <h5 class="footer-title">
-                            Company
+                            Programs
                         </h5>
 
                         <ul class="footer-nav-link style-none">
 
                             <li>
-                                <a href="#">
-                                    About Us
+                                <a href="{{ url('/become-a-partner') }}">
+                                    Become a Partner
                                 </a>
                             </li>
 
                             <li>
-                                <a href="#">
-                                    Blogs
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    FAQ’s
+                                <a href="{{ url('/become-a-sponser') }}">
+                                    Become a Sponsor
                                 </a>
                             </li>
 
                             <li>
                                 <a href="{{ url('/contact') }}">
-                                    Contact
+                                    Contact Us
                                 </a>
                             </li>
 
@@ -388,43 +364,28 @@
 
                     </div>
 
-                    <!-- SUPPORT -->
-                    <div class="col-xxl-2 col-lg-3 col-sm-4 mb-20">
+                    <!-- CONTACT US -->
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-20">
 
                         <h5 class="footer-title">
-                            Support
+                            Contact Us
                         </h5>
 
-                        <ul class="footer-nav-link style-none">
+                        <ul class="footer-nav-link style-none" style="display: flex; flex-direction: column; gap: 16px;">
 
-                            <li>
-                                <a href="#">
-                                    Privacy Policy
-                                </a>
+                            <li style="display: flex; align-items: flex-start; gap: 12px; color: #6b7280; font-size: 14px; line-height: 1.4;">
+                                <i class="bi bi-geo-alt-fill" style="color: #0c3a30; font-size: 1.1rem; margin-top: 2px;"></i>
+                                <span>Tiruchengode, Tamil Nadu, India</span>
                             </li>
 
-                            <li>
-                                <a href="#">
-                                    Terms of Service
-                                </a>
+                            <li style="display: flex; align-items: center; gap: 12px; font-size: 14px;">
+                                <i class="bi bi-telephone-fill" style="color: #0c3a30; font-size: 1.1rem;"></i>
+                                <a href="tel:8667205661">+91 8667205661</a>
                             </li>
 
-                            <li>
-                                <a href="#">
-                                    Community Ethics
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    Cookie Policy
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    Self Service
-                                </a>
+                            <li style="display: flex; align-items: center; gap: 12px; font-size: 14px;">
+                                <i class="bi bi-envelope-fill" style="color: #0c3a30; font-size: 1.1rem;"></i>
+                                <a href="mailto:youngchanakya.x@gmail.com">youngchanakya.x@gmail.com</a>
                             </li>
 
                         </ul>

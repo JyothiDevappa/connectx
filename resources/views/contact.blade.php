@@ -6,7 +6,7 @@ $seo = [
     'title'       => 'Contact Young Chanakya X — Get in Touch with Our Team',
     'description' => 'Contact Young Chanakya X to inquire about partnerships, sponsorships, creator collaborations, or any questions about our global creator ecosystem. Email us at youngchanakyaconnect@gmail.com.',
     'keywords'    => 'contact Young Chanakya X, Young Chanakya X email, Young Chanakya X partnership inquiry, reach Young Chanakya X, Young Chanakya contact, creator platform contact',
-    'image'       => asset('images/assets/ogg.png'),
+    'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
     'robots'      => 'index, follow',
 ];

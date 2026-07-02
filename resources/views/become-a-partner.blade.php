@@ -6,7 +6,7 @@ $seo = [
     'title'       => 'Become a Partner — Join the Young Chanakya X Creator Ecosystem',
     'description' => 'Partner with Young Chanakya X to access a premium creator ecosystem. Content partnerships, brand collaborations, media partnerships, and community connections await.',
     'keywords'    => 'become a Young Chanakya X partner, creator partnership, brand collaboration Young Chanakya X, media partnership India, content creator partner, Young Chanakya partner',
-    'image'       => asset('images/assets/ogg.png'),
+    'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];
 @endphp
@@ -392,8 +392,7 @@ $seo = [
                 <p class="hero-copy">Join the Young Chanakya X ecosystem to access a premium global network. We foster meaningful content partnerships, brand collaborations, and community connections that drive innovation and long-term value.</p>
               
                 <div class="about-hero-buttons">
-                    <a href="#partner-form" class="about-btn-1">View Opportunities</a>
-                    <a href="#partner-form" class="about-btn-2">Become a Partner</a>
+                    <a href="#partnership-opportunities" class="about-btn-2">View Partnership Opportunities</a>
                 </div>
             </div>
             <div class="col-lg-6">

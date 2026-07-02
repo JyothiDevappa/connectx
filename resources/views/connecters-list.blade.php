@@ -6,7 +6,7 @@ $seo = [
     'title'       => 'Connecters Directory — Verified Ecosystem Leaders & Creators | Young Chanakya X',
     'description' => 'Browse the Young Chanakya X verified directory of ecosystem leaders, creators, entrepreneurs, innovators, and industry experts across business, tech, finance, media, and social impact sectors.',
     'keywords'    => 'Young Chanakya X directory, creator directory, influencer list, ecosystem leaders India, verified creators Young Chanakya X, business leaders directory, entrepreneur network India',
-    'image'       => asset('images/assets/ogg.png'),
+    'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];
 @endphp

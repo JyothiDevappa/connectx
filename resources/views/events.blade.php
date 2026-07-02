@@ -6,7 +6,7 @@ $seo = [
     'title'       => 'Events — Roundtables, Podcasts & Creator Sessions | Young Chanakya X',
     'description' => 'Explore upcoming Young Chanakya X events — exclusive roundtables, podcast recordings, keynote speakers, and creator networking sessions. Join elite business spaces for market changemakers.',
     'keywords'    => 'Young Chanakya X events, creator roundtables, podcast sessions, keynote speakers, networking events, creator sessions India, Young Chanakya X sessions 2026',
-    'image'       => asset('images/assets/ogg.png'),
+    'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];
 @endphp
