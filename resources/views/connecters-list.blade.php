@@ -93,7 +93,7 @@ $seo = [
         font-weight: 900;
         line-height: 1.1;
         letter-spacing: -2px;
-        background: linear-gradient(135deg, #ffffff 40%, #ffd2b1 100%);
+        background: linear-gradient(135deg, #ffffff 20%, #ffbe8e 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -296,7 +296,7 @@ $seo = [
                     <i class="bi bi-shield-check-fill"></i> Institutional Ecosystem Directory
                 </div>
 
-                <h1 class="trust-headline mb-4">The Verified Nexus of Market Leadership</h1>
+                <h1 class="trust-headline mb-4">The Verified Nexus of Leadership</h1>
                 <p class="text-white fs-5 mb-4" style="max-width: 600px; line-height: 1.6;">
                     Young Chanakya X orchestrates premium structural access to vetted visionaries, enterprise owners, and specialized policy framework architects globally.
                 </p>
@@ -446,7 +446,7 @@ $seo = [
 
                     <div class="tab-pane fade show active" id="v-pills-biz" role="tabpanel" aria-labelledby="v-pills-biz-tab">
                         <div class="network-cluster-card">
-                            <div class="panel-hero-image mb-4 rounded-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
+                            <div class="panel-hero-image mb-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
 
                             <div class="d-flex align-items-center gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-building-gear"></i></div>
@@ -467,7 +467,7 @@ $seo = [
 
                     <div class="tab-pane fade" id="v-pills-tech" role="tabpanel" aria-labelledby="v-pills-tech-tab">
                         <div class="network-cluster-card">
-                            <div class="panel-hero-image mb-4 rounded-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
+                            <div class="panel-hero-image mb-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
 
                             <div class="d-flex align-items-center gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-cpu"></i></div>
@@ -488,7 +488,7 @@ $seo = [
 
                     <div class="tab-pane fade" id="v-pills-fin" role="tabpanel" aria-labelledby="v-pills-fin-tab">
                         <div class="network-cluster-card">
-                            <div class="panel-hero-image mb-4 rounded-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
+                            <div class="panel-hero-image mb-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
 
                             <div class="d-flex align-items-center gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-graph-up-arrow"></i></div>
@@ -509,7 +509,7 @@ $seo = [
 
                     <div class="tab-pane fade" id="v-pills-creative" role="tabpanel" aria-labelledby="v-pills-creative-tab">
                         <div class="network-cluster-card">
-                            <div class="panel-hero-image mb-4 rounded-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
+                            <div class="panel-hero-image mb-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
 
                             <div class="d-flex align-items-center gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-bezier2"></i></div>
@@ -530,7 +530,7 @@ $seo = [
 
                     <div class="tab-pane fade" id="v-pills-impact" role="tabpanel" aria-labelledby="v-pills-impact-tab">
                         <div class="network-cluster-card">
-                            <div class="panel-hero-image mb-4 rounded-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
+                            <div class="panel-hero-image mb-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
 
                             <div class="d-flex align-items-center gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-globe-central-south"></i></div>
@@ -621,6 +621,7 @@ $seo = [
         box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.4);
         background-blend-mode: multiply;
         transition: transform 0.6s ease;
+        border-radius: 10px;
     }
 
     .network-cluster-card:hover .panel-hero-image {

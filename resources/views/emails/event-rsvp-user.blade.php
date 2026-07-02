@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Application Received - Young Chanakya X</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e1e5eb;
+        }
+        .header {
+            background-color: #0c3a30;
+            padding: 30px 40px;
+            text-align: center;
+        }
+        .header h1 {
+            color: #ffffff;
+            font-size: 24px;
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .header p {
+            color: #ffca95;
+            margin: 5px 0 0;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+        .content {
+            padding: 40px;
+            line-height: 1.6;
+        }
+        .greeting {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0c3a30;
+            margin-bottom: 15px;
+        }
+        .message {
+            font-size: 15px;
+            color: #555555;
+            margin-bottom: 30px;
+        }
+        .details-box {
+            background-color: #f7fafc;
+            border: 1px solid #edf2f7;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .details-box h3 {
+            margin-top: 0;
+            color: #0c3a30;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #edf2f7;
+            padding-bottom: 10px;
+        }
+        .details-row {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .details-label {
+            font-weight: 600;
+            color: #4a5568;
+            display: inline-block;
+            width: 140px;
+        }
+        .details-value {
+            color: #2d3748;
+            display: inline-block;
+        }
+        .closing {
+            font-size: 15px;
+            color: #555555;
+            border-top: 1px solid #edf2f7;
+            padding-top: 20px;
+        }
+        .footer {
+            background-color: #f7fafc;
+            padding: 20px 40px;
+            text-align: center;
+            border-top: 1px solid #edf2f7;
+        }
+        .footer p {
+            margin: 0;
+            color: #718096;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Application Received</h1>
+            <p>Young Chanakya X Sessions</p>
+        </div>
+        <div class="content">
+            <div class="greeting">Hi {{ $full_name }},</div>
+            <div class="message">
+                Thank you for applying to attend the <strong>{{ $event_title }}</strong> session. 
+                We have received your details and are currently reviewing applications to ensure strategic alignment for all participants.
+                <br><br>
+                Our team will reach out to you shortly via email/phone with verification status and join instructions.
+            </div>
+            
+            <div class="details-box">
+                <h3>Submission Summary</h3>
+                <div class="details-row">
+                    <span class="details-label">Applied Event:</span>
+                    <span class="details-value"><strong>{{ $event_title }}</strong></span>
+                </div>
+                <div class="details-row">
+                    <span class="details-label">Full Name:</span>
+                    <span class="details-value">{{ $full_name }}</span>
+                </div>
+                <div class="details-row">
+                    <span class="details-label">Email Address:</span>
+                    <span class="details-value">{{ $email }}</span>
+                </div>
+                <div class="details-row">
+                    <span class="details-label">Mobile Number:</span>
+                    <span class="details-value">{{ $phone }}</span>
+                </div>
+                <div class="details-row">
+                    <span class="details-label">Social Media:</span>
+                    <span class="details-value">{{ $social_url }}</span>
+                </div>
+            </div>
+
+            <div class="closing">
+                Best regards,<br>
+                <strong>Young Chanakya X Team</strong>
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; {{ date('Y') }} Young Chanakya X. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

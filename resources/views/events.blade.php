@@ -125,7 +125,7 @@ $seo = [
         line-height: 1.2;
         padding-bottom: 15px;
         letter-spacing: -3px;
-        background: linear-gradient(135deg, #ffffff 30%, #ffd2b1 100%);
+        background: linear-gradient(135deg, #ffffff 20%, #ffbe8e 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -482,7 +482,7 @@ $seo = [
                     <li class="text-white" style="color: #ffd2b1 !important;">Young Chanakya X Sessions</li>
                 </ul>
 
-                <h1 class="text-glow-headline mb-4">Elite business spaces for market changemakers.</h1>
+                <h1 class="text-glow-headline mb-4">Elite Business Spaces for Changemakers</h1>
                 <p class="fs-5 mb-0" style="max-width: 650px; line-height: 1.6; font-weight: 500; color: #ffffff; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">
                     Unlocking strategies, scaling models, and building high-performance systems alongside leading business operators.
                 </p>

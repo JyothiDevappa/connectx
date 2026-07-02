@@ -140,6 +140,19 @@ $seo = [
     background: #fff;
 }
 
+.sponsor-form-box label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #19352d;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.sponsor-form-box .form-control::placeholder {
+    color: #888888 !important;
+}
+
 .sponsor-form-box textarea.form-control{
     height: 130px;
     padding-top: 15px;
@@ -1098,7 +1111,9 @@ CTA SECTION
                         <div class="row">
 
                             <div class="col-md-6 mb-3">
+                                <label for="sponsor-name">Full Name <span class="text-danger">*</span></label>
                                 <input type="text"
+                                       id="sponsor-name"
                                        class="form-control"
                                        name="name"
                                        value="{{ old('name') }}"
@@ -1109,7 +1124,9 @@ CTA SECTION
                             </div>
 
                             <div class="col-md-6 mb-3">
+                                <label for="sponsor-email">Email Address <span class="text-danger">*</span></label>
                                 <input type="email"
+                                       id="sponsor-email"
                                        class="form-control"
                                        name="email"
                                        value="{{ old('email') }}"
@@ -1120,7 +1137,9 @@ CTA SECTION
                             </div>
 
                             <div class="col-md-6 mb-3">
+                                <label for="sponsor-phone">Phone / WhatsApp <span class="text-danger">*</span></label>
                                 <input type="text"
+                                       id="sponsor-phone"
                                        class="form-control"
                                        name="phone"
                                        value="{{ old('phone') }}"
@@ -1131,7 +1150,9 @@ CTA SECTION
                             </div>
 
                             <div class="col-md-6 mb-3">
+                                <label for="sponsor-company">Company Name <span class="text-danger">*</span></label>
                                 <input type="text"
+                                       id="sponsor-company"
                                        class="form-control"
                                        name="company"
                                        value="{{ old('company') }}"
@@ -1142,7 +1163,9 @@ CTA SECTION
                             </div>
 
                             <div class="col-md-6 mb-3">
+                                <label for="sponsor-designation">Designation / Role <span class="text-danger">*</span></label>
                                 <input type="text"
+                                       id="sponsor-designation"
                                        class="form-control"
                                        name="designation"
                                        value="{{ old('designation') }}"
@@ -1153,7 +1176,9 @@ CTA SECTION
                             </div>
 
                             <div class="col-md-6 mb-3">
+                                <label for="sponsor-linkedin">LinkedIn Profile <span class="text-danger">*</span></label>
                                 <input type="url"
+                                       id="sponsor-linkedin"
                                        class="form-control"
                                        name="linkedin"
                                        value="{{ old('linkedin') }}"
@@ -1164,7 +1189,8 @@ CTA SECTION
                             </div>
 
                             <div class="col-12 mb-3">
-                                <select class="form-control" name="sponsorship_level" required>
+                                <label for="sponsor-level">Sponsor Type <span class="text-danger">*</span></label>
+                                <select class="form-control" id="sponsor-level" name="sponsorship_level" required>
 
                                     <option value="" disabled {{ old('sponsorship_level') ? '' : 'selected' }}>
                                         -- Sponsor Type --
@@ -1181,7 +1207,9 @@ CTA SECTION
                             </div>
 
                             <div class="col-12 mb-4">
+                                <label for="sponsor-website">Website URL (Optional)</label>
                                 <input type="url"
+                                       id="sponsor-website"
                                        class="form-control"
                                        name="website"
                                        value="{{ old('website') }}"
@@ -1210,7 +1238,7 @@ CTA SECTION
 <!-- ===================================
 WHY CONNECT WITH CONNECTX
 =================================== -->
-<section class="connectx-benefits-section pt-120 pb-120">
+<section class="connectx-benefits-section pt-60 pb-30">
     <div class="container">
 
         <!-- Heading -->
@@ -1338,7 +1366,7 @@ WHY CONNECT WITH CONNECTX
 
 
 <!-- third section — Brand Presence -->
-<section class="fancy-banner-seven box-layout connectx-brand-section pt-120 lg-pt-80" style="max-width: 96% !important; margin: 0 auto !important; width: 100% !important;">
+<section class="fancy-banner-seven box-layout connectx-brand-section pt-60 lg-pt-30 pb-40" style="max-width: 96% !important; margin: 0 auto !important; width: 100% !important;">
 
     <div class="bg-wrapper border-40 position-relative z-1 overflow-hidden pt-120 pb-120 lg-pt-80 lg-pb-80" style="max-width: 100% !important; width: 100% !important;">
 
@@ -1404,7 +1432,7 @@ WHY CONNECT WITH CONNECTX
 
 
 
-<div class="text-feature-five position-relative mt-150 lg-mt-80 pb-50">
+<div class="text-feature-five position-relative mt-50 lg-mt-80 pb-50">
 
     <div class="container">
 
@@ -1485,39 +1513,5 @@ WHY CONNECT WITH CONNECTX
 
 </div>
 
-<!-- Image Carousel Section -->
-@include('partials.image-carousel')
-
-@if (session('success'))
-<!-- Success Modal -->
-<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content" style="background: linear-gradient(135deg, #fffcf9 0%, #ffeada 100%); border: 1px solid rgba(12, 58, 48, 0.15); border-radius: 20px;">
-            <div class="modal-body text-center p-5">
-                <div class="mb-4">
-                    <i class="bi bi-check-circle-fill" style="font-size: 4rem; color: #0c3a30;"></i>
-                </div>
-                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; line-height: 1.3; color: #0c3a30;">Together, We Drive Meaningful Impact</h3>
-                <p class="mb-4" style="line-height: 1.6; font-size: 0.95rem; color: #687588;">
-                    Your sponsorship application has been successfully received. We are reviewing your details and will reach out shortly to design a tailored experience that amplifies your brand. Thank you for your commitment to empowering the next generation of leaders.
-                </p>
-                <a href="{{ url('/') }}" class="btn px-5 py-3 fw-bold text-uppercase w-100 d-block text-center" style="text-decoration: none; background-color: #0c3a30; color: #ffffff; border-radius: 12px; border: none; transition: all 0.3s ease;">
-                    Continue Exploring
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var successModalElement = document.getElementById('successModal');
-        if (successModalElement) {
-            var myModal = new bootstrap.Modal(successModalElement);
-            myModal.show();
-        }
-    });
-</script>
-@endif
 
 @endsection

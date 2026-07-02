@@ -61,6 +61,19 @@ $seo = [
     background: #0c3a30 !important;
 }
 
+.partner-form-box label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #19352d;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.partner-form-box .form-control::placeholder {
+    color: #888888 !important;
+}
+
 /* ==========================================
    BECOME A PARTNER — MOBILE RESPONSIVE
    Breakpoints: 991px (tablet), 767px (mobile), 480px (small mobile)
@@ -403,7 +416,9 @@ $seo = [
                         <div class="row">
 
                             <div class="col-md-6 mb-3">
+                                <label for="partner-name">Full Name <span class="text-danger">*</span></label>
                                 <input type="text"
+                                    id="partner-name"
                                     class="form-control"
                                     name="name"
                                     value="{{ old('name') }}"
@@ -414,7 +429,9 @@ $seo = [
                             </div>
 
                             <div class="col-md-6 mb-3">
+                                <label for="partner-email">Email Address <span class="text-danger">*</span></label>
                                 <input type="email"
+                                    id="partner-email"
                                     class="form-control"
                                     name="email"
                                     value="{{ old('email') }}"
@@ -425,7 +442,9 @@ $seo = [
                             </div>
 
                             <div class="col-md-6 mb-3">
+                                <label for="partner-phone">Phone / WhatsApp <span class="text-danger">*</span></label>
                                 <input type="text"
+                                    id="partner-phone"
                                     class="form-control"
                                     name="phone"
                                     value="{{ old('phone') }}"
@@ -436,7 +455,9 @@ $seo = [
                             </div>
 
                             <div class="col-md-6 mb-3">
+                                <label for="partner-company">Organization / Company Name <span class="text-danger">*</span></label>
                                 <input type="text"
+                                    id="partner-company"
                                     class="form-control"
                                     name="company"
                                     value="{{ old('company') }}"
@@ -447,7 +468,9 @@ $seo = [
                             </div>
 
                             <div class="col-md-6 mb-3">
+                                <label for="partner-designation">Designation / Role <span class="text-danger">*</span></label>
                                 <input type="text"
+                                    id="partner-designation"
                                     class="form-control"
                                     name="designation"
                                     value="{{ old('designation') }}"
@@ -458,7 +481,9 @@ $seo = [
                             </div>
 
                             <div class="col-md-6 mb-3">
+                                <label for="partner-linkedin">LinkedIn Profile <span class="text-danger">*</span></label>
                                 <input type="url"
+                                    id="partner-linkedin"
                                     class="form-control"
                                     name="linkedin"
                                     value="{{ old('linkedin') }}"
@@ -469,8 +494,9 @@ $seo = [
                             </div>
 
                             <div class="col-12 mb-3">
-
+                                <label for="partner-type">Partnership Type <span class="text-danger">*</span></label>
                                 <select class="form-control"
+                                    id="partner-type"
                                     name="partnership_type" required>
 
                                     <option value="" disabled {{ old('partnership_type') ? '' : 'selected' }}>
@@ -489,8 +515,9 @@ $seo = [
                             </div>
 
                             <div class="col-12 mb-4">
-
+                                <label for="partner-website">Website URL (Optional)</label>
                                 <input type="url"
+                                    id="partner-website"
                                     class="form-control"
                                     name="website"
                                     value="{{ old('website') }}"
@@ -523,7 +550,7 @@ $seo = [
 
 <!-- second section -->
 
-<section class="connectx-how-works-section-wrapper pt-150 lg-pt-80 pb-120 lg-pb-80">
+<section class="connectx-how-works-section-wrapper pt-70 lg-pt-80 pb-70 lg-pb-80">
     <div class="container">
 
         <div class="text-center mb-70">
@@ -610,7 +637,7 @@ $seo = [
     </div>
 </section>
 
-<div class="text-feature-five position-relative mt-150 lg-mt-80 pb-50">
+<div class="text-feature-five position-relative mt-40 lg-mt-80 pb-50">
 
     <div class="container">
 
@@ -730,7 +757,7 @@ CONNECTX PARTNERSHIP OPPORTUNITIES
   }
 </style>
 
-<section class="tiers-section position-relative pt-120 pb-120" id="partnership-opportunities">
+<section class="tiers-section position-relative pt-4 pb-30" id="partnership-opportunities">
   <div class="container">
     <div class="section-head text-center" style="margin-bottom: 50px;">
         <div class="eyebrow rv" style="color: #0c3a30;">Young Chanakya X</div>
@@ -853,7 +880,7 @@ function toggleTier(btn) {
 <!-- =========================
 EXPANDING ACROSS INDUSTRIES
 ========================= -->
-<section class="connectx-expand-section pt-120 pb-120">
+<section class="connectx-expand-section pt-30 pb-50">
     <div class="container">
         <div class="row align-items-center gy-5">
 
@@ -873,7 +900,6 @@ EXPANDING ACROSS INDUSTRIES
                         <li>Multi-industry creator ecosystem</li>
                         <li>Cross-border collaboration opportunities</li>
                         <li>Digital-first scalable network</li>
-                        <li>Continuous onboarding of new voices</li>
                     </ul>
 
                 </div>

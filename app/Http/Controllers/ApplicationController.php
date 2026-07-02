@@ -185,4 +185,57 @@ class ApplicationController extends Controller
             return back()->withInput()->with('error', 'Unable to send message via SMTP. Please check mailer settings.');
         }
     }
+
+    public function submitRsvp(Request $request)
+    {
+        $validated = $request->validate([
+            'full_name'   => 'required|string|max:255',
+            'email'       => 'required|email|max:255',
+            'phone'       => 'required|string|max:50',
+            'social_url'  => 'required|url|max:255',
+            'event_title' => 'required|string|max:255',
+        ]);
+
+        try {
+            \Illuminate\Support\Facades\Log::info('--- EVENT RSVP SUBMISSION START ---');
+            \Illuminate\Support\Facades\Log::info('Sending admin email...');
+
+            // 1. Email to Admin
+            Mail::send('emails.event-rsvp-admin', $validated, function ($message) use ($validated) {
+                $message->to('youngchanakya.x@gmail.com')
+                        ->subject('New Event Application: ' . $validated['event_title'] . ' - ' . $validated['full_name'])
+                        ->replyTo($validated['email'], $validated['full_name']);
+            });
+            \Illuminate\Support\Facades\Log::info('Admin email sent.');
+
+            // 2. Email to User (Confirmation)
+            \Illuminate\Support\Facades\Log::info('Sending user confirmation email to: ' . $validated['email']);
+            Mail::send('emails.event-rsvp-user', $validated, function ($message) use ($validated) {
+                $message->to($validated['email'])
+                        ->subject('Application Received: ' . $validated['event_title'] . ' - Young Chanakya X');
+            });
+            \Illuminate\Support\Facades\Log::info('User email sent.');
+            \Illuminate\Support\Facades\Log::info('--- EVENT RSVP SUBMISSION END ---');
+
+            if ($request->ajax()) {
+                return response()->json([
+                    'type'    => 'success',
+                    'message' => 'Your RSVP application has been submitted successfully for verification!'
+                ]);
+            }
+
+            return back()->with('success', 'Your RSVP application has been submitted successfully for verification!');
+        } catch (\Exception $e) {
+            logger()->error('SMTP Event RSVP Application failure: ' . $e->getMessage());
+
+            if ($request->ajax()) {
+                return response()->json([
+                    'type'    => 'danger',
+                    'message' => 'Unable to send RSVP application via SMTP. Please try again later.'
+                ], 500);
+            }
+
+            return back()->withInput()->with('error', 'Unable to send RSVP application via SMTP. Please check mailer settings.');
+        }
+    }
 }

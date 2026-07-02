@@ -99,10 +99,10 @@ Route::post('/become-a-partner/apply', [ApplicationController::class, 'submitPar
 Route::get('/events', fn() => view('events'));
 Route::get('/event-details/{slug?}', function ($slug = 'founder-spotlight-series-scaling-beyond-series-a') {
     return view('event-details', compact('slug'));
-=======
+});
+Route::post('/event-details/apply', [ApplicationController::class, 'submitRsvp'])->name('rsvp.apply');
 
 Route::post('/contact/submit', [ApplicationController::class, 'submitContact'])->name('contact.submit');
 Route::get('/check-db', function() {
     return response()->json(\App\Models\Contact::latest()->get());
->>>>>>> 4716e77 (navbar, contact, about pages updated)
 });

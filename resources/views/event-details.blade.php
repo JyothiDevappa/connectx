@@ -216,6 +216,7 @@
     /* PREMIUM EVENT DETAILS STYLES */
     .premium-detail-hero {
         min-height: 55vh;
+        padding-top: 100px !important;
         background-image: linear-gradient(180deg, rgba(9, 13, 22, 0.45) 0%, #090d16 100%), 
                           url('{{ $currentEvent['img'] }}');
         background-size: cover;
@@ -228,7 +229,7 @@
         font-weight: 800;
         line-height: 1.25;
         letter-spacing: -2px;
-        background: linear-gradient(135deg, #ffffff 40%, #ffd2b1 100%);
+        background: linear-gradient(135deg, #ffffff 20%, #ffbe8e 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -246,16 +247,19 @@
     }
 
     .meta-item-box {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(12, 58, 48, 0.65);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 210, 177, 0.4);
         border-radius: 16px;
-        padding: 16px;
+        padding: 20px;
         transition: all 0.3s ease;
     }
 
     .meta-item-box:hover {
-        background: rgba(255, 255, 255, 0.06);
+        background: rgba(12, 58, 48, 0.85);
         border-color: #ffd2b1;
+        transform: translateY(-2px);
     }
 
     .premium-card-wrapper {
@@ -267,33 +271,41 @@
     }
 
     .details-sidebar-card {
-        background: #0c3a30;
-        color: #ffffff;
+        background: #ffffff;
+        color: #475569;
         border-radius: 24px;
         padding: 32px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 0 40px 80px -15px rgba(12, 58, 48, 0.2);
+        border: 1px solid rgba(12, 58, 48, 0.08);
+        box-shadow: 0 40px 80px -15px rgba(12, 58, 48, 0.06);
+    }
+
+    .details-sidebar-card label {
+        color: #0c3a30;
     }
 
     .form-control-premium {
-        background: rgba(255, 255, 255, 0.06) !important;
-        border: 1px solid rgba(255, 255, 255, 0.15) !important;
-        color: #ffffff !important;
+        background: #f8f6f2 !important;
+        border: 1px solid rgba(12, 58, 48, 0.12) !important;
+        color: #0c3a30 !important;
         border-radius: 12px;
         padding: 14px 18px;
         font-size: 0.9rem;
         transition: all 0.3s ease;
     }
 
+    .form-control-premium::placeholder {
+        color: #a0aec0;
+    }
+
     .form-control-premium:focus {
-        border-color: #ffd2b1 !important;
-        background: rgba(255, 255, 255, 0.1) !important;
-        box-shadow: 0 0 0 4px rgba(255, 210, 177, 0.15) !important;
+        border-color: #0c3a30 !important;
+        background: #ffffff !important;
+        box-shadow: 0 0 0 4px rgba(12, 58, 48, 0.08) !important;
     }
 
     .btn-premium-action {
-        background: #ffd2b1;
-        color: #0c3a30;
+        background: #0c3a30;
+        color: #ffd2b1;
         font-weight: 700;
         letter-spacing: 1px;
         text-transform: uppercase;
@@ -305,9 +317,10 @@
     }
 
     .btn-premium-action:hover {
-        background: #ffffff;
+        background: #ffd2b1;
+        color: #0c3a30;
         transform: translateY(-2px);
-        box-shadow: 0 10px 20px -5px rgba(255, 255, 255, 0.2);
+        box-shadow: 0 10px 20px -5px rgba(12, 58, 48, 0.2);
     }
 
     .timeline-item-premium {
@@ -527,32 +540,33 @@
             </div>
 
             <!-- Sidebar Form (Right) -->
-            <div class="col-lg-4">
-                <div class="details-sidebar-card position-sticky" style="top: 100px; z-index: 10;">
-                    <h4 class="fw-bold mb-3" style="color: #ffd2b1;">Apply to Attend</h4>
+            <div class="col-lg-4 align-self-start">
+                <div class="details-sidebar-card position-sticky" style="top: 130px; z-index: 10;">
+                    <h4 class="fw-bold mb-3" style="color: #0c3a30;">Apply for the Event</h4>
                     <p class="small opacity-80 mb-4" style="line-height: 1.5;">
                         Spaces are limited and curated for strategic alignment. Please fill out the form below to register your interest.
                     </p>
 
-                    <form action="#" method="POST" id="rsvp-premium-form">
+                    <form action="{{ route('rsvp.apply') }}" method="POST" id="rsvp-premium-form">
                         @csrf
+                        <input type="hidden" name="event_title" value="{{ $currentEvent['title'] }}">
                         <div class="mb-3">
                             <label class="form-label small fw-bold opacity-90 text-uppercase tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Full Name</label>
-                            <input type="text" class="form-control form-control-premium" placeholder="e.g. John Doe" required>
+                            <input type="text" name="full_name" class="form-control form-control-premium" placeholder="e.g. John Doe" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label small fw-bold opacity-90 text-uppercase tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Email Address</label>
-                            <input type="email" class="form-control form-control-premium" placeholder="e.g. john@company.com" required>
+                            <input type="email" name="email" class="form-control form-control-premium" placeholder="e.g. john@company.com" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label small fw-bold opacity-90 text-uppercase tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">LinkedIn Profile / Website</label>
-                            <input type="url" class="form-control form-control-premium" placeholder="https://linkedin.com/in/username" required>
+                            <label class="form-label small fw-bold opacity-90 text-uppercase tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Mobile Number</label>
+                            <input type="tel" name="phone" class="form-control form-control-premium" placeholder="e.g. +91 98765 43210" required>
                         </div>
                         <div class="mb-4">
-                            <label class="form-label small fw-bold opacity-90 text-uppercase tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Why would you like to join?</label>
-                            <textarea class="form-control form-control-premium" rows="3" placeholder="Briefly describe your objectives..." required></textarea>
+                            <label class="form-label small fw-bold opacity-90 text-uppercase tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Social Media URL</label>
+                            <input type="url" name="social_url" class="form-control form-control-premium" placeholder="e.g. instagram.com/username or linkedin.com/in/username" required>
                         </div>
-                        <button type="submit" class="btn-premium-action">Submit RSVP</button>
+                        <button type="submit" class="btn-premium-action">Submit Now</button>
                     </form>
                     <div id="rsvp-status-message" class="mt-3 text-center small text-success fw-bold" style="display:none;">
                         Application Submitted Successfully!
@@ -562,7 +576,7 @@
         </div>
 
         <!-- Related Events Section -->
-        <div class="row mt-5 pt-5">
+        <div class="row mt-5 pt-50">
             <div class="col-12">
                 <h3 class="fw-bold mb-4" style="color: #0c3a30; border-bottom: 2px solid rgba(12, 58, 48, 0.05); padding-bottom: 12px;">Related Upcoming Sessions</h3>
             </div>
@@ -607,21 +621,67 @@
     </div>
 </div>
 
+@if (session('success'))
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background: linear-gradient(135deg, #fffcf9 0%, #ffeada 100%); border: 1px solid rgba(12, 58, 48, 0.15); border-radius: 20px;">
+            <div class="modal-body text-center p-5">
+                <div class="mb-4">
+                    <i class="bi bi-check-circle-fill" style="font-size: 4rem; color: #0c3a30;"></i>
+                </div>
+                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; line-height: 1.3; color: #0c3a30;">Application Received</h3>
+                <p class="mb-4" style="line-height: 1.6; font-size: 0.95rem; color: #687588;">
+                    {{ session('success') }}
+                </p>
+                <button type="button" class="btn px-5 py-3 fw-bold text-uppercase w-100" data-bs-dismiss="modal" style="background-color: #0c3a30; color: #ffffff; border-radius: 12px; border: none; transition: all 0.3s ease;">
+                    Continue Exploring
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const form = document.getElementById('rsvp-premium-form');
-        const successMessage = document.getElementById('rsvp-status-message');
-        
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                form.reset();
-                successMessage.style.display = 'block';
-                setTimeout(() => {
-                    successMessage.style.display = 'none';
-                }, 5000);
-            });
+    document.addEventListener("DOMContentLoaded", function() {
+        var successModalElement = document.getElementById('successModal');
+        if (successModalElement) {
+            var myModal = new bootstrap.Modal(successModalElement);
+            myModal.show();
         }
     });
 </script>
+@endif
+
+@if (session('error'))
+<!-- Error Modal -->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background: #fffafa; border: 1px solid rgba(220, 53, 69, 0.2); border-radius: 20px;">
+            <div class="modal-body text-center p-5">
+                <div class="mb-4">
+                    <i class="bi bi-x-circle-fill" style="font-size: 4rem; color: #dc3545;"></i>
+                </div>
+                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; line-height: 1.3; color: #dc3545;">Submission Failed</h3>
+                <p class="mb-4" style="line-height: 1.6; font-size: 0.95rem; color: #687588;">
+                    {{ session('error') }}
+                </p>
+                <button type="button" class="btn px-5 py-3 fw-bold text-uppercase w-100" data-bs-dismiss="modal" style="background-color: #dc3545; color: #ffffff; border-radius: 12px; border: none;">
+                    Go Back
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var errorModalElement = document.getElementById('errorModal');
+        if (errorModalElement) {
+            var myModal = new bootstrap.Modal(errorModalElement);
+            myModal.show();
+        }
+    });
+</script>
+@endif
 @endsection
