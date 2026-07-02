@@ -808,10 +808,10 @@ $seo = [
         <div class="row align-items-end justify-content-between">
             <div class="col-lg-6 col-md-7 text-start">
                 <div class="eyebrow rv text-start" style="margin-bottom: 12px;">Who Can Join Us</div>
-                <h2 class="sec-title rv text-start" style="margin-bottom: 0;">Built for Every<br>Ecosystem Journey</h2>
+                <h2 class="sec-title rv text-start" style="margin-bottom: 0;">A Community for Everyone Who Wants to Grow</h2>
             </div>
             <div class="col-lg-5 col-md-5 text-start">
-                <p class="sec-desc rv text-start" style="margin-bottom: 0; line-height: 1.6; max-width: 100%;">Our platform connects ambitious minds to share experiences, build influence, and unlock growth opportunities.</p>
+                <p class="sec-desc rv text-start" style="margin-bottom: 0; line-height: 1.6; max-width: 100%;">For people who value collaboration, learning, and building real connections that create long-term impact.</p>
             </div>
         </div>
     </div>
@@ -1157,126 +1157,101 @@ $seo = [
 
         <div class="position-relative">
             <div class="row gx-xxl-5">
+                @php
+                    $homeEvents = [
+                        [
+                            'category' => 'Speakers',
+                            'title' => 'Founder Spotlight Series: Scaling Beyond Series A',
+                            'desc' => 'Deconstructing startup milestones, market entry barriers, and scaling systems for high-growth ventures.',
+                            'date' => 'JUL 18, 2026',
+                            'location' => 'BENGALURU HUB',
+                            'host' => 'Aditya Verma',
+                            'role' => 'Venture Partner',
+                            'img' => 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800'
+                        ],
+                        [
+                            'category' => 'Roundtables',
+                            'title' => 'Creator Connect Sessions: Multi-Platform Monetization',
+                            'desc' => 'Unlocking premium brand sponsorships, media kit architectures, and co-branded content monetization loops.',
+                            'date' => 'JUL 24, 2026',
+                            'location' => 'EPISODE 42',
+                            'host' => 'Rohan Sharma',
+                            'role' => 'Growth Lead',
+                            'img' => 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=800'
+                        ],
+                        [
+                            'category' => 'Roundtables',
+                            'title' => 'Women in Leadership Circle: Directing Enterprise Operations',
+                            'desc' => 'A collaborative forum for female business leaders, operational executives, and board candidates.',
+                            'date' => 'AUG 02, 2026',
+                            'location' => 'LEELA PALACE',
+                            'host' => 'Meera Nair',
+                            'role' => 'UI/UX Director',
+                            'img' => 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=800'
+                        ],
+                        [
+                            'category' => 'Speakers',
+                            'title' => 'Mentor Connect Program: Engineering & Architecture Scales',
+                            'desc' => 'Direct technical mapping alongside elite system architects deploying robust enterprise configurations.',
+                            'date' => 'AUG 12, 2026',
+                            'location' => 'VIRTUAL SYMPOSIUM',
+                            'host' => 'Jyothidev',
+                            'role' => 'Full Stack Architect',
+                            'img' => 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800'
+                        ],
+                        [
+                            'category' => 'Podcasts',
+                            'title' => 'Fireside Chats: Building Legacy Brand Narratives',
+                            'desc' => 'An intimate, raw conversation with veteran operators detailing brand strategy, pivots, and positioning.',
+                            'date' => 'AUG 29, 2026',
+                            'location' => 'EPISODE 43',
+                            'host' => 'Karan Malhotra',
+                            'role' => 'Principal Architect',
+                            'img' => 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=800'
+                        ],
+                        [
+                            'category' => 'Speakers',
+                            'title' => 'CEO Conversations: Navigating Cross-Border Ventures',
+                            'desc' => 'Closed-door insights on international compliance, currency risk, and building global operating structures.',
+                            'date' => 'SEP 05, 2026',
+                            'location' => 'ITC GARDENIA',
+                            'host' => 'Ananya Rao',
+                            'role' => 'Managing Director',
+                            'img' => 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800'
+                        ]
+                    ];
+                @endphp
 
-                <div class="col-lg-4 col-md-6">
-                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
-                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
-                            style="background-image: url('{{ asset("images/media/img.jpg") }}');">
-                            <a href="#" class="stretched-link rounded-5 date tran3s">09 FEB</a>
-                        </figure>
-                        <div class="post-data">
-                            <div class="d-flex justify-content-between align-items-center flex-wrap">
-                                <a href="#" class="blog-title">
-                                    <h3>Creator Growth Masterclass</h3>
-                                </a>
-                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
-                                    <i class="bi bi-arrow-up-right"></i>
-                                </a>
+                @foreach($homeEvents as $event)
+                    @php
+                        $dateParts = explode(' ', $event['date']);
+                        $day = rtrim($dateParts[1], ',');
+                        $month = $dateParts[0];
+                        $formattedDate = $day . ' ' . $month;
+                        $slug = \Illuminate\Support\Str::slug($event['title']);
+                    @endphp
+                    <div class="col-lg-4 col-md-6">
+                        <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
+                            <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                                style="background-image: url('{{ $event['img'] }}');">
+                                <a href="{{ url('/event-details/' . $slug) }}" class="stretched-link rounded-5 date tran3s">{{ $formattedDate }}</a>
+                            </figure>
+                            <div class="post-data">
+                                <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                    <a href="{{ url('/event-details/' . $slug) }}" class="blog-title">
+                                        <h3>{{ $event['title'] }}</h3>
+                                    </a>
+                                    <a href="{{ url('/event-details/' . $slug) }}" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+                                        <i class="bi bi-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                                <div class="post-info text-uppercase fw-semibold tracking-wider opacity-75 mt-2" style="font-size: 0.72rem; color: #ffd2b1;">
+                                    {{ $event['category'] }} • {{ $event['location'] }}
+                                </div>
                             </div>
-                            <!-- <div class="post-info">Young Chanakya X Team . 6 hrs . Masterclass</div> -->
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp" data-wow-delay="0.1s">
-                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
-                            style="background-image: url('{{ asset("images/blog/blog_img_04.jpg") }}');">
-                            <a href="#" class="stretched-link rounded-5 date tran3s">12 AUG</a>
-                        </figure>
-                        <div class="post-data">
-                            <div class="d-flex justify-content-between align-items-center flex-wrap">
-                                <a href="#" class="blog-title">
-                                    <h3>Voices of Influence Roundtable</h3>
-                                </a>
-                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
-                                    <i class="bi bi-arrow-up-right"></i>
-                                </a>
-                            </div>
-                            <!-- <div class="post-info">Live Panel . 4 hrs . Roundtable</div> -->
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
-                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
-                            style="background-image: url('{{ asset("images/media/img_50.jpg") }}');">
-                            <a href="#" class="stretched-link rounded-5 date tran3s">18 SEP</a>
-                        </figure>
-                        <div class="post-data">
-                            <div class="d-flex justify-content-between align-items-center flex-wrap">
-                                <a href="#" class="blog-title">
-                                    <h3>Networking & Collab Night</h3>
-                                </a>
-                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
-                                    <i class="bi bi-arrow-up-right"></i>
-                                </a>
-                            </div>
-                            <!-- <div class="post-info">Community Hub . 5 hrs . Networking</div> -->
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp" data-wow-delay="0.1s">
-                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
-                            style="background-image: url('{{ asset("images/media/img_48.webp") }}');">
-                            <a href="#" class="stretched-link rounded-5 date tran3s">22 OCT</a>
-                        </figure>
-                        <div class="post-data">
-                            <div class="d-flex justify-content-between align-items-center flex-wrap">
-                                <a href="#" class="blog-title">
-                                    <h3>Meetup Market Mixer</h3>
-                                </a>
-                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
-                                    <i class="bi bi-arrow-up-right"></i>
-                                </a>
-                            </div>
-                            <!-- <div class="post-info">City Event . 3 hrs . Meetups</div> -->
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
-                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
-                            style="background-image: url('{{ asset("images/media/img_58.webp") }}');">
-                            <a href="#" class="stretched-link rounded-5 date tran3s">05 NOV</a>
-                        </figure>
-                        <div class="post-data">
-                            <div class="d-flex justify-content-between align-items-center flex-wrap">
-                                <a href="#" class="blog-title">
-                                    <h3>Creator Lounge Live</h3>
-                                </a>
-                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
-                                    <i class="bi bi-arrow-up-right"></i>
-                                </a>
-                            </div>
-                            <!-- <div class="post-info">Studio Stream . 2 hrs . Lounge</div> -->
-                        </div>
-                    </article>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp" data-wow-delay="0.1s">
-                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
-                            style="background-image: url('{{ asset("images/media/img_20.jpg") }}');">
-                            <a href="#" class="stretched-link rounded-5 date tran3s">15 DEC</a>
-                        </figure>
-                        <div class="post-data">
-                            <div class="d-flex justify-content-between align-items-center flex-wrap">
-                                <a href="#" class="blog-title">
-                                    <h3>Awards Showcase Evening</h3>
-                                </a>
-                                <a href="#" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
-                                    <i class="bi bi-arrow-up-right"></i>
-                                </a>
-                            </div>
-                            <!-- <div class="post-info">Showcase . 4 hrs . Awards</div> -->
-                        </div>
-                    </article>
-                </div>
+                        </article>
+                    </div>
+                @endforeach
 
             </div>
         </div>

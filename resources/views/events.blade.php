@@ -409,39 +409,39 @@ $seo = [
     // Structured data representing your premium events matrix
     $curatedEvents = [
         [
-            'category' => 'Roundtables',
-            'title' => 'C-Suite Strategy: Transcending Market Vulnerabilities',
-            'desc' => 'A closed-door collective for legacy operators and enterprise founders managing tier-1 capital models.',
+            'category' => 'Spotlight',
+            'title' => 'Founder Spotlight Series: Scaling Beyond Series A',
+            'desc' => 'Deconstructing startup milestones, market entry barriers, and scaling systems for high-growth ventures.',
             'date' => 'JUL 18, 2026',
             'location' => 'BENGALURU HUB',
             'host' => 'Aditya Verma',
-            'role' => 'Managing Director',
+            'role' => 'Venture Partner',
             'img' => 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800'
         ],
         [
-            'category' => 'Podcasts',
-            'title' => 'Young Chanakya X Paradigm Shift: Building Scalable Infrastructure',
-            'desc' => 'Deconstructing modern tech architectures with elite specialists deploying reliable, global structures.',
+            'category' => 'Connect',
+            'title' => 'Creator Connect Sessions: Multi-Platform Monetization',
+            'desc' => 'Unlocking premium brand sponsorships, media kit architectures, and co-branded content monetization loops.',
             'date' => 'JUL 24, 2026',
             'location' => 'EPISODE 42',
             'host' => 'Rohan Sharma',
-            'role' => 'Principal Architect',
+            'role' => 'Growth Lead',
             'img' => 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=800'
         ],
         [
-            'category' => 'Speakers',
-            'title' => 'Keynote: Scaling Systems and Institutional Funding',
-            'desc' => 'An open-floor assembly pulling back the curtain on valuation strategies and board allocations.',
+            'category' => 'Leadership',
+            'title' => 'Women in Leadership Circle: Directing Enterprise Operations',
+            'desc' => 'A collaborative forum for female business leaders, operational executives, and board candidates.',
             'date' => 'AUG 02, 2026',
             'location' => 'LEELA PALACE',
             'host' => 'Meera Nair',
-            'role' => 'Venture Partner',
+            'role' => 'UI/UX Director',
             'img' => 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=800'
         ],
         [
-            'category' => 'Roundtables',
-            'title' => 'SaaS Architecture & Cross-Border Frameworks',
-            'desc' => 'Deep technical analysis on running international databases while staying completely compliant.',
+            'category' => 'Mentor',
+            'title' => 'Mentor Connect Program: Engineering & Architecture Scales',
+            'desc' => 'Direct technical mapping alongside elite system architects deploying robust enterprise configurations.',
             'date' => 'AUG 12, 2026',
             'location' => 'VIRTUAL SYMPOSIUM',
             'host' => 'Jyothidev',
@@ -449,23 +449,23 @@ $seo = [
             'img' => 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800'
         ],
         [
-            'category' => 'Podcasts',
-            'title' => 'Young Chanakya X Paradigm Shift: High-End Consumer Behavior',
-            'desc' => 'Dissecting how premium brands build conversion architectures that generate recurring market demand.',
+            'category' => 'Fireside',
+            'title' => 'Fireside Chats: Building Legacy Brand Narratives',
+            'desc' => 'An intimate, raw conversation with veteran operators detailing brand strategy, pivots, and positioning.',
             'date' => 'AUG 29, 2026',
             'location' => 'EPISODE 43',
             'host' => 'Karan Malhotra',
-            'role' => 'Growth Lead',
+            'role' => 'Principal Architect',
             'img' => 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=800'
         ],
         [
-            'category' => 'Speakers',
-            'title' => 'Minimalist Strategy: The Architecture of Premium UX',
-            'desc' => 'Analyzing functional minimalism, elegant typography, and interaction layers used by premium consumer brands.',
+            'category' => 'CEO',
+            'title' => 'CEO Conversations: Navigating Cross-Border Ventures',
+            'desc' => 'Closed-door insights on international compliance, currency risk, and building global operating structures.',
             'date' => 'SEP 05, 2026',
             'location' => 'ITC GARDENIA',
             'host' => 'Ananya Rao',
-            'role' => 'UI/UX Director',
+            'role' => 'Managing Director',
             'img' => 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800'
         ]
     ];
@@ -497,19 +497,22 @@ $seo = [
             Browse Upcoming Events
         </span>
         <div class="custom-pill-nav">
-            <a href="#" class="nav-link-item active">All Events</a>
-            <a href="#" class="nav-link-item">Roundtables</a>
-            <a href="#" class="nav-link-item">Podcasts</a>
-            <a href="#" class="nav-link-item">Speakers</a>
+            <a href="#" class="nav-link-item filter-btn active" data-filter="all">All</a>
+            <a href="#" class="nav-link-item filter-btn" data-filter="spotlight">Spotlight</a>
+            <a href="#" class="nav-link-item filter-btn" data-filter="connect">Connect</a>
+            <a href="#" class="nav-link-item filter-btn" data-filter="leadership">Leadership</a>
+            <a href="#" class="nav-link-item filter-btn" data-filter="mentor">Mentor</a>
+            <a href="#" class="nav-link-item filter-btn" data-filter="fireside">Fireside</a>
+            <a href="#" class="nav-link-item filter-btn" data-filter="ceo">CEO</a>
         </div>
     </div>
 </div>
 
 <div class="content-showcase-section py-5" style="background-color: #f8f6f2;">
     <div class="container py-4">
-        <div class="row g-5">
+        <div class="row g-5" id="events-grid-container">
             @foreach($curatedEvents as $event)
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 event-card-item" data-category="{{ \Illuminate\Support\Str::slug($event['category']) }}">
                     <div class="ux-curated-card p-3 h-100 d-flex flex-column">
                         
                         <div class="card-frame-media">
@@ -576,3 +579,33 @@ $seo = [
     </div>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.event-card-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Toggle active class
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.getAttribute('data-filter');
+
+                // Filter cards
+                cards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>
+@endpush

@@ -2,153 +2,153 @@
     // Structured data representing your premium events matrix (must match events.blade.php slugs)
     $curatedEvents = [
         [
-            'slug' => 'c-suite-strategy-transcending-market-vulnerabilities',
-            'category' => 'Roundtables',
-            'title' => 'C-Suite Strategy: Transcending Market Vulnerabilities',
-            'desc' => 'A closed-door collective for legacy operators and enterprise founders managing tier-1 capital models.',
+            'slug' => 'founder-spotlight-series-scaling-beyond-series-a',
+            'category' => 'Spotlight',
+            'title' => 'Founder Spotlight Series: Scaling Beyond Series A',
+            'desc' => 'Deconstructing startup milestones, market entry barriers, and scaling systems for high-growth ventures.',
             'date' => 'JUL 18, 2026',
-            'time' => '04:00 PM - 07:00 PM IST',
+            'time' => '04:00 PM - 06:30 PM IST',
             'location' => 'BENGALURU HUB',
-            'venue_detail' => 'The Executive Lounge, Bengaluru Hub, Indiranagar',
+            'venue_detail' => 'Indiranagar Creator Lounge, Indiranagar',
             'host' => 'Aditya Verma',
-            'role' => 'Managing Director',
-            'host_bio' => 'Aditya Verma is a seasoned managing director with over 18 years of experience advising Fortune 500 enterprises and tier-1 startup founders on capital efficiency and operational expansion structures.',
+            'role' => 'Venture Partner',
+            'host_bio' => 'Aditya is a growth advisor who has coached over 50 startups to scale their capital and customer acquisition.',
             'img' => 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200',
             'highlights' => [
-                'Managing macro inflation and tier-1 capital models',
-                'Legacy operation restructuring & automation scaling',
-                'Risk mitigation frameworks for volatile growth stages'
+                'Deconstructing key startup milestones',
+                'Identifying and overcoming market entry barriers',
+                'Implementing scaling systems for high-growth ventures'
             ],
-            'cohort' => 'Legacy Operators, Corporate Directors, and Enterprise Founders managing tier-1 capital pools ($10M+ AUM / active model assets).',
+            'cohort' => 'Early-stage Founders, VC associates, and Growth Operators.',
             'outcomes' => [
-                'A customized macro hedging strategy checklist for H2 2026 capital protection.',
-                'Access to closed-door risk mitigation models currently deployed by legacy operations.',
-                'Direct-vetted contacts of tier-1 institutional trustees and allocation partners.'
+                'A comprehensive startup scaling blueprint.',
+                'A self-evaluation Series A readiness audit.',
+                'Proven growth hacking models and metrics templates.'
             ]
         ],
         [
-            'slug' => 'young-chanakya-x-paradigm-shift-building-scalable-infrastructure',
-            'category' => 'Podcasts',
-            'title' => 'Young Chanakya X Paradigm Shift: Building Scalable Infrastructure',
-            'desc' => 'Deconstructing modern tech architectures with elite specialists deploying reliable, global structures.',
+            'slug' => 'creator-connect-sessions-multi-platform-monetization',
+            'category' => 'Connect',
+            'title' => 'Creator Connect Sessions: Multi-Platform Monetization',
+            'desc' => 'Unlocking premium brand sponsorships, media kit architectures, and co-branded content monetization loops.',
             'date' => 'JUL 24, 2026',
-            'time' => '06:00 PM - 07:30 PM IST',
+            'time' => '05:00 PM - 08:00 PM IST',
             'location' => 'EPISODE 42',
-            'venue_detail' => 'Live Recording Session & Broadcast Studio',
+            'venue_detail' => 'ConnectX Live Studio & Podcast Suite',
             'host' => 'Rohan Sharma',
-            'role' => 'Principal Architect',
-            'host_bio' => 'Rohan Sharma specializes in distributed ledger frameworks, high-throughput systems, and edge cloud configurations for decacorn-level product architectures.',
+            'role' => 'Growth Lead',
+            'host_bio' => 'Rohan is a digital strategist advising over 20+ top-tier influencers on audience optimization.',
             'img' => 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=1200',
             'highlights' => [
-                'Architecting for 99.999% system availability',
-                'Cross-border database replication & edge hosting architectures',
-                'Minimizing API latency structures in modern web applications'
+                'Unlocking premium brand sponsorships',
+                'Building media kit architectures that convert',
+                'Designing co-branded content monetization loops'
             ],
-            'cohort' => 'CTOs, Principal Engineers, Cloud Architects, and Technical Co-founders handling high-volume distributed networks.',
+            'cohort' => 'Professional Creators, Influencers, Podcasters, and Digital Talents.',
             'outcomes' => [
-                'Blueprint designs for 99.999% cloud availability pipelines.',
-                'An action plan for global multi-region database replication with zero split-brain errors.',
-                'Latency-optimization frameworks tailored for high-concurrency client architectures.'
+                'A brand deck optimization template.',
+                'A premium sponsorship negotiations checklist.',
+                'Multi-platform content strategy and workflow guides.'
             ]
         ],
         [
-            'slug' => 'keynote-scaling-systems-and-institutional-funding',
-            'category' => 'Speakers',
-            'title' => 'Keynote: Scaling Systems and Institutional Funding',
-            'desc' => 'An open-floor assembly pulling back the curtain on valuation strategies and board allocations.',
+            'slug' => 'women-in-leadership-circle-directing-enterprise-operations',
+            'category' => 'Leadership',
+            'title' => 'Women in Leadership Circle: Directing Enterprise Operations',
+            'desc' => 'A collaborative forum for female business leaders, operational executives, and board candidates.',
             'date' => 'AUG 02, 2026',
             'time' => '10:00 AM - 01:00 PM IST',
             'location' => 'LEELA PALACE',
             'venue_detail' => 'Grand Ballroom, The Leela Palace, Bengaluru',
             'host' => 'Meera Nair',
-            'role' => 'Venture Partner',
-            'host_bio' => 'Meera Nair manages institutional growth allocations and strategic board development, specializing in late-stage series integrations and public market preparation models.',
+            'role' => 'UI/UX Director',
+            'host_bio' => 'Meera leads product design pipelines for top-tier digital portals across APAC.',
             'img' => 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1200',
             'highlights' => [
-                'Understanding late-stage valuation benchmarks',
-                'Preparing corporate systems for institutional capital audits',
-                'Negotiating voting structures and board configurations'
+                'Directing high-stakes enterprise operations',
+                'Structuring boards and advisory circles',
+                'Navigating executive leadership growth paths'
             ],
-            'cohort' => 'Venture-backed Founders, Chief Financial Officers, Growth Equity Operators, and institutional analysts raising Series A/B.',
+            'cohort' => 'Female Executives, VPs, Directors, and Board Members.',
             'outcomes' => [
-                'Valuation audit framework guidelines mapping to current Q3/Q4 board criteria.',
-                'A comprehensive preparation checklist for institutional capital and compliance audits.',
-                'Case teardowns of active shareholder agreements with optimized board allocation terms.'
+                'Custom enterprise management templates.',
+                'Board communication outlines and toolkits.',
+                'A framework manual for leadership development.'
             ]
         ],
         [
-            'slug' => 'saas-architecture-cross-border-frameworks',
-            'category' => 'Roundtables',
-            'title' => 'SaaS Architecture & Cross-Border Frameworks',
-            'desc' => 'Deep technical analysis on running international databases while staying completely compliant.',
+            'slug' => 'mentor-connect-program-engineering-architecture-scales',
+            'category' => 'Mentor',
+            'title' => 'Mentor Connect Program: Engineering & Architecture Scales',
+            'desc' => 'Direct technical mapping alongside elite system architects deploying robust enterprise configurations.',
             'date' => 'AUG 12, 2026',
             'time' => '03:00 PM - 05:30 PM IST',
             'location' => 'VIRTUAL SYMPOSIUM',
-            'venue_detail' => 'Secure Video Conference Link (Shared post-approval)',
+            'venue_detail' => 'Secure Live Stream Link',
             'host' => 'Jyothidev',
             'role' => 'Full Stack Architect',
-            'host_bio' => 'Jyothidev is an open-source contributor and SaaS architecture consultant who has designed compliant multi-region databases for global enterprise entities.',
+            'host_bio' => 'Jyothidev is a SaaS architecture consultant who has designed compliant multi-region databases.',
             'img' => 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1200',
             'highlights' => [
-                'Solving cross-border data residency & replication rules',
-                'Multi-tenant security compliance architectures',
-                'API gateway routing strategies for globally distributed users'
+                'Direct technical mapping with system architects',
+                'Deploying robust enterprise network configurations',
+                'Scaling databases and distributed structures'
             ],
-            'cohort' => 'SaaS Founders, Compliance Directors, Database Engineers, and Security Administrators targeting global markets.',
+            'cohort' => 'Software Engineers, System Architects, and Technical Project Managers.',
             'outcomes' => [
-                'A production-ready blueprint for containerized cross-border data routing.',
-                'Architecture checklist for HIPAA, GDPR, and DPDP localization protocols.',
-                'Shared configurations for automated multi-region backup failover logic.'
+                'Multi-region system failover designs.',
+                'SaaS database compliance checklists.',
+                'Scalable infrastructure database guidelines.'
             ]
         ],
         [
-            'slug' => 'young-chanakya-x-paradigm-shift-high-end-consumer-behavior',
-            'category' => 'Podcasts',
-            'title' => 'Young Chanakya X Paradigm Shift: High-End Consumer Behavior',
-            'desc' => 'Dissecting how premium brands build conversion architectures that generate recurring market demand.',
+            'slug' => 'fireside-chats-building-legacy-brand-narratives',
+            'category' => 'Fireside',
+            'title' => 'Fireside Chats: Building Legacy Brand Narratives',
+            'desc' => 'An intimate, raw conversation with veteran operators detailing brand strategy, pivots, and positioning.',
             'date' => 'AUG 29, 2026',
-            'time' => '05:00 PM - 06:30 PM IST',
+            'time' => '06:00 PM - 07:30 PM IST',
             'location' => 'EPISODE 43',
-            'venue_detail' => 'Premium Recording Studio & Streaming Hub',
+            'venue_detail' => 'Main Lounge Studio',
             'host' => 'Karan Malhotra',
-            'role' => 'Growth Lead',
-            'host_bio' => 'Karan Malhotra drives product growth and behavioral cohort models for premium direct-to-consumer lifestyle brands with multi-million dollar yearly run-rates.',
+            'role' => 'Principal Architect',
+            'host_bio' => 'Karan drives growth models for premium lifestyle brands with multi-million dollar yearly run-rates.',
             'img' => 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1200',
             'highlights' => [
-                'Decoupling brand narrative from pricing constraints',
-                'Retention loops & community building for premium segments',
-                'Funnel architecture adjustments for high-order-value conversions'
+                'Intimate discussions on brand strategy and positioning',
+                'Executing successful pivots in shifting consumer spaces',
+                'Bespoke brand narrative architectures'
             ],
-            'cohort' => 'D2C Founders, E-commerce Growth Managers, Brand Directors, and high-ticket customer success leads.',
+            'cohort' => 'Brand Strategists, Marketing Heads, and Creative Copywriters.',
             'outcomes' => [
-                'A metrics breakdown of premium brand acquisition and retention conversion funnels.',
-                'Tested cohort messaging models tailored for high average-order-value (AOV) consumer cohorts.',
-                'Retention loop strategy blueprints focusing on high-end repeat customer metrics.'
+                'A legacy positioning playbook.',
+                'Target cohort messaging models.',
+                'Brand identity and communication checklists.'
             ]
         ],
         [
-            'slug' => 'minimalist-strategy-the-architecture-of-premium-ux',
-            'category' => 'Speakers',
-            'title' => 'Minimalist Strategy: The Architecture of Premium UX',
-            'desc' => 'Analyzing functional minimalism, elegant typography, and interaction layers used by premium consumer brands.',
+            'slug' => 'ceo-conversations-navigating-cross-border-ventures',
+            'category' => 'CEO',
+            'title' => 'CEO Conversations: Navigating Cross-Border Ventures',
+            'desc' => 'Closed-door insights on international compliance, currency risk, and building global operating structures.',
             'date' => 'SEP 05, 2026',
             'time' => '02:00 PM - 05:00 PM IST',
             'location' => 'ITC GARDENIA',
             'venue_detail' => 'The Chanakya Suite, ITC Gardenia, Bengaluru',
             'host' => 'Ananya Rao',
-            'role' => 'UI/UX Director',
-            'host_bio' => 'Ananya Rao is an award-winning creative designer who leads styling and layout decisions for digital luxury portals across APAC.',
+            'role' => 'Managing Director',
+            'host_bio' => 'Ananya advises Fortune 500 enterprises on operational expansion structures and capital efficiency.',
             'img' => 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200',
             'highlights' => [
-                'Micro-interactions and elegant typography systems',
-                'Visual hierarchy configurations that command attention',
-                'Creating functional interfaces that feel bespoke'
+                'Insights on international corporate compliance',
+                'Managing cross-border currency and asset risks',
+                'Building global operational frameworks'
             ],
-            'cohort' => 'Product Designers, Design Leaders, Creative Directors, and Front-end Engineers focusing on bespoke luxury user journeys.',
+            'cohort' => 'Chief Executive Officers, Directors, and Global Venture Partners.',
             'outcomes' => [
-                'Access to design system design tokens and premium typography layout rulesets.',
-                'Teardowns of successful premium micro-interactions that elevate brand trust.',
-                'A masterclass checklist for reducing cognitive visual load on desktop and mobile viewports.'
+                'Cross-border expansion checklists.',
+                'International compliance audit guidelines.',
+                'A blueprint for global business structures.'
             ]
         ]
     ];
