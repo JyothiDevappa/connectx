@@ -7866,10 +7866,6 @@ iframe {
     width: 70%
 }
 
-.blog-meta-two .post-data .blog-title h4 {
-    font-size: 32px;
-    line-height: 1.281em
-}
 
 .blog-meta-two .post-data .blog-title:hover h4 {
     text-decoration: underline
@@ -7903,7 +7899,8 @@ iframe {
     padding: 0 0 20px 20px;
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    border-radius: 10px !important;
 }
 
 .blog-meta-two .post-img .date {
@@ -7912,7 +7909,8 @@ iframe {
     padding: 0 18px;
     text-transform: uppercase;
     background: #fff;
-    color: #19352d
+    color: #19352d;
+    border-radius: 10px !important;
 }
 
 .blog-meta-two.style-two {

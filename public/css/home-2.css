@@ -889,7 +889,7 @@
 
 /* ── 4b. WHAT DOES "X" MEAN? — Constellation Layout ────── */
 .h2-xmeaning {
-    padding: 120px 0 100px;
+    padding: 50px 0 50px;
     position: relative;
     overflow: hidden;
     background: #ffffff;
@@ -1033,8 +1033,8 @@
 /* Node positions — hexagonal orbit around center */
 .h2-xm__node--explore    { top: 40px;   left: 100px; }
 .h2-xm__node--exchange   { top: 40px;   right: 100px; left: auto; }
-.h2-xm__node--express    { top: 380px;  left: -10px; }
-.h2-xm__node--experience { top: 380px;  right: -10px; left: auto; }
+.h2-xm__node--express    { top: 380px;  left: 20px; }
+.h2-xm__node--experience { top: 380px;  right: 20px; left: auto; }
 .h2-xm__node--expand     { bottom: 20px; left: 150px; top: auto; }
 .h2-xm__node--excel      { bottom: 20px; right: 150px; left: auto; top: auto; }
 

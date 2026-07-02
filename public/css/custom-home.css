@@ -399,7 +399,7 @@ body {
 .about-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* Removed min-height: 90vh so it relies on content height for better proportions */
+  height: 620px;
 }
 
 .about-img-side {
@@ -451,7 +451,7 @@ body {
 }
 
 .about-content {
-  padding: 100px 80px 100px 60px;
+  padding: 60px 80px 60px 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -578,12 +578,16 @@ body {
 
 /* PARTNER */
 .partner-sec {
-  background: var(--cream);
-  padding: 120px 80px;
+  padding: 70px 80px;
 }
 
 .partner-head {
   margin-bottom: 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .partner-grid {
@@ -616,20 +620,11 @@ body {
 .p-card-ov {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(30, 18, 8, 0.95) 0%, transparent 55%);
+  background: linear-gradient(to top, rgba(30, 18, 8, 0.95) 0%, transparent 65%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 26px 22px;
-}
-
-.p-cat {
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--orange);
-  margin-bottom: 6px;
 }
 
 .p-name {
@@ -638,6 +633,23 @@ body {
   color: #fff;
   line-height: 1.2;
   letter-spacing: -0.3px;
+}
+
+.p-desc {
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: 0;
+}
+
+.p-card:hover .p-desc {
+  max-height: 60px;
+  opacity: 1;
+  margin-top: 8px;
 }
 
 /* HOW CONNECTX WORKS */
@@ -662,7 +674,6 @@ body {
   margin-top: 0;
   position: relative;
   padding: 80px 32px;
-  background-color: #faf6f2;
   font-family: var(--font-sans);
   overflow: hidden;
 }
@@ -756,7 +767,7 @@ body {
   z-index: 2;
   transform: translateY(8px);
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  max-width: 85%;
+  max-width: 95%;
 }
 
 .cx-premium-badge {
@@ -1582,8 +1593,8 @@ body {
 
 /* Ways to Get Involved Marquee */
 .ways-to-involve-sec {
-  background-color: #ffffff;
-  padding: 120px 0;
+  background-color: #faf6f2;
+  padding: 60px 0;
   overflow: hidden;
 }
 
@@ -1636,7 +1647,7 @@ body {
   justify-content: center;
   padding: 14px 28px;
   margin: 0 12px;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 500;
   color: var(--primary-dark);
   background: linear-gradient(135deg, rgba(255, 210, 177, 0.35) 0%, rgba(255, 255, 255, 1) 100%);
@@ -1649,9 +1660,8 @@ body {
 
 .marquee-chip:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   border-color: var(--color-orange);
-  color: var(--color-orange);
+  color: var(--primary);
 }
 
 @keyframes scroll-marquee {
@@ -1702,8 +1712,6 @@ body {
 }
 
 .mem-card:hover {
-  border-color: #ffd2b1;
-  background: rgba(255, 210, 177, 0.1);
   transform: translateY(-3px);
   box-shadow: 0 20px 50px rgba(12, 58, 48, 0.1);
 }
@@ -1733,7 +1741,6 @@ body {
 }
 
 .mem-card h3 {
-  font-size: 24px;
   font-weight: 700;
   color: #0c3a30;
   margin-bottom: 16px;
@@ -1811,4 +1818,194 @@ body {
 }
 @media (max-width: 600px) {
   .tier-grid { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================================
+   MEMBERSHIP CARD ACTIONS & HOVER REVEAL
+   ========================================================================== */
+.mem-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  background: #fcfcfc;
+}
+
+.mem-action-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  margin-top: auto;
+  text-decoration: none;
+  border: 1px solid rgba(12, 58, 48, 0.15);
+  border-radius: 100px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  color: #0c3a30;
+  background: #fff;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.mem-action-link .btn-text {
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  transition: max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, margin-right 0.3s ease;
+  color: #0c3a30;
+  font-weight: 700;
+  font-size: 13px;
+  margin-right: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.mem-card.featured .mem-action-link .btn-text {
+  color: #ffffff;
+}
+
+.mem-action-link .round-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0c3a30;
+  background: transparent;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.mem-card.featured .mem-action-link {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.mem-card.featured .mem-action-link .round-btn {
+  color: #ffffff;
+}
+
+.mem-card:hover .mem-action-link {
+  width: auto;
+  padding: 0 6px 0 20px;
+  border-color: #0c3a30;
+  background: #ffffff;
+  color: #0c3a30;
+}
+
+.mem-card:hover .mem-action-link .btn-text {
+  max-width: 150px;
+  opacity: 1;
+  margin-right: 8px;
+  color: #0c3a30;
+}
+
+.mem-card:hover .mem-action-link .round-btn {
+  background: #ffd2b1;
+  color: #0c3a30;
+  transform: rotate(45deg);
+}
+
+.mem-card.featured:hover .mem-action-link {
+  border-color: #ffffff;
+  background: #0c3a30;
+  color: #ffffff;
+}
+
+.mem-card.featured:hover .mem-action-link .btn-text {
+  color: #ffffff;
+}
+
+.mem-card.featured:hover .mem-action-link .round-btn {
+  background: #ffd2b1;
+  color: #0c3a30;
+  transform: rotate(45deg);
+}
+
+/* CTA Card Styles */
+.mem-card.cta-card {
+  background: rgba(12, 58, 48, 0.04);
+  border-style: dashed;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mem-card.cta-card.featured {
+  background: #0c3a30 !important;
+  border-color: #0c3a30 !important;
+  border-style: solid;
+  color: #ffffff !important;
+}
+
+.cta-card-content {
+  margin-bottom: 24px;
+}
+
+.cta-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.cta-title {
+  font-size: 18px !important;
+  color: #0c3a30;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.mem-card.featured .cta-title {
+  color: #ffffff !important;
+}
+
+.cta-desc {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 0;
+}
+
+.mem-card.featured .cta-desc {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.mem-cta-btn {
+  display: inline-block;
+  background: #0c3a30;
+  color: #ffffff !important;
+  border: 1.5px solid #0c3a30;
+  border-radius: 100px;
+  padding: 12px 32px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  margin-top: auto;
+  align-self: center;
+  box-shadow: 0 4px 10px rgba(12, 58, 48, 0.1);
+}
+
+.mem-cta-btn:hover {
+  background: transparent;
+  color: #0c3a30 !important;
+  border-color: #0c3a30;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(12, 58, 48, 0.15);
+}
+
+.mem-card.featured .mem-cta-btn {
+  background: #ffd2b1;
+  color: #0c3a30 !important;
+  border-color: #ffd2b1;
+}
+
+.mem-card.featured .mem-cta-btn:hover {
+  background: transparent;
+  color: #ffd2b1 !important;
+  border-color: #ffd2b1;
 }
