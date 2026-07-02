@@ -220,11 +220,11 @@ class ApplicationController extends Controller
             if ($request->ajax()) {
                 return response()->json([
                     'type'    => 'success',
-                    'message' => 'Your RSVP application has been submitted successfully for verification!'
+                    'message' => 'Your registration has been received successfully. A member of our team will contact you soon with the event schedule and further details.'
                 ]);
             }
 
-            return back()->with('success', 'Your RSVP application has been submitted successfully for verification!');
+            return back()->with('success', 'Your registration has been received successfully. A member of our team will contact you soon with the event schedule and further details.');
         } catch (\Exception $e) {
             logger()->error('SMTP Event RSVP Application failure: ' . $e->getMessage());
 
