@@ -297,25 +297,25 @@ $seo = [
                 </div>
 
                 <h1 class="trust-headline mb-4">The verified nexus of market leadership.</h1>
-                <p class="text-white opacity-75 fs-5 mb-4" style="max-width: 600px; line-height: 1.6;">
+                <p class="text-white fs-5 mb-4" style="max-width: 600px; line-height: 1.6;">
                     Young Chanakya X orchestrates premium structural access to vetted visionaries, enterprise owners, and specialized policy framework architects globally.
                 </p>
 
-                <ul class="style-none mt-4 text-white opacity-75" style="list-style: none; padding: 0;">
+                <ul class="style-none mt-4 text-white" style="list-style: none; padding: 0;">
                     <li class="mb-3 d-flex align-items-center" style="font-size: 0.95rem; line-height: 1.4;">
-                        <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #0c3a30; color: #ffffff; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.15);">
+                        <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #ffd2b1; color: #090d16; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.15);">
                             <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
                         </span>
                         Strategic Entrepreneurial Guidance & Growth Support
                     </li>
                     <li class="mb-3 d-flex align-items-center" style="font-size: 0.95rem; line-height: 1.4;">
-                        <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #0c3a30; color: #ffffff; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.15);">
+                        <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #ffd2b1; color: #090d16; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.15);">
                             <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
                         </span>
                         Networking with Industry Experts & Global Leaders
                     </li>
                     <li class="mb-3 d-flex align-items-center" style="font-size: 0.95rem; line-height: 1.4;">
-                        <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #0c3a30; color: #ffffff; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.15);">
+                        <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #ffd2b1; color: #090d16; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.15);">
                             <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
                         </span>
                         Access to attend premium startup & leadership events

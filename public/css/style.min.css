@@ -8680,7 +8680,7 @@ iframe {
 }
 
 .footer-two.no-bg {
-    background: #ffd2b1;
+    background: linear-gradient(135deg, #ffeada 0%, #ffffff 50%, #dfebdd 100%);
     padding: 0;
     position: statics
 }

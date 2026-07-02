@@ -1,102 +1,127 @@
-<section class="image-carousel-section pt-80 pb-80" style="background-color: #f9f9f9; overflow: hidden;">
-    <div class="container-fluid px-4 px-lg-5" style="max-width: 1700px; margin: 0 auto;">
-        <div class="section-head text-center mb-50">
-            <div class="eyebrow rv" style="color: #0c3a30;">Gallery</div>
-            <h2 class="sec-title rv" style="color: #0c3a30;">Experience The Ecosystem</h2>
-        </div>
-
-        <div class="slick-image-carousel">
-            <div class="carousel-item-wrap px-3">
-                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop" alt="Event" style="width: 100%; border-radius: 20px; aspect-ratio: 4/3; object-fit: cover;">
+<section class="connectx-gallery-section">
+    <div class="connectx-gallery-container">
+        <div class="connectx-gallery-track">
+            <!-- Set 1 -->
+            <div class="connectx-gallery-content">
+                <img src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&q=80&w=800" class="gallery-img wide" alt="Corporate Collaboration">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600" class="gallery-img narrow" alt="Professional Teamwork">
+                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800" class="gallery-img wide" alt="Business Conference">
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600" class="gallery-img narrow" alt="Startup Innovation">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" class="gallery-img wide" alt="Creator Ecosystem">
+                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=600" class="gallery-img narrow" alt="Strategic Partnership">
             </div>
-            <div class="carousel-item-wrap px-3">
-                <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop" alt="Networking" style="width: 100%; border-radius: 20px; aspect-ratio: 4/3; object-fit: cover;">
-            </div>
-            <div class="carousel-item-wrap px-3">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop" alt="Discussion" style="width: 100%; border-radius: 20px; aspect-ratio: 4/3; object-fit: cover;">
-            </div>
-            <div class="carousel-item-wrap px-3">
-                <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=2070&auto=format&fit=crop" alt="Meetup" style="width: 100%; border-radius: 20px; aspect-ratio: 4/3; object-fit: cover;">
-            </div>
-            <div class="carousel-item-wrap px-3">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" alt="Collaboration" style="width: 100%; border-radius: 20px; aspect-ratio: 4/3; object-fit: cover;">
-            </div>
-            <div class="carousel-item-wrap px-3">
-                <img src="https://images.unsplash.com/photo-1558403194-611308249627?q=80&w=2070&auto=format&fit=crop" alt="Stage" style="width: 100%; border-radius: 20px; aspect-ratio: 4/3; object-fit: cover;">
-            </div>
-            <div class="carousel-item-wrap px-3">
-                <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2070&auto=format&fit=crop" alt="Audience" style="width: 100%; border-radius: 20px; aspect-ratio: 4/3; object-fit: cover;">
+            <!-- Set 2 (Duplicate for infinite looping) -->
+            <div class="connectx-gallery-content" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&q=80&w=800" class="gallery-img wide" alt="Corporate Collaboration">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600" class="gallery-img narrow" alt="Professional Teamwork">
+                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800" class="gallery-img wide" alt="Business Conference">
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600" class="gallery-img narrow" alt="Startup Innovation">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" class="gallery-img wide" alt="Creator Ecosystem">
+                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=600" class="gallery-img narrow" alt="Strategic Partnership">
             </div>
         </div>
     </div>
 </section>
 
 @push('styles')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 <style>
-    .slick-image-carousel {
-        padding-bottom: 60px;
-        margin-bottom: 20px;
+    .connectx-gallery-section {
+        padding: 60px 0;
+        background-color: #ffffff;
+        overflow: hidden;
+        width: 100%;
     }
-    .slick-image-carousel .slick-track {
+
+    .connectx-gallery-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .connectx-gallery-track {
+        display: flex;
+        width: max-content;
+        animation: connectx-marquee-scroll 35s linear infinite;
+    }
+
+    .connectx-gallery-track:hover {
+        animation-play-state: paused;
+    }
+
+    .connectx-gallery-content {
         display: flex;
         align-items: center;
+        gap: 20px;
+        padding-right: 20px; /* Must equal gap to prevent loop jump */
     }
-    .slick-image-carousel .slick-dots {
-        bottom: 0px !important;
+
+    .gallery-img {
+        height: 280px;
+        object-fit: cover;
+        border-radius: 16px;
+        display: block;
+        user-select: none;
+        -webkit-user-drag: none;
+        transition: filter 0.3s ease;
     }
-    .slick-image-carousel .slick-dots li button:before {
-        font-size: 12px;
+
+    /* Alternating widths */
+    .gallery-img.wide {
+        width: 420px; /* 3:2 ratio */
     }
-    .carousel-item-wrap img {
-        transition: transform 0.3s ease;
+
+    .gallery-img.narrow {
+        width: 280px; /* 1:1 ratio */
     }
-    .carousel-item-wrap:hover img {
-        transform: scale(1.03);
+
+    @keyframes connectx-marquee-scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+        .connectx-gallery-section {
+            padding: 40px 0;
+        }
+        .gallery-img {
+            height: 200px;
+            border-radius: 12px;
+        }
+        .gallery-img.wide {
+            width: 300px;
+        }
+        .gallery-img.narrow {
+            width: 200px;
+        }
+        .connectx-gallery-content {
+            gap: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .connectx-gallery-section {
+            padding: 30px 0;
+        }
+        .gallery-img {
+            height: 130px;
+            border-radius: 8px;
+        }
+        .gallery-img.wide {
+            width: 195px;
+        }
+        .gallery-img.narrow {
+            width: 130px;
+        }
+        .connectx-gallery-content {
+            gap: 10px;
+            padding-right: 10px;
+        }
     }
 </style>
-@endpush
-
-@push('scripts')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $('.slick-image-carousel').slick({
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            arrows: false,
-            responsive: [
-                {
-                    breakpoint: 1400,
-                    settings: {
-                        slidesToShow: 4
-                    }
-                },
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
-    });
-</script>
 @endpush

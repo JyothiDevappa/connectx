@@ -297,68 +297,242 @@ $seo = [
     </div>
 </section>
 
+<!-- EXPERIENCES -->
+<section class="cx-premium-viewport">
+    <div class="cx-custom-cursor"></div>
+
+    <div class="cx-wrapper">
+        <div class="cx-editorial-header">
+            <div class="eyebrow rv">Young Chanakya X Experiences</div>
+            <h2 class="cx-main-heading">Experiences That Create Influence</h2>
+            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px;">From high-quality recording lounges to city meetups, we offer unmatched offline and online opportunities to scale your reach.</p>
+        </div>
+
+        <div class="cx-viewport-grid">
+
+            <div class="cx-premium-card cx-col-wide">
+                <div class="cx-img-container">
+                    <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=1000" alt="Podcasts" class="cx-surface-img">
+                    <div class="cx-surface-overlay"></div>
+                </div>
+                <div class="cx-premium-body">
+                    <span class="cx-premium-badge">PODCASTS</span>
+                    <h3 class="cx-premium-title">Podcasts</h3>
+                    <p class="cx-premium-text">Conversations with founders, CEOs, creators, and innovators. Real experiences. Practical lessons. Shared on record.</p>
+                </div>
+                <div class="cx-arrow-token">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="cx-premium-card cx-col-square">
+                <div class="cx-img-container">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=600" alt="Stories" class="cx-surface-img">
+                    <div class="cx-surface-overlay"></div>
+                </div>
+                <div class="cx-premium-body">
+                    <span class="cx-premium-badge">STORIES</span>
+                    <h3 class="cx-premium-title">Story Sharing</h3>
+                    <p class="cx-premium-text">Every journey matters. Publish startup stories, career experiences, and personal transformations.</p>
+                </div>
+                <div class="cx-arrow-token">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="cx-premium-card cx-col-square">
+                <div class="cx-img-container">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600" alt="Network" class="cx-surface-img">
+                    <div class="cx-surface-overlay"></div>
+                </div>
+                <div class="cx-premium-body">
+                    <span class="cx-premium-badge">NETWORK</span>
+                    <h3 class="cx-premium-title">Networking</h3>
+                    <p class="cx-premium-text">Relationships across industries. Students, professionals, investors, mentors — all in one space.</p>
+                </div>
+                <div class="cx-arrow-token">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="cx-premium-card cx-col-square">
+                <div class="cx-img-container">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=600" alt="Mentorship" class="cx-surface-img">
+                    <div class="cx-surface-overlay"></div>
+                </div>
+                <div class="cx-premium-body">
+                    <span class="cx-premium-badge">MENTORSHIP</span>
+                    <h3 class="cx-premium-title">Mentorship</h3>
+                    <p class="cx-premium-text">The right conversation changes everything. Connect with mentors who've navigated the path you're on.</p>
+                </div>
+                <div class="cx-arrow-token">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="cx-premium-card cx-col-square">
+                <div class="cx-img-container">
+                    <img src="https://images.unsplash.com/photo-1610116306796-6fea9f4fae38?auto=format&fit=crop&q=80&w=600" alt="Live Events" class="cx-surface-img">
+                    <div class="cx-surface-overlay"></div>
+                </div>
+                <div class="cx-premium-body">
+                    <span class="cx-premium-badge">LIVE EVENTS</span>
+                    <h3 class="cx-premium-title">Live Experiences</h3>
+                    <p class="cx-premium-text">Where ideas become action. Webinars, summits, roundtables, fireside chats, and meetups.</p>
+                </div>
+                <div class="cx-arrow-token">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="cx-premium-card cx-col-wide">
+                <div class="cx-img-container">
+                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1000" alt="Collaborate" class="cx-surface-img">
+                    <div class="cx-surface-overlay"></div>
+                </div>
+                <div class="cx-premium-body">
+                    <span class="cx-premium-badge">COLLABORATE</span>
+                    <h3 class="cx-premium-title">Collaboration</h3>
+                    <p class="cx-premium-text">Build with people who share your vision. Partnerships for startups, research, content, and innovation.</p>
+                </div>
+                <div class="cx-arrow-token">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- WAYS TO GET INVOLVED -->
+<section class="ways-to-involve-sec">
+    <div class="container">
+        <div class="section-head text-center" style="margin-bottom: 50px;">
+            <div class="eyebrow rv">Ways to Engage</div>
+            <h2 class="sec-title rv" style="color: var(--primary-dark);">Be Part of the Experience</h2>
+            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">Explore a range of initiatives designed to connect you with industry leaders, ideas, and opportunities.</p>
+        </div>
+    </div>
+
+    <div class="marquee-container" style="padding-bottom: 0;">
+        <div class="marquee-track">
+            @php
+                $marqueeRow1 = [
+                    'Founder Spotlight', 'CEO Conversations', 'Startup Stories', 'Community Podcasts', 
+                    'Student Leadership Series', 'Women in Leadership', 'Creator Sessions'
+                ];
+                $marqueeRow2 = [
+                    'Industry Roundtables', 'Campus Chapters', 'Mentor Connect', 'Innovation Talks', 
+                    'Networking Meetups', 'Workshops', 'Fireside Chats', 'Leadership Summit'
+                ];
+            @endphp
+            @foreach($marqueeRow1 as $item)
+                <div class="marquee-chip">{{ $item }}</div>
+            @endforeach
+            @foreach($marqueeRow1 as $item)
+                <div class="marquee-chip">{{ $item }}</div>
+            @endforeach
+        </div>
+    </div>
+    
+    <div class="marquee-container" style="padding-top: 15px;">
+        <div class="marquee-track marquee-track-reverse">
+            @foreach($marqueeRow2 as $item)
+                <div class="marquee-chip">{{ $item }}</div>
+            @endforeach
+            @foreach($marqueeRow2 as $item)
+                <div class="marquee-chip">{{ $item }}</div>
+            @endforeach
+        </div>
+    </div>
+</section>
 
 <!-- WHO CAN PARTNER -->
-<section class="partner-sec" id="partner">
-    <div class="partner-head">
-        <div class="eyebrow rv">Who Can Partner With Us</div>
-        <h2 class="sec-title rv">Built for Modern<br>Ecosystem Collaborations</h2>
-        <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px;">We connect diverse creators, brands, and ecosystem partners to unlock shared visibility, audience reach, and growth.</p>
+<style>
+    .p-desc {
+        display: none;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.85);
+        margin-top: 8px;
+        line-height: 1.45;
+        font-weight: 500;
+    }
+    .p-card:hover .p-desc {
+        display: block;
+    }
+</style>
+<section class="partner-sec" id="partner" style="background: #ffffff !important;">
+    <div class="partner-head text-center d-flex flex-column align-items-center">
+        <div class="eyebrow rv mx-auto">Who Can Partner With Us</div>
+        <h2 class="sec-title rv text-center">Built for Modern<br>Ecosystem Collaborations</h2>
+        <p class="sec-desc rv text-center" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">We connect diverse creators, brands, and ecosystem partners to unlock shared visibility, audience reach, and growth.</p>
     </div>
     <div class="partner-grid">
         <div class="p-card rv" style="transition-delay:0s">
             <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80" alt="Business and Startup Voices — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
-                <div class="p-cat">01</div>
                 <div class="p-name">Business & Startup Voices</div>
+                <p class="p-desc">Empower your venture with strategic guidance, resources, and networking opportunities.</p>
             </div>
             <div class="p-arrow">↗</div>
         </div>
         <div class="p-card rv" style="transition-delay:0.07s">
             <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" alt="Lifestyle and Wellness Creators — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
-                <div class="p-cat">02</div>
                 <div class="p-name">Lifestyle & Wellness</div>
+                <p class="p-desc">Share insights on active living, mindfulness, and holistic wellness with our community.</p>
             </div>
             <div class="p-arrow">↗</div>
         </div>
         <div class="p-card rv" style="transition-delay:0.14s">
             <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&q=80" alt="Sports and Adventure Creators — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
-                <div class="p-cat">03</div>
                 <div class="p-name">Sports & Adventure</div>
+                <p class="p-desc">Connect with athletic brands and amplify high-energy outdoor narratives globally.</p>
             </div>
             <div class="p-arrow">↗</div>
         </div>
         <div class="p-card rv" style="transition-delay:0.21s">
             <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80" alt="Digital Media Creators — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
-                <div class="p-cat">04</div>
                 <div class="p-name">Digital Media Creators</div>
+                <p class="p-desc">Collaborate on digital storytelling formats and showcase your media creations.</p>
             </div>
             <div class="p-arrow">↗</div>
         </div>
         <div class="p-card rv" style="transition-delay:0.28s">
             <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=600&q=80" alt="News and Commentary Creators — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
-                <div class="p-cat">05</div>
                 <div class="p-name">News & Commentary</div>
+                <p class="p-desc">Lead meaningful discussions on critical global events and current economic affairs.</p>
             </div>
             <div class="p-arrow">↗</div>
         </div>
         <div class="p-card rv" style="transition-delay:0.35s">
             <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&q=80" alt="Motivation and Storytelling Creators — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
-                <div class="p-cat">06</div>
                 <div class="p-name">Motivation & Storytelling</div>
+                <p class="p-desc">Inspire target audiences with authentic personal journeys and motivational speeches.</p>
             </div>
             <div class="p-arrow">↗</div>
         </div>
         <div class="p-card rv" style="transition-delay:0.42s">
             <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Tech and Innovation Creators — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
-                <div class="p-cat">07</div>
                 <div class="p-name">Tech & Innovation</div>
+                <p class="p-desc">Introduce emerging technologies and share breakthrough software development projects.</p>
             </div>
             <div class="p-arrow">↗</div>
         </div>
@@ -366,8 +540,8 @@ $seo = [
         <div class="p-card rv" style="transition-delay:0.49s">
             <img src="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=600&q=80" alt="Regional and Cultural Creators — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
-                <div class="p-cat">08</div>
                 <div class="p-name">Regional & Cultural Creators</div>
+                <p class="p-desc">Celebrate diverse cultural heritage and engage local language communities.</p>
             </div>
             <div class="p-arrow">↗</div>
         </div>
@@ -376,8 +550,8 @@ $seo = [
         <div class="p-card rv" style="transition-delay:0.56s">
             <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Education and Learning Creators — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
-                <div class="p-cat">09</div>
                 <div class="p-name">Education & Learning</div>
+                <p class="p-desc">Promote continuous learning, career readiness resources, and academic mentorship.</p>
             </div>
             <div class="p-arrow">↗</div>
         </div>
@@ -385,8 +559,8 @@ $seo = [
         <div class="p-card rv" style="transition-delay:0.63s">
             <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80" alt="Entertainment">
             <div class="p-card-ov">
-                <div class="p-cat">10</div>
                 <div class="p-name">Entertainment & Pop Culture</div>
+                <p class="p-desc">Amplify pop-culture trends, gaming content, and visual media collaborations.</p>
             </div>
             <div class="p-arrow">↗</div>
         </div>
@@ -394,262 +568,6 @@ $seo = [
 
     </div>
 </section>
-
-
-{{-- <!-- WHY YOUNG CHANAKYA X -->
-<style>
-    .why-ycx {
-        padding: 120px 0;
-        background: var(--primary-dark);
-        color: var(--white);
-        position: relative;
-        overflow: hidden;
-    }
-    .why-ycx::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(circle at center, rgba(255,210,177,0.03) 0%, transparent 70%);
-        pointer-events: none;
-    }
-    .why-header {
-        text-align: center;
-        margin-bottom: 64px;
-        position: relative;
-        z-index: 2;
-    }
-    .why-header .eyebrow {
-        color: var(--accent) !important;
-    }
-    .why-header .eyebrow::before {
-        background: var(--accent) !important;
-    }
-    .why-heading {
-        font-size: clamp(32px, 4vw, 48px);
-        font-weight: 900;
-        letter-spacing: -1px;
-        margin-bottom: 24px;
-        color: var(--white);
-    }
-    .why-heading em {
-        color: var(--accent);
-        font-style: italic;
-    }
-    .why-desc {
-        font-size: 18px;
-        line-height: 1.6;
-        color: rgba(255, 255, 255, 0.8);
-        max-width: 680px;
-        margin: 0 auto;
-    }
-    
-    .why-grid-container {
-        width: 100%;
-        margin: 0 auto 64px;
-        position: relative;
-        z-index: 2;
-        text-align: center;
-    }
-    
-    .why-brings-text {
-        font-size: 14px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: var(--accent);
-        margin-bottom: 40px;
-    }
-
-    .why-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-    }
-
-    .why-card {
-        position: relative;
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.06);
-        border-radius: 20px;
-        min-height: 280px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-start;
-        padding: 30px 24px;
-        text-align: left;
-        overflow: hidden;
-        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .why-card:hover {
-        transform: translateY(-8px);
-        border-color: rgba(255, 210, 177, 0.3);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    }
-
-    .why-card-bg {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 1;
-        transition: transform 0.6s ease;
-    }
-
-    .why-card:hover .why-card-bg {
-        transform: scale(1.05);
-    }
-
-    .why-card-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to top, rgba(7, 31, 26, 0.9) 0%, rgba(7, 31, 26, 0.2) 100%);
-        z-index: 2;
-        transition: background 0.4s ease;
-    }
-    
-    .why-card:hover .why-card-overlay {
-        background: linear-gradient(to top, rgba(7, 31, 26, 0.95) 0%, rgba(255, 210, 177, 0.1) 100%);
-    }
-
-    .why-title {
-        position: relative;
-        z-index: 3;
-        font-size: 18px;
-        font-weight: 700;
-        color: var(--white);
-        margin: 0;
-        letter-spacing: 0.5px;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .why-title i {
-        color: var(--accent);
-        font-size: 20px;
-    }
-
-    .why-footer {
-        text-align: center;
-        max-width: 700px;
-        margin: 0 auto;
-        position: relative;
-        z-index: 2;
-        padding-top: 40px;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    
-    .why-footer-text {
-        font-size: 18px;
-        line-height: 1.7;
-        color: rgba(255, 255, 255, 0.7);
-    }
-    .why-footer-text strong {
-        color: var(--white);
-        font-weight: 600;
-    }
-
-    @media (max-width: 991px) {
-        .why-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .why-ycx {
-            padding: 80px 0;
-        }
-    }
-    
-    @media (max-width: 767px) {
-        .why-grid {
-            grid-template-columns: 1fr;
-            gap: 16px;
-        }
-        .why-heading {
-            font-size: 28px;
-        }
-        .why-desc {
-            font-size: 16px;
-        }
-        .why-card {
-            min-height: 160px;
-            padding: 24px;
-        }
-    }
-</style>
-
-<section class="why-ycx" id="why-ycx">
-    <div class="container">
-        
-        <div class="why-header">
-            <div class="eyebrow rv">Purpose</div>
-            <h2 class="why-heading rv">Why <em>Young Chanakya X?</em></h2>
-            <p class="why-desc rv">
-                The world has information everywhere, but meaningful connections are rare.
-            </p>
-        </div>
-
-        <div class="why-grid-container">
-            <div class="why-brings-text rv">Young Chanakya X brings together</div>
-            
-            <div class="why-grid">
-                <div class="why-card rv" style="transition-delay: 0.0s;">
-                    <img class="why-card-bg" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80" alt="Leadership">
-                    <div class="why-card-overlay"></div>
-                    <h3 class="why-title"><i class="bi bi-flag"></i> Leadership</h3>
-                </div>
-                <div class="why-card rv" style="transition-delay: 0.1s;">
-                    <img class="why-card-bg" src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&q=80" alt="Storytelling">
-                    <div class="why-card-overlay"></div>
-                    <h3 class="why-title"><i class="bi bi-chat-quote"></i> Storytelling</h3>
-                </div>
-                <div class="why-card rv" style="transition-delay: 0.2s;">
-                    <img class="why-card-bg" src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=600&q=80" alt="Podcasts">
-                    <div class="why-card-overlay"></div>
-                    <h3 class="why-title"><i class="bi bi-mic"></i> Podcasts</h3>
-                </div>
-                <div class="why-card rv" style="transition-delay: 0.3s;">
-                    <img class="why-card-bg" src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600&q=80" alt="Community">
-                    <div class="why-card-overlay"></div>
-                    <h3 class="why-title"><i class="bi bi-people"></i> Community</h3>
-                </div>
-                <div class="why-card rv" style="transition-delay: 0.4s;">
-                    <img class="why-card-bg" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80" alt="Networking">
-                    <div class="why-card-overlay"></div>
-                    <h3 class="why-title"><i class="bi bi-diagram-3"></i> Networking</h3>
-                </div>
-                <div class="why-card rv" style="transition-delay: 0.5s;">
-                    <img class="why-card-bg" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80" alt="Mentorship">
-                    <div class="why-card-overlay"></div>
-                    <h3 class="why-title"><i class="bi bi-compass"></i> Mentorship</h3>
-                </div>
-                <div class="why-card rv" style="transition-delay: 0.6s;">
-                    <img class="why-card-bg" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Learning">
-                    <div class="why-card-overlay"></div>
-                    <h3 class="why-title"><i class="bi bi-lightbulb"></i> Learning</h3>
-                </div>
-                <div class="why-card rv" style="transition-delay: 0.7s;">
-                    <img class="why-card-bg" src="https://images.unsplash.com/photo-1522071901873-411886a10004?w=600&q=80" alt="Collaboration">
-                    <div class="why-card-overlay"></div>
-                    <h3 class="why-title"><i class="bi bi-intersect"></i> Collaboration</h3>
-                </div>
-                <div class="why-card rv" style="transition-delay: 0.8s;">
-                    <img class="why-card-bg" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Events">
-                    <div class="why-card-overlay"></div>
-                    <h3 class="why-title"><i class="bi bi-calendar-event"></i> Events</h3>
-                </div>
-            </div>
-        </div>
-
-        <div class="why-footer rv" style="transition-delay: 0.4s;">
-            <p class="why-footer-text">
-                ...into one integrated ecosystem designed to support <strong>long-term personal and professional growth.</strong>
-            </p>
-        </div>
-
-    </div>
-</section> --}}
 
 <!-- HOW CONNECTX WORKS -->
 
@@ -1013,171 +931,170 @@ $seo = [
     </div>
 </div>
 
-
-<style>
-</style>
-
-
-
-<!-- EXPERIENCES -->
-<section class="cx-premium-viewport">
-    <div class="cx-custom-cursor"></div>
-
-    <div class="cx-wrapper">
-        <div class="cx-editorial-header">
-            <div class="eyebrow rv">Young Chanakya X Experiences</div>
-            <h2 class="cx-main-heading">Experiences That Create Influence</h2>
-            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px;">From high-quality recording lounges to city meetups, we offer unmatched offline and online opportunities to scale your reach.</p>
-        </div>
-
-        <div class="cx-viewport-grid">
-
-            <div class="cx-premium-card cx-col-wide">
-                <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=1000" alt="Podcasts" class="cx-surface-img">
-                    <div class="cx-surface-overlay"></div>
-                </div>
-                <div class="cx-premium-body">
-                    <span class="cx-premium-badge">PODCASTS</span>
-                    <h3 class="cx-premium-title">Podcasts</h3>
-                    <p class="cx-premium-text">Conversations with founders, CEOs, creators, and innovators. Real experiences. Practical lessons. Shared on record.</p>
-                </div>
-                <div class="cx-arrow-token">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                </div>
-            </div>
-
-            <div class="cx-premium-card cx-col-square">
-                <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=600" alt="Stories" class="cx-surface-img">
-                    <div class="cx-surface-overlay"></div>
-                </div>
-                <div class="cx-premium-body">
-                    <span class="cx-premium-badge">STORIES</span>
-                    <h3 class="cx-premium-title">Story Sharing</h3>
-                    <p class="cx-premium-text">Every journey matters. Publish startup stories, career experiences, and personal transformations.</p>
-                </div>
-                <div class="cx-arrow-token">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                </div>
-            </div>
-
-            <div class="cx-premium-card cx-col-square">
-                <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600" alt="Network" class="cx-surface-img">
-                    <div class="cx-surface-overlay"></div>
-                </div>
-                <div class="cx-premium-body">
-                    <span class="cx-premium-badge">NETWORK</span>
-                    <h3 class="cx-premium-title">Networking</h3>
-                    <p class="cx-premium-text">Relationships across industries. Students, professionals, investors, mentors — all in one space.</p>
-                </div>
-                <div class="cx-arrow-token">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                </div>
-            </div>
-
-            <div class="cx-premium-card cx-col-square">
-                <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=600" alt="Mentorship" class="cx-surface-img">
-                    <div class="cx-surface-overlay"></div>
-                </div>
-                <div class="cx-premium-body">
-                    <span class="cx-premium-badge">MENTORSHIP</span>
-                    <h3 class="cx-premium-title">Mentorship</h3>
-                    <p class="cx-premium-text">The right conversation changes everything. Connect with mentors who've navigated the path you're on.</p>
-                </div>
-                <div class="cx-arrow-token">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                </div>
-            </div>
-
-            <div class="cx-premium-card cx-col-square">
-                <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1610116306796-6fea9f4fae38?auto=format&fit=crop&q=80&w=600" alt="Live Events" class="cx-surface-img">
-                    <div class="cx-surface-overlay"></div>
-                </div>
-                <div class="cx-premium-body">
-                    <span class="cx-premium-badge">LIVE EVENTS</span>
-                    <h3 class="cx-premium-title">Live Experiences</h3>
-                    <p class="cx-premium-text">Where ideas become action. Webinars, summits, roundtables, fireside chats, and meetups.</p>
-                </div>
-                <div class="cx-arrow-token">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                </div>
-            </div>
-
-            <div class="cx-premium-card cx-col-wide">
-                <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1000" alt="Collaborate" class="cx-surface-img">
-                    <div class="cx-surface-overlay"></div>
-                </div>
-                <div class="cx-premium-body">
-                    <span class="cx-premium-badge">COLLABORATE</span>
-                    <h3 class="cx-premium-title">Collaboration</h3>
-                    <p class="cx-premium-text">Build with people who share your vision. Partnerships for startups, research, content, and innovation.</p>
-                </div>
-                <div class="cx-arrow-token">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                </div>
-            </div>
-
-        </div>
+<section class="membership-section position-relative mt-150 lg-mt-80 mb-150 lg-mb-80" id="membership">
+  <div class="container">
+    <div class="section-head text-center" style="margin-bottom: 50px;">
+        <div class="eyebrow rv">Membership</div>
+        <h2 class="sec-title rv" style="color: #0c3a30;">Find your role in the ecosystem.</h2>
     </div>
+    <div class="mem-grid">
+      <div class="mem-card">
+        <div class="mem-role">Community Member</div>
+        <h3>Member</h3>
+        <p class="mem-desc">Access stories, events, discussions, and networking across the platform.</p>
+      </div>
+      <div class="mem-card featured">
+        <div class="mem-role">Knowledge Leader</div>
+        <h3>Creator / Mentor</h3>
+        <p class="mem-desc">Share articles, stories, and thought leadership — or guide aspiring professionals as a mentor.</p>
+        <span class="mem-badge">Most Popular</span>
+      </div>
+      <div class="mem-card">
+        <div class="mem-role">Platform Voice</div>
+        <h3>Speaker</h3>
+        <p class="mem-desc">Participate in podcasts, events, and educational sessions to amplify your expertise.</p>
+      </div>
+      <div class="mem-card">
+        <div class="mem-role">Community Leader</div>
+        <h3>Ambassador</h3>
+        <p class="mem-desc">Represent Young Chanakya X within campuses or regional communities.</p>
+      </div>
+      <div class="mem-card">
+        <div class="mem-role">Organizational</div>
+        <h3>Partner</h3>
+        <p class="mem-desc">Collaborate through events, programs, sponsorships, and strategic initiatives.</p>
+      </div>
+      <div class="mem-card" style="background:rgba(12,58,48,0.04); border-style:dashed; display:flex; align-items:center; justify-content:center; text-align:center;">
+        <div>
+          <div style="font-size:32px; margin-bottom:12px;">✨</div>
+          <div style="font-size:18px; color:#0c3a30; font-weight:700; margin-bottom:8px;">Not sure where you fit?</div>
+          <div style="font-size:14px; color:#6b7280;">Join and discover your role within the community.</div>
+          <a href="#" class="btn-primary" style="margin-top:20px; display:inline-block; font-size:13px; padding:10px 24px;">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- WAYS TO GET INVOLVED -->
-<section class="ways-to-involve-sec">
+<!-- THE DNA OF CONNECTX -->
+<section class="h2-section h2-section--white h2-xmeaning" id="what-x-means">
     <div class="container">
-        <div class="section-head text-center" style="margin-bottom: 50px;">
-            <div class="eyebrow rv">Ways to Engage</div>
-            <h2 class="sec-title rv" style="color: var(--primary-dark);">Be Part of the Experience</h2>
-            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">Explore a range of initiatives designed to connect you with industry leaders, ideas, and opportunities.</p>
-        </div>
-    </div>
 
-    <div class="marquee-container" style="padding-bottom: 0;">
-        <div class="marquee-track">
-            @php
-                $marqueeRow1 = [
-                    'Founder Spotlight', 'CEO Conversations', 'Startup Stories', 'Community Podcasts', 
-                    'Student Leadership Series', 'Women in Leadership', 'Creator Sessions'
-                ];
-                $marqueeRow2 = [
-                    'Industry Roundtables', 'Campus Chapters', 'Mentor Connect', 'Innovation Talks', 
-                    'Networking Meetups', 'Workshops', 'Fireside Chats', 'Leadership Summit'
-                ];
-            @endphp
-            @foreach($marqueeRow1 as $item)
-                <div class="marquee-chip">{{ $item }}</div>
-            @endforeach
-            @foreach($marqueeRow1 as $item)
-                <div class="marquee-chip">{{ $item }}</div>
-            @endforeach
+        {{-- Section Header --}}
+        <div class="h2-section-header">
+            <div class="h2-eyebrow rv">The DNA of Young Chanakya X</div>
+            <h2 class="h2-heading rv">What Does "<em>X</em>" Mean?</h2>
+            <p class="h2-desc h2-desc--center rv">
+                The letter X represents the point where ideas, people, opportunities, and experiences intersect — creating something greater than the sum of its parts.
+            </p>
         </div>
-    </div>
-    
-    <div class="marquee-container" style="padding-top: 15px;">
-        <div class="marquee-track marquee-track-reverse">
-            @foreach($marqueeRow2 as $item)
-                <div class="marquee-chip">{{ $item }}</div>
-            @endforeach
-            @foreach($marqueeRow2 as $item)
-                <div class="marquee-chip">{{ $item }}</div>
-            @endforeach
+
+        {{-- Constellation Layout --}}
+        <div class="h2-xm__constellation rv">
+
+            {{-- Central X Hub --}}
+            <div class="h2-xm__hub">
+                <div class="h2-xm__hub-ring h2-xm__hub-ring--1"></div>
+                <div class="h2-xm__hub-ring h2-xm__hub-ring--2"></div>
+                <div class="h2-xm__hub-ring h2-xm__hub-ring--3"></div>
+                <div class="h2-xm__hub-letter">X</div>
+                <div class="h2-xm__hub-tagline">Where Everything Intersects</div>
+            </div>
+
+            {{-- Connection Lines (SVG) — x2/y2 targets the center of each node's icon circle --}}
+            <svg class="h2-xm__lines" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                    <marker id="icon-dot-default" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                        <circle cx="3" cy="3" r="2.5" fill="rgba(12,58,48,0.25)"/>
+                    </marker>
+                    <marker id="icon-dot-hover" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                        <circle cx="3" cy="3" r="2.5" fill="rgba(255,210,177,0.9)"/>
+                    </marker>
+                </defs>
+                {{-- explore: node top:40 left:100, icon center = (100+110, 40+34) = (210,74) scaled ~(221,78) --}}
+                <line class="h2-xm__line h2-xm__line--explore"    x1="600" y1="450" x2="221" y2="78"  stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- exchange: node top:40 right:100 → left=820, icon center = (820+110, 74) = (930,74) scaled ~(979,78) --}}
+                <line class="h2-xm__line h2-xm__line--exchange"   x1="600" y1="450" x2="979" y2="78"  stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- express: node top:380 left:-10, icon center = (100, 414) scaled ~(105,436) --}}
+                <line class="h2-xm__line h2-xm__line--express"    x1="600" y1="450" x2="105" y2="436" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- experience: node top:380 right:-10 → left=930, icon center = (1040,414) scaled ~(1095,436) --}}
+                <line class="h2-xm__line h2-xm__line--experience" x1="600" y1="450" x2="1095" y2="436" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- expand: node bottom:20 left:150, icon center = (260, ~754) scaled ~(274,734) --}}
+                <line class="h2-xm__line h2-xm__line--expand"     x1="600" y1="450" x2="274" y2="734" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- excel: node bottom:20 right:150 → left=770, icon center = (880,~754) scaled ~(926,734) --}}
+                <line class="h2-xm__line h2-xm__line--excel"      x1="600" y1="450" x2="926" y2="734" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+            </svg>
+
+            {{-- Concept Nodes --}}
+            <div class="h2-xm__node h2-xm__node--explore" data-concept="explore">
+                <div class="h2-xm__node-beacon"></div>
+                <div class="h2-xm__node-icon"><i class="bi bi-compass"></i></div>
+                <div class="h2-xm__node-content">
+                    <div class="h2-xm__node-prefix">01</div>
+                    <h3 class="h2-xm__node-title">Explore</h3>
+                    <p class="h2-xm__node-desc">Discover inspiring people, innovative ideas, industries, startups, technologies, careers, and opportunities that broaden your perspective.</p>
+                </div>
+            </div>
+
+            <div class="h2-xm__node h2-xm__node--exchange" data-concept="exchange">
+                <div class="h2-xm__node-beacon"></div>
+                <div class="h2-xm__node-icon"><i class="bi bi-arrow-left-right"></i></div>
+                <div class="h2-xm__node-content">
+                    <div class="h2-xm__node-prefix">02</div>
+                    <h3 class="h2-xm__node-title">Exchange</h3>
+                    <p class="h2-xm__node-desc">Share knowledge, insights, experiences, and practical wisdom with a community that values learning and collaboration.</p>
+                </div>
+            </div>
+
+            <div class="h2-xm__node h2-xm__node--express" data-concept="express">
+                <div class="h2-xm__node-beacon"></div>
+                <div class="h2-xm__node-icon"><i class="bi bi-chat-quote"></i></div>
+                <div class="h2-xm__node-content">
+                    <div class="h2-xm__node-prefix">03</div>
+                    <h3 class="h2-xm__node-title">Express</h3>
+                    <p class="h2-xm__node-desc">Tell your story, communicate your ideas, showcase your expertise, and inspire others through authentic conversations.</p>
+                </div>
+            </div>
+
+            <div class="h2-xm__node h2-xm__node--experience" data-concept="experience">
+                <div class="h2-xm__node-beacon"></div>
+                <div class="h2-xm__node-icon"><i class="bi bi-calendar-event"></i></div>
+                <div class="h2-xm__node-content">
+                    <div class="h2-xm__node-prefix">04</div>
+                    <h3 class="h2-xm__node-title">Experience</h3>
+                    <p class="h2-xm__node-desc">Participate in podcasts, workshops, networking events, live sessions, and real-world interactions that create lasting learning.</p>
+                </div>
+            </div>
+
+            <div class="h2-xm__node h2-xm__node--expand" data-concept="expand">
+                <div class="h2-xm__node-beacon"></div>
+                <div class="h2-xm__node-icon"><i class="bi bi-diagram-3"></i></div>
+                <div class="h2-xm__node-content">
+                    <div class="h2-xm__node-prefix">05</div>
+                    <h3 class="h2-xm__node-title">Expand</h3>
+                    <p class="h2-xm__node-desc">Grow your professional network, discover partnerships, connect with mentors, and unlock new opportunities.</p>
+                </div>
+            </div>
+
+            <div class="h2-xm__node h2-xm__node--excel" data-concept="excel">
+                <div class="h2-xm__node-beacon"></div>
+                <div class="h2-xm__node-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                <div class="h2-xm__node-content">
+                    <div class="h2-xm__node-prefix">06</div>
+                    <h3 class="h2-xm__node-title">Excel</h3>
+                    <p class="h2-xm__node-desc">Continuously improve your skills, leadership, career, and business while contributing to a thriving ecosystem.</p>
+                </div>
+            </div>
+
+        </div>{{-- /.h2-xm__constellation --}}
+
+        {{-- Bottom Statement --}}
+        <div class="h2-xm__bottom rv">
+            <p class="h2-xm__statement">
+                Every interaction within the ecosystem moves you through these six dimensions — creating a continuous cycle of <strong>growth, contribution, and impact.</strong>
+            </p>
         </div>
+
     </div>
 </section>
 
@@ -1318,174 +1235,6 @@ $seo = [
     </div>
 </section>
 
-<!-- THE DNA OF CONNECTX -->
-<section class="h2-section h2-section--white h2-xmeaning" id="what-x-means">
-    <div class="container">
-
-        {{-- Section Header --}}
-        <div class="h2-section-header">
-            <div class="h2-eyebrow rv">The DNA of Young Chanakya X</div>
-            <h2 class="h2-heading rv">What Does "<em>X</em>" Mean?</h2>
-            <p class="h2-desc h2-desc--center rv">
-                The letter X represents the point where ideas, people, opportunities, and experiences intersect — creating something greater than the sum of its parts.
-            </p>
-        </div>
-
-        {{-- Constellation Layout --}}
-        <div class="h2-xm__constellation rv">
-
-            {{-- Central X Hub --}}
-            <div class="h2-xm__hub">
-                <div class="h2-xm__hub-ring h2-xm__hub-ring--1"></div>
-                <div class="h2-xm__hub-ring h2-xm__hub-ring--2"></div>
-                <div class="h2-xm__hub-ring h2-xm__hub-ring--3"></div>
-                <div class="h2-xm__hub-letter">X</div>
-                <div class="h2-xm__hub-tagline">Where Everything Intersects</div>
-            </div>
-
-            {{-- Connection Lines (SVG) — x2/y2 targets the center of each node's icon circle --}}
-            <svg class="h2-xm__lines" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-                <defs>
-                    <marker id="icon-dot-default" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-                        <circle cx="3" cy="3" r="2.5" fill="rgba(12,58,48,0.25)"/>
-                    </marker>
-                    <marker id="icon-dot-hover" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-                        <circle cx="3" cy="3" r="2.5" fill="rgba(255,210,177,0.9)"/>
-                    </marker>
-                </defs>
-                {{-- explore: node top:40 left:100, icon center = (100+110, 40+34) = (210,74) scaled ~(221,78) --}}
-                <line class="h2-xm__line h2-xm__line--explore"    x1="600" y1="450" x2="221" y2="78"  stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
-                {{-- exchange: node top:40 right:100 → left=820, icon center = (820+110, 74) = (930,74) scaled ~(979,78) --}}
-                <line class="h2-xm__line h2-xm__line--exchange"   x1="600" y1="450" x2="979" y2="78"  stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
-                {{-- express: node top:380 left:-10, icon center = (100, 414) scaled ~(105,436) --}}
-                <line class="h2-xm__line h2-xm__line--express"    x1="600" y1="450" x2="105" y2="436" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
-                {{-- experience: node top:380 right:-10 → left=930, icon center = (1040,414) scaled ~(1095,436) --}}
-                <line class="h2-xm__line h2-xm__line--experience" x1="600" y1="450" x2="1095" y2="436" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
-                {{-- expand: node bottom:20 left:150, icon center = (260, ~754) scaled ~(274,734) --}}
-                <line class="h2-xm__line h2-xm__line--expand"     x1="600" y1="450" x2="274" y2="734" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
-                {{-- excel: node bottom:20 right:150 → left=770, icon center = (880,~754) scaled ~(926,734) --}}
-                <line class="h2-xm__line h2-xm__line--excel"      x1="600" y1="450" x2="926" y2="734" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
-            </svg>
-
-            {{-- Concept Nodes --}}
-            <div class="h2-xm__node h2-xm__node--explore" data-concept="explore">
-                <div class="h2-xm__node-beacon"></div>
-                <div class="h2-xm__node-icon"><i class="bi bi-compass"></i></div>
-                <div class="h2-xm__node-content">
-                    <div class="h2-xm__node-prefix">01</div>
-                    <h3 class="h2-xm__node-title">Explore</h3>
-                    <p class="h2-xm__node-desc">Discover inspiring people, innovative ideas, industries, startups, technologies, careers, and opportunities that broaden your perspective.</p>
-                </div>
-            </div>
-
-            <div class="h2-xm__node h2-xm__node--exchange" data-concept="exchange">
-                <div class="h2-xm__node-beacon"></div>
-                <div class="h2-xm__node-icon"><i class="bi bi-arrow-left-right"></i></div>
-                <div class="h2-xm__node-content">
-                    <div class="h2-xm__node-prefix">02</div>
-                    <h3 class="h2-xm__node-title">Exchange</h3>
-                    <p class="h2-xm__node-desc">Share knowledge, insights, experiences, and practical wisdom with a community that values learning and collaboration.</p>
-                </div>
-            </div>
-
-            <div class="h2-xm__node h2-xm__node--express" data-concept="express">
-                <div class="h2-xm__node-beacon"></div>
-                <div class="h2-xm__node-icon"><i class="bi bi-chat-quote"></i></div>
-                <div class="h2-xm__node-content">
-                    <div class="h2-xm__node-prefix">03</div>
-                    <h3 class="h2-xm__node-title">Express</h3>
-                    <p class="h2-xm__node-desc">Tell your story, communicate your ideas, showcase your expertise, and inspire others through authentic conversations.</p>
-                </div>
-            </div>
-
-            <div class="h2-xm__node h2-xm__node--experience" data-concept="experience">
-                <div class="h2-xm__node-beacon"></div>
-                <div class="h2-xm__node-icon"><i class="bi bi-calendar-event"></i></div>
-                <div class="h2-xm__node-content">
-                    <div class="h2-xm__node-prefix">04</div>
-                    <h3 class="h2-xm__node-title">Experience</h3>
-                    <p class="h2-xm__node-desc">Participate in podcasts, workshops, networking events, live sessions, and real-world interactions that create lasting learning.</p>
-                </div>
-            </div>
-
-            <div class="h2-xm__node h2-xm__node--expand" data-concept="expand">
-                <div class="h2-xm__node-beacon"></div>
-                <div class="h2-xm__node-icon"><i class="bi bi-diagram-3"></i></div>
-                <div class="h2-xm__node-content">
-                    <div class="h2-xm__node-prefix">05</div>
-                    <h3 class="h2-xm__node-title">Expand</h3>
-                    <p class="h2-xm__node-desc">Grow your professional network, discover partnerships, connect with mentors, and unlock new opportunities.</p>
-                </div>
-            </div>
-
-            <div class="h2-xm__node h2-xm__node--excel" data-concept="excel">
-                <div class="h2-xm__node-beacon"></div>
-                <div class="h2-xm__node-icon"><i class="bi bi-graph-up-arrow"></i></div>
-                <div class="h2-xm__node-content">
-                    <div class="h2-xm__node-prefix">06</div>
-                    <h3 class="h2-xm__node-title">Excel</h3>
-                    <p class="h2-xm__node-desc">Continuously improve your skills, leadership, career, and business while contributing to a thriving ecosystem.</p>
-                </div>
-            </div>
-
-        </div>{{-- /.h2-xm__constellation --}}
-
-        {{-- Bottom Statement --}}
-        <div class="h2-xm__bottom rv">
-            <p class="h2-xm__statement">
-                Every interaction within the ecosystem moves you through these six dimensions — creating a continuous cycle of <strong>growth, contribution, and impact.</strong>
-            </p>
-        </div>
-
-    </div>
-</section>
-
-
-<section class="membership-section position-relative mt-150 lg-mt-80 mb-150 lg-mb-80" id="membership">
-  <div class="container">
-    <div class="section-head text-center" style="margin-bottom: 50px;">
-        <div class="eyebrow rv">Membership</div>
-        <h2 class="sec-title rv" style="color: #0c3a30;">Find your role in the ecosystem.</h2>
-    </div>
-    <div class="mem-grid">
-      <div class="mem-card">
-        <div class="mem-role">Community Member</div>
-        <h3>Member</h3>
-        <p class="mem-desc">Access stories, events, discussions, and networking across the platform.</p>
-      </div>
-      <div class="mem-card featured">
-        <div class="mem-role">Knowledge Leader</div>
-        <h3>Creator / Mentor</h3>
-        <p class="mem-desc">Share articles, stories, and thought leadership — or guide aspiring professionals as a mentor.</p>
-        <span class="mem-badge">Most Popular</span>
-      </div>
-      <div class="mem-card">
-        <div class="mem-role">Platform Voice</div>
-        <h3>Speaker</h3>
-        <p class="mem-desc">Participate in podcasts, events, and educational sessions to amplify your expertise.</p>
-      </div>
-      <div class="mem-card">
-        <div class="mem-role">Community Leader</div>
-        <h3>Ambassador</h3>
-        <p class="mem-desc">Represent Young Chanakya X within campuses or regional communities.</p>
-      </div>
-      <div class="mem-card">
-        <div class="mem-role">Organizational</div>
-        <h3>Partner</h3>
-        <p class="mem-desc">Collaborate through events, programs, sponsorships, and strategic initiatives.</p>
-      </div>
-      <div class="mem-card" style="background:rgba(12,58,48,0.04); border-style:dashed; display:flex; align-items:center; justify-content:center; text-align:center;">
-        <div>
-          <div style="font-size:32px; margin-bottom:12px;">✨</div>
-          <div style="font-size:18px; color:#0c3a30; font-weight:700; margin-bottom:8px;">Not sure where you fit?</div>
-          <div style="font-size:14px; color:#6b7280;">Join and discover your role within the community.</div>
-          <a href="#" class="btn-primary" style="margin-top:20px; display:inline-block; font-size:13px; padding:10px 24px;">Get Started</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 @push('scripts')
 
 
@@ -1502,5 +1251,3 @@ $seo = [
 
 
 @endsection
-
-

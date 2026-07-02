@@ -265,13 +265,142 @@ $seo = [
         font-size: 14px;
     }
 }
+
+/* ==========================================
+   THEME STYLE & COLOR BALANCE CUSTOMIZATIONS
+   ========================================== */
+
+.inner-banner-one {
+    background-image: linear-gradient(135deg, rgba(12, 58, 48, 0.9) 0%, rgba(7, 31, 26, 0.95) 100%), 
+                      url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&q=80&w=1920') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative;
+}
+
+.inner-banner-one::before,
+.inner-banner-one::after {
+    display: none !important;
+}
+
+.inner-banner-one .hero-heading {
+    font-size: clamp(36px, 5vw, 56px) !important;
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
+    letter-spacing: -2px !important;
+    background: linear-gradient(135deg, #ffffff 40%, #ffd2b1 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.inner-banner-one p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 1.1rem !important;
+    line-height: 1.6 !important;
+}
+
+.inner-banner-one .pager {
+    border-bottom: 1px solid rgba(255, 210, 177, 0.25) !important;
+    padding-bottom: 4px !important;
+}
+
+.inner-banner-one .pager li {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-weight: 600 !important;
+}
+
+.inner-banner-one .pager li a {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease !important;
+}
+
+.inner-banner-one .pager li a:hover {
+    color: #ffd2b1 !important;
+}
+
+.inner-banner-one .pager li:last-child {
+    color: #ffd2b1 !important;
+}
+
+/* Custom Form Submit Button */
+.form-style-one .btn-four {
+    background-color: #ffd2b1 !important;
+    color: #0c3a30 !important;
+    border: 1px solid #ffd2b1 !important;
+    border-radius: 50px !important; /* Fully rounded pill shape like other page buttons */
+    height: 58px !important;
+    line-height: 56px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 8px 20px rgba(255, 210, 177, 0.15) !important;
+    cursor: pointer !important;
+}
+
+.form-style-one .btn-four:hover {
+    background-color: #0c3a30 !important; /* Invert green and peach on hover */
+    color: #ffd2b1 !important;
+    border-color: #0c3a30 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 24px rgba(12, 58, 48, 0.2) !important;
+}
+
+/* Form inputs border adjustments */
+.form-style-one .input-group-meta input:focus,
+.form-style-one .input-group-meta textarea:focus {
+    border: 1px solid #ffd2b1 !important;
+    box-shadow: 0 0 0 3px rgba(255, 210, 177, 0.15) !important;
+    outline: none !important;
+}
+
+.form-style-one .input-group-meta label {
+    font-weight: 600 !important;
+    color: #0c3a30 !important;
+}
+
+/* Theme-specific adjustments for Address/Contact Info Blocks */
+.address-block-one .icon {
+    background-color: #0c3a30 !important;
+    border: 2px solid rgba(255, 210, 177, 0.4) !important;
+    transition: transform 0.3s ease, border-color 0.3s ease !important;
+}
+
+.address-block-one:hover .icon {
+    transform: translateY(-3px) !important;
+    border-color: #ffd2b1 !important;
+}
+
+.address-block-one .title {
+    font-weight: 700 !important;
+    color: #0c3a30 !important;
+}
+
+.address-block-one p .call,
+.address-block-one p .webaddress {
+    color: #0c3a30 !important;
+    font-weight: 600 !important;
+    transition: color 0.3s ease !important;
+    text-decoration: none !important;
+}
+
+.address-block-one p .call:hover,
+.address-block-one p .webaddress:hover {
+    color: #e8a876 !important;
+    text-decoration: underline !important;
+}
 	</style>
 		<!-- 
 		=============================================
 			Inner Banner
 		============================================== 
 		-->
-		<div class="inner-banner-one pt-225 lg-pt-200 md-pt-150 pb-100 md-pb-70 position-relative" style="background-image: url(images/media/img_26.jpg);">
+		<div class="inner-banner-one pt-225 lg-pt-200 md-pt-150 pb-100 md-pb-70 position-relative">
 			<div class="container position-relative">
 				<div class="row align-items-center">
 					<div class="col-lg-7">
@@ -280,7 +409,7 @@ $seo = [
                     <div class="col-xl-4 col-lg-5 ms-auto">
                         <p class="text-white text-lg mb-70 lg-mb-40">Get our all info and also can message us directly from here</p>
                         <ul class="style-none d-inline-flex pager">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="{{ url('/') }}">Home</a></li>
                             <li>/</li>
                             <li>Contact</li>
                         </ul>
@@ -387,34 +516,7 @@ $seo = [
 
 
 
-		<!--
-		=====================================================
-			Newsletter Banner
-		=====================================================
-		-->
-        <div class="newsletter-banner mt-40">
-            <div class="container">
-                <div class="main-wrapper bottom-border">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <h2 class="fw-bold">Our Newsletter.</h2>
-                            <p class="text-lg md-pb-20">Get instant news by subscribe to our daily newsletter</p>
-                        </div>
-                        <div class="col-lg-6">
-                            <form action="#" class="me-auto ms-auto me-lg-0">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <input type="email" placeholder="Enter your email address">
-                                    <button class="rounded-circle tran3s"><i class="bi bi-arrow-right"></i></button>
-                                </div>
-                                <p class="text-center text-lg-end m0 pt-5">Already subscribed? <a href="#" class="text-dark fw-500">Unsubscribe</a></p>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.main-wrapper -->
-            </div>
-        </div>
-
+	
 
 		
 
