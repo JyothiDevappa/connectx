@@ -922,7 +922,7 @@ body {
 
 /* High Contrast Premium Card Structure */
 .com-card {
-  background-color: #FDFBF7;
+  background-color: #fff;
   /* Soft luxurious off-white/cream container */
   border: 1px solid rgba(197, 168, 128, 0.2);
   border-radius: 0px;
@@ -2156,4 +2156,42 @@ body {
   background: transparent;
   color: #ffd2b1 !important;
   border-color: #ffd2b1;
+}
+
+.com-card-btn {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 24px;
+  background: #0c3a30;
+  color: #ffffff !important;
+  border: 1.5px solid #0c3a30;
+  border-radius: 100px;
+  padding: 12px 32px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(12, 58, 48, 0.1);
+}
+
+.com-card-btn:hover {
+  background: var(--orange);
+  color: #0c3a30 !important;
+  border-color: var(--orange);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(12, 58, 48, 0.15);
+}
+
+.com-card-btn.btn-orange {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #0c3a30 !important;
+}
+
+.com-card-btn.btn-orange:hover {
+  background: #0c3a30;
+  color: #ffffff !important;
+  border-color: #0c3a30;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(12, 58, 48, 0.15);
 }

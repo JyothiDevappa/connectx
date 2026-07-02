@@ -103,7 +103,7 @@ $seo = [
                     networks.
                 </p>
                 <div class="hero-btns">
-                    <button class="btn-hero-primary" onclick="document.getElementById('partner').scrollIntoView({behavior: 'smooth'})">Collaborate With Young Chanakya X →</button>
+                    <button class="btn-hero-primary" onclick="window.location.href='/become-a-partner'">Collaborate With Young Chanakya X →</button>
                     <button class="btn-hero-outline" onclick="window.location.href='/become-a-partner'">Become a Partner</button>
                 </div>
             </div>
@@ -135,8 +135,8 @@ $seo = [
                 <p class="hero-desc">Connect your brand with highly engaged audiences through curated sponsorships, regional creator meetups, annual showcase awards, and co-branded experiences.
                 </p>
                 <div class="hero-btns">
-                    <button class="btn-hero-primary" onclick="document.getElementById('community').scrollIntoView({behavior: 'smooth'})">Explore Sponsorships →</button>
-                    <button class="btn-hero-outline" onclick="document.getElementById('events').scrollIntoView({behavior: 'smooth'})">View Our Events</button>
+                    <button class="btn-hero-primary" onclick="window.location.href='/become-a-sponser'">Explore Sponsorships →</button>
+                    <button class="btn-hero-outline" onclick="window.location.href='/become-a-sponser'">Become a Sponsor</button>
                 </div>
             </div>
         </div>
@@ -290,171 +290,9 @@ $seo = [
         </div>
         <div class="about-content rv-r" >
             <div class="eyebrow rv">About Young Chanakya X</div>
-            <h2 class="sec-title rv">A Digital-First Leadership Platform</h2>
+            <h2 class="sec-title rv">A Digital-First Network for <br>Growth & Collaboration</h2>
             <p class="sec-desc rv">Young Chanakya X is a digital-first leadership and community platform that connects ambitious individuals through meaningful conversations, authentic storytelling, knowledge sharing, networking, mentorship, and collaboration.</p>
             <p class="sec-desc rv">We believe that every individual has a story worth sharing, knowledge worth passing on, and experiences that can inspire others. By bringing together students, entrepreneurs, founders, professionals, creators, mentors, educators, and changemakers, Young Chanakya X creates an ecosystem where learning happens through people and opportunities are created through relationships.</p>
-        </div>
-    </div>
-</section>
-
-<!-- EXPERIENCES -->
-<section class="cx-premium-viewport">
-    <div class="cx-custom-cursor"></div>
-
-    <div class="cx-wrapper">
-        <div class="cx-editorial-header">
-            <div class="eyebrow rv">Young Chanakya X Experiences</div>
-            <h2 class="cx-main-heading">Experiences That Create Influence</h2>
-            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px;">From high-quality recording lounges to city meetups, we offer unmatched offline and online opportunities to scale your reach.</p>
-        </div>
-
-        <div class="cx-viewport-grid">
-
-            <div class="cx-premium-card cx-col-wide">
-                <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=1000" alt="Podcasts" class="cx-surface-img">
-                    <div class="cx-surface-overlay"></div>
-                </div>
-                <div class="cx-premium-body">
-                    <span class="cx-premium-badge">PODCASTS</span>
-                    <h3 class="cx-premium-title">Podcasts</h3>
-                    <p class="cx-premium-text">Conversations with founders, CEOs, creators, and innovators. Real experiences. Practical lessons. Shared on record.</p>
-                </div>
-                <div class="cx-arrow-token">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                </div>
-            </div>
-
-            <div class="cx-premium-card cx-col-square">
-                <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=600" alt="Stories" class="cx-surface-img">
-                    <div class="cx-surface-overlay"></div>
-                </div>
-                <div class="cx-premium-body">
-                    <span class="cx-premium-badge">STORIES</span>
-                    <h3 class="cx-premium-title">Story Sharing</h3>
-                    <p class="cx-premium-text">Every journey matters. Publish startup stories, career experiences, and personal transformations.</p>
-                </div>
-                <div class="cx-arrow-token">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                </div>
-            </div>
-
-            <div class="cx-premium-card cx-col-square">
-                <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600" alt="Network" class="cx-surface-img">
-                    <div class="cx-surface-overlay"></div>
-                </div>
-                <div class="cx-premium-body">
-                    <span class="cx-premium-badge">NETWORK</span>
-                    <h3 class="cx-premium-title">Networking</h3>
-                    <p class="cx-premium-text">Relationships across industries. Students, professionals, investors, mentors — all in one space.</p>
-                </div>
-                <div class="cx-arrow-token">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                </div>
-            </div>
-
-            <div class="cx-premium-card cx-col-square">
-                <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=600" alt="Mentorship" class="cx-surface-img">
-                    <div class="cx-surface-overlay"></div>
-                </div>
-                <div class="cx-premium-body">
-                    <span class="cx-premium-badge">MENTORSHIP</span>
-                    <h3 class="cx-premium-title">Mentorship</h3>
-                    <p class="cx-premium-text">The right conversation changes everything. Connect with mentors who've navigated the path you're on.</p>
-                </div>
-                <div class="cx-arrow-token">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                </div>
-            </div>
-
-            <div class="cx-premium-card cx-col-square">
-                <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1610116306796-6fea9f4fae38?auto=format&fit=crop&q=80&w=600" alt="Live Events" class="cx-surface-img">
-                    <div class="cx-surface-overlay"></div>
-                </div>
-                <div class="cx-premium-body">
-                    <span class="cx-premium-badge">LIVE EVENTS</span>
-                    <h3 class="cx-premium-title">Live Experiences</h3>
-                    <p class="cx-premium-text">Where ideas become action. Webinars, summits, roundtables, fireside chats, and meetups.</p>
-                </div>
-                <div class="cx-arrow-token">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                </div>
-            </div>
-
-            <div class="cx-premium-card cx-col-wide">
-                <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1000" alt="Collaborate" class="cx-surface-img">
-                    <div class="cx-surface-overlay"></div>
-                </div>
-                <div class="cx-premium-body">
-                    <span class="cx-premium-badge">COLLABORATE</span>
-                    <h3 class="cx-premium-title">Collaboration</h3>
-                    <p class="cx-premium-text">Build with people who share your vision. Partnerships for startups, research, content, and innovation.</p>
-                </div>
-                <div class="cx-arrow-token">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- WAYS TO GET INVOLVED -->
-<section class="ways-to-involve-sec">
-    <div class="container">
-        <div class="section-head text-center" style="margin-bottom: 50px;">
-            <div class="eyebrow rv">Ways to Engage</div>
-            <h2 class="sec-title rv" style="color: var(--primary-dark);">Be Part of the Experience</h2>
-            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">Explore a range of initiatives designed to connect you with industry leaders, ideas, and opportunities.</p>
-        </div>
-    </div>
-
-    <div class="marquee-container" style="padding-bottom: 0;">
-        <div class="marquee-track">
-            @php
-                $marqueeRow1 = [
-                    'Founder Spotlight', 'CEO Conversations', 'Startup Stories', 'Community Podcasts', 
-                    'Student Leadership Series', 'Women in Leadership', 'Creator Sessions'
-                ];
-                $marqueeRow2 = [
-                    'Industry Roundtables', 'Campus Chapters', 'Mentor Connect', 'Innovation Talks', 
-                    'Networking Meetups', 'Workshops', 'Fireside Chats', 'Leadership Summit'
-                ];
-            @endphp
-            @foreach($marqueeRow1 as $item)
-                <div class="marquee-chip">{{ $item }}</div>
-            @endforeach
-            @foreach($marqueeRow1 as $item)
-                <div class="marquee-chip">{{ $item }}</div>
-            @endforeach
-        </div>
-    </div>
-    
-    <div class="marquee-container" style="padding-top: 15px;">
-        <div class="marquee-track marquee-track-reverse">
-            @foreach($marqueeRow2 as $item)
-                <div class="marquee-chip">{{ $item }}</div>
-            @endforeach
-            @foreach($marqueeRow2 as $item)
-                <div class="marquee-chip">{{ $item }}</div>
-            @endforeach
         </div>
     </div>
 </section>
@@ -468,10 +306,10 @@ $seo = [
             <div class="row align-items-end justify-content-between">
                 <div class="col-lg-6 col-md-7 text-start">
                     <div class="eyebrow rv text-start" style="margin-bottom: 12px;">Young Chanakya X Experiences</div>
-                    <h2 class="cx-main-heading text-start" style="margin-bottom: 0;">Experiences That Create Influence</h2>
+                    <h2 class="cx-main-heading text-start" style="margin-bottom: 0;">Creator Spaces & Events</h2>
                 </div>
                 <div class="col-lg-5 col-md-5 text-start">
-                    <p class="sec-desc rv text-start" style="margin-bottom: 0; line-height: 1.6; max-width: 100%;">From high-quality recording lounges to city meetups, we offer unmatched offline and online opportunities to scale your reach.</p>
+                    <p class="sec-desc rv text-start" style="margin-bottom: 0; line-height: 1.6; max-width: 100%;">We provide professional recording studios, creative lounges, and city meetups to help you create content, meet people, and grow your audience.</p>
                 </div>
             </div>
         </div>
@@ -969,11 +807,11 @@ $seo = [
     <div class="partner-head">
         <div class="row align-items-end justify-content-between">
             <div class="col-lg-6 col-md-7 text-start">
-                <div class="eyebrow rv text-start" style="margin-bottom: 12px;">Who Can Partner With Us</div>
-                <h2 class="sec-title rv text-start" style="margin-bottom: 0;">Built for Modern<br>Ecosystem Collaborations</h2>
+                <div class="eyebrow rv text-start" style="margin-bottom: 12px;">Who Can Join Us</div>
+                <h2 class="sec-title rv text-start" style="margin-bottom: 0;">Built for Every<br>Ecosystem Journey</h2>
             </div>
             <div class="col-lg-5 col-md-5 text-start">
-                <p class="sec-desc rv text-start" style="margin-bottom: 0; line-height: 1.6; max-width: 100%;">We connect diverse creators, brands, and ecosystem partners to unlock shared visibility, audience reach, and growth.</p>
+                <p class="sec-desc rv text-start" style="margin-bottom: 0; line-height: 1.6; max-width: 100%;">Our platform connects ambitious minds to share experiences, build influence, and unlock growth opportunities.</p>
             </div>
         </div>
     </div>
@@ -1313,7 +1151,7 @@ $seo = [
     <div class="container">
         <div class="section-head">
             <div class="eyebrow rv">Event Listing</div>
-            <h2 class="sec-title rv">Curated events for every creator journey</h2>
+            <h2 class="sec-title rv">Curated Events for Every Creator Journey</h2>
             <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-bottom: 0; margin-left: auto; margin-right: auto;">Explore upcoming panels, awards gala ceremonies, regional conferences, and exclusive brand sponsorship opportunities.</p>
         </div>
 
@@ -1567,8 +1405,54 @@ $seo = [
     </div>
 </section>
 
+  
+<!-- COMMUNITY & SPONSOR -->
+<section class="community-sec" id="community">
+    <div class="section-container">
 
-<section class="membership-section position-relative mt-50 lg-mt-80 mb-50 lg-mb-80" id="membership">
+        <div class="section-head">
+            <div class="eyebrow rv">Engage & Support</div>
+            <h2 class="sec-title rv">Partner & Sponsor</h2>
+            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-bottom: 0; margin-left: auto; margin-right: auto;">Join hands with Young Chanakya X to build the premier ecosystem for C-suite leaders, creators, and innovators. Choose how you want to make an impact.</p>
+        </div>
+
+        <div class="community-grid">
+
+            <!-- Card 1: Creator Community -->
+            <article class="com-card creative-left rv" style="transition-delay:0s">
+                <div class="card-meta">
+                    <span class="card-num" style="font-size: 2.2rem; margin-bottom: 20px;"><i class="bi bi-people-fill"></i></span>
+                    <h3>Become a Partner</h3>
+                    <p style="margin-bottom: 0;">Collaborate on co-branded experiences, events, and strategic initiatives to drive mutual ecosystem growth and impact.</p>
+                    <a href="/become-a-partner" class="com-card-btn">Become a Partner</a>
+                </div>
+                <div class="card-visual">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Creator">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2: Sponsor Opportunities -->
+            <article class="com-card creative-right rv" style="transition-delay:0.08s">
+                <div class="card-meta">
+                    <span class="card-num" style="font-size: 2.2rem; margin-bottom: 20px;"><i class="bi bi-briefcase-fill"></i></span>
+                    <h3>Become a Sponsor</h3>
+                    <p style="margin-bottom: 0;">Elevate your brand presence by sponsoring our high-quality recording lounges, podcast seasons, and regional meetups.</p>
+                    <a href="/become-a-sponser" class="com-card-btn btn-orange">Become a Sponsor</a>
+                </div>
+                <div class="card-visual">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80" alt="Sponsorship">
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+{{-- <section class="membership-section position-relative mt-50 lg-mt-80 mb-50 lg-mb-80" id="membership">
   <div class="container">
     <div class="section-head text-center" style="margin-bottom: 50px;">
         <div class="eyebrow rv">Membership</div>
@@ -1641,7 +1525,7 @@ $seo = [
       </div>
     </div>
   </div>
-</section>
+</section> --}}
 
 @push('scripts')
 <script>

@@ -529,7 +529,7 @@ $seo = [
                             </div>
 
                             <h3 class="h5 fw-bold mb-3" style="color: #0c3a30; line-height: 1.35; font-weight: 800;">
-                                <a href="#" class="text-decoration-none text-dark transition-all">
+                                <a href="{{ url('/event-details/' . \Illuminate\Support\Str::slug($event['title'])) }}" class="text-decoration-none text-dark transition-all">
                                     {{ $event['title'] }}
                                 </a>
                             </h3>
@@ -550,7 +550,7 @@ $seo = [
                                     </div>
                                 </div>
                                 
-                                <a href="#" class="interactive-arrow-btn">
+                                <a href="{{ url('/event-details/' . \Illuminate\Support\Str::slug($event['title'])) }}" class="interactive-arrow-btn">
                                     <i class="bi bi-arrow-right fs-5"></i>
                                 </a>
                             </div>

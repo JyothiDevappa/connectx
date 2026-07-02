@@ -296,7 +296,7 @@ $seo = [
                     <i class="bi bi-shield-check-fill"></i> Institutional Ecosystem Directory
                 </div>
 
-                <h1 class="trust-headline mb-4">The verified nexus of market leadership.</h1>
+                <h1 class="trust-headline mb-4">The Verified Nexus of Market Leadership</h1>
                 <p class="text-white fs-5 mb-4" style="max-width: 600px; line-height: 1.6;">
                     Young Chanakya X orchestrates premium structural access to vetted visionaries, enterprise owners, and specialized policy framework architects globally.
                 </p>
@@ -607,7 +607,7 @@ $seo = [
     .cluster-title-icon {
         width: 56px;
         height: 56px;
-        background: linear-gradient(135deg, #ffffff 0%, #ffd2b1 100%);
+        background: linear-gradient(135deg, #ffffff 0%, #fff4ec 100%);
         color: #0c3a30;
         border: 1px solid rgba(255, 210, 177, 0.5);
         border-radius: 16px;
@@ -629,7 +629,7 @@ $seo = [
 
     /* Interactive List Badges */
     .connector-node-pill {
-        background: linear-gradient(135deg, #ffffff 0%, #ffd2b1 100%);
+        background: linear-gradient(135deg, #ffffff 0%, #fff4ec 100%);
         border: 1px solid rgba(255, 210, 177, 0.5);
         border-radius: 100px;
         padding: 12px 22px;

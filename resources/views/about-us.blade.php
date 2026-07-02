@@ -358,50 +358,6 @@ $seo = [
     </div>
   </section>
 
-  
-<!-- COMMUNITY & SPONSOR -->
-<section class="community-sec" id="community">
-    <div class="section-container">
-
-        <div class="section-head">
-            <div class="eyebrow rv">Ecosystem Network</div>
-            <h2 class="sec-title rv">Community & Sponsor</h2>
-            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-bottom: 0; margin-left: auto; margin-right: auto;">Whether you are an independent creator or a high-growth brand, Young Chanakya X has the right space and network to support your journey.</p>
-        </div>
-
-        <div class="community-grid">
-
-            <!-- Card 1: Creator Community -->
-            <article class="com-card creative-left rv" style="transition-delay:0s">
-                <div class="card-meta">
-                    <span class="card-num" style="font-size: 2.2rem; margin-bottom: 20px;"><i class="bi bi-people-fill"></i></span>
-                    <h3>Creator Community</h3>
-                    <p style="margin-bottom: 0;">Join a global community built for creators, storytellers and ecosystem builders ready to grow together.</p>
-                </div>
-                <div class="card-visual">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Creator">
-                    </div>
-                </div>
-            </article>
-
-            <!-- Card 2: Sponsor Opportunities -->
-            <article class="com-card creative-right rv" style="transition-delay:0.08s">
-                <div class="card-meta">
-                    <span class="card-num" style="font-size: 2.2rem; margin-bottom: 20px;"><i class="bi bi-briefcase-fill"></i></span>
-                    <h3>Sponsor Opportunities</h3>
-                    <p style="margin-bottom: 0;">Partner with high-value creators and platforms through curated sponsor relationships and showcase programs.</p>
-                </div>
-                <div class="card-visual">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80" alt="Sponsorship">
-                    </div>
-                </div>
-            </article>
-
-        </div>
-    </div>
-</section>
 
 @endsection
 
