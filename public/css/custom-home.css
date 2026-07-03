@@ -636,7 +636,7 @@ body {
 }
 
 .p-desc {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.4;
   color: rgba(255, 255, 255, 0.8);
   max-height: 0;
@@ -1253,17 +1253,19 @@ body {
   /* Hero */
   .hero {
     min-height: 600px;
-    align-items: flex-end;
-    padding-bottom: 100px;
+    align-items: flex-start;
+    padding-top: 190px;
+    padding-bottom: 0;
   }
 
   .hero-slide {
-    align-items: flex-end;
-    padding-bottom: 100px;
+    align-items: flex-start;
+    padding-top: 190px;
+    padding-bottom: 0;
   }
 
   .hero-slide .hero-content {
-    padding: 0 24px 0 72px;
+    padding: 0 24px 0 24px;
     max-width: 100%;
   }
 
@@ -1383,7 +1385,11 @@ body {
   }
 
   .p-name {
-    font-size: 14px;
+    font-size: 18px !important;
+  }
+  
+  .p-desc {
+    font-size: 12px;
   }
 
   /* Fifth section */
@@ -1408,11 +1414,11 @@ body {
   }
 
   .cx-premium-title {
-    font-size: 20px;
+    font-size: 18px !important;
   }
 
   .cx-premium-text {
-    font-size: 13px;
+    font-size: 12px;
     opacity: 0.85;
   }
 
@@ -1436,7 +1442,11 @@ body {
     min-width: unset;
   }
 
-  .com-card,
+  .com-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 240px;
+  }
+
   .creative-right {
     grid-template-columns: 1fr;
     grid-template-rows: 240px auto;
@@ -1533,7 +1543,7 @@ body {
   }
 
   .p-name {
-    font-size: 13px;
+    font-size: 16px !important;
   }
 
   .p-cat {
@@ -1551,7 +1561,7 @@ body {
   }
 
   .cx-premium-title {
-    font-size: 18px;
+    font-size: 16px !important;
   }
 
   .cx-arrow-token {
@@ -1562,7 +1572,10 @@ body {
   }
 
   /* Community */
-  .com-card,
+  .com-card {
+    grid-template-rows: auto 200px;
+  }
+  
   .creative-right {
     grid-template-rows: 200px auto;
   }
@@ -2197,4 +2210,24 @@ body {
   border-color: #0c3a30;
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(12, 58, 48, 0.15);
+}
+
+/* =============================================
+   GLOBAL FORM TYPOGRAPHY STANDARDIZATION
+   ============================================= */
+form label, 
+.cx-label, 
+.form-style-one label {
+    font-size: 14px !important;
+}
+
+form .form-control, 
+form input[type="text"], 
+form input[type="email"], 
+form input[type="url"], 
+form input[type="tel"], 
+form select, 
+form textarea, 
+.cx-input {
+    font-size: 15px !important;
 }

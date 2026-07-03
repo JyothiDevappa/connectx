@@ -265,8 +265,8 @@ $seo = [
             padding-bottom: 70px;
         }
         .text-glow-headline {
-            font-size: clamp(32px, 5vw, 56px);
-            letter-spacing: -2px;
+            font-size: clamp(32px, 5vw, 56px) !important;
+            letter-spacing: -2px !important;
         }
         .premium-hero-container p.fs-5 {
             font-size: 16px !important;
@@ -282,10 +282,10 @@ $seo = [
             padding-bottom: 50px;
         }
         .text-glow-headline {
-            font-size: clamp(26px, 7vw, 42px);
-            letter-spacing: -1.5px;
-            line-height: 1.25;
-            padding-bottom: 10px;
+            font-size: clamp(26px, 7vw, 36px) !important;
+            letter-spacing: -1px !important;
+            line-height: 1.15 !important;
+            padding-bottom: 10px !important;
         }
         .premium-hero-container p.fs-5 {
             font-size: 15px !important;
@@ -305,8 +305,8 @@ $seo = [
             padding-bottom: 40px;
         }
         .text-glow-headline {
-            font-size: 26px;
-            letter-spacing: -1px;
+            font-size: 26px !important;
+            letter-spacing: -0.5px !important;
         }
     }
 
@@ -322,14 +322,30 @@ $seo = [
         }
         .custom-pill-nav {
             width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
             overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
             justify-content: flex-start;
             padding: 4px;
+            gap: 8px;
+        }
+        .custom-pill-nav::-webkit-scrollbar {
+            display: none;
         }
         .custom-pill-nav .nav-link-item {
-            padding: 8px 16px;
-            font-size: 0.78rem;
+            padding: 6px 14px;
+            font-size: 0.75rem;
             white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .custom-pill-nav .nav-link-item.active, 
+        .custom-pill-nav .nav-link-item:hover {
+            color: #0c3a30 !important;
+            background: #ffd2b1 !important;
+            opacity: 1;
         }
     }
 
@@ -337,9 +353,12 @@ $seo = [
         .filter-strip-wrapper .container > span {
             font-size: 0.68rem;
         }
+        .custom-pill-nav {
+            gap: 6px;
+        }
         .custom-pill-nav .nav-link-item {
-            padding: 7px 12px;
-            font-size: 0.72rem;
+            padding: 5px 12px;
+            font-size: 0.7rem;
         }
     }
 

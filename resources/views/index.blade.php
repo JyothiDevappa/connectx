@@ -302,16 +302,10 @@ $seo = [
     <div class="cx-custom-cursor"></div>
 
     <div class="cx-wrapper">
-        <div class="cx-editorial-header">
-            <div class="row align-items-end justify-content-between">
-                <div class="col-lg-6 col-md-7 text-start">
-                    <div class="eyebrow rv text-start" style="margin-bottom: 12px;">Young Chanakya X Experiences</div>
-                    <h2 class="cx-main-heading text-start" style="margin-bottom: 0;">Creator Spaces & Events</h2>
-                </div>
-                <div class="col-lg-5 col-md-5 text-start">
-                    <p class="sec-desc rv text-start" style="margin-bottom: 0; line-height: 1.6; max-width: 100%;">We provide professional recording studios, creative lounges, and city meetups to help you create content, meet people, and grow your audience.</p>
-                </div>
-            </div>
+        <div class="cx-editorial-header text-center">
+            <div class="eyebrow rv" style="margin-bottom: 12px; font-size: 10px; font-weight: 700; letter-spacing: 3px;">Young Chanakya X Experiences</div>
+            <h2 class="cx-main-heading" style="margin-bottom: 16px; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Creator Spaces & Events</h2>
+            <p class="sec-desc rv mx-auto" style="margin-bottom: 0; line-height: 1.6; max-width: 600px;">We provide professional recording studios, creative lounges, and city meetups to help you create content, meet people, and grow your audience.</p>
         </div>
 
         <div class="cx-viewport-grid">
@@ -763,9 +757,9 @@ $seo = [
 <section class="ways-to-involve-sec">
     <div class="container">
         <div class="section-head text-center" style="margin-bottom: 50px;">
-            <div class="eyebrow rv">Ways to Engage</div>
-            <h2 class="sec-title rv" style="color: var(--primary-dark);">Be Part of the Experience</h2>
-            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">Explore a range of initiatives designed to connect you with industry leaders, ideas, and opportunities.</p>
+            <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Ways to Engage</div>
+            <h2 class="sec-title rv" style="color: var(--primary-dark); font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Be Part of the Experience</h2>
+            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">Explore a range of initiatives designed to connect you with industry leaders, ideas, and opportunities.</p>
         </div>
     </div>
 
@@ -804,16 +798,10 @@ $seo = [
 
 <!-- WHO CAN PARTNER -->
 <section class="partner-sec" id="partner">
-    <div class="partner-head">
-        <div class="row align-items-end justify-content-between">
-            <div class="col-lg-6 col-md-7 text-start">
-                <div class="eyebrow rv text-start" style="margin-bottom: 12px;">Who Can Join Us</div>
-                <h2 class="sec-title rv text-start" style="margin-bottom: 0;">A Community for Everyone Who Wants to Grow</h2>
-            </div>
-            <div class="col-lg-5 col-md-5 text-start">
-                <p class="sec-desc rv text-start" style="margin-bottom: 0; line-height: 1.6; max-width: 100%;">For people who value collaboration, learning, and building real connections that create long-term impact.</p>
-            </div>
-        </div>
+    <div class="partner-head text-center">
+        <div class="eyebrow rv" style="margin-bottom: 12px;">Who Can Join Us</div>
+        <h2 class="sec-title rv" style="margin-bottom: 16px;">A Community for Everyone Who Wants to Grow</h2>
+        <p class="sec-desc rv mx-auto" style="margin-bottom: 0; line-height: 1.6; max-width: 600px;">For people who value collaboration, learning, and building real connections that create long-term impact.</p>
     </div>
     <div class="partner-grid">
         <div class="p-card rv" style="transition-delay:0s">
@@ -1094,11 +1082,11 @@ $seo = [
 
 <div class="mt-4">
     <div class="hcw-wrapper">
-        <div class="eyebrow rv">Our Process</div>
-        <p class="cx-heading hcw-heading">
-            How <span>Young Chanakya X </span>  Works
+        <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Our Process</div>
+        <p class="cx-heading hcw-heading" style="font-size: clamp(34px, 4vw, 56px) !important; font-weight: 900 !important; line-height: 1.15 !important; letter-spacing: -2px !important;">
+            How <span>Young Chanakya X</span> &nbsp;Works
         </p>
-        <p class="sec-desc rv" style="color: rgba(255, 255, 255, 0.75) !important; max-width: 600px; margin-top: -20px; margin-bottom: 44px;">
+        <p class="sec-desc rv" style="color: rgba(255, 255, 255, 0.75) !important; max-width: 600px; margin-top: -20px; margin-bottom: 44px; line-height: 1.6;">
             Follow these simple steps to join the Young Chanakya X network, access premium lounges, and launch high-impact collaborations.
         </p>
     
@@ -1151,9 +1139,9 @@ $seo = [
 <section class="blog-section-two position-relative mt-70 lg-mt-80" id="events">
     <div class="container">
         <div class="section-head">
-            <div class="eyebrow rv">Event Listing</div>
-            <h2 class="sec-title rv">Curated Events for Every Creator Journey</h2>
-            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-bottom: 0; margin-left: auto; margin-right: auto;">Explore upcoming panels, awards gala ceremonies, regional conferences, and exclusive brand sponsorship opportunities.</p>
+            <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Event Listing</div>
+            <h2 class="sec-title rv" style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Curated Events for Every Creator Journey</h2>
+            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-bottom: 0; margin-left: auto; margin-right: auto; line-height: 1.6;">Explore upcoming panels, awards gala ceremonies, regional conferences, and exclusive brand sponsorship opportunities.</p>
         </div>
 
         <div class="position-relative">
@@ -1268,9 +1256,9 @@ $seo = [
 
         {{-- Section Header --}}
         <div class="h2-section-header">
-            <div class="h2-eyebrow rv">The DNA of Young Chanakya X</div>
-            <h2 class="h2-heading rv">What Does "<em>X</em>" Mean?</h2>
-            <p class="h2-desc h2-desc--center rv">
+            <div class="h2-eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">The DNA of Young Chanakya X</div>
+            <h2 class="h2-heading rv" style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">What Does "<em>X</em>" Mean?</h2>
+            <p class="h2-desc h2-desc--center rv sec-desc" style="line-height: 1.6;">
                 The letter X represents the point where ideas, people, opportunities, and experiences intersect — creating something greater than the sum of its parts.
             </p>
         </div>
@@ -1390,9 +1378,9 @@ $seo = [
     <div class="section-container">
 
         <div class="section-head">
-            <div class="eyebrow rv">Engage & Support</div>
-            <h2 class="sec-title rv">Partner & Sponsor</h2>
-            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-bottom: 0; margin-left: auto; margin-right: auto;">Join hands with Young Chanakya X to build the premier ecosystem for C-suite leaders, creators, and innovators. Choose how you want to make an impact.</p>
+            <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Engage & Support</div>
+            <h2 class="sec-title rv" style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Partner & Sponsor</h2>
+            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-bottom: 0; margin-left: auto; margin-right: auto; line-height: 1.6;">Join hands with Young Chanakya X to build the premier ecosystem for C-suite leaders, creators, and innovators. Choose how you want to make an impact.</p>
         </div>
 
         <div class="community-grid">

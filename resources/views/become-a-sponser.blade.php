@@ -72,7 +72,17 @@ $seo = [
 
 @media (max-width: 991px){
     .sponsor-contact-section{
-        padding: 140px 0 70px;
+        padding: 120px 0 70px;
+    }
+}
+@media (max-width: 767px){
+    .sponsor-contact-section{
+        padding: 100px 0 60px;
+    }
+}
+@media (max-width: 480px){
+    .sponsor-contact-section{
+        padding: 90px 0 50px;
     }
 }
 
@@ -396,7 +406,7 @@ WHY CONNECTX SECTION
 }
 
 .benefit-card h4{
-    color:#000;
+    color:#0c3a30;
 
     font-size:22px;
 
@@ -1082,8 +1092,8 @@ CTA SECTION
     <div class="container">
         <div class="row align-items-center gy-5">
             <div class="col-lg-6">
-                <div class="eyebrow rv">Sponsor Young Chanakya X</div>
-                <h1>Maximize Your Brand's Impact.</h1>
+                <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Sponsor Young Chanakya X</div>
+                <h1 style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Maximize Your Brand's Impact.</h1>
                 <p class="hero-copy">Position your brand within a structured creator ecosystem designed for consistent visibility, engagement, and collaboration. Sponsor our events and creator programs to amplify your reach to tomorrow's industry leaders.</p>
               
                 <div class="about-hero-buttons">
@@ -1242,9 +1252,9 @@ WHY CONNECT WITH CONNECTX
 
         <!-- Heading -->
         <div class="section-head text-center" style="margin-bottom: 50px;">
-            <div class="eyebrow rv">Why Connect With Us</div>
-            <h2 class="sec-title rv" style="color: #0c3a30;">Why Connect With Young Chanakya X</h2>
-            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">Position your brand within a structured creator ecosystem designed for consistent visibility, engagement, and collaboration</p>
+            <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Why Connect With Us</div>
+            <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Why Connect With Young Chanakya X</h2>
+            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">Position your brand within a structured creator ecosystem designed for consistent visibility, engagement, and collaboration</p>
         </div>
 
         <div class="row gx-4 gy-4">
@@ -1376,8 +1386,8 @@ WHY CONNECT WITH CONNECTX
                 <!-- LEFT CONTENT -->
                 <div class="col-lg-7">
                     <div style="margin-bottom: 30px;">
-                        <div class="eyebrow rv" style="color: #ffd2b1;">Sponsorship Exposure</div>
-                        <h2 class="sec-title rv" style="color: #ffffff;">
+                        <div class="eyebrow rv" style="color: #ffd2b1; font-size: 10px; font-weight: 700; letter-spacing: 3px;">Sponsorship Exposure</div>
+                        <h2 class="sec-title rv" style="color: #ffffff; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">
                             Your Brand, Everywhere<br>
                             <span style="color: #ffd2b1;">Young Chanakya X Shows Up</span>
                         </h2>
@@ -1485,9 +1495,9 @@ SPONSORSHIP CATEGORIES SECTION
 <section class="tiers-section position-relative pt-120 pb-120" id="sponsorship-categories">
   <div class="container">
     <div class="section-head text-center" style="margin-bottom: 50px;">
-        <div class="eyebrow rv" style="color: #0c3a30;">Young Chanakya X</div>
-        <h2 class="sec-title rv" style="color: #0c3a30;">Sponsorship Categories</h2>
-        <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">Choose a sponsorship level based on your visibility, integration, and collaboration goals.</p>
+        <div class="eyebrow rv" style="color: #0c3a30; font-size: 10px; font-weight: 700; letter-spacing: 3px;">Young Chanakya X</div>
+        <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Sponsorship Categories</h2>
+        <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">Choose a sponsorship level based on your visibility, integration, and collaboration goals.</p>
     </div>
 
     <div class="tier-grid">
@@ -1510,7 +1520,7 @@ SPONSORSHIP CATEGORIES SECTION
           <li>Maximum visibility across the ConnectX ecosystem</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponsor-form" class="tier-btn-primary" style="width:100%; text-align:center;">Become a Sponsor</a>
+        <a href="#sponsor-form" class="tier-btn-primary" style="width:100%; text-align:center; border: 1.5px solid #fff;">Become a Sponsor</a>
       </div>
 
       <!-- Card 2 -->

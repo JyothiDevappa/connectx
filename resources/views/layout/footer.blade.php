@@ -106,21 +106,11 @@
 
 /* ---- Logo / Brand (left column) ---- */
 @media (max-width: 767px) {
-    .footer-two .footer-intro {
-        text-align: center;
-    }
-    .footer-two .footer-intro .logo {
-        display: flex;
-        justify-content: center;
-    }
     .footer-two .footer-intro .logo img {
         max-height: 50px;
     }
     .footer-two .footer-intro p.lh-sm {
         font-size: 14px;
-    }
-    .footer-two .footer-intro .social-icon {
-        justify-content: center !important;
     }
 }
 
@@ -136,36 +126,72 @@
 
 /* ---- Footer nav columns ---- */
 @media (max-width: 767px) {
-    /* Two columns side-by-side on mobile */
-    .footer-two .col-lg-2,
-    .footer-two .col-xxl-2 {
+    #footer-mobile-row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        flex-direction: row !important;
+    }
+    
+    /* 1. Intro (Full width) */
+    #footer-mobile-row > div:nth-child(1) {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        margin-bottom: 32px !important;
+    }
+    
+    /* 2 & 3. Links and Programs (50% side-by-side) */
+    #footer-mobile-row > div:nth-child(2),
+    #footer-mobile-row > div:nth-child(3) {
         width: 50% !important;
         max-width: 50% !important;
+        flex: 0 0 50% !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
     }
-    .footer-two .footer-title {
+    
+    /* 4. Contact Us (Full width) */
+    #footer-mobile-row > div:nth-child(4) {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        margin-top: 16px !important;
+    }
+    
+    /* Left-align all elements for clean reading */
+    #footer-mobile-row .footer-intro {
+        text-align: left !important;
+    }
+    #footer-mobile-row .footer-intro .logo {
+        justify-content: flex-start !important;
+        display: flex;
+    }
+    #footer-mobile-row .footer-intro .social-icon {
+        justify-content: flex-start !important;
+    }
+    
+    #footer-mobile-row .footer-title {
         font-size: 16px !important;
         margin-bottom: 12px !important;
     }
-    .footer-two .footer-nav-link a {
+    #footer-mobile-row .footer-nav-link a {
         font-size: 14px;
         padding: 4px 0;
     }
 }
 
 @media (max-width: 480px) {
-    /* Stack all columns to full width on very small screens */
-    .footer-two .col-lg-2,
-    .footer-two .col-xxl-2 {
-        width: 50% !important;
-        max-width: 50% !important;
-    }
-    .footer-two .footer-title {
+    #footer-mobile-row .footer-title {
         font-size: 15px !important;
     }
-    .footer-two .footer-nav-link a {
+    #footer-mobile-row .footer-nav-link a {
         font-size: 13px;
     }
-    .footer-two .footer-nav-link li {
+    #footer-mobile-row .footer-nav-link li {
         margin-bottom: 6px;
     }
 }
@@ -223,14 +249,14 @@
 
 /* ---- row gap for the columns ---- */
 @media (max-width: 767px) {
-    .footer-two .row.justify-content-between {
-        row-gap: 24px;
+    #footer-mobile-row {
+        row-gap: 24px !important;
     }
 }
 
 @media (max-width: 480px) {
-    .footer-two .row.justify-content-between {
-        row-gap: 20px;
+    #footer-mobile-row {
+        row-gap: 20px !important;
     }
 }
 </style>
@@ -242,16 +268,13 @@
         <div class="bg-wrapper position-relative">
 
             <div class="container">
-                <div class="row justify-content-between">
-
-                    <!-- LEFT -->
-                    <div class="col-xl-3 col-lg-3 col-md-6 footer-intro mb-30">
+                <div class="row justify-content-between" id="footer-mobile-row">                    <!-- LEFT -->
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-6 footer-intro mb-30">
 
                         <div class="logo mb-35 md-mb-20">
-                            <a href="{{ url('/') }}">
-                                <img src="{{ asset('images/logo/logo.png') }}" alt="Young Chanakya X Logo">
-
-
+                            <a href="{{ url('/') }}" class="d-flex align-items-center gap-3 text-decoration-none">
+                                <img src="{{ asset('images/logo/logo.png') }}" alt="Young Chanakya X Logo" style="max-height: 50px;">
+                                <span style="font-size: 22px; font-weight: 800; color: #0c3a30; font-family: 'Manrope', sans-serif; letter-spacing: -0.5px; line-height: 1;">YoungChanakyaX</span>
                             </a>
                         </div>
 
@@ -297,7 +320,7 @@
                     </div>
 
                     <!-- LINKS -->
-                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 mb-20">
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-6 mb-20">
 
                         <h5 class="footer-title">
                             Links
@@ -334,7 +357,7 @@
                     </div>
 
                     <!-- PROGRAMS -->
-                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 mb-20">
+                    <div class="col-xl-2 col-lg-2 col-md-3 col-6 mb-20">
 
                         <h5 class="footer-title">
                             Programs
@@ -347,6 +370,7 @@
                                     Become a Partner
                                 </a>
                             </li>
+
 
                             <li>
                                 <a href="{{ url('/become-a-sponser') }}">
@@ -365,7 +389,7 @@
                     </div>
 
                     <!-- CONTACT US -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 mb-20">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-6 mb-20">
 
                         <h5 class="footer-title">
                             Contact Us
@@ -393,9 +417,6 @@
                     </div>
 
                 </div>
-
-
-
             </div>
 
             <!-- SHAPES -->

@@ -556,10 +556,14 @@ header.scrolled .hamburger span {
     padding: 12px 0;
   }
 
-  .menu-logo,
-  .fs-right-logo {
+  .menu-logo {
     width: 180px;
     height: auto;
+  }
+
+  .fs-right-logo {
+    width: 60px !important;
+    height: auto !important;
   }
 
   .fs-brand-desc p {
@@ -583,6 +587,11 @@ header.scrolled .hamburger span {
 
   .site-logo {
     height: 36px;
+  }
+
+  .fs-right-logo {
+    width: 48px !important;
+    height: auto !important;
   }
 
   .logo-mark {
@@ -644,8 +653,11 @@ header.scrolled .hamburger span {
   }
 
   .fs-close {
-    position: static;
+    position: absolute;
+    top: 24px;
+    right: 24px;
     font-size: 11px;
+    z-index: 100;
   }
 
   .fs-nav {
@@ -670,10 +682,14 @@ header.scrolled .hamburger span {
     margin: 12px 0 20px;
   }
 
-  .menu-logo,
-  .fs-right-logo {
+  .menu-logo {
     width: 160px;
     height: auto;
+  }
+
+  .fs-right-logo {
+    width: 50px !important;
+    height: auto !important;
   }
 
   .fs-right-socials {

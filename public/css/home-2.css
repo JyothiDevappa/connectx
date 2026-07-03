@@ -1152,6 +1152,11 @@
     to   { opacity: 1; transform: translate(-50%,-50%) scale(1); }
 }
 
+@keyframes h2XmHubInMobile {
+    from { opacity: 0; transform: scale(0.7); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
 /* Lines fade in */
 .h2-xm__constellation.go .h2-xm__lines {
     animation: h2XmLinesIn 1.2s 0.3s ease both;
@@ -1216,6 +1221,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 24px;
+    }
+    .h2-xm__constellation.go .h2-xm__hub {
+        animation: h2XmHubInMobile 1s cubic-bezier(0.16,1,0.3,1) both;
     }
     .h2-xm__hub {
         position: relative;
@@ -1312,10 +1320,24 @@
         grid-template-columns: 1fr;
         gap: 16px;
     }
+    .h2-xm__constellation.go .h2-xm__hub {
+        animation: h2XmHubInMobile 1s cubic-bezier(0.16,1,0.3,1) both !important;
+    }
+    .h2-xm__hub {
+        margin: 15px auto 20px auto !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        transform: none !important;
+    }
     .h2-xm__hub-letter {
         width: 88px;
         height: 88px;
         font-size: 38px;
+        padding-top: 4px;
     }
     .h2-xm__hub-tagline { font-size: 9px; letter-spacing: 2px; }
     .h2-xm__node { padding: 28px 20px; }
@@ -1355,6 +1377,7 @@
         width: 72px;
         height: 72px;
         font-size: 32px;
+        padding-top: 3px;
     }
     .h2-xm__node { padding: 24px 16px; }
     .h2-xm__node-icon {

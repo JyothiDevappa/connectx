@@ -188,7 +188,7 @@ p.hero-copy,
 /* Partner card names */
 .p-name {
     font-family: 'Manrope', sans-serif !important;
-    font-size: 21px !important;
+    font-size: 24px !important;
     font-weight: 800 !important;
     line-height: 1.2 !important;
 }
@@ -457,7 +457,8 @@ select::placeholder {
     .hero-desc,
     .body-text,
     p.hero-copy,
-    .partner-content p {
+    .partner-content p,
+    .fs-brand-desc p {
         font-size: 15px !important;
         line-height: 1.8 !important;
     }
@@ -488,7 +489,8 @@ select::placeholder {
     p,
     .sec-desc,
     .hero-desc,
-    .body-text {
+    .body-text,
+    .fs-brand-desc p {
         font-size: 14px !important;
     }
     .footer-nav-link a {

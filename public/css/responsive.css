@@ -466,7 +466,7 @@
 
   .text-feature-one .media-list-item li:after,
   .text-feature-five li:after {
-    top: 8px;
+    top: 50%;
   }
 
   .block-feature-three .block-title a {

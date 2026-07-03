@@ -15,7 +15,7 @@
                     Young Chanakya is a Business Leadership Launchpad dedicated to empowering the next generation of entrepreneurs, innovators, and leaders. We bridge the gap between education and real-world success.
                 </p>
 
-                <a href="{{ url('/') }}" class="fs-website-btn">
+                <a href="https://youngchanakya.com/" target="_blank" class="fs-website-btn">
                     Explore Young Chanakya ↗
                 </a>
                 <h3> Follow Us </h3>

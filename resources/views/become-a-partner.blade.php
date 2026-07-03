@@ -82,7 +82,7 @@ $seo = [
 /* ---- Hero / Contact Section ---- */
 @media (max-width: 991px) {
     .partner-contact-section {
-        padding: 130px 0 70px;
+        padding: 120px 0 70px;
     }
     .partner-content {
         text-align: center;
@@ -97,7 +97,7 @@ $seo = [
 
 @media (max-width: 767px) {
     .partner-contact-section {
-        padding: 110px 0 60px;
+        padding: 100px 0 60px;
     }
     .partner-content h1 {
         font-size: 32px;
@@ -111,6 +111,9 @@ $seo = [
 }
 
 @media (max-width: 480px) {
+    .partner-contact-section {
+        padding: 90px 0 40px;
+    }
     .partner-content h1 {
         font-size: 28px;
     }
@@ -387,8 +390,8 @@ $seo = [
     <div class="container">
         <div class="row align-items-center gy-5">
             <div class="col-lg-6">
-                <div class="eyebrow rv">Partner With Us</div>
-                <h1>Build the Future Together.</h1>
+                <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Partner With Us</div>
+                <h1 style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Build the Future Together.</h1>
                 <p class="hero-copy">Join the Young Chanakya X ecosystem to access a premium global network. We foster meaningful content partnerships, brand collaborations, and community connections that drive innovation and long-term value.</p>
               
                 <div class="about-hero-buttons">
@@ -553,9 +556,9 @@ $seo = [
     <div class="container">
 
         <div class="text-center mb-70">
-            <div class="eyebrow rv">Our Network</div>
-            <h2 class="sec-title rv" style="color: #0c3a30;">Who We Work With</h2>
-            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">We partner with diverse organizations to create value, unlock growth, and empower digital ecosystems.</p>
+            <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Our Network</div>
+            <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Who We Work With</h2>
+            <p class="sec-desc rv mx-auto" style="margin-top: 16px; max-width: 600px; line-height: 1.6;">We partner with diverse organizations to create value, unlock growth, and empower digital ecosystems.</p>
         </div>
 
         <div class="row g-0 how-works-section-cards-container">
@@ -649,10 +652,10 @@ $seo = [
 
                     <div class="text-wrapper pt-60 pb-60 lg-pb-40 ps-3 ps-xxl-5 pe-3 pe-xxl-5">
 
-                        <div class="eyebrow rv">Why Partner with Us</div>
-                        <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(32px, 4vw, 42px); line-height: 1.2;">Structured Collaboration <br>Built for Long-Term Growth</h2>
+                        <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Why Partner with Us</div>
+                        <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Structured Collaboration <br>Built for Long-Term Growth</h2>
 
-                        <p class="sec-desc rv" style="margin-top: 20px; margin-bottom: 35px; color: #111;">
+                        <p class="sec-desc rv" style="margin-top: 20px; margin-bottom: 35px; color: #111; line-height: 1.6;">
                             Young Chanakya X connects partners and creators through meaningful collaboration, engagement, and growth.
                         </p>
 
@@ -759,8 +762,9 @@ CONNECTX PARTNERSHIP OPPORTUNITIES
 <section class="tiers-section position-relative pt-4 pb-30" id="partnership-opportunities">
   <div class="container">
     <div class="section-head text-center" style="margin-bottom: 50px;">
-        <div class="eyebrow rv" style="color: #0c3a30;">Young Chanakya X</div>
-        <h2 class="sec-title rv" style="color: #0c3a30;">Partnership Opportunities</h2>
+        <div class="eyebrow rv" style="color: #0c3a30; font-size: 10px; font-weight: 700; letter-spacing: 3px;">Young Chanakya X</div>
+        <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Partnership Opportunities</h2>
+        <p class="sec-desc rv mx-auto" style="margin-top: 16px; max-width: 600px; line-height: 1.6;">Explore our dynamic partnership levels tailored for visibility, networking, and creative collaboration.</p>
     </div>
 
     <div class="tier-grid">
@@ -888,8 +892,8 @@ EXPANDING ACROSS INDUSTRIES
 
                 <div class="ps-xl-5 ms-xxl-4">
 
-                    <div class="eyebrow rv">Global Reach</div>
-                    <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(32px, 4vw, 42px); line-height: 1.2; margin-bottom: 25px;">Expanding Across Industries <br> and Regions</h2>
+                    <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Global Reach</div>
+                    <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15; margin-bottom: 25px;">Expanding Across Industries <br> and Regions</h2>
 
                     <p class="sec-desc rv" style="margin-bottom: 35px; color: #111;">
                         Young Chanakya X is building a network of creators, voices, and collaborators across industries and geographies, enabling partners to access a diverse and growing ecosystem.

@@ -411,10 +411,23 @@
         .premium-detail-hero {
             min-height: 45vh;
             background-attachment: scroll;
+            padding-top: 120px !important;
         }
         .premium-card-wrapper, .details-sidebar-card {
             padding: 24px;
             border-radius: 16px;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .premium-detail-hero {
+            padding-top: 100px !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .premium-detail-hero {
+            padding-top: 90px !important;
         }
     }
 </style>

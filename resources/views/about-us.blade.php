@@ -108,8 +108,8 @@ $seo = [
     <div class="container">
         <div class="row align-items-center gy-5">
             <div class="col-lg-6">
-                <div class="eyebrow">About Young Chanakya X</div>
-                <h1>One Platform. Endless Possibilities.</h1>
+                <div class="eyebrow" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">About Young Chanakya X</div>
+                <h1 style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">One Platform. Endless Possibilities.</h1>
                 <p class="hero-copy">Young Chanakya X is a digital-first leadership and community platform where ambitious individuals come together to share stories, exchange knowledge, build meaningful relationships, and unlock real opportunities. We believe growth happens when people connect, learn, and collaborate through authentic experiences.</p>
               
                 <div class="about-hero-buttons">
@@ -127,7 +127,7 @@ $seo = [
             <div class="col-lg-6">
                 <div class="hero-visual">
                     <img class="hero-image" src="{{ asset('images/media/img_20.jpg') }}" alt="Young Chanakya X premium experience">
-                    <div class="hero-side-card">
+                    <div class="hero-side-card d-none d-lg-block">
                         <h5>Signature Initiative</h5>
                         <p>A creator-first platform designed to connect public voices, podcasts, and community events with trusted partners.</p>
                     </div>
@@ -213,7 +213,7 @@ $seo = [
                         Our Core Values
                     </h2>
                     
-                    <p class="mt-3 px-xl-5" style="color: #687588; font-size: 1.15rem; line-height: 1.75;">
+                    <p class="sec-desc rv mx-auto mt-3 px-xl-5" style="line-height: 1.6; max-width: 600px;">
                         Our core values define the principles that guide our choices, shape our community, and drive our vision to build a trusted global platform for leadership and growth.
                     </p>
 

@@ -81,7 +81,7 @@ $seo = [
 /* ---- Inner Banner ---- */
 @media (max-width: 991px) {
     .inner-banner-one {
-        padding-top: 160px !important;
+        padding-top: 120px !important;
         padding-bottom: 60px !important;
     }
     .inner-banner-one .hero-heading {
@@ -97,11 +97,13 @@ $seo = [
 
 @media (max-width: 767px) {
     .inner-banner-one {
-        padding-top: 130px !important;
+        padding-top: 100px !important;
         padding-bottom: 50px !important;
     }
     .inner-banner-one .hero-heading {
-        font-size: 28px;
+        font-size: clamp(26px, 7vw, 36px);
+        letter-spacing: -1px;
+        line-height: 1.15;
     }
     .inner-banner-one .col-xl-4 {
         margin-left: 0 !important;
@@ -113,12 +115,12 @@ $seo = [
 
 @media (max-width: 480px) {
     .inner-banner-one {
-        padding-top: 110px !important;
+        padding-top: 90px !important;
         padding-bottom: 40px !important;
     }
     .inner-banner-one .hero-heading {
-        font-size: 24px;
-        line-height: 1.3;
+        font-size: 26px;
+        letter-spacing: -0.5px;
     }
 }
 
@@ -296,12 +298,12 @@ $seo = [
         background-attachment: scroll;
     }
     .premium-hero-container .container {
-        padding-top: 150px;
+        padding-top: 120px;
         padding-bottom: 70px;
     }
     .text-glow-headline {
-        font-size: clamp(32px, 5vw, 56px);
-        letter-spacing: -2px;
+        font-size: clamp(30px, 5vw, 48px) !important;
+        letter-spacing: -1.5px !important;
     }
     .premium-hero-container p.fs-5 {
         font-size: 16px !important;
@@ -313,14 +315,14 @@ $seo = [
         min-height: 55vh;
     }
     .premium-hero-container .container {
-        padding-top: 130px;
+        padding-top: 100px;
         padding-bottom: 50px;
     }
     .text-glow-headline {
-        font-size: clamp(26px, 7vw, 42px);
-        letter-spacing: -1.5px;
-        line-height: 1.25;
-        padding-bottom: 10px;
+        font-size: clamp(26px, 7vw, 36px) !important;
+        letter-spacing: -1px !important;
+        line-height: 1.15 !important;
+        padding-bottom: 10px !important;
     }
     .premium-hero-container p.fs-5 {
         font-size: 15px !important;
@@ -336,12 +338,12 @@ $seo = [
         min-height: auto;
     }
     .premium-hero-container .container {
-        padding-top: 110px;
+        padding-top: 90px;
         padding-bottom: 40px;
     }
     .text-glow-headline {
-        font-size: 26px;
-        letter-spacing: -1px;
+        font-size: 26px !important;
+        letter-spacing: -0.5px !important;
     }
 }
 
@@ -368,6 +370,16 @@ $seo = [
     border-color: #0c3a30 !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 12px 24px rgba(12, 58, 48, 0.2) !important;
+}
+
+@media (max-width: 767px) {
+    .form-style-one .btn-four {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 0 !important;
+    }
 }
 
 /* Form inputs border adjustments */
@@ -430,7 +442,7 @@ $seo = [
 							<li class="text-white" style="color: #ffd2b1 !important;">Contact Us</li>
 						</ul>
 
-						<h1 class="text-glow-headline mb-4">Let's build the future of influence together.</h1>
+						<h1 class="text-glow-headline mb-4">Let's Build the Future of Influence Together.</h1>
 						<p class="fs-5 mb-0" style="max-width: 650px; line-height: 1.6; font-weight: 500; color: #ffffff; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">
 							Have questions about partnerships, sponsorships, or joining the ecosystem? Reach out and start a conversation.
 						</p>
