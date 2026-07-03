@@ -103,8 +103,8 @@ $seo = [
                     networks.
                 </p>
                 <div class="hero-btns">
-                    <button class="btn-hero-primary" onclick="window.location.href='/become-a-partner'">Collaborate With Young Chanakya X →</button>
-                    <button class="btn-hero-outline" onclick="window.location.href='/become-a-partner'">Become a Partner</button>
+                    <button class="btn-hero-primary" onclick="window.location.href='/become-a-partner'">Become a Partner →</button>
+                    {{--<button class="btn-hero-outline" onclick="window.location.href='/become-a-partner'">Become a Partner</button> --}}
                 </div>
             </div>
         </div>
@@ -119,8 +119,8 @@ $seo = [
                 <p class="hero-desc">We provide creators with state-of-the-art lounges, professional recording studios, live panel roundtables, and a global network of peers to scale their reach and impact.
                 </p>
                 <div class="hero-btns">
-                    <button class="btn-hero-primary" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Join the Community →</button>
-                    <button class="btn-hero-outline" onclick="document.getElementById('events').scrollIntoView({behavior: 'smooth'})">Explore Creator Spaces</button>
+                    <button class="btn-hero-primary" onclick="window.location.href='/connecters-list'">Join the Community →</button>
+                    {{-- <button class="btn-hero-outline" onclick="document.getElementById('events').scrollIntoView({behavior: 'smooth'})">Explore Creator Spaces</button> --}}
                 </div>
             </div>
         </div>
@@ -135,8 +135,8 @@ $seo = [
                 <p class="hero-desc">Connect your brand with highly engaged audiences through curated sponsorships, regional creator meetups, annual showcase awards, and co-branded experiences.
                 </p>
                 <div class="hero-btns">
-                    <button class="btn-hero-primary" onclick="window.location.href='/become-a-sponser'">Explore Sponsorships →</button>
-                    <button class="btn-hero-outline" onclick="window.location.href='/become-a-sponser'">Become a Sponsor</button>
+                    <button class="btn-hero-primary" onclick="window.location.href='/become-a-sponser'">Become a Sponsor →</button>
+                    {{-- <button class="btn-hero-outline" onclick="window.location.href='/become-a-sponser'">Become a Sponsor</button> --}}
                 </div>
             </div>
         </div>
@@ -1239,16 +1239,19 @@ $seo = [
                             </figure>
                             <div class="post-data">
                                 <div class="d-flex justify-content-between align-items-center flex-wrap">
-                                    <a href="{{ url('/event-details/' . $slug) }}" class="blog-title">
-                                        <h3>{{ $event['title'] }}</h3>
+                                    <a href="{{ url('/event-details/' . $slug) }}" class="blog-title" style="width: 80%;">
+                                        <h3 style="font-size: 1.2rem; font-weight: 600; line-height: 1.4; color: #0c3a30; margin-bottom: 0;">{{ $event['title'] }}</h3>
                                     </a>
-                                    <a href="{{ url('/event-details/' . $slug) }}" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s">
+                                    <a href="{{ url('/event-details/' . $slug) }}" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s" style="width: 45px; height: 45px; font-size: 18px; min-width: 45px;">
                                         <i class="bi bi-arrow-up-right"></i>
                                     </a>
                                 </div>
-                                <div class="post-info text-uppercase fw-semibold tracking-wider opacity-75 mt-2" style="font-size: 0.72rem; color: #ffd2b1;">
+                                 <p class="event-desc mt-2" style="font-size: 0.9rem; color: #475569; line-height: 1.5; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                    {{ $event['desc'] }}
+                                </p>
+                                {{-- <div class="post-info text-uppercase fw-semibold tracking-wider opacity-75" style="font-size: 0.72rem; color: #ffd2b1; border-top: none; padding-top: 0; margin-top: 0;">
                                     {{ $event['category'] }} • {{ $event['location'] }}
-                                </div>
+                                </div> --}}
                             </div>
                         </article>
                     </div>
