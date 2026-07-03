@@ -97,10 +97,9 @@ Route::get('/become-a-partner', function () {
 });
 Route::post('/become-a-partner/apply', [ApplicationController::class, 'submitPartner'])->name('partner.apply');
 Route::get('/events', fn() => view('events'));
-Route::get('/event-details/{slug?}', function ($slug = 'founder-spotlight-series-scaling-beyond-series-a') {
+Route::get('/event-details/{slug?}', function ($slug = 'c-suite-strategy-transcending-market-vulnerabilities') {
     return view('event-details', compact('slug'));
 });
-Route::post('/event-details/apply', [ApplicationController::class, 'submitRsvp'])->name('rsvp.apply');
 
 Route::post('/contact/submit', [ApplicationController::class, 'submitContact'])->name('contact.submit');
 Route::get('/check-db', function() {

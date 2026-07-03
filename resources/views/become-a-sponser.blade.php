@@ -1422,95 +1422,253 @@ WHY CONNECT WITH CONNECTX
 
 </section>
 
+<!-- =========================
+SPONSORSHIP CATEGORIES SECTION
+========================= -->
+
+<style>
+  /* TIERS UI FROM SPONSOR PAGE */
+  .tiers-section { max-width: 1300px; margin: 0 auto; padding: 100px 5vw; }
+  .tiers-header { text-align: center; margin-bottom: 56px; }
+  .tiers-header .section-title { max-width: 600px; margin: 0 auto 16px; }
+  .tiers-header .section-sub { margin: 0 auto; text-align: center; }
+
+  .tier-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .tier-grid + .tier-grid { margin-top: 24px; }
+
+  .tier-card { border: 1.5px solid rgba(12,58,48,0.12); border-radius: 20px; padding: 36px 30px; transition: all 0.25s; position: relative; display: flex; flex-direction: column; }
+  .tier-card:hover { border-color: #0c3a30; transform: translateY(-3px); box-shadow: 0 24px 60px rgba(12,58,48,0.12); }
+  .tier-card.featured { background: #0c3a30; color: #fdf9f5; border-color: #0c3a30; }
+  .tier-badge {
+    position: absolute; top: -14px; right: 28px; background: #ffd2b1; color: #0c3a30;
+    border-radius: 100px; padding: 6px 16px; font-size: 12px; font-weight: 700;
+  }
+  .tier-name { font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #2e7d62; margin-bottom: 10px; }
+  .tier-card.featured .tier-name { color: #ffd2b1; }
+  .tier-title { font-family: 'Playfair Display', Georgia, serif; font-size: 24px; font-weight: 700; color: #0c3a30; margin-bottom: 6px; }
+  .tier-card.featured .tier-title { color: #fdf9f5; }
+  .tier-tagline { font-size: 13px; color: #5a5a5a; margin-bottom: 22px; line-height: 1.5; }
+  .tier-card.featured .tier-tagline { color: rgba(253,249,245,0.7); }
+  .tier-list { list-style: none; margin-bottom: 26px; flex-grow: 1; padding: 0; }
+  .tier-list li {
+    font-size: 13.5px; color: #5a5a5a; padding: 7px 0; border-bottom: 1px solid rgba(12,58,48,0.12);
+    display: flex; align-items: flex-start; gap: 9px; line-height: 1.5;
+  }
+  .tier-card.featured .tier-list li { color: rgba(253,249,245,0.8); border-color: rgba(255,255,255,0.12); }
+  .tier-list li:last-child { border-bottom: none; }
+  .tier-list li::before { content: '✓'; color: #2e7d62; font-weight: 700; flex-shrink: 0; }
+  .tier-card.featured .tier-list li::before { color: #ffd2b1; }
+  .tier-list.collapsed li:nth-child(n+4) { display: none; }
+  .tier-toggle {
+    background: none; border: none; color: #2e7d62; font-size: 13px; font-weight: 600;
+    cursor: pointer; padding: 0 0 22px; text-align: left; text-decoration: underline;
+  }
+  .tier-card.featured .tier-toggle { color: #ffd2b1; }
+  
+  .tier-btn-primary {
+    background: #0c3a30; color: #ffd2b1; padding: 14px 32px; border-radius: 100px;
+    font-size: 15px; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.2s;
+    border: none; cursor: pointer;
+  }
+  .tier-btn-primary:hover { background: #1a5c48; transform: translateY(-1px); color: #ffd2b1; }
+  .tier-btn-outline {
+    border: 1.5px solid #0c3a30; color: #0c3a30; padding: 14px 32px; border-radius: 100px;
+    font-size: 15px; font-weight: 500; text-decoration: none; display: inline-block; transition: all 0.2s;
+  }
+  .tier-btn-outline:hover { background: #0c3a30; color: #ffd2b1; }
+
+  @media(max-width: 991px){
+      .tier-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<section class="tiers-section position-relative pt-120 pb-120" id="sponsorship-categories">
+  <div class="container">
+    <div class="section-head text-center" style="margin-bottom: 50px;">
+        <div class="eyebrow rv" style="color: #0c3a30;">Young Chanakya X</div>
+        <h2 class="sec-title rv" style="color: #0c3a30;">Sponsorship Categories</h2>
+        <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">Choose a sponsorship level based on your visibility, integration, and collaboration goals.</p>
+    </div>
+
+    <div class="tier-grid">
+      <!-- Card 1 -->
+      <div class="tier-card featured">
+        <div class="tier-badge">Flagship</div>
+        <div class="tier-name">Top Tier</div>
+        <div class="tier-title">Title Sponsor</div>
+        <div class="tier-tagline">Primary brand visibility across major ConnectX initiatives</div>
+        <ul class="tier-list collapsed">
+          <li>Naming rights across flagship events and properties</li>
+          <li>Highest logo visibility across all formats</li>
+          <li>Premium positioning in podcasts, events, and lounges</li>
+          <li>Opening and closing mention in key sessions</li>
+          <li>Dedicated brand integration in major campaigns</li>
+          <li>Priority access to top creators and influencers</li>
+          <li>Exclusive collaboration opportunities</li>
+          <li>Brand-led sessions or keynote opportunities</li>
+          <li>Featured across all promotional materials</li>
+          <li>Maximum visibility across the ConnectX ecosystem</li>
+        </ul>
+        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+        <a href="#sponsor-form" class="tier-btn-primary" style="width:100%; text-align:center;">Become a Sponsor</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="tier-card">
+        <div class="tier-name">Secondary Tier</div>
+        <div class="tier-title">Powered By Sponsor</div>
+        <div class="tier-tagline">Secondary headline branding with strong ecosystem presence</div>
+        <ul class="tier-list collapsed">
+          <li>"Powered By" branding across key initiatives</li>
+          <li>Prominent logo placement across platforms</li>
+          <li>Integration in podcasts and content series</li>
+          <li>Visibility in events and networking lounges</li>
+          <li>Co-branded campaign opportunities</li>
+          <li>Access to creator collaborations</li>
+          <li>Mentions in promotional activities</li>
+          <li>Participation in select sessions and formats</li>
+          <li>Strong presence across digital channels</li>
+          <li>Consistent exposure across programs</li>
+        </ul>
+        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Sponsor</a>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="tier-card">
+        <div class="tier-name">Shared Tier</div>
+        <div class="tier-title">Co-Sponsor</div>
+        <div class="tier-tagline">Supporting partner across shared initiatives</div>
+        <ul class="tier-list collapsed">
+          <li>Shared branding across events and activities</li>
+          <li>Logo placement alongside other sponsors</li>
+          <li>Participation in collaborative campaigns</li>
+          <li>Visibility in selected content formats</li>
+          <li>Access to networking opportunities</li>
+          <li>Inclusion in event promotions</li>
+          <li>Brand mentions in shared communications</li>
+          <li>Limited access to creator collaborations</li>
+          <li>Presence in joint initiatives</li>
+          <li>Support-level visibility across ecosystem</li>
+        </ul>
+        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Sponsor</a>
+      </div>
+    </div>
+
+    <div class="tier-grid" style="margin-top: 24px;">
+      <!-- Card 4 -->
+      <div class="tier-card">
+        <div class="tier-name">Premium Tier</div>
+        <div class="tier-title">Platinum Sponsor</div>
+        <div class="tier-tagline">High-level presence across multiple formats and touchpoints</div>
+        <ul class="tier-list collapsed">
+          <li>High-visibility branding across events and content</li>
+          <li>Integration in podcasts and digital formats</li>
+          <li>Logo placement in key promotional assets</li>
+          <li>Access to curated creators and influencers</li>
+          <li>Participation in networking sessions</li>
+          <li>Brand inclusion in campaigns and collaborations</li>
+          <li>Visibility in lounges and meetups</li>
+          <li>Priority placement in selected initiatives</li>
+          <li>Multi-channel exposure across ConnectX</li>
+          <li>Consistent brand engagement opportunities</li>
+        </ul>
+        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Sponsor</a>
+      </div>
+      
+      <!-- Card 5 -->
+      <div class="tier-card">
+        <div class="tier-name">Mid Tier</div>
+        <div class="tier-title">Gold Sponsor</div>
+        <div class="tier-tagline">Strong visibility in selected events and content formats</div>
+        <ul class="tier-list collapsed">
+          <li>Branding across selected events and sessions</li>
+          <li>Logo presence in content and campaigns</li>
+          <li>Participation in creator collaborations</li>
+          <li>Visibility in meetups and roundtables</li>
+          <li>Access to networking opportunities</li>
+          <li>Brand mentions in promotional materials</li>
+          <li>Inclusion in digital campaigns</li>
+          <li>Presence in specific content formats</li>
+          <li>Moderate exposure across channels</li>
+          <li>Engagement-driven visibility</li>
+        </ul>
+        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Sponsor</a>
+      </div>
+      
+      <!-- Card 6 -->
+      <div class="tier-card">
+        <div class="tier-name">Entry Tier</div>
+        <div class="tier-title">Silver Sponsor</div>
+        <div class="tier-tagline">Focused exposure in specific programs or segments</div>
+        <ul class="tier-list collapsed">
+          <li>Branding in selected programs or sessions</li>
+          <li>Logo placement in limited formats</li>
+          <li>Participation in specific campaigns</li>
+          <li>Access to targeted networking opportunities</li>
+          <li>Visibility in select content pieces</li>
+          <li>Inclusion in event-specific promotions</li>
+          <li>Brand mentions in curated activities</li>
+          <li>Limited creator collaboration access</li>
+          <li>Presence in niche segments</li>
+          <li>Focused visibility within defined scope</li>
+        </ul>
+        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Sponsor</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function toggleTier(btn) {
+  const list = btn.previousElementSibling;
+  if (list.classList.contains('collapsed')) {
+    list.classList.remove('collapsed');
+    btn.textContent = 'Show fewer benefits';
+  } else {
+    list.classList.add('collapsed');
+    btn.textContent = 'Show all benefits';
+  }
+}
+</script>
+
 <!-- Image Carousel Section -->
 @include('partials.image-carousel')
 
-
-
-
-
-
-
-<div class="text-feature-five position-relative mt-50 lg-mt-80 pb-50">
-
-    <div class="container">
-
-        <div class="bg-wrapper connectx-cta-bg">
-
-            <div class="row">
-
-                <!-- CONTENT SIDE -->
-                <div class="col-lg-6 ms-auto d-flex flex-column order-lg-last">
-
-                    <div class="text-wrapper pt-60 pb-60 lg-pb-40 ps-3 ps-xxl-5 pe-3 pe-xxl-5">
-
-                        <div class="title-one">
-
-                            <h2 class="text-dark">
-                                Start Building Consistent <br>
-                                Brand Visibility Through Young Chanakya X
-                            </h2>
-
-                        </div>
-
-                        <p class="text-lg text-dark mt-25 mb-35">
-
-                            Grow alongside creators, content experiences,
-                            networking formats and active community engagement.
-
-                        </p>
-
-                        <ul class="style-none connectx-list">
-
-                            <li>Connect with creators</li>
-
-                            <li>Build visibility through content</li>
-
-                            <li>Participate in active engagement formats</li>
-
-                        </ul>
-
-                        <a href="#"
-                           class="btn-eleven d-inline-flex align-items-center mt-40">
-
-                            <span class="text">
-                                Become a Sponsor Today
-                            </span>
-
-                            <div class="icon tran3s rounded-circle d-flex align-items-center">
-
-                                <img src="images/icon/icon_27.svg"
-                                     alt=""
-                                     class="lazy-img">
-
-                            </div>
-
-                        </a>
-
-                    </div>
-
+@if (session('success'))
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background: linear-gradient(135deg, #fffcf9 0%, #ffeada 100%); border: 1px solid rgba(12, 58, 48, 0.15); border-radius: 20px;">
+            <div class="modal-body text-center p-5">
+                <div class="mb-4">
+                    <i class="bi bi-check-circle-fill" style="font-size: 4rem; color: #0c3a30;"></i>
                 </div>
-
-                <!-- IMAGE SIDE -->
-                <div class="col-lg-6 d-flex order-lg-first">
-
-                    <div class="media-wrapper w-100 d-flex align-items-center justify-content-center position-relative">
-
-                        <img src="images/assets/screen_07.svg"
-                             alt=""
-                             class="lazy-img shapes screen_01">
-
-                    </div>
-
-                </div>
-
+                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; line-height: 1.3; color: #0c3a30;">Together, We Drive Meaningful Impact</h3>
+                <p class="mb-4" style="line-height: 1.6; font-size: 0.95rem; color: #687588;">
+                    Your sponsorship application has been successfully received. We are reviewing your details and will reach out shortly to design a tailored experience that amplifies your brand. Thank you for your commitment to empowering the next generation of leaders.
+                </p>
+                <a href="{{ url('/') }}" class="btn px-5 py-3 fw-bold text-uppercase w-100 d-block text-center" style="text-decoration: none; background-color: #0c3a30; color: #ffffff; border-radius: 12px; border: none; transition: all 0.3s ease;">
+                    Continue Exploring
+                </a>
             </div>
-
         </div>
-
     </div>
-
 </div>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var successModalElement = document.getElementById('successModal');
+        if (successModalElement) {
+            var myModal = new bootstrap.Modal(successModalElement);
+            myModal.show();
+        }
+    });
+</script>
+@endif
 
 @endsection
