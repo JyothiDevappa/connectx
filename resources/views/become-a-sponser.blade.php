@@ -1192,10 +1192,10 @@ CTA SECTION
                                 <select class="form-control" id="sponsor-level" name="sponsorship_level" required>
 
                                     <option value="" disabled {{ old('sponsorship_level') ? '' : 'selected' }}>
-                                        -- Sponsor Type --
+                                        Select Sponsor Type
                                     </option>
 
-                                    @foreach(['Sponsor', 'Co-Sponsor', 'Powered by Sponsor', 'Associate Sponsor', 'Supporting Sponsor', 'Education Sponsor', 'Innovation Sponsor', 'Hospitality Sponsor', 'Merchandise Sponsor', 'Logistics Sponsor', 'Financial Sponsor', 'Wellness Sponsor', 'Career Sponsor', 'Green Sponsor', 'Networking Sponsor'] as $type)
+                                    @foreach(['Title Sponsor', 'Powered By Sponsor', 'Co-Sponsor', 'Platinum Sponsor', 'Gold Sponsor', 'Silver Sponsor'] as $type)
                                         <option value="{{ $type }}" {{ old('sponsorship_level') == $type ? 'selected' : '' }}>{{ $type }}</option>
                                     @endforeach
 

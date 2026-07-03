@@ -499,10 +499,10 @@ $seo = [
                                     name="partnership_type" required>
 
                                     <option value="" disabled {{ old('partnership_type') ? '' : 'selected' }}>
-                                        -- Partnership Type --
+                                        Select Partnership Type
                                     </option>
 
-                                    @foreach(['Media Partners', 'Digital Partners', 'Consulting Partners', 'Knowledge Partners', 'Industry Partners', 'Innovation & Technology Partners', 'Community Partners', 'Learning & Development Partners', 'Event Partners', 'Finance & Growth Partners'] as $type)
+                                    @foreach(['Content Partnerships', 'Brand Collaborations', 'Media Partnerships', 'Community Partners', 'Technology Partners'] as $type)
                                         <option value="{{ $type }}" {{ old('partnership_type') == $type ? 'selected' : '' }}>{{ $type }}</option>
                                     @endforeach
 
