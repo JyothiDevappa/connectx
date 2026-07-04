@@ -639,6 +639,9 @@ $seo = [
     </div>
 </section>
 
+<!-- Image Carousel Section -->
+@include('partials.image-carousel')
+
 <div class="text-feature-five position-relative mt-40 lg-mt-80 pb-50">
 
     <div class="container">
@@ -922,10 +925,6 @@ EXPANDING ACROSS INDUSTRIES
 
     </div>
 </section>
-
-
-<!-- Image Carousel Section -->
-@include('partials.image-carousel')
 
 @if (session('success'))
 <!-- Success Modal -->

@@ -1372,7 +1372,8 @@ WHY CONNECT WITH CONNECTX
     </div>
 </section>
 
-
+<!-- Image Carousel Section -->
+@include('partials.image-carousel')
 
 <!-- third section — Brand Presence -->
 <section class="fancy-banner-seven box-layout connectx-brand-section pt-60 lg-pt-30 pb-40" id="partnership-opportunities" style="max-width: 96% !important; margin: 0 auto !important; width: 100% !important;">
@@ -1645,10 +1646,6 @@ function toggleTier(btn) {
   }
 }
 </script>
-
-<!-- Image Carousel Section -->
-@include('partials.image-carousel')
-
 @if (session('success'))
 <!-- Success Modal -->
 <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
