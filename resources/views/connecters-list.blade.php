@@ -219,8 +219,24 @@ $seo = [
             flex-direction: row !important;
             overflow-x: auto;
             gap: 8px;
-            padding-bottom: 8px;
+            padding-bottom: 12px;
             flex-wrap: nowrap !important;
+        }
+        
+        /* Modern, minimal green scrollbar for mobile tabs */
+        #v-pills-tab::-webkit-scrollbar {
+            height: 4px;
+        }
+        #v-pills-tab::-webkit-scrollbar-track {
+            background: rgba(12, 58, 48, 0.05);
+            border-radius: 4px;
+        }
+        #v-pills-tab::-webkit-scrollbar-thumb {
+            background: rgba(12, 58, 48, 0.4);
+            border-radius: 4px;
+        }
+        #v-pills-tab::-webkit-scrollbar-thumb:hover {
+            background: rgba(12, 58, 48, 0.7);
         }
         .sidebar-anchor-link {
             white-space: nowrap;
@@ -716,7 +732,6 @@ $seo = [
     .cx-label {
         color: #ffd2b1;
         font-size: 0.8rem;
-        text-transform: uppercase;
         letter-spacing: 1.5px;
         font-weight: 700;
         margin-bottom: 10px;

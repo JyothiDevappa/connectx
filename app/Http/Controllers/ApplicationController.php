@@ -148,7 +148,12 @@ class ApplicationController extends Controller
 
             // 2. Email to Admin
             \Illuminate\Support\Facades\Log::info('Sending admin inquiry email...');
-            Mail::send('emails.contact-inquiry', $validated, function ($message) use ($validated) {
+            
+            $mailData = $validated;
+            $mailData['user_message'] = $mailData['message'];
+            unset($mailData['message']);
+
+            Mail::send('emails.contact-inquiry', $mailData, function ($message) use ($validated) {
                 $message->to('youngchanakya.x@gmail.com')
                         ->subject('New Contact Inquiry: ' . ($validated['subject'] ?? 'General Inquiry'))
                         ->replyTo($validated['email'], $validated['name']);
@@ -157,7 +162,7 @@ class ApplicationController extends Controller
 
             // 3. Email to User (Confirmation)
             \Illuminate\Support\Facades\Log::info('Sending user confirmation email to: ' . $validated['email']);
-            Mail::send('emails.contact-confirmation', $validated, function ($message) use ($validated) {
+            Mail::send('emails.contact-confirmation', $mailData, function ($message) use ($validated) {
                 $message->to($validated['email'])
                         ->subject('Contact Inquiry Received - Young Chanakya X');
             });

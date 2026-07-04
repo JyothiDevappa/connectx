@@ -111,7 +111,7 @@
             @endif
             <tr>
                 <th>Message</th>
-                <td style="white-space: pre-wrap;">{{ $message }}</td>
+                <td style="white-space: pre-wrap;">{{ $user_message }}</td>
             </tr>
         </table>
     </div>
@@ -144,6 +144,11 @@
         
         <div style="margin-bottom: 15px; font-size: 13px; color: #ffffff; opacity: 0.85;">
             Copyright &copy; 2026. All rights reserved by Young Chanakya
+        </div>
+        
+        <div style="font-size: 12px; line-height: 1.8; color: #ffffff;">
+            <a href="https://connectx.youngchanakya.com/privacy-policy" style="color: #ffffff; text-decoration: none; opacity: 0.7;">Privacy Policy</a> &nbsp;|&nbsp; 
+            <a href="https://connectx.youngchanakya.com/terms-and-conditions" style="color: #ffffff; text-decoration: none; opacity: 0.7;">Terms and Conditions</a>
         </div>
     </div>
 </div>

@@ -1323,9 +1323,9 @@ body {
     letter-spacing: 2px;
   }
 
-  /* About */
   .about-inner {
     grid-template-columns: 1fr;
+    height: auto;
     min-height: auto;
   }
 

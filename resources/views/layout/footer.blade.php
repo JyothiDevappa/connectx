@@ -68,7 +68,7 @@
         font-size: 13px;
         max-width: 100%;
         margin-bottom: 20px;
-        text-align: center;
+        text-align: left;
     }
 }
 
@@ -274,7 +274,7 @@
                         <div class="logo mb-35 md-mb-20">
                             <a href="{{ url('/') }}" class="d-flex align-items-center gap-3 text-decoration-none">
                                 <img src="{{ asset('images/logo/logo.png') }}" alt="Young Chanakya X Logo" style="max-height: 50px;">
-                                <span style="font-size: 22px; font-weight: 800; color: #0c3a30; font-family: 'Manrope', sans-serif; letter-spacing: -0.5px; line-height: 1;">YoungChanakyaX</span>
+                                <span style="font-size: 22px; font-weight: 800; color: #0c3a30; font-family: 'Manrope', sans-serif; letter-spacing: -0.5px; line-height: 1;">YoungChanakya<span style="color: #ffd2b1;">X</span></span>
                             </a>
                         </div>
 
@@ -437,7 +437,7 @@
     <div class="container">
         <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 text-center text-md-start">
             <div class="copyright-left">
-                Copyright &copy; {{ date('Y') }} Young Chanakya. All rights reserved.
+                Copyright &copy; {{ date('Y') }} Young ChanakyaX. All rights reserved.
             </div>
             <!-- <div class="footer-copyright-links justify-content-center">
                 <a href="#">Privacy Policy</a>

@@ -508,7 +508,14 @@ $seo = [
                                 <div class="form-style-one ps-xl-5">
                                     <form action="{{ route('contact.submit') }}" method="POST" id="contact-form" data-toggle="validator">
                                         @csrf
-                                        <div class="messages"></div>
+                                        <div class="messages">
+                                            @if (session('error') || $errors->any())
+                                                <div class="alert alert-danger alert-dismissable">
+                                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                                    {{ session('error') ?? 'Please correct the errors in the form below.' }}
+                                                </div>
+                                            @endif
+                                        </div>
                                         <div class="row controls">
                                             <div class="col-12">
                                                 <div class="input-group-meta form-group mb-30">
@@ -564,6 +571,38 @@ $seo = [
 		<button class="scroll-top">
 			<i class="bi bi-arrow-up-short"></i>
 		</button>
+
+@if (session('success'))
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background: linear-gradient(135deg, #fffcf9 0%, #ffeada 100%); border: 1px solid rgba(12, 58, 48, 0.15); border-radius: 20px;">
+            <div class="modal-body text-center p-5">
+                <div class="mb-4">
+                    <i class="bi bi-check-circle-fill" style="font-size: 4rem; color: #0c3a30;"></i>
+                </div>
+                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; line-height: 1.3; color: #0c3a30;">Inquiry Submitted Successfully</h3>
+                <p class="mb-4" style="line-height: 1.6; font-size: 0.95rem; color: #687588;">
+                    Thank you for your inquiry. Our team has received your message and will review it shortly. We'll get back to you as soon as possible.
+                </p>
+                <a href="{{ url('/') }}" class="btn px-5 py-3 fw-bold text-uppercase w-100 d-block text-center" style="text-decoration: none; background-color: #0c3a30; color: #ffffff; border-radius: 12px; border: none; transition: all 0.3s ease;">
+                    Continue Exploring
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var successModalElement = document.getElementById('successModal');
+        if (successModalElement) {
+            var myModal = new bootstrap.Modal(successModalElement);
+            myModal.show();
+        }
+    });
+</script>
+@endif
 
 
 
