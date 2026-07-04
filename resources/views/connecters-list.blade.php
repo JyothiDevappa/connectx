@@ -549,7 +549,7 @@ $seo = [
                             <div class="panel-hero-image mb-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
 
                             <div class="d-flex align-items-center gap-3 mb-4">
-                                <div class="cluster-title-icon"><i class="bi bi-globe-central-south"></i></div>
+                                <div class="cluster-title-icon"><i class="bi bi-globe"></i></div>
                                 <div>
                                     <!-- <span class="text-uppercase fw-bold text-muted small tracking-wide">Segment 05</span> -->
                                     <h2 class="h4 fw-bold m-0 text-dark" style="font-weight: 800;">Social Impact & Academic Research</h2>

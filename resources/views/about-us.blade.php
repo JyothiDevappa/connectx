@@ -126,7 +126,7 @@ $seo = [
             </div>
             <div class="col-lg-6">
                 <div class="hero-visual">
-                    <img class="hero-image" src="{{ asset('images/media/img_20.jpg') }}" alt="Young Chanakya X premium experience">
+                    <img class="hero-image" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000" alt="Young Chanakya X premium experience">
                     <div class="hero-side-card d-none d-lg-block">
                         <h5>Signature Initiative</h5>
                         <p>A creator-first platform designed to connect public voices, podcasts, and community events with trusted partners.</p>

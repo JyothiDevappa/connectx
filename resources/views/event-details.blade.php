@@ -564,19 +564,19 @@
                         @csrf
                         <input type="hidden" name="event_title" value="{{ $currentEvent['title'] }}">
                         <div class="mb-3">
-                            <label class="form-label small fw-bold opacity-90 text-uppercase tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Full Name</label>
+                            <label class="form-label small fw-bold opacity-90 tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Full Name</label>
                             <input type="text" name="full_name" class="form-control form-control-premium" placeholder="e.g. John Doe" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label small fw-bold opacity-90 text-uppercase tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Email Address</label>
+                            <label class="form-label small fw-bold opacity-90 tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Email Address</label>
                             <input type="email" name="email" class="form-control form-control-premium" placeholder="e.g. john@company.com" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label small fw-bold opacity-90 text-uppercase tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Mobile Number</label>
+                            <label class="form-label small fw-bold opacity-90 tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Phone Number</label>
                             <input type="tel" name="phone" class="form-control form-control-premium" placeholder="e.g. +91 98765 43210" required>
                         </div>
                         <div class="mb-4">
-                            <label class="form-label small fw-bold opacity-90 text-uppercase tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Social Media URL</label>
+                            <label class="form-label small fw-bold opacity-90 tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">LinkedIn URL</label>
                             <input type="url" name="social_url" class="form-control form-control-premium" placeholder="e.g. instagram.com/username or linkedin.com/in/username" required>
                         </div>
                         <button type="submit" class="btn-premium-action">Submit Now</button>

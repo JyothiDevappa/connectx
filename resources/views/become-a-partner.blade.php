@@ -656,9 +656,9 @@ $seo = [
                     <div class="text-wrapper pt-60 pb-60 lg-pb-40 ps-3 ps-xxl-5 pe-3 pe-xxl-5">
 
                         <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Why Partner with Us</div>
-                        <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Structured Collaboration <br>Built for Long-Term Growth</h2>
+                        <h2 class="sec-title rv">Structured Collaboration <br>Built for Long-Term Growth</h2>
 
-                        <p class="sec-desc rv" style="margin-top: 20px; margin-bottom: 35px; color: #111; line-height: 1.6;">
+                        <p class="sec-desc rv">
                             Young Chanakya X connects partners and creators through meaningful collaboration, engagement, and growth.
                         </p>
 
@@ -886,43 +886,48 @@ function toggleTier(btn) {
 <!-- =========================
 EXPANDING ACROSS INDUSTRIES
 ========================= -->
-<section class="connectx-expand-section pt-30 pb-50">
-    <div class="container">
+<section class="connectx-expand-section pt-30 pb-50" style="background-color: #0c3a30;">
+    <div class="container py-5">
         <div class="row align-items-center gy-5">
 
             <!-- CONTENT SIDE -->
             <div class="col-lg-6 order-lg-last wow fadeInRight">
+                <div class="px-lg-4" style="margin-top: -30px;">
+                    <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px; color: #ffd2b1;">Global Reach</div>
+                    <h2 class="sec-title rv" style="color: #ffffff; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15; margin-bottom: 25px;">Expanding Across Industries <br> and Regions</h2>
 
-                <div class="ps-xl-5 ms-xxl-4">
-
-                    <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Global Reach</div>
-                    <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15; margin-bottom: 25px;">Expanding Across Industries <br> and Regions</h2>
-
-                    <p class="sec-desc rv" style="margin-bottom: 35px; color: #111;">
+                    <p class="sec-desc rv" style="margin-bottom: 35px; color: rgba(255, 255, 255, 0.8);">
                         Young Chanakya X is building a network of creators, voices, and collaborators across industries and geographies, enabling partners to access a diverse and growing ecosystem.
                     </p>
 
-                    <ul class="style-none connectx-expand-points">
+                    <style>
+                        .connectx-expand-points.theme-dark li {
+                            color: #ffffff !important;
+                        }
+                        .connectx-expand-points.theme-dark li::before {
+                            background: rgba(255, 210, 177, 0.15) !important;
+                            color: #ffd2b1 !important;
+                            border: 1px solid rgba(255, 210, 177, 0.3) !important;
+                        }
+                    </style>
+                    <ul class="style-none connectx-expand-points theme-dark">
                         <li>Multi-industry creator ecosystem</li>
                         <li>Cross-border collaboration opportunities</li>
                         <li>Digital-first scalable network</li>
                     </ul>
-
                 </div>
-
             </div>
 
             <!-- IMAGE SIDE -->
             <div class="col-lg-6 col-md-10 m-auto wow fadeInLeft">
-
-                <div class="media-wrapper md-mt-60 pe-xl-4">
+                <div class="media-wrapper px-lg-4">
                     <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80"
                         alt="Global business collaboration"
-                        class="lazy-img w-100 connectx-expand-pro-img">
+                        class="lazy-img w-100 connectx-expand-pro-img" style="border-radius: 20px;">
                 </div>
-
             </div>
 
+        </div>
     </div>
 </section>
 
