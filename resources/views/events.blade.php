@@ -590,6 +590,10 @@ $seo = [
                     <a href="#" class="lux-pagination-item active">1</a>
                     <a href="#" class="lux-pagination-item">2</a>
                     <a href="#" class="lux-pagination-item">3</a>
+                    <a href="#" class="lux-pagination-item">4</a>
+                    <a href="#" class="lux-pagination-item">5</a>
+                    <a href="#" class="lux-pagination-item">6</a>
+                    <a href="#" class="lux-pagination-item">7</a>
                     <a href="#" class="lux-pagination-item"><i class="bi bi-chevron-right"></i></a>
                 </div>
             </div>
