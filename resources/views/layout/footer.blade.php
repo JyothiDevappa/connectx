@@ -436,7 +436,7 @@
     <div class="container">
         <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 text-center text-md-start">
             <div class="copyright-left">
-                Copyright &copy; {{ date('Y') }} Young Chanakya X. All rights reserved.
+                Copyright &copy; {{ date('Y') }} Young Chanakya X. All Rights Reserved.
             </div>
             <!-- <div class="footer-copyright-links justify-content-center">
                 <a href="#">Privacy Policy</a>
