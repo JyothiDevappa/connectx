@@ -1184,7 +1184,7 @@ $seo = [
                             'desc' => 'Direct technical mapping alongside elite system architects deploying robust enterprise configurations.',
                             'date' => 'AUG 12, 2026',
                             'location' => 'VIRTUAL SYMPOSIUM',
-                            'host' => 'Jyothidev',
+                            'host' => 'Siddharth Rao',
                             'role' => 'Full Stack Architect',
                             'img' => 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800'
                         ],

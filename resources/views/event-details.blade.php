@@ -85,9 +85,9 @@
             'time' => '03:00 PM - 05:30 PM IST',
             'location' => 'VIRTUAL SYMPOSIUM',
             'venue_detail' => 'Secure Live Stream Link',
-            'host' => 'Jyothidev',
+            'host' => 'Siddharth Rao',
             'role' => 'Full Stack Architect',
-            'host_bio' => 'Jyothidev is a SaaS architecture consultant who has designed compliant multi-region databases.',
+            'host_bio' => 'Siddharth Rao is a SaaS architecture consultant who has designed compliant multi-region databases.',
             'img' => 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1200',
             'highlights' => [
                 'Direct technical mapping with system architects',

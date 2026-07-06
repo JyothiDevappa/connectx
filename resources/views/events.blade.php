@@ -463,7 +463,7 @@ $seo = [
             'desc' => 'Direct technical mapping alongside elite system architects deploying robust enterprise configurations.',
             'date' => 'AUG 12, 2026',
             'location' => 'VIRTUAL SYMPOSIUM',
-            'host' => 'Jyothidev',
+            'host' => 'Siddharth Rao',
             'role' => 'Full Stack Architect',
             'img' => 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800'
         ],
@@ -583,6 +583,7 @@ $seo = [
             @endforeach
         </div>
 
+        {{-- 
         <div class="row mt-5 pt-4">
             <div class="col-12 text-center">
                 <div class="d-inline-flex align-items-center gap-2">
@@ -597,7 +598,8 @@ $seo = [
                     <a href="#" class="lux-pagination-item"><i class="bi bi-chevron-right"></i></a>
                 </div>
             </div>
-        </div>
+        </div> 
+        --}}
 
     </div>
 </div>
