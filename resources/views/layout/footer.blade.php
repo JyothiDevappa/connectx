@@ -310,8 +310,8 @@
                             </li>
 
                             <li>
-                                <a href="https://www.threads.net/@youngchanakyax" target="_blank">
-                                    <i class="bi bi-threads"></i>
+                                <a href="https://www.facebook.com/youngchanakya/" target="_blank">
+                                    <i class="bi bi-facebook"></i>
                                 </a>
                             </li>
                         </ul>

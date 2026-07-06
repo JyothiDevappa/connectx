@@ -60,7 +60,7 @@
                     <a href="https://www.linkedin.com/showcase/young-chanakya-x/" target="_blank"><i class="bi bi-linkedin"></i></a>
                     <a href="https://x.com/YoungChanakyaX" target="_blank"><i class="bi bi-twitter-x"></i></a>
                     <a href="https://www.youtube.com/channel/UCunrW6XIpxgonRXd6CjQ9eQ" target="_blank"><i class="bi bi-youtube"></i></a>
-                    <a href="https://www.threads.net/@youngchanakyax" target="_blank"><i class="bi bi-threads"></i></a>
+                    <a href="https://www.facebook.com/youngchanakya/" target="_blank"><i class="bi bi-facebook"></i></a>
                 </div>
             </div>
 
