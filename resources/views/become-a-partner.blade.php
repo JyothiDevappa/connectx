@@ -771,23 +771,23 @@ CONNECTX PARTNERSHIP OPPORTUNITIES
     </div>
 
     <div class="tier-grid">
-      <!-- Content Partners -->
+      <!-- Technology partner -->
       <div class="tier-card featured">
-        <div class="tier-badge">Visibility</div>
-        <div class="tier-name">Creation</div>
-        <div class="tier-title">Content Partnerships</div>
-        <div class="tier-tagline">Collaborate on creator-led content formats and storytelling.</div>
+        <div class="tier-badge">Infrastructure</div>
+        <div class="tier-name">Integration</div>
+        <div class="tier-title">Technology Partners</div>
+        <div class="tier-tagline">Support ecosystems through tools, APIs, and digital platforms.</div>
         <ul class="tier-list collapsed">
-          <li>Podcasts and interview series</li>
-          <li>Creator-led storytelling formats</li>
-          <li>Video and digital content production</li>
-          <li>Knowledge-driven content</li>
-          <li>Multi-format collaborations</li>
-          <li>Co-authored reports and insights</li>
-          <li>Educational content creation</li>
+          <li>Platform and API integrations</li>
+          <li>Production technologies</li>
+          <li>Creator economy solutions</li>
+          <li>Infrastructure support</li>
+          <li>Content innovation tools</li>
+          <li>Analytics and data sharing</li>
+          <li>Hardware provisioning</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#partner-form" class="tier-btn-primary" style="width:100%; text-align:center;">Become a Content Partner</a>
+        <a href="#partner-form" class="tier-btn-primary" style="width:100%; text-align:center;">Become a Tech Partner</a>
       </div>
 
       <!-- Brand Partners -->
@@ -846,22 +846,22 @@ CONNECTX PARTNERSHIP OPPORTUNITIES
         <a href="#partner-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Community Partner</a>
       </div>
       
-      <!-- Technology Partners -->
+      <!-- Content Partnerships -->
       <div class="tier-card">
-        <div class="tier-name">Infrastructure</div>
-        <div class="tier-title">Technology Partners</div>
-        <div class="tier-tagline">Support ecosystems through tools and digital platforms.</div>
+        <div class="tier-name">Creation</div>
+        <div class="tier-title">Content Partnerships</div>
+        <div class="tier-tagline">Collaborate on creator-led content formats and storytelling.</div>
         <ul class="tier-list collapsed">
-          <li>Platform and API integrations</li>
-          <li>Production technologies</li>
-          <li>Creator economy solutions</li>
-          <li>Infrastructure support</li>
-          <li>Content innovation tools</li>
-          <li>Analytics and data sharing</li>
-          <li>Hardware provisioning</li>
+          <li>Podcasts and interview series</li>
+          <li>Creator-led storytelling formats</li>
+          <li>Video and digital content production</li>
+          <li>Knowledge-driven content</li>
+          <li>Multi-format collaborations</li>
+          <li>Co-authored reports and insights</li>
+          <li>Educational content creation</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#partner-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Tech Partner</a>
+        <a href="#partner-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Content Partner</a>
       </div>
       
       <!-- Empty space for grid alignment or an extra card if needed, we'll leave it empty for a nice offset or make it a 2-col on desktop for the bottom row -->

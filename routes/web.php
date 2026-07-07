@@ -96,6 +96,10 @@ Route::get('/become-a-partner', function () {
     return view('become-a-partner');
 });
 Route::post('/become-a-partner/apply', [ApplicationController::class, 'submitPartner'])->name('partner.apply');
+
+Route::get('/become-a-speaker', function () {
+    return view('become-a-speaker');
+});
 Route::get('/events', fn() => view('events'));
 Route::get('/event-details/{slug?}', function ($slug = 'c-suite-strategy-transcending-market-vulnerabilities') {
     return view('event-details', compact('slug'));

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Become a Speaker — Young Chanakya X</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0c3a30;
+    --ink-deep:#082821;
+    --peach:#ffd2b1;
+    --peach-deep:#ffbe8e;
+    --cream:#fffaf4;
+    --white:#ffffff;
+    --text:#12261f;
+    --text-soft:#4d6459;
+    --hero-gradient: linear-gradient(135deg, #ffffff 20%, #ffbe8e 100%);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Manrope',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden;}
+  img{display:block;max-width:100%;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  .display{font-family:'Fraunces',serif;}
+  .mono{font-family:'Space Mono',monospace;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  section{position:relative;}
+
+  /* ---------- Buttons ---------- */
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:100px;
+    font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;cursor:pointer;border:1.5px solid transparent;
+    transition:all .25s ease;white-space:nowrap;}
+  .btn-primary{background:var(--ink);color:var(--peach);}
+  .btn-primary:hover{background:var(--ink-deep);transform:translateY(-2px);}
+  .btn-outline{border-color:var(--ink);color:var(--ink);background:transparent;}
+  .btn-outline:hover{background:var(--ink);color:var(--peach);}
+  .btn-peach{background:var(--ink);color:var(--peach-deep);width:100%;justify-content:center;}
+  .btn svg{width:16px;height:16px;flex-shrink:0;}
+
+  /* ---------- Nav ---------- */
+  header{position:sticky;top:0;z-index:100;background:rgba(255,250,244,0.9);backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(12,58,48,0.1);}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;max-width:1180px;margin:0 auto;}
+  .logo{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:700;font-size:22px;letter-spacing:-0.5px;color:var(--ink);}
+  .logo .x-mark{width:34px;height:34px;border-radius:9px;background:var(--ink);display:flex;align-items:center;justify-content:center;
+    color:var(--peach);font-family:'Fraunces',serif;font-weight:700;font-size:19px;}
+  .nav-links{display:flex;gap:36px;align-items:center;}
+  .nav-links a{font-size:14.5px;font-weight:600;color:var(--text);opacity:.75;transition:opacity .2s;}
+  .nav-links a:hover{opacity:1;}
+  @media(max-width:900px){.nav-links{display:none;}}
+
+  /* ---------- Section headers ---------- */
+  .section-head{max-width:640px;margin-bottom:56px;}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Space Mono',monospace;font-size:12.5px;
+    letter-spacing:1.5px;text-transform:uppercase;color:var(--ink);background:rgba(12,58,48,0.08);
+    padding:8px 16px;border-radius:100px;margin-bottom:22px;font-weight:700;}
+  .eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--ink);}
+  .section-head h2{font-family:'Fraunces',serif;font-size:clamp(30px,3.6vw,44px);font-weight:600;color:var(--ink);
+    letter-spacing:-1px;line-height:1.1;margin-bottom:16px;}
+  .section-head p{font-size:16.5px;color:var(--text-soft);line-height:1.6;}
+
+  /* ---------- Hero (with embedded form) ---------- */
+  .hero{background:var(--hero-gradient);padding:64px 0 88px;position:relative;overflow:hidden;}
+  .hero .wrap{position:relative;z-index:2;}
+  .hero-x-glyph{position:absolute;right:-100px;top:-140px;font-family:'Fraunces',serif;font-weight:700;
+    font-size:min(55vw,820px);color:rgba(12,58,48,0.05);line-height:1;pointer-events:none;z-index:1;user-select:none;}
+  .hero-grid{display:grid;grid-template-columns:1fr 0.95fr;gap:52px;align-items:start;}
+  .hero-copy{padding-top:28px;}
+  .hero h1{font-size:clamp(34px,4.4vw,54px);line-height:1.06;font-weight:600;color:var(--ink);letter-spacing:-1.3px;margin-bottom:20px;}
+  .hero h1 em{font-style:italic;font-weight:500;}
+  .hero p.lead{font-size:17px;line-height:1.65;color:var(--text-soft);max-width:460px;margin-bottom:30px;}
+  .hero-points{display:flex;flex-direction:column;gap:14px;margin-bottom:34px;}
+  .hero-points div{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--text);font-weight:600;}
+  .hero-points svg{width:19px;height:19px;flex-shrink:0;margin-top:1px;color:var(--ink);}
+  .hero-stats{display:flex;gap:36px;padding-top:26px;border-top:1px solid rgba(12,58,48,0.15);max-width:440px;}
+  .hero-stats div{display:flex;flex-direction:column;gap:2px;}
+  .hero-stats .num{font-family:'Fraunces',serif;font-weight:600;font-size:26px;color:var(--ink);}
+  .hero-stats .label{font-size:12px;color:var(--text-soft);font-weight:600;}
+
+  .hero-form-card{background:var(--white);border-radius:22px;padding:36px;box-shadow:0 40px 70px -30px rgba(12,58,48,0.3);}
+  .hero-form-card .form-kicker{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;}
+  .hero-form-card .form-kicker h3{font-family:'Fraunces',serif;font-size:21px;font-weight:600;color:var(--ink);}
+  .hero-form-card .form-kicker span{font-family:'Space Mono',monospace;font-size:11px;color:var(--peach-deep);
+    background:var(--ink);padding:5px 11px;border-radius:100px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
+  .field label{font-size:12px;font-weight:700;color:var(--ink);letter-spacing:.2px;}
+  .field input,.field select,.field textarea{padding:12px 14px;border-radius:10px;border:1.5px solid rgba(12,58,48,0.18);
+    background:var(--cream);font-family:'Manrope',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border-color .2s;}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--ink);}
+  .field textarea{resize:vertical;min-height:80px;}
+  .radio-group{display:flex;gap:10px;}
+  .radio-group label{flex:1;text-align:center;padding:11px;border-radius:10px;border:1.5px solid rgba(12,58,48,0.18);
+    font-size:13px;font-weight:700;color:var(--text-soft);cursor:pointer;transition:all .2s;}
+  .radio-group input{display:none;}
+  .radio-group label:has(input:checked){background:var(--peach);border-color:var(--ink);color:var(--ink);}
+  .form-note{font-size:11.5px;color:var(--text-soft);text-align:center;display:block;margin-top:12px;}
+  #thankyou{display:none;text-align:center;padding:30px 10px;}
+  #thankyou h3{font-family:'Fraunces',serif;font-size:23px;color:var(--ink);margin-bottom:8px;}
+  #thankyou p{color:var(--text-soft);font-size:14px;}
+  @media(max-width:940px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-copy{padding-top:0;}
+    .form-row{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Language strip ---------- */
+  .lang-strip{background:var(--ink);color:var(--peach);padding:22px 0;overflow:hidden;}
+  .lang-strip .marquee-track{display:flex;gap:44px;white-space:nowrap;animation:scrollLeft 32s linear infinite;width:max-content;}
+  .lang-strip span{font-family:'Fraunces',serif;font-size:20px;font-weight:500;opacity:.9;display:flex;align-items:center;gap:44px;}
+  .lang-strip .dot{width:5px;height:5px;border-radius:50%;background:var(--peach-deep);opacity:.6;}
+  @keyframes scrollLeft{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  .lang-caption{text-align:center;font-size:13px;color:var(--text-soft);padding:16px 0;font-weight:600;}
+
+  /* ---------- Speaking formats (NEW) ---------- */
+  .formats-section{padding:100px 0;background:var(--white);}
+  .formats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .format-card{background:var(--cream);border:1.5px solid rgba(12,58,48,0.1);border-radius:18px;padding:30px 26px;transition:border-color .2s, transform .2s;}
+  .format-card:hover{border-color:var(--ink);transform:translateY(-4px);}
+  .format-icon{width:48px;height:48px;border-radius:12px;background:var(--ink);display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+  .format-icon svg{width:24px;height:24px;color:var(--peach);}
+  .format-card h3{font-family:'Fraunces',serif;font-size:18px;font-weight:600;color:var(--ink);margin-bottom:9px;}
+  .format-card p{font-size:13.5px;color:var(--text-soft);line-height:1.55;}
+  @media(max-width:900px){.formats-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.formats-grid{grid-template-columns:1fr;}}
+
+  /* ---------- Who belongs (REDESIGNED: collage + checklist) ---------- */
+  .who-section{padding:100px 0;background:var(--cream);}
+  .who-layout{display:grid;grid-template-columns:0.9fr 1.1fr;gap:60px;align-items:center;}
+  .collage{position:relative;height:460px;}
+  .collage img{position:absolute;border-radius:18px;object-fit:cover;box-shadow:0 30px 50px -25px rgba(12,58,48,0.35);}
+  .collage .c1{width:62%;height:64%;top:0;left:0;z-index:2;}
+  .collage .c2{width:52%;height:48%;bottom:0;right:0;z-index:3;border:6px solid var(--cream);}
+  .collage .c3{width:38%;height:34%;top:34%;right:6%;z-index:1;border:6px solid var(--cream);}
+  .who-list{display:flex;flex-direction:column;gap:16px;}
+  .who-item{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;background:var(--white);border-radius:14px;border:1px solid rgba(12,58,48,0.08);}
+  .who-item .check{width:24px;height:24px;border-radius:50%;background:var(--peach);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+  .who-item .check svg{width:13px;height:13px;color:var(--ink);}
+  .who-item h4{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:3px;}
+  .who-item p{font-size:13.5px;color:var(--text-soft);line-height:1.5;}
+  @media(max-width:940px){.who-layout{grid-template-columns:1fr;}.collage{height:340px;margin-bottom:10px;}}
+
+  /* ---------- Eligibility (NEW) ---------- */
+  .eligibility-section{padding:100px 0;background:var(--white);}
+  .elig-layout{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:center;}
+  .elig-image{border-radius:20px;overflow:hidden;aspect-ratio:4/5;}
+  .elig-image img{width:100%;height:100%;object-fit:cover;}
+  .elig-checklist{display:flex;flex-direction:column;gap:0;}
+  .elig-row{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid rgba(12,58,48,0.1);align-items:flex-start;}
+  .elig-row:first-child{padding-top:0;}
+  .elig-row .tick{width:28px;height:28px;border-radius:8px;background:var(--ink);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .elig-row .tick svg{width:14px;height:14px;color:var(--peach);}
+  .elig-row h4{font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:var(--ink);margin-bottom:4px;}
+  .elig-row p{font-size:13.5px;color:var(--text-soft);line-height:1.55;}
+  .elig-note{margin-top:26px;padding:18px 20px;background:var(--peach);border-radius:14px;font-size:13.5px;color:var(--ink);font-weight:600;}
+  @media(max-width:940px){.elig-layout{grid-template-columns:1fr;}.elig-image{aspect-ratio:16/9;order:-1;}}
+
+  /* ---------- Journey (REDESIGNED: horizontal scroll stepper) ---------- */
+  .journey-section{padding:100px 0;background:var(--ink);color:var(--cream);}
+  .journey-section .section-head h2{color:var(--peach);}
+  .journey-section .section-head p{color:rgba(255,250,244,0.65);}
+  .journey-section .eyebrow{background:rgba(255,210,177,0.14);color:var(--peach);}
+  .journey-section .eyebrow::before{background:var(--peach);}
+  .journey-scroller{display:flex;gap:20px;overflow-x:auto;padding-bottom:20px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;}
+  .journey-scroller::-webkit-scrollbar{height:5px;}
+  .journey-scroller::-webkit-scrollbar-thumb{background:rgba(255,250,244,0.25);border-radius:10px;}
+  .journey-card{scroll-snap-align:start;flex:0 0 240px;background:rgba(255,250,244,0.05);border:1px solid rgba(255,250,244,0.12);
+    border-radius:18px;padding:26px 22px;display:flex;flex-direction:column;gap:12px;}
+  .journey-card .jnum{font-family:'Fraunces',serif;font-size:32px;font-weight:600;color:var(--peach-deep);}
+  .journey-card h3{font-family:'Fraunces',serif;font-size:18px;font-weight:600;color:var(--peach);}
+  .journey-card p{font-size:13.5px;color:rgba(255,250,244,0.68);line-height:1.55;}
+  .journey-arrow-row{display:flex;justify-content:center;margin-top:22px;gap:8px;color:rgba(255,250,244,0.4);font-size:12.5px;font-family:'Space Mono',monospace;}
+
+  /* ---------- Benefits ---------- */
+  .benefits-section{padding:100px 0;background:var(--cream);}
+  .benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(12,58,48,0.12);border:1px solid rgba(12,58,48,0.12);border-radius:20px;overflow:hidden;}
+  .benefit-card{background:var(--white);padding:34px 30px;}
+  .benefit-card .mono{font-size:12px;color:var(--peach-deep);background:var(--ink);display:inline-block;padding:4px 10px;border-radius:100px;margin-bottom:16px;}
+  .benefit-card h3{font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--ink);margin-bottom:10px;}
+  .benefit-card p{font-size:14px;color:var(--text-soft);line-height:1.55;}
+  @media(max-width:860px){.benefits-grid{grid-template-columns:1fr;}}
+
+  /* ---------- Testimonials ---------- */
+  .testimonials-section{padding:100px 0;background:var(--peach);}
+  .testimonials-section .section-head h2{color:var(--ink);}
+  .testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .testi-card{background:var(--white);border-radius:18px;padding:32px;display:flex;flex-direction:column;gap:20px;}
+  .testi-quote{font-family:'Fraunces',serif;font-size:18px;font-style:italic;font-weight:500;line-height:1.5;color:var(--ink);}
+  .testi-person{display:flex;align-items:center;gap:14px;}
+  .testi-person img{width:52px;height:52px;border-radius:50%;object-fit:cover;}
+  .testi-person h4{font-size:14.5px;font-weight:800;color:var(--ink);}
+  .testi-person span{font-size:12.5px;color:var(--text-soft);}
+  @media(max-width:860px){.testi-grid{grid-template-columns:1fr;}}
+
+  /* ---------- CTA Banner ---------- */
+  .cta-banner{padding:110px 0;background:var(--hero-gradient);text-align:center;position:relative;overflow:hidden;}
+  .cta-banner h2{font-family:'Fraunces',serif;font-size:clamp(30px,4.4vw,52px);font-weight:600;color:var(--ink);letter-spacing:-1px;max-width:700px;margin:0 auto 20px;line-height:1.12;}
+  .cta-banner p{font-size:16.5px;color:var(--text-soft);max-width:520px;margin:0 auto 34px;line-height:1.6;}
+
+  /* ---------- FAQ ---------- */
+  .faq-section{padding:100px 0;background:var(--white);}
+  .faq-list{max-width:780px;}
+  .faq-item{border-bottom:1px solid rgba(12,58,48,0.14);}
+  .faq-q{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 0;cursor:pointer;
+    font-family:'Fraunces',serif;font-size:18px;font-weight:600;color:var(--ink);}
+  .faq-q .plus{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--ink);flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--ink);transition:transform .25s ease;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+  .faq-a p{padding-bottom:26px;font-size:14.5px;color:var(--text-soft);line-height:1.65;max-width:640px;}
+  .faq-item.open .faq-a{max-height:220px;}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--ink-deep);color:rgba(255,250,244,0.7);padding:70px 0 30px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:50px;border-bottom:1px solid rgba(255,250,244,0.1);}
+  .footer-brand .logo{color:var(--peach);}
+  .footer-brand .logo .x-mark{background:var(--peach);color:var(--ink-deep);}
+  .footer-brand p{font-size:14px;line-height:1.6;margin-top:16px;max-width:280px;color:rgba(255,250,244,0.55);}
+  .footer-col h4{font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:1px;text-transform:uppercase;color:var(--peach-deep);margin-bottom:18px;}
+  .footer-col a{display:block;font-size:14px;margin-bottom:12px;color:rgba(255,250,244,0.7);transition:color .2s;}
+  .footer-col a:hover{color:var(--peach);}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:26px;font-size:13px;color:rgba(255,250,244,0.45);flex-wrap:wrap;gap:14px;}
+  .social-row{display:flex;gap:14px;}
+  .social-row a{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,250,244,0.25);display:flex;align-items:center;justify-content:center;font-size:13px;}
+  @media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#" class="logo"><span class="x-mark">X</span>Young Chanakya X</a>
+    <div class="nav-links">
+      <a href="#formats">Speaking Formats</a>
+      <a href="#who">Who Speaks</a>
+      <a href="#journey">The Process</a>
+      <a href="#faq">FAQs</a>
+    </div>
+    <a href="#apply-form" class="btn btn-primary">Apply to Speak</a>
+  </nav>
+</header>
+
+<!-- HERO with embedded form -->
+<section class="hero" id="apply-form">
+  <div class="hero-x-glyph">X</div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Become a YCX Speaker</span>
+        <h1>Your story is <em>someone else's</em> turning point.</h1>
+        <p class="lead">Young Chanakya X is looking for people whose experience deserves a room, a mic, and an audience that's ready to listen. Apply below — it takes less than five minutes.</p>
+        <div class="hero-points">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg> No cost to apply or to speak</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg> Speak in the language you're most fluent in</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg> Full story shaping and rehearsal support included</div>
+        </div>
+        <div class="hero-stats">
+          <div><span class="num">5–7</span><span class="label">Days to hear back</span></div>
+          <div><span class="num">10+</span><span class="label">Languages welcomed</span></div>
+          <div><span class="num">0</span><span class="label">Cost to apply</span></div>
+        </div>
+      </div>
+
+      <div class="hero-form-card">
+        <div class="form-kicker">
+          <h3>Apply to speak</h3>
+          <span class="mono">STEP 1 OF 1</span>
+        </div>
+        <form id="speakerForm">
+          <div class="form-row">
+            <div class="field"><label>First name</label><input type="text" required></div>
+            <div class="field"><label>Last name</label><input type="text" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label>Email address</label><input type="email" required></div>
+            <div class="field"><label>Phone number</label><input type="tel" required></div>
+          </div>
+          <div class="field">
+            <label>Applying for yourself or nominating someone?</label>
+            <div class="radio-group">
+              <label><input type="radio" name="applyingFor" checked><span>Myself</span></label>
+              <label><input type="radio" name="applyingFor"><span>Someone else</span></label>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label>You are primarily a...</label>
+              <select>
+                <option>Student</option><option>Entrepreneur</option><option>Founder</option>
+                <option>Professional</option><option>Creator</option><option>Mentor</option>
+                <option>Educator</option><option>Investor</option><option>Business leader</option>
+                <option>Organization</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Preferred speaking language</label>
+              <select>
+                <option>English</option><option>हिन्दी (Hindi)</option><option>தமிழ் (Tamil)</option>
+                <option>తెలుగు (Telugu)</option><option>ಕನ್ನಡ (Kannada)</option><option>മലയാളം (Malayalam)</option>
+                <option>বাংলা (Bengali)</option><option>मराठी (Marathi)</option><option>ਪੰਜਾਬੀ (Punjabi)</option>
+                <option>ગુજરાતી (Gujarati)</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label>LinkedIn or portfolio link</label><input type="url" placeholder="https://"></div>
+          <div class="field"><label>Share your story and its main message, in 200 words</label><textarea required></textarea></div>
+          <button type="submit" class="btn btn-peach">Submit Application</button>
+          <span class="form-note">We'll only use this to reach out about your application.</span>
+        </form>
+        <div id="thankyou">
+          <h3>You're in the queue.</h3>
+          <p>Thank you for sharing your story — our team will reach out within 5–7 working days if it's a fit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LANGUAGE STRIP -->
+<div class="lang-strip">
+  <div class="marquee-track">
+    <span>
+      English <i class="dot"></i> हिन्दी <i class="dot"></i> தமிழ் <i class="dot"></i> తెలుగు <i class="dot"></i> ಕನ್ನಡ <i class="dot"></i> മലയാളം <i class="dot"></i> বাংলা <i class="dot"></i> मराठी <i class="dot"></i> ਪੰਜਾਬੀ <i class="dot"></i> ગુજરાતી <i class="dot"></i>
+      English <i class="dot"></i> हिन्दी <i class="dot"></i> தமிழ் <i class="dot"></i> తెలుగు <i class="dot"></i> ಕನ್ನಡ <i class="dot"></i> മലയാളം <i class="dot"></i> বাংলা <i class="dot"></i> मराठी <i class="dot"></i> ਪੰਜਾਬੀ <i class="dot"></i> ગુજરાતી <i class="dot"></i>
+    </span>
+  </div>
+</div>
+<p class="lang-caption">Because the best stories shouldn't wait for a translation.</p>
+
+<!-- SPEAKING FORMATS (NEW) -->
+<section class="formats-section" id="formats">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Ways To Take The Stage</span>
+      <h2>Every story finds its own format.</h2>
+      <p>Not every story fits the same room. Tell us your story and we'll help you find the format it's best suited for.</p>
+    </div>
+    <div class="formats-grid">
+      <div class="format-card">
+        <div class="format-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg></div>
+        <h3>Podcast Episode</h3>
+        <p>A recorded, long-form conversation released across YCX's audio and video channels.</p>
+      </div>
+      <div class="format-card">
+        <div class="format-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h20v14H2z"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3>Live Stage Talk</h3>
+        <p>A solo talk in front of a live YCX audience at one of our city events.</p>
+      </div>
+      <div class="format-card">
+        <div class="format-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></div>
+        <h3>Workshop Session</h3>
+        <p>A hands-on session teaching a skill or framework to a small, focused group.</p>
+      </div>
+      <div class="format-card">
+        <div class="format-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 014-4h6a4 4 0 014 4v2"/><circle cx="19" cy="8" r="3"/></svg></div>
+        <h3>Panel Conversation</h3>
+        <p>A guided discussion alongside other speakers, moderated by the YCX team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO BELONGS (REDESIGNED) -->
+<section class="who-section" id="who">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Who Belongs On This Stage</span>
+      <h2>If you're building something, you belong here.</h2>
+      <p>YCX speakers come from every corner of ambition. What they share is a story worth passing on.</p>
+    </div>
+    <div class="who-layout">
+      <div class="collage">
+        <img class="c1" src="https://images.unsplash.com/photo-1652471943570-f3590a4e52ed?auto=format&fit=crop&w=600&q=80" alt="Founder speaker">
+        <img class="c2" src="https://images.unsplash.com/photo-1595211877493-41a4e5f236b3?auto=format&fit=crop&w=500&q=80" alt="Mentor speaker">
+        <img class="c3" src="https://images.unsplash.com/photo-1627161683077-e34782c24d81?auto=format&fit=crop&w=400&q=80" alt="Creator speaker">
+      </div>
+      <div class="who-list">
+        <div class="who-item">
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><h4>Students & early professionals</h4><p>Navigating a first job, a career pivot, or the leap into something unproven.</p></div>
+        </div>
+        <div class="who-item">
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><h4>Entrepreneurs & founders</h4><p>Building something from nothing, one hard decision at a time.</p></div>
+        </div>
+        <div class="who-item">
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><h4>Mentors & educators</h4><p>People who've shaped others, and have a way of teaching worth sharing wider.</p></div>
+        </div>
+        <div class="who-item">
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><h4>Creators, investors & business leaders</h4><p>Whether you build an audience, a portfolio, or an organization — if it took conviction, it's worth telling.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ELIGIBILITY (NEW) -->
+<section class="eligibility-section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Before You Apply</span>
+      <h2>What we look for in a YCX speaker.</h2>
+      <p>Not every application makes it to the stage. Here's what tends to make one stand out.</p>
+    </div>
+    <div class="elig-layout">
+      <div class="elig-image">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Speaker preparing before a talk">
+      </div>
+      <div class="elig-checklist">
+        <div class="elig-row">
+          <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><h4>A real story with a turning point</h4><p>Not just an achievement — a moment where something genuinely changed.</p></div>
+        </div>
+        <div class="elig-row">
+          <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><h4>Willingness to be coached</h4><p>Our team works closely with every speaker — the best sessions come from people open to shaping their story together.</p></div>
+        </div>
+        <div class="elig-row">
+          <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><h4>Comfort in your own language</h4><p>Confidence matters more than accent-free English — speak in whatever language you think best in.</p></div>
+        </div>
+        <div class="elig-row">
+          <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><h4>Something the audience can use</h4><p>A lesson, a framework, a warning — anything a listener could actually walk away and apply.</p></div>
+        </div>
+        <div class="elig-note">Applying doesn't guarantee a stage — but every honest story gets read by a real person on our team.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY (REDESIGNED: horizontal stepper) -->
+<section class="journey-section" id="journey">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">From Application To Stage</span>
+      <h2>The journey to becoming a YCX speaker.</h2>
+      <p>A real story deserves real preparation. Here's exactly what happens after you apply — scroll sideways to see the full path.</p>
+    </div>
+    <div class="journey-scroller">
+      <div class="journey-card"><span class="jnum">01</span><h3>Apply</h3><p>Tell us who you are and the story only you can tell.</p></div>
+      <div class="journey-card"><span class="jnum">02</span><h3>Discovery Call</h3><p>A short call to understand your journey and its real turning point.</p></div>
+      <div class="journey-card"><span class="jnum">03</span><h3>Story Shaping</h3><p>We help structure the arc — where it starts, turns, and lands.</p></div>
+      <div class="journey-card"><span class="jnum">04</span><h3>Rehearsal</h3><p>Run through your talk with our team and sharpen the message.</p></div>
+      <div class="journey-card"><span class="jnum">05</span><h3>Record or Go Live</h3><p>Step onto the stage or into the studio, in your chosen language.</p></div>
+      <div class="journey-card"><span class="jnum">06</span><h3>Amplify</h3><p>Your story goes out across YCX's channels and community.</p></div>
+    </div>
+    <div class="journey-arrow-row">← swipe to see the full journey →</div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits-section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What You Gain</span>
+      <h2>Speaking at YCX isn't just a stage. It's a return.</h2>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card"><span class="mono">REACH</span><h3>An audience that's actually listening</h3><p>Your story reaches a growing, ambitious community across India — not a passive feed.</p></div>
+      <div class="benefit-card"><span class="mono">CREDIBILITY</span><h3>A stage that adds weight to your name</h3><p>A YCX feature becomes a credible reference point people can find and share.</p></div>
+      <div class="benefit-card"><span class="mono">NETWORK</span><h3>Direct access to the YCX community</h3><p>Founders, mentors, investors, and educators — all one conversation away.</p></div>
+      <div class="benefit-card"><span class="mono">CONTENT</span><h3>A professionally produced asset</h3><p>Use your talk on your own website, LinkedIn, or portfolio — it's yours to keep.</p></div>
+      <div class="benefit-card"><span class="mono">MENTORSHIP</span><h3>Relationships that outlast the session</h3><p>Many speakers stay on as mentors, collaborators, or hosts for future editions.</p></div>
+      <div class="benefit-card"><span class="mono">LANGUAGE</span><h3>Told the way you'd actually say it</h3><p>Speak in the language your story is truest in — we'll meet you there.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">In Their Words</span>
+      <h2>What speakers say after stepping up.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p class="testi-quote">"I'd told this story to friends a dozen times. YCX was the first place that helped me tell it to a room — and mean every word of it."</p>
+        <div class="testi-person"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Speaker portrait"><div><h4>Arjun M.</h4><span>Founder, early-stage SaaS</span></div></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">"The prep calls mattered more than the talk itself. By the time I was on stage, I wasn't performing — I was just talking to friends."</p>
+        <div class="testi-person"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Speaker portrait"><div><h4>Priya S.</h4><span>Career mentor & educator</span></div></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">"I applied on a whim after a bad year. Three people reached out after my session with opportunities I never expected."</p>
+        <div class="testi-person"><img src="https://images.unsplash.com/photo-1595211877493-41a4e5f236b3?auto=format&fit=crop&w=200&q=80" alt="Speaker portrait"><div><h4>Karthik R.</h4><span>Independent creator</span></div></div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">"Being able to speak in Tamil, and still reach people across the country, was the whole reason I said yes."</p>
+        <div class="testi-person"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80" alt="Speaker portrait"><div><h4>Meena V.</h4><span>Founder, D2C brand</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="wrap">
+    <h2>Have a story that needs a bigger room?</h2>
+    <p>We're always looking for the next YCX speaker. If you have something to say — or know someone who does — this is where it starts.</p>
+    <a href="#apply-form" class="btn btn-primary">Apply to Speak</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Questions, Answered</span>
+      <h2>Frequently asked questions.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-q"><span>How do I become a YCX speaker?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Fill out the application form above with your story and details. Our team reviews it and reaches out within 5–7 working days if it's a fit.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Who can apply?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Students, entrepreneurs, founders, professionals, creators, mentors, educators, investors, and business leaders — if you have a story or expertise worth sharing, you're welcome to apply.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Is there a cost to speak at YCX?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>No. Speaking on YCX is free. We invest in producing your story because we believe it's worth telling well.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>What languages can I speak in?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Whatever language you're most fluent and expressive in. We currently support English, Hindi, Tamil, Telugu, and are actively expanding to more.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Can I nominate someone else?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Yes — use the "Someone else" option in the form and share as much as you can about their story. We'll take it from there.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>What happens after I submit the form?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Our team reviews every application. If shortlisted, we'll set up a short discovery call to learn more about your story and next steps.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo"><span class="x-mark">X</span>Young Chanakya X</a>
+        <p>A digital-first community where stories, knowledge, and people connect to create opportunities for growth and collaboration.</p>
+      </div>
+      <div class="footer-col">
+        <h4>YCX Ecosystem</h4>
+        <a href="#">Podcast</a><a href="#">Events</a><a href="#">Mentorship</a><a href="#">ConnectX</a>
+      </div>
+      <div class="footer-col">
+        <h4>About YCX</h4>
+        <a href="#">Our Mission</a><a href="#">Careers</a><a href="#">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a><a href="#">Community Guidelines</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Young Chanakya X. All rights reserved.</span>
+      <div class="social-row"><a href="#">in</a><a href="#">ig</a><a href="#">yt</a><a href="#">x</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    item.querySelector('.faq-q').addEventListener('click',()=>{
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+      if(!isOpen) item.classList.add('open');
+    });
+  });
+
+  const form = document.getElementById('speakerForm');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    form.style.display = 'none';
+    document.getElementById('thankyou').style.display = 'block';
+  });
+</script>
+
+</body>
+</html>

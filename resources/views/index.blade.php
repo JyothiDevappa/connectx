@@ -214,8 +214,7 @@ $seo = [
            max-width: 650px !important;
            width: 100% !important;
            white-space: normal !important;">
-    Shaping the Next Generation of Startup Leaders
-</h2>                <p class="sec-desc rv" style="margin-bottom: 24px; font-size: 1.05rem;">The greatest empires weren’t built by followers—they were built by thinkers, strategists, and doers. At Young Chanakya X, our mission is to cultivate modern-day Chanakyas who lead with wisdom, adaptability, and impact.</p>
+Shaping the Next Generation of Future Leaders</h2>                <p class="sec-desc rv" style="margin-bottom: 24px; font-size: 1.05rem;">The greatest empires weren’t built by followers—they were built by thinkers, strategists, and doers. At Young Chanakya X, our mission is to cultivate modern-day Chanakyas who lead with wisdom, adaptability, and impact.</p>
                 
                 <div class="rv" style="border-left: 3px solid var(--orange); padding-left: 20px; margin-bottom: 30px;">
                     <p style="font-size: 1.15rem; font-style: italic; font-weight: 500; color: #0c3a30; margin-bottom: 0; line-height: 1.6;">
@@ -291,8 +290,123 @@ $seo = [
         <div class="about-content rv-r" >
             <div class="eyebrow rv">About Young Chanakya X</div>
             <h2 class="sec-title rv">A Digital-First Network for <br>Growth & Collaboration</h2>
-            <p class="sec-desc rv">Young Chanakya X is a digital-first leadership and community platform that connects ambitious individuals through meaningful conversations, authentic storytelling, knowledge sharing, networking, mentorship, and collaboration.</p>
-            <p class="sec-desc rv">We believe that every individual has a story worth sharing, knowledge worth passing on, and experiences that can inspire others. By bringing together students, entrepreneurs, founders, professionals, creators, mentors, educators, and changemakers, Young Chanakya X creates an ecosystem where learning happens through people and opportunities are created through relationships.</p>
+            <p class="sec-desc rv" style="margin-bottom: 28px; font-size: 0.95rem; line-height: 1.6; color: #475569;">
+                Young Chanakya X is a digital-first leadership and community platform connecting ambitious creators, founders, and leaders. We build a dynamic ecosystem where learning happens through people and opportunities are created through collaborative relationships.
+            </p>
+            <style>
+                .about-keypoints-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 20px 24px;
+                    margin-top: 12px;
+                }
+                .keypoint-item {
+                    display: flex;
+                    gap: 12px;
+                    align-items: center;
+                }
+                .keypoint-icon-box {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 38px;
+                    height: 38px;
+                    border-radius: 10px;
+                    background: rgba(71, 85, 105, 0.06);
+                    color: #475569;
+                    font-size: 1.2rem;
+                    flex-shrink: 0;
+                    transition: all 0.3s ease;
+                }
+                .keypoint-item:hover .keypoint-icon-box {
+                    background: #475569;
+                    color: #ffffff !important;
+                    transform: translateY(-2px) scale(1.05);
+                }
+                .keypoint-text-box {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .keypoint-title {
+                    font-size: 0.9rem;
+                    font-weight: 800;
+                    color: #475569;
+                    margin: 0;
+                    line-height: 1.2;
+                    transition: color 0.3s ease;
+                }
+                .keypoint-item:hover .keypoint-title {
+                    color: var(--primary);
+                }
+                @media (max-width: 576px) {
+                    .about-keypoints-grid {
+                        grid-template-columns: 1fr;
+                        gap: 16px;
+                    }
+                }
+            </style>
+
+            <div class="about-keypoints-grid rv">
+                <!-- 1. Digital-First Platform -->
+                <div class="keypoint-item">
+                    <div class="keypoint-icon-box">
+                        <i class="bi bi-laptop"></i>
+                    </div>
+                    <div class="keypoint-text-box">
+                        <h4 class="keypoint-title">Digital-First Platform</h4>
+                    </div>
+                </div>
+
+                <!-- 2. Authentic Storytelling -->
+                <div class="keypoint-item">
+                    <div class="keypoint-icon-box">
+                        <i class="bi bi-chat-quote"></i>
+                    </div>
+                    <div class="keypoint-text-box">
+                        <h4 class="keypoint-title">Authentic Storytelling</h4>
+                    </div>
+                </div>
+
+                <!-- 3. Peer-to-Peer Learning -->
+                <div class="keypoint-item">
+                    <div class="keypoint-icon-box">
+                        <i class="bi bi-lightbulb"></i>
+                    </div>
+                    <div class="keypoint-text-box">
+                        <h4 class="keypoint-title">Peer-to-Peer Learning</h4>
+                    </div>
+                </div>
+
+                <!-- 4. Relationship-Driven -->
+                <div class="keypoint-item">
+                    <div class="keypoint-icon-box">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+                    <div class="keypoint-text-box">
+                        <h4 class="keypoint-title">Relationship-Driven</h4>
+                    </div>
+                </div>
+
+                <!-- 5. Ecosystem Collaboration -->
+                <div class="keypoint-item">
+                    <div class="keypoint-icon-box">
+                        <i class="bi bi-intersect"></i>
+                    </div>
+                    <div class="keypoint-text-box">
+                        <h4 class="keypoint-title">Ecosystem Collaboration</h4>
+                    </div>
+                </div>
+
+                <!-- 6. Mentorship Network -->
+                <div class="keypoint-item">
+                    <div class="keypoint-icon-box">
+                        <i class="bi bi-mortarboard"></i>
+                    </div>
+                    <div class="keypoint-text-box">
+                        <h4 class="keypoint-title">Mentorship & Guidance</h4>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
