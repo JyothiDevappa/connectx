@@ -391,7 +391,7 @@ $seo = [
         <div class="row align-items-center gy-5">
             <div class="col-lg-6">
                 <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Partner With Us</div>
-                <h1 style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Build the Future Together.</h1>
+                <h1 style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Build the Future Together</h1>
                 <p class="hero-copy">Join the Young Chanakya X ecosystem to access a premium global network. We foster meaningful content partnerships, brand collaborations, and community connections that drive innovation and long-term value.</p>
               
                 <div class="about-hero-buttons">

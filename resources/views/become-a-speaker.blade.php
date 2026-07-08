@@ -18,6 +18,7 @@ $seo = [
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
+<link rel="stylesheet" href="{{ asset('css/partner-page.css') }}">
 <style>
   :root {
     --ink: #0c3a30;
@@ -169,279 +170,169 @@ $seo = [
     margin-bottom: 40px !important;
   }
 
-  /* Hero Banner */
-  .speaker-body .hero {
-    background: var(--hero-gradient) !important;
-    padding: 180px 0 88px !important;
-    position: relative !important;
-    overflow: hidden !important;
-    height: auto !important;
-    min-height: 0 !important;
-    display: block !important;
+  /* Hero Banner - using Bootstrap layout */
+  .speaker-body .about-hero {
+    padding-top: 180px;
+    padding-bottom: 80px;
   }
 
-  .speaker-body .hero .wrap {
-    position: relative;
-    z-index: 2;
+  .speaker-body .about-hero h1 {
+    font-size: clamp(34px, 4vw, 56px);
+    font-weight: 900;
+    line-height: 1.15;
+    color: #0c3a30;
+    margin-bottom: 20px;
   }
 
-  .speaker-body .hero-x-glyph {
-    position: absolute;
-    right: -100px;
-    top: -140px;
-    font-family: 'Fraunces', serif;
-    font-weight: 700;
-    font-size: min(55vw, 820px);
-    color: rgba(12, 58, 48, 0.05);
-    line-height: 1;
-    pointer-events: none;
-    z-index: 1;
-    user-select: none;
+  .speaker-body .about-hero h1 em {
+    font-style: italic;
+    font-weight: 900;
   }
 
-  .speaker-body .hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 0.95fr;
-    gap: 52px;
-    align-items: start;
+  .speaker-body .about-hero .hero-copy {
+    font-size: 16px;
+    line-height: 1.85;
+    color: #4d6459;
+    margin-bottom: 30px;
   }
 
-  .speaker-body .hero-copy {
-    padding-top: 28px;
-    text-align: left;
-  }
-
-  .speaker-body .hero h1 {
-    font-family: 'Manrope', sans-serif !important;
-    font-size: clamp(44px, 5vw, 60px) !important;
-    line-height: 1.15 !important;
-    font-weight: 900 !important;
-    color: var(--ink) !important;
-    letter-spacing: -3px !important;
-    margin-bottom: 32px !important;
-  }
-
-  .speaker-body .hero h1 em {
-    font-style: normal !important;
-    font-weight: 900 !important;
-  }
-
-  .speaker-body .hero p.lead {
-    font-family: 'Manrope', sans-serif !important;
-    font-size: 16px !important;
-    line-height: 1.85 !important;
-    color: var(--text-soft) !important;
-    max-width: 540px !important;
-    margin-bottom: 40px !important;
-    font-weight: 400 !important;
-  }
-
-  .speaker-body .hero-points {
+  .speaker-body .about-hero-buttons {
     display: flex;
     flex-direction: column;
     gap: 14px;
-    margin-bottom: 34px;
   }
 
-  .speaker-body .hero-points div {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    font-size: 14.5px;
-    color: var(--text);
-    font-weight: 600;
-  }
-
-  .speaker-body .hero-points svg {
-    width: 19px;
-    height: 19px;
-    flex-shrink: 0;
-    margin-top: 1px;
-    color: var(--ink);
-  }
-
-  .speaker-body .hero-stats {
-    display: flex;
-    gap: 36px;
-    padding-top: 26px;
-    border-top: 1px solid rgba(12, 58, 48, 0.15);
-    max-width: 440px;
-  }
-
-  .speaker-body .hero-stats div {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .speaker-body .hero-stats .num {
-    font-family: 'Fraunces', serif;
-    font-weight: 600;
-    font-size: 26px;
-    color: var(--ink);
-    text-align: left;
-  }
-
-  .speaker-body .hero-stats .label {
-    font-size: 12px;
-    color: var(--text-soft);
-    font-weight: 600;
-  }
-
-  .speaker-body .hero-form-card {
-    background: var(--white);
-    border-radius: 22px;
-    padding: 36px;
-    box-shadow: 0 40px 70px -30px rgba(12, 58, 48, 0.3);
-  }
-
-  .speaker-body .hero-form-card .form-kicker {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 22px;
-  }
-
-  .speaker-body .hero-form-card .form-kicker h3 {
-    font-family: 'Manrope', sans-serif !important;
-    font-size: 21px;
-    font-weight: 700;
-    color: var(--ink);
-    margin: 0;
-  }
-
-  .speaker-body .hero-form-card .form-kicker span {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    color: var(--peach-deep);
-    background: var(--ink);
-    padding: 5px 11px;
+  .speaker-body .about-hero-buttons a {
+    display: inline-block;
+    padding: 14px 32px;
     border-radius: 100px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
   }
 
-  .speaker-body .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin-bottom: 14px;
+  /* Partner form box styling */
+  .speaker-body .partner-form-box {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 32px 28px;
+    box-shadow: 0 8px 30px rgba(12, 58, 48, 0.08);
   }
 
-  .speaker-body .field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 14px;
-  }
-
-  .speaker-body .field label {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--ink);
-    letter-spacing: .2px;
+  .speaker-body .partner-form-box label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #19352d;
+    margin-bottom: 8px;
     text-align: left;
   }
 
-  .speaker-body .field input,
-  .speaker-body .field select,
-  .speaker-body .field textarea {
-    padding: 12px 14px;
-    border-radius: 10px;
-    border: 1.5px solid rgba(12, 58, 48, 0.18);
-    background: var(--cream);
-    font-family: 'Manrope', sans-serif;
-    font-size: 14px;
-    color: var(--text);
-    outline: none;
-    transition: border-color .2s;
-  }
-
-  .speaker-body .field input:focus,
-  .speaker-body .field select:focus,
-  .speaker-body .field textarea:focus {
-    border-color: var(--ink);
-  }
-
-  .speaker-body .field textarea {
-    resize: vertical;
-    min-height: 80px;
-  }
-
-  .speaker-body .radio-group {
-    display: flex;
-    gap: 10px;
-  }
-
-  .speaker-body .radio-group label {
-    flex: 1;
-    text-align: center;
-    padding: 11px;
-    border-radius: 10px;
-    border: 1.5px solid rgba(12, 58, 48, 0.18);
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--text-soft);
-    cursor: pointer;
-    transition: all .2s;
-    margin-bottom: 0;
-  }
-
-  .speaker-body .radio-group input {
-    display: none;
-  }
-
-  .speaker-body .radio-group label:has(input:checked) {
-    background: var(--peach);
-    border-color: var(--ink);
-    color: var(--ink);
-  }
-
-  .speaker-body .form-note {
-    font-size: 11.5px;
-    color: var(--text-soft);
-    text-align: center;
+  .speaker-body .partner-form-box .form-control {
     display: block;
-    margin-top: 12px;
-  }
-
-  .speaker-body #thankyou {
-    display: none;
-    text-align: center;
-    padding: 30px 10px;
-  }
-
-  .speaker-body #thankyou h3 {
-    font-family: 'Manrope', sans-serif !important;
-    font-size: 23px;
-    font-weight: 700;
-    color: var(--ink);
-    margin-bottom: 8px;
-  }
-
-  .speaker-body #thankyou p {
-    color: var(--text-soft);
+    width: 100%;
+    padding: 10px 14px;
     font-size: 14px;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
 
-  @media(max-width: 940px) {
-    .speaker-body .hero {
-      padding-top: 135px !important;
-      padding-bottom: 60px !important;
-    }
-    .speaker-body .hero-grid {
-      grid-template-columns: 1fr;
-    }
-    .speaker-body .hero-copy {
-      padding-top: 0;
-    }
-    .speaker-body .form-row {
-      grid-template-columns: 1fr;
+  .speaker-body .partner-form-box .form-control::placeholder {
+    color: #888888 !important;
+  }
+
+  .speaker-body .partner-form-box .form-control:focus {
+    border-color: #0c3a30;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(12, 58, 48, 0.1);
+  }
+
+  .speaker-body .partner-form-box textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .speaker-body .partner-submit-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #0c3a30;
+    color: #ffffff;
+    border: none;
+    border-radius: 100px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .speaker-body .partner-submit-btn:hover {
+    background-color: #082821;
+    transform: translateY(-1px);
+  }
+
+  .speaker-body .text-danger {
+    color: #dc3545;
+  }
+
+  .speaker-body .mb-3 {
+    margin-bottom: 20px;
+  }
+
+  .speaker-body .mb-4 {
+    margin-bottom: 24px;
+  }
+
+  .speaker-body .mt-1 {
+    margin-top: 4px;
+  }
+
+  .speaker-body .alert {
+    padding: 12px 16px;
+    border-radius: 6px;
+  }
+
+  .speaker-body .alert-danger {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+  }
+
+  @media(max-width: 991px) {
+    .speaker-body .about-hero {
+      padding: 120px 0 70px;
     }
   }
 
-  @media(max-width: 576px) {
-    .speaker-body .hero {
-      padding-top: 115px !important;
-      padding-bottom: 40px !important;
+  @media(max-width: 767px) {
+    .speaker-body .about-hero {
+      padding: 100px 0 60px;
+    }
+    .speaker-body .about-hero h1 {
+      font-size: 32px;
+    }
+    .speaker-body .partner-form-box {
+      padding: 28px 20px;
+    }
+  }
+
+  @media(max-width: 480px) {
+    .speaker-body .about-hero {
+      padding: 90px 0 40px;
+    }
+    .speaker-body .about-hero h1 {
+      font-size: 28px;
+    }
+    .speaker-body .partner-form-box {
+      padding: 22px 16px;
+    }
+    .speaker-body .partner-submit-btn {
+      font-size: 15px;
+      height: 52px;
     }
   }
 
@@ -617,6 +508,13 @@ $seo = [
     padding: 100px 0;
     background: var(--cream);
   }
+
+  @media (min-width: 768px) {
+    .speaker-body .nowrap-md {
+      white-space: nowrap !important;
+    }
+  }
+
 
   .speaker-body .benefits-grid {
     display: grid;
@@ -1008,152 +906,298 @@ $seo = [
       grid-template-columns: 1fr;
     }
   }
+
+  /* ---------- Language strip ---------- */
+  .speaker-body .lang-strip {
+    background: var(--ink);
+    color: var(--peach);
+    padding: 22px 0;
+    overflow: hidden;
+  }
+  .speaker-body .lang-strip .marquee-track {
+    display: flex;
+    gap: 44px;
+    white-space: nowrap;
+    animation: scrollLeft 32s linear infinite;
+    width: max-content;
+  }
+  .speaker-body .lang-strip span {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 500;
+    opacity: .9;
+    display: flex;
+    align-items: center;
+    gap: 44px;
+  }
+  .speaker-body .lang-strip .dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--peach-deep);
+    opacity: .6;
+  }
+  @keyframes scrollLeft {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .speaker-body .lang-caption {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-soft);
+    padding: 16px 0;
+    font-weight: 600;
+  }
 </style>
 @endpush
 
 @section('content')
 <div class="speaker-body">
 
-  <!-- HERO with embedded form -->
-  <section class="hero" id="apply-form">
-    <div class="hero-x-glyph">X</div>
-    <div class="wrap">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">Become a YCX Speaker</span>
-          <h1>Your story is <em>someone else's</em> turning point.</h1>
-          <p class="lead">Young Chanakya X is looking for people whose experience deserves a room, a mic, and an audience that's ready to listen. Apply below — it takes less than five minutes.</p>
-          <div class="hero-points">
-            <div>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <!-- HERO with embedded form - Bootstrap layout matching partner page -->
+  <div class="about-hero" style="padding-top: 180px; padding-bottom: 80px;">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6">
+          <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Become a YCX Speaker</div>
+          <h1 style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Your story is someone else's turning point</h1>
+          <p class="hero-copy">Young Chanakya X is looking for people whose experience deserves a room, a mic, and an audience that's ready to listen. Apply below — it takes less than five minutes.</p>
+          
+          <div class="about-hero-buttons" style="margin-top: 40px; display: flex; flex-direction: column; gap: 14px;">
+            <div style="display: flex; gap: 12px; align-items: center; font-size: 14.5px; color: #12261f; font-weight: 600;">
+              <span class="d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 24px; height: 24px; background-color: #ffd2b1; color: #090d16; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.15);">
+                <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
+              </span>
               No cost to apply or to speak
             </div>
-            <div>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div style="display: flex; gap: 12px; align-items: center; font-size: 14.5px; color: #12261f; font-weight: 600;">
+              <span class="d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 24px; height: 24px; background-color: #ffd2b1; color: #090d16; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.15);">
+                <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
+              </span>
               Speak in the language you're most fluent in
             </div>
-            <div>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div style="display: flex; gap: 12px; align-items: center; font-size: 14.5px; color: #12261f; font-weight: 600;">
+              <span class="d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 24px; height: 24px; background-color: #ffd2b1; color: #090d16; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.15);">
+                <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
+              </span>
               Full story shaping and rehearsal support included
             </div>
           </div>
         </div>
+        
+        <div class="col-lg-6">
+          <div class="partner-form-box" id="speaker-apply-form">
 
-        <div class="hero-form-card">
-          <div class="form-kicker">
-            <h3>Apply to speak</h3>
-            <span class="mono">STEP 1 OF 1</span>
-          </div>
-          <form id="speakerForm">
-            <div class="form-row">
-              <div class="field"><label>First name</label><input type="text" required></div>
-              <div class="field"><label>Last name</label><input type="text" required></div>
-            </div>
-            <div class="form-row">
-              <div class="field"><label>Email address</label><input type="email" required></div>
-              <div class="field"><label>Phone number</label><input type="tel" required></div>
-            </div>
-            <div class="field">
-              <label>Applying for yourself or nominating someone?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="applyingFor" checked value="Myself"><span>Myself</span></label>
-                <label><input type="radio" name="applyingFor" value="Someone else"><span>Someone else</span></label>
+            @if (session('error') || $errors->any())
+              <div class="alert alert-danger mb-4" style="font-weight: 500;">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i> 
+                @if (session('error'))
+                  {{ session('error') }}
+                @else
+                  Please correct the errors in the form below.
+                @endif
               </div>
-            </div>
-            <div class="form-row">
-              <div class="field">
-                <label>You are primarily a...</label>
-                <select>
-                  <option>Student</option>
-                  <option>Entrepreneur</option>
-                  <option>Founder</option>
-                  <option>Professional</option>
-                  <option>Creator</option>
-                  <option>Mentor</option>
-                  <option>Educator</option>
-                  <option>Investor</option>
-                  <option>Business leader</option>
-                  <option>Organization</option>
-                </select>
+            @endif
+
+            <form id="speakerForm">
+
+              <div class="row">
+
+                <!-- 1st row: Full Name -->
+                <div class="col-12 mb-3">
+                  <label for="speaker-full-name">Full Name <span class="text-danger">*</span></label>
+                  <input type="text"
+                    id="speaker-full-name"
+                    class="form-control"
+                    name="full_name"
+                    value="{{ old('full_name') }}"
+                    placeholder="Full Name" required>
+                  @error('full_name')
+                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                  @enderror
+                </div>
+
+                <!-- 2nd row: Phone Number & Email Address (Optional) -->
+                <div class="col-md-6 mb-3">
+                  <label for="speaker-phone">Phone Number <span class="text-danger">*</span></label>
+                  <input type="tel"
+                    id="speaker-phone"
+                    class="form-control"
+                    name="phone"
+                    value="{{ old('phone') }}"
+                    placeholder="Phone Number" required>
+                  @error('phone')
+                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                  @enderror
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <label for="speaker-email">Email Address</label>
+                  <input type="email"
+                    id="speaker-email"
+                    class="form-control"
+                    name="email"
+                    value="{{ old('email') }}"
+                    placeholder="Email Address">
+                  @error('email')
+                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                  @enderror
+                </div>
+
+                <!-- 3rd row: Location -->
+                <div class="col-12 mb-3">
+                  <label for="speaker-location">Location <span class="text-danger">*</span></label>
+                  <input type="text"
+                    id="speaker-location"
+                    class="form-control"
+                    name="location"
+                    value="{{ old('location') }}"
+                    placeholder="Location" required>
+                  @error('location')
+                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                  @enderror
+                </div>
+
+                <!-- 4th row: Your Primary Role & Preferred Speaking Language -->
+                <div class="col-md-6 mb-3">
+                  <label for="speaker-role">Your Primary Role <span class="text-danger">*</span></label>
+                  <input type="text"
+                    id="speaker-role"
+                    class="form-control"
+                    name="primary_role"
+                    value="{{ old('primary_role') }}"
+                    placeholder="e.g. Founder, Student, etc." required>
+                  @error('primary_role')
+                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                  @enderror
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <label for="speaker-language">Preferred Speaking Language <span class="text-danger">*</span></label>
+                  <input type="text"
+                    id="speaker-language"
+                    class="form-control"
+                    name="speaking_language"
+                    value="{{ old('speaking_language') }}"
+                    placeholder="e.g. English, Hindi, etc." required>
+                  @error('speaking_language')
+                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                  @enderror
+                </div>
+
+                <!-- 5th row: Social Media URL -->
+                <div class="col-12 mb-3">
+                  <label for="speaker-social">Social Media URL <span class="text-danger">*</span></label>
+                  <input type="url"
+                    id="speaker-social"
+                    class="form-control"
+                    name="social_media_url"
+                    value="{{ old('social_media_url') }}"
+                    placeholder="https://" required>
+                  @error('social_media_url')
+                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                  @enderror
+                </div>
+
+                <!-- 6th row: Share Your Story and its Main Message (200 words) -->
+                <div class="col-12 mb-4">
+                  <label for="speaker-story">Share Your Story and its Main Message (200 words) <span class="text-danger">*</span></label>
+                  <textarea id="speaker-story"
+                    class="form-control"
+                    name="story"
+                    placeholder="Tell us your story in 200 words..."
+                    style="min-height: 100px; resize: vertical;" required>{{ old('story') }}</textarea>
+                  @error('story')
+                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                  @enderror
+                </div>
+
+                <div class="col-12">
+                  <button type="submit"
+                    class="partner-submit-btn"
+                    style="width: 100%; text-align: center;">
+                    Submit Application
+                  </button>
+                  <p style="font-size: 12px; color: #4d6459; text-align: center; margin-top: 12px;">
+                    We'll only use this to reach out about your application.
+                  </p>
+                </div>
+
               </div>
-              <div class="field">
-                <label>Preferred speaking language</label>
-                <select>
-                  <option>English</option>
-                  <option>हिन्दी (Hindi)</option>
-                  <option>தமிழ் (Tamil)</option>
-                  <option>తెలుగు (Telugu)</option>
-                  <option>ಕನ್ನಡ (Kannada)</option>
-                  <option>മലയാളം (Malayalam)</option>
-                  <option>বাংলা (Bengali)</option>
-                  <option>मराठी (Marathi)</option>
-                  <option>ਪੰਜਾਬੀ (Punjabi)</option>
-                  <option>ગુજરાતી (Gujarati)</option>
-                </select>
-              </div>
+
+            </form>
+
+            <div id="thankyou" style="display: none; text-align: center; padding: 40px 0;">
+              <h3 style="font-family: 'Fraunces', serif; font-size: 26px; color: var(--ink); margin-bottom: 10px;">You're in the queue.</h3>
+              <p style="color: var(--text-soft); font-size: 14.5px;">Thank you for sharing your story — our team will reach out within 5–7 working days if it's a fit.</p>
             </div>
-            <div class="field"><label>LinkedIn or portfolio link</label><input type="url" placeholder="https://"></div>
-            <div class="field"><label>Share your story and its main message, in 200 words</label><textarea required></textarea></div>
-            <button type="submit" class="btn btn-peach">Submit Application</button>
-            <span class="form-note">We'll only use this to reach out about your application.</span>
-          </form>
-          <div id="thankyou">
-            <h3>You're in the queue.</h3>
-            <p>Thank you for sharing your story — our team will reach out within 5–7 working days if it's a fit.</p>
+
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- SPEAKING FORMATS -->
-  <section class="formats-section" id="formats">
+  <div class="lang-strip">
+    <div class="marquee-track">
+      <span>
+        English <i class="dot"></i> हिन्दी <i class="dot"></i> தமிழ் <i class="dot"></i> తెలుగు <i class="dot"></i> ಕನ್ನಡ <i class="dot"></i> മലയാളം <i class="dot"></i> বাংলা <i class="dot"></i> मराठी <i class="dot"></i> ਪੰਜਾਬੀ <i class="dot"></i> ગુજરાતી <i class="dot"></i>
+        English <i class="dot"></i> हिन्दी <i class="dot"></i> தமிழ் <i class="dot"></i> తెలుగు <i class="dot"></i> ಕನ್ನಡ <i class="dot"></i> മലയാളം <i class="dot"></i> বাংলা <i class="dot"></i> मराठी <i class="dot"></i> ਪੰਜਾਬੀ <i class="dot"></i> ગુજરાતી <i class="dot"></i>
+      </span>
+    </div>
+  </div>
+  <!-- <p class="lang-caption">Because the best stories shouldn't wait for a translation.</p> -->
+
+  <!-- WHO BELONGS - DIFFERENT UI -->
+  <section class="who-belongs-different-ui">
     <div class="wrap">
-      <div class="section-head text-center mx-auto" style="max-width: 900px;">
-        <span class="eyebrow">Ways To Take The Stage</span>
-        <h2 class="sec-title">Every story finds its own format.</h2>
-        <p class="sec-desc" style="max-width: 720px; margin-left: auto; margin-right: auto;">Not every story fits the same room. Tell us your story and we'll help you find the format it's best suited for. Whether it is a deep-dive podcast episode, a live keynote address, or an interactive workshop session, our goal is to shape your voice for the highest audience resonance.</p>
-      </div>
-      <div class="formats-grid">
-        <div class="format-card">
-          <div class="format-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/>
-              <path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/>
-            </svg>
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-5">
+          <div class="section-head mb-4">
+            <span class="eyebrow">Who Belongs On This Stage</span>
+            <h2 class="sec-title">If you're building something, you belong here</h2>
+            <p class="sec-desc">YCX speakers come from every corner of ambition — there's no single "type." What they share is a story worth passing on.</p>
           </div>
-          <h3>Podcast Episode</h3>
-          <p>A recorded, long-form conversation released across YCX's audio and video channels.</p>
+          <div class="diff-ui-chips">
+            <span class="chip-active">Students</span>
+            <span>Entrepreneurs</span>
+            <span>Founders</span>
+            <span>Professionals</span>
+            <span>Creators</span>
+            <span>Mentors</span>
+            <span>Educators</span>
+            <span>Investors</span>
+            <span>Business Leaders</span>
+            <span>Organizations</span>
+          </div>
         </div>
-        <div class="format-card">
-          <div class="format-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2 3h20v14H2z"/>
-              <path d="M8 21h8M12 17v4"/>
-            </svg>
+        <div class="col-lg-7">
+          <div class="diff-ui-gallery">
+            <div class="gallery-card">
+              <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1652471943570-f3590a4e52ed?auto=format&fit=crop&w=500&q=80" alt="Founders">
+                <div class="glass-label">Founders</div>
+              </div>
+            </div>
+            <div class="gallery-card">
+              <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=500&q=80" alt="Professionals">
+                <div class="glass-label">Professionals</div>
+              </div>
+            </div>
+            <div class="gallery-card">
+              <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1595211877493-41a4e5f236b3?auto=format&fit=crop&w=500&q=80" alt="Mentors">
+                <div class="glass-label">Mentors</div>
+              </div>
+            </div>
+            <div class="gallery-card">
+              <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1627161683077-e34782c24d81?auto=format&fit=crop&w=500&q=80" alt="Creators">
+                <div class="glass-label">Creators</div>
+              </div>
+            </div>
           </div>
-          <h3>Live Stage Talk</h3>
-          <p>A solo talk in front of a live YCX audience at one of our city events.</p>
-        </div>
-        <div class="format-card">
-          <div class="format-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 20h9M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/>
-            </svg>
-          </div>
-          <h3>Workshop Session</h3>
-          <p>A hands-on session teaching a skill or framework to a small, focused group.</p>
-        </div>
-        <div class="format-card">
-          <div class="format-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M2 21v-2a4 4 0 014-4h6a4 4 0 014 4v2"/>
-              <circle cx="19" cy="8" r="3"/>
-            </svg>
-          </div>
-          <h3>Panel Conversation</h3>
-          <p>A guided discussion alongside other speakers, moderated by the YCX team.</p>
         </div>
       </div>
     </div>
@@ -1164,8 +1208,8 @@ $seo = [
     <div class="wrap">
       <div class="section-head text-center mx-auto" style="max-width: 900px;">
         <span class="eyebrow">Before You Apply</span>
-        <h2 class="sec-title">What we look for in a YCX speaker.</h2>
-        <p class="sec-desc" style="max-width: 720px; margin-left: auto; margin-right: auto;">Not every application makes it to the stage. Here's what tends to make one stand out. We prioritize speakers who bring raw authenticity, clear actionable frameworks, and a genuine willingness to collaborate with our speech coaches to refine their delivery.</p>
+        <h2 class="sec-title">What we look for in a YCX speaker</h2>
+        <p class="sec-desc" style="max-width: 720px; margin-left: auto; margin-right: auto;">We value authentic stories, practical insights, and speakers who are open to refining their delivery through expert guidance</p>
       </div>
       <div class="elig-layout">
         <div class="elig-image">
@@ -1214,12 +1258,70 @@ $seo = [
     </div>
   </section>
 
+  <!-- SPEAKING FORMATS -->
+  <section class="formats-section" id="formats">
+    <div class="wrap">
+      <div class="section-head text-center mx-auto" style="max-width: 900px;">
+        <span class="eyebrow">Ways To Take The Stage</span>
+        <h2 class="sec-title">Every story finds its own format</h2>
+        <p class="sec-desc" style="max-width: 720px; margin-left: auto; margin-right: auto;">Tell us your story, and we'll help shape it into the perfect format for your audience. Whether it's a keynote, podcast, or workshop, we'll make it resonate</p>
+      </div>
+      <div class="formats-grid">
+        <div class="format-card">
+          <div class="format-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/>
+              <path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/>
+            </svg>
+          </div>
+          <h3>Podcast Episode</h3>
+          <p>A recorded, long-form conversation released across YCX's audio and video channels.</p>
+        </div>
+        <div class="format-card">
+          <div class="format-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h20v14H2z"/>
+              <path d="M8 21h8M12 17v4"/>
+            </svg>
+          </div>
+          <h3>Live Stage Talk</h3>
+          <p>A solo talk in front of a live YCX audience at one of our city events.</p>
+        </div>
+        <div class="format-card">
+          <div class="format-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20h9M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/>
+            </svg>
+          </div>
+          <h3>Workshop Session</h3>
+          <p>A hands-on session teaching a skill or framework to a small, focused group.</p>
+        </div>
+        <div class="format-card">
+          <div class="format-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M2 21v-2a4 4 0 014-4h6a4 4 0 014 4v2"/>
+              <circle cx="19" cy="8" r="3"/>
+            </svg>
+          </div>
+          <h3>Panel Conversation</h3>
+          <p>A guided discussion alongside other speakers, moderated by the YCX team.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FROM APPLICATION TO STAGE -->
   <section class="journey-section" id="journey">
     <div class="wrap">
       <div class="section-head text-center mx-auto">
+
+
         <span class="eyebrow">From Application To Stage</span>
-        <h2 class="sec-title">The journey to becoming a YCX speaker.</h2>
+
+<h2 class="sec-title" style="white-space: nowrap !important; text-align: center !important;"> becoming a YCX speaker</h2>
+
+
         <p class="sec-desc">A real story deserves real preparation. Here's exactly what happens between the moment you apply and the moment you're heard.</p>
       </div>
       
@@ -1302,9 +1404,10 @@ $seo = [
   <!-- WHAT YOU GAIN -->
   <section class="benefits-section">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head text-center mx-auto" style="max-width: 1000px;">
         <span class="eyebrow">What You Gain</span>
-        <h2 class="sec-title">Speaking at YCX isn't just a stage. It's a return.</h2>
+        <h2 class="sec-title nowrap-md">Speaking at YCX isn't just a stage. It's a return</h2>
+        <p class="sec-desc">A platform built for impact. When you share your journey with YCX, you inspire the next generation of builders while expanding your own reach, network, and credibility.</p>
       </div>
       <div class="benefits-grid">
         <div class="benefit-card">
@@ -1350,67 +1453,12 @@ $seo = [
     </div>
   </section>
 
-  <!-- WHO BELONGS - DIFFERENT UI -->
-  <section class="who-belongs-different-ui">
-    <div class="wrap">
-      <div class="row align-items-center gy-5">
-        <div class="col-lg-5">
-          <div class="section-head mb-4">
-            <span class="eyebrow">Who Belongs On This Stage</span>
-            <h2 class="sec-title">If you're building something, you belong here.</h2>
-            <p class="sec-desc">YCX speakers come from every corner of ambition — there's no single "type." What they share is a story worth passing on.</p>
-          </div>
-          <div class="diff-ui-chips">
-            <span class="chip-active">Students</span>
-            <span>Entrepreneurs</span>
-            <span>Founders</span>
-            <span>Professionals</span>
-            <span>Creators</span>
-            <span>Mentors</span>
-            <span>Educators</span>
-            <span>Investors</span>
-            <span>Business Leaders</span>
-            <span>Organizations</span>
-          </div>
-        </div>
-        <div class="col-lg-7">
-          <div class="diff-ui-gallery">
-            <div class="gallery-card">
-              <div class="img-container">
-                <img src="https://images.unsplash.com/photo-1652471943570-f3590a4e52ed?auto=format&fit=crop&w=500&q=80" alt="Founders">
-                <div class="glass-label">Founders</div>
-              </div>
-            </div>
-            <div class="gallery-card">
-              <div class="img-container">
-                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=500&q=80" alt="Professionals">
-                <div class="glass-label">Professionals</div>
-              </div>
-            </div>
-            <div class="gallery-card">
-              <div class="img-container">
-                <img src="https://images.unsplash.com/photo-1595211877493-41a4e5f236b3?auto=format&fit=crop&w=500&q=80" alt="Mentors">
-                <div class="glass-label">Mentors</div>
-              </div>
-            </div>
-            <div class="gallery-card">
-              <div class="img-container">
-                <img src="https://images.unsplash.com/photo-1627161683077-e34782c24d81?auto=format&fit=crop&w=500&q=80" alt="Creators">
-                <div class="glass-label">Creators</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FAQ -->
   <section class="faq-section" id="faq">
     <div class="wrap">
       <div class="section-head text-center mx-auto" style="margin-bottom: 56px; max-width: 900px;">
         <span class="eyebrow">Questions, Answered</span>
-        <h2 class="sec-title">Frequently asked questions.</h2>
+        <h2 class="sec-title">Frequently asked questions</h2>
       </div>
       <div class="faq-grid">
         <div class="faq-col">

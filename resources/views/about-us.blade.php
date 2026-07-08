@@ -109,7 +109,7 @@ $seo = [
         <div class="row align-items-center gy-5">
             <div class="col-lg-6">
                 <div class="eyebrow" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">About Young Chanakya X</div>
-                <h1 style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">One Platform. Endless Possibilities.</h1>
+                <h1 style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">One Platform Endless Possibilities</h1>
                 <p class="hero-copy">Young Chanakya X is a digital-first leadership and community platform where ambitious individuals come together to share stories, exchange knowledge, build meaningful relationships, and unlock real opportunities. We believe growth happens when people connect, learn, and collaborate through authentic experiences.</p>
               
                 <div class="about-hero-buttons">
