@@ -1,11 +1,14 @@
 @php
 /**
- * Careers Page SEO Data
+ * Careers / Internships Page SEO Data
  */
+$isInternship = $isInternship ?? false;
 $seo = [
-    'title'       => 'Careers — Young Chanakya X',
-    'description' => 'Build your future with Young Chanakya X. Join a passionate team that\'s building a community where stories, knowledge, and people come together.',
-    'keywords'    => 'careers, Young Chanakya X, jobs, creator ecosystem, work at YCX',
+    'title'       => $isInternship ? 'Internships — Young Chanakya X' : 'Careers — Young Chanakya X',
+    'description' => $isInternship 
+        ? 'Launch your career with a hands-on internship at Young Chanakya X. Work on real projects in marketing, content, tech, and production.' 
+        : 'Build your future with Young Chanakya X. Join a passionate team that\'s building a community where stories, knowledge, and people come together.',
+    'keywords'    => $isInternship ? 'internships, YCX internship, web developer intern, startup internships' : 'careers, Young Chanakya X, jobs, creator ecosystem, work at YCX',
     'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];
@@ -30,13 +33,21 @@ $seo = [
     <div class="container">
       <div class="row align-items-center gy-5">
         <div class="col-lg-6">
-          <div class="eyebrow" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Careers at YCX</div>
-          <h1 style="font-family: 'Fraunces', serif; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15; color: #0c3a30; margin-bottom: 20px;">Build Your Future with<br>Young Chanakya X</h1>
-          <p class="hero-copy" style="font-size: 16px; color: var(--text-soft); line-height: 1.6; max-width: 600px;">Join a passionate team that's building a community where stories, knowledge, and people come together. If you're driven by creativity, collaboration, and meaningful impact, we'd love to hear from you. Help us empower the next generation of creators and shape experiences that truly matter.</p>
+          <div class="eyebrow" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">
+            {{ $isInternship ? 'Internships at YCX' : 'Careers at YCX' }}
+          </div>
+          <h1 style="font-family: 'Fraunces', serif; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15; color: #0c3a30; margin-bottom: 20px;">
+            {{ $isInternship ? 'Start Your Journey with Young Chanakya X' : 'Build Your Future with Young Chanakya X' }}
+          </h1>
+          <p class="hero-copy" style="font-size: 16px; color: var(--text-soft); line-height: 1.6; max-width: 600px;">
+            {{ $isInternship 
+              ? 'Get real-world experience, build hands-on skills, and make meaningful contributions. Join our team as an intern and work on projects that matter.' 
+              : 'Join a passionate team that\'s building a community where stories, knowledge, and people come together. Help us empower the next generation of creators.' }}
+          </p>
           
           <div class="about-hero-buttons" style="margin-top: 32px;">
             <a href="#roles" class="btn-lg">
-              View Open Roles
+              {{ $isInternship ? 'View Open Internships' : 'View Open Roles' }}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
           </div>
@@ -56,7 +67,7 @@ $seo = [
       <div class="section-head text-center mx-auto">
         <span class="eyebrow">Life at YCX</span>
         <h2>What It's Actually Like Working Here</h2>
-        <p>We create an environment where ideas are valued, people support one another,<br> and every contribution helps shape a stronger community.</p>
+        <p>We create an environment where ideas are valued, people support one another, and every contribution helps shape a stronger community.</p>
       </div>
       <div class="culture-track">
         <div class="culture-card">
@@ -109,7 +120,7 @@ $seo = [
       <div class="section-head text-center mx-auto">
         <span class="eyebrow">Perks & Benefits</span>
         <h2>Why You'll Love Working Here</h2>
-        <p>We believe great work happens when people feel supported, inspired, and empowered to grow. That's why we offer benefits<br> that encourage learning, collaboration, well-being, and career development.</p>
+        <p>We believe great work happens when people feel supported, inspired, and empowered to grow. That's why we offer benefits that encourage learning, collaboration, well-being, and career development.</p>
       </div>
       <div class="perks-table">
         <div class="perk-row">
@@ -150,11 +161,35 @@ $seo = [
   <section id="roles">
     <div class="wrap">
       <div class="section-head text-center mx-auto">
-        <span class="eyebrow">Open Roles</span>
-        <h2>Where We Need You Right Now</h2>
+        <span class="eyebrow">Open Opportunities</span>
+        <h2>{{ $isInternship ? 'Available Internships' : 'Where We Need You Right Now' }}</h2>
         <p>Explore our currently open positions and find where your skills can make the greatest impact.<br> Tap any role below to see the full brief and apply.</p>
       </div>
-      <div class="roles-tiles" id="rolesGrid"></div>
+      <div class="roles-tiles" id="rolesGrid">
+        @forelse($jobs as $job)
+          <a href="{{ route($job->category == 'internship' ? 'internships.detail' : 'careers.detail', $job->slug) }}" class="role-tile" style="text-decoration: none; display: block;">
+            <div class="role-tile-top">
+              <h3>{{ $job->title }}</h3>
+              <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+            <div class="role-tile-tags">
+              <span>{{ ucfirst($job->work_mode) }}</span>
+              <span>{{ $job->department }}</span>
+              @if($job->experience)
+                <span>{{ $job->experience }}</span>
+              @endif
+              @if($job->duration)
+                <span>{{ $job->duration }}</span>
+              @endif
+            </div>
+            <p class="blurb">{{ $job->tagline }}</p>
+          </a>
+        @empty
+          <div class="text-center w-100 py-5">
+            <h4 style="color: var(--text-soft);">No open opportunities at this moment. Check back soon!</h4>
+          </div>
+        @endforelse
+      </div>
     </div>
   </section>
 
@@ -164,7 +199,7 @@ $seo = [
       <div class="sec-head">
         <span class="eyebrow">Your Journey Starts Here</span>
         <h2>A Simple & Transparent Hiring Process</h2>
-        <p>Our hiring process is designed to help us get to know you beyond your resume. We value passion,<br> curiosity, and a willingness to learn as much as experience.</p>
+        <p>Our hiring process is designed to help us get to know you beyond your resume. We value passion, curiosity, and a willingness to learn as much as experience.</p>
       </div>
       <div class="timeline">
         <div class="t-step">
@@ -202,7 +237,7 @@ $seo = [
       <div class="section-head text-center mx-auto">
         <span class="eyebrow">Don't See The Right Role?</span>
         <h2>We're Always Meeting People Worth Keeping in Mind</h2>
-        <p>Even if there isn't a role that matches your skills today, we'd still love to hear from you. Share your profile,<br> and we'll reach out when a suitable opportunity becomes available.</p>
+        <p>Even if there isn't a role that matches your skills today, we'd still love to hear from you. Share your profile, and we'll reach out when a suitable opportunity becomes available.</p>
       </div>
       <div class="center-btn">
         <a href="mailto:youngchanakyaconnect@gmail.com?subject=General Career Application - Young Chanakya X" class="btn-lg">
@@ -213,142 +248,5 @@ $seo = [
     </div>
   </section>
 
-  <!-- ROLE / APPLY MODAL -->
-  <div class="modal-overlay" id="roleModal">
-    <div class="modal-panel">
-      <button class="modal-close" id="modalCloseBtn">&times;</button>
-      <div id="modalContent">
-        <h3 id="modalRoleTitle">Role Title</h3>
-        <div class="modal-tags" id="modalTags"></div>
-        <p class="desc" id="modalDesc"></p>
-        <ul id="modalReqs"></ul>
-        <hr>
-        <form id="modalForm">
-          <div class="form-row">
-            <div class="field"><label>First name</label><input type="text" required></div>
-            <div class="field"><label>Last name</label><input type="text" required></div>
-          </div>
-          <div class="form-row">
-            <div class="field"><label>Email address</label><input type="email" required></div>
-            <div class="field"><label>Phone number</label><input type="tel" required></div>
-          </div>
-          <div class="form-row">
-            <div class="field"><label>LinkedIn or portfolio link</label><input type="url" placeholder="https://"></div>
-            <div class="field"><label>Resume link</label><input type="url" placeholder="Drive / Dropbox link"></div>
-          </div>
-          <div class="field"><label>Why YCX, and why this role?</label><textarea required></textarea></div>
-          <button type="submit" class="btn-peach">Submit Application</button>
-          <span class="modal-note">We'll only use this to reach out about your application.</span>
-        </form>
-        <div class="modal-thanks" id="modalThanks">
-          <h4>You're in the queue.</h4>
-          <p>Thanks for applying — our team will review your profile and reach out within 5–7 working days if it's a fit.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </div>
 @endsection
-
-@push('scripts')
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const roles = [
-      { title: "Content & Storytelling Lead", tags: ["Full-time","Remote","Content"],
-        blurb: "Own the editorial voice of YCX — from speaker story shaping to newsletter and social copy.",
-        desc: "Own the editorial voice of YCX — from speaker story shaping to newsletter and social copy. You'll work closely with speakers to turn raw experience into something worth reading or watching.",
-        reqs: ["2+ years writing or content strategy experience, ideally with an audience-facing brand","Comfortable interviewing people and shaping their stories with care","Strong command of English; a second Indian language is a plus"] },
-      { title: "Community Manager", tags: ["Full-time","Hybrid · Tamil Nadu","Community"],
-        blurb: "Be the day-to-day face of YCX for our members — onboarding, moderation, and events.",
-        desc: "Be the day-to-day face of YCX for our members — onboarding new speakers, moderating conversations, and organizing local meetups and events.",
-        reqs: ["1–3 years in community, events, or membership roles","Genuinely enjoys talking to people — this role is mostly conversations","Comfortable coordinating logistics for in-person events"] },
-      { title: "Podcast & Video Producer", tags: ["Full-time","Remote","Production"],
-        blurb: "Plan, shoot, and edit YCX's podcast and speaker sessions end to end.",
-        desc: "Plan, shoot, and edit YCX's podcast and speaker sessions — from pre-production briefs to the final cut that goes out to our audience.",
-        reqs: ["Portfolio of edited long-form video or podcast work","Comfortable running a live recording session, not just editing after the fact","An eye for pacing — knowing what to cut is as important as what to keep"] },
-      { title: "Growth & Social Media Marketer", tags: ["Full-time","Remote","Marketing"],
-        blurb: "Own YCX's presence across Instagram, LinkedIn, and YouTube.",
-        desc: "Own YCX's presence across Instagram, LinkedIn, and YouTube — turning speaker sessions and community moments into content that actually travels.",
-        reqs: ["Track record of growing an audience from scratch, personal or brand","Understands short-form content and can brief or shoot it yourself","Comfortable with basic analytics to know what's working"] },
-      { title: "Partnerships & Sponsorships Associate", tags: ["Full-time","Remote","Partnerships"],
-        blurb: "Build relationships with brands and organizations joining the YCX ecosystem.",
-        desc: "Build relationships with brands, institutions, and organizations who want to be part of the YCX ecosystem — from event sponsors to platform collaborators.",
-        reqs: ["Experience in B2B sales, partnerships, or business development","Can hold a conversation with a founder and a marketing director equally well","Organized enough to keep a pipeline moving without things slipping"] },
-      { title: "UI/UX & Brand Designer", tags: ["Freelance","Remote","Design"],
-        blurb: "Shape how YCX looks and feels across web, social, and event collateral.",
-        desc: "Help shape how YCX looks and feels across web, social, and event collateral — working closely with our founder on brand-critical projects.",
-        reqs: ["Strong portfolio in brand and digital design, not just UI screens","Comfortable working independently on a project basis","Bonus: experience designing for community or events brands"] },
-      { title: "Web Developer Intern", tags: ["Internship","Remote","Tech"],
-        blurb: "Support the build-out of YCX's website and internal tools.",
-        desc: "Support the build-out of YCX's website and internal tools — a hands-on internship for someone who wants real shipped work, not busywork.",
-        reqs: ["Comfortable with HTML/CSS/JS fundamentals; any framework experience is a bonus","Curious and unafraid to ask questions","Available for a minimum 3-month commitment"] }
-    ];
-
-    const grid = document.getElementById('rolesGrid');
-    if (grid) {
-      roles.forEach(r => {
-        const tile = document.createElement('div');
-        tile.className = 'role-tile';
-        tile.innerHTML = `
-          <div class="role-tile-top">
-            <h3>${r.title}</h3>
-            <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </div>
-          <div class="role-tile-tags">${r.tags.map(t=>`<span>${t}</span>`).join('')}</div>
-          <p class="blurb">${r.blurb}</p>
-        `;
-        tile.addEventListener('click', () => openModal(r));
-        grid.appendChild(tile);
-      });
-    }
-
-    const modal = document.getElementById('roleModal');
-    const modalForm = document.getElementById('modalForm');
-    const modalThanks = document.getElementById('modalThanks');
-
-    function openModal(role) {
-      if (!modal || !modalForm || !modalThanks) return;
-      modalForm.style.display = 'flex';
-      modalForm.style.flexDirection = 'column';
-      modalThanks.style.display = 'none';
-      modalForm.reset();
-      document.getElementById('modalRoleTitle').textContent = role.title;
-      document.getElementById('modalTags').innerHTML = role.tags.map(t=>`<span>${t}</span>`).join('') ;
-      document.getElementById('modalDesc').textContent = role.desc;
-      document.getElementById('modalReqs').innerHTML = role.reqs.map(r=>`<li>${r}</li>`).join('');
-      modal.classList.add('active');
-    }
-
-    const bentoRolesBtn = document.getElementById('bentoRolesBtn');
-    if (bentoRolesBtn) {
-      bentoRolesBtn.addEventListener('click', e => {
-        e.preventDefault();
-        const rolesSection = document.getElementById('roles');
-        if (rolesSection) {
-          rolesSection.scrollIntoView({behavior:'smooth'});
-        }
-      });
-    }
-
-    const modalCloseBtn = document.getElementById('modalCloseBtn');
-    if (modalCloseBtn) {
-      modalCloseBtn.addEventListener('click', () => modal.classList.remove('active'));
-    }
-
-    if (modal) {
-      modal.addEventListener('click', e => {
-        if(e.target === modal) modal.classList.remove('active');
-      });
-    }
-
-    if (modalForm) {
-      modalForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        modalForm.style.display = 'none';
-        modalThanks.style.display = 'block';
-      });
-    }
-  });
-</script>
-@endpush

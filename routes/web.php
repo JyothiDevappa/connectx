@@ -76,10 +76,12 @@ Route::get('/pricing', fn() => view('pricing'));
 Route::get('/faq', fn() => view('faq'));
 Route::get('/contact', fn() => view('contact'))->name('contact');
 Route::get('/404', fn() => view('404'));
-
+Route::get('/privacy-policy', fn() => view('privacy-policy'))->name('privacy.policy');
 
 
 use App\Http\Controllers\ApplicationController;
+use App\Http\Controllers\AdminLoginController;
+use App\Http\Controllers\AdminDashboardController;
 
 Route::get('/connecters-list', function () {
     return view('connecters-list');
@@ -100,9 +102,11 @@ Route::post('/become-a-partner/apply', [ApplicationController::class, 'submitPar
 Route::get('/become-a-speaker', function () {
     return view('become-a-speaker');
 });
-Route::get('/career', function () {
-    return view('career');
-});
+Route::get('/career', [App\Http\Controllers\JobController::class, 'careers'])->name('careers.index');
+Route::get('/internship', [App\Http\Controllers\JobController::class, 'internships'])->name('internships.index');
+Route::get('/career/{slug}', [App\Http\Controllers\JobController::class, 'careerDetail'])->name('careers.detail');
+Route::get('/internship/{slug}', [App\Http\Controllers\JobController::class, 'internshipDetail'])->name('internships.detail');
+Route::post('/jobs/apply', [ApplicationController::class, 'submitJobApplication'])->name('jobs.apply');
 Route::get('/events', fn() => view('events'));
 Route::get('/event-details/{slug?}', function ($slug = 'c-suite-strategy-transcending-market-vulnerabilities') {
     return view('event-details', compact('slug'));
@@ -110,6 +114,44 @@ Route::get('/event-details/{slug?}', function ($slug = 'c-suite-strategy-transce
 Route::post('/event-details/apply', [ApplicationController::class, 'submitRsvp'])->name('rsvp.apply');
 
 Route::post('/contact/submit', [ApplicationController::class, 'submitContact'])->name('contact.submit');
+// =========================
+// ADMIN — Auth
+// =========================
+Route::get('/admin/login',  [AdminLoginController::class, 'showLogin'])->name('admin.login');
+Route::post('/admin/login', [AdminLoginController::class, 'login'])->name('admin.login.post');
+Route::post('/admin/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
+
+// Protected admin routes
+Route::middleware('admin')->group(function () {
+    Route::get('/admin/dashboard/{section?}', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
+
+    // Connectors API (real DB)
+    Route::get('/admin/api/connectors', [AdminDashboardController::class, 'connectors'])->name('admin.api.connectors');
+    Route::post('/admin/api/connectors/{id}', [AdminDashboardController::class, 'updateConnector'])->name('admin.api.connectors.update');
+
+    // Partners API (real DB)
+    Route::get('/admin/api/partners', [AdminDashboardController::class, 'partners'])->name('admin.api.partners');
+    Route::post('/admin/api/partners/{id}', [AdminDashboardController::class, 'updatePartner'])->name('admin.api.partners.update');
+
+    // Sponsors API (real DB)
+    Route::get('/admin/api/sponsors', [AdminDashboardController::class, 'sponsors'])->name('admin.api.sponsors');
+    Route::post('/admin/api/sponsors/{id}', [AdminDashboardController::class, 'updateSponsor'])->name('admin.api.sponsors.update');
+
+    // Jobs & Applications API (real DB)
+    Route::get('/admin/api/posted-jobs', [AdminDashboardController::class, 'postedJobs'])->name('admin.api.posted-jobs');
+    Route::post('/admin/api/posted-jobs', [AdminDashboardController::class, 'savePostedJob'])->name('admin.api.posted-jobs.create');
+    Route::post('/admin/api/posted-jobs/{id}', [AdminDashboardController::class, 'savePostedJob'])->name('admin.api.posted-jobs.update');
+    Route::delete('/admin/api/posted-jobs/{id}', [AdminDashboardController::class, 'deletePostedJob'])->name('admin.api.posted-jobs.delete');
+    Route::get('/admin/api/job-applications', [AdminDashboardController::class, 'jobApplications'])->name('admin.api.job-applications');
+    Route::post('/admin/api/job-applications/{id}', [AdminDashboardController::class, 'updateJobApplication'])->name('admin.api.job-applications.update');
+
+    // Jobs full page views
+    Route::get('/admin/posted-jobs/create', [AdminDashboardController::class, 'createJobPage'])->name('admin.posted-jobs.create-page');
+    Route::get('/admin/posted-jobs/edit/{id}', [AdminDashboardController::class, 'editJobPage'])->name('admin.posted-jobs.edit-page');
+    Route::post('/admin/posted-jobs/save', [AdminDashboardController::class, 'savePostedJobForm'])->name('admin.posted-jobs.save-form');
+    Route::post('/admin/posted-jobs/update/{id}', [AdminDashboardController::class, 'updatePostedJobForm'])->name('admin.posted-jobs.update-form');
+});
+
 Route::get('/check-db', function() {
     return response()->json(\App\Models\Contact::latest()->get());
 });

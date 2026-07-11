@@ -769,6 +769,7 @@ $seo = [
     </div>
 </div>
 
+@push('scripts')
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         var successModalElement = document.getElementById('successModal');
@@ -778,6 +779,7 @@ $seo = [
         }
     });
 </script>
+@endpush
 @endif
 
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/js/intlTelInput.min.js"></script>

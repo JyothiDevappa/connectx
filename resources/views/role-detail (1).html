@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Role — Young Chanakya X</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0c3a30;
+    --ink-deep:#082821;
+    --peach:#ffd2b1;
+    --peach-deep:#ffbe8e;
+    --cream:#fffaf4;
+    --white:#ffffff;
+    --text:#12261f;
+    --text-soft:#4d6459;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Manrope',sans-serif;color:var(--text);background:var(--cream);}
+  img{display:block;max-width:100%;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  button{font-family:inherit;border:none;background:none;cursor:pointer;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  @media(max-width:720px){.wrap{padding:0 22px;}}
+  .kicker{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink);
+    display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;font-weight:700;}
+  .kicker::before{content:'';width:16px;height:1.5px;background:var(--ink);}
+
+  /* ---------- Floating nav ---------- */
+  header{position:fixed;top:0;left:0;right:0;z-index:150;padding:22px 0;background:rgba(8,40,33,0.92);backdrop-filter:blur(10px);}
+  nav{display:flex;align-items:center;justify-content:space-between;max-width:1180px;margin:0 auto;padding:0 32px;}
+  .logo{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:700;font-size:20px;color:var(--white);}
+  .logo .x-mark{width:32px;height:32px;border-radius:9px;background:var(--peach);display:flex;align-items:center;justify-content:center;
+    color:var(--ink-deep);font-family:'Fraunces',serif;font-weight:700;font-size:17px;}
+  .nav-btn{background:var(--peach);color:var(--ink);padding:11px 22px;border-radius:100px;font-weight:800;font-size:13.5px;}
+  .nav-btn:hover{background:var(--peach-deep);}
+
+  /* ================= BREADCRUMB + HERO ================= */
+  .role-hero{padding:150px 0 46px;background:var(--white);border-bottom:1px solid rgba(12,58,48,0.08);}
+  .crumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-soft);margin-bottom:26px;flex-wrap:wrap;}
+  .crumb a{color:var(--text-soft);font-weight:600;}
+  .crumb a:hover{color:var(--ink);}
+  .crumb .sep{opacity:.5;}
+  .crumb .current{color:var(--ink);font-weight:700;}
+  .badge-row{display:flex;gap:10px;align-items:center;margin-bottom:20px;flex-wrap:wrap;}
+  .badge-pill{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:7px 14px;border-radius:100px;}
+  .badge-internship{background:var(--peach);color:var(--ink);}
+  .badge-career{background:var(--ink);color:var(--peach);}
+  .badge-track{background:rgba(12,58,48,0.07);color:var(--ink);}
+  .role-hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(30px,4.6vw,52px);color:var(--ink);
+    letter-spacing:-1.4px;line-height:1.06;max-width:760px;margin-bottom:16px;}
+  .role-hero .tagline{font-size:16.5px;color:var(--text-soft);max-width:600px;line-height:1.65;margin-bottom:34px;}
+  .detail-chips{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .dchip{background:var(--cream);border:1px solid rgba(12,58,48,0.1);border-radius:14px;padding:16px 18px;}
+  .dchip .mono{font-size:10.5px;letter-spacing:1px;color:var(--text-soft);text-transform:uppercase;font-family:'Space Mono',monospace;display:block;margin-bottom:5px;}
+  .dchip .val{font-family:'Fraunces',serif;font-size:17px;color:var(--ink);font-weight:600;}
+  @media(max-width:720px){.role-hero{padding-top:130px;}.detail-chips{grid-template-columns:repeat(2,1fr);}}
+
+  /* ================= BODY LAYOUT ================= */
+  #role-body{padding:80px 0 100px;}
+  .detail-layout{display:grid;grid-template-columns:1.55fr 0.85fr;gap:60px;align-items:start;}
+  .main-col section{margin-bottom:52px;}
+  .main-col h2{font-family:'Fraunces',serif;font-weight:600;font-size:24px;color:var(--ink);letter-spacing:-0.5px;margin-bottom:16px;}
+  .main-col p.body-p{font-size:15px;color:var(--text-soft);line-height:1.75;max-width:600px;margin-bottom:14px;}
+  .role-photo{border-radius:20px;overflow:hidden;margin:8px 0 48px;box-shadow:0 30px 55px -30px rgba(12,58,48,0.3);}
+  .role-photo img{width:100%;max-height:360px;object-fit:cover;}
+  .bullet-list{display:flex;flex-direction:column;gap:14px;}
+  .bullet-row{display:flex;gap:14px;align-items:flex-start;}
+  .bullet-row .bc{width:24px;height:24px;border-radius:50%;background:var(--peach);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+  .bullet-row .bc svg{width:12px;height:12px;color:var(--ink);}
+  .bullet-row p{font-size:14.5px;color:var(--text-soft);font-weight:600;line-height:1.55;}
+
+  /* ---- sidebar ---- */
+  .sidebar{position:sticky;top:110px;display:flex;flex-direction:column;gap:22px;}
+
+  /* Quick Facts (light, icon rows) */
+  .facts-card{background:var(--white);border:1px solid rgba(12,58,48,0.1);border-radius:22px;padding:30px;box-shadow:0 20px 45px -30px rgba(12,58,48,0.25);}
+  .facts-head{display:flex;align-items:center;gap:10px;margin-bottom:22px;}
+  .facts-head .info-i{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--peach-deep);color:var(--peach-deep);
+    display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-style:italic;font-size:13px;font-weight:700;flex-shrink:0;}
+  .facts-head h3{font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--ink);}
+  .fact-row{display:flex;gap:14px;align-items:center;padding:14px 0;border-top:1px solid rgba(12,58,48,0.08);}
+  .fact-row:first-of-type{border-top:none;padding-top:0;}
+  .fact-icon{width:42px;height:42px;border-radius:12px;background:var(--cream);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .fact-icon svg{width:19px;height:19px;color:var(--peach-deep);}
+  .fact-text .fk{font-size:10.5px;letter-spacing:0.5px;text-transform:uppercase;color:var(--text-soft);font-family:'Space Mono',monospace;display:block;margin-bottom:3px;}
+  .fact-text .fv{font-family:'Fraunces',serif;font-size:15.5px;font-weight:600;color:var(--ink);}
+  .sidebar-apply{display:block;text-align:center;margin-top:24px;background:var(--ink);color:var(--peach);padding:15px;border-radius:100px;font-weight:800;font-size:14.5px;}
+  .sidebar-apply:hover{background:var(--ink-deep);}
+  .sidebar-note{font-size:12px;color:var(--text-soft);text-align:center;margin-top:12px;}
+
+  /* Key Skills (badge design) */
+  .skills-card{background:var(--white);border:1px solid rgba(12,58,48,0.1);border-radius:22px;padding:28px;}
+  .skills-card h4{font-family:'Fraunces',serif;font-size:16px;font-weight:600;color:var(--ink);margin-bottom:16px;}
+  .skills-wrap{display:flex;flex-wrap:wrap;gap:9px;}
+  .skill-badge{font-size:12.5px;font-weight:700;color:var(--ink);background:rgba(12,58,48,0.07);border:1px solid rgba(12,58,48,0.12);
+    padding:8px 15px;border-radius:100px;}
+  @media(max-width:900px){.detail-layout{grid-template-columns:1fr;}.sidebar{position:static;}}
+
+  /* ================= MORE OPEN ROLES ================= */
+  #more-roles{padding:90px 0 120px;background:var(--white);border-top:1px solid rgba(12,58,48,0.08);}
+  .sec-head{max-width:600px;margin-bottom:44px;}
+  .sec-head h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(24px,3vw,34px);color:var(--ink);letter-spacing:-1px;line-height:1.14;margin-bottom:12px;}
+  .sec-head p{font-size:15px;color:var(--text-soft);line-height:1.6;}
+  .role-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .role-card{background:var(--cream);border-radius:18px;padding:26px;border:1px solid rgba(12,58,48,0.08);display:flex;flex-direction:column;gap:10px;}
+  .role-card .rc-badge{align-self:flex-start;font-family:'Space Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:5px 11px;border-radius:100px;}
+  .role-card h4{font-family:'Fraunces',serif;font-size:17.5px;font-weight:600;color:var(--ink);}
+  .role-card p{font-size:13px;color:var(--text-soft);line-height:1.55;}
+  .role-card .rc-link{margin-top:auto;font-size:13px;font-weight:800;color:var(--ink);display:inline-flex;align-items:center;gap:6px;}
+  .role-card .rc-link svg{width:13px;height:13px;}
+  @media(max-width:900px){.role-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:600px){.role-grid{grid-template-columns:1fr;}}
+
+  /* ================= FOOTER ================= */
+  footer{background:var(--ink-deep);color:rgba(255,250,244,0.55);padding:44px 0 100px;}
+  .footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:13px;}
+  .footer-row .flogo{font-family:'Fraunces',serif;color:var(--peach);font-weight:700;font-size:16px;display:flex;align-items:center;gap:8px;}
+  .footer-row .flogo .x-mark{width:26px;height:26px;border-radius:7px;background:var(--peach);color:var(--ink-deep);display:flex;align-items:center;justify-content:center;font-size:13px;}
+
+  /* ================= STICKY BOTTOM BAR ================= */
+  .sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:140;background:var(--ink);border-top:1px solid rgba(255,250,244,0.1);
+    padding:16px 32px;display:flex;justify-content:space-between;align-items:center;gap:20px;}
+  .sticky-bar .msg{display:flex;flex-direction:column;gap:2px;}
+  .sticky-bar .msg .mono{font-size:10.5px;letter-spacing:1px;color:var(--peach-deep);text-transform:uppercase;font-family:'Space Mono',monospace;}
+  .sticky-bar .msg .txt{font-family:'Fraunces',serif;font-size:15px;color:var(--white);font-weight:600;}
+  .sticky-bar .sbtn{background:var(--peach);color:var(--ink);padding:12px 26px;border-radius:100px;font-weight:800;font-size:13.5px;flex-shrink:0;}
+  .sticky-bar .sbtn:hover{background:var(--peach-deep);}
+  @media(max-width:600px){.sticky-bar .msg .txt{font-size:13px;}.sticky-bar{padding:14px 18px;}}
+
+  /* ================= BOTTOM SHEET DRAWER ================= */
+  .drawer-overlay{position:fixed;inset:0;background:rgba(8,40,33,0.5);backdrop-filter:blur(2px);z-index:200;
+    display:none;opacity:0;transition:opacity .3s ease;}
+  .drawer-overlay.active{display:block;opacity:1;}
+  .drawer{position:fixed;left:0;right:0;bottom:0;z-index:201;background:var(--cream);border-radius:26px 26px 0 0;
+    max-height:86vh;overflow-y:auto;padding:36px 40px 48px;transform:translateY(100%);transition:transform .35s ease;}
+  .drawer.active{transform:translateY(0);}
+  .drawer-handle{width:44px;height:5px;border-radius:10px;background:rgba(12,58,48,0.2);margin:0 auto 22px;}
+  .drawer-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;}
+  .drawer-top h3{font-family:'Fraunces',serif;font-size:24px;color:var(--ink);font-weight:600;}
+  .drawer-top p{font-size:13.5px;color:var(--text-soft);margin-top:6px;max-width:420px;}
+  .drawer-close{width:32px;height:32px;border-radius:50%;background:var(--ink);color:var(--peach);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
+  .field label{font-size:12px;font-weight:700;color:var(--ink);}
+  .field input,.field select,.field textarea{padding:12px 14px;border-radius:10px;border:1.5px solid rgba(12,58,48,0.18);
+    background:var(--white);font-family:'Manrope',sans-serif;font-size:14px;color:var(--text);outline:none;}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--ink);}
+  .field input[readonly]{background:rgba(12,58,48,0.05);color:var(--text-soft);}
+  .field textarea{resize:vertical;min-height:80px;}
+  .form-section-label{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-soft);
+    margin:22px 0 12px;display:block;}
+  .form-section-label:first-child{margin-top:0;}
+  .radio-group{display:flex;gap:26px;margin-bottom:16px;}
+  .radio-option{display:flex;align-items:center;gap:9px;cursor:pointer;}
+  .radio-option input{display:none;}
+  .radio-option .rdot{width:20px;height:20px;border-radius:50%;border:2px solid rgba(12,58,48,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .2s;}
+  .radio-option .rdot::after{content:'';width:10px;height:10px;border-radius:50%;background:var(--peach-deep);transform:scale(0);transition:transform .15s;}
+  .radio-option input:checked + .rdot{border-color:var(--ink);}
+  .radio-option input:checked + .rdot::after{transform:scale(1);}
+  .radio-option span.rlabel{font-size:14px;font-weight:700;color:var(--text);}
+  .edu-block{display:none;}
+  .edu-block.active{display:block;}
+  .file-upload{border:1.5px dashed rgba(12,58,48,0.25);border-radius:12px;padding:20px;text-align:center;background:var(--white);cursor:pointer;}
+  .file-upload input{display:none;}
+  .file-upload .fu-label{font-size:13.5px;font-weight:700;color:var(--ink);}
+  .file-upload .fu-sub{font-size:11.5px;color:var(--text-soft);margin-top:4px;display:block;}
+  .file-upload.has-file{border-style:solid;border-color:var(--ink);}
+  .declaration-row{display:flex;gap:12px;align-items:flex-start;margin:22px 0 20px;padding:16px;background:var(--white);border:1.5px solid rgba(12,58,48,0.15);border-radius:12px;}
+  .declaration-row input{margin-top:3px;flex-shrink:0;width:16px;height:16px;accent-color:var(--ink);}
+  .declaration-row p{font-size:12.5px;color:var(--text-soft);line-height:1.55;}
+  .drawer-submit{background:var(--ink);color:var(--peach-deep);width:100%;padding:15px;border-radius:100px;font-weight:800;font-size:14.5px;}
+  .drawer-note{font-size:11.5px;color:var(--text-soft);text-align:center;display:block;margin-top:12px;}
+  .drawer-thanks{display:none;text-align:center;padding:30px 0;}
+  .drawer-thanks h4{font-family:'Fraunces',serif;font-size:22px;color:var(--ink);margin-bottom:8px;}
+  .drawer-thanks p{font-size:14px;color:var(--text-soft);}
+  @media(max-width:720px){.drawer{padding:28px 22px 40px;}.form-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <nav>
+    <a href="ycx-internships.html" class="logo"><span class="x-mark">X</span>Young Chanakya X</a>
+    <a href="#" class="nav-btn" id="navApplyBtn">Apply Now</a>
+  </nav>
+</header>
+
+<!-- ROLE HERO -->
+<section class="role-hero">
+  <div class="wrap">
+    <div class="crumb" id="crumb"></div>
+    <div class="badge-row" id="badgeRow"></div>
+    <h1 id="roleTitle">Loading role…</h1>
+    <p class="tagline" id="roleTagline"></p>
+    <div class="detail-chips" id="roleChips"></div>
+  </div>
+</section>
+
+<!-- ROLE BODY -->
+<section id="role-body">
+  <div class="wrap detail-layout">
+    <div class="main-col">
+      <section>
+        <h2>Job Description</h2>
+        <p class="body-p" id="roleOverview"></p>
+      </section>
+      <div class="role-photo"><img id="rolePhoto" src="" alt=""></div>
+      <section>
+        <h2 id="responsibilitiesHead">Roles and Responsibility</h2>
+        <div class="bullet-list" id="roleResponsibilities"></div>
+      </section>
+      <section>
+        <h2 id="requirementsHead">Who Can Apply</h2>
+        <div class="bullet-list" id="roleRequirements"></div>
+      </section>
+      <section>
+        <h2 id="gainsHead">What you'll gain</h2>
+        <div class="bullet-list" id="roleGains"></div>
+      </section>
+    </div>
+
+    <div class="sidebar">
+      <div class="facts-card">
+        <div class="facts-head">
+          <span class="info-i">i</span>
+          <h3>Job Overview</h3>
+        </div>
+        <div id="sidebarFacts"></div>
+        <a href="#" class="sidebar-apply" id="sidebarApplyBtn">Apply for this Role</a>
+        <span class="sidebar-note">Applications are reviewed on a rolling basis.</span>
+      </div>
+      <div class="skills-card">
+        <h4>Key Skills</h4>
+        <div class="skills-wrap" id="skillsWrap"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MORE OPEN ROLES -->
+<section id="more-roles">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Keep Exploring</span>
+      <h2>More ways to work with us.</h2>
+      <p>Across internships and full-time careers — pick the track that fits where you are right now.</p>
+    </div>
+    <div class="role-grid" id="roleGrid"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <span class="flogo"><span class="x-mark">X</span>Young Chanakya X</span>
+    <span>© 2026 Young Chanakya X. All rights reserved.</span>
+  </div>
+</footer>
+
+<!-- STICKY BOTTOM BAR -->
+<div class="sticky-bar">
+  <div class="msg"><span class="mono">Applications Open</span><span class="txt" id="stickyMsg">This cycle closes soon — apply today.</span></div>
+  <a href="#" class="sbtn" id="stickyApplyBtn">Apply Now</a>
+</div>
+
+<!-- BOTTOM SHEET DRAWER -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-handle"></div>
+  <div class="drawer-top">
+    <div>
+      <h3 id="drawerTitle">Apply</h3>
+      <p>Tell us about yourself and we'll get back to you shortly.</p>
+    </div>
+    <button class="drawer-close" id="drawerCloseBtn">&times;</button>
+  </div>
+  <form id="internForm">
+    <div class="field">
+      <label>Role you're applying for</label>
+      <input type="text" id="roleField" readonly>
+    </div>
+
+    <span class="form-section-label">Personal Details</span>
+    <div class="form-row">
+      <div class="field"><label>Full Name</label><input type="text" required></div>
+      <div class="field"><label>Date of Birth</label><input type="date" required></div>
+    </div>
+    <div class="form-row">
+      <div class="field"><label>Nationality</label><input type="text" placeholder="e.g. Indian" required></div>
+      <div class="field"><label>Marital Status</label>
+        <select required>
+          <option value="">-- Select --</option>
+          <option>Single</option><option>Married</option><option>Prefer not to say</option>
+        </select>
+      </div>
+    </div>
+
+    <span class="form-section-label">Contact Details</span>
+    <div class="form-row">
+      <div class="field"><label>Phone Number</label><input type="tel" required></div>
+      <div class="field"><label>WhatsApp Number</label><input type="tel" required></div>
+    </div>
+    <div class="form-row">
+      <div class="field"><label>Emergency Contact Name</label><input type="text" required></div>
+      <div class="field"><label>Emergency Contact Number</label><input type="tel" required></div>
+    </div>
+    <div class="field"><label>Email Address</label><input type="email" required></div>
+    <div class="field"><label>Residential Address</label><textarea required></textarea></div>
+
+    <span class="form-section-label">Education</span>
+    <label style="font-size:14px;font-weight:700;color:var(--ink);display:block;margin-bottom:10px;">Are you currently pursuing education?</label>
+    <div class="radio-group">
+      <label class="radio-option"><input type="radio" name="pursuingEdu" value="yes" id="eduYes"><span class="rdot"></span><span class="rlabel">Yes</span></label>
+      <label class="radio-option"><input type="radio" name="pursuingEdu" value="no" id="eduNo"><span class="rdot"></span><span class="rlabel">No</span></label>
+    </div>
+
+    <div class="edu-block" id="eduBlockYes">
+      <div class="form-row">
+        <div class="field"><label>College Name</label><input type="text" placeholder="e.g. Madras University"></div>
+        <div class="field"><label>Course Name</label><input type="text" placeholder="e.g. Bachelor of Technology"></div>
+        <div class="field">
+          <label>Current Semester</label>
+          <select>
+            <option value="">-- Select Semester --</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option>
+            <option>5</option><option>6</option><option>7</option><option>8</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="edu-block" id="eduBlockNo">
+      <div class="form-row">
+        <div class="field"><label>Institution / Board / University</label><input type="text" placeholder="e.g. Madras University"></div>
+        <div class="field"><label>Degree / Qualification</label><input type="text" placeholder="e.g. Bachelor of Technology"></div>
+        <div class="field"><label>Year of Passing</label><input type="text" placeholder="e.g. 2024"></div>
+      </div>
+    </div>
+
+    <span class="form-section-label">Resume</span>
+    <label class="file-upload" id="fileUploadBox">
+      <input type="file" id="resumeUpload" accept=".pdf,.doc,.docx">
+      <span class="fu-label" id="fuLabel">Click to upload your resume</span>
+      <span class="fu-sub">PDF or Word document, up to 5MB</span>
+    </label>
+
+    <div class="declaration-row">
+      <input type="checkbox" id="declarationCheck" required>
+      <p>I hereby declare that the information provided above is true and correct to the best of my knowledge, and I understand that any false information may disqualify my application.</p>
+    </div>
+
+    <button type="submit" class="drawer-submit">Submit Application</button>
+    <span class="drawer-note">We'll only use this to reach out about your application.</span>
+  </form>
+  <div class="drawer-thanks" id="drawerThanks">
+    <h4>You're in the queue.</h4>
+    <p>Thanks for applying — our team will review your profile and reach out within 5–7 working days if it's a fit.</p>
+  </div>
+</div>
+
+<script>
+  /* ============ SHARED ROLE DATA ============
+     type: 'internship' | 'career'
+     This single object (and this single page) drives both the Internships
+     listing and a future Careers listing — pass ?role=<slug> to load one. */
+  const ROLES = {
+    "content-intern": {
+      type:"internship", category:"Content", title:"Content Internship",
+      badgeLabel:"Internship",
+      tagline:"Help shape speaker stories, newsletters, and YCX's written voice — from first draft to what actually goes live.",
+      meta:[{label:"Duration",value:"3–6 Months"},{label:"Commitment",value:"15–20 hrs/week"},{label:"Location",value:"Remote / Hybrid"},{label:"Mentorship",value:"1:1 Founding Team"}],
+      image:"https://images.unsplash.com/photo-1758873268745-dd2cf0d677b5?auto=format&fit=crop&w=1200&q=80",
+      overview:"You'll join the content pod as a working writer and editor — not a shadow. Expect to touch newsletters, event recaps, speaker interviews, and the site copy that visitors actually read.",
+      responsibilities:["Draft and edit newsletters, blog posts, and event recaps","Interview speakers and turn conversations into publishable stories","Keep YCX's tone consistent across every channel","Pitch and run at least one original content idea per month"],
+      requirements:["Comfortable writing in a clear, active voice","A habit of reading widely and noticing what makes writing work","Able to take feedback and rewrite without taking it personally","No prior internship experience required"],
+      gainsHead:"What you'll gain",
+      gains:["A portfolio of shipped, published writing","Direct edits and mentorship from the founding team","A certificate and letter of recommendation on completion","A shot at a full-time offer where there's a fit"],
+      skills:["Writing","Editing","Storytelling","Research","Content Strategy"]
+    },
+    "design-intern": {
+      type:"internship", category:"Design", title:"Design Internship",
+      badgeLabel:"Internship",
+      tagline:"Work on real web, social, and event design briefs — your output ships to actual users.",
+      meta:[{label:"Duration",value:"3–6 Months"},{label:"Commitment",value:"15–20 hrs/week"},{label:"Location",value:"Remote / Hybrid"},{label:"Mentorship",value:"1:1 Founding Team"}],
+      image:"https://images.unsplash.com/photo-1690192123455-6337e6db4179?auto=format&fit=crop&w=1200&q=80",
+      overview:"You'll design for real briefs with real deadlines — social templates, landing pages, event collateral — reviewed and shipped, not filed away.",
+      responsibilities:["Design social, web, and event assets from brief to final file","Maintain and extend YCX's visual identity system","Present and defend design decisions in team reviews","Collaborate directly with content and marketing on launches"],
+      requirements:["A working knowledge of a design tool (Figma or similar)","An eye for type, spacing, and hierarchy","A portfolio or samples of past design work, even student projects","Openness to fast rounds of feedback"],
+      gainsHead:"What you'll gain",
+      gains:["A body of shipped design work for your portfolio","Direct mentorship from the founding team","A certificate and letter of recommendation on completion","A shot at a full-time offer where there's a fit"],
+      skills:["Figma","Typography","Branding","Prototyping","Social Design"]
+    },
+    "community-intern": {
+      type:"internship", category:"Community", title:"Community Internship",
+      badgeLabel:"Internship",
+      tagline:"Support event planning and day-to-day member engagement across the YCX community.",
+      meta:[{label:"Duration",value:"3–6 Months"},{label:"Commitment",value:"15–20 hrs/week"},{label:"Location",value:"Hybrid"},{label:"Mentorship",value:"1:1 Founding Team"}],
+      image:"https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+      overview:"You'll be the point person for member questions, event logistics, and the small details that make a community feel looked after.",
+      responsibilities:["Plan and run logistics for community events","Respond to member questions across community channels","Track engagement and flag what's working and what isn't","Help onboard new members into the community"],
+      requirements:["Comfortable talking to people you haven't met yet","Organized enough to juggle several moving pieces at once","Genuine interest in community-building, not just events","No prior experience required"],
+      gainsHead:"What you'll gain",
+      gains:["Real experience running end-to-end events","Direct mentorship from the founding team","A certificate and letter of recommendation on completion","A shot at a full-time offer where there's a fit"],
+      skills:["Event Planning","Community Management","Communication","Organization"]
+    },
+    "marketing-intern": {
+      type:"internship", category:"Marketing", title:"Marketing Internship",
+      badgeLabel:"Internship",
+      tagline:"Run social experiments and help grow YCX's audience across Instagram, LinkedIn, and YouTube.",
+      meta:[{label:"Duration",value:"3–6 Months"},{label:"Commitment",value:"15–20 hrs/week"},{label:"Location",value:"Remote"},{label:"Mentorship",value:"1:1 Founding Team"}],
+      image:"https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80",
+      overview:"You'll test what grows YCX's audience — hooks, formats, posting cadence — and turn what works into a repeatable playbook.",
+      responsibilities:["Plan and run social experiments across platforms","Track performance and turn results into next steps","Draft copy for campaigns, captions, and email","Keep a pulse on what's working for similar brands"],
+      requirements:["Comfortable reading basic analytics and drawing conclusions","An active interest in at least one social platform","Clear, concise writing for short-form copy","No prior experience required"],
+      gainsHead:"What you'll gain",
+      gains:["A track record of real campaigns you ran","Direct mentorship from the founding team","A certificate and letter of recommendation on completion","A shot at a full-time offer where there's a fit"],
+      skills:["Social Media","Analytics","Copywriting","Content Strategy","Campaign Planning"]
+    },
+    "tech-intern": {
+      type:"internship", category:"Tech", title:"Tech Internship",
+      badgeLabel:"Internship",
+      tagline:"Ship real features on YCX's website and internal tools, working directly with the founding team.",
+      meta:[{label:"Duration",value:"3–6 Months"},{label:"Commitment",value:"15–20 hrs/week"},{label:"Location",value:"Remote"},{label:"Mentorship",value:"1:1 Founding Team"}],
+      image:"https://images.unsplash.com/photo-1719253480609-579ad1622c65?auto=format&fit=crop&w=1200&q=80",
+      overview:"You'll work directly in YCX's codebase — fixing real bugs, shipping real features, reviewed by the people who built the original system.",
+      responsibilities:["Build and ship features on the website and internal tools","Fix bugs reported by the team or members","Write code that's readable enough for someone else to review","Pair with the founding team on trickier problems"],
+      requirements:["Basic fundamentals in at least one programming language","Comfortable using git and reading documentation","Curiosity to dig into a codebase you didn't write","No professional experience required"],
+      gainsHead:"What you'll gain",
+      gains:["Shipped code in a real, live production codebase","Direct mentorship from the founding team's engineers","A certificate and letter of recommendation on completion","A shot at a full-time offer where there's a fit"],
+      skills:["JavaScript","Git","HTML/CSS","Debugging","Problem Solving"]
+    },
+    "software-engineer": {
+      type:"career", category:"Tech", title:"Software Engineer",
+      badgeLabel:"Full-time",
+      tagline:"Own features end-to-end on YCX's product, from first commit to what members use every day.",
+      meta:[{label:"Employment Type",value:"Full-time"},{label:"Location",value:"Remote"},{label:"Experience",value:"1–3 Years"},{label:"Team",value:"Product & Engineering"}],
+      image:"https://images.unsplash.com/photo-1719253480609-579ad1622c65?auto=format&fit=crop&w=1200&q=80",
+      overview:"You'll join a small engineering team where every hire still owns entire features — this isn't a role where your work disappears into a backlog.",
+      responsibilities:["Design, build, and ship features across the stack","Review code and raise the bar on quality across the team","Work directly with design and product on what to build next","Own the reliability of what you ship in production"],
+      requirements:["1–3 years building and shipping production software","Comfortable across the stack, even if you have a specialty","Strong written communication for async collaboration","Experience working in a small or early-stage team is a plus"],
+      gainsHead:"What's in it for you",
+      gains:["Real ownership over the product, not a single ticket queue","Direct access to founders and product decisions","Competitive salary with meaningful equity","Flexible remote-first working setup"],
+      skills:["JavaScript/TypeScript","React","Node.js","System Design","Git","API Design"]
+    },
+    "growth-marketing-manager": {
+      type:"career", category:"Marketing", title:"Growth Marketing Manager",
+      badgeLabel:"Full-time",
+      tagline:"Lead YCX's growth strategy across channels and turn what the internship pod tests into scaled campaigns.",
+      meta:[{label:"Employment Type",value:"Full-time"},{label:"Location",value:"Remote"},{label:"Experience",value:"3–5 Years"},{label:"Team",value:"Marketing"}],
+      image:"https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80",
+      overview:"You'll set the growth roadmap, run point on paid and organic channels, and manage the marketing interns turning ideas into content.",
+      responsibilities:["Own YCX's growth roadmap and quarterly targets","Manage and mentor the marketing internship pod","Run paid acquisition experiments alongside organic channels","Report on what's working directly to the founding team"],
+      requirements:["3–5 years in a growth or performance marketing role","Track record of measurable audience or revenue growth","Comfortable managing junior team members","Strong grasp of analytics and attribution"],
+      gainsHead:"What's in it for you",
+      gains:["Ownership of the growth function from day one","Direct access to founders and company strategy","Competitive salary with meaningful equity","Flexible remote-first working setup"],
+      skills:["Growth Strategy","Paid Acquisition","Analytics","SEO/SEM","Team Management"]
+    }
+  };
+
+  const ROLE_ORDER = ["content-intern","design-intern","community-intern","marketing-intern","tech-intern","software-engineer","growth-marketing-manager"];
+
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get('role') && ROLES[params.get('role')] ? params.get('role') : "tech-intern";
+  const role = ROLES[slug];
+
+  document.title = role.title + " — Young Chanakya X";
+
+  // Breadcrumb
+  const listingHref = role.type === 'career' ? 'ycx-careers.html' : 'ycx-internships.html';
+  const listingLabel = role.type === 'career' ? 'Careers' : 'Internships';
+  document.getElementById('crumb').innerHTML = `
+    <a href="ycx-internships.html">Home</a><span class="sep">/</span>
+    <a href="${listingHref}">${listingLabel}</a><span class="sep">/</span>
+    <span class="current">${role.title}</span>`;
+
+  // Badges
+  const badgeClass = role.type === 'career' ? 'badge-career' : 'badge-internship';
+  document.getElementById('badgeRow').innerHTML = `
+    <span class="badge-pill ${badgeClass}">${role.badgeLabel}</span>
+    <span class="badge-pill badge-track">${role.category}</span>`;
+
+  document.getElementById('roleTitle').textContent = role.title;
+  document.getElementById('roleTagline').textContent = role.tagline;
+  document.getElementById('rolePhoto').src = role.image;
+  document.getElementById('rolePhoto').alt = role.title;
+  document.getElementById('roleOverview').textContent = role.overview;
+
+  // Chips (hero)
+  document.getElementById('roleChips').innerHTML = role.meta.map(m => `
+    <div class="dchip"><span class="mono">${m.label}</span><span class="val">${m.value}</span></div>
+  `).join('');
+
+  // Icon map for Quick Facts / Job Overview card
+  function factIcon(label){
+    const l = label.toLowerCase();
+    if(l.includes('employ') || l.includes('commitment')) return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>`;
+    if(l.includes('location') || l.includes('remote') || l.includes('hybrid')) return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>`;
+    if(l.includes('city')) return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M6 21V8l5-4 5 4v13M9 9h1M9 13h1M14 9h1M14 13h1"/></svg>`;
+    if(l.includes('duration')) return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>`;
+    if(l.includes('experience')) return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg>`;
+    if(l.includes('mentor') || l.includes('team')) return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 014-4h6a4 4 0 014 4v2"/><circle cx="19" cy="8" r="3"/></svg>`;
+    return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41L11 22l-9-9L11 2h9.59a1 1 0 011 1z"/><circle cx="7" cy="7" r="1"/></svg>`;
+  }
+  document.getElementById('sidebarFacts').innerHTML = role.meta.map(m => `
+    <div class="fact-row">
+      <span class="fact-icon">${factIcon(m.label)}</span>
+      <div class="fact-text"><span class="fk">${m.label}</span><span class="fv">${m.value}</span></div>
+    </div>
+  `).join('');
+
+  // Key Skills badges
+  document.getElementById('skillsWrap').innerHTML = (role.skills || []).map(s => `<span class="skill-badge">${s}</span>`).join('');
+
+  function checkIcon(){
+    return `<span class="bc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>`;
+  }
+  function renderBullets(list){
+    return list.map(item => `<div class="bullet-row">${checkIcon()}<p>${item}</p></div>`).join('');
+  }
+
+  document.getElementById('responsibilitiesHead').textContent = "Roles and Responsibility";
+  document.getElementById('roleResponsibilities').innerHTML = renderBullets(role.responsibilities);
+  document.getElementById('requirementsHead').textContent = "Who Can Apply";
+  document.getElementById('roleRequirements').innerHTML = renderBullets(role.requirements);
+  document.getElementById('gainsHead').textContent = role.gainsHead;
+  document.getElementById('roleGains').innerHTML = renderBullets(role.gains);
+
+  // More open roles grid (bottom section)
+  const others = ROLE_ORDER.filter(s => s !== slug);
+  const gridRoles = others.slice(0, 3);
+  document.getElementById('roleGrid').innerHTML = gridRoles.map(s => {
+    const r = ROLES[s];
+    const bClass = r.type === 'career' ? 'badge-career' : 'badge-internship';
+    return `
+      <div class="role-card">
+        <span class="rc-badge ${bClass}">${r.badgeLabel}</span>
+        <h4>${r.title}</h4>
+        <p>${r.tagline}</p>
+        <a class="rc-link" href="role-detail.html?role=${s}">View role
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>`;
+  }).join('');
+
+  // Drawer content adapts to role type
+  document.getElementById('drawerTitle').textContent = role.type === 'career' ? 'Apply for this role' : 'Apply for an internship';
+  document.getElementById('roleField').value = role.title;
+  document.getElementById('stickyMsg').textContent = role.type === 'career'
+    ? 'This role is open — apply today.'
+    : 'This cycle closes soon — apply today.';
+
+  // Header
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {}); // header is always solid on detail pages
+
+  // Bottom sheet drawer
+  const drawer = document.getElementById('drawer');
+  const drawerOverlay = document.getElementById('drawerOverlay');
+  const internForm = document.getElementById('internForm');
+  const drawerThanks = document.getElementById('drawerThanks');
+
+  function openDrawer(){
+    drawerOverlay.classList.add('active');
+    drawer.classList.add('active');
+    internForm.style.display = 'flex';
+    internForm.style.flexDirection = 'column';
+    drawerThanks.style.display = 'none';
+  }
+  function closeDrawer(){
+    drawerOverlay.classList.remove('active');
+    drawer.classList.remove('active');
+  }
+
+  document.getElementById('navApplyBtn').addEventListener('click', e=>{ e.preventDefault(); openDrawer(); });
+  document.getElementById('stickyApplyBtn').addEventListener('click', e=>{ e.preventDefault(); openDrawer(); });
+  document.getElementById('sidebarApplyBtn').addEventListener('click', e=>{ e.preventDefault(); openDrawer(); });
+  document.getElementById('drawerCloseBtn').addEventListener('click', closeDrawer);
+  drawerOverlay.addEventListener('click', closeDrawer);
+
+  // Currently pursuing education — toggle the matching field set
+  const eduYes = document.getElementById('eduYes');
+  const eduNo = document.getElementById('eduNo');
+  const eduBlockYes = document.getElementById('eduBlockYes');
+  const eduBlockNo = document.getElementById('eduBlockNo');
+  function updateEduBlocks(){
+    eduBlockYes.classList.toggle('active', eduYes.checked);
+    eduBlockNo.classList.toggle('active', eduNo.checked);
+  }
+  eduYes.addEventListener('change', updateEduBlocks);
+  eduNo.addEventListener('change', updateEduBlocks);
+
+  // Resume upload — reflect chosen file name
+  const resumeUpload = document.getElementById('resumeUpload');
+  const fuLabel = document.getElementById('fuLabel');
+  const fileUploadBox = document.getElementById('fileUploadBox');
+  resumeUpload.addEventListener('change', function(){
+    if(this.files && this.files[0]){
+      fuLabel.textContent = this.files[0].name;
+      fileUploadBox.classList.add('has-file');
+    } else {
+      fuLabel.textContent = 'Click to upload your resume';
+      fileUploadBox.classList.remove('has-file');
+    }
+  });
+
+  internForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!eduYes.checked && !eduNo.checked){
+      alert('Please let us know whether you are currently pursuing education.');
+      return;
+    }
+    internForm.style.display = 'none';
+    drawerThanks.style.display = 'block';
+  });
+</script>
+
+</body>
+</html>

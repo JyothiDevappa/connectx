@@ -1,0 +1,804 @@
+/* ==========================================================================
+   ROLE DETAIL PAGE STYLES
+   ========================================================================== */
+
+.wrap {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.role-hero {
+    padding: 150px 0 46px;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(12, 58, 48, 0.08);
+}
+
+.crumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #4d6459;
+    margin-bottom: 26px;
+    flex-wrap: wrap;
+}
+
+.crumb a {
+    color: #4d6459;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.crumb a:hover {
+    color: #0c3a30;
+}
+
+.crumb .sep {
+    opacity: .5;
+}
+
+.crumb .current {
+    color: #0c3a30;
+    font-weight: 700;
+}
+
+.badge-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.badge-pill {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 7px 14px;
+    border-radius: 100px;
+}
+
+.badge-internship {
+    background: #ffd2b1;
+    color: #0c3a30;
+}
+
+.badge-career {
+    background: #0c3a30;
+    color: #ffd2b1;
+}
+
+.badge-track {
+    background: rgba(12, 58, 48, 0.07);
+    color: #0c3a30;
+}
+
+.role-hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(30px, 4.6vw, 52px);
+    color: #0c3a30;
+    letter-spacing: -1.4px;
+    line-height: 1.06;
+    max-width: 760px;
+    margin-bottom: 16px;
+}
+
+.role-hero .tagline {
+    font-size: 16.5px;
+    color: #4d6459;
+    max-width: 600px;
+    line-height: 1.65;
+    margin-bottom: 34px;
+}
+
+.detail-chips {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.dchip {
+    background: #fffaf4;
+    border: 1px solid rgba(12, 58, 48, 0.1);
+    border-radius: 14px;
+    padding: 16px 18px;
+}
+
+.dchip .mono {
+    font-size: 10.5px;
+    letter-spacing: 1px;
+    color: #4d6459;
+    text-transform: uppercase;
+    font-family: 'Space Mono', monospace;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.dchip .val {
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    color: #0c3a30;
+    font-weight: 600;
+}
+
+@media (max-width: 720px) {
+    .role-hero {
+        padding-top: 130px;
+    }
+    .detail-chips {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ================= BODY LAYOUT ================= */
+#role-body {
+    padding: 80px 0 100px;
+    background: #fffaf4;
+}
+
+.detail-layout {
+    display: grid;
+    grid-template-columns: 1.55fr 0.85fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.main-col section {
+    margin-bottom: 52px;
+}
+
+.main-col h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #0c3a30;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+}
+
+.main-col p.body-p {
+    font-size: 15px;
+    color: #4d6459;
+    line-height: 1.75;
+    max-width: 600px;
+    margin-bottom: 14px;
+}
+
+.bullet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.bullet-row {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.bullet-row .bc {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #ffd2b1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.bullet-row .bc svg {
+    width: 12px;
+    height: 12px;
+    color: #0c3a30;
+}
+
+.bullet-row p {
+    font-size: 14.5px;
+    color: #4d6459;
+    font-weight: 600;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* ---- sidebar ---- */
+.sidebar {
+    position: sticky;
+    top: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Quick Facts */
+.facts-card {
+    background: #ffffff;
+    border: 1px solid rgba(12, 58, 48, 0.1);
+    border-radius: 22px;
+    padding: 30px;
+    box-shadow: 0 20px 45px -30px rgba(12, 58, 48, 0.25);
+}
+
+.facts-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.facts-head .info-i {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1.5px solid #ffbe8e;
+    color: #ffbe8e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.facts-head h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: #0c3a30;
+    margin: 0;
+}
+
+.fact-row {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    padding: 14px 0;
+    border-top: 1px solid rgba(12, 58, 48, 0.08);
+}
+
+.fact-row:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+.fact-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: #fffaf4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.fact-icon svg {
+    width: 19px;
+    height: 19px;
+    color: #ffbe8e;
+}
+
+.fact-text .fk {
+    font-size: 10.5px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #4d6459;
+    font-family: 'Space Mono', monospace;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.fact-text .fv {
+    font-family: 'Fraunces', serif;
+    font-size: 15.5px;
+    font-weight: 600;
+    color: #0c3a30;
+}
+
+.sidebar-apply {
+    display: block;
+    text-align: center;
+    margin-top: 24px;
+    background: #0c3a30;
+    color: #ffd2b1;
+    padding: 15px;
+    border-radius: 100px;
+    font-weight: 800;
+    font-size: 14.5px;
+    text-decoration: none;
+}
+
+.sidebar-apply:hover {
+    background: #082821;
+    color: #ffd2b1;
+}
+
+.sidebar-note {
+    font-size: 12px;
+    color: #4d6459;
+    text-align: center;
+    margin-top: 12px;
+    display: block;
+}
+
+/* Key Skills */
+.skills-card {
+    background: #ffffff;
+    border: 1px solid rgba(12, 58, 48, 0.1);
+    border-radius: 22px;
+    padding: 28px;
+}
+
+.skills-card h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0c3a30;
+    margin-bottom: 16px;
+}
+
+.skills-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.skill-badge {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #0c3a30;
+    background: rgba(12, 58, 48, 0.07);
+    border: 1px solid rgba(12, 58, 48, 0.12);
+    padding: 8px 15px;
+    border-radius: 100px;
+}
+
+@media (max-width: 900px) {
+    .detail-layout {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        position: static;
+    }
+}
+
+/* ================= MORE OPEN ROLES ================= */
+#more-roles {
+    padding: 90px 0 120px;
+    background: #ffffff;
+    border-top: 1px solid rgba(12, 58, 48, 0.08);
+}
+
+.sec-head {
+    max-width: 600px;
+    margin-bottom: 44px;
+}
+
+.sec-head h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(24px, 3vw, 34px);
+    color: #0c3a30;
+    letter-spacing: -1px;
+    line-height: 1.14;
+    margin-bottom: 12px;
+}
+
+.sec-head p {
+    font-size: 15px;
+    color: #4d6459;
+    line-height: 1.6;
+}
+
+.role-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.role-card {
+    background: #fffaf4;
+    border-radius: 18px;
+    padding: 26px;
+    border: 1px solid rgba(12, 58, 48, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.role-card .rc-badge {
+    align-self: flex-start;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 5px 11px;
+    border-radius: 100px;
+}
+
+.role-card h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 17.5px;
+    font-weight: 600;
+    color: #0c3a30;
+    margin: 0;
+}
+
+.role-card p {
+    font-size: 13px;
+    color: #4d6459;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.role-card .rc-link {
+    margin-top: auto;
+    font-size: 13px;
+    font-weight: 800;
+    color: #0c3a30;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.role-card .rc-link svg {
+    width: 13px;
+    height: 13px;
+}
+
+@media (max-width: 900px) {
+    .role-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .role-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================= STICKY BOTTOM BAR ================= */
+.sticky-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 140;
+    background: #0c3a30;
+    border-top: 1px solid rgba(255, 250, 244, 0.1);
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.sticky-bar .msg {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.sticky-bar .msg .mono {
+    font-size: 10.5px;
+    letter-spacing: 1px;
+    color: #ffbe8e;
+    text-transform: uppercase;
+    font-family: 'Space Mono', monospace;
+}
+
+.sticky-bar .msg .txt {
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.sticky-bar .sbtn {
+    background: #ffd2b1;
+    color: #0c3a30;
+    padding: 12px 26px;
+    border-radius: 100px;
+    font-weight: 800;
+    font-size: 13.5px;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.sticky-bar .sbtn:hover {
+    background: #ffbe8e;
+}
+
+@media (max-width: 600px) {
+    .sticky-bar .msg .txt {
+        font-size: 13px;
+    }
+    .sticky-bar {
+        padding: 14px 18px;
+    }
+}
+
+/* ================= BOTTOM SHEET DRAWER ================= */
+.drawer-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 40, 33, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 200;
+    display: none;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.drawer-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+.drawer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 201;
+    background: #fffaf4;
+    border-radius: 26px 26px 0 0;
+    max-height: 86vh;
+    overflow-y: auto;
+    padding: 36px 40px 48px;
+    transform: translateY(100%);
+    transition: transform .35s ease;
+}
+
+.drawer.active {
+    transform: translateY(0);
+}
+
+.drawer-handle {
+    width: 44px;
+    height: 5px;
+    border-radius: 10px;
+    background: rgba(12, 58, 48, 0.2);
+    margin: 0 auto 22px;
+}
+
+.drawer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.drawer-top h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    color: #0c3a30;
+    font-weight: 600;
+    margin: 0;
+}
+
+.drawer-top p {
+    font-size: 13.5px;
+    color: #4d6459;
+    margin-top: 6px;
+    max-width: 420px;
+}
+
+.drawer-close {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #0c3a30;
+    color: #ffd2b1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.field label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0c3a30;
+    text-align: left;
+}
+
+.field input, .field select, .field textarea {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1.5px solid rgba(12, 58, 48, 0.18);
+    background: #ffffff;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    color: #12261f;
+    outline: none;
+}
+
+.field input:focus, .field select:focus, .field textarea:focus {
+    border-color: #0c3a30;
+}
+
+.field input[readonly] {
+    background: rgba(12, 58, 48, 0.05);
+    color: #4d6459;
+}
+
+.field textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-section-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #4d6459;
+    margin: 22px 0 12px;
+    display: block;
+    text-align: left;
+}
+
+.form-section-label:first-child {
+    margin-top: 0;
+}
+
+.radio-group {
+    display: flex;
+    gap: 26px;
+    margin-bottom: 16px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    cursor: pointer;
+}
+
+.radio-option input {
+    display: none;
+}
+
+.radio-option .rdot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgba(12, 58, 48, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: border-color .2s;
+}
+
+.radio-option .rdot::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffbe8e;
+    transform: scale(0);
+    transition: transform .15s;
+}
+
+.radio-option input:checked + .rdot {
+    border-color: #0c3a30;
+}
+
+.radio-option input:checked + .rdot::after {
+    transform: scale(1);
+}
+
+.radio-option span.rlabel {
+    font-size: 14px;
+    font-weight: 700;
+    color: #12261f;
+}
+
+.edu-block {
+    display: none;
+}
+
+.edu-block.active {
+    display: block;
+}
+
+.declaration-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin: 22px 0 20px;
+    padding: 16px;
+    background: #ffffff;
+    border: 1.5px solid rgba(12, 58, 48, 0.15);
+    border-radius: 12px;
+}
+
+.declaration-row input {
+    margin-top: 3px;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    accent-color: #0c3a30;
+}
+
+.declaration-row p {
+    font-size: 12.5px;
+    color: #4d6459;
+    line-height: 1.55;
+    margin: 0;
+    text-align: left;
+}
+
+.drawer-submit {
+    background: #0c3a30;
+    color: #ffbe8e;
+    width: 100%;
+    padding: 15px;
+    border-radius: 100px;
+    font-weight: 800;
+    font-size: 14.5px;
+    cursor: pointer;
+}
+
+.drawer-note {
+    font-size: 11.5px;
+    color: #4d6459;
+    text-align: center;
+    display: block;
+    margin-top: 12px;
+}
+
+.drawer-thanks {
+    display: none;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.drawer-thanks h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    color: #0c3a30;
+    margin-bottom: 8px;
+}
+
+.drawer-thanks p {
+    font-size: 14px;
+    color: #4d6459;
+}
+
+@media (max-width: 720px) {
+    .drawer {
+        padding: 28px 22px 40px;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

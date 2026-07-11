@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internships — Young Chanakya X</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0c3a30;
+    --ink-deep:#082821;
+    --peach:#ffd2b1;
+    --peach-deep:#ffbe8e;
+    --cream:#fffaf4;
+    --white:#ffffff;
+    --text:#12261f;
+    --text-soft:#4d6459;
+    --hero-gradient: linear-gradient(135deg, #ffffff 20%, #ffbe8e 100%);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Manrope',sans-serif;color:var(--text);background:var(--cream);}
+  img{display:block;max-width:100%;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  button{font-family:inherit;border:none;background:none;cursor:pointer;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  @media(max-width:720px){.wrap{padding:0 22px;}}
+  .kicker{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink);
+    display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;font-weight:700;}
+  .kicker::before{content:'';width:16px;height:1.5px;background:var(--ink);}
+
+  /* ---------- Floating nav ---------- */
+  header{position:fixed;top:0;left:0;right:0;z-index:150;padding:22px 0;transition:background .3s ease, padding .3s ease;}
+  header.solid{background:rgba(8,40,33,0.92);backdrop-filter:blur(10px);padding:14px 0;}
+  nav{display:flex;align-items:center;justify-content:space-between;max-width:1180px;margin:0 auto;padding:0 32px;}
+  .logo{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:700;font-size:20px;color:var(--white);}
+  .logo .x-mark{width:32px;height:32px;border-radius:9px;background:var(--peach);display:flex;align-items:center;justify-content:center;
+    color:var(--ink-deep);font-family:'Fraunces',serif;font-weight:700;font-size:17px;}
+  .nav-btn{background:var(--peach);color:var(--ink);padding:11px 22px;border-radius:100px;font-weight:800;font-size:13.5px;}
+  .nav-btn:hover{background:var(--peach-deep);}
+
+  /* ================= HERO (unchanged) ================= */
+  .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
+  .hero::before{content:'';position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg, rgba(8,40,33,0.35) 0%, rgba(8,40,33,0.55) 55%, rgba(8,40,33,0.94) 100%);}
+  .hero-inner{position:relative;z-index:2;padding:180px 32px 0;max-width:1180px;margin:0 auto;width:100%;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(34px,5.4vw,68px);color:var(--white);line-height:1.05;
+    letter-spacing:-1.6px;max-width:820px;margin-bottom:22px;}
+  .hero h1 em{font-style:italic;font-weight:500;color:var(--peach);}
+  .hero p.lead{font-size:18px;color:rgba(255,250,244,0.8);max-width:520px;line-height:1.6;margin-bottom:34px;}
+  .hero-cta{display:inline-flex;align-items:center;gap:10px;background:var(--peach);color:var(--ink);padding:16px 32px;
+    border-radius:100px;font-weight:800;font-size:15px;}
+  .hero-cta:hover{background:var(--peach-deep);}
+  .hero-chips{display:flex;gap:14px;flex-wrap:wrap;padding:38px 32px 46px;max-width:1180px;margin:0 auto;width:100%;position:relative;z-index:2;}
+  .chip{display:flex;flex-direction:column;gap:3px;background:rgba(255,250,244,0.08);border:1px solid rgba(255,250,244,0.18);
+    border-radius:14px;padding:14px 20px;flex:1;min-width:140px;}
+  .chip .mono{font-size:10.5px;letter-spacing:1px;color:var(--peach-deep);text-transform:uppercase;font-family:'Space Mono',monospace;}
+  .chip .val{font-family:'Fraunces',serif;font-size:18px;color:var(--white);font-weight:600;}
+  @media(max-width:720px){.hero-inner{padding-top:140px;}.hero-chips{flex-wrap:wrap;}}
+
+  /* ================= WHY INTERN (centered intro + 4-card grid) ================= */
+  #why-intern{padding:110px 0;background:var(--white);}
+  .why-intro{max-width:680px;margin:0 auto 64px;text-align:center;}
+  .why-intro .kicker{justify-content:center;display:flex;}
+  .why-intro h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(28px,3.6vw,42px);color:var(--ink);letter-spacing:-1px;line-height:1.14;margin-bottom:18px;}
+  .why-intro p{font-size:15.5px;color:var(--text-soft);line-height:1.7;}
+  .why-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .why-card{background:var(--cream);border-radius:18px;padding:30px 26px;border:1px solid rgba(12,58,48,0.08);}
+  .why-icon{width:46px;height:46px;border-radius:13px;background:var(--ink);display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+  .why-icon svg{width:22px;height:22px;color:var(--peach);}
+  .why-card h3{font-family:'Fraunces',serif;font-size:17.5px;font-weight:600;color:var(--ink);margin-bottom:9px;}
+  .why-card p{font-size:13.5px;color:var(--text-soft);line-height:1.55;}
+  @media(max-width:900px){.why-cards{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.why-cards{grid-template-columns:1fr;}}
+
+  /* ================= INTERNSHIP LISTING (row list) ================= */
+  #listing{padding:110px 0;background:var(--cream);}
+  .sec-head{max-width:600px;margin-bottom:56px;}
+  .sec-head h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(28px,3.2vw,40px);color:var(--ink);letter-spacing:-1px;line-height:1.12;margin-bottom:14px;}
+  .sec-head p{font-size:15.5px;color:var(--text-soft);line-height:1.6;}
+  .listing-row{display:grid;grid-template-columns:60px 1fr auto;gap:24px;align-items:center;padding:26px 22px;border-radius:16px;
+    border-bottom:1px solid rgba(12,58,48,0.12);cursor:pointer;transition:background .2s;}
+  .listing-row:hover{background:var(--white);}
+  .listing-row:first-child{border-top:1px solid rgba(12,58,48,0.12);}
+  .listing-index{font-family:'Fraunces',serif;font-size:22px;font-weight:600;color:rgba(12,58,48,0.3);}
+  .listing-main h3{font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--ink);margin-bottom:5px;}
+  .listing-main p{font-size:13.5px;color:var(--text-soft);line-height:1.5;max-width:520px;}
+  .listing-tag{font-size:11px;font-weight:700;padding:5px 12px;border-radius:100px;background:var(--peach);color:var(--ink);display:inline-block;margin-top:8px;}
+  .listing-arrow{width:38px;height:38px;border-radius:50%;background:var(--ink);color:var(--peach);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .listing-arrow svg{width:16px;height:16px;}
+  @media(max-width:640px){.listing-row{grid-template-columns:40px 1fr;}.listing-arrow{display:none;}}
+
+  /* ================= WHAT YOU GAIN (photo-anchored split) ================= */
+  #gain{padding:110px 0;background:var(--ink-deep);overflow:hidden;}
+  .gain-split{display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;align-items:center;}
+  .gain-visual{position:relative;}
+  .gain-photo-main{border-radius:22px;overflow:hidden;aspect-ratio:3/3.6;box-shadow:0 40px 70px -30px rgba(0,0,0,0.55);}
+  .gain-photo-main img{width:100%;height:100%;object-fit:cover;}
+  .gain-photo-float{position:absolute;left:-34px;bottom:-34px;width:46%;border-radius:16px;overflow:hidden;border:5px solid var(--ink-deep);
+    box-shadow:0 24px 40px -18px rgba(0,0,0,0.6);aspect-ratio:4/3;}
+  .gain-photo-float img{width:100%;height:100%;object-fit:cover;}
+  .gain-badge{position:absolute;top:22px;right:-18px;background:var(--peach);color:var(--ink);border-radius:16px;padding:16px 20px;
+    box-shadow:0 18px 30px -14px rgba(0,0,0,0.5);max-width:160px;}
+  .gain-badge .num{font-family:'Fraunces',serif;font-size:30px;font-weight:700;line-height:1;margin-bottom:4px;}
+  .gain-badge .lbl{font-size:11px;font-weight:700;line-height:1.35;}
+  .gain-content .kicker{color:var(--peach);}
+  .gain-content .kicker::before{background:var(--peach);}
+  .gain-content h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(26px,3vw,38px);color:var(--white);letter-spacing:-1px;line-height:1.14;margin-bottom:14px;}
+  .gain-content > p.gain-intro{font-size:15px;color:rgba(255,250,244,0.62);line-height:1.65;max-width:460px;margin-bottom:36px;}
+  .gain-items{display:flex;flex-direction:column;gap:4px;margin-bottom:38px;}
+  .gain-item{display:flex;gap:16px;padding:18px 0;border-top:1px solid rgba(255,250,244,0.12);}
+  .gain-item:first-child{border-top:none;}
+  .gain-check{width:30px;height:30px;border-radius:9px;background:rgba(255,210,177,0.14);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+  .gain-check svg{width:14px;height:14px;color:var(--peach);}
+  .gain-item h4{font-family:'Fraunces',serif;font-size:16.5px;font-weight:600;color:var(--white);margin-bottom:4px;}
+  .gain-item p{font-size:13.5px;color:rgba(255,250,244,0.55);line-height:1.55;}
+  .gain-cta-outline{display:inline-flex;align-items:center;gap:12px;background:transparent;color:var(--peach);padding:15px 8px;
+    border:none;border-bottom:1.5px solid rgba(255,210,177,0.4);font-weight:700;font-size:14.5px;border-radius:0;transition:gap .2s ease, border-color .2s ease;}
+  .gain-cta-outline svg{width:15px;height:15px;transition:transform .2s ease;}
+  .gain-cta-outline:hover{gap:18px;border-color:var(--peach);}
+  @media(max-width:900px){.gain-split{grid-template-columns:1fr;gap:50px;}.gain-visual{max-width:380px;margin:0 auto;}.gain-badge{right:8px;}}
+  @media(max-width:520px){.gain-photo-float{width:52%;left:-16px;bottom:-24px;}.gain-badge{top:14px;right:-6px;padding:12px 16px;max-width:130px;}}
+
+  /* ================= WHO CAN APPLY (highlighted panel) ================= */
+  #eligibility{padding:110px 0;background:var(--cream);}
+  .elig-panel{background:var(--ink);border-radius:24px;padding:52px;display:grid;grid-template-columns:0.8fr 1.2fr;gap:40px;align-items:center;}
+  .elig-panel-left h2{font-family:'Fraunces',serif;font-size:clamp(24px,2.8vw,32px);color:var(--peach);font-weight:600;letter-spacing:-0.5px;line-height:1.2;margin-bottom:12px;}
+  .elig-panel-left p{font-size:14px;color:rgba(255,250,244,0.6);line-height:1.6;}
+  .elig-checklist{display:flex;flex-direction:column;gap:16px;}
+  .elig-check-row{display:flex;gap:14px;align-items:flex-start;}
+  .elig-check-row .ec{width:24px;height:24px;border-radius:50%;background:var(--peach);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+  .elig-check-row .ec svg{width:12px;height:12px;color:var(--ink);}
+  .elig-check-row p{font-size:14.5px;color:var(--cream);font-weight:600;line-height:1.5;}
+  @media(max-width:860px){.elig-panel{grid-template-columns:1fr;padding:36px 26px;}}
+
+  /* ================= CTA (split with photo) ================= */
+  #cta-banner{padding:110px 0;background:var(--hero-gradient);}
+  .cta-split{display:grid;grid-template-columns:1.2fr 0.8fr;gap:50px;align-items:center;}
+  .cta-split h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(28px,3.6vw,42px);color:var(--ink);letter-spacing:-1px;line-height:1.16;margin-bottom:16px;}
+  .cta-split p{font-size:15.5px;color:var(--text-soft);line-height:1.65;margin-bottom:28px;max-width:460px;}
+  .cta-btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--peach);padding:16px 32px;border-radius:100px;font-weight:800;font-size:15px;}
+  .cta-btn:hover{background:var(--ink-deep);}
+  .cta-photo{border-radius:20px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 50px -25px rgba(12,58,48,0.35);}
+  .cta-photo img{width:100%;height:100%;object-fit:cover;}
+  @media(max-width:860px){.cta-split{grid-template-columns:1fr;}.cta-photo{order:-1;max-width:320px;margin:0 auto;}}
+
+  /* ================= FAQ (static Q/A card grid) ================= */
+  #faq{padding:110px 0;background:var(--white);}
+  .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .faq-card{background:var(--cream);border:1px solid rgba(12,58,48,0.1);border-radius:16px;padding:24px 26px;}
+  .faq-card h4{font-family:'Fraunces',serif;font-size:16px;font-weight:600;color:var(--ink);margin-bottom:9px;}
+  .faq-card p{font-size:13.5px;color:var(--text-soft);line-height:1.6;}
+  @media(max-width:820px){.faq-grid{grid-template-columns:1fr;}}
+
+  /* ================= FOOTER ================= */
+  footer{background:var(--ink-deep);color:rgba(255,250,244,0.55);padding:44px 0 100px;}
+  .footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:13px;}
+  .footer-row .flogo{font-family:'Fraunces',serif;color:var(--peach);font-weight:700;font-size:16px;display:flex;align-items:center;gap:8px;}
+  .footer-row .flogo .x-mark{width:26px;height:26px;border-radius:7px;background:var(--peach);color:var(--ink-deep);display:flex;align-items:center;justify-content:center;font-size:13px;}
+
+  /* ================= STICKY BOTTOM BAR ================= */
+  .sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:140;background:var(--ink);border-top:1px solid rgba(255,250,244,0.1);
+    padding:16px 32px;display:flex;justify-content:space-between;align-items:center;gap:20px;}
+  .sticky-bar .msg{display:flex;flex-direction:column;gap:2px;}
+  .sticky-bar .msg .mono{font-size:10.5px;letter-spacing:1px;color:var(--peach-deep);text-transform:uppercase;font-family:'Space Mono',monospace;}
+  .sticky-bar .msg .txt{font-family:'Fraunces',serif;font-size:15px;color:var(--white);font-weight:600;}
+  .sticky-bar .sbtn{background:var(--peach);color:var(--ink);padding:12px 26px;border-radius:100px;font-weight:800;font-size:13.5px;flex-shrink:0;}
+  .sticky-bar .sbtn:hover{background:var(--peach-deep);}
+  @media(max-width:600px){.sticky-bar .msg .txt{font-size:13px;}.sticky-bar{padding:14px 18px;}}
+
+  /* ================= BOTTOM SHEET DRAWER ================= */
+  .drawer-overlay{position:fixed;inset:0;background:rgba(8,40,33,0.5);backdrop-filter:blur(2px);z-index:200;
+    display:none;opacity:0;transition:opacity .3s ease;}
+  .drawer-overlay.active{display:block;opacity:1;}
+  .drawer{position:fixed;left:0;right:0;bottom:0;z-index:201;background:var(--cream);border-radius:26px 26px 0 0;
+    max-height:86vh;overflow-y:auto;padding:36px 40px 48px;transform:translateY(100%);transition:transform .35s ease;}
+  .drawer.active{transform:translateY(0);}
+  .drawer-handle{width:44px;height:5px;border-radius:10px;background:rgba(12,58,48,0.2);margin:0 auto 22px;}
+  .drawer-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;}
+  .drawer-top h3{font-family:'Fraunces',serif;font-size:24px;color:var(--ink);font-weight:600;}
+  .drawer-top p{font-size:13.5px;color:var(--text-soft);margin-top:6px;max-width:420px;}
+  .drawer-close{width:32px;height:32px;border-radius:50%;background:var(--ink);color:var(--peach);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
+  .field label{font-size:12px;font-weight:700;color:var(--ink);}
+  .field input,.field select,.field textarea{padding:12px 14px;border-radius:10px;border:1.5px solid rgba(12,58,48,0.18);
+    background:var(--white);font-family:'Manrope',sans-serif;font-size:14px;color:var(--text);outline:none;}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--ink);}
+  .field textarea{resize:vertical;min-height:80px;}
+  .drawer-submit{background:var(--ink);color:var(--peach-deep);width:100%;padding:15px;border-radius:100px;font-weight:800;font-size:14.5px;}
+  .drawer-note{font-size:11.5px;color:var(--text-soft);text-align:center;display:block;margin-top:12px;}
+  .drawer-thanks{display:none;text-align:center;padding:30px 0;}
+  .drawer-thanks h4{font-family:'Fraunces',serif;font-size:22px;color:var(--ink);margin-bottom:8px;}
+  .drawer-thanks p{font-size:14px;color:var(--text-soft);}
+  @media(max-width:720px){.drawer{padding:28px 22px 40px;}.form-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <nav>
+    <a href="#" class="logo"><span class="x-mark">X</span>YCX Internships</a>
+    <a href="#" class="nav-btn" id="navApplyBtn">Apply Now</a>
+  </nav>
+</header>
+
+<!-- HERO (unchanged) -->
+<section class="hero">
+  <img src="https://images.unsplash.com/photo-1758873268745-dd2cf0d677b5?auto=format&fit=crop&w=1600&q=80" alt="Interns collaborating around a laptop">
+  <div class="hero-inner">
+    <span class="kicker" style="color:var(--peach);">
+      <span style="display:inline-block;width:16px;height:1.5px;background:var(--peach);"></span>
+      YCX Internship Program
+    </span>
+    <h1>Learn by doing the work that <em>actually goes out.</em></h1>
+    <p class="lead">A hands-on internship for students and early professionals who want real experience — not deck reviews and coffee runs.</p>
+    <a href="#" class="hero-cta" id="heroApplyBtn">Apply for an Internship
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+  <div class="hero-chips">
+    <div class="chip"><span class="mono">Duration</span><span class="val">3–6 Months</span></div>
+    <div class="chip"><span class="mono">On Completion</span><span class="val">Certificate</span></div>
+    <div class="chip"><span class="mono">Guidance</span><span class="val">1:1 Mentorship</span></div>
+    <div class="chip"><span class="mono">Choose From</span><span class="val">5 Tracks</span></div>
+  </div>
+</section>
+
+<!-- WHY INTERN AT YCX -->
+<section id="why-intern">
+  <div class="wrap">
+    <div class="why-intro">
+      <span class="kicker">More Than an Internship</span>
+      <h2>A Learning Experience That Goes Beyond the Classroom</h2>
+      <p>At Young Chanakya X, interns don't just observe — they contribute. You'll work on meaningful projects, collaborate with talented teams, and gain hands-on experience that builds confidence and prepares you for your career.</p>
+    </div>
+    <div class="why-cards">
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <h3>Real Projects</h3>
+        <p>Work on live projects that create real value and make an impact.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></div>
+        <h3>Learn by Doing</h3>
+        <p>Develop practical skills through hands-on tasks and guided learning.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 10-16 0"/></svg></div>
+        <h3>Mentorship</h3>
+        <p>Learn from experienced professionals who support your growth throughout your internship.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg></div>
+        <h3>Build Your Portfolio</h3>
+        <p>Create work you're proud to showcase in your academic and professional journey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERNSHIP LISTING -->
+<section id="listing">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Open Internship Tracks</span>
+      <h2>Pick the track that fits you best.</h2>
+      <p>Tap a track to see more and apply.</p>
+    </div>
+    <div id="listingRows"></div>
+  </div>
+</section>
+
+<!-- WHAT YOU GAIN -->
+<section id="gain">
+  <div class="wrap gain-split">
+    <div class="gain-visual">
+      <div class="gain-photo-main">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Mentor and intern working through a project together">
+      </div>
+      <div class="gain-photo-float">
+        <img src="https://images.unsplash.com/photo-1690192123455-6337e6db4179?auto=format&fit=crop&w=500&q=80" alt="Intern and teammate celebrating a shipped project">
+      </div>
+      <div class="gain-badge">
+        <div class="num">5/5</div>
+        <div class="lbl">Interns who'd recommend YCX to a friend</div>
+      </div>
+    </div>
+    <div class="gain-content">
+      <span class="kicker">What You'll Walk Away With</span>
+      <h2>More than a line on your resume.</h2>
+      <p class="gain-intro">Every track ends the same way — with something you actually built, and people who'll vouch for how you built it.</p>
+      <div class="gain-items">
+        <div class="gain-item">
+          <span class="gain-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><h4>A portfolio you can actually show</h4><p>A body of real, shipped work — not hypothetical assignments.</p></div>
+        </div>
+        <div class="gain-item">
+          <span class="gain-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><h4>Direct mentorship</h4><p>Guidance from people on the founding team, not a rotating pool of managers.</p></div>
+        </div>
+        <div class="gain-item">
+          <span class="gain-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><h4>A certificate that means something</h4><p>Along with a letter of recommendation once you complete the program.</p></div>
+        </div>
+        <div class="gain-item">
+          <span class="gain-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><h4>A shot at a full-time offer</h4><p>Where there's a strong mutual fit and an open role at the time you finish.</p></div>
+        </div>
+        <div class="gain-item">
+          <span class="gain-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><h4>A front-row seat to how a brand runs</h4><p>Firsthand exposure to the decisions that shape an early-stage company.</p></div>
+        </div>
+      </div>
+      <a href="#" class="gain-cta-outline" id="gainApplyBtn">Start your application
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WHO CAN APPLY -->
+<section id="eligibility">
+  <div class="wrap">
+    <div class="elig-panel">
+      <div class="elig-panel-left">
+        <h2>Who Can Apply</h2>
+        <p>We look at these loosely — genuine interest matters more than ticking every box.</p>
+      </div>
+      <div class="elig-checklist">
+        <div class="elig-check-row"><span class="ec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><p>Currently pursuing a degree, or recently graduated</p></div>
+        <div class="elig-check-row"><span class="ec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><p>A genuine interest in the track you're applying for</p></div>
+        <div class="elig-check-row"><span class="ec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><p>Able to commit consistent hours through the internship period</p></div>
+        <div class="elig-check-row"><span class="ec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><p>Comfortable receiving feedback and iterating quickly</p></div>
+        <div class="elig-check-row"><span class="ec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><p>No prior professional experience required — curiosity matters more</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta-banner">
+  <div class="wrap cta-split">
+    <div>
+      <span class="kicker">Ready When You Are</span>
+      <h2>Your first real project could start this cycle.</h2>
+      <p>Applications are reviewed on a rolling basis — the earlier you apply, the sooner you'll hear back.</p>
+      <a href="#" class="cta-btn" id="ctaApplyBtn">Apply for an Internship
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="cta-photo"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Intern preparing to apply"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Questions, Answered</span>
+      <h2>Frequently asked questions.</h2>
+      <p>Common doubts, answered plainly.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-card"><h4>What's the duration of the internship?</h4><p>Most internships run 3 to 6 months, with some flexibility around your academic schedule.</p></div>
+      <div class="faq-card"><h4>Do I need prior experience?</h4><p>No — we look for curiosity and initiative more than a polished resume. Some tracks, like Tech, expect basic fundamentals.</p></div>
+      <div class="faq-card"><h4>Will I get a certificate?</h4><p>Yes — every intern who completes the program receives a certificate and a letter of recommendation.</p></div>
+      <div class="faq-card"><h4>Can this convert into a full-time role?</h4><p>It can, if there's a strong mutual fit and an open role at the time you finish.</p></div>
+      <div class="faq-card"><h4>Can I do this while still studying?</h4><p>Yes — most of our interns are current students. We'll work with your schedule wherever we can.</p></div>
+      <div class="faq-card"><h4>Is there an application deadline?</h4><p>Each cohort has a fixed application window — applications are reviewed on a rolling basis within that cycle.</p></div>
+      <div class="faq-card"><h4>Is every track fully remote?</h4><p>It varies by track — some, like Community, work best hybrid, and others are fully flexible. We'll clarify this on your intro call.</p></div>
+      <div class="faq-card"><h4>What tools should I be familiar with?</h4><p>It depends on your track — we'll share a short list relevant to your role before you start, so nothing catches you off guard.</p></div>
+      <div class="faq-card"><h4>Can I apply for more than one track?</h4><p>We'd recommend applying for the one you're most excited about — but let us know in your application if you're open to more than one.</p></div>
+      <div class="faq-card"><h4>Who do I contact if I have more questions?</h4><p>Reach out through the application form and mention your question — our team responds to every message personally.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <span class="flogo"><span class="x-mark">X</span>Young Chanakya X</span>
+    <span>© 2026 Young Chanakya X. All rights reserved.</span>
+  </div>
+</footer>
+
+<!-- STICKY BOTTOM BAR -->
+<div class="sticky-bar">
+  <div class="msg"><span class="mono">Applications Open</span><span class="txt">This cycle closes soon — apply today.</span></div>
+  <a href="#" class="sbtn" id="stickyApplyBtn">Apply Now</a>
+</div>
+
+<!-- BOTTOM SHEET DRAWER -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-handle"></div>
+  <div class="drawer-top">
+    <div>
+      <h3>Apply for an internship</h3>
+      <p>Tell us about yourself and pick the track you're most excited about.</p>
+    </div>
+    <button class="drawer-close" id="drawerCloseBtn">&times;</button>
+  </div>
+  <form id="internForm">
+    <div class="form-row">
+      <div class="field"><label>First name</label><input type="text" required></div>
+      <div class="field"><label>Last name</label><input type="text" required></div>
+    </div>
+    <div class="form-row">
+      <div class="field"><label>Email address</label><input type="email" required></div>
+      <div class="field"><label>Phone number</label><input type="tel" required></div>
+    </div>
+    <div class="form-row">
+      <div class="field"><label>College / University</label><input type="text" required></div>
+      <div class="field"><label>Year of study</label><input type="text" placeholder="e.g. 3rd year"></div>
+    </div>
+    <div class="form-row">
+      <div class="field">
+        <label>Track you're interested in</label>
+        <select id="trackSelect">
+          <option>Content</option><option>Design</option><option>Community</option><option>Marketing</option><option>Tech</option>
+        </select>
+      </div>
+      <div class="field"><label>Portfolio / resume link</label><input type="url" placeholder="https://"></div>
+    </div>
+    <div class="field"><label>Why do you want to intern at YCX?</label><textarea required></textarea></div>
+    <button type="submit" class="drawer-submit">Submit Application</button>
+    <span class="drawer-note">We'll only use this to reach out about your application.</span>
+  </form>
+  <div class="drawer-thanks" id="drawerThanks">
+    <h4>You're in the queue.</h4>
+    <p>Thanks for applying — our team will review your profile and reach out within 5–7 working days if it's a fit.</p>
+  </div>
+</div>
+
+<script>
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('solid', window.scrollY > 60);
+  });
+
+  // Internship listing rows
+  const tracks = [
+    { name: "Content Internship", tag: "Content", desc: "Help shape speaker stories, newsletters, and YCX's written voice — from first draft to what actually goes live." },
+    { name: "Design Internship", tag: "Design", desc: "Work on real web, social, and event design briefs — your output ships to actual users." },
+    { name: "Community Internship", tag: "Community", desc: "Support event planning and day-to-day member engagement across the YCX community." },
+    { name: "Marketing Internship", tag: "Marketing", desc: "Run social experiments and help grow YCX's audience across Instagram, LinkedIn, and YouTube." },
+    { name: "Tech Internship", tag: "Tech", desc: "Ship real features on YCX's website and internal tools, working directly with the founding team." }
+  ];
+  const listingWrap = document.getElementById('listingRows');
+  tracks.forEach((t,i)=>{
+    const row = document.createElement('div');
+    row.className = 'listing-row';
+    row.innerHTML = `
+      <span class="listing-index">0${i+1}</span>
+      <div class="listing-main">
+        <h3>${t.name}</h3>
+        <p>${t.desc}</p>
+        <span class="listing-tag">${t.tag}</span>
+      </div>
+      <span class="listing-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    `;
+    row.addEventListener('click', ()=>{
+      document.getElementById('trackSelect').value = t.tag;
+      openDrawer();
+    });
+    listingWrap.appendChild(row);
+  });
+
+  // Bottom sheet drawer
+  const drawer = document.getElementById('drawer');
+  const drawerOverlay = document.getElementById('drawerOverlay');
+  const internForm = document.getElementById('internForm');
+  const drawerThanks = document.getElementById('drawerThanks');
+
+  function openDrawer(){
+    drawerOverlay.classList.add('active');
+    drawer.classList.add('active');
+    internForm.style.display = 'flex';
+    internForm.style.flexDirection = 'column';
+    drawerThanks.style.display = 'none';
+  }
+  function closeDrawer(){
+    drawerOverlay.classList.remove('active');
+    drawer.classList.remove('active');
+  }
+
+  document.getElementById('navApplyBtn').addEventListener('click', e=>{ e.preventDefault(); openDrawer(); });
+  document.getElementById('heroApplyBtn').addEventListener('click', e=>{ e.preventDefault(); openDrawer(); });
+  document.getElementById('stickyApplyBtn').addEventListener('click', e=>{ e.preventDefault(); openDrawer(); });
+  document.getElementById('ctaApplyBtn').addEventListener('click', e=>{ e.preventDefault(); openDrawer(); });
+  document.getElementById('gainApplyBtn').addEventListener('click', e=>{ e.preventDefault(); openDrawer(); });
+  document.getElementById('drawerCloseBtn').addEventListener('click', closeDrawer);
+  drawerOverlay.addEventListener('click', closeDrawer);
+
+  internForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    internForm.style.display = 'none';
+    drawerThanks.style.display = 'block';
+  });
+</script>
+
+</body>
+</html>

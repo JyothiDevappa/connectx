@@ -49,6 +49,43 @@ $seo = [
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
 <link rel="stylesheet" href="{{ asset('css/about-us.css') }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/css/intlTelInput.css">
+<style>
+    .iti {
+        width: 100%;
+        display: block;
+    }
+    .iti__country-list {
+        background-color: #ffffff !important;
+        border: 1px solid #cccccc !important;
+        color: #333333 !important;
+    }
+    .iti__search-input {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border: 1px solid #cccccc !important;
+    }
+    .iti__country {
+        padding: 8px 10px !important;
+    }
+    .iti__country:hover, .iti__country.iti__highlight {
+        background-color: #f1ede4 !important;
+    }
+    .iti__selected-dial-code {
+        color: #333333 !important;
+        margin-left: 6px;
+    }
+    .iti__arrow {
+        border-top-color: #666666 !important;
+    }
+    .iti__arrow--up {
+        border-bottom-color: #666666 !important;
+    }
+    .iti__selected-flag {
+        border-top-left-radius: 12px !important;
+        border-bottom-left-radius: 12px !important;
+    }
+</style>
 @endpush
 
 @section('content')
@@ -1119,6 +1156,7 @@ CTA SECTION
 
                         <div class="row">
 
+                            <!-- 1. Full Name and Phone number -->
                             <div class="col-md-6 mb-3">
                                 <label for="sponsor-name">Full Name <span class="text-danger">*</span></label>
                                 <input type="text"
@@ -1133,6 +1171,20 @@ CTA SECTION
                             </div>
 
                             <div class="col-md-6 mb-3">
+                                <label for="sponsor-phone">Phone / WhatsApp <span class="text-danger">*</span></label>
+                                <input type="tel"
+                                       id="sponsor-phone"
+                                       class="form-control"
+                                       name="phone"
+                                       value="{{ old('phone') }}"
+                                       placeholder="E.g. +91 98765 43210" required>
+                                @error('phone')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <!-- 2. Email -->
+                            <div class="col-12 mb-3">
                                 <label for="sponsor-email">Email Address <span class="text-danger">*</span></label>
                                 <input type="email"
                                        id="sponsor-email"
@@ -1145,19 +1197,7 @@ CTA SECTION
                                 @enderror
                             </div>
 
-                            <div class="col-md-6 mb-3">
-                                <label for="sponsor-phone">Phone / WhatsApp <span class="text-danger">*</span></label>
-                                <input type="text"
-                                       id="sponsor-phone"
-                                       class="form-control"
-                                       name="phone"
-                                       value="{{ old('phone') }}"
-                                       placeholder="Phone / WhatsApp" required>
-                                @error('phone')
-                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
-                                @enderror
-                            </div>
-
+                            <!-- 3. Company Name, Designation -->
                             <div class="col-md-6 mb-3">
                                 <label for="sponsor-company">Company Name <span class="text-danger">*</span></label>
                                 <input type="text"
@@ -1184,6 +1224,7 @@ CTA SECTION
                                 @enderror
                             </div>
 
+                            <!-- 4. LinkedIn and website url -->
                             <div class="col-md-6 mb-3">
                                 <label for="sponsor-linkedin">LinkedIn Profile <span class="text-danger">*</span></label>
                                 <input type="url"
@@ -1197,25 +1238,7 @@ CTA SECTION
                                 @enderror
                             </div>
 
-                            <div class="col-12 mb-3">
-                                <label for="sponsor-level">Sponsor Type <span class="text-danger">*</span></label>
-                                <select class="form-control" id="sponsor-level" name="sponsorship_level" required>
-
-                                    <option value="" disabled {{ old('sponsorship_level') ? '' : 'selected' }}>
-                                        Select Sponsor Type
-                                    </option>
-
-                                    @foreach(['Title Sponsor', 'Powered By Sponsor', 'Co-Sponsor', 'Platinum Sponsor', 'Gold Sponsor', 'Silver Sponsor'] as $type)
-                                        <option value="{{ $type }}" {{ old('sponsorship_level') == $type ? 'selected' : '' }}>{{ $type }}</option>
-                                    @endforeach
-
-                                </select>
-                                @error('sponsorship_level')
-                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
-                                @enderror
-                            </div>
-
-                            <div class="col-12 mb-4">
+                            <div class="col-md-6 mb-3">
                                 <label for="sponsor-website">Website URL (Optional)</label>
                                 <input type="url"
                                        id="sponsor-website"
@@ -1228,9 +1251,24 @@ CTA SECTION
                                 @enderror
                             </div>
 
+                            <!-- 5. Sponsor Type -->
+                            <div class="col-12 mb-4">
+                                <label for="sponsor-level">Sponsor Type <span class="text-danger">*</span></label>
+                                <select class="form-control form-select" id="sponsor-level" name="sponsorship_level" required>
+                                    <option value="" disabled {{ old('sponsorship_level') ? '' : 'selected' }}>
+                                        Select Sponsor Type
+                                    </option>
+                                    @foreach(['Title Sponsor', 'Powered By Sponsor', 'Co-Sponsor', 'Platinum Sponsor', 'Gold Sponsor', 'Silver Sponsor'] as $type)
+                                        <option value="{{ $type }}" {{ old('sponsorship_level') == $type ? 'selected' : '' }}>{{ $type }}</option>
+                                    @endforeach
+                                </select>
+                                @error('sponsorship_level')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
+                            </div>
+
                             <div class="col-12">
-                                <button type="submit"
-                                        class="btn-sponsor-submit">
+                                <button type="submit" class="btn-sponsor-submit">
                                     Submit
                                 </button>
                             </div>
@@ -1667,6 +1705,7 @@ function toggleTier(btn) {
     </div>
 </div>
 
+@push('scripts')
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         var successModalElement = document.getElementById('successModal');
@@ -1676,6 +1715,31 @@ function toggleTier(btn) {
         }
     });
 </script>
+@endpush
 @endif
+
+@push('scripts')
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/js/intlTelInput.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var phoneInput = document.querySelector('input[name="phone"]');
+        if (phoneInput) {
+            var iti = window.intlTelInput(phoneInput, {
+                initialCountry: "in",
+                separateDialCode: true,
+                utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/js/utils.js"
+            });
+
+            // On submit, update phone input value with the full international number
+            var form = phoneInput.closest('form');
+            if (form) {
+                form.addEventListener('submit', function() {
+                    phoneInput.value = iti.getNumber();
+                });
+            }
+        }
+    });
+</script>
+@endpush
 
 @endsection
