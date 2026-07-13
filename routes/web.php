@@ -77,6 +77,7 @@ Route::get('/faq', fn() => view('faq'));
 Route::get('/contact', fn() => view('contact'))->name('contact');
 Route::get('/404', fn() => view('404'));
 Route::get('/privacy-policy', fn() => view('privacy-policy'))->name('privacy.policy');
+Route::get('/terms-and-conditions', fn() => view('terms-and-conditions'))->name('terms.conditions');
 
 
 use App\Http\Controllers\ApplicationController;

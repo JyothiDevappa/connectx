@@ -24,41 +24,39 @@ $seo = [
   #hdr:not(.scrolled) .hamburger span {
       background: #0c3a30 !important;
   }
+  .premium-hero-container {
+      min-height: 50vh;
+      background-image: linear-gradient(180deg, rgba(12, 58, 48, 0.55) 0%, #090d16 100%), 
+                        url('{{ asset("images/contact-banner-img.jpg") }}');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+  }
+  .text-glow-headline {
+      font-size: clamp(38px, 5.5vw, 64px);
+      font-weight: 900;
+      line-height: 1.2;
+      padding-bottom: 15px;
+      letter-spacing: -2px;
+      background: linear-gradient(135deg, #ffffff 30%, #ffd2b1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
   .privacy-container {
-      padding: 180px 0 100px;
-      background: var(--cream);
+      padding: 80px 0 100px;
+      background: #ffffff; /* Plain white body background */
   }
   .privacy-content {
-      max-width: 800px;
       margin: 0 auto;
-      background: var(--white);
-      padding: 60px;
-      border-radius: 24px;
-      border: 1.5px solid rgba(12, 58, 48, 0.12);
-      box-shadow: 0 20px 40px rgba(12, 58, 48, 0.04);
-  }
-  .privacy-content h1 {
-      font-family: 'Fraunces', serif;
-      font-size: clamp(34px, 4vw, 48px);
-      font-weight: 700;
-      color: var(--ink);
-      margin-bottom: 12px;
-  }
-  .privacy-content .last-updated {
-      font-family: 'Space Mono', monospace;
-      font-size: 12px;
-      color: var(--peach-deep);
-      margin-bottom: 40px;
-      display: block;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      background: transparent;
+      padding: 0; /* No card layout padding */
   }
   .privacy-content h2 {
       font-family: 'Fraunces', serif;
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 600;
       color: var(--ink);
-      margin-top: 36px;
+      margin-top: 40px;
       margin-bottom: 16px;
   }
   .privacy-content p {
@@ -78,24 +76,56 @@ $seo = [
       line-height: 1.8;
       margin-bottom: 8px;
   }
-  @media(max-width: 768px) {
-      .privacy-content {
-          padding: 30px 20px;
-          border-radius: 16px;
+  .last-updated-badge {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: var(--peach-deep);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      display: inline-block;
+  }
+  @media(max-width: 991px) {
+      .premium-hero-container {
+          min-height: 40vh;
+          background-attachment: scroll;
       }
+  }
+  @media(max-width: 768px) {
       .privacy-container {
-          padding: 130px 20px 60px;
+          padding: 50px 20px 70px;
       }
   }
 </style>
 @endpush
 
 @section('content')
-<div class="career-body privacy-container">
+<!-- Hero Banner with Breadcrumbs -->
+<div class="premium-hero-container d-flex align-items-center position-relative">
+    <div class="container pt-150 pb-80">
+        <div class="row align-items-center">
+            <div class="col-xl-8 col-lg-10">
+                
+                <ul class="style-none d-flex align-items-center gap-2 p-0 mb-4 text-uppercase tracking-wider" style="font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; list-style: none;">
+                    <li><a href="{{ url('/') }}" class="text-white opacity-60 text-decoration-none hover-opacity-100">Home</a></li>
+                    <li class="text-white opacity-40">/</li>
+                    <li class="text-white" style="color: #ffd2b1 !important;">Privacy Policy</li>
+                </ul>
+
+                <h1 class="text-glow-headline mb-4">Privacy Policy</h1>
+                <p class="fs-5 mb-0" style="max-width: 650px; line-height: 1.6; font-weight: 500; color: #ffffff; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">
+                    Learn how Young Chanakya X collects, uses, and protects your personal information.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Privacy Content body -->
+<div class="container py-5">
   <div class="wrap">
     <article class="privacy-content">
-      <h1>Privacy Policy</h1>
-      <span class="last-updated">Last Updated: July 11, 2026</span>
+      <span class="last-updated-badge">Last Updated: July 11, 2026</span>
 
       <p>Young Chanakya X ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, apply for directory listings, sponsorships, partnerships, speaker opportunities, or jobs/internships.</p>
 
