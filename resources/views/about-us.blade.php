@@ -113,7 +113,7 @@ $seo = [
                 <p class="hero-copy">Young Chanakya X is a digital-first leadership and community platform where ambitious individuals come together to share stories, exchange knowledge, build meaningful relationships, and unlock real opportunities. We believe growth happens when people connect, learn, and collaborate through authentic experiences.</p>
               
                 <div class="about-hero-buttons">
-                    <a href="/become-a-sponser" class="about-btn-1">Become a Sponsor</a>
+                    <a href="/become-a-sponser" class="about-btn-1">Become a sponser</a>
                     <a href="/become-a-partner" class="about-btn-2">Become a Partner</a>
                 </div>
 

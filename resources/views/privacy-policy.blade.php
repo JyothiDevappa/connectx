@@ -127,7 +127,7 @@ $seo = [
     <article class="privacy-content">
       <span class="last-updated-badge">Last Updated: July 11, 2026</span>
 
-      <p>Young Chanakya X ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, apply for directory listings, sponsorships, partnerships, speaker opportunities, or jobs/internships.</p>
+      <p>Young Chanakya X ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, apply for directory listings, sponserships, partnerships, speaker opportunities, or jobs/internships.</p>
 
       <h2>1. Information We Collect</h2>
       <p>We may collect information about you in a variety of ways. The information we may collect on the website includes:</p>
@@ -140,7 +140,7 @@ $seo = [
       <h2>2. Use of Your Information</h2>
       <p>Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the website to:</p>
       <ul>
-        <li>Process and evaluate applications for internships, jobs, directory listings, speaking roles, sponsorships, or partnerships.</li>
+        <li>Process and evaluate applications for internships, jobs, directory listings, speaking roles, sponserships, or partnerships.</li>
         <li>Send you administrative information, application updates, or marketing and promotional communications.</li>
         <li>Email you regarding your inquiries, contact requests, or RSVP confirmations.</li>
         <li>Deliver targeted advertising, newsletters, and other information regarding promotions and the site to you.</li>

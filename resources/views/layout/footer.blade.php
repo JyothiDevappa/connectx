@@ -373,7 +373,7 @@
 
                             <li>
                                 <a href="{{ url('/become-a-sponser') }}">
-                                    Become a Sponsor
+                                    Become a sponser
                                 </a>
                             </li>
 

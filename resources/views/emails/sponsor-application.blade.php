@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>New Sponsorship Application</title>
+    <title>New sponsership Application</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -97,7 +97,7 @@
     
     <div class="content">
         <p class="intro">
-            A new application has been submitted for a <strong>Young Chanakya X Sponsorship</strong>. Below are the details provided by the applicant:
+            A new application has been submitted for a <strong>Young Chanakya X sponsership</strong>. Below are the details provided by the applicant:
         </p>
         
         <table class="details-table">
@@ -126,8 +126,8 @@
                 <td><a href="{{ $linkedin }}" target="_blank">View LinkedIn Profile</a></td>
             </tr>
             <tr>
-                <th>Sponsorship Level</th>
-                <td>{{ $sponsorship_level }}</td>
+                <th>sponsership Level</th>
+                <td>{{ $sponsership_level }}</td>
             </tr>
             @if(!empty($website))
             <tr>
@@ -160,7 +160,7 @@
         <div style="margin-bottom: 20px; font-size: 13px; line-height: 1.8; color: #ffffff;">
             <a href="https://connectx.youngchanakya.com/about" style="color: #ffffff; text-decoration: none;">About</a> &nbsp;|&nbsp; 
             <a href="https://connectx.youngchanakya.com/become-a-partner" style="color: #ffffff; text-decoration: none;">Become a Partner</a> &nbsp;|&nbsp; 
-            <a href="https://connectx.youngchanakya.com/become-a-sponser" style="color: #ffffff; text-decoration: none;">Become a Sponsor</a> &nbsp;|&nbsp; 
+            <a href="https://connectx.youngchanakya.com/become-a-sponser" style="color: #ffffff; text-decoration: none;">Become a sponser</a> &nbsp;|&nbsp; 
             <a href="https://connectx.youngchanakya.com/contact" style="color: #ffffff; text-decoration: none;">Connect with YCX</a>
         </div>
         

@@ -121,10 +121,10 @@
         <span class="sb-count" id="sbCount-connectors">0</span>
       </a>
 
-      <a href="{{ url('/admin/dashboard/sponsors') }}" class="nav-link" data-section="sponsors">
+      <a href="{{ url('/admin/dashboard/sponsers') }}" class="nav-link" data-section="sponsers">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-        Sponsors
-        <span class="sb-count" id="sbCount-sponsors">0</span>
+        sponsers
+        <span class="sb-count" id="sbCount-sponsers">0</span>
       </a>
 
       <a href="{{ url('/admin/dashboard/partners') }}" class="nav-link" data-section="partners">
@@ -293,7 +293,7 @@
 
   // Load counts dynamically in the sidebar navigation
   async function loadSidebarCounts() {
-    const sections = ['connectors', 'sponsors', 'partners', 'speakers', 'posted_jobs'];
+    const sections = ['connectors', 'sponsers', 'partners', 'speakers', 'posted_jobs'];
     for (const s of sections) {
       try {
         let url = `/admin/api/${s.replace('_', '-')}`;

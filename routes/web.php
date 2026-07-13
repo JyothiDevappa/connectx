@@ -84,16 +84,16 @@ use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\AdminDashboardController;
 
-Route::get('/connecters-list', function () {
+Route::get('/connectors-list', function () {
     return view('connecters-list');
 })->name('connecters.list');
 
 Route::post('/connecters-list/apply', [ApplicationController::class, 'submit'])->name('connecters.apply');
 
-Route::get('/become-a-sponser', function () {
+Route::get('/become-a-sponsor', function () {
     return view('become-a-sponser');
 });
-Route::post('/become-a-sponser/apply', [ApplicationController::class, 'submitSponsor'])->name('sponsor.apply');
+Route::post('/become-a-sponser/apply', [ApplicationController::class, 'submitsponser'])->name('sponser.apply');
 
 Route::get('/become-a-partner', function () {
     return view('become-a-partner');
@@ -134,9 +134,9 @@ Route::middleware('admin')->group(function () {
     Route::get('/admin/api/partners', [AdminDashboardController::class, 'partners'])->name('admin.api.partners');
     Route::post('/admin/api/partners/{id}', [AdminDashboardController::class, 'updatePartner'])->name('admin.api.partners.update');
 
-    // Sponsors API (real DB)
-    Route::get('/admin/api/sponsors', [AdminDashboardController::class, 'sponsors'])->name('admin.api.sponsors');
-    Route::post('/admin/api/sponsors/{id}', [AdminDashboardController::class, 'updateSponsor'])->name('admin.api.sponsors.update');
+    // sponsers API (real DB)
+    Route::get('/admin/api/sponsers', [AdminDashboardController::class, 'sponsers'])->name('admin.api.sponsers');
+    Route::post('/admin/api/sponsers/{id}', [AdminDashboardController::class, 'updatesponser'])->name('admin.api.sponsers.update');
 
     // Jobs & Applications API (real DB)
     Route::get('/admin/api/posted-jobs', [AdminDashboardController::class, 'postedJobs'])->name('admin.api.posted-jobs');

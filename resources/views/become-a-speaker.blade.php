@@ -813,100 +813,7 @@ $seo = [
     }
   }
 
-  /* Who Belongs On This Stage - Different UI */
-  .speaker-body .who-belongs-different-ui {
-    padding: 100px 0;
-    background: var(--cream);
-  }
-  .speaker-body .diff-ui-chips {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin-top: 24px;
-  }
-  .speaker-body .diff-ui-chips span {
-    font-size: 14px;
-    font-weight: 700;
-    padding: 12px 18px;
-    border-radius: 12px;
-    border: 1.5px solid rgba(12, 58, 48, 0.15);
-    color: var(--ink);
-    background: var(--white);
-    text-align: center;
-    transition: all 0.3s ease;
-    cursor: default;
-  }
-  .speaker-body .diff-ui-chips span:hover {
-    border-color: var(--ink);
-    background: rgba(12, 58, 48, 0.04);
-    transform: translateY(-2px);
-  }
-  .speaker-body .diff-ui-chips span.chip-active {
-    background: var(--ink);
-    color: var(--peach) !important;
-    border-color: var(--ink);
-  }
-  .speaker-body .diff-ui-gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-  .speaker-body .gallery-card {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    aspect-ratio: 1 / 1.15;
-    box-shadow: 0 10px 30px rgba(12, 58, 48, 0.08);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .speaker-body .gallery-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(12, 58, 48, 0.15);
-  }
-  .speaker-body .gallery-card .img-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-  .speaker-body .gallery-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .speaker-body .gallery-card:hover img {
-    transform: scale(1.05);
-  }
-  .speaker-body .gallery-card .glass-label {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    padding: 12px;
-    background: rgba(12, 58, 48, 0.75);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 12px;
-    color: var(--peach);
-    font-size: 15px;
-    font-weight: 700;
-    text-align: center;
-    letter-spacing: 0.5px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-  }
-  .speaker-body .gallery-card:hover .glass-label {
-    background: var(--ink);
-    color: var(--white);
-    border-color: var(--peach);
-  }
-  @media(max-width: 576px) {
-    .speaker-body .diff-ui-gallery {
-      grid-template-columns: 1fr;
-    }
-  }
-
+  
   /* ---------- Language strip ---------- */
   .speaker-body .lang-strip {
     background: var(--ink);
@@ -948,6 +855,80 @@ $seo = [
     padding: 16px 0;
     font-weight: 600;
   }
+
+
+  .ycx-community-section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin: 15px 0;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.pill {
+  padding: 12px 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 50px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.pill:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.visual-box {
+  flex: 1;
+  height: 400px;
+  background: #f4f4f4; /* Placeholder background */
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .container { flex-direction: column-reverse; }
+  .button-grid { grid-template-columns: 1fr 1fr; }
+}
 </style>
 @endpush
 
@@ -960,7 +941,7 @@ $seo = [
       <div class="row align-items-center gy-5">
         <div class="col-lg-6">
           <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Become a YCX Speaker</div>
-          <h1 style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Your story is someone else's turning point</h1>
+          <h1 style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Your Story is Someone Else's Turning Point</h1>
           <p class="hero-copy">Young Chanakya X is looking for people whose experience deserves a room, a mic, and an audience that's ready to listen. Apply below — it takes less than five minutes.</p>
           
           <div class="about-hero-buttons" style="margin-top: 40px; display: flex; flex-direction: column; gap: 14px;">
@@ -1148,67 +1129,43 @@ $seo = [
   </div>
   <!-- <p class="lang-caption">Because the best stories shouldn't wait for a translation.</p> -->
 
-  <!-- WHO BELONGS - DIFFERENT UI -->
-  <section class="who-belongs-different-ui">
-    <div class="wrap">
-      <div class="row align-items-center gy-5">
-        <div class="col-lg-5">
-          <div class="section-head mb-4">
-            <span class="eyebrow">Who Belongs On This Stage</span>
-            <h2 class="sec-title">If you're building something, you belong here</h2>
-            <p class="sec-desc">YCX speakers come from every corner of ambition — there's no single "type." What they share is a story worth passing on.</p>
-          </div>
-          <div class="diff-ui-chips">
-            <span class="chip-active">Students</span>
-            <span>Entrepreneurs</span>
-            <span>Founders</span>
-            <span>Professionals</span>
-            <span>Creators</span>
-            <span>Mentors</span>
-            <span>Educators</span>
-            <span>Investors</span>
-            <span>Business Leaders</span>
-            <span>Organizations</span>
-          </div>
-        </div>
-        <div class="col-lg-7">
-          <div class="diff-ui-gallery">
-            <div class="gallery-card">
-              <div class="img-container">
-                <img src="https://images.unsplash.com/photo-1652471943570-f3590a4e52ed?auto=format&fit=crop&w=500&q=80" alt="Founders">
-                <div class="glass-label">Founders</div>
-              </div>
-            </div>
-            <div class="gallery-card">
-              <div class="img-container">
-                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=500&q=80" alt="Professionals">
-                <div class="glass-label">Professionals</div>
-              </div>
-            </div>
-            <div class="gallery-card">
-              <div class="img-container">
-                <img src="https://images.unsplash.com/photo-1595211877493-41a4e5f236b3?auto=format&fit=crop&w=500&q=80" alt="Mentors">
-                <div class="glass-label">Mentors</div>
-              </div>
-            </div>
-            <div class="gallery-card">
-              <div class="img-container">
-                <img src="https://images.unsplash.com/photo-1627161683077-e34782c24d81?auto=format&fit=crop&w=500&q=80" alt="Creators">
-                <div class="glass-label">Creators</div>
-              </div>
-            </div>
-          </div>
-        </div>
+
+
+  <section class="ycx-community-section">
+  <div class="container">
+    <div class="content-wrapper">
+      <span class="eyebrow">Who Belongs On This Stage</span>
+      <h2 class="heading">If You're Building Something, You Belong Here</h2>
+      <p class="description">YCX speakers come from every corner of ambition — there's no single "type." What they share is a story worth passing on.</p>
+      
+      <div class="button-grid">
+        <button class="pill">Students</button>
+        <button class="pill">Entrepreneurs</button>
+        <button class="pill">Founders</button>
+        <button class="pill">Professionals</button>
+        <button class="pill">Creators</button>
+        <button class="pill">Mentors</button>
+        <button class="pill">Educators</button>
+        <button class="pill">Investors</button>
+        <button class="pill">Business Leaders</button>
+        <button class="pill">Organizations</button>
       </div>
     </div>
-  </section>
+    
+    <div class="visual-box">
+      <img src="path-to-your-image.jpg" alt="YCX Ecosystem Visual">
+    </div>
+  </div>
+</section>
+
+
 
   <!-- ELIGIBILITY -->
   <section class="eligibility-section">
     <div class="wrap">
       <div class="section-head text-center mx-auto" style="max-width: 900px;">
         <span class="eyebrow">Before You Apply</span>
-        <h2 class="sec-title">What we look for in a YCX speaker</h2>
+        <h2 class="sec-title">What We Look for in a YCX Speaker</h2>
         <p class="sec-desc" style="max-width: 720px; margin-left: auto; margin-right: auto;">We value authentic stories, practical insights, and speakers who are open to refining their delivery through expert guidance</p>
       </div>
       <div class="elig-layout">
@@ -1252,7 +1209,7 @@ $seo = [
               <p>A lesson, a framework, a warning — anything a listener could actually walk away and apply.</p>
             </div>
           </div>
-          <div class="elig-note">Applying doesn't guarantee a stage — but every honest story gets read by a real person on our team.</div>
+          <!-- <div class="elig-note">Applying doesn't guarantee a stage — but every honest story gets read by a real person on our team.</div> -->
         </div>
       </div>
     </div>
@@ -1263,7 +1220,8 @@ $seo = [
     <div class="wrap">
       <div class="section-head text-center mx-auto" style="max-width: 900px;">
         <span class="eyebrow">Ways To Take The Stage</span>
-        <h2 class="sec-title">Every story finds its own format</h2>
+        <h2 class="sec-title">Every Story Finds Its Own Format
+</h2>
         <p class="sec-desc" style="max-width: 720px; margin-left: auto; margin-right: auto;">Tell us your story, and we'll help shape it into the perfect format for your audience. Whether it's a keynote, podcast, or workshop, we'll make it resonate</p>
       </div>
       <div class="formats-grid">
@@ -1445,11 +1403,28 @@ $seo = [
   </section>
 
   <!-- CTA BANNER -->
-  <section class="cta-banner">
-    <div class="wrap">
-      <h2 class="sec-title">Have a story that needs a bigger room?</h2>
-      <p class="sec-desc">We're always looking for the next YCX speaker. If you have something to say — or know someone who does — this is where it starts.</p>
-      <a href="#apply-form" class="btn btn-primary">Apply to Speak</a>
+  <section class="cta-banner" style="
+    background-image: url('{{ asset('images/media/speaker-banner-img.png') }}');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    padding: 110px 0;
+    text-align: center;
+  ">
+    {{-- Dark overlay for readability --}}
+    <div style="
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(7, 40, 33, 0.82) 0%, rgba(12, 58, 48, 0.72) 100%);
+      z-index: 0;
+    "></div>
+
+    <div class="wrap" style="position: relative; z-index: 1;">
+      <h2 class="sec-title" style="color: #ffffff !important; letter-spacing: -2px;">Have a story that needs a bigger room?</h2>
+      <p class="sec-desc" style="color: rgba(255,250,244,0.85) !important;">We're always looking for the next YCX speaker. If you have something to say — or know someone who does — this is where it starts.</p>
+      <a href="#apply-form" class="btn btn-primary" style="background: #ffd2b1; color: #0c3a30 !important; font-weight: 700;">Apply to Speak</a>
     </div>
   </section>
 

@@ -60,7 +60,7 @@ class JobSeeder extends Seeder
                 'content' => '<h2>About the Role</h2><p>Own YCX\'s presence across Instagram, LinkedIn, and YouTube — turning speaker sessions and community moments into content that actually travels.</p>',
             ],
             [
-                'title' => 'Partnerships & Sponsorships Associate',
+                'title' => 'Partnerships & sponserships Associate',
                 'category' => 'career',
                 'department' => 'Partnerships',
                 'work_mode' => 'Remote',
@@ -69,7 +69,7 @@ class JobSeeder extends Seeder
                 'location' => 'Remote',
                 'skills' => 'Business Development, Client Relations, Pipeline Management',
                 'tagline' => 'Build relationships with brands and organizations joining the YCX ecosystem.',
-                'content' => '<h2>About the Role</h2><p>Build relationships with brands, institutions, and organizations who want to be part of the YCX ecosystem — from event sponsors to platform collaborators.</p>',
+                'content' => '<h2>About the Role</h2><p>Build relationships with brands, institutions, and organizations who want to be part of the YCX ecosystem — from event sponsers to platform collaborators.</p>',
             ],
             [
                 'title' => 'UI/UX & Brand Designer',

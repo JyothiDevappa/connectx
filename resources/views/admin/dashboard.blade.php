@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard — ConnectX YCX</title>
-  <meta name="description" content="Young Chanakya X Admin Dashboard — manage sponsors, partners, speakers, careers and internship submissions.">
+  <meta name="description" content="Young Chanakya X Admin Dashboard — manage sponsers, partners, speakers, careers and internship submissions.">
   <link rel="icon" href="{{ asset('images/fav-icon/favicon.ico') }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,10 +43,10 @@
         <span class="sb-count" id="sbCount-connectors">0</span>
       </a>
 
-      <a href="{{ url('/admin/dashboard/sponsors') }}" class="nav-link" data-section="sponsors" id="nav-sponsors">
+      <a href="{{ url('/admin/dashboard/sponsers') }}" class="nav-link" data-section="sponsers" id="nav-sponsers">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-        Sponsors
-        <span class="sb-count" id="sbCount-sponsors">0</span>
+        sponsers
+        <span class="sb-count" id="sbCount-sponsers">0</span>
       </a>
 
       <a href="{{ url('/admin/dashboard/partners') }}" class="nav-link" data-section="partners" id="nav-partners">
@@ -127,9 +127,9 @@
           <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-connectors">0</div>
           <div style="font-size:12.5px;font-weight:700;color:var(--text-soft);margin-top:4px;">Connector Applications</div>
         </div>
-        <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px 20px;cursor:pointer;transition:box-shadow .2s;" onclick="switchSection('sponsors')" class="overview-card">
-          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-sponsors">0</div>
-          <div style="font-size:12.5px;font-weight:700;color:var(--text-soft);margin-top:4px;">Sponsor Applications</div>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px 20px;cursor:pointer;transition:box-shadow .2s;" onclick="switchSection('sponsers')" class="overview-card">
+          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-sponsers">0</div>
+          <div style="font-size:12.5px;font-weight:700;color:var(--text-soft);margin-top:4px;">sponser Applications</div>
         </div>
         <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px 20px;cursor:pointer;transition:box-shadow .2s;" onclick="switchSection('partners')" class="overview-card">
           <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-partners">0</div>
@@ -205,7 +205,7 @@
 
 const DATA = {
 
-  sponsors: @json($sponsors),
+  sponsers: @json($sponsers),
 
   partners: @json($partners),
 
@@ -236,19 +236,19 @@ const SECTION_CONFIG = {
     title: "Dashboard",
     subtitle: "Welcome back, Sangeetha. Here's what's happening today."
   },
-  sponsors: {
-    title: "Sponsor Applications",
-    subtitle: "Companies and individuals who applied to sponsor Young Chanakya X events.",
+  sponsers: {
+    title: "sponser Applications",
+    subtitle: "Companies and individuals who applied to sponser Young Chanakya X events.",
     statusOptions: ["confirmed","pending","declined"],
     statusLabels: { confirmed:"Confirmed", pending:"Pending", declined:"Declined" },
-    typeField: "sponsorship_level",
+    typeField: "sponsership_level",
     typeValues: ["Platinum","Gold","Silver","Title"],
-    liveApi: "{{ route('admin.api.sponsors') }}",
-    updateApi: "{{ url('/admin/api/sponsors') }}",
+    liveApi: "{{ route('admin.api.sponsers') }}",
+    updateApi: "{{ url('/admin/api/sponsers') }}",
     columns: [
       { key:"person", label:"Applicant" },
       { key:"company", label:"Company" },
-      { key:"sponsorship_level", label:"Level" },
+      { key:"sponsership_level", label:"Level" },
       { key:"submitted", label:"Submitted" },
       { key:"status", label:"Status" },
       { key:"action", label:"" }
@@ -448,14 +448,14 @@ async function updateCounts(){
     console.error("Error loading partners from database", e);
   }
 
-  // Load sponsors dynamically from DB
+  // Load sponsers dynamically from DB
   try {
-    const res = await fetch("{{ route('admin.api.sponsors') }}");
+    const res = await fetch("{{ route('admin.api.sponsers') }}");
     if(res.ok) {
-      DATA.sponsors = await res.json();
+      DATA.sponsers = await res.json();
     }
   } catch(e) {
-    console.error("Error loading sponsors from database", e);
+    console.error("Error loading sponsers from database", e);
   }
 
   // Load posted jobs dynamically from DB
@@ -480,18 +480,18 @@ async function updateCounts(){
     console.error("Error loading job applications from database", e);
   }
 
-  ['connectors','sponsors','partners','speakers','careers','internships','posted_jobs'].forEach(s => {
+  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs'].forEach(s => {
     const el = document.getElementById('sbCount-' + s);
     if(el) el.textContent = DATA[s].length;
   });
   // Overview panels
-  ['connectors','sponsors','partners','speakers','careers','internships','posted_jobs'].forEach(s => {
+  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs'].forEach(s => {
     const el = document.getElementById('ov-' + s);
     if(el) el.textContent = DATA[s].length;
   });
 
   // If currently viewing database sections, refresh to show fetched data
-  if(['connectors','partners','sponsors','careers','internships','posted_jobs','overview'].includes(currentSection)) {
+  if(['connectors','partners','sponsers','careers','internships','posted_jobs','overview'].includes(currentSection)) {
     if(currentSection === 'overview') renderOverviewStats();
     else renderTable(currentSection);
   }
@@ -552,9 +552,9 @@ function switchSection(section){
    RENDER OVERVIEW STATS (dashboard summary)
    ===================================================== */
 function renderOverviewStats(){
-  const sections = ['connectors','sponsors','partners','speakers','careers','internships'];
+  const sections = ['connectors','sponsers','partners','speakers','careers','internships'];
   const totalAll = sections.reduce((acc,s) => acc + DATA[s].length, 0);
-  const confirmedAll = ['sponsors','partners','speakers'].reduce((acc,s) => acc + DATA[s].filter(x=>x.status==='confirmed').length, 0) +
+  const confirmedAll = ['sponsers','partners','speakers'].reduce((acc,s) => acc + DATA[s].filter(x=>x.status==='confirmed').length, 0) +
                        DATA['connectors'].filter(x=>x.status==='approved').length;
   const pendingAll = sections.reduce((acc,s) => acc + DATA[s].filter(x=>x.status==='pending'||x.status==='new'||x.status==='review').length, 0);
   const hiredAll = ['careers','internships'].reduce((acc,s) => acc + DATA[s].filter(x=>x.status==='hired').length, 0);
@@ -665,8 +665,8 @@ function renderCell(col, d, section){
       return `<td><div class="cell-primary">${d.name}</div><div class="cell-secondary">${d.email}</div></td>`;
     case 'company':
       return `<td><div class="cell-primary">${d.company||'—'}</div><div class="cell-secondary">${d.designation||''}</div></td>`;
-    case 'sponsorship_level':
-      return `<td><span class="badge ${levelBadgeClass(d.sponsorship_level)}">${d.sponsorship_level}</span></td>`;
+    case 'sponsership_level':
+      return `<td><span class="badge ${levelBadgeClass(d.sponsership_level)}">${d.sponsership_level}</span></td>`;
     case 'partnership_type':
       return `<td><span class="badge ${levelBadgeClass(d.partnership_type)}">${d.partnership_type}</span></td>`;
     case 'designation':
@@ -761,13 +761,13 @@ function renderTable(section){
         this.className = 'status-select ' + statusClass(this.value);
         renderStats(section);
 
-        // If connector/partner/sponsor/posted_job, save to DB
+        // If connector/partner/sponser/posted_job, save to DB
         if(section === 'connectors') {
           await saveConnectorStatus(idVal, this.value, item.notes);
         } else if(section === 'partners') {
           await savePartnerStatus(idVal, this.value, item.notes);
-        } else if(section === 'sponsors') {
-          await saveSponsorStatus(idVal, this.value, item.notes);
+        } else if(section === 'sponsers') {
+          await savesponserStatus(idVal, this.value, item.notes);
         } else if(section === 'posted_jobs') {
           await fetch(`/admin/api/posted-jobs/${idVal}`, {
             method: 'POST',
@@ -828,12 +828,12 @@ function openDrawer(section, id){
   let badges  = '';
   let bodyHTML = '';
 
-  if(section === 'sponsors'){
+  if(section === 'sponsers'){
     document.getElementById('dName').textContent = d.name;
     subText = d.email;
-    badges  = `<span class="badge ${levelBadgeClass(d.sponsorship_level)}">${d.sponsorship_level} Sponsor</span>
+    badges  = `<span class="badge ${levelBadgeClass(d.sponsership_level)}">${d.sponsership_level} sponser</span>
                <span class="badge badge-review">${d.company}</span>`;
-    bodyHTML = sponsorBody(d);
+    bodyHTML = sponserBody(d);
   } else if(section === 'partners'){
     document.getElementById('dName').textContent = d.name;
     subText = d.email;
@@ -908,8 +908,8 @@ function openDrawer(section, id){
             await saveConnectorStatus(id, newStatus, newNotes);
           } else if(section === 'partners') {
             await savePartnerStatus(id, newStatus, newNotes);
-          } else if(section === 'sponsors') {
-            await saveSponsorStatus(id, newStatus, newNotes);
+          } else if(section === 'sponsers') {
+            await savesponserStatus(id, newStatus, newNotes);
           } else if(section === 'careers' || section === 'internships') {
             await saveJobApplicationStatus(id, newStatus, newNotes);
           }
@@ -951,9 +951,9 @@ async function saveConnectorStatus(id, status, notes) {
   }
 }
 
-async function saveSponsorStatus(id, status, notes) {
+async function savesponserStatus(id, status, notes) {
   try {
-    await fetch(`/admin/api/sponsors/${id}`, {
+    await fetch(`/admin/api/sponsers/${id}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -1006,8 +1006,8 @@ function adminSection(section, statusOptions, statusLabels, currentStatus){
   `;
 }
 
-function sponsorBody(d){
-  const cfg = SECTION_CONFIG['sponsors'];
+function sponserBody(d){
+  const cfg = SECTION_CONFIG['sponsers'];
   return `
     <div class="dsection">
       <h4>Contact Details</h4>
@@ -1022,13 +1022,13 @@ function sponsorBody(d){
       </div>
     </div>
     <div class="dsection">
-      <h4>Sponsorship Details</h4>
+      <h4>sponsership Details</h4>
       <div class="dgrid">
-        <div class="dfield"><span class="fl">Sponsorship Level</span><span class="fv"><span class="badge ${levelBadgeClass(d.sponsorship_level)}">${d.sponsorship_level}</span></span></div>
+        <div class="dfield"><span class="fl">sponsership Level</span><span class="fv"><span class="badge ${levelBadgeClass(d.sponsership_level)}">${d.sponsership_level}</span></span></div>
         <div class="dfield"><span class="fl">Submitted On</span><span class="fv">${fmtDate(d.submitted)}</span></div>
       </div>
     </div>
-    ${adminSection('sponsors', cfg.statusOptions, cfg.statusLabels, d.status)}
+    ${adminSection('sponsers', cfg.statusOptions, cfg.statusLabels, d.status)}
   `;
 }
 

@@ -12,7 +12,7 @@ class AdminDashboardController extends Controller
      */
     public function index($section = 'overview')
     {
-        $allowedSections = ['overview', 'connectors', 'sponsors', 'partners', 'speakers', 'careers', 'internships', 'posted_jobs'];
+        $allowedSections = ['overview', 'connectors', 'sponsers', 'partners', 'speakers', 'careers', 'internships', 'posted_jobs'];
         if (!in_array($section, $allowedSections)) {
             $section = 'overview';
         }
@@ -44,14 +44,14 @@ class AdminDashboardController extends Controller
                 'designation'      => $p->designation,
                 'linkedin'         => $p->linkedin,
                 'website'          => $p->website_url ?? '',
-                'partnership_type' => $p->sponsor_select,
+                'partnership_type' => $p->sponser_select,
                 'status'           => $p->status,
                 'notes'            => $p->notes ?? '',
                 'submitted'        => $p->created_at->format('Y-m-d'),
             ];
         });
 
-        $sponsors = \App\Models\Sponsor::orderByDesc('created_at')->get()->map(function ($s) {
+        $sponsers = \App\Models\sponser::orderByDesc('created_at')->get()->map(function ($s) {
             return [
                 'id'                => $s->id,
                 'name'              => $s->name,
@@ -61,7 +61,7 @@ class AdminDashboardController extends Controller
                 'designation'       => $s->designation,
                 'linkedin'          => $s->linkedin,
                 'website'           => $s->website ?? '',
-                'sponsorship_level' => $s->sponsorship_level,
+                'sponsership_level' => $s->sponsership_level,
                 'status'            => $s->status,
                 'notes'             => $s->notes ?? '',
                 'submitted'         => $s->created_at->format('Y-m-d'),
@@ -108,7 +108,7 @@ class AdminDashboardController extends Controller
         $careers = $apps->filter(function($x) { return $x['category'] === 'career'; })->values();
         $internships = $apps->filter(function($x) { return $x['category'] === 'internship'; })->values();
 
-        return view('admin.dashboard', compact('section', 'connectors', 'partners', 'sponsors', 'postedJobs', 'careers', 'internships'));
+        return view('admin.dashboard', compact('section', 'connectors', 'partners', 'sponsers', 'postedJobs', 'careers', 'internships'));
     }
 
     /**
@@ -195,11 +195,11 @@ class AdminDashboardController extends Controller
     }
 
     /**
-     * Return sponsors as JSON (for the admin panel JS).
+     * Return sponsers as JSON (for the admin panel JS).
      */
-    public function sponsors(Request $request)
+    public function sponsers(Request $request)
     {
-        $sponsors = \App\Models\Sponsor::orderByDesc('created_at')->get()->map(function ($s) {
+        $sponsers = \App\Models\sponser::orderByDesc('created_at')->get()->map(function ($s) {
             return [
                 'id'                => $s->id,
                 'name'              => $s->name,
@@ -209,29 +209,29 @@ class AdminDashboardController extends Controller
                 'designation'       => $s->designation,
                 'linkedin'          => $s->linkedin,
                 'website'           => $s->website ?? '',
-                'sponsorship_level' => $s->sponsorship_level,
+                'sponsership_level' => $s->sponsership_level,
                 'status'            => $s->status,
                 'notes'             => $s->notes ?? '',
                 'submitted'         => $s->created_at->format('Y-m-d'),
             ];
         });
 
-        return response()->json($sponsors);
+        return response()->json($sponsers);
     }
 
     /**
-     * Update sponsor status / notes.
+     * Update sponser status / notes.
      */
-    public function updateSponsor(Request $request, $id)
+    public function updatesponser(Request $request, $id)
     {
-        $sponsor = \App\Models\Sponsor::findOrFail($id);
+        $sponser = \App\Models\sponser::findOrFail($id);
 
         $validated = $request->validate([
             'status' => 'required|in:pending,confirmed,declined',
             'notes'  => 'nullable|string|max:2000',
         ]);
 
-        $sponsor->update($validated);
+        $sponser->update($validated);
 
         return response()->json(['success' => true]);
     }

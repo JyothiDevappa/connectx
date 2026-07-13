@@ -62,54 +62,57 @@ $seo = [
   </section>
 
   <!-- CULTURE / LIFE AT YCX -->
-  <section id="culture">
-    <div class="wrap">
-      <div class="section-head text-center mx-auto">
-        <span class="eyebrow">Life at YCX</span>
-        <h2>What It's Actually Like Working Here</h2>
-        <p>We create an environment where ideas are valued, people support one another, and every contribution helps shape a stronger community.</p>
+  <section id="culture" class="partner-sec">
+    <div class="partner-head text-center">
+      <div class="eyebrow rv" style="margin-bottom: 12px;">Life at YCX</div>
+      <h2 class="sec-title rv" style="margin-bottom: 16px;">What It's Actually Like Working Here</h2>
+      <p class="sec-desc rv mx-auto" style="margin-bottom: 0; line-height: 1.6; max-width: 600px;">We create an environment where ideas are valued, people support one another, and every contribution helps shape a stronger community.</p>
+    </div>
+    <div class="partner-grid">
+      <div class="p-card rv" style="transition-delay:0s">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt="Learn Every Day" loading="lazy">
+        <div class="p-card-ov">
+          <span class="tag">01 · Growth</span>
+          <div class="p-name">Learn Every Day</div>
+          <div class="p-desc">Expand your knowledge by working on real projects and exploring new ideas alongside passionate teammates.</div>
+        </div>
+        <div class="p-arrow">↗</div>
       </div>
-      <div class="culture-track">
-        <div class="culture-card">
-          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt="Learn Every Day">
-          <div class="culture-card-text">
-            <span class="tag">01 · Growth</span>
-            <h4>Learn Every Day</h4>
-            <p>Expand your knowledge by working on real projects and exploring new ideas alongside passionate teammates.</p>
-          </div>
+      <div class="p-card rv" style="transition-delay:0.07s">
+        <img src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&w=500&q=80" alt="Collaborate with Purpose" loading="lazy">
+        <div class="p-card-ov">
+          <span class="tag">02 · Team</span>
+          <div class="p-name">Collaborate with Purpose</div>
+          <div class="p-desc">Work with people who value teamwork, open communication, and shared success.</div>
         </div>
-        <div class="culture-card">
-          <img src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&w=500&q=80" alt="Collaborate with Purpose">
-          <div class="culture-card-text">
-            <span class="tag">02 · Team</span>
-            <h4>Collaborate with Purpose</h4>
-            <p>Work with people who value teamwork, open communication, and shared success.</p>
-          </div>
+        <div class="p-arrow">↗</div>
+      </div>
+      <div class="p-card rv" style="transition-delay:0.14s">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500&q=80" alt="Share Your Ideas" loading="lazy">
+        <div class="p-card-ov">
+          <span class="tag">03 · Voice</span>
+          <div class="p-name">Share Your Ideas</div>
+          <div class="p-desc">Bring fresh perspectives to the table and help shape experiences that inspire our community.</div>
         </div>
-        <div class="culture-card">
-          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500&q=80" alt="Share Your Ideas">
-          <div class="culture-card-text">
-            <span class="tag">03 · Voice</span>
-            <h4>Share Your Ideas</h4>
-            <p>Bring fresh perspectives to the table and help shape experiences that inspire our community.</p>
-          </div>
+        <div class="p-arrow">↗</div>
+      </div>
+      <div class="p-card rv" style="transition-delay:0.21s">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=500&q=80" alt="Take on New Challenges" loading="lazy">
+        <div class="p-card-ov">
+          <span class="tag">04 · Bold</span>
+          <div class="p-name">Take on New Challenges</div>
+          <div class="p-desc">Build confidence by solving real problems, developing new skills, and growing through hands-on experience.</div>
         </div>
-        <div class="culture-card">
-          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=500&q=80" alt="Take on New Challenges">
-          <div class="culture-card-text">
-            <span class="tag">04 · Bold</span>
-            <h4>Take on New Challenges</h4>
-            <p>Build confidence by solving real problems, developing new skills, and growing through hands-on experience.</p>
-          </div>
+        <div class="p-arrow">↗</div>
+      </div>
+      <div class="p-card rv" style="transition-delay:0.28s">
+        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=500&q=80" alt="Celebrate Together" loading="lazy">
+        <div class="p-card-ov">
+          <span class="tag">05 · Community</span>
+          <div class="p-name">Celebrate Together</div>
+          <div class="p-desc">From project milestones to community achievements, we celebrate every success as one team.</div>
         </div>
-        <div class="culture-card">
-          <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=500&q=80" alt="Celebrate Together">
-          <div class="culture-card-text">
-            <span class="tag">05 · Community</span>
-            <h4>Celebrate Together</h4>
-            <p>From project milestones to community achievements, we celebrate every success as one team.</p>
-          </div>
-        </div>
+        <div class="p-arrow">↗</div>
       </div>
     </div>
   </section>

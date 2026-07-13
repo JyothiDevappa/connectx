@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Sponsor extends Model
+class sponser extends Model
 {
-    protected $table = 'sponsors';
+    protected $table = 'sponsers';
 
     protected $fillable = [
         'name',
@@ -16,7 +16,7 @@ class Sponsor extends Model
         'designation',
         'linkedin',
         'website',
-        'sponsorship_level',
+        'sponsership_level',
         'status',
         'notes',
     ];

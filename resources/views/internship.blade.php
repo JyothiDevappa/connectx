@@ -163,7 +163,7 @@ $seo = [
     </div>
   </section>
 
-  <!-- WHO CAN APPLY (Brand Presence section style from Sponsor Page) -->
+  <!-- WHO CAN APPLY (Brand Presence section style from sponser Page) -->
   <section class="fancy-banner-seven box-layout connectx-brand-section pt-60 lg-pt-30 pb-40" id="eligibility" style="max-width: 96% !important; margin: 0 auto !important; width: 100% !important;">
     <div class="bg-wrapper border-40 position-relative z-1 overflow-hidden pt-120 pb-120 lg-pt-80 lg-pb-80" style="max-width: 100% !important; width: 100% !important;">
       <div class="container-fluid position-relative px-4 px-lg-5" style="z-index:2; max-width: 1700px; margin: 0 auto;">

@@ -1,11 +1,11 @@
 @php
 /**
- * Become a Sponsor Page SEO Data
+ * Become a sponser Page SEO Data
  */
 $seo = [
-    'title'       => 'Become a Sponsor — Community & Sponsorship Opportunities | Young Chanakya X',
-    'description' => 'Sponsor Young Chanakya X events and creator programs to amplify your brand reach. Access title sponsorships, event sponsorships, community sponsorships, and creator ecosystem packages.',
-    'keywords'    => 'Young Chanakya X sponsorship, sponsor Young Chanakya X, event sponsorship India, brand visibility creator events, community sponsor Young Chanakya, creator platform sponsorship',
+    'title'       => 'Become a sponser — Community & sponsership Opportunities | Young Chanakya X',
+    'description' => 'sponser Young Chanakya X events and creator programs to amplify your brand reach. Access title sponserships, event sponserships, community sponserships, and creator ecosystem packages.',
+    'keywords'    => 'Young Chanakya X sponsership, sponser Young Chanakya X, event sponsership India, brand visibility creator events, community sponser Young Chanakya, creator platform sponsership',
     'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];
@@ -19,27 +19,27 @@ $seo = [
 {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Young Chanakya X Sponsorship Program",
+    "name": "Young Chanakya X sponsership Program",
     "url": "https://connectx.youngchanakya.com/become-a-sponser",
-    "description": "Sponsor Young Chanakya X events and creator programs to amplify your brand reach. Access title, event, community, and ecosystem sponsorship packages.",
+    "description": "sponser Young Chanakya X events and creator programs to amplify your brand reach. Access title, event, community, and ecosystem sponsership packages.",
     "provider": {
         "@type": "Organization",
         "name": "Young Chanakya X",
         "url": "https://connectx.youngchanakya.com/"
     },
-    "serviceType": "Event & Creator Ecosystem Sponsorship",
+    "serviceType": "Event & Creator Ecosystem sponsership",
     "areaServed": {
         "@type": "Country",
         "name": "India"
     },
     "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Sponsorship Packages",
+        "name": "sponsership Packages",
         "itemListElement": [
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Title Sponsorship"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Event Sponsorship"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Community Sponsorship"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Creator Ecosystem Sponsorship"}}
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Title sponsership"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Event sponsership"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Community sponsership"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Creator Ecosystem sponsership"}}
         ]
     }
 }
@@ -97,10 +97,10 @@ $seo = [
 }
 
 /* =========================================
-   SPONSOR SECTION
+   sponser SECTION
 ========================================= */
 
-.sponsor-contact-section{
+.sponser-contact-section{
     position: relative;
     padding: 180px 0 100px;
     background: #f8f6f2;
@@ -108,22 +108,22 @@ $seo = [
 }
 
 @media (max-width: 991px){
-    .sponsor-contact-section{
+    .sponser-contact-section{
         padding: 120px 0 70px;
     }
 }
 @media (max-width: 767px){
-    .sponsor-contact-section{
+    .sponser-contact-section{
         padding: 100px 0 60px;
     }
 }
 @media (max-width: 480px){
-    .sponsor-contact-section{
+    .sponser-contact-section{
         padding: 90px 0 50px;
     }
 }
 
-.sponsor-content h1{
+.sponser-content h1{
     font-size: 52px;
     line-height: 1.15em;
     font-weight: 700;
@@ -132,7 +132,7 @@ $seo = [
     letter-spacing: -1px;
 }
 
-.sponsor-content p{
+.sponser-content p{
     font-size: 16px;
     line-height: 1.9em;
     color: #555;
@@ -140,25 +140,25 @@ $seo = [
 }
 
 @media (max-width: 991px){
-    .sponsor-content{
+    .sponser-content{
         margin-bottom: 40px;
     }
 
-    .sponsor-content h1{
+    .sponser-content h1{
         font-size: 38px;
         line-height: 1.25em;
     }
 }
 
 @media (max-width: 576px){
-    .sponsor-content h1{
+    .sponser-content h1{
         font-size: 30px;
     }
 }
 
 /* FORM BOX */
 
-.sponsor-form-box{
+.sponser-form-box{
     background: #fff;
     padding: 40px;
     border-radius: 20px;
@@ -167,15 +167,15 @@ $seo = [
 }
 
 @media (max-width: 576px){
-    .sponsor-form-box{
+    .sponser-form-box{
         padding: 25px;
     }
 }
 
 /* INPUTS */
 
-.sponsor-form-box .form-control,
-.sponsor-form-box select{
+.sponser-form-box .form-control,
+.sponser-form-box select{
     height: 58px;
     border: 1px solid #e5e5e5;
     border-radius: 12px;
@@ -187,7 +187,7 @@ $seo = [
     background: #fff;
 }
 
-.sponsor-form-box label {
+.sponser-form-box label {
     display: block;
     font-size: 14px;
     font-weight: 600;
@@ -196,24 +196,24 @@ $seo = [
     text-align: left;
 }
 
-.sponsor-form-box .form-control::placeholder {
+.sponser-form-box .form-control::placeholder {
     color: #888888 !important;
 }
 
-.sponsor-form-box textarea.form-control{
+.sponser-form-box textarea.form-control{
     height: 130px;
     padding-top: 15px;
 }
 
-.sponsor-form-box .form-control:focus,
-.sponsor-form-box select:focus{
+.sponser-form-box .form-control:focus,
+.sponser-form-box select:focus{
     border-color: #0c3a30;
     box-shadow: 0 0 0 3px rgba(12,58,48,0.12);
 }
 
 /* BUTTON */
 
-.btn-sponsor-submit{
+.btn-sponser-submit{
     width: 100%;
     height: 58px;
     border: none;
@@ -225,14 +225,14 @@ $seo = [
     transition: all .3s ease;
 }
 
-.btn-sponsor-submit:hover{
+.btn-sponser-submit:hover{
     background: #071f1a;
     color: #fff;
 }
 
 /* OPTIONAL SHAPE */
 
-.sponsor-contact-section::before{
+.sponser-contact-section::before{
     content: "";
     position: absolute;
     width: 500px;
@@ -250,14 +250,14 @@ $seo = [
 
 /* sponser section */
 /* ======================
-SPONSOR CARDS
+sponser CARDS
 ====================== */
 
-.sponsor-category-section{
+.sponser-category-section{
     background:#fff;
 }
 
-.sponsor-card{
+.sponser-card{
     background:#ffffff;
     padding:40px 30px;
     border-radius:25px;
@@ -270,7 +270,7 @@ SPONSOR CARDS
 
 /* removed hover */
 
-.sponsor-card .icon{
+.sponser-card .icon{
     width:75px;
     height:75px;
 
@@ -289,26 +289,26 @@ SPONSOR CARDS
     margin-bottom:25px;
 }
 
-.sponsor-card h4{
+.sponser-card h4{
     color:#000;
     font-size:24px;
     font-weight:700;
     margin-bottom:15px;
 }
 
-.sponsor-card p{
+.sponser-card p{
     color:#555;
     line-height:1.8;
     margin-bottom:20px;
 }
 
-.sponsor-card ul{
+.sponser-card ul{
     padding:0;
     margin:0;
     list-style:none;
 }
 
-.sponsor-card ul li{
+.sponser-card ul li{
     position:relative;
 
     padding-left:30px;
@@ -320,7 +320,7 @@ SPONSOR CARDS
     font-size:15px;
 }
 
-.sponsor-card ul li:before{
+.sponser-card ul li:before{
     content:"✓";
 
     position:absolute;
@@ -348,11 +348,11 @@ SPONSOR CARDS
 
 /* CTA BUTTON */
 
-.sponsor-cta{
+.sponser-cta{
     margin-top:35px;
 }
 
-.btn-become-sponsor{
+.btn-become-sponser{
     display:inline-flex;
     align-items:center;
     justify-content:center;
@@ -375,7 +375,7 @@ SPONSOR CARDS
     border:1px solid #19352d;
 }
 
-.btn-become-sponsor:hover{
+.btn-become-sponser:hover{
     background:transparent;
 
     color:#ffd2b1;
@@ -669,7 +669,7 @@ WHY CONNECTX SECTION
     }
 }
 
-/* *4. Sponsorship Categories* */
+/* *4. sponsership Categories* */
 
 .title-style-one .sc-title{
     color:#000;
@@ -799,56 +799,56 @@ CTA SECTION
 
 
 /* ==========================================
-   BECOME A SPONSOR — MOBILE RESPONSIVE
+   BECOME A sponser — MOBILE RESPONSIVE
    Breakpoints: 991px (tablet), 767px (mobile), 480px (small mobile)
    ========================================== */
 
-/* ---- Hero / Sponsor Contact Section ---- */
+/* ---- Hero / sponser Contact Section ---- */
 @media (max-width: 991px) {
-    .sponsor-contact-section {
+    .sponser-contact-section {
         padding: 130px 0 70px;
     }
-    .sponsor-content {
+    .sponser-content {
         margin-bottom: 40px;
         text-align: center;
     }
-    .sponsor-content h1 {
+    .sponser-content h1 {
         font-size: 36px;
     }
-    .sponsor-cta {
+    .sponser-cta {
         display: flex;
         justify-content: center;
     }
 }
 
 @media (max-width: 767px) {
-    .sponsor-contact-section {
+    .sponser-contact-section {
         padding: 110px 0 60px;
     }
-    .sponsor-content h1 {
+    .sponser-content h1 {
         font-size: 28px;
     }
-    .sponsor-form-box {
+    .sponser-form-box {
         padding: 28px 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .sponsor-contact-section {
+    .sponser-contact-section {
         padding: 100px 0 50px;
     }
-    .sponsor-content h1 {
+    .sponser-content h1 {
         font-size: 24px;
         letter-spacing: -0.5px;
     }
-    .sponsor-form-box {
+    .sponser-form-box {
         padding: 20px 14px;
     }
-    .btn-sponsor-submit {
+    .btn-sponser-submit {
         height: 52px;
         font-size: 15px;
     }
-    .btn-become-sponsor {
+    .btn-become-sponser {
         padding: 13px 24px;
         font-size: 14px;
     }
@@ -951,15 +951,15 @@ CTA SECTION
     }
 }
 
-/* ---- Sponsorship Categories Section ---- */
+/* ---- sponsership Categories Section ---- */
 @media (max-width: 991px) {
-    .sponsor-category-section.pt-120 {
+    .sponser-category-section.pt-120 {
         padding-top: 70px;
     }
-    .sponsor-category-section.pb-120 {
+    .sponser-category-section.pb-120 {
         padding-bottom: 70px;
     }
-    .sponsor-card {
+    .sponser-card {
         padding: 30px 24px;
     }
     .title-style-one .main-title {
@@ -972,13 +972,13 @@ CTA SECTION
         font-size: 26px;
         letter-spacing: -0.5px;
     }
-    .sponsor-card {
+    .sponser-card {
         padding: 24px 20px;
     }
-    .sponsor-card h4 {
+    .sponser-card h4 {
         font-size: 20px;
     }
-    .sponsor-card .icon {
+    .sponser-card .icon {
         width: 60px;
         height: 60px;
         font-size: 24px;
@@ -990,10 +990,10 @@ CTA SECTION
     .title-style-one .main-title {
         font-size: 22px;
     }
-    .sponsor-card {
+    .sponser-card {
         padding: 20px 16px;
     }
-    .sponsor-card h4 {
+    .sponser-card h4 {
         font-size: 18px;
     }
 }
@@ -1129,16 +1129,16 @@ CTA SECTION
     <div class="container">
         <div class="row align-items-center gy-5">
             <div class="col-lg-6">
-                <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Sponsor Young Chanakya X</div>
+                <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">sponser Young Chanakya X</div>
                 <h1 style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Maximize Your Brand's Impact.</h1>
-                <p class="hero-copy">Position your brand within a structured creator ecosystem designed for consistent visibility, engagement, and collaboration. Sponsor our events and creator programs to amplify your reach to tomorrow's industry leaders.</p>
+                <p class="hero-copy">Position your brand within a structured creator ecosystem designed for consistent visibility, engagement, and collaboration. sponser our events and creator programs to amplify your reach to tomorrow's industry leaders.</p>
               
                 <div class="about-hero-buttons">
                     <a href="#partnership-opportunities" class="about-btn-2">View Opportunities</a>
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="sponsor-form-box" id="sponsor-form">
+                <div class="sponser-form-box" id="sponser-form">
 
                     @if (session('error') || $errors->any())
                         <div class="alert alert-danger mb-4" style="font-weight: 500;">
@@ -1151,16 +1151,16 @@ CTA SECTION
                         </div>
                     @endif
 
-                    <form action="{{ route('sponsor.apply') }}" method="POST">
+                    <form action="{{ route('sponser.apply') }}" method="POST">
                         @csrf
 
                         <div class="row">
 
                             <!-- 1. Full Name and Phone number -->
                             <div class="col-md-6 mb-3">
-                                <label for="sponsor-name">Full Name <span class="text-danger">*</span></label>
+                                <label for="sponser-name">Full Name <span class="text-danger">*</span></label>
                                 <input type="text"
-                                       id="sponsor-name"
+                                       id="sponser-name"
                                        class="form-control"
                                        name="name"
                                        value="{{ old('name') }}"
@@ -1171,9 +1171,9 @@ CTA SECTION
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="sponsor-phone">Phone / WhatsApp <span class="text-danger">*</span></label>
+                                <label for="sponser-phone">Phone / WhatsApp <span class="text-danger">*</span></label>
                                 <input type="tel"
-                                       id="sponsor-phone"
+                                       id="sponser-phone"
                                        class="form-control"
                                        name="phone"
                                        value="{{ old('phone') }}"
@@ -1185,9 +1185,9 @@ CTA SECTION
 
                             <!-- 2. Email -->
                             <div class="col-12 mb-3">
-                                <label for="sponsor-email">Email Address <span class="text-danger">*</span></label>
+                                <label for="sponser-email">Email Address <span class="text-danger">*</span></label>
                                 <input type="email"
-                                       id="sponsor-email"
+                                       id="sponser-email"
                                        class="form-control"
                                        name="email"
                                        value="{{ old('email') }}"
@@ -1199,9 +1199,9 @@ CTA SECTION
 
                             <!-- 3. Company Name, Designation -->
                             <div class="col-md-6 mb-3">
-                                <label for="sponsor-company">Company Name <span class="text-danger">*</span></label>
+                                <label for="sponser-company">Company Name <span class="text-danger">*</span></label>
                                 <input type="text"
-                                       id="sponsor-company"
+                                       id="sponser-company"
                                        class="form-control"
                                        name="company"
                                        value="{{ old('company') }}"
@@ -1212,9 +1212,9 @@ CTA SECTION
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="sponsor-designation">Designation / Role <span class="text-danger">*</span></label>
+                                <label for="sponser-designation">Designation / Role <span class="text-danger">*</span></label>
                                 <input type="text"
-                                       id="sponsor-designation"
+                                       id="sponser-designation"
                                        class="form-control"
                                        name="designation"
                                        value="{{ old('designation') }}"
@@ -1226,9 +1226,9 @@ CTA SECTION
 
                             <!-- 4. LinkedIn and website url -->
                             <div class="col-md-6 mb-3">
-                                <label for="sponsor-linkedin">LinkedIn Profile <span class="text-danger">*</span></label>
+                                <label for="sponser-linkedin">LinkedIn Profile <span class="text-danger">*</span></label>
                                 <input type="url"
-                                       id="sponsor-linkedin"
+                                       id="sponser-linkedin"
                                        class="form-control"
                                        name="linkedin"
                                        value="{{ old('linkedin') }}"
@@ -1239,9 +1239,9 @@ CTA SECTION
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="sponsor-website">Website URL (Optional)</label>
+                                <label for="sponser-website">Website URL (Optional)</label>
                                 <input type="url"
-                                       id="sponsor-website"
+                                       id="sponser-website"
                                        class="form-control"
                                        name="website"
                                        value="{{ old('website') }}"
@@ -1251,24 +1251,24 @@ CTA SECTION
                                 @enderror
                             </div>
 
-                            <!-- 5. Sponsor Type -->
+                            <!-- 5. sponser Type -->
                             <div class="col-12 mb-4">
-                                <label for="sponsor-level">Sponsor Type <span class="text-danger">*</span></label>
-                                <select class="form-control form-select" id="sponsor-level" name="sponsorship_level" required>
-                                    <option value="" disabled {{ old('sponsorship_level') ? '' : 'selected' }}>
-                                        Select Sponsor Type
+                                <label for="sponser-level">sponser Type <span class="text-danger">*</span></label>
+                                <select class="form-control form-select" id="sponser-level" name="sponsership_level" required>
+                                    <option value="" disabled {{ old('sponsership_level') ? '' : 'selected' }}>
+                                        Select sponser Type
                                     </option>
-                                    @foreach(['Title Sponsor', 'Powered By Sponsor', 'Co-Sponsor', 'Platinum Sponsor', 'Gold Sponsor', 'Silver Sponsor'] as $type)
-                                        <option value="{{ $type }}" {{ old('sponsorship_level') == $type ? 'selected' : '' }}>{{ $type }}</option>
+                                    @foreach(['Title sponser', 'Powered By sponser', 'Co-sponser', 'Platinum sponser', 'Gold sponser', 'Silver sponser'] as $type)
+                                        <option value="{{ $type }}" {{ old('sponsership_level') == $type ? 'selected' : '' }}>{{ $type }}</option>
                                     @endforeach
                                 </select>
-                                @error('sponsorship_level')
+                                @error('sponsership_level')
                                     <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
                                 @enderror
                             </div>
 
                             <div class="col-12">
-                                <button type="submit" class="btn-sponsor-submit">
+                                <button type="submit" class="btn-sponser-submit">
                                     Submit
                                 </button>
                             </div>
@@ -1425,21 +1425,21 @@ WHY CONNECT WITH CONNECTX
                 <!-- LEFT CONTENT -->
                 <div class="col-lg-7">
                     <div style="margin-bottom: 30px;">
-                        <div class="eyebrow rv" style="color: #ffd2b1; font-size: 10px; font-weight: 700; letter-spacing: 3px;">Sponsorship Exposure</div>
+                        <div class="eyebrow rv" style="color: #ffd2b1; font-size: 10px; font-weight: 700; letter-spacing: 3px;">sponsership Exposure</div>
                         <h2 class="sec-title rv" style="color: #ffffff; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">
                             Your Brand, Everywhere<br>
                             <span style="color: #ffd2b1;">Young Chanakya X Shows Up</span>
                         </h2>
                         <p class="sec-desc rv" style="margin-top: 16px; color: rgba(255,255,255,0.85); max-width: 100%;">
-                            As a Young Chanakya X sponsor, your brand is woven into every
+                            As a Young Chanakya X sponser, your brand is woven into every
                             high-impact format — from podcasts and digital campaigns
                             to live events, creator lounges, and award platforms.
                             Real visibility. Real reach. Real results.
                         </p>
                     </div>
 
-                    <a href="#sponsor-form" class="tier-btn-primary">
-                        Explore Sponsorship Packages
+                    <a href="#sponser-form" class="tier-btn-primary">
+                        Explore sponsership Packages
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
@@ -1472,11 +1472,11 @@ WHY CONNECT WITH CONNECTX
 </section>
 
 <!-- =========================
-SPONSORSHIP CATEGORIES SECTION
+sponserSHIP CATEGORIES SECTION
 ========================= -->
 
 <style>
-  /* TIERS UI FROM SPONSOR PAGE */
+  /* TIERS UI FROM sponser PAGE */
   .tiers-section { max-width: 1300px; margin: 0 auto; padding: 100px 5vw; }
   .tiers-header { text-align: center; margin-bottom: 56px; }
   .tiers-header .section-title { max-width: 600px; margin: 0 auto 16px; }
@@ -1531,12 +1531,12 @@ SPONSORSHIP CATEGORIES SECTION
   }
 </style>
 
-<section class="tiers-section position-relative pt-120 pb-120" id="sponsorship-categories">
+<section class="tiers-section position-relative pt-120 pb-120" id="sponsership-categories">
   <div class="container">
     <div class="section-head text-center" style="margin-bottom: 50px;">
         <div class="eyebrow rv" style="color: #0c3a30; font-size: 10px; font-weight: 700; letter-spacing: 3px;">Young Chanakya X</div>
-        <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Sponsorship Categories</h2>
-        <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">Choose a sponsorship level based on your visibility, integration, and collaboration goals.</p>
+        <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">sponsership Categories</h2>
+        <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">Choose a sponsership level based on your visibility, integration, and collaboration goals.</p>
     </div>
 
     <div class="tier-grid">
@@ -1544,7 +1544,7 @@ SPONSORSHIP CATEGORIES SECTION
       <div class="tier-card featured">
         <div class="tier-badge">Flagship</div>
         <div class="tier-name">Top Tier</div>
-        <div class="tier-title">Title Sponsor</div>
+        <div class="tier-title">Title sponser</div>
         <div class="tier-tagline">Primary brand visibility across major ConnectX initiatives</div>
         <ul class="tier-list collapsed">
           <li>Naming rights across flagship events and properties</li>
@@ -1559,13 +1559,13 @@ SPONSORSHIP CATEGORIES SECTION
           <li>Maximum visibility across the ConnectX ecosystem</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponsor-form" class="tier-btn-primary" style="width:100%; text-align:center; border: 1.5px solid #fff;">Become a Sponsor</a>
+        <a href="#sponser-form" class="tier-btn-primary" style="width:100%; text-align:center; border: 1.5px solid #fff;">Become a sponser</a>
       </div>
 
       <!-- Card 2 -->
       <div class="tier-card">
         <div class="tier-name">Secondary Tier</div>
-        <div class="tier-title">Powered By Sponsor</div>
+        <div class="tier-title">Powered By sponser</div>
         <div class="tier-tagline">Secondary headline branding with strong ecosystem presence</div>
         <ul class="tier-list collapsed">
           <li>"Powered By" branding across key initiatives</li>
@@ -1580,17 +1580,17 @@ SPONSORSHIP CATEGORIES SECTION
           <li>Consistent exposure across programs</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Sponsor</a>
+        <a href="#sponser-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a sponser</a>
       </div>
       
       <!-- Card 3 -->
       <div class="tier-card">
         <div class="tier-name">Shared Tier</div>
-        <div class="tier-title">Co-Sponsor</div>
+        <div class="tier-title">Co-sponser</div>
         <div class="tier-tagline">Supporting partner across shared initiatives</div>
         <ul class="tier-list collapsed">
           <li>Shared branding across events and activities</li>
-          <li>Logo placement alongside other sponsors</li>
+          <li>Logo placement alongside other sponsers</li>
           <li>Participation in collaborative campaigns</li>
           <li>Visibility in selected content formats</li>
           <li>Access to networking opportunities</li>
@@ -1601,7 +1601,7 @@ SPONSORSHIP CATEGORIES SECTION
           <li>Support-level visibility across ecosystem</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Sponsor</a>
+        <a href="#sponser-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a sponser</a>
       </div>
     </div>
 
@@ -1609,7 +1609,7 @@ SPONSORSHIP CATEGORIES SECTION
       <!-- Card 4 -->
       <div class="tier-card">
         <div class="tier-name">Premium Tier</div>
-        <div class="tier-title">Platinum Sponsor</div>
+        <div class="tier-title">Platinum sponser</div>
         <div class="tier-tagline">High-level presence across multiple formats and touchpoints</div>
         <ul class="tier-list collapsed">
           <li>High-visibility branding across events and content</li>
@@ -1624,13 +1624,13 @@ SPONSORSHIP CATEGORIES SECTION
           <li>Consistent brand engagement opportunities</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Sponsor</a>
+        <a href="#sponser-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a sponser</a>
       </div>
       
       <!-- Card 5 -->
       <div class="tier-card">
         <div class="tier-name">Mid Tier</div>
-        <div class="tier-title">Gold Sponsor</div>
+        <div class="tier-title">Gold sponser</div>
         <div class="tier-tagline">Strong visibility in selected events and content formats</div>
         <ul class="tier-list collapsed">
           <li>Branding across selected events and sessions</li>
@@ -1645,13 +1645,13 @@ SPONSORSHIP CATEGORIES SECTION
           <li>Engagement-driven visibility</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Sponsor</a>
+        <a href="#sponser-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a sponser</a>
       </div>
       
       <!-- Card 6 -->
       <div class="tier-card">
         <div class="tier-name">Entry Tier</div>
-        <div class="tier-title">Silver Sponsor</div>
+        <div class="tier-title">Silver sponser</div>
         <div class="tier-tagline">Focused exposure in specific programs or segments</div>
         <ul class="tier-list collapsed">
           <li>Branding in selected programs or sessions</li>
@@ -1666,7 +1666,7 @@ SPONSORSHIP CATEGORIES SECTION
           <li>Focused visibility within defined scope</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Sponsor</a>
+        <a href="#sponser-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a sponser</a>
       </div>
     </div>
   </div>
@@ -1695,7 +1695,7 @@ function toggleTier(btn) {
                 </div>
                 <h3 class="fw-bold mb-3" style="font-size: 1.5rem; line-height: 1.3; color: #0c3a30;">Together, We Drive Meaningful Impact</h3>
                 <p class="mb-4" style="line-height: 1.6; font-size: 0.95rem; color: #687588;">
-                    Your sponsorship application has been successfully received. We are reviewing your details and will reach out shortly to design a tailored experience that amplifies your brand. Thank you for your commitment to empowering the next generation of leaders.
+                    Your sponsership application has been successfully received. We are reviewing your details and will reach out shortly to design a tailored experience that amplifies your brand. Thank you for your commitment to empowering the next generation of leaders.
                 </p>
                 <a href="{{ url('/') }}" class="btn px-5 py-3 fw-bold text-uppercase w-100 d-block text-center" style="text-decoration: none; background-color: #0c3a30; color: #ffffff; border-radius: 12px; border: none; transition: all 0.3s ease;">
                     Continue Exploring
