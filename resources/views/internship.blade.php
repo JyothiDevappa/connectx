@@ -36,19 +36,46 @@ $seo = [
     <div class="hero-inner">
       <span class="kicker" style="color:var(--peach);">
         <span style="display:inline-block;width:16px;height:1.5px;background:var(--peach);"></span>
-        YCX Internship Program
+        Internships at YCX
       </span>
-      <h1>Learn by doing the work that <em>actually goes out.</em></h1>
-      <p class="lead">A hands-on internship for students and early professionals who want real experience — not deck reviews and coffee runs.</p>
-      <a href="#listing" class="hero-cta" id="heroApplyBtn">Apply for an Internship
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      <h1>Learn by Doing the Work That Actually Goes Out</h1>
+      <p class="lead">Kick-start your career by working on real projects, collaborating with experienced professionals, and gaining practical skills that prepare you for the future.</p>
+      <a href="#listing" class="hero-cta" id="heroApplyBtn">Apply for Internship
       </a>
     </div>
-    <div class="hero-chips">
-      <div class="chip"><span class="mono">Duration</span><span class="val">3–6 Months</span></div>
-      <div class="chip"><span class="mono">On Completion</span><span class="val">Certificate</span></div>
-      <div class="chip"><span class="mono">Guidance</span><span class="val">1:1 Mentorship</span></div>
-      <div class="chip"><span class="mono">Choose From</span><span class="val">5 Tracks</span></div>
+    <div class="hero-chips row">
+      <div class="chip col-3"><span class="mono">Duration</span><span class="val">3–6 Months</span></div>
+      <div class="chip col-3"><span class="mono">On Completion</span><span class="val">Certificate</span></div>
+      <div class="chip col-3"><span class="mono">Guidance</span><span class="val">1:1 Mentorship</span></div>
+    </div>
+  </section>
+  
+  <!-- INTERNSHIP LISTING -->
+  <section id="listing">
+    <div class="wrap">
+      <div class="sec-head text-center mx-auto" style="max-width: 600px; margin-bottom: 56px;">
+        <span class="kicker" style="justify-content: center;">Open Internship Tracks</span>
+        <h2>Pick the Track That Fits You Best</h2>
+        <p>Tap a track to see details and apply.</p>
+      </div>
+      <div id="listingRows">
+        @forelse($jobs as $index => $job)
+          <a href="{{ route('internships.detail', $job->slug) }}" class="listing-row">
+            <div class="listing-main">
+              <span class="listing-tag mb-3">{{ $job->department }}</span>
+              <h4>{{ $job->title }}</h4>
+              <p>{{ $job->tagline }}</p>
+            </div>
+            <span class="listing-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+        @empty
+          <div class="text-center w-100 py-5">
+            <h4 style="color: var(--text-soft); font-family: 'Fraunces', serif;">No Open Internship Tracks at This Moment</h4>
+          </div>
+        @endforelse
+      </div>
     </div>
   </section>
 
@@ -57,8 +84,8 @@ $seo = [
     <div class="wrap">
       <div class="why-intro">
         <span class="kicker">More Than an Internship</span>
-        <h2>A Learning Experience That Goes Beyond the Classroom</h2>
-        <p>At Young Chanakya X, interns don't just observe — they contribute. You'll work on meaningful projects, collaborate with talented teams, and gain hands-on experience that builds confidence and prepares you for your career.</p>
+        <h2>Learn Beyond the Classroom</h2>
+        <p>You'll work on meaningful projects, collaborate with talented teams, and gain hands-on experience that builds confidence and prepares you for your career.</p>
       </div>
       <div class="why-cards">
         <div class="why-card">
@@ -85,36 +112,6 @@ $seo = [
     </div>
   </section>
 
-  <!-- INTERNSHIP LISTING -->
-  <section id="listing">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="kicker">Open Internship Tracks</span>
-        <h2>Pick the track that fits you best.</h2>
-        <p>Tap a track to see details and apply.</p>
-      </div>
-      <div id="listingRows">
-        @forelse($jobs as $index => $job)
-          <a href="{{ route('internships.detail', $job->slug) }}" class="listing-row">
-            <span class="listing-index">0{{ $index + 1 }}</span>
-            <div class="listing-main">
-              <h3>{{ $job->title }}</h3>
-              <p>{{ $job->tagline }}</p>
-              <span class="listing-tag">{{ $job->department }}</span>
-            </div>
-            <span class="listing-arrow">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </span>
-          </a>
-        @empty
-          <div class="text-center w-100 py-5">
-            <h4 style="color: var(--text-soft); font-family: 'Fraunces', serif;">No open internship tracks at this moment. Check back soon!</h4>
-          </div>
-        @endforelse
-      </div>
-    </div>
-  </section>
-
   <!-- WHAT YOU GAIN -->
   <section id="gain">
     <div class="wrap gain-split">
@@ -122,55 +119,55 @@ $seo = [
         <div class="gain-photo-main">
           <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Mentor and intern working through a project together">
         </div>
-        <div class="gain-photo-float">
-          <img src="https://images.unsplash.com/photo-1690192123455-6337e6db4179?auto=format&fit=crop&w=500&q=80" alt="Intern and teammate celebrating a shipped project">
-        </div>
-        <div class="gain-badge">
-          <div class="num">5/5</div>
-          <div class="lbl">Interns who'd recommend YCX to a friend</div>
-        </div>
       </div>
       <div class="gain-content">
         <span class="kicker">What You'll Walk Away With</span>
-        <h2>More than a line on your resume.</h2>
-        <p class="gain-intro">Every track ends the same way — with something you actually built, and people who'll vouch for how you built it.</p>
+        <h2>Your Learning Journey</h2>
+        <p class="gain-intro">Every internship is designed to help you grow personally and professionally through practical learning and real-world experience.</p>
         <div class="gain-items">
           <div class="gain-item">
-            <span class="gain-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
-            <div><h4>A portfolio you can actually show</h4><p>A body of real, shipped work — not hypothetical assignments.</p></div>
+            <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #ffd2b1; color: #0c3a30; flex-shrink: 0; margin-top: 4px;">
+                <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
+            </span>
+            <div><h4>Practical Experience</h4><p>Apply your knowledge to real-world projects</p></div>
           </div>
           <div class="gain-item">
-            <span class="gain-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
-            <div><h4>Direct mentorship</h4><p>Guidance from people on the founding team, not a rotating pool of managers.</p></div>
+            <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #ffd2b1; color: #0c3a30; flex-shrink: 0; margin-top: 4px;">
+                <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
+            </span>
+            <div><h4>Industry Exposure</h4><p>Understand how teams collaborate and deliver meaningful outcomes</p></div>
           </div>
           <div class="gain-item">
-            <span class="gain-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
-            <div><h4>A certificate that means something</h4><p>Along with a letter of recommendation once you complete the program.</p></div>
+            <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #ffd2b1; color: #0c3a30; flex-shrink: 0; margin-top: 4px;">
+                <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
+            </span>
+            <div><h4>Communication Skills</h4><p>Improve your confidence through teamwork, presentations, and discussion</p></div>
           </div>
           <div class="gain-item">
-            <span class="gain-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
-            <div><h4>A shot at a full-time offer</h4><p>Where there's a strong mutual fit and an open role at the time you finish.</p></div>
+            <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #ffd2b1; color: #0c3a30; flex-shrink: 0; margin-top: 4px;">
+                <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
+            </span>
+            <div><h4>Professional Network</h4><p>Build relationships with mentors, professionals, and fellow interns</p></div>
           </div>
           <div class="gain-item">
-            <span class="gain-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
-            <div><h4>A front-row seat to how a brand runs</h4><p>Firsthand exposure to the decisions that shape an early-stage company.</p></div>
+            <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #ffd2b1; color: #0c3a30; flex-shrink: 0; margin-top: 4px;">
+                <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
+            </span>
+            <div><h4>Certificate of Completion</h4><p>Receive a certificate upon successfully completing your internship</p></div>
           </div>
         </div>
-        <a href="#listing" class="gain-cta-outline" id="gainApplyBtn">Start your application
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
       </div>
     </div>
   </section>
 
   <!-- WHO CAN APPLY (Brand Presence section style from Sponsor Page) -->
-  <section class="fancy-banner-seven box-layout connectx-brand-section pt-60 lg-pt-30 pb-40" id="eligibility" style="max-width: 96% !important; margin: 0 auto !important; width: 100% !important;">
+  <section class="fancy-banner-seven connectx-brand-section">
     <div class="bg-wrapper border-40 position-relative z-1 overflow-hidden pt-120 pb-120 lg-pt-80 lg-pb-80" style="max-width: 100% !important; width: 100% !important;">
       <div class="container-fluid position-relative px-4 px-lg-5" style="z-index:2; max-width: 1700px; margin: 0 auto;">
         <div class="row align-items-center gy-5">
           <!-- LEFT CONTENT -->
           <div class="col-lg-7">
-            <div style="margin-bottom: 30px;">
+            <div>
               <div class="brand-tag">Eligibility</div>
               <h2 class="brand-heading">
                 Who Can Apply<br>
@@ -182,7 +179,6 @@ $seo = [
             </div>
             <a href="#listing" class="btn-brand-explore">
               View Open Internships
-              <i class="bi bi-arrow-right"></i>
             </a>
           </div>
 
@@ -201,18 +197,18 @@ $seo = [
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- CTA (Centered, Image Removed) -->
   <section id="cta-banner">
-    <div class="wrap cta-split">
-      <div>
-        <span class="kicker">Ready When You Are</span>
-        <h2>Your first real project could start this cycle.</h2>
-        <p>Applications are reviewed on a rolling basis — the earlier you apply, the sooner you'll hear back.</p>
-        <a href="#listing" class="cta-btn" id="ctaApplyBtn">Apply for an Internship
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-      <div class="cta-photo"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Intern preparing to apply"></div>
+    <div class="wrap" style="text-align: center;">
+      <span class="eyebrow" style="justify-content: center;">Ready to Start Your Journey</span>
+      <h2 class="mb-3 sec-title">
+        Take the First Step Toward Your Future
+      </h2>
+      <p style="font-size: 15.5px; color: var(--text-soft); line-height: 1.65; margin-bottom: 28px; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Join Young Chanakya X as an intern, gain real-world experience, build valuable skills, and become part of a community that believes in learning through doing. 
+      </p>
+      <a href="#listing" class="btn-lg" id="ctaApplyBtn" style="text-decoration: none;">Apply for Internship
+      </a>
     </div>
   </section>
 
@@ -221,7 +217,8 @@ $seo = [
     <div class="wrap">
       <div class="section-head text-center mx-auto" style="margin-bottom: 56px; max-width: 900px;">
         <span class="eyebrow">Questions, Answered</span>
-        <h2 class="sec-title">Frequently asked questions</h2>
+        <h2 class="sec-title">Frequently Asked Questions</h2>
+        <p class="sec-desc" style="font-size: 16px; color: var(--text-soft); margin-top: 12px; line-height: 1.6;">Find answers to common questions about the application process, program details, and expectations.</p>
       </div>
       <div class="faq-grid">
         <div class="faq-col">

@@ -78,6 +78,12 @@
         Manage Jobs
         <span class="sb-count" id="sbCount-posted_jobs">0</span>
       </a>
+
+      <a href="{{ url('/admin/dashboard/contacts') }}" class="nav-link" data-section="contacts" id="nav-contacts">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Contact Inquiries
+        <span class="sb-count" id="sbCount-contacts">0</span>
+      </a>
     </nav>
 
     {{-- Admin Profile --}}
@@ -224,7 +230,9 @@ const DATA = {
 
   posted_jobs: @json($postedJobs),
 
-  connectors: @json($connectors)
+  connectors: @json($connectors),
+
+  contacts: @json($contacts)
 };
 
 
@@ -394,6 +402,29 @@ const SECTION_CONFIG = {
       { label:"Approved", fn: d => d.filter(x=>x.status==='approved').length },
       { label:"Pending", fn: d => d.filter(x=>x.status==='pending').length },
       { label:"Rejected", fn: d => d.filter(x=>x.status==='rejected').length },
+    ]
+  },
+  contacts: {
+    title: "Contact Inquiries",
+    subtitle: "Inquiries submitted via the YCX contact page form.",
+    statusOptions: ["pending","resolved"],
+    statusLabels: { pending:"Pending", resolved:"Resolved" },
+    typeField: "subject",
+    typeValues: [],
+    liveApi: "{{ route('admin.api.contacts') }}",
+    updateApi: "{{ url('/admin/api/contacts') }}",
+    columns: [
+      { key:"person", label:"Applicant" },
+      { key:"phone", label:"Phone" },
+      { key:"message", label:"Message" },
+      { key:"submitted", label:"Submitted" },
+      { key:"status", label:"Status" },
+      { key:"action", label:"" }
+    ],
+    stats: [
+      { label:"Total Inquiries", fn: d => d.length },
+      { label:"Pending", fn: d => d.filter(x=>x.status==='pending').length },
+      { label:"Resolved", fn: d => d.filter(x=>x.status==='resolved').length }
     ]
   }
 };
@@ -679,6 +710,8 @@ function renderCell(col, d, section){
       return `<td><span class="badge ${d.category==='Tech'||d.roleCategory==='Tech'?'badge-technology':'badge-strategic'}">${d.category||d.roleCategory}</span></td>`;
     case 'category':
       return `<td><span class="badge ${d.category==='internship'?'badge-internship':'badge-career'}">${d.category}</span></td>`;
+    case 'message':
+      return `<td><div class="cell-secondary" style="max-width:260px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:13px; color:var(--text);">${d.message||'—'}</div></td>`;
     case 'college':
       return `<td><div class="cell-primary" style="font-size:13px;">${d.college||d.institution||'—'}</div><div class="cell-secondary">${d.course||d.degree||''}</div></td>`;
     case 'submitted':
@@ -862,6 +895,11 @@ function openDrawer(section, id){
     subText = d.email;
     badges  = `<span class="badge badge-platinum">Connector</span>`;
     bodyHTML = connectorBody(d);
+  } else if(section === 'contacts'){
+    document.getElementById('dName').textContent = d.name;
+    subText = d.email;
+    badges  = `<span class="badge badge-platinum">Contact Inquiry</span>`;
+    bodyHTML = contactBody(d);
   } else if(section === 'posted_jobs'){
     document.getElementById('dName').textContent = d.id ? 'Edit Job Posting' : 'Add New Job';
     subText = d.title || 'New Job Posting';
@@ -1105,6 +1143,30 @@ function connectorBody(d){
       </div>
     </div>
     ${adminSection('connectors', cfg.statusOptions, cfg.statusLabels, d.status)}
+  `;
+}
+
+function contactBody(d){
+  const section = activeDrawerItem.section;
+  const cfg = SECTION_CONFIG[section];
+  return `
+    <div class="dsection">
+      <h4>Inquiry Details</h4>
+      <div class="dgrid">
+        <div class="dfield"><span class="fl">Full Name</span><span class="fv">${d.name}</span></div>
+        <div class="dfield"><span class="fl">Email Address</span><span class="fv" style="word-break:break-all;">${d.email}</span></div>
+        <div class="dfield"><span class="fl">Phone Number</span><span class="fv">${d.phone}</span></div>
+        <div class="dfield"><span class="fl">Submitted On</span><span class="fv">${fmtDate(d.submitted)}</span></div>
+        <div class="dfield full"><span class="fl">Subject / Topic</span><span class="fv" style="font-weight:700;">${d.subject||'General'}</span></div>
+      </div>
+    </div>
+    <div class="dsection">
+      <h4>Message / Inquiry Description</h4>
+      <div style="background:var(--white); border:1px solid var(--border); border-radius:12px; padding:16px; font-size:13.5px; line-height:1.65; color:var(--text); white-space:pre-line;">
+        ${d.message}
+      </div>
+    </div>
+    ${adminSection(section, cfg.statusOptions, cfg.statusLabels, d.status)}
   `;
 }
 

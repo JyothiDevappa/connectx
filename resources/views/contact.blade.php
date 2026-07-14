@@ -58,6 +58,20 @@ $seo = [
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/css/intlTelInput.css">
+<style>
+  .iti {
+    width: 100%;
+    display: block;
+  }
+  .iti__country-list {
+    color: #333333;
+    z-index: 10;
+  }
+  #contact-phone {
+    padding-left: 90px !important;
+  }
+</style>
 @endpush
 
 @section('content')
@@ -397,15 +411,10 @@ $seo = [
 
 /* Theme-specific adjustments for Address/Contact Info Blocks */
 .address-block-one .icon {
-    background-color: #0c3a30 !important;
-    border: 2px solid rgba(255, 210, 177, 0.4) !important;
+    background-color: #ffd2b1 !important;
     transition: transform 0.3s ease, border-color 0.3s ease !important;
 }
 
-.address-block-one:hover .icon {
-    transform: translateY(-3px) !important;
-    border-color: #ffd2b1 !important;
-}
 
 .address-block-one .title {
     font-weight: 700 !important;
@@ -477,14 +486,14 @@ $seo = [
 									<div class="address-block-one text-center mb-40 wow fadeInUp">
 										<div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto"><img src="images/lazy.svg" data-src="images/icon/icon_91.svg" alt="" class="lazy-img"></div>
 										<h5 class="title">Contact Info</h5>
-										<p>Give us a call at <br><a href="tel:8667205661" class="call text-lg fw-500">8667205661</a></p>
+										<p><a href="tel:8667205661" class="call text-lg fw-500">+91 8667205661</a></p>
 									</div> <!-- /.address-block-one -->
 								</div>
 								<div class="col-md-4">
 									<div class="address-block-one text-center mb-40 wow fadeInUp">
 										<div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto"><img src="images/lazy.svg" data-src="images/icon/icon_92.svg" alt="" class="lazy-img"></div>
 										<h5 class="title">Mail Us</h5>
-										<p>Send a mail to<br><a href="mailto:youngchanakya.x@gmail.com" class="webaddress">youngchanakya.x@gmail.com</a></p>
+										<p><a href="mailto:youngchanakya.x@gmail.com" class="webaddress">youngchanakya.x@gmail.com</a></p>
 									</div> <!-- /.address-block-one -->
 								</div>
 							</div>
@@ -517,30 +526,30 @@ $seo = [
                                             @endif
                                         </div>
                                         <div class="row controls">
-                                            <div class="col-12">
+                                            <div class="col-md-6 col-12">
                                                 <div class="input-group-meta form-group mb-30">
                                                     <label for="">Name*</label>
                                                     <input type="text" placeholder="Your Name*" name="name" required="required" data-error="Name is required.">
                                                     <div class="help-block with-errors"></div>
                                                 </div>
                                             </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="input-group-meta form-group mb-30">
+                                                    <label for="" style="display:block;">Phone Number*</label>
+                                                    <input type="tel" id="contact-phone" placeholder="Phone Number*" name="phone" required="required" data-error="Phone number is required." style="width:100%;">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
                                             <div class="col-12">
-                                                <div class="input-group-meta form-group mb-40">
+                                                <div class="input-group-meta form-group mb-30">
                                                     <label for="">Email*</label>
                                                     <input type="email" placeholder="Email Address*" name="email" required="required" data-error="Valid email is required.">
                                                     <div class="help-block with-errors"></div>
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <div class="input-group-meta form-group mb-40">
-                                                    <label for="">Phone Number*</label>
-                                                    <input type="text" placeholder="Phone Number*" name="phone" required="required" data-error="Phone number is required.">
-                                                    <div class="help-block with-errors"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
                                                 <div class="input-group-meta form-group mb-35">
-                                                    <textarea placeholder="Your message*" name="message" required="required" data-error="Please,leave us a message."></textarea>
+                                                    <textarea placeholder="Your message*" name="message" required="required" data-error="Please, leave us a message." style="min-height: 120px;"></textarea>
                                                     <div class="help-block with-errors"></div>
                                                 </div>
                                             </div>
@@ -604,6 +613,28 @@ $seo = [
 </script>
 @endif
 
+@push('scripts')
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/js/intlTelInput.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var phoneInput = document.getElementById('contact-phone');
+        var iti;
+        if (phoneInput) {
+            iti = window.intlTelInput(phoneInput, {
+                initialCountry: "in",
+                separateDialCode: true,
+                utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/js/utils.js"
+            });
 
+            var form = document.getElementById('contact-form');
+            if (form) {
+                form.addEventListener('submit', function() {
+                    phoneInput.value = iti.getNumber();
+                });
+            }
+        }
+    });
+</script>
+@endpush
 
-	@endsection
+@endsection

@@ -47,7 +47,6 @@ $seo = [
       background: #ffffff; /* Plain white body background */
   }
   .terms-content {
-      max-width: 900px;
       margin: 0 auto;
       background: transparent;
       padding: 0;
@@ -123,7 +122,7 @@ $seo = [
 </div>
 
 <!-- Terms Content body -->
-<div class="career-body terms-container">
+<div class="container py-5">
   <div class="wrap">
     <article class="terms-content">
       <span class="last-updated-badge">Last Updated: July 13, 2026</span>

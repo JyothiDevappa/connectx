@@ -146,6 +146,10 @@ Route::middleware('admin')->group(function () {
     Route::get('/admin/api/job-applications', [AdminDashboardController::class, 'jobApplications'])->name('admin.api.job-applications');
     Route::post('/admin/api/job-applications/{id}', [AdminDashboardController::class, 'updateJobApplication'])->name('admin.api.job-applications.update');
 
+    // Contacts API
+    Route::get('/admin/api/contacts', [AdminDashboardController::class, 'contacts'])->name('admin.api.contacts');
+    Route::post('/admin/api/contacts/{id}', [AdminDashboardController::class, 'updateContactStatus'])->name('admin.api.contacts.update');
+
     // Jobs full page views
     Route::get('/admin/posted-jobs/create', [AdminDashboardController::class, 'createJobPage'])->name('admin.posted-jobs.create-page');
     Route::get('/admin/posted-jobs/edit/{id}', [AdminDashboardController::class, 'editJobPage'])->name('admin.posted-jobs.edit-page');

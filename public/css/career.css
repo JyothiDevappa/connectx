@@ -19,7 +19,7 @@
 
   font-family: 'Manrope', sans-serif;
   color: var(--text);
-  background: var(--cream);
+  background: var(--white);
   overflow-x: hidden;
 }
 
@@ -57,10 +57,6 @@
   }
 }
 
-.career-body section {
-  padding: 96px 0;
-  border-bottom: 1px solid rgba(12, 58, 48, 0.08);
-}
 
 @media(max-width:720px) {
   .career-body section {
@@ -127,18 +123,9 @@
   line-height: 1.65;
   margin-bottom: 50px;
 }
-
-.career-body #process .eyebrow {
-  color: var(--peach) !important;
-}
-
-.career-body #process .eyebrow::before {
-  background: var(--peach) !important;
-}
-
 /* OVERVIEW / BENTO HERO (Removed, using About Page UI) */
 .career-body #overview {
-  background: var(--hero-gradient);
+  background: radial-gradient(circle at top left, rgba(255, 238, 213, 0.55), transparent 35%), linear-gradient(180deg, #fffdfa 0%, #f4ede4 100%) !important;
   border-bottom: none;
 }
 
@@ -276,8 +263,8 @@
 .career-body .perk-row .pn {
   font-family: 'Space Mono', monospace;
   font-size: 13px;
-  color: var(--peach-deep);
-  background: var(--ink);
+  color: var(--ink);
+  background: var(--peach-deep);
   width: 34px;
   height: 34px;
   border-radius: 50%;
@@ -310,9 +297,6 @@
 }
 
 /* ROLES GRID + MODAL */
-.career-body #roles {
-  background: var(--white);
-}
 
 .career-body .roles-tiles {
   display: grid;
@@ -585,46 +569,48 @@
 }
 
 /* TIMELINE */
-.career-body #process {
-  background: var(--ink);
-  color: var(--cream);
-}
 
 .career-body #process .kicker {
-  color: var(--peach);
+  color: var(--peach-deep);
 }
 
 .career-body #process .kicker::before {
-  background: var(--peach);
+  background: var(--peach-deep);
 }
 
 .career-body #process .sec-head h2 {
-  color: var(--peach);
+  color: var(--ink);
 }
 
 .career-body #process .sec-head p {
-  color: rgba(255, 250, 244, 0.62);
+  color: var(--text-soft);
 }
 
 .career-body .timeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
   position: relative;
-  padding-left: 36px;
-  text-align: left;
+  padding-left: 0;
+  text-align: center;
 }
 
 .career-body .timeline::before {
   content: '';
   position: absolute;
-  left: 9px;
-  top: 6px;
-  bottom: 6px;
-  width: 2px;
-  background: rgba(255, 250, 244, 0.15);
+  left: 10%;
+  right: 10%;
+  top: 10px;
+  height: 2px;
+  background: rgba(12, 58, 48, 0.12);
+  z-index: 1;
 }
 
 .career-body .t-step {
   position: relative;
-  padding-bottom: 44px;
+  padding-top: 30px;
+  padding-bottom: 0;
+  z-index: 2;
 }
 
 .career-body .t-step:last-child {
@@ -634,36 +620,83 @@
 .career-body .t-step::before {
   content: '';
   position: absolute;
-  left: -36px;
-  top: 2px;
+  left: 50%;
+  top: 1px;
+  transform: translateX(-50%);
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background: var(--peach);
-  border: 4px solid var(--ink);
+  border: 4px solid var(--cream);
+  z-index: 3;
 }
 
 .career-body .t-step h3 {
   font-family: 'Fraunces', serif;
   font-size: 19px;
   font-weight: 600;
-  color: var(--peach);
+  color: var(--ink);
   margin-bottom: 6px;
 }
 
 .career-body .t-step p {
   font-size: 14px;
-  color: rgba(255, 250, 244, 0.65);
+  color: var(--text-soft);
   line-height: 1.6;
   max-width: 520px;
 }
 
 .career-body .t-step .tn {
   font-family: 'Space Mono', monospace;
-  font-size: 11px;
-  color: var(--peach-deep);
-  margin-bottom: 4px;
-  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  background: var(--peach);
+  color: var(--ink);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media(max-width: 991px) {
+  .career-body .timeline {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-left: 36px;
+  }
+  .career-body .timeline::before {
+    left: 9px;
+    right: auto;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    height: auto;
+  }
+  .career-body .t-step {
+    padding-top: 0;
+    padding-bottom: 44px;
+  }
+  .career-body .t-step::before {
+    left: -36px;
+    top: 2px;
+  }
+}
+
+.career-body .btn-orange {
+  background: var(--orange) !important;
+  color: var(--brown) !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+  padding: 16px 34px;
+  border-radius: 100px;
+  font-weight: 800;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
 }
 
 /* APPLY BANNER / CTA */
@@ -691,11 +724,6 @@
   text-decoration: none;
 }
 
-.career-body .btn-lg:hover {
-  background: var(--ink-deep);
-  transform: translateY(-2px);
-  transition: all 0.2s ease;
-}
 
 /* ==========================================
    INTERNSHIP PAGE UNIQUE STYLES
@@ -718,7 +746,7 @@
   content: '';
   width: 16px;
   height: 1.5px;
-  background: var(--ink);
+  background: var(--peach);
 }
 
 /* Internship Hero Styles */
@@ -762,7 +790,9 @@
   font-family: 'Fraunces', serif;
   font-weight: 600;
   font-size: clamp(34px,5.4vw,68px);
-  color: var(--white);
+  background: linear-gradient(135deg, #ffffff 20%, #ffd2b1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   line-height: 1.05;
   letter-spacing: -1.6px;
   max-width: 820px;
@@ -773,12 +803,13 @@
   font-style: italic;
   font-weight: 500;
   color: var(--peach);
+  -webkit-text-fill-color: var(--peach);
 }
 
 .career-body .hero p.lead {
   font-size: 18px;
   color: rgba(255,250,244,0.8);
-  max-width: 520px;
+  max-width: 680px;
   line-height: 1.6;
   margin-bottom: 34px;
 }
@@ -820,7 +851,6 @@
   border: 1px solid rgba(255,250,244,0.18);
   border-radius: 14px;
   padding: 14px 20px;
-  flex: 1;
   min-width: 140px;
 }
 
@@ -945,25 +975,36 @@
   border-bottom: 1px solid rgba(12, 58, 48, 0.08);
 }
 
+.career-body #listingRows {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media(max-width:768px) {
+  .career-body #listingRows {
+    grid-template-columns: 1fr;
+  }
+}
+
 .career-body .listing-row {
   display: grid;
-  grid-template-columns: 60px 1fr auto;
-  gap: 24px;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
   align-items: center;
-  padding: 26px 22px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1.5px solid rgba(12, 58, 48, 0.12);
   border-radius: 16px;
-  border-bottom: 1px solid rgba(12,58,48,0.12);
   cursor: pointer;
-  transition: background .2s;
+  transition: all .2s ease;
   text-decoration: none;
 }
 
 .career-body .listing-row:hover {
-  background: var(--white);
-}
-
-.career-body .listing-row:first-child {
-  border-top: 1px solid rgba(12,58,48,0.12);
+  border-color: var(--ink);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(12, 58, 48, 0.08);
 }
 
 .career-body .listing-index {
@@ -984,7 +1025,6 @@
 .career-body .listing-main p {
   font-size: 13.5px;
   color: var(--text-soft);
-  line-height: 1.5;
   max-width: 520px;
 }
 
@@ -1016,18 +1056,9 @@
   height: 16px;
 }
 
-@media(max-width:640px) {
-  .career-body .listing-row {
-    grid-template-columns: 40px 1fr;
-  }
-  .career-body .listing-arrow {
-    display: none;
-  }
-}
-
 /* What You Gain Section (photo-anchored split) */
 .career-body #gain {
-  padding: 110px 0;
+  padding: 70px 0;
   background: var(--ink-deep);
   overflow: hidden;
 }
@@ -1056,50 +1087,6 @@
   object-fit: cover;
 }
 
-.career-body .gain-photo-float {
-  position: absolute;
-  left: -34px;
-  bottom: -34px;
-  width: 46%;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 5px solid var(--ink-deep);
-  box-shadow: 0 24px 40px -18px rgba(0,0,0,0.6);
-  aspect-ratio: 4/3;
-}
-
-.career-body .gain-photo-float img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.career-body .gain-badge {
-  position: absolute;
-  top: 22px;
-  right: -18px;
-  background: var(--peach);
-  color: var(--ink);
-  border-radius: 16px;
-  padding: 16px 20px;
-  box-shadow: 0 18px 30px -14px rgba(0,0,0,0.5);
-  max-width: 160px;
-}
-
-.career-body .gain-badge .num {
-  font-family: 'Fraunces', serif;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 4px;
-}
-
-.career-body .gain-badge .lbl {
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1.35;
-}
-
 .career-body .gain-content .kicker {
   color: var(--peach);
 }
@@ -1119,10 +1106,8 @@
 }
 
 .career-body .gain-content > p.gain-intro {
-  font-size: 15px;
   color: rgba(255,250,244,0.62);
   line-height: 1.65;
-  max-width: 460px;
   margin-bottom: 36px;
 }
 
@@ -1130,7 +1115,6 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: 38px;
 }
 
 .career-body .gain-item {
@@ -1176,33 +1160,6 @@
   line-height: 1.55;
 }
 
-.career-body .gain-cta-outline {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  background: transparent;
-  color: var(--peach);
-  padding: 15px 8px;
-  border: none;
-  border-bottom: 1.5px solid rgba(255,210,177,0.4);
-  font-weight: 700;
-  font-size: 14.5px;
-  border-radius: 0;
-  transition: gap .2s ease, border-color .2s ease;
-  text-decoration: none;
-}
-
-.career-body .gain-cta-outline svg {
-  width: 15px;
-  height: 15px;
-  transition: transform .2s ease;
-}
-
-.career-body .gain-cta-outline:hover {
-  gap: 18px;
-  border-color: var(--peach);
-}
-
 @media(max-width:900px) {
   .career-body .gain-split {
     grid-template-columns: 1fr;
@@ -1215,27 +1172,6 @@
   .career-body .gain-badge {
     right: 8px;
   }
-}
-
-@media(max-width:520px) {
-  .career-body .gain-photo-float {
-    width: 52%;
-    left: -16px;
-    bottom: -24px;
-  }
-  .career-body .gain-badge {
-    top: 14px;
-    right: -6px;
-    padding: 12px 16px;
-    max-width: 130px;
-  }
-}
-
-/* Eligibility section */
-.career-body #eligibility {
-  padding: 110px 0;
-  background: var(--cream);
-  border-bottom: 1px solid rgba(12, 58, 48, 0.08);
 }
 
 .career-body .elig-panel {
@@ -1461,8 +1397,8 @@
     align-items: center;
     gap: 10px;
     padding: 16px 36px;
-    background: #0c3a30;
-    color: #ffd2b1;
+    background: #ffd2b1;
+    color: #0c3a30;
     font-size: 16px;
     font-weight: 700;
     border-radius: 50px;
@@ -1534,14 +1470,14 @@
     transform: translateY(-50%) !important;
     width: 36px !important;
     height: 36px !important;
-    background: #0c3a30 !important;
-    border: 2px solid rgba(232,200,154,0.50) !important;
+    background: #ffd2b1 !important;
+    border: none !important;
     border-radius: 50% !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    color: #e8c89a !important;
-    font-size: 15px !important;
+    color: #0c3a30 !important;
+    font-size: 16px !important;
     font-weight: 800 !important;
     font-family: inherit !important;
 }
@@ -1655,4 +1591,22 @@
         grid-template-columns: 1fr;
         gap: 20px;
     }
+}
+
+/* Career Page Unique CTA Banner Background & Overlay */
+.career-body #cta-banner.career-cta-bg {
+    background: linear-gradient(180deg, rgb(8 40 33 / 73%) 0%, rgba(8, 40, 33, 0.55) 55%, rgba(8, 40, 33, 0.94) 100%), 
+                url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600') no-repeat center center !important;
+    background-size: cover !important;
+    position: relative;
+    overflow: hidden;
+}
+.career-body #cta-banner.career-cta-bg h2 {
+    color: #ffffff !important;
+}
+.career-body #cta-banner.career-cta-bg p {
+    color: rgba(255, 255, 255, 0.80) !important;
+}
+.career-body #cta-banner.career-cta-bg .kicker {
+    color: var(--peach) !important;
 }

@@ -12,7 +12,7 @@ class AdminDashboardController extends Controller
      */
     public function index($section = 'overview')
     {
-        $allowedSections = ['overview', 'connectors', 'sponsors', 'partners', 'speakers', 'careers', 'internships', 'posted_jobs'];
+        $allowedSections = ['overview', 'connectors', 'sponsors', 'partners', 'speakers', 'careers', 'internships', 'posted_jobs', 'contacts'];
         if (!in_array($section, $allowedSections)) {
             $section = 'overview';
         }
@@ -108,7 +108,21 @@ class AdminDashboardController extends Controller
         $careers = $apps->filter(function($x) { return $x['category'] === 'career'; })->values();
         $internships = $apps->filter(function($x) { return $x['category'] === 'internship'; })->values();
 
-        return view('admin.dashboard', compact('section', 'connectors', 'partners', 'sponsors', 'postedJobs', 'careers', 'internships'));
+        $contacts = \App\Models\Contact::orderByDesc('created_at')->get()->map(function ($c) {
+            return [
+                'id'        => $c->id,
+                'name'      => $c->name,
+                'email'     => $c->email,
+                'phone'     => $c->phone,
+                'subject'   => $c->subject ?? 'General',
+                'message'   => $c->message,
+                'status'    => $c->status,
+                'notes'     => $c->notes ?? '',
+                'submitted' => $c->created_at->format('Y-m-d'),
+            ];
+        });
+
+        return view('admin.dashboard', compact('section', 'connectors', 'partners', 'sponsors', 'postedJobs', 'careers', 'internships', 'contacts'));
     }
 
     /**
@@ -453,5 +467,52 @@ class AdminDashboardController extends Controller
 
         return redirect()->route('admin.dashboard', 'posted_jobs')
             ->with('success', 'Job posting updated successfully.');
+    }
+
+    /**
+     * Return contact inquiries as JSON (for AJAX reload if needed).
+     */
+    public function contacts(Request $request)
+    {
+        $contacts = \App\Models\Contact::orderByDesc('created_at')->get()->map(function ($c) {
+            return [
+                'id'        => $c->id,
+                'name'      => $c->name,
+                'email'     => $c->email,
+                'phone'     => $c->phone,
+                'subject'   => $c->subject ?? 'General',
+                'message'   => $c->message,
+                'status'    => $c->status,
+                'notes'     => $c->notes ?? '',
+                'submitted' => $c->created_at->format('Y-m-d'),
+            ];
+        });
+        return response()->json($contacts);
+    }
+
+    /**
+     * Update contact status/notes.
+     */
+    public function updateContactStatus(Request $request, $id)
+    {
+        $contact = \App\Models\Contact::findOrFail($id);
+
+        // Status update
+        if ($request->has('status')) {
+            $contact->status = $request->input('status');
+        }
+
+        // Notes update
+        if ($request->has('notes')) {
+            $contact->notes = $request->input('notes');
+        }
+
+        $contact->save();
+
+        return response()->json([
+            'type'    => 'success',
+            'message' => 'Inquiry updated successfully.',
+            'data'    => $contact
+        ]);
     }
 }

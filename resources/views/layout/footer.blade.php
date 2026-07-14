@@ -438,15 +438,13 @@
             <div class="copyright-left">
                 Copyright &copy; {{ date('Y') }} Young Chanakya X. All Rights Reserved.
             </div>
-            <!-- <div class="footer-copyright-links justify-content-center">
-                <a href="#">Privacy Policy</a>
+            <div class="footer-copyright-links justify-content-center">
+                <a href="{{ route('privacy.policy') }}">Privacy Policy</a>
                 <span>|</span>
-                <a href="#">Terms of Service</a>
-                <span>|</span>
-                <a href="#">Community Ethics</a>
-            </div> -->
+                <a href="{{ route('terms.conditions') }}">Terms of Service</a>
+            </div>
             <div class="copyright-right">
-                Partners : <a href="#">FintechGie</a> &amp; <a href="#">Wegeni</a>
+                Partners : <a href="https://fintechgie.com" target="_blank">FintechGie</a> &amp; <a href="https://wegeni.com" target="_blank">Wegeni</a>
             </div>
         </div>
     </div>

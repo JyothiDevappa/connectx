@@ -57,6 +57,22 @@ $seo = [
         border-top-left-radius: 10px !important;
         border-bottom-left-radius: 10px !important;
     }
+    @media(min-width: 769px) {
+        .grid-4 {
+            grid-template-columns: repeat(4, 1fr) !important;
+        }
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr) !important;
+        }
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+    }
+    @media(max-width: 768px) {
+        .grid-4, .grid-3, .grid-2 {
+            grid-template-columns: 1fr !important;
+        }
+    }
 </style>
 @endpush
 
@@ -136,7 +152,6 @@ $seo = [
     <div class="sidebar">
       <div class="facts-card">
         <div class="facts-head">
-          <span class="info-i">i</span>
           <h3>Job Overview</h3>
         </div>
         
@@ -175,7 +190,6 @@ $seo = [
         @endif
 
         <button class="sidebar-apply" id="sidebarApplyBtn">Apply for this Role</button>
-        <span class="sidebar-note">Applications are reviewed on a rolling basis.</span>
       </div>
 
       @if($job->skills)
@@ -197,7 +211,7 @@ $seo = [
 <section id="more-roles">
   <div class="wrap">
     <div class="sec-head">
-      <span class="kicker">Keep Exploring</span>
+      <span class="eyebrow">Keep Exploring</span>
       <h2>Related Internships & Roles</h2>
       <p>Across internships and full-time careers — pick the track that fits where you are right now.</p>
     </div>
@@ -256,24 +270,22 @@ $seo = [
     </div>
 
     <div style="font-family: inherit; font-size: 12.5px; padding-bottom: 6px; margin-bottom: 14px; border-bottom: 1px solid rgba(12,58,48,0.1); font-weight: 700; color: #0c3a30; text-transform: uppercase; letter-spacing: 0.5px;">Personal Details</div>
-    <div class="form-row">
+    <div class="form-row grid-4">
       <div class="field">
         <label>Full Name <span class="text-danger">*</span></label>
         <input type="text" name="full_name" placeholder="E.g. Karthik Subramaniam" required>
       </div>
       <div class="field">
         <label>Date of Birth <span class="text-danger">*</span></label>
-        <input type="date" name="dob" required>
+        <input type="date" name="dob" required style="height: 50px;">
       </div>
-    </div>
-    <div class="form-row">
       <div class="field">
         <label>Nationality <span class="text-danger">*</span></label>
         <input type="text" name="nationality" placeholder="E.g. Indian" required>
       </div>
       <div class="field">
         <label>Marital Status <span class="text-danger">*</span></label>
-        <select name="marital_status" required style="width: 100%; padding: 12px; border: 1px solid rgba(12,58,48,0.15); border-radius: 8px;">
+        <select name="marital_status" required style="width: 100%; padding: 12px; border: 1px solid rgba(12,58,48,0.15); border-radius: 8px; height: 50px;">
           <option value="">- Select -</option>
           <option value="Single">Single</option>
           <option value="Married">Married</option>
@@ -285,7 +297,7 @@ $seo = [
     </div>
 
     <div style="font-family: inherit; font-size: 12.5px; padding-bottom: 6px; margin-top: 20px; margin-bottom: 14px; border-bottom: 1px solid rgba(12,58,48,0.1); font-weight: 700; color: #0c3a30; text-transform: uppercase; letter-spacing: 0.5px;">Contact Details</div>
-    <div class="form-row">
+    <div class="form-row grid-3" style="max-width: 800px;">
       <div class="field">
         <label>Phone Number <span class="text-danger">*</span></label>
         <input type="tel" name="phone" id="job-phone" placeholder="E.g. +91 98765 43210" required>
@@ -294,22 +306,20 @@ $seo = [
         <label>WhatsApp Number <span class="text-danger">*</span></label>
         <input type="tel" name="whatsapp_number" id="job-whatsapp" placeholder="E.g. +91 98765 43210" required>
       </div>
-    </div>
-    <div class="form-row">
-      <div class="field" style="flex: 2;">
+      <div class="field">
         <label>Emergency Contact Number <span class="text-danger">*</span></label>
         <input type="tel" name="emergency_phone" id="job-emergency" placeholder="E.g. +91 98765 43210" required>
       </div>
     </div>
-    <div class="form-row">
-      <div class="field" style="flex: 2;">
+    <div class="form-row grid-2">
+      <div class="field">
         <label>Email Address <span class="text-danger">*</span></label>
-        <input type="email" name="email" placeholder="E.g. name@example.com" required>
+        <input type="email" name="email" placeholder="E.g. name@example.com" required style="height: 50px;">
       </div>
-    </div>
-    <div class="field" style="margin-top: 10px;">
-      <label>Residential Address <span class="text-danger">*</span></label>
-      <textarea name="residential_address" placeholder="Enter your full current residential address" required style="min-height: 80px;"></textarea>
+      <div class="field">
+        <label>Residential Address <span class="text-danger">*</span></label>
+        <textarea name="residential_address" placeholder="Enter your full current residential address" required style="min-height: 50px; height: 50px;"></textarea>
+      </div>
     </div>
 
     <div style="font-family: inherit; font-size: 12.5px; padding-bottom: 6px; margin-top: 20px; margin-bottom: 14px; border-bottom: 1px solid rgba(12,58,48,0.1); font-weight: 700; color: #0c3a30; text-transform: uppercase; letter-spacing: 0.5px;">Education</div>
@@ -326,7 +336,7 @@ $seo = [
     </div>
 
     <!-- Pursuing YES fields -->
-    <div class="form-row" id="yesEducationFields" style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+    <div class="form-row grid-3" id="yesEducationFields" style="display: grid; gap: 14px;">
       <div class="field">
         <label>College Name *</label>
         <input type="text" name="college" id="college_input" placeholder="e.g. Madras University">
@@ -335,9 +345,9 @@ $seo = [
         <label>Course Name *</label>
         <input type="text" name="course" id="course_input" placeholder="e.g. Bachelor of Technology">
       </div>
-      <div class="field" style="grid-column: span 2;">
+      <div class="field">
         <label>Current Semester *</label>
-        <select name="semester" id="semester_input" style="width: 100%; padding: 12px; border: 1px solid rgba(12,58,48,0.15); border-radius: 8px;">
+        <select name="semester" id="semester_input" style="width: 100%; padding: 12px; border: 1px solid rgba(12,58,48,0.15); border-radius: 8px; height: 50px;">
           <option value="">- Select Semester -</option>
           @for($i=1; $i<=8; $i++)
             <option value="{{ $i }}">Semester {{ $i }}</option>
@@ -347,7 +357,7 @@ $seo = [
     </div>
 
     <!-- Pursuing NO fields -->
-    <div class="form-row" id="noEducationFields" style="display: none; grid-template-columns: 1fr 1fr; gap: 14px;">
+    <div class="form-row grid-3" id="noEducationFields" style="display: none; gap: 14px;">
       <div class="field">
         <label>Institution / Board / University *</label>
         <input type="text" name="institution" id="institution_input" placeholder="e.g. Madras University">
@@ -356,24 +366,21 @@ $seo = [
         <label>Degree / Qualification *</label>
         <input type="text" name="degree" id="degree_input" placeholder="e.g. Bachelor of Technology">
       </div>
-      <div class="field" style="grid-column: span 2;">
+      <div class="field">
         <label>Year of Passing *</label>
         <input type="text" name="year_of_passing" id="year_of_passing_input" placeholder="e.g. 2024">
       </div>
     </div>
 
     <div style="font-family: inherit; font-size: 12.5px; padding-bottom: 6px; margin-top: 20px; margin-bottom: 14px; border-bottom: 1px solid rgba(12,58,48,0.1); font-weight: 700; color: #0c3a30; text-transform: uppercase; letter-spacing: 0.5px;">Profiles & Resume</div>
-    <div class="form-row">
-      <div class="field" style="flex: 2;">
+    <div class="form-row grid-2">
+      <div class="field">
         <label>LinkedIn Profile URL <span class="text-danger">*</span></label>
         <input type="url" name="linkedin_url" placeholder="https://linkedin.com/in/username" required>
       </div>
-    </div>
-
-    <div class="form-row" style="margin-top: 14px;">
-      <div class="field" style="flex: 2;">
+      <div class="field">
         <label>Upload your resume *</label>
-        <input type="file" name="resume_file" required style="width: 100%; padding: 10px; border: 1px solid rgba(12,58,48,0.15); border-radius: 8px; background: #fffaf4;">
+        <input type="file" name="resume_file" required style="width: 100%; padding: 10px; border: 1px solid rgba(12,58,48,0.15); border-radius: 8px; background: #fffaf4; height: 50px;">
       </div>
     </div>
 

@@ -23,6 +23,11 @@ $seo = [
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
 <link rel="stylesheet" href="{{ asset('css/about-us.css') }}">
 <link rel="stylesheet" href="{{ asset('css/career.css') }}">
+<style>
+  #hdr:not(.scrolled) .hamburger span {
+      background: #0c3a30 !important;
+  }
+</style>
 @endpush
 
 @section('content')
@@ -45,10 +50,9 @@ $seo = [
               : 'Join a passionate team that\'s building a community where stories, knowledge, and people come together. Help us empower the next generation of creators.' }}
           </p>
           
-          <div class="about-hero-buttons" style="margin-top: 32px;">
-            <a href="#roles" class="btn-lg">
+          <div class="">
+            <a href="#roles" class="btn-orange">
               {{ $isInternship ? 'View Open Internships' : 'View Open Roles' }}
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
           </div>
         </div>
@@ -61,61 +65,98 @@ $seo = [
     </div>
   </section>
 
-  <!-- CULTURE / LIFE AT YCX -->
-  <section id="culture">
+  
+  <!-- OPEN ROLES -->
+  <section class="py-5" id="roles">
     <div class="wrap">
       <div class="section-head text-center mx-auto">
-        <span class="eyebrow">Life at YCX</span>
-        <h2>What It's Actually Like Working Here</h2>
-        <p>We create an environment where ideas are valued, people support one another, and every contribution helps shape a stronger community.</p>
+        <span class="eyebrow">Open Opportunities</span>
+        <h2>{{ $isInternship ? 'Available Internships' : 'Where We Need You Right Now' }}</h2>
+        <p>Explore our currently open positions and find where your skills can make the greatest impact.<br> Tap any role below to see the full brief and apply.</p>
       </div>
-      <div class="culture-track">
-        <div class="culture-card">
-          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt="Learn Every Day">
-          <div class="culture-card-text">
-            <span class="tag">01 · Growth</span>
-            <h4>Learn Every Day</h4>
-            <p>Expand your knowledge by working on real projects and exploring new ideas alongside passionate teammates.</p>
+      <div class="roles-tiles" id="rolesGrid">
+        @forelse($jobs as $job)
+          <a href="{{ route($job->category == 'internship' ? 'internships.detail' : 'careers.detail', $job->slug) }}" class="role-tile" style="text-decoration: none; display: block;">
+            <div class="role-tile-tags mb-3">
+              <span class="listing-tag" style="margin-top: 0;">{{ $job->department }}</span>
+              <span>{{ ucfirst($job->work_mode) }}</span>
+              @if($job->experience)
+                <span>{{ $job->experience }}</span>
+              @endif
+              @if($job->duration)
+                <span>{{ $job->duration }}</span>
+              @endif
+            </div>
+            <div class="role-tile-top">
+              <h3>{{ $job->title }}</h3>
+              <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+            <p class="blurb">{{ $job->tagline }}</p>
+          </a>
+        @empty
+          <div class="text-center w-100 py-5">
+            <h4 style="color: var(--text-soft);">No open opportunities at this moment. Check back soon!</h4>
           </div>
+        @endforelse
+      </div>
+    </div>
+  </section>
+
+  <!-- CULTURE / LIFE AT YCX (Styled like index Who Can Join Us section) -->
+  <section class="partner-sec" id="culture">
+    <div class="wrap">
+      <div class="partner-head text-center">
+        <span class="eyebrow rv" style="margin-bottom: 12px;">Life at YCX</span>
+        <h2 class="sec-title rv" style="margin-bottom: 16px; font-family: 'Fraunces', serif;">What It's Actually Like Working Here</h2>
+        <p class="sec-desc rv mx-auto" style="margin-bottom: 0; line-height: 1.6; max-width: 600px;">We create an environment where ideas are valued, people support one another, and every contribution helps shape a stronger community.</p>
+      </div>
+      <div class="partner-grid mt-5">
+        <div class="p-card rv">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Learn Every Day">
+          <div class="p-card-ov">
+            <div class="p-name">Learn Every Day</div>
+            <div class="p-desc">Expand your knowledge by working on real projects and exploring new ideas alongside passionate teammates.</div>
+          </div>
+          <div class="p-arrow">↗</div>
         </div>
-        <div class="culture-card">
-          <img src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&w=500&q=80" alt="Collaborate with Purpose">
-          <div class="culture-card-text">
-            <span class="tag">02 · Team</span>
-            <h4>Collaborate with Purpose</h4>
-            <p>Work with people who value teamwork, open communication, and shared success.</p>
+        <div class="p-card rv">
+          <img src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&w=600&q=80" alt="Collaborate with Purpose">
+          <div class="p-card-ov">
+            <div class="p-name">Collaborate with Purpose</div>
+            <div class="p-desc">Work with people who value teamwork, open communication, and shared success.</div>
           </div>
+          <div class="p-arrow">↗</div>
         </div>
-        <div class="culture-card">
-          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500&q=80" alt="Share Your Ideas">
-          <div class="culture-card-text">
-            <span class="tag">03 · Voice</span>
-            <h4>Share Your Ideas</h4>
-            <p>Bring fresh perspectives to the table and help shape experiences that inspire our community.</p>
+        <div class="p-card rv">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Share Your Ideas">
+          <div class="p-card-ov">
+            <div class="p-name">Share Your Ideas</div>
+            <div class="p-desc">Bring fresh perspectives to the table and help shape experiences that inspire our community.</div>
           </div>
+          <div class="p-arrow">↗</div>
         </div>
-        <div class="culture-card">
-          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=500&q=80" alt="Take on New Challenges">
-          <div class="culture-card-text">
-            <span class="tag">04 · Bold</span>
-            <h4>Take on New Challenges</h4>
-            <p>Build confidence by solving real problems, developing new skills, and growing through hands-on experience.</p>
+        <div class="p-card rv">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="Take on New Challenges">
+          <div class="p-card-ov">
+            <div class="p-name">Take on New Challenges</div>
+            <div class="p-desc">Build confidence by solving real problems, developing new skills, and growing through hands-on experience.</div>
           </div>
+          <div class="p-arrow">↗</div>
         </div>
-        <div class="culture-card">
-          <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=500&q=80" alt="Celebrate Together">
-          <div class="culture-card-text">
-            <span class="tag">05 · Community</span>
-            <h4>Celebrate Together</h4>
-            <p>From project milestones to community achievements, we celebrate every success as one team.</p>
+        <div class="p-card rv">
+          <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=600&q=80" alt="Celebrate Together">
+          <div class="p-card-ov">
+            <div class="p-name">Celebrate Together</div>
+            <div class="p-desc">From project milestones to community achievements, we celebrate every success as one team.</div>
           </div>
+          <div class="p-arrow">↗</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PERKS & BENEFITS -->
-  <section id="perks">
+  <section class="py-5" id="perks">
     <div class="wrap">
       <div class="section-head text-center mx-auto">
         <span class="eyebrow">Perks & Benefits</span>
@@ -157,73 +198,38 @@ $seo = [
     </div>
   </section>
 
-  <!-- OPEN ROLES -->
-  <section id="roles">
-    <div class="wrap">
-      <div class="section-head text-center mx-auto">
-        <span class="eyebrow">Open Opportunities</span>
-        <h2>{{ $isInternship ? 'Available Internships' : 'Where We Need You Right Now' }}</h2>
-        <p>Explore our currently open positions and find where your skills can make the greatest impact.<br> Tap any role below to see the full brief and apply.</p>
-      </div>
-      <div class="roles-tiles" id="rolesGrid">
-        @forelse($jobs as $job)
-          <a href="{{ route($job->category == 'internship' ? 'internships.detail' : 'careers.detail', $job->slug) }}" class="role-tile" style="text-decoration: none; display: block;">
-            <div class="role-tile-top">
-              <h3>{{ $job->title }}</h3>
-              <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-            </div>
-            <div class="role-tile-tags">
-              <span>{{ ucfirst($job->work_mode) }}</span>
-              <span>{{ $job->department }}</span>
-              @if($job->experience)
-                <span>{{ $job->experience }}</span>
-              @endif
-              @if($job->duration)
-                <span>{{ $job->duration }}</span>
-              @endif
-            </div>
-            <p class="blurb">{{ $job->tagline }}</p>
-          </a>
-        @empty
-          <div class="text-center w-100 py-5">
-            <h4 style="color: var(--text-soft);">No open opportunities at this moment. Check back soon!</h4>
-          </div>
-        @endforelse
-      </div>
-    </div>
-  </section>
 
-  <!-- PROCESS / HIRING PROCESS -->
+  <!-- PROCESS / HIRING PROCESS (Horizontal Timeline & Badges) -->
   <section id="process">
     <div class="wrap">
-      <div class="sec-head">
+      <div class="section-head text-center mx-auto">
         <span class="eyebrow">Your Journey Starts Here</span>
         <h2>A Simple & Transparent Hiring Process</h2>
         <p>Our hiring process is designed to help us get to know you beyond your resume. We value passion, curiosity, and a willingness to learn as much as experience.</p>
       </div>
       <div class="timeline">
         <div class="t-step">
-          <span class="tn">STEP 01</span>
+          <span class="tn">Step 01</span>
           <h3>Apply</h3>
           <p>Submit your application and tell us about your skills, experience, and interests.</p>
         </div>
         <div class="t-step">
-          <span class="tn">STEP 02</span>
+          <span class="tn">Step 02</span>
           <h3>Profile Review</h3>
           <p>Our team reviews your application to understand your background and potential.</p>
         </div>
         <div class="t-step">
-          <span class="tn">STEP 03</span>
+          <span class="tn">Step 03</span>
           <h3>Interview</h3>
           <p>Meet with our team to discuss your experience, aspirations, and how you can contribute to YCX.</p>
         </div>
         <div class="t-step">
-          <span class="tn">STEP 04</span>
+          <span class="tn">Step 04</span>
           <h3>Skill Assessment</h3>
           <p>For selected roles, you may complete a practical task that reflects the responsibilities of the position.</p>
         </div>
         <div class="t-step">
-          <span class="tn">STEP 05</span>
+          <span class="tn">Step 05</span>
           <h3>Welcome to YCX</h3>
           <p>Once selected, we'll guide you through onboarding and help you begin your journey with Young Chanakya X.</p>
         </div>
@@ -231,20 +237,19 @@ $seo = [
     </div>
   </section>
 
-  <!-- CTA BANNER -->
-  <section id="apply-banner">
-    <div class="wrap">
-      <div class="section-head text-center mx-auto">
-        <span class="eyebrow">Don't See The Right Role?</span>
-        <h2>We're Always Meeting People Worth Keeping in Mind</h2>
-        <p>Even if there isn't a role that matches your skills today, we'd still love to hear from you. Share your profile, and we'll reach out when a suitable opportunity becomes available.</p>
-      </div>
-      <div class="center-btn">
-        <a href="mailto:youngchanakyaconnect@gmail.com?subject=General Career Application - Young Chanakya X" class="btn-lg">
-          Tell Us About Yourself
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
+  <!-- CTA BANNER (Using Internship CTA Class & Style) -->
+  <section id="cta-banner" class="career-cta-bg">
+    <div class="wrap" style="text-align: center; max-width: 800px; margin: 0 auto; padding: 60px 20px;">
+      <span class="kicker">Don't See The Right Role?</span>
+      <h2 style="font-family: 'Fraunces', serif; font-weight: 600; font-size: clamp(28px, 3.6vw, 42px); color: var(--ink); letter-spacing: -1px; line-height: 1.16; margin-bottom: 16px;">
+        We're Always Meeting People Worth Keeping in Mind
+      </h2>
+      <p style="font-size: 15.5px; color: var(--text-soft); line-height: 1.65; margin-bottom: 28px; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Even if there isn't a role that matches your skills today, we'd still love to hear from you. Share your profile, and we'll reach out when a suitable opportunity becomes available.
+      </p>
+      <a href="mailto:youngchanakyaconnect@gmail.com?subject=General Career Application - Young Chanakya X" class="btn-orange" id="ctaApplyBtn" style="text-decoration: none;">
+        Tell Us About Yourself
+      </a>
     </div>
   </section>
 
