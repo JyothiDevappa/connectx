@@ -211,7 +211,8 @@
   text-align: left;
 }
 
-.career-body .culture-card-text .tag {
+.career-body .culture-card-text .tag,
+.career-body .p-card-ov .tag {
   font-family: 'Space Mono', monospace;
   font-size: 10.5px;
   letter-spacing: 1px;

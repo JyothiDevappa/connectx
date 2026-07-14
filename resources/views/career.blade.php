@@ -151,6 +151,7 @@ $seo = [
           </div>
           <div class="p-arrow">↗</div>
         </div>
+        <div class="p-arrow">↗</div>
       </div>
     </div>
   </section>

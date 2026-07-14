@@ -79,7 +79,7 @@
                 </a>
 
                 <a href="{{ url('/become-a-sponser') }}" class="fs-nav-item {{ request()->is('become-a-sponser') ? 'active' : '' }}" onclick="toggleMenu()">
-                    <span class="fs-nav-name">Become a Sponsor</span>
+                    <span class="fs-nav-name">Become a sponsor</span>
                     <span class="fs-nav-arrow">→</span>
                     <!-- <span class="fs-nav-num">03</span> -->
                 </a>
@@ -91,8 +91,8 @@
                     <!-- <span class="fs-nav-num">05</span> -->
                 </a>
 
-                <a href="{{ url('/connecters-list') }}" class="fs-nav-item {{ request()->is('connecters-list') ? 'active' : '' }}" onclick="toggleMenu()">
-                    <span class="fs-nav-name">Connecters Directory</span>
+                <a href="{{ url('/connectors-list') }}" class="fs-nav-item {{ request()->is('connecters-list') ? 'active' : '' }}" onclick="toggleMenu()">
+                    <span class="fs-nav-name">Connectors Directory</span>
                     <span class="fs-nav-arrow">→</span>
                     <!-- <span class="fs-nav-num">06</span> -->
                 </a>

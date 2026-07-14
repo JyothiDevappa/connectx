@@ -132,11 +132,11 @@ $seo = [
             <div class="hero-grain"></div>
             <div class="hero-content">
                 <h1>High-Impact Brand<br><em>Partnerships &amp; Events</em></h1>
-                <p class="hero-desc">Connect your brand with highly engaged audiences through curated sponsorships, regional creator meetups, annual showcase awards, and co-branded experiences.
+                <p class="hero-desc">Connect your brand with highly engaged audiences through curated sponserships, regional creator meetups, annual showcase awards, and co-branded experiences.
                 </p>
                 <div class="hero-btns">
-                    <button class="btn-hero-primary" onclick="window.location.href='/become-a-sponser'">Become a Sponsor →</button>
-                    {{-- <button class="btn-hero-outline" onclick="window.location.href='/become-a-sponser'">Become a Sponsor</button> --}}
+                    <button class="btn-hero-primary" onclick="window.location.href='/become-a-sponser'">Become a sponser →</button>
+                    {{-- <button class="btn-hero-outline" onclick="window.location.href='/become-a-sponser'">Become a sponser</button> --}}
                 </div>
             </div>
         </div>
@@ -218,14 +218,14 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
                 
                 <div class="rv" style="border-left: 3px solid var(--orange); padding-left: 20px; margin-bottom: 30px;">
                     <p style="font-size: 1.15rem; font-style: italic; font-weight: 500; color: #0c3a30; margin-bottom: 0; line-height: 1.6;">
-                        "If you chase Saraswati (Knowledge), Lakshmi (Wealth) will chase you. Knowledge is Power, Information is Wealth."
+                        "If you chase Saraswati (Knowledge), Lakshmi (Wealth) will chase you. <br> Knowledge is Power, Information is Wealth."
                     </p>
                 </div>
 
-                <p class="sec-desc rv" style="margin-bottom: 40px; font-size: 1.05rem;">I’ve always believed that success is not about where you start, but how you scale. And for that, you need the right ecosystem, the right people, and the right mindset. If you dare to dream and are ready to hustle, you are in the right place.</p>
+                <p class="sec-desc rv" style="margin-bottom: 40px; font-size: 1.05rem;">I’ve always believed that success is not about where you start, but how you scale. And for that, you need the right ecosystem, the right people, and the right mindset. If you dare to dream and are learn to excel, you are in the right place.</p>
                 
                 <div class="rv">
-                    <a href="https://www.linkedin.com/in/kishorekumarceo" target="_blank" class="btn-main" style="text-decoration: none;"><i class="bi bi-linkedin" style="margin-right: 8px;"></i>Connect with me</a>
+                    <a href="https://www.linkedin.com/in/kishorekumarceo" target="_blank" class="btn-main" style="text-decoration: none;"><i class="bi bi-linkedin" style="margin-right: 8px;"></i>Connect with Our CEO</a>
                 </div>
             </div>
             
@@ -426,7 +426,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
 
             <div class="cx-premium-card cx-col-wide">
                 <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=1000" alt="Podcasts" class="cx-surface-img">
+                    <img src="{{ asset('images/media/podcast.png') }}" alt="Podcasts" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
@@ -438,7 +438,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
 
             <div class="cx-premium-card cx-col-square">
                 <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=600" alt="Stories" class="cx-surface-img">
+                    <img src="{{ asset('images/media/experience_stories.png') }}" alt="Stories" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
@@ -450,7 +450,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
 
             <div class="cx-premium-card cx-col-square">
                 <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600" alt="Network" class="cx-surface-img">
+                    <img src="{{ asset('images/media/network.png') }}" alt="Network" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
@@ -462,7 +462,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
 
             <div class="cx-premium-card cx-col-square">
                 <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=600" alt="Mentorship" class="cx-surface-img">
+                    <img src="{{ asset('images/media/experience_mentorship.png') }}" alt="Mentorship" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
@@ -474,7 +474,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
 
             <div class="cx-premium-card cx-col-square">
                 <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1610116306796-6fea9f4fae38?auto=format&fit=crop&q=80&w=600" alt="Live Events" class="cx-surface-img">
+                    <img src="{{ asset('images/media/experience_live_events.png') }}" alt="Live Events" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
@@ -486,7 +486,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
 
             <div class="cx-premium-card cx-col-wide">
                 <div class="cx-img-container">
-                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1000" alt="Collaborate" class="cx-surface-img">
+                    <img src="{{ asset('images/media/collabarate.png') }}" alt="Collaborate" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
@@ -946,7 +946,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
             <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80" alt="Business Leaders — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-name">Business Leaders</div>
-                <div class="p-desc">Guide the ecosystem, sponsor programs, and share executive insights.</div>
+                <div class="p-desc">Guide the ecosystem, sponser programs, and share executive insights.</div>
             </div>
             <div class="p-arrow">↗</div>
         </div>
@@ -1255,7 +1255,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
         <div class="section-head">
             <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Event Listing</div>
             <h2 class="sec-title rv" style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Curated Events for Every Creator Journey</h2>
-            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-bottom: 0; margin-left: auto; margin-right: auto; line-height: 1.6;">Explore upcoming panels, awards gala ceremonies, regional conferences, and exclusive brand sponsorship opportunities.</p>
+            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-bottom: 0; margin-left: auto; margin-right: auto; line-height: 1.6;">Explore upcoming panels, awards gala ceremonies, regional conferences, and exclusive brand sponsership opportunities.</p>
         </div>
 
         <div class="position-relative">
@@ -1275,7 +1275,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
                         [
                             'category' => 'Roundtables',
                             'title' => 'Creator Connect Sessions: Multi-Platform Monetization',
-                            'desc' => 'Unlocking premium brand sponsorships, media kit architectures, and co-branded content monetization loops.',
+                            'desc' => 'Unlocking premium brand sponserships, media kit architectures, and co-branded content monetization loops.',
                             'date' => 'JUL 24, 2026',
                             'location' => 'EPISODE 42',
                             'host' => 'Rohan Sharma',
@@ -1487,13 +1487,13 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
 </section>
 
   
-<!-- COMMUNITY & SPONSOR -->
+<!-- COMMUNITY & sponser -->
 <section class="community-sec" id="community">
     <div class="section-container">
 
         <div class="section-head">
             <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Engage & Support</div>
-            <h2 class="sec-title rv" style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Partner & Sponsor</h2>
+            <h2 class="sec-title rv" style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Partner & sponser</h2>
             <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-bottom: 0; margin-left: auto; margin-right: auto; line-height: 1.6;">Join hands with Young Chanakya X to build the premier ecosystem for C-suite leaders, creators, and innovators. Choose how you want to make an impact.</p>
         </div>
 
@@ -1514,17 +1514,17 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
                 </div>
             </article>
 
-            <!-- Card 2: Sponsor Opportunities -->
+            <!-- Card 2: sponser Opportunities -->
             <article class="com-card creative-right rv" style="transition-delay:0.08s">
                 <div class="card-meta">
                     <span class="card-num" style="font-size: 2.2rem; margin-bottom: 20px;"><i class="bi bi-briefcase-fill"></i></span>
-                    <h3>Become a Sponsor</h3>
-                    <p style="margin-bottom: 0;">Elevate your brand presence by sponsoring our high-quality recording lounges, podcast seasons, and regional meetups.</p>
-                    <a href="/become-a-sponser" class="com-card-btn btn-orange">Become a Sponsor</a>
+                    <h3>Become a sponser</h3>
+                    <p style="margin-bottom: 0;">Elevate your brand presence by sponsering our high-quality recording lounges, podcast seasons, and regional meetups.</p>
+                    <a href="/become-a-sponser" class="com-card-btn btn-orange">Become a sponser</a>
                 </div>
                 <div class="card-visual">
                     <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80" alt="Sponsorship">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80" alt="sponsership">
                     </div>
                 </div>
             </article>
@@ -1588,11 +1588,11 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
       <div class="mem-card">
         <div>
           <div class="mem-role">Brand Supporter</div>
-          <h3>Sponsor</h3>
-          <p class="mem-desc">Sponsor events, podcast seasons, and community programs to elevate your brand presence.</p>
+          <h3>sponser</h3>
+          <p class="mem-desc">sponser events, podcast seasons, and community programs to elevate your brand presence.</p>
         </div>
         <a href="#" class="mem-action-link">
-          <span class="btn-text">Become a Sponsor</span>
+          <span class="btn-text">Become a sponser</span>
           <span class="round-btn"><i class="bi bi-arrow-up-right"></i></span>
         </a>
       </div>

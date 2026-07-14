@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Sponsorship Application Received - Young Chanakya X</title>
+    <title>sponsership Application Received - Young Chanakya X</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -114,9 +114,9 @@
         <div class="greeting">Hello {{ $name }},</div>
         
         <div class="message">
-            Thank you for your interest in becoming a <strong>Young Chanakya X Sponsor</strong>.
+            Thank you for your interest in becoming a <strong>Young Chanakya X sponser</strong>.
             <br><br>
-            Our team has received your sponsorship inquiry. We appreciate your support for our ecosystem. Our sponsorship team will review your details and contact you shortly with customized opportunities and next steps.
+            Our team has received your sponsership inquiry. We appreciate your support for our ecosystem. Our sponsership team will review your details and contact you shortly with customized opportunities and next steps.
         </div>
         
         <div class="details-box">
@@ -130,8 +130,8 @@
                 <div class="details-value">{{ $company }}</div>
             </div>
             <div class="details-row">
-                <div class="details-label">Sponsorship Level</div>
-                <div class="details-value">{{ $sponsorship_level }}</div>
+                <div class="details-label">sponsership Level</div>
+                <div class="details-value">{{ $sponsership_level }}</div>
             </div>
         </div>
         
@@ -163,7 +163,7 @@
         <div style="margin-bottom: 20px; font-size: 13px; line-height: 1.8; color: #ffffff;">
             <a href="https://connectx.youngchanakya.com/about" style="color: #ffffff; text-decoration: none;">About</a> &nbsp;|&nbsp; 
             <a href="https://connectx.youngchanakya.com/become-a-partner" style="color: #ffffff; text-decoration: none;">Become a Partner</a> &nbsp;|&nbsp; 
-            <a href="https://connectx.youngchanakya.com/become-a-sponser" style="color: #ffffff; text-decoration: none;">Become a Sponsor</a> &nbsp;|&nbsp; 
+            <a href="https://connectx.youngchanakya.com/become-a-sponser" style="color: #ffffff; text-decoration: none;">Become a sponser</a> &nbsp;|&nbsp; 
             <a href="https://connectx.youngchanakya.com/contact" style="color: #ffffff; text-decoration: none;">Connect with YCX</a>
         </div>
         

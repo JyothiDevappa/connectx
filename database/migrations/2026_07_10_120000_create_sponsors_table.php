@@ -8,7 +8,7 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('sponsors', function (Blueprint $table) {
+        Schema::create('sponsers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('email');
@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('designation');
             $table->string('linkedin');
             $table->string('website')->nullable();
-            $table->string('sponsorship_level');
+            $table->string('sponsership_level');
             $table->string('status')->default('pending'); // pending, confirmed, declined
             $table->text('notes')->nullable();
             $table->timestamps();
@@ -26,6 +26,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists('sponsors');
+        Schema::dropIfExists('sponsers');
     }
 };

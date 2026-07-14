@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Models\Contact;
 use App\Models\Connector;
 use App\Models\Partner;
-use App\Models\Sponsor;
+use App\Models\sponser;
 
 class ApplicationController extends Controller
 {
@@ -121,7 +121,7 @@ class ApplicationController extends Controller
         }
     }
 
-    public function submitSponsor(Request $request)
+    public function submitsponser(Request $request)
     {
         $validated = $request->validate([
             'name'              => 'required|string|max:255',
@@ -130,15 +130,15 @@ class ApplicationController extends Controller
             'company'           => 'required|string|max:255',
             'designation'       => 'required|string|max:255',
             'linkedin'          => 'required|url|max:255',
-            'sponsorship_level' => 'required|string|max:255',
+            'sponsership_level' => 'required|string|max:255',
             'website'           => 'nullable|url|max:255',
         ]);
 
         try {
-            \Illuminate\Support\Facades\Log::info('--- SPONSOR SUBMISSION START ---');
+            \Illuminate\Support\Facades\Log::info('--- sponser SUBMISSION START ---');
 
             // 1. Save to Database
-            Sponsor::create([
+            sponser::create([
                 'name'              => $validated['name'],
                 'email'             => $validated['email'],
                 'phone'             => $validated['phone'],
@@ -146,32 +146,32 @@ class ApplicationController extends Controller
                 'designation'       => $validated['designation'],
                 'linkedin'          => $validated['linkedin'],
                 'website'           => $validated['website'] ?? null,
-                'sponsorship_level' => $validated['sponsorship_level'],
+                'sponsership_level' => $validated['sponsership_level'],
                 'status'            => 'pending',
             ]);
-            \Illuminate\Support\Facades\Log::info('Sponsor saved to database.');
+            \Illuminate\Support\Facades\Log::info('sponser saved to database.');
 
             \Illuminate\Support\Facades\Log::info('Sending admin email...');
             // 2. Email to Admin
-            Mail::send('emails.sponsor-application', $validated, function ($message) use ($validated) {
+            Mail::send('emails.sponser-application', $validated, function ($message) use ($validated) {
                 $message->to('youngchanakya.x@gmail.com')
-                        ->subject('New Sponsorship Application: ' . $validated['name'])
+                        ->subject('New sponsership Application: ' . $validated['name'])
                         ->replyTo($validated['email'], $validated['name']);
             });
             \Illuminate\Support\Facades\Log::info('Admin email sent.');
 
             \Illuminate\Support\Facades\Log::info('Sending user email to: '.$validated['email']);
             // 2. Email to User (Confirmation)
-            Mail::send('emails.sponsor-confirmation', $validated, function ($message) use ($validated) {
+            Mail::send('emails.sponser-confirmation', $validated, function ($message) use ($validated) {
                 $message->to($validated['email'])
-                        ->subject('Sponsorship Application Received - Young Chanakya X');
+                        ->subject('sponsership Application Received - Young Chanakya X');
             });
             \Illuminate\Support\Facades\Log::info('User email sent.');
-            \Illuminate\Support\Facades\Log::info('--- SPONSOR SUBMISSION END ---');
+            \Illuminate\Support\Facades\Log::info('--- sponser SUBMISSION END ---');
 
-            return back()->with('success', 'Your sponsorship application has been submitted successfully!');
+            return back()->with('success', 'Your sponsership application has been submitted successfully!');
         } catch (\Exception $e) {
-            logger()->error('SMTP Sponsorship Application failure: ' . $e->getMessage());
+            logger()->error('SMTP sponsership Application failure: ' . $e->getMessage());
             return back()->withInput()->with('error', 'Unable to send application via SMTP. Please try again.');
         }
     }

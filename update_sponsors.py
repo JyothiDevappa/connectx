@@ -59,12 +59,12 @@ css_content = """/* TIERS CSS INJECTED */
 """
 
 html_content = """<!-- =========================
-SPONSORSHIP CATEGORIES REPLACED WITH TIERS
+sponserSHIP CATEGORIES REPLACED WITH TIERS
 ========================= -->
 <section class="tiers-section position-relative pt-120 pb-120" id="tiers">
   <div class="container">
     <div class="section-head text-center" style="margin-bottom: 50px;">
-        <div class="eyebrow rv">Sponsorship Tiers</div>
+        <div class="eyebrow rv">sponsership Tiers</div>
         <h2 class="sec-title rv" style="color: #0c3a30;">Choose how you show up.</h2>
         <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">From single-event support to year-round brand integration — there's a tier built for your goals.</p>
     </div>
@@ -73,7 +73,7 @@ SPONSORSHIP CATEGORIES REPLACED WITH TIERS
       <div class="tier-card featured">
         <div class="tier-badge">Flagship</div>
         <div class="tier-name">Top Tier</div>
-        <div class="tier-title">Title Sponsor</div>
+        <div class="tier-title">Title sponser</div>
         <div class="tier-tagline">Primary brand visibility across major ConnectX initiatives</div>
         <ul class="tier-list collapsed">
           <li>Naming rights across flagship events and properties</li>
@@ -88,12 +88,12 @@ SPONSORSHIP CATEGORIES REPLACED WITH TIERS
           <li>Maximum visibility across the ConnectX ecosystem</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponsor-form" class="tier-btn-primary" style="width:100%; text-align:center; background:#ffd2b1; color:#0c3a30;">Become Title Sponsor</a>
+        <a href="#sponser-form" class="tier-btn-primary" style="width:100%; text-align:center; background:#ffd2b1; color:#0c3a30;">Become Title sponser</a>
       </div>
 
       <div class="tier-card">
         <div class="tier-name">Secondary Tier</div>
-        <div class="tier-title">Powered By Sponsor</div>
+        <div class="tier-title">Powered By sponser</div>
         <div class="tier-tagline">Secondary headline branding with strong ecosystem presence</div>
         <ul class="tier-list collapsed">
           <li>"Powered By" branding across key initiatives</li>
@@ -108,16 +108,16 @@ SPONSORSHIP CATEGORIES REPLACED WITH TIERS
           <li>Consistent exposure across programs</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become Powered By Sponsor</a>
+        <a href="#sponser-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become Powered By sponser</a>
       </div>
 
       <div class="tier-card">
         <div class="tier-name">Shared Tier</div>
-        <div class="tier-title">Co-Sponsor</div>
+        <div class="tier-title">Co-sponser</div>
         <div class="tier-tagline">Supporting partner across shared initiatives</div>
         <ul class="tier-list collapsed">
           <li>Shared branding across events and activities</li>
-          <li>Logo placement alongside other sponsors</li>
+          <li>Logo placement alongside other sponsers</li>
           <li>Participation in collaborative campaigns</li>
           <li>Visibility in selected content formats</li>
           <li>Access to networking opportunities</li>
@@ -128,14 +128,14 @@ SPONSORSHIP CATEGORIES REPLACED WITH TIERS
           <li>Support-level visibility across ecosystem</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become Co-Sponsor</a>
+        <a href="#sponser-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become Co-sponser</a>
       </div>
     </div>
 
     <div class="tier-grid">
       <div class="tier-card">
         <div class="tier-name">Premium Tier</div>
-        <div class="tier-title">Platinum Sponsor</div>
+        <div class="tier-title">Platinum sponser</div>
         <div class="tier-tagline">High-level presence across multiple formats and touchpoints</div>
         <ul class="tier-list collapsed">
           <li>High-visibility branding across events and content</li>
@@ -150,12 +150,12 @@ SPONSORSHIP CATEGORIES REPLACED WITH TIERS
           <li>Consistent brand engagement opportunities</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become Platinum Sponsor</a>
+        <a href="#sponser-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become Platinum sponser</a>
       </div>
 
       <div class="tier-card">
         <div class="tier-name">Mid Tier</div>
-        <div class="tier-title">Gold Sponsor</div>
+        <div class="tier-title">Gold sponser</div>
         <div class="tier-tagline">Strong visibility in selected events and content formats</div>
         <ul class="tier-list collapsed">
           <li>Branding across selected events and sessions</li>
@@ -170,12 +170,12 @@ SPONSORSHIP CATEGORIES REPLACED WITH TIERS
           <li>Engagement-driven visibility</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become Gold Sponsor</a>
+        <a href="#sponser-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become Gold sponser</a>
       </div>
 
       <div class="tier-card">
         <div class="tier-name">Entry Tier</div>
-        <div class="tier-title">Silver Sponsor</div>
+        <div class="tier-title">Silver sponser</div>
         <div class="tier-tagline">Focused exposure in specific programs or segments</div>
         <ul class="tier-list collapsed">
           <li>Branding in selected programs or sessions</li>
@@ -190,7 +190,7 @@ SPONSORSHIP CATEGORIES REPLACED WITH TIERS
           <li>Focused visibility within defined scope</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become Silver Sponsor</a>
+        <a href="#sponser-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become Silver sponser</a>
       </div>
     </div>
   </div>

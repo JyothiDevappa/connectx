@@ -4,7 +4,7 @@
  */
 $seo = [
     'title'       => 'Contact Young Chanakya X — Get in Touch with Our Team',
-    'description' => 'Contact Young Chanakya X to inquire about partnerships, sponsorships, creator collaborations, or any questions about our global creator ecosystem. Email us at youngchanakyaconnect@gmail.com.',
+    'description' => 'Contact Young Chanakya X to inquire about partnerships, sponserships, creator collaborations, or any questions about our global creator ecosystem. Email us at youngchanakyaconnect@gmail.com.',
     'keywords'    => 'contact Young Chanakya X, Young Chanakya X email, Young Chanakya X partnership inquiry, reach Young Chanakya X, Young Chanakya contact, creator platform contact',
     'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
@@ -24,7 +24,7 @@ $seo = [
     "@id": "https://connectx.youngchanakya.com/contact#webpage",
     "url": "https://connectx.youngchanakya.com/contact",
     "name": "Contact Young Chanakya X — Get in Touch",
-    "description": "Contact Young Chanakya X for partnership, sponsorship, and creator collaboration inquiries.",
+    "description": "Contact Young Chanakya X for partnership, sponsership, and creator collaboration inquiries.",
     "inLanguage": "en-IN",
     "isPartOf": {
         "@type": "WebSite",
@@ -453,7 +453,7 @@ $seo = [
 
 						<h1 class="text-glow-headline mb-4">Let's Build the Future of Influence Together.</h1>
 						<p class="fs-5 mb-0" style="max-width: 650px; line-height: 1.6; font-weight: 500; color: #ffffff; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">
-							Have questions about partnerships, sponsorships, or joining the ecosystem? Reach out and start a conversation.
+							Have questions about partnerships, sponserships, or joining the ecosystem? Reach out and start a conversation.
 						</p>
 					</div>
 				</div>

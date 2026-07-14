@@ -440,7 +440,7 @@ $seo = [
         [
             'category' => 'Connect',
             'title' => 'Creator Connect Sessions: Multi-Platform Monetization',
-            'desc' => 'Unlocking premium brand sponsorships, media kit architectures, and co-branded content monetization loops.',
+            'desc' => 'Unlocking premium brand sponserships, media kit architectures, and co-branded content monetization loops.',
             'date' => 'JUL 24, 2026',
             'location' => 'EPISODE 42',
             'host' => 'Rohan Sharma',

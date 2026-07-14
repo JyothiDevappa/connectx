@@ -30,7 +30,7 @@
             'slug' => 'creator-connect-sessions-multi-platform-monetization',
             'category' => 'Connect',
             'title' => 'Creator Connect Sessions: Multi-Platform Monetization',
-            'desc' => 'Unlocking premium brand sponsorships, media kit architectures, and co-branded content monetization loops.',
+            'desc' => 'Unlocking premium brand sponserships, media kit architectures, and co-branded content monetization loops.',
             'date' => 'JUL 24, 2026',
             'time' => '05:00 PM - 08:00 PM IST',
             'location' => 'EPISODE 42',
@@ -40,14 +40,14 @@
             'host_bio' => 'Rohan is a digital strategist advising over 20+ top-tier influencers on audience optimization.',
             'img' => 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=1200',
             'highlights' => [
-                'Unlocking premium brand sponsorships',
+                'Unlocking premium brand sponserships',
                 'Building media kit architectures that convert',
                 'Designing co-branded content monetization loops'
             ],
             'cohort' => 'Professional Creators, Influencers, Podcasters, and Digital Talents.',
             'outcomes' => [
                 'A brand deck optimization template.',
-                'A premium sponsorship negotiations checklist.',
+                'A premium sponsership negotiations checklist.',
                 'Multi-platform content strategy and workflow guides.'
             ]
         ],
