@@ -19,8 +19,8 @@ $seo = [
 {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://connectx.youngchanakya.com/speaker-talk#webpage",
-    "url": "https://connectx.youngchanakya.com/speaker-talk",
+    "@id": "https://connectx.youngchanakya.com/share-your-story#webpage",
+    "url": "https://connectx.youngchanakya.com/share-your-story",
     "name": "Submit Your Talk Proposal — Share Your Story | Young Chanakya X",
     "description": "Apply to speak on the Young Chanakya X stage and share your story with our global community.",
     "inLanguage": "en-IN",
@@ -544,7 +544,7 @@ $seo = [
 
     .category-panel {
         min-width: 350px;
-        height: 450px;
+        height: 500px;
         border-radius: 30px;
         scroll-snap-align: center;
         padding: 2.5rem 2.5rem 0 2.5rem;
@@ -605,22 +605,16 @@ $seo = [
         margin-bottom: 0;
     }
 
-    .cat-divider {
-        border-top: 1.5px dashed rgba(255, 210, 177, 0.2);
-        margin: 1.5rem 0 0 0;
-        width: 100%;
-    }
-
     .cat-img-box {
         position: absolute;
         right: 0;
         bottom: 0;
         width: 85%;
-        height: 220px;
-        border-radius: 0;
+        height: 260px;
+        border-radius: 24px 0 0 0;
         overflow: hidden;
-        border-left: 1.5px solid rgba(255, 210, 177, 0.15);
-        border-top: 1.5px solid rgba(255, 210, 177, 0.15);
+        border-left: 2px solid var(--theme-peach);
+        border-top: 2px solid var(--theme-peach);
         z-index: 1;
     }
 
@@ -786,7 +780,6 @@ $seo = [
                     <h3>Career Journey</h3>
                     <p class="cat-desc">Navigating pivots, ladders, and professional evolution.</p>
                 </div>
-                <div class="cat-divider"></div>
                 <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 <div class="cat-img-box">
                     <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="Career Journey">
@@ -799,7 +792,6 @@ $seo = [
                     <h3>Startup Stories</h3>
                     <p class="cat-desc">The grit, the funding, and building from zero to one.</p>
                 </div>
-                <div class="cat-divider"></div>
                 <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 <div class="cat-img-box">
                     <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80" alt="Startup Stories">
@@ -812,7 +804,6 @@ $seo = [
                     <h3>Leadership</h3>
                     <p class="cat-desc">Managing teams, setting vision, and driving culture.</p>
                 </div>
-                <div class="cat-divider"></div>
                 <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 <div class="cat-img-box">
                     <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80" alt="Leadership">
@@ -825,7 +816,6 @@ $seo = [
                     <h3>Innovation</h3>
                     <p class="cat-desc">Breaking norms and creating the technology of tomorrow.</p>
                 </div>
-                <div class="cat-divider"></div>
                 <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 <div class="cat-img-box">
                     <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80" alt="Innovation">
@@ -838,7 +828,6 @@ $seo = [
                     <h3>Personal Growth</h3>
                     <p class="cat-desc">Mental resilience, habit building, and finding purpose.</p>
                 </div>
-                <div class="cat-divider"></div>
                 <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 <div class="cat-img-box">
                     <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=600&q=80" alt="Personal Growth">

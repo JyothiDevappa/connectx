@@ -69,49 +69,56 @@
                 <a href="{{ url('/about') }}" class="fs-nav-item {{ request()->is('about') ? 'active' : '' }}" onclick="toggleMenu()">
                     <span class="fs-nav-name">About Young Chanakya X</span>
                     <span class="fs-nav-arrow">→</span>
-                    <!-- <span class="fs-nav-num">01</span> -->
                 </a>
 
                 <a href="{{ url('/become-a-partner') }}" class="fs-nav-item {{ request()->is('become-a-partner') ? 'active' : '' }}" onclick="toggleMenu()">
                     <span class="fs-nav-name">Become a Partner</span>
                     <span class="fs-nav-arrow">→</span>
-                    <!-- <span class="fs-nav-num">02</span> -->
                 </a>
 
-                <a href="{{ url('/become-a-sponser') }}" class="fs-nav-item {{ request()->is('become-a-sponser') ? 'active' : '' }}" onclick="toggleMenu()">
-                    <span class="fs-nav-name">Become a sponsor</span>
-                    <span class="fs-nav-arrow">→</span>
-                    <!-- <span class="fs-nav-num">03</span> -->
-                </a>
-
-                   <a href="{{ url('/become-a-speaker') }}" class="fs-nav-item {{ request()->is('become-a-speaker') ? 'active' : '' }}" onclick="toggleMenu()">
-                    <span class="fs-nav-name">Become a speaker</span>
+                <a href="{{ url('/become-a-sponsor') }}" class="fs-nav-item {{ request()->is('become-a-sponsor') || request()->is('become-a-sponser') ? 'active' : '' }}" onclick="toggleMenu()">
+                    <span class="fs-nav-name">Become a Sponsor</span>
                     <span class="fs-nav-arrow">→</span>
                 </a>
 
-                  <a href="{{ url('/career') }}" class="fs-nav-item {{ request()->is('career') ? 'active' : '' }}" onclick="toggleMenu()">
-                    <span class="fs-nav-name">career</span>
+                <a href="{{ url('/share-your-story') }}" class="fs-nav-item {{ request()->is('share-your-story') ? 'active' : '' }}" onclick="toggleMenu()">
+                    <span class="fs-nav-name">Share Your Story</span>
                     <span class="fs-nav-arrow">→</span>
                 </a>
 
+                <a href="{{ url('/become-a-speaker') }}" class="fs-nav-item {{ request()->is('become-a-speaker') ? 'active' : '' }}" onclick="toggleMenu()">
+                    <span class="fs-nav-name">YCX Talks</span>
+                    <span class="fs-nav-arrow">→</span>
+                </a>
 
-                <!-- Events page pending -->
+                <a href="{{ url('/become-a-speaker') }}" class="fs-nav-item {{ request()->is('become-a-speaker') ? 'active' : '' }}" onclick="toggleMenu()">
+                    <span class="fs-nav-name">Become a Featured on Podcast</span>
+                    <span class="fs-nav-arrow">→</span>
+                </a>
+
+                <a href="{{ url('/connectors-list') }}" class="fs-nav-item {{ request()->is('connectors-list') || request()->is('connecters-list') ? 'active' : '' }}" onclick="toggleMenu()">
+                    <span class="fs-nav-name">Connectors Directory</span>
+                    <span class="fs-nav-arrow">→</span>
+                </a>
+
                 <a href="{{ url('/events') }}" class="fs-nav-item {{ request()->is('events') ? 'active' : '' }}" onclick="toggleMenu()">
                     <span class="fs-nav-name">Events</span>
                     <span class="fs-nav-arrow">→</span>
-                    <!-- <span class="fs-nav-num">05</span> -->
                 </a>
 
-                <a href="{{ url('/connectors-list') }}" class="fs-nav-item {{ request()->is('connecters-list') ? 'active' : '' }}" onclick="toggleMenu()">
-                    <span class="fs-nav-name">Connectors Directory</span>
+                <a href="{{ url('/career') }}" class="fs-nav-item {{ request()->is('career') ? 'active' : '' }}" onclick="toggleMenu()">
+                    <span class="fs-nav-name">Career</span>
                     <span class="fs-nav-arrow">→</span>
-                    <!-- <span class="fs-nav-num">06</span> -->
+                </a>
+
+                <a href="{{ url('/internship') }}" class="fs-nav-item {{ request()->is('internship') ? 'active' : '' }}" onclick="toggleMenu()">
+                    <span class="fs-nav-name">Internship</span>
+                    <span class="fs-nav-arrow">→</span>
                 </a>
 
                 <a href="{{ url('/contact') }}" class="fs-nav-item {{ request()->is('contact') ? 'active' : '' }}" onclick="toggleMenu()">
-                    <span class="fs-nav-name">Contact</span>
+                    <span class="fs-nav-name">Contact Us</span>
                     <span class="fs-nav-arrow">→</span>
-                    <!-- <span class="fs-nav-num">07</span> -->
                 </a>
 
             </nav>
