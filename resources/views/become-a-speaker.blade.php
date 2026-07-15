@@ -167,17 +167,6 @@ $seo = [
     display: none !important;
   }
 
-  .speaker-body .section-head h2,
-  .speaker-body h2.sec-title {
-    font-family: 'Manrope', sans-serif !important;
-    font-size: clamp(34px, 4vw, 56px) !important;
-    font-weight: 900 !important;
-    line-height: 1.15 !important;
-    letter-spacing: -2px !important;
-    color: var(--ink) !important;
-    margin-bottom: 24px !important;
-  }
-
   .speaker-body .section-head p,
   .speaker-body p.sec-desc {
     font-family: 'Manrope', sans-serif !important;
@@ -443,13 +432,13 @@ $seo = [
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
     gap: 56px;
-    align-items: center;
+    align-items: stretch;
   }
 
   .speaker-body .elig-image {
     border-radius: 20px;
     overflow: hidden;
-    aspect-ratio: 4/5;
+    height: 100%;
   }
 
   .speaker-body .elig-image img {
@@ -838,8 +827,8 @@ $seo = [
   
   /* ---------- Language strip ---------- */
   .speaker-body .lang-strip {
-    background: var(--ink);
-    color: var(--peach);
+    background: var(--peach-deep);
+    color: var(--ink);
     padding: 22px 0;
     overflow: hidden;
   }
@@ -863,7 +852,7 @@ $seo = [
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background: var(--peach-deep);
+    background: var(--ink);
     opacity: .6;
   }
   @keyframes scrollLeft {
@@ -1242,27 +1231,27 @@ $seo = [
       <div class="row align-items-center gy-5">
         <div class="col-lg-6">
           <div class="eyebrow rv">Become a YCX Speaker</div>
-          <h1>Your Story is Someone Else's Turning Point</h1>
-          <p class="hero-copy">Young Chanakya X is looking for people whose experience deserves a room, a mic, and an audience that's ready to listen. Apply below — it takes less than five minutes.</p>
+          <h1>Every Idea Deserves<br> a Stage</h1>
+          <p class="hero-copy">Every great idea has the power to inspire action. Speak at YCX Talks and share your expertise, practical insights, and experiences with a community that's eager to learn, grow, and create meaningful impact.</p>
           
           <div class="about-hero-buttons">
             <div class="tick-list-item white-text">
               <span class="tick-circle">
                 <i class="bi bi-check-lg"></i>
               </span>
-              No cost to apply or to speak
+              Educate through practical, real-world knowledge
             </div>
             <div class="tick-list-item white-text">
               <span class="tick-circle">
                 <i class="bi bi-check-lg"></i>
               </span>
-              Speak in the language you're most fluent in
+              Build credibility as a trusted speaker
             </div>
             <div class="tick-list-item white-text">
               <span class="tick-circle">
                 <i class="bi bi-check-lg"></i>
               </span>
-              Full story shaping and rehearsal support included
+              Connect with a diverse and engaged audience
             </div>
           </div>
         </div>
@@ -1440,8 +1429,8 @@ $seo = [
       <!-- Right Column: Content -->
       <div>
         <span class="eyebrow" style="display: inline-flex; align-items: center; gap: 10px;">About YCX Talks</span>
-        <h2>A microphone for the ideas already inside YCX</h2>
-        <p>YCX Talks started as a fifteen-minute slot at an all-hands meeting and grew into a full speaker series. Every session, we hand the stage to someone with a real story: a hard-won lesson, an unusual perspective, or a problem they\'re still in the middle of solving.</p>
+        <h2>A Stage for Ideas That Create Impact</h2>
+        <p>YCX Talks is a knowledge-sharing series where professionals, founders, educators, creators, and industry experts share practical insights that help people think differently, learn continuously, and grow together.</p>
         
         <div style="margin-top: 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
           <!-- Point 1 -->
@@ -1450,8 +1439,8 @@ $seo = [
               <i class="bi bi-check-lg"></i>
             </span>
             <div>
-              <b style="display: block; font-size: 15px; color: var(--ink); margin-bottom: 4px;">Built by the community</b>
-              <span style="font-size: 13px; color: var(--text-soft); line-height: 1.5;">Talks are pitched, picked and shaped by YCX people.</span>
+              <b style="display: block; font-size: 15px; color: var(--ink); margin-bottom: 4px;">Live Stage Talk</b>
+              <span style="font-size: 13px; color: var(--text-soft); line-height: 1.5;">Share your ideas, experiences, or expertise with a live audience</span>
             </div>
           </div>
           <!-- Point 2 -->
@@ -1460,8 +1449,8 @@ $seo = [
               <i class="bi bi-check-lg"></i>
             </span>
             <div>
-              <b style="display: block; font-size: 15px; color: var(--ink); margin-bottom: 4px;">Short, honest, unscripted</b>
-              <span style="font-size: 13px; color: var(--text-soft); line-height: 1.5;">12–20 minutes. Real slides, real mistakes, real applause.</span>
+              <b style="display: block; font-size: 15px; color: var(--ink); margin-bottom: 4px;">Fireside Chat</b>
+              <span style="font-size: 13px; color: var(--text-soft); line-height: 1.5;">Take part in a relaxed conversation about your experiences and insights</span>
             </div>
           </div>
           <!-- Point 3 -->
@@ -1470,8 +1459,8 @@ $seo = [
               <i class="bi bi-check-lg"></i>
             </span>
             <div>
-              <b style="display: block; font-size: 15px; color: var(--ink); margin-bottom: 4px;">Open to everyone</b>
-              <span style="font-size: 13px; color: var(--text-soft); line-height: 1.5;">Employees, founders, partners and alumni are welcome on stage.</span>
+              <b style="display: block; font-size: 15px; color: var(--ink); margin-bottom: 4px;">Expert Interview</b>
+              <span style="font-size: 13px; color: var(--text-soft); line-height: 1.5;">Answer thoughtful questions and share your expertise with the community</span>
             </div>
           </div>
           <!-- Point 4 -->
@@ -1480,8 +1469,8 @@ $seo = [
               <i class="bi bi-check-lg"></i>
             </span>
             <div>
-              <b style="display: block; font-size: 15px; color: var(--ink); margin-bottom: 4px;">No polished rehearsal</b>
-              <span style="font-size: 13px; color: var(--text-soft); line-height: 1.5;">Just a good idea and the courage to share it.</span>
+              <b style="display: block; font-size: 15px; color: var(--ink); margin-bottom: 4px;">Ask Me Anything (AMA)</b>
+              <span style="font-size: 13px; color: var(--text-soft); line-height: 1.5;">Answer audience questions and share practical advice from your experience</span>
             </div>
           </div>
         </div>
@@ -1495,9 +1484,9 @@ $seo = [
     <div class="section-head">
       <div>
         <span class="eyebrow">Featured Talks</span>
-        <h2 class="sec-title" style="margin-top: 10px;">The ones people keep sending around</h2>
+        <h2 class="sec-title" style="margin-top: 10px;">Speak on What You <br>Know Best</h2>
       </div>
-      <p class="sec-desc">A running list of the talks with the longest watch-time and the most re-shares this season.</p>
+      <p class="sec-desc">Explore talks from inspiring speakers who have shared practical knowledge, innovative thinking, and valuable experiences with the YCX community</p>
     </div>
 
     <div class="talk-grid">
@@ -1505,26 +1494,24 @@ $seo = [
       <div class="talk-card">
         <div class="talk-thumb">
           <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Speaker presenting to a small group">
-          <span class="talk-tag">Product</span>
-          <span class="talk-dur">18:24</span>
+          <span class="talk-tag">Personal Growth</span>
         </div>
         <div class="ticket-perf"></div>
         <div class="talk-body">
-          <h3>Designing for Trust When Users Can't See the Model</h3>
-          <div class="talk-speaker"><span class="dot"></span><span>Aanya Rao — Product Design</span></div>
+          <h3>Small Habits That Create Extraordinary Results</h3>
+          <div class="talk-speaker"><span class="dot"></span><span>Aanya Rao</span></div>
         </div>
       </div>
 
       <div class="talk-card">
         <div class="talk-thumb">
           <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Speaker presenting with a digital screen to colleagues">
-          <span class="talk-tag">Leadership</span>
-          <span class="talk-dur">22:10</span>
+          <span class="talk-tag">Education</span>
         </div>
         <div class="ticket-perf"></div>
         <div class="talk-body">
-          <h3>The Physics of Fast Teams</h3>
-          <div class="talk-speaker"><span class="dot"></span><span>Rohan Mehta — Engineering</span></div>
+          <h3>Rethinking Learning for the Next Generation</h3>
+          <div class="talk-speaker"><span class="dot"></span><span>Rohan Mehta</span></div>
         </div>
       </div>
 
@@ -1532,11 +1519,10 @@ $seo = [
         <div class="talk-thumb">
           <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Speaker presenting on stage to a large audience">
           <span class="talk-tag">Growth</span>
-          <span class="talk-dur">16:47</span>
         </div>
         <div class="ticket-perf"></div>
         <div class="talk-body">
-          <h3>Unlearning the Funnel: A New Growth Playbook</h3>
+          <h3>Creating Brands That People Remember and Trust</h3>
           <div class="talk-speaker"><span class="dot"></span><span>Elena Cruz — Marketing</span></div>
         </div>
       </div>
@@ -1551,8 +1537,8 @@ $seo = [
       <div class="row align-items-center mb-5">
         <div class="col-lg-6 text-start">
           <span class="eyebrow">Who Belongs On This Stage</span>
-          <h2 class="heading">If You're Building Something, You Belong Here</h2>
-          <p class="description">YCX speakers come from every corner of ambition — there's no single "type." What they share is a story worth passing on.</p>
+          <h2 class="heading">Knowledge Comes from Every Journey</h2>
+          <p class="description">We're looking for individuals who enjoy sharing practical knowledge, industry expertise, and fresh perspectives that help others learn and grow.</p>
         </div>
         <div class="col-lg-6 mt-4 mt-lg-0">
           <div class="visual-box" style="height: 300px; overflow: hidden; border-radius: 20px; background: #f4f4f4;">
@@ -1565,7 +1551,7 @@ $seo = [
       <div class="row mt-5">
         <div class="col-12 pt-4">
           <div class="badge-grid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;">
-            <div class="pill text-center">Students</div>
+            <div class="pill text-center">Innovators</div>
             <div class="pill text-center">Entrepreneurs</div>
             <div class="pill text-center">Founders</div>
             <div class="pill text-center">Professionals</div>
@@ -1588,12 +1574,12 @@ $seo = [
     <div class="wrap">
       <div class="section-head text-center mx-auto" style="max-width: 900px;">
         <span class="eyebrow">Before You Apply</span>
-        <h2 class="sec-title">What We Look for in a YCX Speaker</h2>
-        <p class="sec-desc" style="max-width: 720px; margin-left: auto; margin-right: auto;">We value authentic stories, practical insights, and speakers who are open to refining their delivery through expert guidance</p>
+        <h2 class="sec-title">What Makes a Great YCX Talk</h2>
+        <p class="sec-desc" style="max-width: 720px; margin-left: auto; margin-right: auto;">We're looking for speakers who can share practical knowledge, engage the audience, and create meaningful learning experiences</p>
       </div>
       <div class="elig-layout">
         <div class="elig-image">
-          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Speaker preparing before a talk">
+          <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Speaker presenting on stage to a large audience">
         </div>
         <div class="elig-checklist">
           <div class="tick-list-item large-tick ink-text">
@@ -1601,8 +1587,8 @@ $seo = [
               <i class="bi bi-check-lg"></i>
             </span>
             <div>
-              <h4 style="margin: 0 0 4px 0; font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 700; color: var(--ink);">A real story with a turning point</h4>
-              <p style="margin: 0; font-size: 14.5px; color: var(--text-soft); line-height: 1.6;">Not just an achievement — a moment where something genuinely changed.</p>
+              <h4 style="margin: 0 0 4px 0; font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 700; color: var(--ink);">Valuable Insights</h4>
+              <p style="margin: 0; font-size: 14.5px; color: var(--text-soft); line-height: 1.6;">Share practical ideas, lessons, or strategies that people can apply in their careers, businesses, or everyday life</p>
             </div>
           </div>
           <div class="tick-list-item large-tick ink-text">
@@ -1610,8 +1596,8 @@ $seo = [
               <i class="bi bi-check-lg"></i>
             </span>
             <div>
-              <h4 style="margin: 0 0 4px 0; font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 700; color: var(--ink);">Willingness to be coached</h4>
-              <p style="margin: 0; font-size: 14.5px; color: var(--text-soft); line-height: 1.6;">Our team works closely with every speaker — the best sessions come from people open to shaping their story together.</p>
+              <h4 style="margin: 0 0 4px 0; font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 700; color: var(--ink);">Clear & Relevant Topic</h4>
+              <p style="margin: 0; font-size: 14.5px; color: var(--text-soft); line-height: 1.6;">Choose a focused topic that addresses real challenges, emerging trends, or valuable opportunities</p>
             </div>
           </div>
           <div class="tick-list-item large-tick ink-text">
@@ -1619,8 +1605,8 @@ $seo = [
               <i class="bi bi-check-lg"></i>
             </span>
             <div>
-              <h4 style="margin: 0 0 4px 0; font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 700; color: var(--ink);">Comfort in your own language</h4>
-              <p style="margin: 0; font-size: 14.5px; color: var(--text-soft); line-height: 1.6;">Confidence matters more than accent-free English — speak in whatever language you think best in.</p>
+              <h4 style="margin: 0 0 4px 0; font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 700; color: var(--ink);">Engaging Presentation</h4>
+              <p style="margin: 0; font-size: 14.5px; color: var(--text-soft); line-height: 1.6;">Communicate your ideas with clarity, confidence, and an approach that keeps the audience engaged</p>
             </div>
           </div>
           <div class="tick-list-item large-tick ink-text">
@@ -1628,8 +1614,8 @@ $seo = [
               <i class="bi bi-check-lg"></i>
             </span>
             <div>
-              <h4 style="margin: 0 0 4px 0; font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 700; color: var(--ink);">Something the audience can use</h4>
-              <p style="margin: 0; font-size: 14.5px; color: var(--text-soft); line-height: 1.6;">A lesson, a framework, a warning — anything a listener could actually walk away and apply.</p>
+              <h4 style="margin: 0 0 4px 0; font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 700; color: var(--ink);">Actionable Takeaways</h4>
+              <p style="margin: 0; font-size: 14.5px; color: var(--text-soft); line-height: 1.6;">Leave the audience with useful insights, practical tools, or next steps they can immediately put into practice</p>
             </div>
           </div>
           <!-- <div class="elig-note">Applying doesn't guarantee a stage — but every honest story gets read by a real person on our team.</div> -->
@@ -1786,39 +1772,39 @@ $seo = [
     <div class="wrap">
       <div class="section-head text-center mx-auto" style="max-width: 1000px;">
         <span class="eyebrow">What You Gain</span>
-        <h2 class="sec-title nowrap-md">Speaking at YCX isn't just a stage. It's a return</h2>
-        <p class="sec-desc">A platform built for impact. When you share your journey with YCX, you inspire the next generation of builders while expanding your own reach, network, and credibility.</p>
+        <h2 class="sec-title nowrap-md">Speaking at YCX Goes Beyond the Stage</h2>
+        <p class="sec-desc">Every YCX Talk is an opportunity to educate, inspire, and build meaningful connections with a community <br>that values knowledge, ideas, and real experiences</p>
       </div>
       <div class="benefits-grid">
         <div class="benefit-card">
           <span class="mono">REACH</span>
-          <h3>An audience that's actually listening</h3>
-          <p>Your story reaches a growing, ambitious community across India — not a passive feed.</p>
+          <h3>A Community That Wants to Learn</h3>
+          <p>Share your ideas with an engaged audience that's eager to discover practical knowledge and fresh perspectives</p>
         </div>
         <div class="benefit-card">
           <span class="mono">CREDIBILITY</span>
-          <h3>A stage that adds weight to your name</h3>
-          <p>A YCX feature becomes a credible reference point people can find and share.</p>
+          <h3>Build Trust Through Expertise</h3>
+          <p>Position yourself as a knowledgeable voice by sharing insights backed by real-world experience</p>
+        </div>
+        <div class="benefit-card">
+          <span class="mono">VISIBILITY</span>
+          <h3>Expand Your Presence</h3>
+          <p>Reach new audiences through YCX events, digital platforms, and community initiatives</p>
+        </div>
+        <div class="benefit-card">
+          <span class="mono">IMPACT</span>
+          <h3>Inspire Meaningful Change</h3>
+          <p>Help people gain confidence, solve challenges, and take action through your knowledge</p>
         </div>
         <div class="benefit-card">
           <span class="mono">NETWORK</span>
-          <h3>Direct access to the YCX community</h3>
-          <p>Founders, mentors, investors, and educators — all one conversation away.</p>
-        </div>
-        <div class="benefit-card">
-          <span class="mono">CONTENT</span>
-          <h3>A professionally produced asset</h3>
-          <p>Use your talk on your own website, LinkedIn, or portfolio — it's yours to keep.</p>
-        </div>
-        <div class="benefit-card">
-          <span class="mono">MENTORSHIP</span>
-          <h3>Relationships that outlast the session</h3>
-          <p>Many speakers stay on as mentors, collaborators, or hosts for future YCX editions.</p>
+          <h3>Build Valuable Connections</h3>
+          <p>Meet founders, professionals, creators, educators, and future collaborators who share your interests.</p>
         </div>
         <div class="benefit-card">
           <span class="mono">LANGUAGE</span>
-          <h3>Told the way you'd actually say it</h3>
-          <p>Speak in the language your story is truest in — we'll meet you there.</p>
+          <h3>Leave Ideas That Last</h3>
+          <p>Your session becomes part of a growing knowledge ecosystem that continues to educate and inspire beyond the event</p>
         </div>
       </div>
     </div>
@@ -1844,9 +1830,9 @@ $seo = [
     "></div>
 
     <div class="wrap" style="position: relative; z-index: 1;">
-      <h2 class="sec-title" style="color: #ffffff !important; letter-spacing: -2px;">Have a story that needs a bigger room?</h2>
-      <p class="sec-desc" style="color: rgba(255,250,244,0.85) !important;">We're always looking for the next YCX speaker. If you have something to say — or know someone who does — this is where it starts.</p>
-      <a href="#apply-form" class="btn btn-primary" style="background: #ffd2b1; color: #0c3a30 !important; font-weight: 700;">Apply to Speak</a>
+      <h2 class="sec-title" style="color: #ffffff !important; letter-spacing: -2px;">Have a Story that Needs a Bigger Room?</h2>
+      <p class="sec-desc" style="color: rgba(255,250,244,0.85) !important;">If you have ideas, expertise, or practical experiences that can educate and inspire others, we'd love to welcome you to the YCX Talks stage.</p>
+      <a href="#speakerForm" class="btn btn-primary" style="background: #ffd2b1; color: #0c3a30 !important; font-weight: 700;">Become a Speaker</a>
     </div>
   </section>
 
