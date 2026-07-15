@@ -1,9 +1,9 @@
 @php
 /**
- * Become a sponser Page SEO Data
+ * Become a sponsor Page SEO Data
  */
 $seo = [
-    'title'       => 'Become a sponser — Community & sponsership Opportunities | Young Chanakya X',
+    'title'       => 'Become a sponsor — Community & sponsership Opportunities | Young Chanakya X',
     'description' => 'sponser Young Chanakya X events and creator programs to amplify your brand reach. Access title sponserships, event sponserships, community sponserships, and creator ecosystem packages.',
     'keywords'    => 'Young Chanakya X sponsership, sponser Young Chanakya X, event sponsership India, brand visibility creator events, community sponser Young Chanakya, creator platform sponsership',
     'image'       => asset('images/assets/seo-share.jpg'),

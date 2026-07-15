@@ -102,6 +102,10 @@ Route::post('/become-a-partner/apply', [ApplicationController::class, 'submitPar
 Route::get('/become-a-speaker', function () {
     return view('become-a-speaker');
 });
+
+Route::get('/speaker-talk', function () {
+    return view('speaker-talk');
+})->name('speaker.talk');
 Route::get('/career', [App\Http\Controllers\JobController::class, 'careers'])->name('careers.index');
 Route::get('/internship', [App\Http\Controllers\JobController::class, 'internships'])->name('internships.index');
 Route::get('/career/{slug}', [App\Http\Controllers\JobController::class, 'careerDetail'])->name('careers.detail');

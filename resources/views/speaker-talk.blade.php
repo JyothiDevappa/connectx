@@ -41,6 +41,9 @@ $seo = [
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/css/intlTelInput.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
     .iti {
         width: 100%;
@@ -486,26 +489,166 @@ $seo = [
         }
     }
 
-    /* Grid for Explore Conversations */
-    .st-explore-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 20px;
+    /* Featured Categories (Horizontal Scroll) from ycx.html.html */
+    #categories {
+        --theme-green: #0c3a30;
+        --theme-peach: #ffd2b1;
+        --bg-dark: #07221c;
+        --bg-darker: #041411;
+        --text-main: #f0f5f3;
+        --text-muted: #96aca6;
+        --accent-peach: #ffd2b1;
+        --accent-peach-light: #ffe5d1;
+        --accent-gradient: linear-gradient(135deg, var(--theme-peach), var(--accent-peach-light));
+        --glass-border: rgba(255, 210, 177, 0.15);
+        --font-head: 'Outfit', sans-serif;
+        --font-body: 'Poppins', sans-serif;
+
+        background-color: var(--bg-darker);
+        overflow: hidden;
+        padding: 80px 0;
+        font-family: var(--font-body);
     }
-    @media (max-width: 1200px) {
-        .st-explore-grid {
-            grid-template-columns: repeat(3, 1fr);
-        }
+
+    #categories h2 {
+        font-family: var(--font-head);
+        color: var(--text-main) !important;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
     }
-    @media (max-width: 768px) {
-        .st-explore-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
+
+    #categories h3 {
+        font-family: var(--font-head);
     }
-    @media (max-width: 480px) {
-        .st-explore-grid {
-            grid-template-columns: 1fr;
-        }
+
+    #categories .gradient-text {
+        background: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        display: inline-block;
+    }
+
+    .categories-wrapper {
+        display: flex;
+        gap: 2rem;
+        padding: 2rem 0;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .categories-wrapper::-webkit-scrollbar {
+        display: none; /* Chrome */
+    }
+
+    .category-panel {
+        min-width: 350px;
+        height: 450px;
+        border-radius: 30px;
+        scroll-snap-align: center;
+        padding: 2.5rem 2.5rem 0 2.5rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transition: all 0.4s ease;
+        border: 1px solid var(--glass-border);
+        overflow: hidden;
+        background: linear-gradient(135deg, rgba(12, 58, 48, 0.25) 0%, rgba(7, 34, 28, 0.45) 100%);
+        backdrop-filter: blur(12px);
+    }
+
+    .category-panel::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        border-radius: 30px;
+        background: var(--accent-gradient);
+        opacity: 0;
+        z-index: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .category-panel:hover::before {
+        opacity: 0.1;
+    }
+
+    .category-panel:hover {
+        transform: scale(1.02);
+        border-color: rgba(255, 210, 177, 0.4);
+    }
+
+    .category-panel > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .category-panel h3 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-main);
+    }
+
+    .cat-number {
+        color: var(--theme-peach);
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-size: 1.1rem;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .cat-desc {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 0;
+    }
+
+    .cat-divider {
+        border-top: 1.5px dashed rgba(255, 210, 177, 0.2);
+        margin: 1.5rem 0 0 0;
+        width: 100%;
+    }
+
+    .cat-img-box {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 85%;
+        height: 220px;
+        border-radius: 0;
+        overflow: hidden;
+        border-left: 1.5px solid rgba(255, 210, 177, 0.15);
+        border-top: 1.5px solid rgba(255, 210, 177, 0.15);
+        z-index: 1;
+    }
+
+    .cat-img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .category-panel:hover .cat-img-box img {
+        transform: scale(1.1);
+    }
+    
+    .cat-arrow {
+        display: none;
+    }
+
+    /* Scroll Reveal Animations for Explore Conversations */
+    #categories .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    #categories .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
     }
 </style>
 
@@ -632,67 +775,75 @@ $seo = [
 </section>
 
 <!-- EXPLORE CONVERSATIONS -->
-<section class="partner-sec st-section st-bg-grey-green" id="explore-conversations" style="padding-left: 32px; padding-right: 32px;">
-    <div class="partner-head text-center mb-5">
-        <div class="st-eyebrow" style="color: #0c3a30 !important;">Curated Categories</div>
-        <h2 class="sec-title" style="margin-bottom: 16px; color: #0c3a30 !important;">Explore Conversations</h2>
-        <p class="st-subheading mx-auto" style="margin-bottom: 40px; line-height: 1.6; max-width: 600px; color: #4d6459;">Discover raw dialogues and stories that align with your professional and personal aspirations.</p>
-    </div>
-    
-    <div class="st-explore-grid">
-        <!-- Card 1 -->
-        <div class="p-card rv" style="transition-delay:0s">
-            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="Career Journey — YCX" loading="lazy">
-            <div class="p-card-ov">
-                <div style="font-family: 'Manrope', sans-serif; font-size: 1.5rem; font-weight: 900; color: #ffd2b1; margin-bottom: 8px; line-height: 1;">01</div>
-                <div class="p-name">Career Journey</div>
-                <div class="p-desc">Navigating pivots, ladders, and professional evolution.</div>
+<section id="categories">
+    <div class="container">
+        <h2 class="reveal" style="font-size: 2.5rem; margin-bottom: 1rem; color: #f0f5f3 !important;">Explore <span class="gradient-text">Conversations</span></h2>
+        <div class="categories-wrapper reveal">
+            <!-- 01 Career Journey -->
+            <div class="category-panel">
+                <div class="cat-content">
+                    <span class="cat-number">01</span>
+                    <h3>Career Journey</h3>
+                    <p class="cat-desc">Navigating pivots, ladders, and professional evolution.</p>
+                </div>
+                <div class="cat-divider"></div>
+                <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="cat-img-box">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="Career Journey">
+                </div>
             </div>
-            <div class="p-arrow">↗</div>
-        </div>
-        
-        <!-- Card 2 -->
-        <div class="p-card rv" style="transition-delay:0.07s">
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80" alt="Startup Stories — YCX" loading="lazy">
-            <div class="p-card-ov">
-                <div style="font-family: 'Manrope', sans-serif; font-size: 1.5rem; font-weight: 900; color: #ffd2b1; margin-bottom: 8px; line-height: 1;">02</div>
-                <div class="p-name">Startup Stories</div>
-                <div class="p-desc">The grit, the funding, and building from zero to one.</div>
+            <!-- 02 Startup Stories -->
+            <div class="category-panel">
+                <div class="cat-content">
+                    <span class="cat-number">02</span>
+                    <h3>Startup Stories</h3>
+                    <p class="cat-desc">The grit, the funding, and building from zero to one.</p>
+                </div>
+                <div class="cat-divider"></div>
+                <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="cat-img-box">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80" alt="Startup Stories">
+                </div>
             </div>
-            <div class="p-arrow">↗</div>
-        </div>
-        
-        <!-- Card 3 -->
-        <div class="p-card rv" style="transition-delay:0.14s">
-            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80" alt="Leadership — YCX" loading="lazy">
-            <div class="p-card-ov">
-                <div style="font-family: 'Manrope', sans-serif; font-size: 1.5rem; font-weight: 900; color: #ffd2b1; margin-bottom: 8px; line-height: 1;">03</div>
-                <div class="p-name">Leadership</div>
-                <div class="p-desc">Managing teams, setting vision, and driving culture.</div>
+            <!-- 03 Leadership -->
+            <div class="category-panel">
+                <div class="cat-content">
+                    <span class="cat-number">03</span>
+                    <h3>Leadership</h3>
+                    <p class="cat-desc">Managing teams, setting vision, and driving culture.</p>
+                </div>
+                <div class="cat-divider"></div>
+                <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="cat-img-box">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80" alt="Leadership">
+                </div>
             </div>
-            <div class="p-arrow">↗</div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="p-card rv" style="transition-delay:0.21s">
-            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80" alt="Innovation — YCX" loading="lazy">
-            <div class="p-card-ov">
-                <div style="font-family: 'Manrope', sans-serif; font-size: 1.5rem; font-weight: 900; color: #ffd2b1; margin-bottom: 8px; line-height: 1;">04</div>
-                <div class="p-name">Innovation</div>
-                <div class="p-desc">Breaking norms and creating the technology of tomorrow.</div>
+            <!-- 04 Innovation -->
+            <div class="category-panel">
+                <div class="cat-content">
+                    <span class="cat-number">04</span>
+                    <h3>Innovation</h3>
+                    <p class="cat-desc">Breaking norms and creating the technology of tomorrow.</p>
+                </div>
+                <div class="cat-divider"></div>
+                <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="cat-img-box">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80" alt="Innovation">
+                </div>
             </div>
-            <div class="p-arrow">↗</div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="p-card rv" style="transition-delay:0.28s">
-            <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=600&q=80" alt="Personal Growth — YCX" loading="lazy">
-            <div class="p-card-ov">
-                <div style="font-family: 'Manrope', sans-serif; font-size: 1.5rem; font-weight: 900; color: #ffd2b1; margin-bottom: 8px; line-height: 1;">05</div>
-                <div class="p-name">Personal Growth</div>
-                <div class="p-desc">Mental resilience, habit building, and finding purpose.</div>
+            <!-- 05 Personal Growth -->
+            <div class="category-panel">
+                <div class="cat-content">
+                    <span class="cat-number">05</span>
+                    <h3>Personal Growth</h3>
+                    <p class="cat-desc">Mental resilience, habit building, and finding purpose.</p>
+                </div>
+                <div class="cat-divider"></div>
+                <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="cat-img-box">
+                    <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=600&q=80" alt="Personal Growth">
+                </div>
             </div>
-            <div class="p-arrow">↗</div>
         </div>
     </div>
 </section>
@@ -1163,6 +1314,26 @@ $seo = [
                 form.reset();
             });
         }
+
+        // Scroll Reveal Animations for Explore Conversations
+        const revealElements = document.querySelectorAll('#categories .reveal');
+        
+        const revealOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, revealOptions);
+
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
     });
 </script>
 @endpush
