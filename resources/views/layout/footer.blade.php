@@ -347,7 +347,19 @@
 
                             <li>
                                 <a href="{{ url('/connecters-list') }}">
-                                    Directory
+                                    Connectors
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ url('/career') }}">
+                                    Careers
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{ url('/internship') }}">
+                                    Internships
                                 </a>
                             </li>
 
@@ -355,11 +367,11 @@
 
                     </div>
 
-                    <!-- PROGRAMS -->
+                    <!-- GET INVOLVED -->
                     <div class="col-xl-2 col-lg-2 col-md-3 col-6 mb-20">
 
                         <h5 class="footer-title">
-                            Programs
+                            Get Involved
                         </h5>
 
                         <ul class="footer-nav-link style-none">
@@ -373,13 +385,13 @@
 
                             <li>
                                 <a href="{{ url('/become-a-sponser') }}">
-                                    Become a sponser
+                                    Become a Sponsor
                                 </a>
                             </li>
 
                             <li>
-                                <a href="{{ url('/contact') }}">
-                                    Contact Us
+                                <a href="{{ url('/become-a-speaker') }}">
+                                    Become a Speaker
                                 </a>
                             </li>
 
