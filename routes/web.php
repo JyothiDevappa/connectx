@@ -62,11 +62,10 @@ Route::get('/cart', fn() => view('cart'));
 Route::get('/checkout', fn() => view('checkout'));
 
 // =========================
-// BLOG
+// INSIGHTS
 // =========================
-Route::get('/blog-1', fn() => view('blog-v1'));
-Route::get('/blog-2', fn() => view('blog-v2'));
-Route::get('/blog-details', fn() => view('blog-details'));
+Route::get('/insights', fn() => view('blog'))->name('insights.index');
+Route::get('/insights/{slug?}', fn($slug = null) => view('blog-details', compact('slug')))->name('insights.detail');
 
 // =========================
 // OTHER PAGES
