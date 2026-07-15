@@ -84,6 +84,17 @@
                     <!-- <span class="fs-nav-num">03</span> -->
                 </a>
 
+                   <a href="{{ url('/become-a-speaker') }}" class="fs-nav-item {{ request()->is('become-a-speaker') ? 'active' : '' }}" onclick="toggleMenu()">
+                    <span class="fs-nav-name">Become a speaker</span>
+                    <span class="fs-nav-arrow">→</span>
+                </a>
+
+                  <a href="{{ url('/career') }}" class="fs-nav-item {{ request()->is('career') ? 'active' : '' }}" onclick="toggleMenu()">
+                    <span class="fs-nav-name">career</span>
+                    <span class="fs-nav-arrow">→</span>
+                </a>
+
+
                 <!-- Events page pending -->
                 <a href="{{ url('/events') }}" class="fs-nav-item {{ request()->is('events') ? 'active' : '' }}" onclick="toggleMenu()">
                     <span class="fs-nav-name">Events</span>
