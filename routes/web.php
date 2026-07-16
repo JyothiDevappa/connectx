@@ -111,9 +111,9 @@ Route::get('/become-a-feature', function () {
     return view('become-a-feature');
 })->name('become-a-feature');
 
-Route::get('/speaker-talk', function () {
-    return view('speaker-talk');
-})->name('speaker.talk');
+Route::get('/share-your-story', function () {
+    return view('share-your-story');
+})->name('share.your.story');
 Route::get('/career', [App\Http\Controllers\JobController::class, 'careers'])->name('careers.index');
 Route::get('/internship', [App\Http\Controllers\JobController::class, 'internships'])->name('internships.index');
 Route::get('/career/{slug}', [App\Http\Controllers\JobController::class, 'careerDetail'])->name('careers.detail');
