@@ -91,8 +91,8 @@
                     <span class="fs-nav-arrow">→</span>
                 </a>
 
-                <a href="{{ url('/become-a-speaker') }}" class="fs-nav-item {{ request()->is('become-a-speaker') ? 'active' : '' }}" onclick="toggleMenu()">
-                    <span class="fs-nav-name">Become a Featured on Podcast</span>
+                <a href="{{ url('/become-a-feature') }}" class="fs-nav-item {{ request()->is('become-a-feature') ? 'active' : '' }}" onclick="toggleMenu()">
+                    <span class="fs-nav-name">Become Featured on Podcast</span>
                     <span class="fs-nav-arrow">→</span>
                 </a>
 

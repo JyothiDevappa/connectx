@@ -12,7 +12,7 @@ class AdminDashboardController extends Controller
      */
     public function index($section = 'overview')
     {
-        $allowedSections = ['overview', 'connectors', 'sponsers', 'partners', 'speakers', 'careers', 'internships', 'posted_jobs', 'contacts'];
+        $allowedSections = ['overview', 'connectors', 'sponsers', 'partners', 'speakers', 'careers', 'internships', 'posted_jobs', 'contacts', 'featured_guests'];
         // Also accept 'sponsors' alias and normalise to 'sponsers' for JS compatibility
         if ($section === 'sponsors') $section = 'sponsers';
         if (!in_array($section, $allowedSections)) {
@@ -144,7 +144,26 @@ class AdminDashboardController extends Controller
             ];
         });
 
-        return view('admin.dashboard', compact('section', 'connectors', 'partners', 'sponsers', 'postedJobs', 'careers', 'internships', 'contacts', 'speakers'));
+        $featuredGuests = \App\Models\FeaturedGuest::orderByDesc('created_at')->get()->map(function ($g) {
+            return [
+                'id'               => $g->id,
+                'name'             => $g->full_name,
+                'full_name'        => $g->full_name,
+                'email'            => $g->email,
+                'phone'            => $g->phone,
+                'company_name'     => $g->company_name,
+                'company'          => $g->company_name,
+                'designation'      => $g->designation,
+                'social_media_url' => $g->social_media_url,
+                'linkedin'         => $g->social_media_url,
+                'topic'            => $g->topic ?? '',
+                'status'           => $g->status,
+                'notes'            => $g->notes ?? '',
+                'submitted'        => $g->created_at->format('Y-m-d'),
+            ];
+        });
+
+        return view('admin.dashboard', compact('section', 'connectors', 'partners', 'sponsers', 'postedJobs', 'careers', 'internships', 'contacts', 'speakers', 'featuredGuests'));
     }
 
     /**
@@ -588,6 +607,55 @@ class AdminDashboardController extends Controller
             'type'    => 'success',
             'message' => 'Speaker application updated successfully.',
             'data'    => $speaker
+        ]);
+    }
+
+    /**
+     * Return featured guests as JSON.
+     */
+    public function featuredGuests(Request $request)
+    {
+        $guests = \App\Models\FeaturedGuest::orderByDesc('created_at')->get()->map(function ($g) {
+            return [
+                'id'               => $g->id,
+                'name'             => $g->full_name,
+                'full_name'        => $g->full_name,
+                'email'            => $g->email,
+                'phone'            => $g->phone,
+                'company_name'     => $g->company_name,
+                'company'          => $g->company_name,
+                'designation'      => $g->designation,
+                'social_media_url' => $g->social_media_url,
+                'linkedin'         => $g->social_media_url,
+                'topic'            => $g->topic ?? '',
+                'status'           => $g->status,
+                'notes'            => $g->notes ?? '',
+                'submitted'        => $g->created_at->format('Y-m-d'),
+            ];
+        });
+        return response()->json($guests);
+    }
+
+    /**
+     * Update featured guest status/notes.
+     */
+    public function updateFeaturedGuest(Request $request, $id)
+    {
+        $guest = \App\Models\FeaturedGuest::findOrFail($id);
+
+        if ($request->has('status')) {
+            $guest->status = $request->input('status');
+        }
+        if ($request->has('notes')) {
+            $guest->notes = $request->input('notes');
+        }
+
+        $guest->save();
+
+        return response()->json([
+            'type'    => 'success',
+            'message' => 'Guest application updated successfully.',
+            'data'    => $guest
         ]);
     }
 }

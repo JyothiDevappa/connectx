@@ -84,6 +84,12 @@
         Contact Inquiries
         <span class="sb-count" id="sbCount-contacts">0</span>
       </a>
+
+      <a href="{{ url('/admin/dashboard/featured_guests') }}" class="nav-link" data-section="featured_guests" id="nav-featured_guests">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/><path d="M12 14v7M9 18l3 3 3-3"/></svg>
+        Guest Features
+        <span class="sb-count" id="sbCount-featured_guests">0</span>
+      </a>
     </nav>
 
     {{-- Admin Profile --}}
@@ -225,7 +231,9 @@ const DATA = {
 
   connectors: @json($connectors),
 
-  contacts: @json($contacts)
+  contacts: @json($contacts),
+
+  featured_guests: @json($featuredGuests)
 };
 
 
@@ -422,6 +430,30 @@ const SECTION_CONFIG = {
       { label:"Pending", fn: d => d.filter(x=>x.status==='pending').length },
       { label:"Resolved", fn: d => d.filter(x=>x.status==='resolved').length }
     ]
+  },
+  featured_guests: {
+    title: "Guest Feature Applications",
+    subtitle: "Individuals who applied to be featured on The CHRO Mindset Podcast.",
+    statusOptions: ["confirmed","pending","declined"],
+    statusLabels: { confirmed:"Confirmed", pending:"Pending", declined:"Declined" },
+    typeField: "designation",
+    typeValues: [],
+    liveApi: "{{ route('admin.api.featured-guests') }}",
+    updateApi: "{{ url('/admin/api/featured-guests') }}",
+    columns: [
+      { key:"person", label:"Applicant" },
+      { key:"designation", label:"Designation" },
+      { key:"company", label:"Company" },
+      { key:"submitted", label:"Submitted" },
+      { key:"status", label:"Status" },
+      { key:"action", label:"" }
+    ],
+    stats: [
+      { label:"Total Applications", fn: d => d.length },
+      { label:"Confirmed", fn: d => d.filter(x=>x.status==='confirmed').length },
+      { label:"Pending", fn: d => d.filter(x=>x.status==='pending').length },
+      { label:"Declined", fn: d => d.filter(x=>x.status==='declined').length }
+    ]
   }
 };
 
@@ -507,18 +539,28 @@ async function updateCounts(){
     console.error("Error loading job applications from database", e);
   }
 
-  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs'].forEach(s => {
+  // Load featured guests dynamically from DB
+  try {
+    const res2 = await fetch("{{ route('admin.api.featured-guests') }}");
+    if(res2.ok) {
+      DATA.featured_guests = await res2.json();
+    }
+  } catch(e) {
+    console.error("Error loading featured guests from database", e);
+  }
+
+  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs','contacts','featured_guests'].forEach(s => {
     const el = document.getElementById('sbCount-' + s);
-    if(el) el.textContent = DATA[s].length;
+    if(el) el.textContent = DATA[s] ? DATA[s].length : 0;
   });
   // Overview panels
-  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs'].forEach(s => {
+  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs','contacts','featured_guests'].forEach(s => {
     const el = document.getElementById('ov-' + s);
-    if(el) el.textContent = DATA[s].length;
+    if(el && DATA[s]) el.textContent = DATA[s].length;
   });
 
   // If currently viewing database sections, refresh to show fetched data
-  if(['connectors','partners','sponsers','careers','internships','posted_jobs','overview'].includes(currentSection)) {
+  if(['connectors','partners','sponsers','careers','internships','posted_jobs','contacts','featured_guests','overview'].includes(currentSection)) {
     if(currentSection === 'overview') renderOverviewStats();
     else renderTable(currentSection);
   }
@@ -896,6 +938,11 @@ function openDrawer(section, id){
     subText = d.email;
     badges  = `<span class="badge badge-platinum">Contact Inquiry</span>`;
     bodyHTML = contactBody(d);
+  } else if(section === 'featured_guests'){
+    document.getElementById('dName').textContent = d.name;
+    subText = d.email;
+    badges  = `<span class="badge badge-platinum">Guest Application</span>`;
+    bodyHTML = featuredGuestBody(d);
   } else if(section === 'posted_jobs'){
     document.getElementById('dName').textContent = d.id ? 'Edit Job Posting' : 'Add New Job';
     subText = d.title || 'New Job Posting';
@@ -1164,6 +1211,32 @@ function contactBody(d){
       </div>
     </div>
     ${adminSection(section, cfg.statusOptions, cfg.statusLabels, d.status)}
+  `;
+}
+
+function featuredGuestBody(d){
+  const cfg = SECTION_CONFIG['featured_guests'];
+  return `
+    <div class="dsection">
+      <h4>Applicant Details</h4>
+      <div class="dgrid">
+        <div class="dfield"><span class="fl">Full Name</span><span class="fv">${d.name}</span></div>
+        <div class="dfield"><span class="fl">Email</span><span class="fv" style="word-break:break-all;">${d.email}</span></div>
+        <div class="dfield"><span class="fl">Phone</span><span class="fv">${d.phone}</span></div>
+        <div class="dfield"><span class="fl">Designation</span><span class="fv">${d.designation}</span></div>
+        <div class="dfield full"><span class="fl">Company</span><span class="fv">${d.company_name}</span></div>
+        <div class="dfield full"><span class="fl">Social Media</span><a href="${d.social_media_url}" target="_blank" class="fv cell-link">${d.social_media_url}</a></div>
+        <div class="dfield full"><span class="fl">Submitted On</span><span class="fv">${fmtDate(d.submitted)}</span></div>
+      </div>
+    </div>
+    ${d.topic ? `
+    <div class="dsection">
+      <h4>What They Want to Talk About</h4>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:16px;font-size:13.5px;line-height:1.65;color:var(--text);white-space:pre-line;">
+        ${d.topic}
+      </div>
+    </div>` : ''}
+    ${adminSection('featured_guests', cfg.statusOptions, cfg.statusLabels, d.status)}
   `;
 }
 

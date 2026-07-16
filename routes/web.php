@@ -92,9 +92,6 @@ Route::post('/connecters-list/apply', [ApplicationController::class, 'submit'])-
 Route::get('/become-a-sponsor', function () {
     return view('become-a-sponser');
 });
-Route::get('/become-a-sponser', function () {
-    return view('become-a-sponser');
-});
 Route::post('/become-a-sponser/apply', [ApplicationController::class, 'submitsponser'])->name('sponser.apply');
 
 Route::get('/become-a-partner', function () {
@@ -109,11 +106,13 @@ Route::post('/become-a-speaker/apply', [ApplicationController::class, 'submitSpe
 
 Route::get('/become-a-feature', function () {
     return view('become-a-feature');
-})->name('become-a-feature');
+});
+Route::post('/become-a-feature/apply', [ApplicationController::class, 'submitFeatureGuest'])->name('feature-guest.apply');
 
-Route::get('/share-your-story', function () {
-    return view('share-your-story');
-})->name('share.your.story');
+
+Route::get('/speaker-talk', function () {
+    return view('speaker-talk');
+})->name('speaker.talk');
 Route::get('/career', [App\Http\Controllers\JobController::class, 'careers'])->name('careers.index');
 Route::get('/internship', [App\Http\Controllers\JobController::class, 'internships'])->name('internships.index');
 Route::get('/career/{slug}', [App\Http\Controllers\JobController::class, 'careerDetail'])->name('careers.detail');
@@ -164,6 +163,10 @@ Route::middleware('admin')->group(function () {
     // Contacts API
     Route::get('/admin/api/contacts', [AdminDashboardController::class, 'contacts'])->name('admin.api.contacts');
     Route::post('/admin/api/contacts/{id}', [AdminDashboardController::class, 'updateContactStatus'])->name('admin.api.contacts.update');
+
+    // Featured Guests API
+    Route::get('/admin/api/featured-guests', [AdminDashboardController::class, 'featuredGuests'])->name('admin.api.featured-guests');
+    Route::post('/admin/api/featured-guests/{id}', [AdminDashboardController::class, 'updateFeaturedGuest'])->name('admin.api.featured-guests.update');
 
     // Jobs full page views
     Route::get('/admin/posted-jobs/create', [AdminDashboardController::class, 'createJobPage'])->name('admin.posted-jobs.create-page');

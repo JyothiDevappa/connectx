@@ -9,6 +9,7 @@ use App\Models\Connector;
 use App\Models\Partner;
 use App\Models\Sponsor;
 use App\Models\Speaker;
+use App\Models\FeaturedGuest;
 
 class ApplicationController extends Controller
 {
@@ -486,6 +487,64 @@ class ApplicationController extends Controller
             }
 
             return back()->withInput()->with('error', 'Unable to submit application via SMTP. Please try again.');
+        }
+    }
+
+    public function submitFeatureGuest(Request $request)
+    {
+        $validated = $request->validate([
+            'full_name'       => 'required|string|max:255',
+            'phone'           => 'required|string|max:50',
+            'email'           => 'required|email|max:255',
+            'company_name'    => 'required|string|max:255',
+            'designation'     => 'required|string|max:255',
+            'social_media_url'=> 'required|url|max:255',
+            'topic'           => 'nullable|string|max:3000',
+        ]);
+
+        try {
+            \Illuminate\Support\Facades\Log::info('--- FEATURE GUEST SUBMISSION START ---');
+
+            // 1. Save to Database
+            $guest = FeaturedGuest::create([
+                'full_name'        => $validated['full_name'],
+                'phone'            => $validated['phone'],
+                'email'            => $validated['email'],
+                'company_name'     => $validated['company_name'],
+                'designation'      => $validated['designation'],
+                'social_media_url' => $validated['social_media_url'],
+                'topic'            => $validated['topic'] ?? null,
+                'status'           => 'pending',
+            ]);
+            \Illuminate\Support\Facades\Log::info('FeaturedGuest saved. ID: ' . $guest->id);
+
+            // 2. Notify Admin
+            Mail::send('emails.feature-guest-application', $validated, function ($message) use ($validated) {
+                $message->to('youngchanakya.x@gmail.com')
+                        ->subject('New Guest Feature Application: ' . $validated['full_name'])
+                        ->replyTo($validated['email'], $validated['full_name']);
+            });
+
+            // 3. Confirm to User
+            Mail::send('emails.feature-guest-confirmation', $validated, function ($message) use ($validated) {
+                $message->to($validated['email'])
+                        ->subject('Your Guest Application Received - Young Chanakya X');
+            });
+            \Illuminate\Support\Facades\Log::info('--- FEATURE GUEST SUBMISSION END ---');
+
+            if ($request->ajax()) {
+                return response()->json(['type' => 'success', 'message' => 'Your application has been submitted successfully!']);
+            }
+
+            return back()->with('success', 'Your application has been submitted successfully!');
+        } catch (\Exception $e) {
+            logger()->error('SMTP Feature Guest failure: ' . $e->getMessage());
+
+            if ($request->ajax()) {
+                return response()->json(['type' => 'danger', 'message' => 'Unable to submit application. Please try again.'], 500);
+            }
+
+            return back()->withInput()->with('error', 'Unable to submit application. Please try again.');
         }
     }
 }
