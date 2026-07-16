@@ -92,6 +92,9 @@ Route::post('/connecters-list/apply', [ApplicationController::class, 'submit'])-
 Route::get('/become-a-sponsor', function () {
     return view('become-a-sponser');
 });
+Route::get('/become-a-sponser', function () {
+    return view('become-a-sponser');
+});
 Route::post('/become-a-sponser/apply', [ApplicationController::class, 'submitsponser'])->name('sponser.apply');
 
 Route::get('/become-a-partner', function () {
@@ -102,6 +105,11 @@ Route::post('/become-a-partner/apply', [ApplicationController::class, 'submitPar
 Route::get('/become-a-speaker', function () {
     return view('become-a-speaker');
 });
+Route::post('/become-a-speaker/apply', [ApplicationController::class, 'submitSpeaker'])->name('speaker.apply');
+
+Route::get('/become-a-feature', function () {
+    return view('become-a-feature');
+})->name('become-a-feature');
 
 Route::get('/speaker-talk', function () {
     return view('speaker-talk');
@@ -136,6 +144,10 @@ Route::middleware('admin')->group(function () {
     // Partners API (real DB)
     Route::get('/admin/api/partners', [AdminDashboardController::class, 'partners'])->name('admin.api.partners');
     Route::post('/admin/api/partners/{id}', [AdminDashboardController::class, 'updatePartner'])->name('admin.api.partners.update');
+
+    // Speakers API (real DB)
+    Route::get('/admin/api/speakers', [AdminDashboardController::class, 'speakers'])->name('admin.api.speakers');
+    Route::post('/admin/api/speakers/{id}', [AdminDashboardController::class, 'updateSpeaker'])->name('admin.api.speakers.update');
 
     // sponsers API (real DB)
     Route::get('/admin/api/sponsers', [AdminDashboardController::class, 'sponsers'])->name('admin.api.sponsers');

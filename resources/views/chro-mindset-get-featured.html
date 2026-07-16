@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Featured — The CHRO Mindset Podcast</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#0c3a30;
+    --green-deep:#082721;
+    --peach:#ffd2b1;
+    --cream:#fbf5ee;
+    --white:#ffffff;
+    --ink:#17231f;
+    --sage:#b9d0c6;
+    --amber:#e6884f;
+    --line: rgba(12,58,48,0.12);
+    --grad: linear-gradient(135deg, #ffffff 20%, #ffbe8e 100%);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'DM Sans', sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+  h1,h2,h3{font-family:'Fraunces', serif; font-weight:600; letter-spacing:-0.01em; line-height:1.08;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; letter-spacing:0.14em; text-transform:uppercase;
+    display:inline-flex; align-items:center; gap:8px;
+  }
+  .eyebrow::before{content:''; width:7px; height:7px; border-radius:50%; background:currentColor;}
+  section{position:relative;}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    font-family:'DM Sans', sans-serif; font-weight:600; font-size:15px;
+    padding:15px 28px; border-radius:8px; border:none; cursor:pointer;
+    text-decoration:none; transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  }
+  .btn-primary{ background:var(--green); color:var(--peach); }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 10px 24px rgba(12,58,48,0.28); background:var(--green-deep);}
+  .btn-dark{ background:var(--ink); color:var(--peach); }
+  .btn-outline{ background:transparent; border:1.5px solid var(--green); color:var(--green); }
+  .btn-outline:hover{ background:var(--green); color:var(--peach); }
+
+  /* ===== WAVEFORM SIGNATURE ===== */
+  .waveform{ display:flex; align-items:center; gap:3px; height:32px; }
+  .waveform span{ width:3px; background:currentColor; border-radius:2px; display:block; opacity:.55; }
+  .waveform.animate span{ animation: wf 1.6s ease-in-out infinite; }
+  @keyframes wf{ 0%,100%{ transform:scaleY(.4);} 50%{ transform:scaleY(1);} }
+
+  /* ===== NAV ===== */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(12,58,48,0.96); backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .nav{ display:flex; align-items:center; justify-content:space-between; padding:18px 32px; max-width:1180px; margin:0 auto;}
+  .brand{ display:flex; align-items:center; gap:10px; color:var(--peach); font-family:'Fraunces',serif; font-weight:600; font-size:18px;}
+  .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--peach);}
+  .nav a.applybtn{ background:var(--peach); color:var(--green); padding:10px 20px; border-radius:7px; font-weight:600; font-size:14px; text-decoration:none;}
+
+  /* ===== HERO ===== */
+  .hero{
+    background:var(--green); color:var(--white);
+    padding:76px 0 0;
+    overflow:hidden;
+    position:relative;
+  }
+  .hero::before{
+    content:''; position:absolute; right:-180px; top:-160px; width:640px; height:640px;
+    background:var(--grad); opacity:0.16; border-radius:50%; filter:blur(10px);
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:start;
+    position:relative; z-index:2;
+  }
+  .hero .eyebrow{ color:var(--peach); }
+  .hero h1{ font-size:52px; margin:20px 0 22px; color:var(--white); }
+  .hero h1 em{ font-style:italic; color:var(--peach); }
+  .hero p.lead{ font-size:18px; line-height:1.6; color:var(--sage); max-width:520px; margin-bottom:32px;}
+  .hero-stats{ display:flex; gap:34px; margin-bottom:36px; flex-wrap:wrap;}
+  .hero-stats div b{ font-family:'Fraunces',serif; font-size:26px; display:block; color:var(--peach);}
+  .hero-stats div span{ font-size:13px; color:var(--sage);}
+  .hero-cta-row{ display:flex; gap:14px; align-items:center; margin-bottom:56px; flex-wrap:wrap;}
+  .hero-cta-row .waveform{ color:var(--peach); }
+
+  /* form card */
+  .form-card{
+    background:var(--white); color:var(--ink);
+    border-radius:18px; padding:34px; box-shadow:0 30px 60px rgba(0,0,0,0.28);
+    position:relative; top:-18px;
+  }
+  .form-card::before{
+    content:''; position:absolute; inset:-10px; border-radius:22px;
+    background:var(--grad); z-index:-1; opacity:0.9;
+  }
+  .form-card h3{ font-size:22px; margin-bottom:6px;}
+  .form-card p.sub{ font-size:14px; color:#5c6863; margin-bottom:22px;}
+  .field{ margin-bottom:14px; }
+  .field label{ font-size:12.5px; font-weight:600; display:block; margin-bottom:6px; color:#33413c;}
+  .field input, .field select, .field textarea{
+    width:100%; border:1.5px solid var(--line); border-radius:8px; padding:11px 13px;
+    font-family:'DM Sans',sans-serif; font-size:14.5px; background:#fcfaf7; color:var(--ink);
+    transition:border-color .15s ease;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{ outline:none; border-color:var(--green); background:#fff;}
+  .field textarea{ resize:vertical; min-height:70px;}
+  .two-col{ display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  .form-card .btn-primary{ width:100%; margin-top:6px; padding:14px;}
+  .form-note{ font-size:11.5px; color:#8a938e; margin-top:12px; text-align:center;}
+
+  .hero-mic-row{ position:relative; z-index:2; margin-top:10px; border-radius:16px 16px 0 0; overflow:hidden; height:150px;}
+  .hero-mic-row img{ width:100%; height:100%; object-fit:cover; filter:saturate(0.85) brightness(0.75);}
+  .hero-mic-row::after{ content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(12,58,48,0) 0%, var(--green) 95%);}
+
+  /* ===== SECTION HEADERS ===== */
+  .sec-head{ max-width:640px; margin-bottom:44px;}
+  .sec-head .eyebrow{ color:var(--amber); margin-bottom:14px;}
+  .sec-head h2{ font-size:36px; color:var(--green);}
+  .sec-head p{ font-size:16px; color:#4a5750; margin-top:14px; line-height:1.6;}
+  .section-pad{ padding:96px 0;}
+
+  /* ===== WHY (value prop) ===== */
+  .why-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px;}
+  .why-card{
+    background:var(--white); border:1px solid var(--line); border-radius:14px; padding:28px 24px;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .why-card:hover{ transform:translateY(-5px); box-shadow:0 18px 34px rgba(12,58,48,0.1);}
+  .why-card .icn{
+    width:44px; height:44px; border-radius:10px; background:var(--peach);
+    display:flex; align-items:center; justify-content:center; margin-bottom:18px; color:var(--green);
+  }
+  .why-card h3{ font-size:17px; margin-bottom:8px; color:var(--green); font-weight:600;}
+  .why-card p{ font-size:14px; color:#5c6863; line-height:1.55;}
+
+  /* ===== WHO SHOULD APPLY ===== */
+  .who{ background:var(--green); color:var(--white);}
+  .who-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
+  .who-photo{ border-radius:16px; overflow:hidden; position:relative;}
+  .who-photo img{ width:100%; height:420px; object-fit:cover;}
+  .who-photo .badge{
+    position:absolute; bottom:18px; left:18px; background:var(--peach); color:var(--green);
+    padding:10px 16px; border-radius:9px; font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:500;
+  }
+  .checklist{ list-style:none; margin:20px 0 30px;}
+  .checklist li{ display:flex; gap:12px; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.12); font-size:15.5px; color:var(--sage);}
+  .checklist li .tick{
+    flex-shrink:0; width:20px; height:20px; border-radius:50%; background:var(--peach); color:var(--green);
+    display:flex; align-items:center; justify-content:center; font-size:12px; margin-top:2px;
+  }
+  .not-fit{ font-size:13.5px; color:rgba(255,255,255,0.55); line-height:1.7; border-left:2px solid rgba(255,255,255,0.25); padding-left:14px; margin-top:8px;}
+
+  /* ===== WHAT WE COVER ===== */
+  .cover-grid{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;}
+  .pills{ display:flex; flex-wrap:wrap; gap:10px;}
+  .pill{
+    font-size:13.5px; font-weight:500; padding:10px 18px; border-radius:30px;
+    border:1.5px solid var(--line); background:var(--white); color:var(--green);
+  }
+  .cover-visual{ border-radius:16px; overflow:hidden; position:relative;}
+  .cover-visual img{ width:100%; height:340px; object-fit:cover;}
+  .cover-visual .tag{
+    position:absolute; top:16px; right:16px; background:rgba(12,58,48,0.85); color:var(--peach);
+    padding:8px 14px; border-radius:8px; font-family:'IBM Plex Mono',monospace; font-size:11.5px;
+  }
+
+  /* ===== WHAT YOU GET ===== */
+  .get-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+  .get-card{ display:flex; gap:18px; background:var(--white); border:1px solid var(--line); border-radius:14px; padding:24px; align-items:flex-start;}
+  .get-card .num{ font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--amber); font-weight:500; flex-shrink:0; padding-top:2px;}
+  .get-card h3{ font-size:16.5px; color:var(--green); margin-bottom:6px; font-weight:600;}
+  .get-card p{ font-size:14px; color:#5c6863; line-height:1.55;}
+  .get-photo{ border-radius:16px; overflow:hidden; margin-bottom:36px;}
+  .get-photo img{ width:100%; height:320px; object-fit:cover;}
+
+  /* ===== FEATURED SPEAKERS ===== */
+  .speak-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
+  .speak-card{ background:var(--white); border-radius:16px; overflow:hidden; border:1px solid var(--line); transition:transform .2s ease;}
+  .speak-card:hover{ transform:translateY(-6px);}
+  .speak-card .photo{ height:230px; overflow:hidden;}
+  .speak-card .photo img{ width:100%; height:100%; object-fit:cover;}
+  .speak-card .info{ padding:20px 22px 24px;}
+  .speak-card .info .role{ font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--amber); text-transform:uppercase; letter-spacing:.06em;}
+  .speak-card .info h3{ font-size:17px; color:var(--green); margin:8px 0 6px;}
+  .speak-card .info p{ font-size:13.5px; color:#5c6863; line-height:1.5;}
+
+  /* ===== HOW IT WORKS ===== */
+  .steps{ background:var(--white); }
+  .steps-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; position:relative;}
+  .steps-grid::before{
+    content:''; position:absolute; top:26px; left:6%; right:6%; height:1.5px;
+    background:repeating-linear-gradient(90deg, var(--line) 0 8px, transparent 8px 16px);
+  }
+  .step{ padding:0 18px; position:relative; z-index:2;}
+  .step .step-no{
+    width:52px; height:52px; border-radius:50%; background:var(--green); color:var(--peach);
+    display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-size:19px; font-weight:600;
+    margin-bottom:22px;
+  }
+  .step h3{ font-size:16.5px; color:var(--green); margin-bottom:8px; font-weight:600;}
+  .step p{ font-size:13.5px; color:#5c6863; line-height:1.55;}
+
+  /* ===== FINAL CTA ===== */
+  .final-cta{
+    background:var(--grad);
+    border-radius:24px; padding:64px 56px; position:relative; overflow:hidden;
+    display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;
+  }
+  .final-cta::after{
+    content:''; position:absolute; right:-40px; bottom:-60px; width:220px; height:220px;
+    border:2px solid rgba(12,58,48,0.15); border-radius:50%;
+  }
+  .final-cta h2{ font-size:34px; color:var(--green-deep); max-width:480px; position:relative; z-index:2;}
+  .final-cta p{ font-size:15px; color:#5f4327; margin-top:12px; max-width:420px;}
+  .final-cta .cta-side{ position:relative; z-index:2; display:flex; flex-direction:column; gap:12px; align-items:flex-start;}
+
+  /* ===== FAQ ===== */
+  .faq-item{ border-bottom:1px solid var(--line); padding:22px 0;}
+  .faq-q{ display:flex; justify-content:space-between; align-items:center; cursor:pointer; gap:20px;}
+  .faq-q h3{ font-family:'DM Sans',sans-serif; font-weight:600; font-size:16px; color:var(--green);}
+  .faq-q .plus{ font-size:20px; color:var(--amber); transition:transform .25s ease; flex-shrink:0;}
+  .faq-item.open .plus{ transform:rotate(45deg);}
+  .faq-a{ max-height:0; overflow:hidden; transition:max-height .3s ease;}
+  .faq-item.open .faq-a{ max-height:200px;}
+  .faq-a p{ font-size:14.5px; color:#5c6863; padding-top:12px; line-height:1.6; max-width:640px;}
+
+  footer{ background:var(--green-deep); color:var(--sage); padding:44px 0; font-size:13px;}
+  .foot-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+  .foot-row .brand{ color:var(--peach);}
+
+  @media(max-width:920px){
+    .hero-grid{ grid-template-columns:1fr;}
+    .hero h1{ font-size:38px;}
+    .why-grid{ grid-template-columns:1fr 1fr;}
+    .who-grid, .cover-grid, .get-grid{ grid-template-columns:1fr;}
+    .speak-grid{ grid-template-columns:1fr;}
+    .steps-grid{ grid-template-columns:1fr 1fr; row-gap:36px;}
+    .steps-grid::before{ display:none;}
+    .final-cta{ padding:44px 28px;}
+    .final-cta h2{ font-size:26px;}
+    .two-col{ grid-template-columns:1fr;}
+  }
+  @media(max-width:600px){
+    .why-grid{ grid-template-columns:1fr;}
+    .steps-grid{ grid-template-columns:1fr;}
+    .wrap{ padding:0 20px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand"><span class="dot"></span>The CHRO Mindset</div>
+    <a href="#apply" class="applybtn">Apply to Be a Guest</a>
+  </div>
+</header>
+
+<!-- ============ 1. HERO + FORM ============ -->
+<section class="hero" id="apply">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Guest applications open</span>
+        <h1>Get Featured On <em>The CHRO Mindset</em> Podcast</h1>
+        <p class="lead">Share the frameworks you've built, the calls only a CHRO has to make, and the mistakes that taught you the most — with an audience of HR leaders making those same calls right now.</p>
+        <div class="hero-stats">
+          <div><b>100+</b><span>episodes released</span></div>
+          <div><b>40k+</b><span>HR leaders reached monthly</span></div>
+          <div><b>4</b><span>platforms distributed on</span></div>
+        </div>
+        <div class="hero-cta-row">
+          <div class="waveform animate" aria-hidden="true">
+            <span style="height:14px;animation-delay:0s"></span>
+            <span style="height:26px;animation-delay:.15s"></span>
+            <span style="height:18px;animation-delay:.3s"></span>
+            <span style="height:30px;animation-delay:.1s"></span>
+            <span style="height:12px;animation-delay:.4s"></span>
+            <span style="height:22px;animation-delay:.2s"></span>
+          </div>
+          <span style="font-size:13px;color:var(--sage);">Real conversations, not scripted panels.</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="form-card">
+          <h3>Apply to be a guest</h3>
+          <p class="sub">Takes about 2 minutes. Our producer reviews every application.</p>
+          <form onsubmit="event.preventDefault(); document.getElementById('formSuccess').style.display='block'; this.style.display='none';">
+            <div class="two-col">
+              <div class="field"><label>Full name</label><input type="text" placeholder="Ananya Rao" required></div>
+              <div class="field"><label>Job title</label><input type="text" placeholder="CHRO" required></div>
+            </div>
+            <div class="two-col">
+              <div class="field"><label>Company</label><input type="text" placeholder="Company name" required></div>
+              <div class="field"><label>Work email</label><input type="email" placeholder="you@company.com" required></div>
+            </div>
+            <div class="field"><label>LinkedIn profile</label><input type="url" placeholder="linkedin.com/in/yourname"></div>
+            <div class="field"><label>What would you want to talk about on air?</label><textarea placeholder="A transformation you led, a hard call you made, a belief you'd defend..."></textarea></div>
+            <button type="submit" class="btn btn-primary">Submit Application →</button>
+          </form>
+          <p class="form-note" id="formSuccess" style="display:none;">Thanks — your application is in. We'll be in touch within 5 business days.</p>
+          <p class="form-note">No pitch decks. No product demos. Just your experience.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-mic-row">
+      <img src="https://images.unsplash.com/photo-1767474365536-ef81bfa24c8a?fm=jpg&q=70&w=2000&auto=format&fit=crop" alt="Studio microphone">
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. WHY GET FEATURED ============ -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Why get featured</span>
+      <h2>Your experience, turned into reach</h2>
+      <p>A 45-minute conversation becomes a body of proof: something a candidate, a peer, or your own board can point to and say — this person has actually done it.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="icn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L14.5 8.5L21 9.5L16.5 14L17.8 20.8L12 17.5L6.2 20.8L7.5 14L3 9.5L9.5 8.5L12 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Authority beyond your org chart</h3>
+        <p>Your point of view reaches people who'll never sit in a meeting with you — future hires, peers, your own leadership team.</p>
+      </div>
+      <div class="why-card">
+        <div class="icn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M4 20c1.2-4 4-6 8-6s6.8 2 8 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>An audience already listening</h3>
+        <p>CHROs, CPOs and People leaders tune in specifically for operating detail — not a general business audience.</p>
+      </div>
+      <div class="why-card">
+        <div class="icn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 9h8M8 13h8M8 17h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>One session, a library of content</h3>
+        <p>Your episode becomes clips, quote cards and a written spotlight — content you can reuse across your own channels.</p>
+      </div>
+      <div class="why-card">
+        <div class="icn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3v6M12 15v6M3 12h6M15 12h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>A growing bench of peers</h3>
+        <p>Guests get introduced to each other. It's turned into hiring conversations, advisory seats and genuine friendships.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. WHO SHOULD APPLY ============ -->
+<section class="who section-pad">
+  <div class="wrap">
+    <div class="who-grid">
+      <div>
+        <span class="eyebrow" style="color:var(--peach);">Who should apply</span>
+        <h2 style="color:var(--white); font-size:32px; margin:16px 0 8px;">Built for people who've actually done the work</h2>
+        <ul class="checklist">
+          <li><span class="tick">✓</span>CHROs, CPOs and Heads of People at companies of any size</li>
+          <li><span class="tick">✓</span>HR tech founders and operators building for the function</li>
+          <li><span class="tick">✓</span>Leaders who've navigated a hard transformation and can talk specifics</li>
+          <li><span class="tick">✓</span>Anyone with a sharper point of view than the usual panel talk</li>
+        </ul>
+        <p class="not-fit">Not the right fit today: vendors pitching a product with no operating experience of their own, or speakers who only want to talk in generalities. We're looking for specifics, not slogans.</p>
+      </div>
+      <div class="who-photo">
+        <img src="https://images.unsplash.com/photo-1758518729371-5ee28c4ddf60?fm=jpg&q=70&w=1400&auto=format&fit=crop" alt="Two HR leaders in conversation">
+        <span class="badge">EP. 104 — On Air</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. WHAT WE COVER ============ -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="cover-grid">
+      <div class="cover-visual">
+        <img src="https://images.unsplash.com/photo-1767474365536-ef81bfa24c8a?fm=jpg&q=70&w=1400&auto=format&fit=crop" alt="Podcast microphone in studio">
+        <span class="tag">ON AIR</span>
+      </div>
+      <div>
+        <span class="eyebrow" style="color:var(--amber);">What we cover</span>
+        <h2 style="color:var(--green); font-size:32px; margin:16px 0 18px;">Ten themes. Any of them, in depth.</h2>
+        <div class="pills">
+          <span class="pill">Talent Strategy</span>
+          <span class="pill">Workforce Planning</span>
+          <span class="pill">Culture &amp; Change</span>
+          <span class="pill">HR Tech &amp; AI</span>
+          <span class="pill">DEI &amp; Belonging</span>
+          <span class="pill">Leadership Development</span>
+          <span class="pill">Employee Experience</span>
+          <span class="pill">Compensation &amp; Rewards</span>
+          <span class="pill">Future of Work</span>
+          <span class="pill">M&amp;A and Org Design</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. WHAT YOU GET ============ -->
+<section class="section-pad" style="background:var(--white);">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">What you get</span>
+      <h2>Everything's handled — you just show up</h2>
+    </div>
+    <div class="get-photo">
+      <img src="https://images.unsplash.com/photo-1764664035154-379971f0e936?fm=jpg&q=70&w=1600&auto=format&fit=crop" alt="Podcast recording setup with camera and microphone">
+    </div>
+    <div class="get-grid">
+      <div class="get-card">
+        <span class="num">01</span>
+        <div><h3>Professional recording, zero prep stress</h3><p>Video or audio, remote or in-studio. Our producer handles the technical side end to end.</p></div>
+      </div>
+      <div class="get-card">
+        <span class="num">02</span>
+        <div><h3>Distribution across every major platform</h3><p>YouTube, Spotify, Apple Podcasts and Audible — your episode goes out everywhere our audience listens.</p></div>
+      </div>
+      <div class="get-card">
+        <span class="num">03</span>
+        <div><h3>Social clips and quote cards</h3><p>Edited highlight clips and shareable quote graphics, ready for your own LinkedIn and company channels.</p></div>
+      </div>
+      <div class="get-card">
+        <span class="num">04</span>
+        <div><h3>A guest spotlight page</h3><p>A dedicated page with your bio, headshot and links — built to be shared and to outlast the episode itself.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. FEATURED SPEAKERS ============ -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Recent guests</span>
+      <h2>Voices already on the show</h2>
+      <p>A small sample of the CHROs and People leaders who've sat down for a conversation.</p>
+    </div>
+    <div class="speak-grid">
+      <div class="speak-card">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1758518727888-ffa196002e59?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="Guest headshot"></div>
+        <div class="info">
+          <span class="role">Ep. 112</span>
+          <h3>Your Workforce Plan Is Already Obsolete</h3>
+          <p>Ananya Rao, CHRO — Fintech Scale-up</p>
+        </div>
+      </div>
+      <div class="speak-card">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1758518729286-e8d94cc231f5?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="Guest headshot"></div>
+        <div class="info">
+          <span class="role">Ep. 109</span>
+          <h3>You're a Great CHRO — So Why Aren't You Promoted?</h3>
+          <p>Marcus Webb, CPO — Global Manufacturing</p>
+        </div>
+      </div>
+      <div class="speak-card">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1758518729459-235dcaadc611?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="Guest headshot"></div>
+        <div class="info">
+          <span class="role">Ep. 105</span>
+          <h3>Culture Drives Brand: CHRO-CMO Alignment</h3>
+          <p>Priya Sharma, Head of People — SaaS</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. HOW IT WORKS ============ -->
+<section class="steps section-pad">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">How it works</span>
+      <h2>From application to air, in four steps</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-no">01</div>
+        <h3>Apply</h3>
+        <p>Tell us about your experience and the angle you'd bring. Takes about 2 minutes.</p>
+      </div>
+      <div class="step">
+        <div class="step-no">02</div>
+        <h3>Screening call</h3>
+        <p>A quick 15-minute call with our producer to shape the episode around your story.</p>
+      </div>
+      <div class="step">
+        <div class="step-no">03</div>
+        <h3>Record</h3>
+        <p>A 40–50 minute conversation, video or audio, remote or in-studio — whatever suits you.</p>
+      </div>
+      <div class="step">
+        <div class="step-no">04</div>
+        <h3>Go live</h3>
+        <p>Your episode launches across platforms, with clips and a spotlight page of your own.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. FINAL CTA ============ -->
+<section class="section-pad" style="padding-top:0;">
+  <div class="wrap">
+    <div class="final-cta">
+      <div>
+        <h2>Your next case study starts with a conversation.</h2>
+        <p>Applications are reviewed on a rolling basis — no long queue, no gatekeeping panel.</p>
+      </div>
+      <div class="cta-side">
+        <a href="#apply" class="btn btn-dark">Apply to Be a Guest →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. FAQ ============ -->
+<section class="section-pad" style="background:var(--white); padding-top:0;">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>Before you apply</h2>
+    </div>
+    <div class="faq-list" style="max-width:760px;">
+      <div class="faq-item open">
+        <div class="faq-q"><h3>How long is the episode?</h3><span class="plus">+</span></div>
+        <div class="faq-a"><p>Most conversations run 40–50 minutes. We record more than we release, so the final cut stays tight and useful.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h3>Do I need previous podcast experience?</h3><span class="plus">+</span></div>
+        <div class="faq-a"><p>No. Most of our guests have never recorded a podcast before. The screening call is there to make the actual recording feel like a normal conversation.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h3>Is there a cost to be featured?</h3><span class="plus">+</span></div>
+        <div class="faq-a"><p>No. Being a guest is free. We don't accept paid placements or sponsored episodes — every guest is selected on the strength of their experience.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h3>Can I choose the topic?</h3><span class="plus">+</span></div>
+        <div class="faq-a"><p>Yes. You tell us what you'd want to discuss in your application, and we shape the episode around it during the screening call.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h3>When will my episode go live?</h3><span class="plus">+</span></div>
+        <div class="faq-a"><p>Typically 3–5 weeks after recording, once editing, clips and the spotlight page are ready.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <div class="brand"><span class="dot" style="width:8px;height:8px;border-radius:50%;background:var(--peach);display:inline-block;"></span> The CHRO Mindset Podcast</div>
+    <div>Guides, templates and tools for HR leaders — delivered one conversation at a time.</div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    item.querySelector('.faq-q').addEventListener('click',()=>{
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+      if(!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+</body>
+</html>

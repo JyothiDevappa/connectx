@@ -19,7 +19,12 @@ $seo = [
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
 <link rel="stylesheet" href="{{ asset('css/partner-page.css') }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/css/intlTelInput.css">
 <style>
+  .iti { width: 100%; display: block; }
+  .iti__country-list { color: #333333; z-index: 10; }
+  #speaker-phone { padding-left: 90px !important; }
+
   :root {
     --ink: #0c3a30;
     --ink-deep: #082821;
@@ -1270,7 +1275,8 @@ $seo = [
               </div>
             @endif
 
-            <form id="speakerForm">
+            <form action="{{ route('speaker.apply') }}" method="POST" id="speakerForm">
+              @csrf
 
               <div class="row">
 
@@ -1959,6 +1965,57 @@ $seo = [
         });
       });
     });
+
+    // intl-tel-input and AJAX submission
+    var phoneInput = document.getElementById('speaker-phone');
+    var iti;
+    if (phoneInput) {
+      iti = window.intlTelInput(phoneInput, {
+        initialCountry: "in",
+        separateDialCode: true,
+        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/js/utils.js"
+      });
+    }
+
+    var form = document.getElementById('speakerForm');
+    var thankyouBlock = document.getElementById('thankyou');
+
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        if (phoneInput && iti) {
+          phoneInput.value = iti.getNumber();
+        }
+
+        var formData = new FormData(form);
+
+        fetch(form.action, {
+          method: 'POST',
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+          },
+          body: formData
+        })
+        .then(function(res) {
+          return res.json();
+        })
+        .then(function(data) {
+          if (data.type === 'success' || data.success) {
+            form.style.display = 'none';
+            if (thankyouBlock) thankyouBlock.style.display = 'block';
+          } else {
+            alert(data.message || 'Something went wrong. Please try again.');
+          }
+        })
+        .catch(function(err) {
+          console.error(err);
+          alert('Submission failed. Please try again.');
+        });
+      });
+    }
   });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/js/intlTelInput.min.js"></script>
 @endpush

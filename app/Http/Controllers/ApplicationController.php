@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Mail;
 use App\Models\Contact;
 use App\Models\Connector;
 use App\Models\Partner;
-use App\Models\sponser;
+use App\Models\Sponsor;
+use App\Models\Speaker;
 
 class ApplicationController extends Controller
 {
@@ -121,6 +122,80 @@ class ApplicationController extends Controller
         }
     }
 
+    public function submitSpeaker(Request $request)
+    {
+        $validated = $request->validate([
+            'full_name'         => 'required|string|max:255',
+            'phone'             => 'required|string|max:50',
+            'email'             => 'nullable|email|max:255',
+            'location'          => 'required|string|max:255',
+            'primary_role'      => 'required|string|max:255',
+            'speaking_language' => 'required|string|max:255',
+            'social_media_url'  => 'required|url|max:255',
+            'story'             => 'required|string|max:3000',
+        ]);
+
+        try {
+            \Illuminate\Support\Facades\Log::info('--- SPEAKER SUBMISSION START ---');
+
+            // 1. Save to Database
+            $speaker = Speaker::create([
+                'full_name'         => $validated['full_name'],
+                'phone'             => $validated['phone'],
+                'email'             => $validated['email'] ?? null,
+                'location'          => $validated['location'],
+                'primary_role'      => $validated['primary_role'],
+                'speaking_language' => $validated['speaking_language'],
+                'social_media_url'  => $validated['social_media_url'],
+                'story'             => $validated['story'],
+                'status'            => 'pending',
+            ]);
+            \Illuminate\Support\Facades\Log::info('Speaker saved to database. ID: ' . $speaker->id);
+
+            // 2. Email to Admin
+            \Illuminate\Support\Facades\Log::info('Sending admin email...');
+            Mail::send('emails.speaker-application', $validated, function ($message) use ($validated) {
+                $message->to('youngchanakya.x@gmail.com')
+                        ->subject('New Speaker Application: ' . $validated['full_name']);
+                if (!empty($validated['email'])) {
+                    $message->replyTo($validated['email'], $validated['full_name']);
+                }
+            });
+            \Illuminate\Support\Facades\Log::info('Admin email sent.');
+
+            // 3. Email to User (Confirmation)
+            if (!empty($validated['email'])) {
+                \Illuminate\Support\Facades\Log::info('Sending user confirmation email to: ' . $validated['email']);
+                Mail::send('emails.speaker-confirmation', $validated, function ($message) use ($validated) {
+                    $message->to($validated['email'])
+                            ->subject('Speaker Application Received - Young Chanakya X');
+                });
+                \Illuminate\Support\Facades\Log::info('User email sent.');
+            }
+            \Illuminate\Support\Facades\Log::info('--- SPEAKER SUBMISSION END ---');
+
+            if ($request->ajax()) {
+                return response()->json([
+                    'type'    => 'success',
+                    'message' => 'Your speaker application has been submitted successfully!'
+                ]);
+            }
+
+            return back()->with('success', 'Your speaker application has been submitted successfully!');
+        } catch (\Exception $e) {
+            logger()->error('SMTP Speaker Application failure: ' . $e->getMessage() . ' trace: ' . $e->getTraceAsString());
+            
+            if ($request->ajax()) {
+                return response()->json([
+                    'type'    => 'danger',
+                    'message' => 'Unable to send application via SMTP. Please try again.'
+                ], 500);
+            }
+
+            return back()->withInput()->with('error', 'Unable to send application via SMTP. Please try again.');
+        }
+    }
+
     public function submitsponser(Request $request)
     {
         $validated = $request->validate([
@@ -138,7 +213,7 @@ class ApplicationController extends Controller
             \Illuminate\Support\Facades\Log::info('--- sponser SUBMISSION START ---');
 
             // 1. Save to Database
-            sponser::create([
+            Sponsor::create([
                 'name'              => $validated['name'],
                 'email'             => $validated['email'],
                 'phone'             => $validated['phone'],

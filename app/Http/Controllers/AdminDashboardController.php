@@ -12,7 +12,9 @@ class AdminDashboardController extends Controller
      */
     public function index($section = 'overview')
     {
-        $allowedSections = ['overview', 'connectors', 'sponsors', 'partners', 'speakers', 'careers', 'internships', 'posted_jobs', 'contacts'];
+        $allowedSections = ['overview', 'connectors', 'sponsers', 'partners', 'speakers', 'careers', 'internships', 'posted_jobs', 'contacts'];
+        // Also accept 'sponsors' alias and normalise to 'sponsers' for JS compatibility
+        if ($section === 'sponsors') $section = 'sponsers';
         if (!in_array($section, $allowedSections)) {
             $section = 'overview';
         }
@@ -51,7 +53,7 @@ class AdminDashboardController extends Controller
             ];
         });
 
-        $sponsers = \App\Models\sponser::orderByDesc('created_at')->get()->map(function ($s) {
+        $sponsers = \App\Models\Sponsor::orderByDesc('created_at')->get()->map(function ($s) {
             return [
                 'id'                => $s->id,
                 'name'              => $s->name,
@@ -122,7 +124,27 @@ class AdminDashboardController extends Controller
             ];
         });
 
-        return view('admin.dashboard', compact('section', 'connectors', 'partners', 'sponsors', 'postedJobs', 'careers', 'internships', 'contacts'));
+        $speakers = \App\Models\Speaker::orderByDesc('created_at')->get()->map(function ($s) {
+            return [
+                'id'                => $s->id,
+                'name'              => $s->full_name,
+                'full_name'         => $s->full_name,
+                'email'             => $s->email ?? '',
+                'phone'             => $s->phone,
+                'location'          => $s->location,
+                'primary_role'      => $s->primary_role,
+                'designation'       => $s->primary_role, // map to designation for generic columns
+                'speaking_language' => $s->speaking_language,
+                'social_media_url'  => $s->social_media_url,
+                'linkedin'          => $s->social_media_url, // map to linkedin for generic cell link
+                'story'             => $s->story,
+                'status'            => $s->status,
+                'notes'             => $s->notes ?? '',
+                'submitted'         => $s->created_at->format('Y-m-d'),
+            ];
+        });
+
+        return view('admin.dashboard', compact('section', 'connectors', 'partners', 'sponsers', 'postedJobs', 'careers', 'internships', 'contacts', 'speakers'));
     }
 
     /**
@@ -213,7 +235,7 @@ class AdminDashboardController extends Controller
      */
     public function sponsers(Request $request)
     {
-        $sponsers = \App\Models\sponser::orderByDesc('created_at')->get()->map(function ($s) {
+        $sponsers = \App\Models\Sponsor::orderByDesc('created_at')->get()->map(function ($s) {
             return [
                 'id'                => $s->id,
                 'name'              => $s->name,
@@ -238,7 +260,7 @@ class AdminDashboardController extends Controller
      */
     public function updatesponser(Request $request, $id)
     {
-        $sponser = \App\Models\sponser::findOrFail($id);
+        $sponser = \App\Models\Sponsor::findOrFail($id);
 
         $validated = $request->validate([
             'status' => 'required|in:pending,confirmed,declined',
@@ -513,6 +535,59 @@ class AdminDashboardController extends Controller
             'type'    => 'success',
             'message' => 'Inquiry updated successfully.',
             'data'    => $contact
+        ]);
+    }
+
+    /**
+     * Return speakers as JSON (for AJAX reload if needed).
+     */
+    public function speakers(Request $request)
+    {
+        $speakers = \App\Models\Speaker::orderByDesc('created_at')->get()->map(function ($s) {
+            return [
+                'id'                => $s->id,
+                'name'              => $s->full_name,
+                'full_name'         => $s->full_name,
+                'email'             => $s->email ?? '',
+                'phone'             => $s->phone,
+                'location'          => $s->location,
+                'primary_role'      => $s->primary_role,
+                'designation'       => $s->primary_role,
+                'speaking_language' => $s->speaking_language,
+                'social_media_url'  => $s->social_media_url,
+                'linkedin'          => $s->social_media_url,
+                'story'             => $s->story,
+                'status'            => $s->status,
+                'notes'             => $s->notes ?? '',
+                'submitted'         => $s->created_at->format('Y-m-d'),
+            ];
+        });
+        return response()->json($speakers);
+    }
+
+    /**
+     * Update speaker status/notes.
+     */
+    public function updateSpeaker(Request $request, $id)
+    {
+        $speaker = \App\Models\Speaker::findOrFail($id);
+
+        // Status update
+        if ($request->has('status')) {
+            $speaker->status = $request->input('status');
+        }
+
+        // Notes update
+        if ($request->has('notes')) {
+            $speaker->notes = $request->input('notes');
+        }
+
+        $speaker->save();
+
+        return response()->json([
+            'type'    => 'success',
+            'message' => 'Speaker application updated successfully.',
+            'data'    => $speaker
         ]);
     }
 }

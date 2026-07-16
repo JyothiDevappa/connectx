@@ -45,7 +45,7 @@
 
       <a href="{{ url('/admin/dashboard/sponsers') }}" class="nav-link" data-section="sponsers" id="nav-sponsers">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-        sponsers
+        Sponsors
         <span class="sb-count" id="sbCount-sponsers">0</span>
       </a>
 
@@ -215,14 +215,7 @@ const DATA = {
 
   partners: @json($partners),
 
-  speakers: [
-    { id:1, name:"Dr. Ramesh Iyer", email:"ramesh.iyer@iimbangalore.edu", designation:"Professor of Strategy", expertise:"Business Strategy, Leadership", bio:"Dr. Ramesh Iyer is a professor at IIM Bangalore with over 20 years of experience in business strategy and organizational leadership.", phone:"+91 98000 11123", linkedin:"https://linkedin.com/in/dr-ramesh-iyer", submitted:"2026-07-08", status:"confirmed", notes:"" },
-    { id:2, name:"Ananya Krishnan", email:"ananya@startupindia.org", designation:"Startup Ecosystem Lead", expertise:"Entrepreneurship, Funding", bio:"Ananya leads startup development programs and has mentored 200+ early-stage ventures.", phone:"+91 97001 22234", linkedin:"https://linkedin.com/in/ananya-k", submitted:"2026-07-06", status:"pending", notes:"Topic proposal sent on 6 July." },
-    { id:3, name:"Siddharth Nair", email:"siddharth@venturecapital.in", designation:"Partner, Venture Capital", expertise:"VC, Deep Tech", bio:"Siddharth invests in deep tech and climate-tech startups across Southeast Asia.", phone:"+91 91200 33345", linkedin:"https://linkedin.com/in/siddharth-nair-vc", submitted:"2026-07-04", status:"confirmed", notes:"Talk title: 'Investing in the Next Decade'." },
-    { id:4, name:"Kavitha Suresh", email:"kavitha@policywatchindia.com", designation:"Policy Analyst", expertise:"Public Policy, Governance", bio:"Kavitha is a public policy expert who advises state governments on economic development.", phone:"+91 88100 44456", linkedin:"https://linkedin.com/in/kavitha-suresh", submitted:"2026-07-01", status:"pending", notes:"" },
-    { id:5, name:"Mohammed Riyaz", email:"riyaz@marketmindz.com", designation:"CMO, MarketMindz", expertise:"Digital Marketing, Growth", bio:"Riyaz has scaled brands from 0 to 1M followers across digital channels in under 18 months.", phone:"+91 96300 55567", linkedin:"https://linkedin.com/in/riyaz-mm", submitted:"2026-06-28", status:"confirmed", notes:"Keynote speaker at YCX Summit." },
-    { id:6, name:"Priya Sood", email:"priya.sood@legalcraft.co", designation:"Managing Partner", expertise:"Corporate Law, IP", bio:"Priya advises startups and corporates on IP law, fundraising compliance, and regulatory issues.", phone:"+91 90700 66678", linkedin:"https://linkedin.com/in/priya-sood-legal", submitted:"2026-06-24", status:"declined", notes:"Unavailable for June session — will reconsider for Q4." },
-  ],
+  speakers: @json($speakers),
 
   careers: @json($careers),
 
@@ -297,12 +290,15 @@ const SECTION_CONFIG = {
     subtitle: "Individuals who applied to speak at Young Chanakya X events.",
     statusOptions: ["confirmed","pending","declined"],
     statusLabels: { confirmed:"Confirmed", pending:"Pending", declined:"Declined" },
-    typeField: "expertise",
+    typeField: "primary_role",
     typeValues: [],
+    liveApi: "{{ route('admin.api.speakers') }}",
+    updateApi: "{{ url('/admin/api/speakers') }}",
     columns: [
       { key:"person", label:"Applicant" },
-      { key:"designation", label:"Designation" },
-      { key:"expertise", label:"Expertise" },
+      { key:"phone", label:"Phone" },
+      { key:"location", label:"Location" },
+      { key:"primary_role", label:"Primary Role" },
       { key:"submitted", label:"Submitted" },
       { key:"status", label:"Status" },
       { key:"action", label:"" }
@@ -1103,18 +1099,19 @@ function speakerBody(d){
       <h4>Speaker Details</h4>
       <div class="dgrid">
         <div class="dfield"><span class="fl">Full Name</span><span class="fv">${d.name}</span></div>
-        <div class="dfield"><span class="fl">Designation</span><span class="fv">${d.designation}</span></div>
-        <div class="dfield"><span class="fl">Email</span><span class="fv" style="word-break:break-all;">${d.email}</span></div>
+        <div class="dfield"><span class="fl">Primary Role</span><span class="fv">${d.primary_role}</span></div>
+        <div class="dfield"><span class="fl">Email</span><span class="fv" style="word-break:break-all;">${d.email || '—'}</span></div>
         <div class="dfield"><span class="fl">Phone</span><span class="fv">${d.phone}</span></div>
-        <div class="dfield full"><span class="fl">Area of Expertise</span><span class="fv">${d.expertise}</span></div>
-        <div class="dfield full"><span class="fl">LinkedIn</span><a href="${d.linkedin}" target="_blank" class="fv cell-link">${d.linkedin}</a></div>
+        <div class="dfield"><span class="fl">Location</span><span class="fv">${d.location}</span></div>
+        <div class="dfield"><span class="fl">Speaking Language</span><span class="fv">${d.speaking_language}</span></div>
+        <div class="dfield full"><span class="fl">Social Media URL</span><a href="${d.social_media_url}" target="_blank" class="fv cell-link">${d.social_media_url}</a></div>
         <div class="dfield full"><span class="fl">Submitted On</span><span class="fv">${fmtDate(d.submitted)}</span></div>
       </div>
     </div>
     <div class="dsection">
-      <h4>Bio</h4>
-      <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:16px;font-size:13.5px;line-height:1.65;color:var(--text);">
-        ${d.bio}
+      <h4>Story & Main Message</h4>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:16px;font-size:13.5px;line-height:1.65;color:var(--text);white-space:pre-line;">
+        ${d.story}
       </div>
     </div>
     ${adminSection('speakers', cfg.statusOptions, cfg.statusLabels, d.status)}
