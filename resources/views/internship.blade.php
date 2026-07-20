@@ -22,7 +22,7 @@ $seo = [
 <link rel="stylesheet" href="{{ asset('css/career.css') }}">
 <style>
   #hdr:not(.scrolled) .hamburger span {
-      background: #0c3a30 !important;
+      background: #ffffff !important;
   }
 </style>
 @endpush

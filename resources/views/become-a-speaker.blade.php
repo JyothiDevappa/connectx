@@ -37,9 +37,9 @@ $seo = [
     --hero-gradient: linear-gradient(135deg, #ffffff 20%, #ffbe8e 100%);
   }
 
-  /* Make sure header hamburger is dark green over white/peach hero */
+  /* Make sure header hamburger is white over hero */
   #hdr:not(.scrolled) .hamburger span {
-    background: #0c3a30 !important;
+    background: #ffffff !important;
   }
 
   .speaker-body {

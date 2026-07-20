@@ -154,7 +154,7 @@ $insights = [
 <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
 <style>
   #hdr:not(.scrolled) .hamburger span {
-      background: #0c3a30 !important;
+      background: #ffffff !important;
   }
 </style>
 @endpush
