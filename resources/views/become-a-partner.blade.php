@@ -380,6 +380,175 @@ $seo = [
     }
 }
 
+/* ---- Technology Partner Section ---- */
+.tech-partner-section {
+    background-color: #ffeada;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+.tech-partner-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(12, 58, 48, 0.05) 0%, rgba(255, 234, 218, 0) 70%);
+    pointer-events: none;
+}
+.tech-partner-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 60px;
+}
+.tech-partner-inner .tp-content .tp-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #0c3a30;
+    margin-bottom: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.tech-partner-inner .tp-content .tp-eyebrow::after {
+    content: '';
+    width: 32px;
+    height: 1.5px;
+    background: #0c3a30;
+}
+.tech-partner-inner .tp-content h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 900;
+    color: #0c3a30;
+    margin: 0 0 20px;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+.tech-partner-inner .tp-content p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #3b4e47;
+    margin-bottom: 24px;
+    max-width: 600px;
+}
+.tech-partner-inner .tp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.tech-partner-inner .tp-tag {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0c3a30;
+    background: rgba(12, 58, 48, 0.06);
+    padding: 6px 14px;
+    border-radius: 100px;
+    border: 1px solid rgba(12, 58, 48, 0.1);
+    transition: all 0.3s ease;
+}
+.tech-partner-inner .tp-tag:hover {
+    background: #0c3a30;
+    color: #ffeada;
+    border-color: #0c3a30;
+    transform: translateY(-2px);
+}
+.tech-partner-inner .tp-logo-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.tech-partner-inner .tp-logo-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(12, 58, 48, 0.04);
+    border: 1px solid rgba(12, 58, 48, 0.05);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+.tech-partner-inner .tp-logo-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 210, 177, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.tech-partner-inner .tp-logo-card img {
+    max-height: 52px;
+    width: auto;
+    transition: transform 0.4s ease;
+    position: relative;
+    z-index: 2;
+}
+.tech-partner-inner .tp-logo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px rgba(12, 58, 48, 0.08);
+    border-color: rgba(12, 58, 48, 0.15);
+}
+.tech-partner-inner .tp-logo-card:hover::before {
+    opacity: 1;
+}
+.tech-partner-inner .tp-logo-card:hover img {
+    transform: scale(1.04);
+}
+
+@media (max-width: 991px) {
+    .tech-partner-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .tech-partner-inner .tp-logo-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .tech-partner-section {
+        padding: 60px 0;
+    }
+    .tech-partner-inner {
+        text-align: center;
+    }
+    .tech-partner-inner .tp-content h2 {
+        font-size: 30px;
+    }
+    .tech-partner-inner .tp-content p {
+        font-size: 15px;
+    }
+    .tech-partner-inner .tp-tags {
+        justify-content: center;
+    }
+    .tech-partner-inner .tp-logo-card {
+        padding: 30px;
+    }
+}
+
+/* ---- 4-column partnership grid ---- */
+.tier-grid-four {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+@media (max-width: 991px) {
+    .tier-grid-four {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 767px) {
+    .tier-grid-four {
+        grid-template-columns: 1fr;
+    }
+}
 </style>
 
 <style>
@@ -505,7 +674,7 @@ $seo = [
                                         Select Partnership Type
                                     </option>
 
-                                    @foreach(['Content Partnerships', 'Brand Collaborations', 'Media Partnerships', 'Community Partners', 'Technology Partners'] as $type)
+                                    @foreach(['Content Partnerships', 'Brand Collaborations', 'Media Partnerships', 'Community Partners'] as $type)
                                         <option value="{{ $type }}" {{ old('partnership_type') == $type ? 'selected' : '' }}>{{ $type }}</option>
                                     @endforeach
 
@@ -548,6 +717,188 @@ $seo = [
         </div>
     </div>
 </div>
+
+<!-- ========================= 
+   TECHNOLOGY PARTNER SECTION 
+   ========================= -->
+<section class="tech-partner-section">
+    <div class="container">
+        <div class="tech-partner-inner">
+            <div class="tp-content">
+                <div class="tp-eyebrow">Innovation Partner</div>
+                <h2>Technology Partner</h2>
+                <p>WeGeni powers the Young Chanakya X platform ecosystem, delivering premium software engineering, robust system integrations, and digital infrastructure scaled for high performance.</p>
+                <div class="tp-tags">
+                    <span class="tp-tag">System Architecture</span>
+                    <span class="tp-tag">Digital Ecosystems</span>
+                    <span class="tp-tag">Tech Consulting</span>
+                </div>
+            </div>
+            <div class="tp-logo-container">
+                <a href="https://wegeni.com" target="_blank" rel="noopener noreferrer" class="tp-logo-card">
+                    <img src="{{ asset('images/logo/wegeni-logo.svg') }}" alt="WeGeni - Technology Partner">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+CONNECTX PARTNERSHIP OPPORTUNITIES
+========================= -->
+
+<style>
+  /* TIERS UI FROM SPONSOR PAGE */
+  .tiers-section { max-width: 1600px; margin: 0 auto; padding: 100px 2vw; }
+  .tiers-header { text-align: center; margin-bottom: 56px; }
+  .tiers-header .section-title { max-width: 600px; margin: 0 auto 16px; }
+  .tiers-header .section-sub { margin: 0 auto; text-align: center; }
+
+  .tier-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .tier-grid + .tier-grid { margin-top: 24px; }
+
+  .tier-card { border: 1.5px solid rgba(12,58,48,0.12); border-radius: 20px; padding: 36px 30px; transition: all 0.25s; position: relative; display: flex; flex-direction: column; }
+  .tier-card:hover { border-color: #0c3a30; transform: translateY(-3px); box-shadow: 0 24px 60px rgba(12,58,48,0.12); }
+  .tier-card.featured { background: #0c3a30; color: #fdf9f5; border-color: #0c3a30; }
+  .tier-badge {
+    position: absolute; top: -14px; right: 28px; background: #ffd2b1; color: #0c3a30;
+    border-radius: 100px; padding: 6px 16px; font-size: 12px; font-weight: 700;
+  }
+  .tier-name { font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #2e7d62; margin-bottom: 10px; }
+  .tier-card.featured .tier-name { color: #ffd2b1; }
+  .tier-title { font-family: 'Playfair Display', Georgia, serif; font-size: 24px; font-weight: 700; color: #0c3a30; margin-bottom: 6px; }
+  .tier-card.featured .tier-title { color: #fdf9f5; }
+  .tier-tagline { font-size: 13px; color: #5a5a5a; margin-bottom: 22px; line-height: 1.5; }
+  .tier-card.featured .tier-tagline { color: rgba(253,249,245,0.7); }
+  .tier-list { list-style: none; margin-bottom: 26px; flex-grow: 1; padding: 0; }
+  .tier-list li {
+    font-size: 13.5px; color: #5a5a5a; padding: 7px 0; border-bottom: 1px solid rgba(12,58,48,0.12);
+    display: flex; align-items: flex-start; gap: 9px; line-height: 1.5;
+  }
+  .tier-card.featured .tier-list li { color: rgba(253,249,245,0.8); border-color: rgba(255,255,255,0.12); }
+  .tier-list li:last-child { border-bottom: none; }
+  .tier-list li::before { content: '✓'; color: #2e7d62; font-weight: 700; flex-shrink: 0; }
+  .tier-card.featured .tier-list li::before { color: #ffd2b1; }
+  .tier-list.collapsed li:nth-child(n+4) { display: none; }
+  .tier-toggle {
+    background: none; border: none; color: #2e7d62; font-size: 13px; font-weight: 600;
+    cursor: pointer; padding: 0 0 22px; text-align: left; text-decoration: underline;
+  }
+  .tier-card.featured .tier-toggle { color: #ffd2b1; }
+  
+  .tier-btn-primary {
+    background: #0c3a30; color: #ffd2b1; padding: 14px 32px; border-radius: 100px;
+    font-size: 15px; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.2s;
+    border: none; cursor: pointer;
+  }
+  .tier-btn-primary:hover { background: #1a5c48; transform: translateY(-1px); color: #ffd2b1; }
+  .tier-btn-outline {
+    border: 1.5px solid #0c3a30; color: #0c3a30; padding: 14px 32px; border-radius: 100px;
+    font-size: 15px; font-weight: 500; text-decoration: none; display: inline-block; transition: all 0.2s;
+  }
+  .tier-btn-outline:hover { background: #0c3a30; color: #ffd2b1; }
+
+  @media(max-width: 991px){
+      .tier-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<section class="tiers-section position-relative pt-4 pb-30" id="partnership-opportunities">
+  <div class="container">
+    <div class="section-head text-center" style="margin-bottom: 50px;">
+        <div class="eyebrow rv" style="color: #0c3a30; font-size: 10px; font-weight: 700; letter-spacing: 3px;">Young Chanakya X</div>
+        <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Partnership Opportunities</h2>
+        <p class="sec-desc rv mx-auto" style="margin-top: 16px; max-width: 600px; line-height: 1.6;">Explore our dynamic partnership levels tailored for visibility, networking, and creative collaboration.</p>
+    </div>
+
+    <div class="tier-grid-four">
+      <!-- Brand Partners -->
+      <div class="tier-card">
+        <div class="tier-name">Engagement</div>
+        <div class="tier-title">Brand Collaborations</div>
+        <div class="tier-tagline">Work with creators and influencers to build narratives.</div>
+        <ul class="tier-list collapsed">
+          <li>Campaign collaborations</li>
+          <li>Product launches and seeding</li>
+          <li>Brand storytelling and narratives</li>
+          <li>Influencer engagement programs</li>
+          <li>Integrated brand experiences</li>
+          <li>Sponsored content tracks</li>
+          <li>Custom experiential events</li>
+        </ul>
+        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+        <a href="#partner-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Brand Partner</a>
+      </div>
+      
+      <!-- Media Partners -->
+      <div class="tier-card">
+        <div class="tier-name">Amplification</div>
+        <div class="tier-title">Media Partnerships</div>
+        <div class="tier-tagline">Amplify visibility through media coverage and content reach.</div>
+        <ul class="tier-list collapsed">
+          <li>Event coverage and reporting</li>
+          <li>Creator features and spotlights</li>
+          <li>Digital interviews and series</li>
+          <li>Platform visibility across networks</li>
+          <li>Co-branded initiatives</li>
+          <li>Syndicated content opportunities</li>
+          <li>Exclusive access to major launches</li>
+        </ul>
+        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+        <a href="#partner-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Media Partner</a>
+      </div>
+
+      <!-- Community Partners -->
+      <div class="tier-card">
+        <div class="tier-name">Network</div>
+        <div class="tier-title">Community Partners</div>
+        <div class="tier-tagline">Collaborate with communities to expand engagement.</div>
+        <ul class="tier-list collapsed">
+          <li>Community enrichment programs</li>
+          <li>Cross-network collaborations</li>
+          <li>Ecosystem conversations</li>
+          <li>Targeted audience access</li>
+          <li>Joint engagement activities</li>
+          <li>Member-exclusive discounts</li>
+          <li>Co-hosted digital meetups</li>
+        </ul>
+        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+        <a href="#partner-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Community Partner</a>
+      </div>
+      
+      <!-- Content Partnerships -->
+      <div class="tier-card">
+        <div class="tier-name">Creation</div>
+        <div class="tier-title">Content Partnerships</div>
+        <div class="tier-tagline">Collaborate on creator-led content formats and storytelling.</div>
+        <ul class="tier-list collapsed">
+          <li>Podcasts and interview series</li>
+          <li>Creator-led storytelling formats</li>
+          <li>Video and digital content production</li>
+          <li>Knowledge-driven content</li>
+          <li>Multi-format collaborations</li>
+          <li>Co-authored reports and insights</li>
+          <li>Educational content creation</li>
+        </ul>
+        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+        <a href="#partner-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Content Partner</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function toggleTier(btn) {
+  const list = btn.previousElementSibling;
+  if (list.classList.contains('collapsed')) {
+    list.classList.remove('collapsed');
+    btn.textContent = 'Show fewer benefits';
+  } else {
+    list.classList.add('collapsed');
+    btn.textContent = 'Show all benefits';
+  }
+}
+</script>
 
 
 <!-- second section -->
@@ -701,186 +1052,6 @@ $seo = [
     </div>
 
 </div>
-
-<!-- =========================
-CONNECTX PARTNERSHIP OPPORTUNITIES
-========================= -->
-
-<style>
-  /* TIERS UI FROM SPONSOR PAGE */
-  .tiers-section { max-width: 1300px; margin: 0 auto; padding: 100px 5vw; }
-  .tiers-header { text-align: center; margin-bottom: 56px; }
-  .tiers-header .section-title { max-width: 600px; margin: 0 auto 16px; }
-  .tiers-header .section-sub { margin: 0 auto; text-align: center; }
-
-  .tier-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .tier-grid + .tier-grid { margin-top: 24px; }
-
-  .tier-card { border: 1.5px solid rgba(12,58,48,0.12); border-radius: 20px; padding: 36px 30px; transition: all 0.25s; position: relative; display: flex; flex-direction: column; }
-  .tier-card:hover { border-color: #0c3a30; transform: translateY(-3px); box-shadow: 0 24px 60px rgba(12,58,48,0.12); }
-  .tier-card.featured { background: #0c3a30; color: #fdf9f5; border-color: #0c3a30; }
-  .tier-badge {
-    position: absolute; top: -14px; right: 28px; background: #ffd2b1; color: #0c3a30;
-    border-radius: 100px; padding: 6px 16px; font-size: 12px; font-weight: 700;
-  }
-  .tier-name { font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #2e7d62; margin-bottom: 10px; }
-  .tier-card.featured .tier-name { color: #ffd2b1; }
-  .tier-title { font-family: 'Playfair Display', Georgia, serif; font-size: 24px; font-weight: 700; color: #0c3a30; margin-bottom: 6px; }
-  .tier-card.featured .tier-title { color: #fdf9f5; }
-  .tier-tagline { font-size: 13px; color: #5a5a5a; margin-bottom: 22px; line-height: 1.5; }
-  .tier-card.featured .tier-tagline { color: rgba(253,249,245,0.7); }
-  .tier-list { list-style: none; margin-bottom: 26px; flex-grow: 1; padding: 0; }
-  .tier-list li {
-    font-size: 13.5px; color: #5a5a5a; padding: 7px 0; border-bottom: 1px solid rgba(12,58,48,0.12);
-    display: flex; align-items: flex-start; gap: 9px; line-height: 1.5;
-  }
-  .tier-card.featured .tier-list li { color: rgba(253,249,245,0.8); border-color: rgba(255,255,255,0.12); }
-  .tier-list li:last-child { border-bottom: none; }
-  .tier-list li::before { content: '✓'; color: #2e7d62; font-weight: 700; flex-shrink: 0; }
-  .tier-card.featured .tier-list li::before { color: #ffd2b1; }
-  .tier-list.collapsed li:nth-child(n+4) { display: none; }
-  .tier-toggle {
-    background: none; border: none; color: #2e7d62; font-size: 13px; font-weight: 600;
-    cursor: pointer; padding: 0 0 22px; text-align: left; text-decoration: underline;
-  }
-  .tier-card.featured .tier-toggle { color: #ffd2b1; }
-  
-  .tier-btn-primary {
-    background: #0c3a30; color: #ffd2b1; padding: 14px 32px; border-radius: 100px;
-    font-size: 15px; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.2s;
-    border: none; cursor: pointer;
-  }
-  .tier-btn-primary:hover { background: #1a5c48; transform: translateY(-1px); color: #ffd2b1; }
-  .tier-btn-outline {
-    border: 1.5px solid #0c3a30; color: #0c3a30; padding: 14px 32px; border-radius: 100px;
-    font-size: 15px; font-weight: 500; text-decoration: none; display: inline-block; transition: all 0.2s;
-  }
-  .tier-btn-outline:hover { background: #0c3a30; color: #ffd2b1; }
-
-  @media(max-width: 991px){
-      .tier-grid { grid-template-columns: 1fr; }
-  }
-</style>
-
-<section class="tiers-section position-relative pt-4 pb-30" id="partnership-opportunities">
-  <div class="container">
-    <div class="section-head text-center" style="margin-bottom: 50px;">
-        <div class="eyebrow rv" style="color: #0c3a30; font-size: 10px; font-weight: 700; letter-spacing: 3px;">Young Chanakya X</div>
-        <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Partnership Opportunities</h2>
-        <p class="sec-desc rv mx-auto" style="margin-top: 16px; max-width: 600px; line-height: 1.6;">Explore our dynamic partnership levels tailored for visibility, networking, and creative collaboration.</p>
-    </div>
-
-    <div class="tier-grid">
-      <!-- Technology partner -->
-      <div class="tier-card featured">
-        <div class="tier-badge">Infrastructure</div>
-        <div class="tier-name">Integration</div>
-        <div class="tier-title">Technology Partners</div>
-        <div class="tier-tagline">Support ecosystems through tools, APIs, and digital platforms.</div>
-        <ul class="tier-list collapsed">
-          <li>Platform and API integrations</li>
-          <li>Production technologies</li>
-          <li>Creator economy solutions</li>
-          <li>Infrastructure support</li>
-          <li>Content innovation tools</li>
-          <li>Analytics and data sharing</li>
-          <li>Hardware provisioning</li>
-        </ul>
-        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#partner-form" class="tier-btn-primary" style="width:100%; text-align:center;">Become a Tech Partner</a>
-      </div>
-
-      <!-- Brand Partners -->
-      <div class="tier-card">
-        <div class="tier-name">Engagement</div>
-        <div class="tier-title">Brand Collaborations</div>
-        <div class="tier-tagline">Work with creators and influencers to build narratives.</div>
-        <ul class="tier-list collapsed">
-          <li>Campaign collaborations</li>
-          <li>Product launches and seeding</li>
-          <li>Brand storytelling and narratives</li>
-          <li>Influencer engagement programs</li>
-          <li>Integrated brand experiences</li>
-          <li>Sponsored content tracks</li>
-          <li>Custom experiential events</li>
-        </ul>
-        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#partner-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Brand Partner</a>
-      </div>
-      
-      <!-- Media Partners -->
-      <div class="tier-card">
-        <div class="tier-name">Amplification</div>
-        <div class="tier-title">Media Partnerships</div>
-        <div class="tier-tagline">Amplify visibility through media coverage and content reach.</div>
-        <ul class="tier-list collapsed">
-          <li>Event coverage and reporting</li>
-          <li>Creator features and spotlights</li>
-          <li>Digital interviews and series</li>
-          <li>Platform visibility across networks</li>
-          <li>Co-branded initiatives</li>
-          <li>Syndicated content opportunities</li>
-          <li>Exclusive access to major launches</li>
-        </ul>
-        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#partner-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Media Partner</a>
-      </div>
-    </div>
-
-    <div class="tier-grid" style="margin-top: 24px;">
-      <!-- Community Partners -->
-      <div class="tier-card">
-        <div class="tier-name">Network</div>
-        <div class="tier-title">Community Partners</div>
-        <div class="tier-tagline">Collaborate with communities to expand engagement.</div>
-        <ul class="tier-list collapsed">
-          <li>Community enrichment programs</li>
-          <li>Cross-network collaborations</li>
-          <li>Ecosystem conversations</li>
-          <li>Targeted audience access</li>
-          <li>Joint engagement activities</li>
-          <li>Member-exclusive discounts</li>
-          <li>Co-hosted digital meetups</li>
-        </ul>
-        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#partner-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Community Partner</a>
-      </div>
-      
-      <!-- Content Partnerships -->
-      <div class="tier-card">
-        <div class="tier-name">Creation</div>
-        <div class="tier-title">Content Partnerships</div>
-        <div class="tier-tagline">Collaborate on creator-led content formats and storytelling.</div>
-        <ul class="tier-list collapsed">
-          <li>Podcasts and interview series</li>
-          <li>Creator-led storytelling formats</li>
-          <li>Video and digital content production</li>
-          <li>Knowledge-driven content</li>
-          <li>Multi-format collaborations</li>
-          <li>Co-authored reports and insights</li>
-          <li>Educational content creation</li>
-        </ul>
-        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#partner-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Content Partner</a>
-      </div>
-      
-      <!-- Empty space for grid alignment or an extra card if needed, we'll leave it empty for a nice offset or make it a 2-col on desktop for the bottom row -->
-    </div>
-  </div>
-</section>
-
-<script>
-function toggleTier(btn) {
-  const list = btn.previousElementSibling;
-  if (list.classList.contains('collapsed')) {
-    list.classList.remove('collapsed');
-    btn.textContent = 'Show fewer benefits';
-  } else {
-    list.classList.add('collapsed');
-    btn.textContent = 'Show all benefits';
-  }
-}
-</script>
 
 
 <!-- =========================

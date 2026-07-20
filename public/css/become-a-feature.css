@@ -825,7 +825,7 @@
 
 /* Override standard header hamburger for color consistency */
 #hdr:not(.scrolled) .hamburger span {
-  background: var(--green) !important;
+  background: #ffffff !important;
 }
 
 @media(max-width:920px) {
