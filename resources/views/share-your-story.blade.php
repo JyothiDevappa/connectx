@@ -1628,9 +1628,7 @@ $seo = [
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
             const btn = document.getElementById('storySubmitBtn');
-            const origHTML = btn.innerHTML;
             btn.disabled = true;
-            btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span>Submitting...';
 
             const formData = new FormData(form);
             try {
@@ -1656,7 +1654,6 @@ $seo = [
             }
 
             btn.disabled = false;
-            btn.innerHTML = origHTML;
         });
     })();
 

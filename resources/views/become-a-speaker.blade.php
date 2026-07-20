@@ -1516,17 +1516,19 @@ $seo = [
     </div>
   </div>
 
-  <!-- ========== SUCCESS POPUP MODAL ========== -->
-  <div id="speakerSuccessModal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.65); backdrop-filter:blur(4px); align-items:center; justify-content:center;">
-    <div style="background:#fff; border-radius:20px; padding:48px 40px; max-width:480px; width:90%; text-align:center; box-shadow:0 20px 60px rgba(0,0,0,0.25); animation:speakerPopIn .4s ease;">
-      <div style="width:70px;height:70px;background:linear-gradient(135deg,#0c3a30,#1a6b55);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
-        <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+  <!-- ========== SUCCESS MODAL (Bootstrap) ========== -->
+  <div class="modal fade" id="speakerSuccessModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="background:linear-gradient(135deg,#fffcf9 0%,#ffeada 100%);border:1px solid rgba(12,58,48,.15);border-radius:20px;">
+        <div class="modal-body text-center p-5">
+          <div class="mb-4"><i class="bi bi-check-circle-fill" style="font-size:4rem;color:#0c3a30;"></i></div>
+          <h3 class="fw-bold mb-3" style="font-size:1.5rem;line-height:1.3;color:#0c3a30;">You're in the queue.</h3>
+          <p class="mb-4" style="line-height:1.6;font-size:0.95rem;color:#687588;">Thank you for sharing your story — our team will reach out within 5–7 working days if it's a fit.</p>
+          <button type="button" class="btn px-5 py-3 fw-bold text-uppercase w-100 d-block text-center" data-bs-dismiss="modal" style="background-color:#0c3a30;color:#fff;border-radius:12px;border:none;">
+            Done
+          </button>
+        </div>
       </div>
-      <h3 style="color:#0c3a30;font-size:1.45rem;font-weight:700;margin-bottom:12px;">You're in the queue.</h3>
-      <p style="color:#555;font-size:0.97rem;line-height:1.6;margin-bottom:28px;">Thank you for sharing your story — our team will reach out within 5–7 working days if it's a fit.</p>
-      <button onclick="document.getElementById('speakerSuccessModal').style.display='none';" style="background:linear-gradient(135deg,#0c3a30,#1a6b55);color:#fff;border:none;border-radius:10px;padding:13px 36px;font-size:0.95rem;font-weight:600;cursor:pointer;">
-        Done <i class="bi bi-check2 ms-1"></i>
-      </button>
     </div>
   </div>
 
@@ -2061,9 +2063,7 @@ $seo = [
         .then(function(data) {
           if (data.type === 'success' || data.success) {
             speakerForm.reset();
-            const modal = document.getElementById('speakerSuccessModal');
-            modal.style.display = 'flex';
-            modal.addEventListener('click', function(ev){ if(ev.target===modal) modal.style.display='none'; });
+            new bootstrap.Modal(document.getElementById('speakerSuccessModal')).show();
           } else {
             alert(data.message || 'Something went wrong. Please try again.');
           }
