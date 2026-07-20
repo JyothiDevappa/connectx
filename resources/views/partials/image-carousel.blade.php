@@ -26,7 +26,7 @@
 @push('styles')
 <style>
     .connectx-gallery-section {
-        padding: 60px 0;
+        padding: 20px 0;
         background-color: #ffffff;
         overflow: hidden;
         width: 100%;
@@ -56,7 +56,6 @@
     }
 
     .gallery-img {
-        height: 280px;
         object-fit: cover;
         border-radius: 16px;
         display: block;
@@ -65,13 +64,15 @@
         transition: filter 0.3s ease;
     }
 
-    /* Alternating widths */
+    /* Alternating widths and heights */
     .gallery-img.wide {
-        width: 420px; /* 3:2 ratio */
+        width: 420px;
+        height: 280px;
     }
 
     .gallery-img.narrow {
-        width: 280px; /* 1:1 ratio */
+        width: 280px;
+        height: 340px;
     }
 
     @keyframes connectx-marquee-scroll {
@@ -88,15 +89,13 @@
         .connectx-gallery-section {
             padding: 40px 0;
         }
-        .gallery-img {
-            height: 200px;
-            border-radius: 12px;
-        }
         .gallery-img.wide {
             width: 300px;
+            height: 200px;
         }
         .gallery-img.narrow {
             width: 200px;
+            height: 240px;
         }
         .connectx-gallery-content {
             gap: 15px;
@@ -108,15 +107,13 @@
         .connectx-gallery-section {
             padding: 30px 0;
         }
-        .gallery-img {
-            height: 130px;
-            border-radius: 8px;
-        }
         .gallery-img.wide {
             width: 195px;
+            height: 130px;
         }
         .gallery-img.narrow {
             width: 130px;
+            height: 155px;
         }
         .connectx-gallery-content {
             gap: 10px;

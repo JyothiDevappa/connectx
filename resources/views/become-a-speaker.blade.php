@@ -21,9 +21,9 @@ $seo = [
 <link rel="stylesheet" href="{{ asset('css/partner-page.css') }}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/css/intlTelInput.css">
 <style>
-  .iti { width: 100%; display: block; }
-  .iti__country-list { color: #333333; z-index: 10; }
-  #speaker-phone { padding-left: 90px !important; }
+  .speaker-body .iti { width: 100%; display: block; }
+  .speaker-body .iti__country-list { color: #333333; z-index: 10; }
+  .speaker-body #speaker-phone { padding-left: 95px !important; }
 
   :root {
     --ink: #0c3a30;
@@ -197,12 +197,13 @@ $seo = [
   .speaker-body .about-hero h1 {
     font-size: clamp(36px, 5vw, 64px) !important;
     font-weight: 900;
-    line-height: 1.1;
+    line-height: 1.25 !important;
     letter-spacing: -2px;
     background: linear-gradient(135deg, #ffffff 20%, #ffbe8e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
+    padding-bottom: 0.15em;
   }
 
   .speaker-body .about-hero h1 em {
@@ -1065,23 +1066,25 @@ $seo = [
   }
 
 .talks {
-  padding: 100px 0;
+  padding: 100px 0 120px;
   background: #ffffff !important;
 }
 .talks .section-head {
   display: flex !important;
   justify-content: space-between !important;
   align-items: flex-end !important;
-  margin-bottom: 56px !important;
+  margin-bottom: 60px !important;
   gap: 40px !important;
   max-width: 100% !important;
   text-align: left !important;
 }
 .talks .section-head div {
-  max-width: 60% !important;
+  flex: 0 0 50% !important;
+  max-width: 50% !important;
 }
 .talks .section-head .sec-desc {
-  max-width: 380px !important;
+  flex: 0 0 50% !important;
+  max-width: 50% !important;
   font-size: 15px !important;
   line-height: 1.65 !important;
   color: var(--text-soft) !important;
@@ -1224,6 +1227,112 @@ $seo = [
     height: 180px;
   }
 }
+
+/* Same form style and theme like feature page form */
+.speaker-body .partner-form-box {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(12px) !important;
+  border-radius: 20px !important;
+  padding: 32px !important;
+  transition: transform 0.3s ease;
+}
+
+.speaker-body .partner-form-box:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 210, 177, 0.3) !important;
+}
+
+.speaker-body .partner-form-box label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffd2b1 !important;
+}
+
+.speaker-body .partner-form-box .form-control,
+.speaker-body .partner-form-box textarea,
+.speaker-body .partner-form-box select {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  border-radius: 12px !important;
+  padding: 12px 14px !important;
+  height: auto !important;
+  font-size: 14.5px !important;
+  transition: all 0.3s ease;
+}
+
+/* Ensure intlTelInput flag button is visible */
+.speaker-body .partner-form-box #speaker-phone {
+  padding-left: 95px !important;
+}
+.speaker-body .partner-form-box .iti {
+  width: 100%;
+  display: block;
+}
+.speaker-body .partner-form-box .iti__flag-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 4px;
+}
+.speaker-body .partner-form-box .iti__selected-flag {
+  background: rgba(255,255,255,0.06) !important;
+  border-radius: 10px 0 0 10px;
+}
+
+.speaker-body .partner-form-box .form-control:focus,
+.speaker-body .partner-form-box textarea:focus,
+.speaker-body .partner-form-box select:focus {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: #ffd2b1 !important;
+  box-shadow: 0 0 10px rgba(255, 210, 177, 0.25) !important;
+}
+
+.speaker-body .partner-form-box .form-control::placeholder,
+.speaker-body .partner-form-box textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.speaker-body .partner-submit-btn {
+  background: linear-gradient(135deg, #ffffff 0%, #ffd2b1 100%) !important;
+  color: #0c3a30 !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 14px 28px !important;
+  border: none !important;
+  border-radius: 50px !important;
+  transition: all 0.3s ease;
+}
+
+.speaker-body .partner-submit-btn:hover {
+  transform: translateY(-2px);
+}
+
+.speaker-body .iti__country-list {
+  background-color: #090d16 !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+.speaker-body .iti__country {
+  padding: 10px 14px !important;
+}
+
+.speaker-body .iti__country:hover,
+.speaker-body .iti__country.iti__highlight {
+  background-color: rgba(255, 210, 177, 0.15) !important;
+}
+
+.speaker-body .iti__selected-dial-code {
+  color: #ffffff !important;
+}
 </style>
 @endpush
 
@@ -1281,7 +1390,7 @@ $seo = [
               <div class="row">
 
                 <!-- 1st row: Full Name -->
-                <div class="col-12 mb-3">
+                <div class="col-md-6 mb-3">
                   <label for="speaker-full-name">Full Name <span class="text-danger">*</span></label>
                   <input type="text"
                     id="speaker-full-name"
@@ -1308,7 +1417,7 @@ $seo = [
                   @enderror
                 </div>
 
-                <div class="col-md-6 mb-3">
+                <div class="col-12 mb-3">
                   <label for="speaker-email">Email Address</label>
                   <input type="email"
                     id="speaker-email"
@@ -1395,9 +1504,6 @@ $seo = [
                     style="width: 100%; text-align: center;">
                     Submit Application
                   </button>
-                  <p style="font-size: 12px; color: #4d6459; text-align: center; margin-top: 12px;">
-                    We'll only use this to reach out about your application.
-                  </p>
                 </div>
 
               </div>
@@ -1490,7 +1596,7 @@ $seo = [
     <div class="section-head">
       <div>
         <span class="eyebrow">Featured Talks</span>
-        <h2 class="sec-title" style="margin-top: 10px;">Speak on What You <br>Know Best</h2>
+        <h2>Speak on What You Know Best</h2>
       </div>
       <p class="sec-desc">Explore talks from inspiring speakers who have shared practical knowledge, innovative thinking, and valuable experiences with the YCX community</p>
     </div>
@@ -1903,28 +2009,68 @@ $seo = [
 @endsection
 
 @push('scripts')
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/js/intlTelInput.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Form submission logic
-    const form = document.getElementById('speakerForm');
-    if (form) {
-      form.addEventListener('submit', function(e) {
+
+    // intl-tel-input initialization
+    var phoneInput = document.getElementById('speaker-phone');
+    var iti;
+    if (phoneInput && window.intlTelInput) {
+      iti = window.intlTelInput(phoneInput, {
+        initialCountry: "in",
+        separateDialCode: true,
+        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/js/utils.js"
+      });
+    }
+
+    // AJAX Form Submission
+    var speakerForm = document.getElementById('speakerForm');
+    var thankyouBlock = document.getElementById('thankyou');
+
+    if (speakerForm) {
+      speakerForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        form.style.display = 'none';
-        const thankyou = document.getElementById('thankyou');
-        if (thankyou) {
-          thankyou.style.display = 'block';
+
+        if (phoneInput && iti) {
+          phoneInput.value = iti.getNumber();
         }
+
+        var formData = new FormData(speakerForm);
+
+        fetch(speakerForm.action, {
+          method: 'POST',
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+          },
+          body: formData
+        })
+        .then(function(res) {
+          return res.json();
+        })
+        .then(function(data) {
+          if (data.type === 'success' || data.success) {
+            speakerForm.style.display = 'none';
+            if (thankyouBlock) thankyouBlock.style.display = 'block';
+          } else {
+            alert(data.message || 'Something went wrong. Please try again.');
+          }
+        })
+        .catch(function(err) {
+          console.error(err);
+          alert('Submission failed. Please try again.');
+        });
       });
     }
 
     // FAQ Accordion logic
-    document.querySelectorAll('.faq-item').forEach(item => {
-      const q = item.querySelector('.faq-q');
+    document.querySelectorAll('.faq-item').forEach(function(item) {
+      var q = item.querySelector('.faq-q');
       if (q) {
-        q.addEventListener('click', () => {
-          const isOpen = item.classList.contains('open');
-          document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        q.addEventListener('click', function() {
+          var isOpen = item.classList.contains('open');
+          document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
           if (!isOpen) {
             item.classList.add('open');
           }
@@ -1932,21 +2078,20 @@ $seo = [
       }
     });
 
-    // Different UI section Category Pills interaction
-    const diffPills = document.querySelectorAll('.speaker-body .diff-ui-chips span');
-    const diffCards = document.querySelectorAll('.speaker-body .gallery-card');
-    
-    diffPills.forEach(pill => {
+    // Category Pills interaction
+    var diffPills = document.querySelectorAll('.speaker-body .diff-ui-chips span');
+    var diffCards = document.querySelectorAll('.speaker-body .gallery-card');
+
+    diffPills.forEach(function(pill) {
       pill.style.cursor = 'pointer';
       pill.addEventListener('click', function() {
-        // Toggle active class
-        diffPills.forEach(p => p.classList.remove('chip-active'));
-        this.classList.add('chip-active');
-        
-        const selectedText = this.textContent.trim().toLowerCase();
-        
-        diffCards.forEach(card => {
-          const label = card.querySelector('.glass-label').textContent.trim().toLowerCase();
+        diffPills.forEach(function(p) { p.classList.remove('chip-active'); });
+        pill.classList.add('chip-active');
+
+        var selectedText = pill.textContent.trim().toLowerCase();
+
+        diffCards.forEach(function(card) {
+          var label = card.querySelector('.glass-label').textContent.trim().toLowerCase();
           if (label === selectedText) {
             card.style.transform = 'scale(1.05) translateY(-8px)';
             card.style.boxShadow = '0 25px 50px rgba(12, 58, 48, 0.25)';
@@ -1966,56 +2111,6 @@ $seo = [
       });
     });
 
-    // intl-tel-input and AJAX submission
-    var phoneInput = document.getElementById('speaker-phone');
-    var iti;
-    if (phoneInput) {
-      iti = window.intlTelInput(phoneInput, {
-        initialCountry: "in",
-        separateDialCode: true,
-        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/js/utils.js"
-      });
-    }
-
-    var form = document.getElementById('speakerForm');
-    var thankyouBlock = document.getElementById('thankyou');
-
-    if (form) {
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        if (phoneInput && iti) {
-          phoneInput.value = iti.getNumber();
-        }
-
-        var formData = new FormData(form);
-
-        fetch(form.action, {
-          method: 'POST',
-          headers: {
-            'X-Requested-With': 'XMLHttpRequest',
-            'X-CSRF-TOKEN': '{{ csrf_token() }}'
-          },
-          body: formData
-        })
-        .then(function(res) {
-          return res.json();
-        })
-        .then(function(data) {
-          if (data.type === 'success' || data.success) {
-            form.style.display = 'none';
-            if (thankyouBlock) thankyouBlock.style.display = 'block';
-          } else {
-            alert(data.message || 'Something went wrong. Please try again.');
-          }
-        })
-        .catch(function(err) {
-          console.error(err);
-          alert('Submission failed. Please try again.');
-        });
-      });
-    }
   });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/js/intlTelInput.min.js"></script>
 @endpush

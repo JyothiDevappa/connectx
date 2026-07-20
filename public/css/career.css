@@ -1328,7 +1328,7 @@
 
 /* connectx-brand-section */
 .career-body .connectx-brand-section.fancy-banner-seven .bg-wrapper {
-    background: url('../images/media/here-is-my-colleague.jpg') no-repeat center center !important;
+    background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=80') no-repeat center center !important;
     background-size: cover !important;
     min-height: 680px;
     position: relative;

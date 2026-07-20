@@ -12,7 +12,7 @@ class AdminDashboardController extends Controller
      */
     public function index($section = 'overview')
     {
-        $allowedSections = ['overview', 'connectors', 'sponsers', 'partners', 'speakers', 'careers', 'internships', 'posted_jobs', 'contacts', 'featured_guests'];
+        $allowedSections = ['overview', 'connectors', 'sponsers', 'partners', 'speakers', 'careers', 'internships', 'posted_jobs', 'contacts', 'featured_guests', 'story_submissions'];
         // Also accept 'sponsors' alias and normalise to 'sponsers' for JS compatibility
         if ($section === 'sponsors') $section = 'sponsers';
         if (!in_array($section, $allowedSections)) {
@@ -163,7 +163,25 @@ class AdminDashboardController extends Controller
             ];
         });
 
-        return view('admin.dashboard', compact('section', 'connectors', 'partners', 'sponsers', 'postedJobs', 'careers', 'internships', 'contacts', 'speakers', 'featuredGuests'));
+        $storySubmissions = \App\Models\StorySubmission::orderByDesc('created_at')->get()->map(function ($s) {
+            return [
+                'id'               => $s->id,
+                'name'             => $s->full_name,
+                'full_name'        => $s->full_name,
+                'email'            => $s->email,
+                'phone'            => $s->phone,
+                'social_url'       => $s->social_url,
+                'linkedin'         => $s->social_url,
+                'talk_title'       => $s->talk_title,
+                'speaking_language'=> $s->speaking_language,
+                'talk_summary'     => $s->talk_summary,
+                'status'           => $s->status,
+                'notes'            => $s->notes ?? '',
+                'submitted'        => $s->created_at->format('Y-m-d'),
+            ];
+        });
+
+        return view('admin.dashboard', compact('section', 'connectors', 'partners', 'sponsers', 'postedJobs', 'careers', 'internships', 'contacts', 'speakers', 'featuredGuests', 'storySubmissions'));
     }
 
     /**
@@ -656,6 +674,54 @@ class AdminDashboardController extends Controller
             'type'    => 'success',
             'message' => 'Guest application updated successfully.',
             'data'    => $guest
+        ]);
+    }
+
+    /**
+     * Return story submissions as JSON.
+     */
+    public function storySubmissions(Request $request)
+    {
+        $stories = \App\Models\StorySubmission::orderByDesc('created_at')->get()->map(function ($s) {
+            return [
+                'id'               => $s->id,
+                'name'             => $s->full_name,
+                'full_name'        => $s->full_name,
+                'email'            => $s->email,
+                'phone'            => $s->phone,
+                'social_url'       => $s->social_url,
+                'linkedin'         => $s->social_url,
+                'talk_title'       => $s->talk_title,
+                'speaking_language'=> $s->speaking_language,
+                'talk_summary'     => $s->talk_summary,
+                'status'           => $s->status,
+                'notes'            => $s->notes ?? '',
+                'submitted'        => $s->created_at->format('Y-m-d'),
+            ];
+        });
+        return response()->json($stories);
+    }
+
+    /**
+     * Update story submission status/notes.
+     */
+    public function updateStorySubmission(Request $request, $id)
+    {
+        $story = \App\Models\StorySubmission::findOrFail($id);
+
+        if ($request->has('status')) {
+            $story->status = $request->input('status');
+        }
+        if ($request->has('notes')) {
+            $story->notes = $request->input('notes');
+        }
+
+        $story->save();
+
+        return response()->json([
+            'type'    => 'success',
+            'message' => 'Story submission updated successfully.',
+            'data'    => $story
         ]);
     }
 }

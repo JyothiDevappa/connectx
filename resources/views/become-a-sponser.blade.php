@@ -92,1031 +92,1031 @@ $seo = [
 
 
 <style>
-#hdr:not(.scrolled) .hamburger span {
-    background: #0c3a30 !important;
-}
-
-/* =========================================
-   sponser SECTION
-========================================= */
-
-.sponser-contact-section{
-    position: relative;
-    padding: 180px 0 100px;
-    background: #f8f6f2;
-    overflow: hidden;
-}
-
-@media (max-width: 991px){
-    .sponser-contact-section{
-        padding: 120px 0 70px;
-    }
-}
-@media (max-width: 767px){
-    .sponser-contact-section{
-        padding: 100px 0 60px;
-    }
-}
-@media (max-width: 480px){
-    .sponser-contact-section{
-        padding: 90px 0 50px;
-    }
-}
-
-.sponser-content h1{
-    font-size: 52px;
-    line-height: 1.15em;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 25px;
-    letter-spacing: -1px;
-}
-
-.sponser-content p{
-    font-size: 16px;
-    line-height: 1.9em;
-    color: #555;
-    margin-bottom: 0;
-}
-
-@media (max-width: 991px){
-    .sponser-content{
-        margin-bottom: 40px;
-    }
-
-    .sponser-content h1{
-        font-size: 38px;
-        line-height: 1.25em;
-    }
-}
-
-@media (max-width: 576px){
-    .sponser-content h1{
-        font-size: 30px;
-    }
-}
-
-/* FORM BOX */
-
-.sponser-form-box{
-    background: #fff;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 15px 60px rgba(0,0,0,0.08);
-    position: relative;
-}
-
-@media (max-width: 576px){
-    .sponser-form-box{
-        padding: 25px;
-    }
-}
-
-/* INPUTS */
-
-.sponser-form-box .form-control,
-.sponser-form-box select{
-    height: 58px;
-    border: 1px solid #e5e5e5;
-    border-radius: 12px;
-    padding: 0 18px;
-    font-size: 15px;
-    color: #000;
-    box-shadow: none;
-    transition: all .3s ease;
-    background: #fff;
-}
-
-.sponser-form-box label {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-    color: #19352d;
-    margin-bottom: 8px;
-    text-align: left;
-}
+        #hdr:not(.scrolled) .hamburger span {
+            background: #0c3a30 !important;
+        }
+
+        /* =========================================
+        sponser SECTION
+        ========================================= */
+
+        .sponser-contact-section{
+            position: relative;
+            padding: 180px 0 100px;
+            background: #f8f6f2;
+            overflow: hidden;
+        }
+
+        @media (max-width: 991px){
+            .sponser-contact-section{
+                padding: 120px 0 70px;
+            }
+        }
+        @media (max-width: 767px){
+            .sponser-contact-section{
+                padding: 100px 0 60px;
+            }
+        }
+        @media (max-width: 480px){
+            .sponser-contact-section{
+                padding: 90px 0 50px;
+            }
+        }
+
+        .sponser-content h1{
+            font-size: 52px;
+            line-height: 1.15em;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 25px;
+            letter-spacing: -1px;
+        }
+
+        .sponser-content p{
+            font-size: 16px;
+            line-height: 1.9em;
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 991px){
+            .sponser-content{
+                margin-bottom: 40px;
+            }
+
+            .sponser-content h1{
+                font-size: 38px;
+                line-height: 1.25em;
+            }
+        }
+
+        @media (max-width: 576px){
+            .sponser-content h1{
+                font-size: 30px;
+            }
+        }
+
+        /* FORM BOX */
+
+        .sponser-form-box{
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 60px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        @media (max-width: 576px){
+            .sponser-form-box{
+                padding: 25px;
+            }
+        }
+
+        /* INPUTS */
+
+        .sponser-form-box .form-control,
+        .sponser-form-box select{
+            height: 58px;
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+            padding: 0 18px;
+            font-size: 15px;
+            color: #000;
+            box-shadow: none;
+            transition: all .3s ease;
+            background: #fff;
+        }
+
+        .sponser-form-box label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #19352d;
+            margin-bottom: 8px;
+            text-align: left;
+        }
 
-.sponser-form-box .form-control::placeholder {
-    color: #888888 !important;
-}
+        .sponser-form-box .form-control::placeholder {
+            color: #888888 !important;
+        }
 
-.sponser-form-box textarea.form-control{
-    height: 130px;
-    padding-top: 15px;
-}
+        .sponser-form-box textarea.form-control{
+            height: 130px;
+            padding-top: 15px;
+        }
 
-.sponser-form-box .form-control:focus,
-.sponser-form-box select:focus{
-    border-color: #0c3a30;
-    box-shadow: 0 0 0 3px rgba(12,58,48,0.12);
-}
+        .sponser-form-box .form-control:focus,
+        .sponser-form-box select:focus{
+            border-color: #0c3a30;
+            box-shadow: 0 0 0 3px rgba(12,58,48,0.12);
+        }
 
-/* BUTTON */
+        /* BUTTON */
 
-.btn-sponser-submit{
-    width: 100%;
-    height: 58px;
-    border: none;
-    border-radius: 12px;
-    background: #19352d;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    transition: all .3s ease;
-}
+        .btn-sponser-submit{
+            width: 100%;
+            height: 58px;
+            border: none;
+            border-radius: 12px;
+            background: #19352d;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all .3s ease;
+        }
 
-.btn-sponser-submit:hover{
-    background: #071f1a;
-    color: #fff;
-}
+        .btn-sponser-submit:hover{
+            background: #071f1a;
+            color: #fff;
+        }
 
-/* OPTIONAL SHAPE */
+        /* OPTIONAL SHAPE */
 
-.sponser-contact-section::before{
-    content: "";
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: rgba(118,88,59,0.05);
-    border-radius: 50%;
-    top: -200px;
-    right: -150px;
-}
+        .sponser-contact-section::before{
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: rgba(118,88,59,0.05);
+            border-radius: 50%;
+            top: -200px;
+            right: -150px;
+        }
 
 
 
 
 
 
-/* sponser section */
-/* ======================
-sponser CARDS
-====================== */
+        /* sponser section */
+        /* ======================
+        sponser CARDS
+        ====================== */
 
-.sponser-category-section{
-    background:#fff;
-}
+        .sponser-category-section{
+            background:#fff;
+        }
 
-.sponser-card{
-    background:#ffffff;
-    padding:40px 30px;
-    border-radius:25px;
-    height:100%;
+        .sponser-card{
+            background:#ffffff;
+            padding:40px 30px;
+            border-radius:25px;
+            height:100%;
 
-    border:1px solid #e8e8e8;
+            border:1px solid #e8e8e8;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.05);
-}
+            box-shadow:0 10px 30px rgba(0,0,0,.05);
+        }
 
-/* removed hover */
+        /* removed hover */
 
-.sponser-card .icon{
-    width:75px;
-    height:75px;
+        .sponser-card .icon{
+            width:75px;
+            height:75px;
 
-    border-radius:20px;
+            border-radius:20px;
 
-    background: #19352d;
+            background: #19352d;
 
-    color:#fff;
+            color:#fff;
 
-    font-size:28px;
+            font-size:28px;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+            display:flex;
+            align-items:center;
+            justify-content:center;
 
-    margin-bottom:25px;
-}
+            margin-bottom:25px;
+        }
 
-.sponser-card h4{
-    color:#000;
-    font-size:24px;
-    font-weight:700;
-    margin-bottom:15px;
-}
+        .sponser-card h4{
+            color:#000;
+            font-size:24px;
+            font-weight:700;
+            margin-bottom:15px;
+        }
 
-.sponser-card p{
-    color:#555;
-    line-height:1.8;
-    margin-bottom:20px;
-}
+        .sponser-card p{
+            color:#555;
+            line-height:1.8;
+            margin-bottom:20px;
+        }
 
-.sponser-card ul{
-    padding:0;
-    margin:0;
-    list-style:none;
-}
+        .sponser-card ul{
+            padding:0;
+            margin:0;
+            list-style:none;
+        }
 
-.sponser-card ul li{
-    position:relative;
+        .sponser-card ul li{
+            position:relative;
 
-    padding-left:30px;
+            padding-left:30px;
 
-    margin-bottom:12px;
+            margin-bottom:12px;
 
-    color:#222;
+            color:#222;
 
-    font-size:15px;
-}
+            font-size:15px;
+        }
 
-.sponser-card ul li:before{
-    content:"✓";
+        .sponser-card ul li:before{
+            content:"✓";
 
-    position:absolute;
+            position:absolute;
 
-    left:0;
-    top:2px;
+            left:0;
+            top:2px;
 
-    width:18px;
-    height:18px;
+            width:18px;
+            height:18px;
 
-    background: #0c3a30;
+            background: #0c3a30;
 
-    border-radius:50%;
+            border-radius:50%;
 
-    color:#fff;
+            color:#fff;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+            display:flex;
+            align-items:center;
+            justify-content:center;
 
-    font-size:10px;
-}
+            font-size:10px;
+        }
 
 
 
-/* CTA BUTTON */
+        /* CTA BUTTON */
 
-.sponser-cta{
-    margin-top:35px;
-}
+        .sponser-cta{
+            margin-top:35px;
+        }
 
-.btn-become-sponser{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
+        .btn-become-sponser{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
 
-    padding:16px 34px;
+            padding:16px 34px;
 
-    background: #19352d;
+            background: #19352d;
 
-    color:#fff;
+            color:#fff;
 
-    border-radius:14px;
+            border-radius:14px;
 
-    font-size:16px;
-    font-weight:600;
+            font-size:16px;
+            font-weight:600;
 
-    text-decoration:none;
+            text-decoration:none;
 
-    transition:.3s ease;
+            transition:.3s ease;
 
-    border:1px solid #19352d;
-}
+            border:1px solid #19352d;
+        }
 
-.btn-become-sponser:hover{
-    background:transparent;
+        .btn-become-sponser:hover{
+            background:transparent;
 
-    color:#ffd2b1;
+            color:#ffd2b1;
 
-    transform:translateY(-3px);
-}
+            transform:translateY(-3px);
+        }
 
-/* smooth scroll */
+        /* smooth scroll */
 
-html{
-    scroll-behavior:smooth;
-}
-/* second section  */
-/* ==========================
-WHY CONNECTX SECTION
-========================== */
+        html{
+            scroll-behavior:smooth;
+        }
+        /* second section  */
+        /* ==========================
+        WHY CONNECTX SECTION
+        ========================== */
 
-.connectx-benefits-section{
-    background:#fff;
-}
+        .connectx-benefits-section{
+            background:#fff;
+        }
 
-.connectx-benefits-section .sc-title{
-    color:#000;
-}
+        .connectx-benefits-section .sc-title{
+            color:#000;
+        }
 
-.connectx-benefits-section .main-title{
-    color:#000;
-}
+        .connectx-benefits-section .main-title{
+            color:#000;
+        }
 
-.connectx-benefits-section p{
-    color:#666;
-}
+        .connectx-benefits-section p{
+            color:#666;
+        }
 
-.benefit-card{
-    background:#fff;
+        .benefit-card{
+            background: var(--cream);
 
-    padding:35px;
+            padding:35px;
 
-    height:100%;
+            height:100%;
 
-    border-radius:24px;
+            border-radius:13px;
 
-    border:1px solid #ececec;
+            border:1px solid #ececec;
+        }
 
-    box-shadow:0 8px 25px rgba(0,0,0,.04);
-}
+        .icon-box{
+            width:46px;
+            height:46px;
 
-.icon-box{
-    width:70px;
-    height:70px;
+            border-radius:18px;
 
-    border-radius:18px;
+            background: #ffbe8e;
 
-    background: #19352d;
+            color:#fff;
 
-    color:#fff;
+            display:flex;
+            align-items:center;
+            justify-content:center;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+            font-size:24px;
 
-    font-size:24px;
+            margin-bottom:22px;
+        }
+        .icon-box i{
+            font-size:18px;
+        }
 
-    margin-bottom:22px;
-}
+        .benefit-card h4{
+            color:#0c3a30;
 
-.benefit-card h4{
-    color:#0c3a30;
+            font-size:22px;
 
-    font-size:22px;
+            font-weight:700;
 
-    font-weight:700;
+            margin-bottom:15px;
+        }
 
-    margin-bottom:15px;
-}
+        .benefit-card p{
+            color:#666;
 
-.benefit-card p{
-    color:#666;
+            line-height:1.8;
 
-    line-height:1.8;
+            margin:0;
+        }
 
-    margin:0;
-}
 
 
+        /* =============================================
+        CONNECTX BRAND SECTION — OVERRIDES
+        ============================================= */
 
-/* =============================================
-   CONNECTX BRAND SECTION — OVERRIDES
-   ============================================= */
+        /* Override global bg image with our professional conference photo */
+        .connectx-brand-section.fancy-banner-seven .bg-wrapper {
+            background: url('../images/media/here-is-my-colleague.jpg') no-repeat center center !important;
+            background-size: cover !important;
+            min-height: 680px;
+            position: relative;
+        }
 
-/* Override global bg image with our professional conference photo */
-.connectx-brand-section.fancy-banner-seven .bg-wrapper {
-    background: url('../images/media/here-is-my-colleague.jpg') no-repeat center center !important;
-    background-size: cover !important;
-    min-height: 680px;
-    position: relative;
-}
+        /* Strong dark overlay so all text is crisp and readable */
+        .connectx-brand-section.fancy-banner-seven .bg-wrapper::before,
+        .connectx-brand-section.fancy-banner-seven .bg-wrapper::after {
+            content: '' !important;
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            transform: none !important;
+            z-index: 0 !important;
+        }
 
-/* Strong dark overlay so all text is crisp and readable */
-.connectx-brand-section.fancy-banner-seven .bg-wrapper::before,
-.connectx-brand-section.fancy-banner-seven .bg-wrapper::after {
-    content: '' !important;
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    transform: none !important;
-    z-index: 0 !important;
-}
+        .connectx-brand-section.fancy-banner-seven .bg-wrapper::before {
+            background: rgba(0, 0, 0, 0.70) !important;
+        }
 
-.connectx-brand-section.fancy-banner-seven .bg-wrapper::before {
-    background: rgba(0, 0, 0, 0.70) !important;
-}
+        .connectx-brand-section.fancy-banner-seven .bg-wrapper::after {
+            background: rgba(0, 0, 0, 0.25) !important;
+        }
 
-.connectx-brand-section.fancy-banner-seven .bg-wrapper::after {
-    background: rgba(0, 0, 0, 0.25) !important;
-}
+        /* Ensure z-index stacking works for content */
+        .connectx-brand-section .bg-wrapper .container {
+            position: relative;
+            z-index: 2;
+        }
 
-/* Ensure z-index stacking works for content */
-.connectx-brand-section .bg-wrapper .container {
-    position: relative;
-    z-index: 2;
-}
+        /* ---- Left heading block ---- */
+        .connectx-brand-section .brand-tag {
+            display: inline-block;
+            background: rgba(118,88,59,0.30);
+            border: 1px solid rgba(118,88,59,0.60);
+            color: #e8c89a;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 30px;
+            margin-bottom: 22px;
+        }
+
+        .connectx-brand-section .brand-heading {
+            font-size: clamp(30px, 4vw, 52px);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -1px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .connectx-brand-section .brand-heading span {
+            color: #e8c89a;
+        }
+
+        .connectx-brand-section .brand-desc {
+            font-size: 17px;
+            line-height: 1.85;
+            color: rgba(255,255,255,0.80);
+            margin-bottom: 36px;
+            max-width: 480px;
+        }
+
+        /* CTA button for brand section */
+        .btn-brand-explore {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: #0c3a30;
+            color: #ffd2b1;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            border: 2px solid #0c3a30;
+            transition: all .3s ease;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-brand-explore i {
+            font-size: 14px;
+            transition: transform .3s ease;
+        }
+
+        .btn-brand-explore:hover {
+            background: transparent;
+            color: #ffd2b1;
+            border-color: #ffd2b1;
+        }
+
+        .btn-brand-explore:hover i {
+            transform: translateX(4px);
+        }
+
+        /* ---- Points list — high specificity to override global fancy-banner-seven li styles ---- */
+        .connectx-brand-section .bg-wrapper .connectx-points,
+        .connectx-points {
+            padding-left: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        /* Override the white-card style from style.min.css for fancy-banner-seven .bg-wrapper li */
+        .connectx-brand-section .bg-wrapper .connectx-points li,
+        .connectx-brand-section.fancy-banner-seven .bg-wrapper li.connectx-points-item,
+        .connectx-points li {
+            position: relative !important;
+            color: #ffffff !important;
+            font-size: 17px !important;
+            font-weight: 500 !important;
+            line-height: 1.5 !important;
+            padding: 18px 20px 18px 68px !important;
+            margin-bottom: 10px !important;
+            border-radius: 14px !important;
+            background: rgba(255,255,255,0.08) !important;
+            border: 1px solid rgba(255,255,255,0.13) !important;
+            backdrop-filter: blur(8px) !important;
+            -webkit-backdrop-filter: blur(8px) !important;
+            transition: background .25s ease, border-color .25s ease !important;
+        }
+
+        .connectx-brand-section .bg-wrapper .connectx-points li:hover,
+        .connectx-points li:hover {
+            background: rgba(255,255,255,0.14) !important;
+            border-color: rgba(232,200,154,0.40) !important;
+        }
+
+        .connectx-brand-section .bg-wrapper .connectx-points li:last-child,
+        .connectx-points li:last-child {
+            margin-bottom: 0 !important;
+            border-bottom: 1px solid rgba(255,255,255,0.13) !important;
+        }
+
+        /* Override the orange/peach bullet from style.min.css fancy-banner-seven .bg-wrapper li:before */
+        .connectx-brand-section .bg-wrapper .connectx-points li::before,
+        .connectx-brand-section.fancy-banner-seven .bg-wrapper .connectx-points li::before,
+        .connectx-points li::before {
+            content: "✓" !important;
+            position: absolute !important;
+            left: 16px !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            width: 36px !important;
+            height: 36px !important;
+            background: #ffca95 !important;
+            border-radius: 50% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            color: #0c3a30 !important;
+            font-size: 15px !important;
+            font-weight: 800 !important;
+            font-family: inherit !important;
+        }
+
+        /* Override the after pseudo-element (check icon overlay from global) */
+        .connectx-brand-section .bg-wrapper .connectx-points li::after,
+        .connectx-brand-section.fancy-banner-seven .bg-wrapper .connectx-points li::after,
+        .connectx-points li::after {
+            display: none !important;
+        }
+
+        @media(max-width:991px){
+            .connectx-brand-section.fancy-banner-seven .bg-wrapper {
+                min-height: auto;
+            }
+            .connectx-brand-section .brand-desc {
+                max-width: 100%;
+            }
+            .connectx-brand-section .bg-wrapper .connectx-points li,
+            .connectx-points li {
+                font-size: 15px !important;
+                padding-left: 60px !important;
+            }
+        }
+
+        @media(max-width:767px){
+            .connectx-brand-section .brand-heading {
+                font-size: 26px;
+            }
+            .connectx-brand-section .bg-wrapper .connectx-points li,
+            .connectx-points li {
+                font-size: 14px !important;
+                padding: 14px 16px 14px 56px !important;
+            }
+            .connectx-brand-section .bg-wrapper .connectx-points li::before,
+            .connectx-points li::before {
+                width: 30px !important;
+                height: 30px !important;
+                font-size: 13px !important;
+                left: 14px !important;
+            }
+        }
 
-/* ---- Left heading block ---- */
-.connectx-brand-section .brand-tag {
-    display: inline-block;
-    background: rgba(118,88,59,0.30);
-    border: 1px solid rgba(118,88,59,0.60);
-    color: #e8c89a;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    padding: 6px 18px;
-    border-radius: 30px;
-    margin-bottom: 22px;
-}
+        /* *4. sponsership Categories* */
 
-.connectx-brand-section .brand-heading {
-    font-size: clamp(30px, 4vw, 52px);
-    font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: -1px;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-.connectx-brand-section .brand-heading span {
-    color: #e8c89a;
-}
-
-.connectx-brand-section .brand-desc {
-    font-size: 17px;
-    line-height: 1.85;
-    color: rgba(255,255,255,0.80);
-    margin-bottom: 36px;
-    max-width: 480px;
-}
-
-/* CTA button for brand section */
-.btn-brand-explore {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 16px 36px;
-    background: #0c3a30;
-    color: #ffd2b1;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 50px;
-    text-decoration: none;
-    border: 2px solid #0c3a30;
-    transition: all .3s ease;
-    letter-spacing: 0.3px;
-}
-
-.btn-brand-explore i {
-    font-size: 14px;
-    transition: transform .3s ease;
-}
-
-.btn-brand-explore:hover {
-    background: transparent;
-    color: #ffd2b1;
-    border-color: #ffd2b1;
-}
-
-.btn-brand-explore:hover i {
-    transform: translateX(4px);
-}
-
-/* ---- Points list — high specificity to override global fancy-banner-seven li styles ---- */
-.connectx-brand-section .bg-wrapper .connectx-points,
-.connectx-points {
-    padding-left: 0;
-    margin: 0;
-    list-style: none;
-}
-
-/* Override the white-card style from style.min.css for fancy-banner-seven .bg-wrapper li */
-.connectx-brand-section .bg-wrapper .connectx-points li,
-.connectx-brand-section.fancy-banner-seven .bg-wrapper li.connectx-points-item,
-.connectx-points li {
-    position: relative !important;
-    color: #ffffff !important;
-    font-size: 17px !important;
-    font-weight: 500 !important;
-    line-height: 1.5 !important;
-    padding: 18px 20px 18px 68px !important;
-    margin-bottom: 10px !important;
-    border-radius: 14px !important;
-    background: rgba(255,255,255,0.08) !important;
-    border: 1px solid rgba(255,255,255,0.13) !important;
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
-    transition: background .25s ease, border-color .25s ease !important;
-}
-
-.connectx-brand-section .bg-wrapper .connectx-points li:hover,
-.connectx-points li:hover {
-    background: rgba(255,255,255,0.14) !important;
-    border-color: rgba(232,200,154,0.40) !important;
-}
-
-.connectx-brand-section .bg-wrapper .connectx-points li:last-child,
-.connectx-points li:last-child {
-    margin-bottom: 0 !important;
-    border-bottom: 1px solid rgba(255,255,255,0.13) !important;
-}
-
-/* Override the orange/peach bullet from style.min.css fancy-banner-seven .bg-wrapper li:before */
-.connectx-brand-section .bg-wrapper .connectx-points li::before,
-.connectx-brand-section.fancy-banner-seven .bg-wrapper .connectx-points li::before,
-.connectx-points li::before {
-    content: "✓" !important;
-    position: absolute !important;
-    left: 16px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    width: 36px !important;
-    height: 36px !important;
-    background: #0c3a30 !important;
-    border: 2px solid rgba(232,200,154,0.50) !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    color: #e8c89a !important;
-    font-size: 15px !important;
-    font-weight: 800 !important;
-    font-family: inherit !important;
-}
-
-/* Override the after pseudo-element (check icon overlay from global) */
-.connectx-brand-section .bg-wrapper .connectx-points li::after,
-.connectx-brand-section.fancy-banner-seven .bg-wrapper .connectx-points li::after,
-.connectx-points li::after {
-    display: none !important;
-}
-
-@media(max-width:991px){
-    .connectx-brand-section.fancy-banner-seven .bg-wrapper {
-        min-height: auto;
-    }
-    .connectx-brand-section .brand-desc {
-        max-width: 100%;
-    }
-    .connectx-brand-section .bg-wrapper .connectx-points li,
-    .connectx-points li {
-        font-size: 15px !important;
-        padding-left: 60px !important;
-    }
-}
+        .title-style-one .sc-title{
+            color:#000;
+        }
 
-@media(max-width:767px){
-    .connectx-brand-section .brand-heading {
-        font-size: 26px;
-    }
-    .connectx-brand-section .bg-wrapper .connectx-points li,
-    .connectx-points li {
-        font-size: 14px !important;
-        padding: 14px 16px 14px 56px !important;
-    }
-    .connectx-brand-section .bg-wrapper .connectx-points li::before,
-    .connectx-points li::before {
-        width: 30px !important;
-        height: 30px !important;
-        font-size: 13px !important;
-        left: 14px !important;
-    }
-}
+        .title-style-one .main-title{
+            font-size: clamp(34px, 4vw, 56px);
+            font-weight: 900;
+            line-height: 1.15;
+            letter-spacing: -2px;
+            color: #0c3a30;
+            margin-bottom: 24px;
+        }
+        /* ==========================
+        CTA SECTION
+        ========================== */
 
-/* *4. sponsership Categories* */
+        .connectx-cta-section{
+            background:#fff;
+        }
 
-.title-style-one .sc-title{
-    color:#000;
-}
+        .cta-wrapper{
 
-.title-style-one .main-title{
-    font-size: clamp(34px, 4vw, 56px);
-    font-weight: 900;
-    line-height: 1.15;
-    letter-spacing: -2px;
-    color: #0c3a30;
-    margin-bottom: 24px;
-}
-/* ==========================
-CTA SECTION
-========================== */
+            background:#f8f6f3;
 
-.connectx-cta-section{
-    background:#fff;
-}
+            padding:70px;
 
-.cta-wrapper{
+            border-radius:35px;
 
-    background:#f8f6f3;
+            border:1px solid #ececec;
+        }
 
-    padding:70px;
+        .cta-content .sc-title{
+            color:#0c3a30;
 
-    border-radius:35px;
+            margin-bottom:15px;
 
-    border:1px solid #ececec;
-}
+            font-weight:700;
+        }
 
-.cta-content .sc-title{
-    color:#0c3a30;
+        .cta-content h2{
 
-    margin-bottom:15px;
+            color:#000;
 
-    font-weight:700;
-}
+            font-size:48px;
 
-.cta-content h2{
+            font-weight:700;
 
-    color:#000;
+            line-height:1.3;
 
-    font-size:48px;
+            margin-bottom:35px;
+        }
 
-    font-weight:700;
+        .cta-points{
 
-    line-height:1.3;
+            display:flex;
 
-    margin-bottom:35px;
-}
+            flex-wrap:wrap;
 
-.cta-points{
+            gap:18px;
+        }
 
-    display:flex;
+        .point{
 
-    flex-wrap:wrap;
+            display:flex;
 
-    gap:18px;
-}
+            align-items:center;
 
-.point{
+            gap:12px;
 
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    background:#fff;
-
-    padding:14px 22px;
-
-    border-radius:50px;
-
-    border:1px solid #e7e7e7;
-}
-
-.point i{
-
-    width:28px;
-
-    height:28px;
-
-    background:#0c3a30;
-
-    color:#fff;
-
-    border-radius:50%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:12px;
-}
-
-.point span{
-    color:#111;
-    font-weight:600;
-}
-
-.theme-btn-one{
-    margin-top:20px;
-}
-
-
-@media(max-width:991px){
-
-.cta-wrapper{
-    padding:45px;
-}
-
-.cta-content h2{
-    font-size:34px;
-}
-
-.text-lg-end{
-    margin-top:35px;
-}
-
-}
-
-
-
-/* ==========================================
-   BECOME A sponser — MOBILE RESPONSIVE
-   Breakpoints: 991px (tablet), 767px (mobile), 480px (small mobile)
-   ========================================== */
-
-/* ---- Hero / sponser Contact Section ---- */
-@media (max-width: 991px) {
-    .sponser-contact-section {
-        padding: 130px 0 70px;
-    }
-    .sponser-content {
-        margin-bottom: 40px;
-        text-align: center;
-    }
-    .sponser-content h1 {
-        font-size: 36px;
-    }
-    .sponser-cta {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 767px) {
-    .sponser-contact-section {
-        padding: 110px 0 60px;
-    }
-    .sponser-content h1 {
-        font-size: 28px;
-    }
-    .sponser-form-box {
-        padding: 28px 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .sponser-contact-section {
-        padding: 100px 0 50px;
-    }
-    .sponser-content h1 {
-        font-size: 24px;
-        letter-spacing: -0.5px;
-    }
-    .sponser-form-box {
-        padding: 20px 14px;
-    }
-    .btn-sponser-submit {
-        height: 52px;
-        font-size: 15px;
-    }
-    .btn-become-sponser {
-        padding: 13px 24px;
-        font-size: 14px;
-    }
-}
-
-/* ---- Why Young Chanakya X (Benefits) Section ---- */
-@media (max-width: 991px) {
-    .connectx-benefits-section.pt-120 {
-        padding-top: 70px;
-    }
-    .connectx-benefits-section.pb-120 {
-        padding-bottom: 70px;
-    }
-    .benefit-card {
-        padding: 28px;
-    }
-}
-
-@media (max-width: 767px) {
-    .connectx-benefits-section .main-title {
-        font-size: 28px;
-    }
-    .benefit-card {
-        padding: 24px 20px;
-    }
-    .benefit-card h4 {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    .connectx-benefits-section .main-title {
-        font-size: 22px;
-    }
-    .benefit-card {
-        padding: 20px 16px;
-    }
-    .icon-box {
-        width: 56px;
-        height: 56px;
-        font-size: 20px;
-        margin-bottom: 16px;
-    }
-}
-
-/* ---- Brand Presence Section ---- */
-@media (max-width: 991px) {
-    .connectx-brand-section .bg-wrapper {
-        min-height: auto !important;
-        padding: 60px 20px !important;
-    }
-    .connectx-points li {
-        font-size: 16px;
-        padding-left: 55px;
-    }
-    .connectx-brand-section .title-two h2 {
-        font-size: 28px;
-    }
-}
-
-@media (max-width: 767px) {
-    .connectx-brand-section .bg-wrapper {
-        padding: 50px 16px !important;
-    }
-    .connectx-brand-section .title-two h2 {
-        font-size: 24px;
-    }
-    .connectx-brand-section .title-two p {
-        font-size: 14px;
-    }
-    .connectx-points li {
-        font-size: 15px;
-        padding-left: 52px;
-        padding-top: 14px;
-        padding-bottom: 14px;
-    }
-    .connectx-points li::before {
-        width: 36px;
-        height: 36px;
-        font-size: 16px;
-        top: 12px;
-    }
-    .connectx-brand-section .col-lg-5 {
-        margin-top: 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    .connectx-brand-section .title-two h2 {
-        font-size: 21px;
-    }
-    .connectx-points li {
-        font-size: 14px;
-        padding-left: 48px;
-    }
-    .connectx-points li::before {
-        width: 30px;
-        height: 30px;
-        font-size: 14px;
-    }
-}
-
-/* ---- sponsership Categories Section ---- */
-@media (max-width: 991px) {
-    .sponser-category-section.pt-120 {
-        padding-top: 70px;
-    }
-    .sponser-category-section.pb-120 {
-        padding-bottom: 70px;
-    }
-    .sponser-card {
-        padding: 30px 24px;
-    }
-    .title-style-one .main-title {
-        letter-spacing: -1px;
-    }
-}
-
-@media (max-width: 767px) {
-    .title-style-one .main-title {
-        font-size: 26px;
-        letter-spacing: -0.5px;
-    }
-    .sponser-card {
-        padding: 24px 20px;
-    }
-    .sponser-card h4 {
-        font-size: 20px;
-    }
-    .sponser-card .icon {
-        width: 60px;
-        height: 60px;
-        font-size: 24px;
-        margin-bottom: 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    .title-style-one .main-title {
-        font-size: 22px;
-    }
-    .sponser-card {
-        padding: 20px 16px;
-    }
-    .sponser-card h4 {
-        font-size: 18px;
-    }
-}
-
-/* ---- CTA / text-feature-five Section ---- */
-@media (max-width: 991px) {
-    .text-feature-five.mt-150 {
-        margin-top: 80px !important;
-    }
-    .connectx-cta-bg .text-wrapper {
-        padding-top: 40px !important;
-        padding-bottom: 40px !important;
-    }
-    .connectx-cta-bg .media-wrapper {
-        min-height: 260px;
-    }
-    .cta-wrapper {
-        padding: 40px;
-    }
-    .cta-content h2 {
-        font-size: 30px;
-    }
-}
-
-@media (max-width: 767px) {
-    .text-feature-five.mt-150 {
-        margin-top: 60px !important;
-    }
-    .connectx-cta-bg .text-wrapper {
-        padding: 28px 20px !important;
-    }
-    .connectx-cta-bg .col-lg-6.order-lg-first {
-        order: 2 !important;
-    }
-    .connectx-cta-bg .col-lg-6.order-lg-last {
-        order: 1 !important;
-    }
-    .connectx-cta-bg .title-one h2.text-dark {
-        font-size: 24px;
-    }
-    .cta-wrapper {
-        padding: 30px 20px;
-    }
-    .cta-content h2 {
-        font-size: 26px;
-    }
-    .cta-points {
-        gap: 12px;
-    }
-    .point {
-        padding: 10px 16px;
-        font-size: 14px;
-    }
-    .btn-eleven {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .connectx-cta-bg .title-one h2.text-dark {
-        font-size: 20px;
-    }
-    .cta-content h2 {
-        font-size: 22px;
-    }
-    .cta-wrapper {
-        padding: 24px 14px;
-    }
-    .connectx-list li {
-        font-size: 14px;
-    }
-}
-
-/* ---- Checklist Style (Speaker page matching layout) ---- */
-.checklist-style {
-    padding: 0;
-    margin: 25px 0 0 0;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    list-style: none;
-}
-
-.checklist-style li {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
-    color: #10221c;
-}
-
-.checklist-style .check-icon {
-    width: 24px;
-    height: 24px;
-    background: #0c3a30;
-    color: #ffffff;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: bold;
-    flex-shrink: 0;
-}
-
-@media (max-width: 991px) {
-    .checklist-style {
-        display: inline-flex;
-        text-align: left;
-        align-items: flex-start;
-        margin: 25px auto 0 auto;
-    }
-}
-
-@media (max-width: 767px) {
-    .checklist-style li {
-        font-size: 15px;
-    }
-}
-
-/* fifth section */
+            background:#fff;
+
+            padding:14px 22px;
+
+            border-radius:50px;
+
+            border:1px solid #e7e7e7;
+        }
+
+        .point i{
+
+            width:28px;
+
+            height:28px;
+
+            background:#0c3a30;
+
+            color:#fff;
+
+            border-radius:50%;
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            font-size:12px;
+        }
+
+        .point span{
+            color:#111;
+            font-weight:600;
+        }
+
+        .theme-btn-one{
+            margin-top:20px;
+        }
+
+
+        @media(max-width:991px){
+
+        .cta-wrapper{
+            padding:45px;
+        }
+
+        .cta-content h2{
+            font-size:34px;
+        }
+
+        .text-lg-end{
+            margin-top:35px;
+        }
+
+        }
+
+
+
+        /* ==========================================
+        BECOME A sponser — MOBILE RESPONSIVE
+        Breakpoints: 991px (tablet), 767px (mobile), 480px (small mobile)
+        ========================================== */
+
+        /* ---- Hero / sponser Contact Section ---- */
+        @media (max-width: 991px) {
+            .sponser-contact-section {
+                padding: 130px 0 70px;
+            }
+            .sponser-content {
+                margin-bottom: 40px;
+                text-align: center;
+            }
+            .sponser-content h1 {
+                font-size: 36px;
+            }
+            .sponser-cta {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .sponser-contact-section {
+                padding: 110px 0 60px;
+            }
+            .sponser-content h1 {
+                font-size: 28px;
+            }
+            .sponser-form-box {
+                padding: 28px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sponser-contact-section {
+                padding: 100px 0 50px;
+            }
+            .sponser-content h1 {
+                font-size: 24px;
+                letter-spacing: -0.5px;
+            }
+            .sponser-form-box {
+                padding: 20px 14px;
+            }
+            .btn-sponser-submit {
+                height: 52px;
+                font-size: 15px;
+            }
+            .btn-become-sponser {
+                padding: 13px 24px;
+                font-size: 14px;
+            }
+        }
+
+        /* ---- Why Young Chanakya X (Benefits) Section ---- */
+        @media (max-width: 991px) {
+            .connectx-benefits-section.pt-120 {
+                padding-top: 70px;
+            }
+            .connectx-benefits-section.pb-120 {
+                padding-bottom: 70px;
+            }
+            .benefit-card {
+                padding: 28px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .connectx-benefits-section .main-title {
+                font-size: 28px;
+            }
+            .benefit-card {
+                padding: 24px 20px;
+            }
+            .benefit-card h4 {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .connectx-benefits-section .main-title {
+                font-size: 22px;
+            }
+            .benefit-card {
+                padding: 20px 16px;
+            }
+            .icon-box {
+                width: 56px;
+                height: 56px;
+                font-size: 20px;
+                margin-bottom: 16px;
+            }
+        }
+
+        /* ---- Brand Presence Section ---- */
+        @media (max-width: 991px) {
+            .connectx-brand-section .bg-wrapper {
+                min-height: auto !important;
+                padding: 60px 20px !important;
+            }
+            .connectx-points li {
+                font-size: 16px;
+                padding-left: 55px;
+            }
+            .connectx-brand-section .title-two h2 {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .connectx-brand-section .bg-wrapper {
+                padding: 50px 16px !important;
+            }
+            .connectx-brand-section .title-two h2 {
+                font-size: 24px;
+            }
+            .connectx-brand-section .title-two p {
+                font-size: 14px;
+            }
+            .connectx-points li {
+                font-size: 15px;
+                padding-left: 52px;
+                padding-top: 14px;
+                padding-bottom: 14px;
+            }
+            .connectx-points li::before {
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
+                top: 12px;
+            }
+            .connectx-brand-section .col-lg-5 {
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .connectx-brand-section .title-two h2 {
+                font-size: 21px;
+            }
+            .connectx-points li {
+                font-size: 14px;
+                padding-left: 48px;
+            }
+            .connectx-points li::before {
+                width: 30px;
+                height: 30px;
+                font-size: 14px;
+            }
+        }
+
+        /* ---- sponsership Categories Section ---- */
+        @media (max-width: 991px) {
+            .sponser-category-section.pt-120 {
+                padding-top: 70px;
+            }
+            .sponser-category-section.pb-120 {
+                padding-bottom: 70px;
+            }
+            .sponser-card {
+                padding: 30px 24px;
+            }
+            .title-style-one .main-title {
+                letter-spacing: -1px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .title-style-one .main-title {
+                font-size: 26px;
+                letter-spacing: -0.5px;
+            }
+            .sponser-card {
+                padding: 24px 20px;
+            }
+            .sponser-card h4 {
+                font-size: 20px;
+            }
+            .sponser-card .icon {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+                margin-bottom: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title-style-one .main-title {
+                font-size: 22px;
+            }
+            .sponser-card {
+                padding: 20px 16px;
+            }
+            .sponser-card h4 {
+                font-size: 18px;
+            }
+        }
+
+        /* ---- CTA / text-feature-five Section ---- */
+        @media (max-width: 991px) {
+            .text-feature-five.mt-150 {
+                margin-top: 80px !important;
+            }
+            .connectx-cta-bg .text-wrapper {
+                padding-top: 40px !important;
+                padding-bottom: 40px !important;
+            }
+            .connectx-cta-bg .media-wrapper {
+                min-height: 260px;
+            }
+            .cta-wrapper {
+                padding: 40px;
+            }
+            .cta-content h2 {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .text-feature-five.mt-150 {
+                margin-top: 60px !important;
+            }
+            .connectx-cta-bg .text-wrapper {
+                padding: 28px 20px !important;
+            }
+            .connectx-cta-bg .col-lg-6.order-lg-first {
+                order: 2 !important;
+            }
+            .connectx-cta-bg .col-lg-6.order-lg-last {
+                order: 1 !important;
+            }
+            .connectx-cta-bg .title-one h2.text-dark {
+                font-size: 24px;
+            }
+            .cta-wrapper {
+                padding: 30px 20px;
+            }
+            .cta-content h2 {
+                font-size: 26px;
+            }
+            .cta-points {
+                gap: 12px;
+            }
+            .point {
+                padding: 10px 16px;
+                font-size: 14px;
+            }
+            .btn-eleven {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .connectx-cta-bg .title-one h2.text-dark {
+                font-size: 20px;
+            }
+            .cta-content h2 {
+                font-size: 22px;
+            }
+            .cta-wrapper {
+                padding: 24px 14px;
+            }
+            .connectx-list li {
+                font-size: 14px;
+            }
+        }
+
+        /* ---- Checklist Style (Speaker page matching layout) ---- */
+        .checklist-style {
+            padding: 0;
+            margin: 25px 0 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            list-style: none;
+        }
+
+        .checklist-style li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 500;
+            color: #10221c;
+        }
+
+        .checklist-style .check-icon {
+            width: 24px;
+            height: 24px;
+            background: #0c3a30;
+            color: #ffffff;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 991px) {
+            .checklist-style {
+                display: inline-flex;
+                text-align: left;
+                align-items: flex-start;
+                margin: 25px auto 0 auto;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .checklist-style li {
+                font-size: 15px;
+            }
+        }
+
+        /* fifth section */
 
 
 </style>
@@ -1129,16 +1129,31 @@ CTA SECTION
     <div class="container">
         <div class="row align-items-center gy-5">
             <div class="col-lg-6">
-                <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">sponser Young Chanakya X</div>
-                <h1 style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Maximize Your Brand's Impact.</h1>
-                <p class="hero-copy">Position your brand within a structured creator ecosystem designed for consistent visibility, engagement, and collaboration. sponser our events and creator programs to amplify your reach to tomorrow's industry leaders.</p>
-              
+                <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">SPONSOR YOUNG CHANAKYA X</div>
+                <h1 style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Become a Sponsor</h1>
+                <p class="hero-copy" style="margin-bottom: 24px;">Partner with Young Chanakya X to position your brand at the center of innovation, community leadership, and digital media excellence. Showcase your brand directly to tomorrow's dynamic leaders.</p>
+                
+                <ul class="checklist-style" style="margin-bottom: 30px;">
+                    <li>
+                        <span class="check-icon"><i class="bi bi-check-lg"></i></span>
+                        Brand integration across flagship events and media platforms.
+                    </li>
+                    <li>
+                        <span class="check-icon"><i class="bi bi-check-lg"></i></span>
+                        Direct connection with top-tier creators, founders, and leaders.
+                    </li>
+                    <li>
+                        <span class="check-icon"><i class="bi bi-check-lg"></i></span>
+                        Structured opportunities for target-audience activation.
+                    </li>
+                </ul>
+
                 <div class="about-hero-buttons">
-                    <a href="#partnership-opportunities" class="about-btn-2">View Opportunities</a>
+                    <a href="#sponsership-categories" class="about-btn-2">View Opportunities</a>
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="sponser-form-box" id="sponser-form">
+                <div class="sponser-form-box" id="sponsor-form">
 
                     @if (session('error') || $errors->any())
                         <div class="alert alert-danger mb-4" style="font-weight: 500;">
@@ -1226,13 +1241,13 @@ CTA SECTION
 
                             <!-- 4. LinkedIn and website url -->
                             <div class="col-md-6 mb-3">
-                                <label for="sponser-linkedin">LinkedIn Profile <span class="text-danger">*</span></label>
+                                <label for="sponser-linkedin">Social Media Profile <span class="text-danger">*</span></label>
                                 <input type="url"
                                        id="sponser-linkedin"
                                        class="form-control"
                                        name="linkedin"
                                        value="{{ old('linkedin') }}"
-                                       placeholder="LinkedIn Profile" required>
+                                       placeholder="Social Media Profile" required>
                                 @error('linkedin')
                                     <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
                                 @enderror
@@ -1258,7 +1273,7 @@ CTA SECTION
                                     <option value="" disabled {{ old('sponsership_level') ? '' : 'selected' }}>
                                         Select sponser Type
                                     </option>
-                                    @foreach(['Title sponser', 'Powered By sponser', 'Co-sponser', 'Platinum sponser', 'Gold sponser', 'Silver sponser'] as $type)
+                                    @foreach(['Title Sponsor', 'Powered By Sponsor', 'Co-Sponsor', 'Platinum Sponsor', 'Gold Sponsor', 'Silver Sponsor', 'Ticket Sponsor', 'Beverage Sponsor', 'Podcast Sponsor'] as $type)
                                         <option value="{{ $type }}" {{ old('sponsership_level') == $type ? 'selected' : '' }}>{{ $type }}</option>
                                     @endforeach
                                 </select>
@@ -1282,198 +1297,6 @@ CTA SECTION
     </div>
 </div>
 
-<!-- ===================================
-WHY CONNECT WITH CONNECTX
-=================================== -->
-<section class="connectx-benefits-section pt-60 pb-30">
-    <div class="container">
-
-        <!-- Heading -->
-        <div class="section-head text-center" style="margin-bottom: 50px;">
-            <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Why Connect With Us</div>
-            <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Why Connect With Young Chanakya X</h2>
-            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">Position your brand within a structured creator ecosystem designed for consistent visibility, engagement, and collaboration</p>
-        </div>
-
-        <div class="row gx-4 gy-4">
-
-            <!-- 1 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="benefit-card">
-
-                    <div class="icon-box">
-                        <i class="fas fa-eye"></i>
-                    </div>
-
-                    <h4>Consistent Visibility</h4>
-
-                    <p>
-                        Maintain ongoing brand presence across podcasts,
-                        events, and digital content formats.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- 2 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="benefit-card">
-
-                    <div class="icon-box">
-                        <i class="fas fa-users"></i>
-                    </div>
-
-                    <h4>Curated Creator Access</h4>
-
-                    <p>
-                        Connect directly with selected influencers,
-                        speakers, and creators across industries.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- 3 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="benefit-card">
-
-                    <div class="icon-box">
-                        <i class="fas fa-bullhorn"></i>
-                    </div>
-
-                    <h4>Multi-Channel Exposure</h4>
-
-                    <p>
-                        Extend reach through podcasts, meetups,
-                        roundtables, and digital campaigns.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- 4 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="benefit-card">
-
-                    <div class="icon-box">
-                        <i class="fas fa-comments"></i>
-                    </div>
-
-                    <h4>Active Engagement</h4>
-
-                    <p>
-                        Participate in collaborations,
-                        creator interactions, and discussions.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- 5 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="benefit-card">
-
-                    <div class="icon-box">
-                        <i class="fas fa-globe"></i>
-                    </div>
-
-                    <h4>Scalable Presence</h4>
-
-                    <p>
-                        Expand visibility through an evolving
-                        and growing global creator network.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- 6 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="benefit-card">
-
-                    <div class="icon-box">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-
-                    <h4>Structured Opportunities</h4>
-
-                    <p>
-                        Leverage recurring formats for measurable
-                        and predictable brand exposure.
-                    </p>
-
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- Image Carousel Section -->
-@include('partials.image-carousel')
-
-<!-- third section — Brand Presence -->
-<section class="fancy-banner-seven box-layout connectx-brand-section pt-60 lg-pt-30 pb-40" id="partnership-opportunities" style="max-width: 96% !important; margin: 0 auto !important; width: 100% !important;">
-
-    <div class="bg-wrapper border-40 position-relative z-1 overflow-hidden pt-120 pb-120 lg-pt-80 lg-pb-80" style="max-width: 100% !important; width: 100% !important;">
-
-        <div class="container-fluid position-relative px-4 px-lg-5" style="z-index:2; max-width: 1700px; margin: 0 auto;">
-
-            <div class="row align-items-center gy-5">
-
-                <!-- LEFT CONTENT -->
-                <div class="col-lg-7">
-                    <div style="margin-bottom: 30px;">
-                        <div class="eyebrow rv" style="color: #ffd2b1; font-size: 10px; font-weight: 700; letter-spacing: 3px;">sponsership Exposure</div>
-                        <h2 class="sec-title rv" style="color: #ffffff; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">
-                            Your Brand, Everywhere<br>
-                            <span style="color: #ffd2b1;">Young Chanakya X Shows Up</span>
-                        </h2>
-                        <p class="sec-desc rv" style="margin-top: 16px; color: rgba(255,255,255,0.85); max-width: 100%;">
-                            As a Young Chanakya X sponser, your brand is woven into every
-                            high-impact format — from podcasts and digital campaigns
-                            to live events, creator lounges, and award platforms.
-                            Real visibility. Real reach. Real results.
-                        </p>
-                    </div>
-
-                    <a href="#sponser-form" class="tier-btn-primary">
-                        Explore sponsership Packages
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- RIGHT LIST -->
-                <div class="col-lg-5 ms-auto">
-
-                    <ul class="style-none connectx-points">
-
-                        <li>Podcasts &amp; Video Content</li>
-
-                        <li>Creator Lounges &amp; Networking Spaces</li>
-
-                        <li>Meetups &amp; Roundtables</li>
-
-                        <li>Awards &amp; Recognition Platforms</li>
-
-                        <li>Digital Campaigns &amp; Collaborations</li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================
-sponserSHIP CATEGORIES SECTION
-========================= -->
 
 <style>
   /* TIERS UI FROM sponser PAGE */
@@ -1514,14 +1337,8 @@ sponserSHIP CATEGORIES SECTION
   }
   .tier-card.featured .tier-toggle { color: #ffd2b1; }
   
-  .tier-btn-primary {
-    background: #0c3a30; color: #ffd2b1; padding: 14px 32px; border-radius: 100px;
-    font-size: 15px; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.2s;
-    border: none; cursor: pointer;
-  }
-  .tier-btn-primary:hover { background: #1a5c48; transform: translateY(-1px); color: #ffd2b1; }
   .tier-btn-outline {
-    border: 1.5px solid #0c3a30; color: #0c3a30; padding: 14px 32px; border-radius: 100px;
+   background:#ffca95; color: #0c3a30; padding: 14px 32px; border-radius: 100px; border:none;
     font-size: 15px; font-weight: 500; text-decoration: none; display: inline-block; transition: all 0.2s;
   }
   .tier-btn-outline:hover { background: #0c3a30; color: #ffd2b1; }
@@ -1535,8 +1352,8 @@ sponserSHIP CATEGORIES SECTION
   <div class="container">
     <div class="section-head text-center" style="margin-bottom: 50px;">
         <div class="eyebrow rv" style="color: #0c3a30; font-size: 10px; font-weight: 700; letter-spacing: 3px;">Young Chanakya X</div>
-        <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">sponsership Categories</h2>
-        <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">Choose a sponsership level based on your visibility, integration, and collaboration goals.</p>
+        <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Sponsorship Categories</h2>
+        <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">Choose a sponsorship level based on your visibility, integration, and collaboration goals.</p>
     </div>
 
     <div class="tier-grid">
@@ -1559,7 +1376,7 @@ sponserSHIP CATEGORIES SECTION
           <li>Maximum visibility across the ConnectX ecosystem</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponser-form" class="tier-btn-primary" style="width:100%; text-align:center; border: 1.5px solid #fff;">Become a sponser</a>
+        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a sponsor</a>
       </div>
 
       <!-- Card 2 -->
@@ -1580,7 +1397,7 @@ sponserSHIP CATEGORIES SECTION
           <li>Consistent exposure across programs</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponser-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a sponser</a>
+        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a sponsor</a>
       </div>
       
       <!-- Card 3 -->
@@ -1601,7 +1418,7 @@ sponserSHIP CATEGORIES SECTION
           <li>Support-level visibility across ecosystem</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponser-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a sponser</a>
+        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a sponsor</a>
       </div>
     </div>
 
@@ -1624,7 +1441,7 @@ sponserSHIP CATEGORIES SECTION
           <li>Consistent brand engagement opportunities</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponser-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a sponser</a>
+        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a sponsor</a>
       </div>
       
       <!-- Card 5 -->
@@ -1645,7 +1462,7 @@ sponserSHIP CATEGORIES SECTION
           <li>Engagement-driven visibility</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponser-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a sponser</a>
+        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a sponsor</a>
       </div>
       
       <!-- Card 6 -->
@@ -1666,10 +1483,234 @@ sponserSHIP CATEGORIES SECTION
           <li>Focused visibility within defined scope</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#sponser-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a sponser</a>
+        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a sponsor</a>
+      </div>
+    </div>
+
+    <!-- 3rd Row: Custom Sponsorship Tiers -->
+    <div class="tier-grid" style="margin-top: 24px;">
+      <!-- Card 7: Ticket Sponsor -->
+      <div class="tier-card">
+        <div class="tier-name">Entry Tier</div>
+        <div class="tier-title">Ticket Sponsor</div>
+        <div class="tier-tagline">Exclusive branding on event entry tickets, badges, and registrations.</div>
+        <ul class="tier-list collapsed">
+          <li>Logo printed on all physical/digital entry tickets</li>
+          <li>Brand placement at the registration desk</li>
+          <li>Inclusion in ticket confirmation emails</li>
+          <li>5 Complimentary VIP passes to the events</li>
+          <li>Social media shout-out during ticket launch campaigns</li>
+          <li>Brand mention in attendee guide</li>
+          <li>Standard visibility across website sponsor listings</li>
+        </ul>
+        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a sponsor</a>
+      </div>
+
+      <!-- Card 8: Beverage Sponsor -->
+      <div class="tier-card featured">
+        <div class="tier-badge">Popular</div>
+        <div class="tier-name">Ecosystem Tier</div>
+        <div class="tier-title">Beverage Sponsor</div>
+        <div class="tier-tagline">Exclusive brand placement at beverage bars, lounges, and refreshment zones.</div>
+        <ul class="tier-list collapsed">
+          <li>Custom branded cups, coasters, and napkins at the event</li>
+          <li>Prominent logo placement at all food &amp; beverage counters</li>
+          <li>Signature cocktail/drink named after your brand</li>
+          <li>Brand mention during networking breaks</li>
+          <li>Dedicated area in the lounge for brand activation</li>
+          <li>10 Complimentary VIP passes to the events</li>
+          <li>Prominent logo placement in food court maps and digital displays</li>
+        </ul>
+        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a sponsor</a>
+      </div>
+      
+      <!-- Card 9: Podcast Sponsor -->
+      <div class="tier-card">
+        <div class="tier-name">Digital Tier</div>
+        <div class="tier-title">Podcast Sponsor</div>
+        <div class="tier-tagline">Integrate your brand natively into our podcast episodes and digital content.</div>
+        <ul class="tier-list collapsed">
+          <li>30-second mid-roll slot in featured podcast episodes</li>
+          <li>Logo in podcast thumbnails and video overlays</li>
+          <li>Brand link in podcast descriptions across platforms</li>
+          <li>Social media clips highlighting the sponsor</li>
+          <li>Mention in newsletter and community announcements</li>
+          <li>Opportunity to suggest guests or content angles</li>
+          <li>Year-round digital exposure on the YCX ecosystem</li>
+        </ul>
+        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+        <a href="#sponsor-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a sponsor</a>
       </div>
     </div>
   </div>
+</section>
+
+<!-- Image Carousel Section -->
+@include('partials.image-carousel')
+
+<!-- ===================================
+WHY CONNECT WITH CONNECTX
+=================================== -->
+<section class="connectx-benefits-section pt-60 pb-30">
+    <div class="container">
+
+        <!-- Heading -->
+        <div class="section-head text-center" style="margin-bottom: 50px;">
+            <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Why Connect With Us</div>
+            <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Why Connect With Young Chanakya X</h2>
+            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">Position your brand within a structured creator ecosystem designed for consistent visibility, engagement, and collaboration</p>
+        </div>
+
+        <div class="row gx-4 gy-4">
+
+            <!-- 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="benefit-card">
+
+                    <div class="icon-box">
+                        <i class="fas fa-eye"></i>
+                    </div>
+
+                    <h4>Community Visibility</h4>
+
+                    <p>Build your brand presence through podcasts, talks, events, stories, and community initiatives throughout the year.</p>
+
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="benefit-card">
+
+                    <div class="icon-box">
+                        <i class="fas fa-users"></i>
+                    </div>
+
+                    <h4>Meaningful Connections</h4>
+
+                    <p>Connect with entrepreneurs, professionals, creators, educators, students, and industry leaders in one trusted ecosystem.</p>
+
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="benefit-card">
+
+                    <div class="icon-box">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+
+                    <h4>Multi-Platform Reach</h4>
+
+                    <p>Increase your brand visibility across digital content, live events, podcasts, workshops, and networking experiences.</p>
+
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="benefit-card">
+
+                    <div class="icon-box">
+                        <i class="fas fa-comments"></i>
+                    </div>
+
+                    <h4>Authentic Engagement</h4>
+
+                    <p>Be part of conversations and experiences that create genuine interactions with an engaged community.</p>
+
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="benefit-card">
+
+                    <div class="icon-box">
+                        <i class="fas fa-globe"></i>
+                    </div>
+
+                    <h4>Long-Term Partnership</h4>
+
+                    <p>Go beyond one-time sponsorships with opportunities to collaborate across multiple YCX initiatives.</p>
+
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="benefit-card">
+
+                    <div class="icon-box">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+
+                    <h4>Community Impact</h4>
+
+                    <p>Support learning, leadership, entrepreneurship, and innovation while contributing to a thriving community.</p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- third section — Brand Presence -->
+<section class="fancy-banner-seven box-layout connectx-brand-section pt-60 lg-pt-30 pb-40" id="partnership-opportunities" style="max-width: 96% !important; margin: 0 auto !important; width: 100% !important;">
+
+    <div class="bg-wrapper border-40 position-relative z-1 overflow-hidden pt-120 pb-120 lg-pt-80 lg-pb-80" style="max-width: 100% !important; width: 100% !important;">
+
+        <div class="container-fluid position-relative px-4 px-lg-5" style="z-index:2; max-width: 1700px; margin: 0 auto;">
+
+            <div class="row align-items-center gy-5">
+
+                <!-- LEFT CONTENT -->
+                <div class="col-lg-7">
+                    <div style="margin-bottom: 30px;">
+                        <div class="eyebrow rv" style="color: #ffd2b1; font-size: 10px; font-weight: 700; letter-spacing: 3px;">WHERE YOUR BRAND APPEARS</div>
+                        <h2 class="sec-title rv" style="color: #ffffff; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">
+                           Put Your Brand at the <br>
+                            <span style="color: #ffd2b1;">Heart of the Community</span>
+                        </h2>
+                        <p class="sec-desc rv" style="margin-top: 16px; color: rgba(255,255,255,0.85); max-width: 100%;">Partner with Young Chanakya X and connect your brand with experiences that inspire learning,<br> build relationships, and create lasting community impact.</p>
+                    </div>
+
+                    <a href="#sponsor-form" class="tier-btn-primary">
+                        Explore sponsership Packages
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- RIGHT LIST -->
+                <div class="col-lg-5 ms-auto">
+
+                    <ul class="style-none connectx-points">
+
+                        <li>Podcast & Video Series</li>
+
+                        <li>YCX Talks & Speaker Sessions</li>
+
+                        <li>Networking Events & Meetups</li>
+
+                        <li>Awards &amp; Recognition Platforms</li>
+
+                        <li>Community Campaigns & Digital Experiences</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
 <script>

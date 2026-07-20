@@ -27,12 +27,12 @@ $seo = [
       <div class="row align-items-center g-5">
         <div class="col-lg-6">
           <div class="trust-badge-pill">
-            <i class="bi bi-shield-check-fill"></i> Guest applications open
+            <i class="bi bi-mic"></i> YCX Podcast
           </div>
 
           <h1 class="trust-headline">Get Featured On <br>Our Podcast</h1>
           <p class="hero-description">
-            Share the frameworks you've built, the calls only a CHRO has to make, and the mistakes that taught you the most — with an audience of HR leaders making those same calls right now.
+            Discover inspiring conversations with founders, entrepreneurs, professionals, creators, educators, and changemakers as they share their journeys, experiences, and lessons that inspire growth.
           </p>
 
           <ul class="checklist-connector">
@@ -40,19 +40,19 @@ $seo = [
               <span class="icon-circle">
                 <i class="bi bi-check-lg"></i>
               </span>
-              100+ episodes released
+              Share your journey with a growing community
             </li>
             <li>
               <span class="icon-circle">
                 <i class="bi bi-check-lg"></i>
               </span>
-              40k+ HR leaders reached monthly
+              Inspire others through authentic conversations
             </li>
             <li>
               <span class="icon-circle">
                 <i class="bi bi-check-lg"></i>
               </span>
-              Real conversations, not scripted panels.
+              Build meaningful connections beyond the episode
             </li>
           </ul>
         </div>
@@ -119,9 +119,9 @@ $seo = [
   <section class="connectx-how-works-section-wrapper pt-70 lg-pt-80 pb-70 lg-pb-80">
     <div class="container">
       <div class="text-center mb-70">
-        <div class="eyebrow rv">Our Network</div>
-        <h2 class="sec-title rv how-work-title">Who We Work With</h2>
-        <p class="sec-desc rv mx-auto how-work-desc">We partner with diverse organizations to create value, unlock growth, and empower digital ecosystems.</p>
+        <div class="eyebrow rv">Why Get Featured</div>
+        <h2 class="sec-title">Every Conversation Has the Power to Inspire</h2>
+        <p class="sec-desc">Share your experiences and insights through meaningful conversations that inspire <br>learning, growth, and real connections.</p>
       </div>
 
       <div class="row g-0 how-works-section-cards-container">
@@ -129,10 +129,10 @@ $seo = [
           <div class="how-works-section-card how-works-bg-light">
             <div class="how-works-header-flex-row">
               <span class="how-works-badge-num">01</span>
-              <h4 class="how-works-h4">Content Platforms</h4>
+              <h4 class="how-works-h4">Authentic Conversations</h4>
             </div>
             <p class="how-works-p-desc">
-              Organizations focused on digital content, publishing, and audience engagement across formats.
+              We focus on honest, meaningful conversations that reflect your real experiences, ideas, and unique perspective rather than scripted interviews.
             </p>
           </div>
         </div>
@@ -141,10 +141,10 @@ $seo = [
           <div class="how-works-section-card how-works-bg-tint">
             <div class="how-works-header-flex-row">
               <span class="how-works-badge-num">02</span>
-              <h4 class="how-works-h4">Creator Networks</h4>
+              <h4 class="how-works-h4">Real-World Experiences</h4>
             </div>
             <p class="how-works-p-desc">
-              Communities and groups working with creators, influencers and digital storytellers.
+             Share practical lessons, challenges, and achievements that can inspire others and help them navigate their own journeys.
             </p>
           </div>
         </div>
@@ -153,10 +153,10 @@ $seo = [
           <div class="how-works-section-card how-works-bg-light">
             <div class="how-works-header-flex-row">
               <span class="how-works-badge-num">03</span>
-              <h4 class="how-works-h4">Media & Production Teams</h4>
+              <h4 class="how-works-h4">Diverse Perspectives</h4>
             </div>
             <p class="how-works-p-desc">
-              Studios and teams involved in podcasts, video production and content creation.
+              Every background, profession, and experience brings fresh ideas that enrich conversations and create valuable learning opportunities.
             </p>
           </div>
         </div>
@@ -165,10 +165,10 @@ $seo = [
           <div class="how-works-section-card how-works-bg-tint">
             <div class="how-works-header-flex-row">
               <span class="how-works-badge-num">04</span>
-              <h4 class="how-works-h4">Community Builders</h4>
+              <h4 class="how-works-h4">Community Learning</h4>
             </div>
             <p class="how-works-p-desc">
-              Groups building active communities, engagement systems and networking ecosystems.
+              Your experiences become a source of knowledge that helps individuals make informed decisions and grow with confidence.
             </p>
           </div>
         </div>
@@ -177,10 +177,10 @@ $seo = [
           <div class="how-works-section-card how-works-bg-light">
             <div class="how-works-header-flex-row">
               <span class="how-works-badge-num">05</span>
-              <h4 class="how-works-h4">Agencies & Growth Teams</h4>
+              <h4 class="how-works-h4">Meaningful Dialogue</h4>
             </div>
             <p class="how-works-p-desc">
-              Teams focused on campaigns, creator partnerships and brand visibility growth.
+              Engage in thoughtful discussions that encourage curiosity, spark new ideas, and create lasting conversations within the community.
             </p>
           </div>
         </div>
@@ -189,10 +189,10 @@ $seo = [
           <div class="connectx-premium-card how-works-section-card how-works-bg-tint">
             <div class="how-works-header-flex-row">
               <span class="how-works-badge-num">06</span>
-              <h4 class="how-works-h4">Ecosystem Enablers</h4>
+              <h4 class="how-works-h4">Lasting Inspiration</h4>
             </div>
             <p class="how-works-p-desc">
-              Organizations supporting startups, innovation communities and professional networks.
+              Your story continues to educate and motivate people long after the episode is published across our platforms.
             </p>
           </div>
         </div>
@@ -245,89 +245,79 @@ $seo = [
   <section class="partner-sec" id="partner">
     <div class="partner-head text-center">
       <div class="eyebrow rv">Who Can Join Us</div>
-      <h2 class="sec-title rv">A Community for Everyone Who Wants to Grow</h2>
-      <p class="sec-desc rv mx-auto">For people who value collaboration, learning, and building real connections that create long-term impact.</p>
+      <h2 class="sec-title rv">Every Journey Deserves to Be Heard</h2>
+      <p class="sec-desc rv mx-auto">We welcome individuals from diverse backgrounds who have experiences, ideas, or insights that can inspire and educate others.</p>
     </div>
     <div class="partner-grid">
       <div class="p-card rv" style="transition-delay:0s">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Students" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80" alt="Creators" loading="lazy">
         <div class="p-card-ov">
-          <div class="p-name">Students</div>
-          <div class="p-desc">Connect with peers, build practical skills, and access leadership programs.</div>
+          <div class="p-name">Creators</div>
+          <div class="p-desc">Produce engaging content, tell impactful stories, and share your vision on our podcast platform.</div>
         </div>
-        <div class="p-arrow">↗</div>
       </div>
       <div class="p-card rv" style="transition-delay:0.07s">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80" alt="Women Leaders" loading="lazy">
+        <div class="p-card-ov">
+          <div class="p-name">Women Leaders</div>
+          <div class="p-desc">Empower others by sharing your leadership journey, key strategies, and industry insights.</div>
+        </div>
+      </div>
+      <div class="p-card rv" style="transition-delay:0.14s">
         <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80" alt="Entrepreneurs" loading="lazy">
         <div class="p-card-ov">
           <div class="p-name">Entrepreneurs</div>
-          <div class="p-desc">Network with experts, share your vision, and scale your business ventures.</div>
+          <div class="p-desc">Share your business venture stories, operational frameworks, and scale-up strategies.</div>
         </div>
-        <div class="p-arrow">↗</div>
-      </div>
-      <div class="p-card rv" style="transition-delay:0.14s">
-        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="Startup Founders" loading="lazy">
-        <div class="p-card-ov">
-          <div class="p-name">Startup Founders</div>
-          <div class="p-desc">Pitch your ideas, collaborate with investors, and accelerate your growth.</div>
-        </div>
-        <div class="p-arrow">↗</div>
       </div>
       <div class="p-card rv" style="transition-delay:0.21s">
-        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80" alt="Business Leaders" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80" alt="Startup Founders" loading="lazy">
         <div class="p-card-ov">
-          <div class="p-name">Business Leaders</div>
-          <div class="p-desc">Guide the ecosystem, sponsor programs, and share executive insights.</div>
+          <div class="p-name">Startup Founders</div>
+          <div class="p-desc">Discuss market innovation, venture building lessons, and raising capital.</div>
         </div>
-        <div class="p-arrow">↗</div>
       </div>
       <div class="p-card rv" style="transition-delay:0.28s">
-        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80" alt="Creators / Mentors" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80" alt="Professionals" loading="lazy">
         <div class="p-card-ov">
-          <div class="p-name">Creators / Mentors</div>
-          <div class="p-desc">Produce podcasts, write articles, and mentor the next generation.</div>
+          <div class="p-name">Professionals</div>
+          <div class="p-desc">Explain your functional expertise, corporate milestones, and career growth hacks.</div>
         </div>
-        <div class="p-arrow">↗</div>
       </div>
       <div class="p-card rv" style="transition-delay:0.35s">
-        <img src="https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=600&q=80" alt="Influencers" loading="lazy">
-        <div class="p-card-ov">
-          <div class="p-name">Influencers</div>
-          <div class="p-desc">Amplify brand voice, reach active audiences, and host live sessions.</div>
-        </div>
-        <div class="p-arrow">↗</div>
-      </div>
-      <div class="p-card rv" style="transition-delay:0.42s">
-        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600&q=80" alt="Investors" loading="lazy">
-        <div class="p-card-ov">
-          <div class="p-name">Investors</div>
-          <div class="p-desc">Discover vetted startups, back innovators, and shape market trends.</div>
-        </div>
-        <div class="p-arrow">↗</div>
-      </div>
-      <div class="p-card rv" style="transition-delay:0.49s">
         <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80" alt="Educators" loading="lazy">
         <div class="p-card-ov">
           <div class="p-name">Educators</div>
-          <div class="p-desc">Bridge academia with industry, design courses, and lead workshops.</div>
+          <div class="p-desc">Bridge theory with practical implementation, detailing the future of teaching and learning.</div>
         </div>
-        <div class="p-arrow">↗</div>
       </div>
-      <div class="p-card rv" style="transition-delay:0.56s">
-        <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=600&q=80" alt="Community Builders" loading="lazy">
+      <div class="p-card rv" style="transition-delay:0.42s">
+        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80" alt="Public Speakers" loading="lazy">
         <div class="p-card-ov">
-          <div class="p-name">Community Builders</div>
-          <div class="p-desc">Organize local meetups, run regional chapters, and grow active networks.</div>
+          <div class="p-name">Public Speakers</div>
+          <div class="p-desc">Bring your stage presence and talk about the ideas that can challenge and shape opinions.</div>
         </div>
-        <div class="p-arrow">↗</div>
       </div>
-      <div class="p-card rv" style="transition-delay:0.63s">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Innovators" loading="lazy">
+      <div class="p-card rv" style="transition-delay:0.49s">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" alt="Innovators" loading="lazy">
         <div class="p-card-ov">
           <div class="p-name">Innovators</div>
-          <div class="p-desc">Develop cutting-edge ideas, collaborate on tech, and build future frameworks.</div>
+          <div class="p-desc">Explain emerging technology, digital frameworks, and cutting-edge solutions.</div>
         </div>
-        <div class="p-arrow">↗</div>
+      </div>
+      <div class="p-card rv" style="transition-delay:0.56s">
+        <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=600&q=80" alt="Community Leaders" loading="lazy">
+        <div class="p-card-ov">
+          <div class="p-name">Community Leaders</div>
+          <div class="p-desc">Discuss strategies for cultivating active, supportive, and highly engaged communities.</div>
+        </div>
+      </div>
+      <div class="p-card rv" style="transition-delay:0.63s">
+        <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=600&q=80" alt="Social Impact Leaders" loading="lazy">
+        <div class="p-card-ov">
+          <div class="p-name">Social Impact Leaders</div>
+          <div class="p-desc">Inspire change by speaking on sustainability, community development, and societal progress.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -338,23 +328,23 @@ $seo = [
       <div class="cover-grid-new">
         <!-- LEFT COLUMN -->
         <div class="cover-left">
-          <h2 class="cover-heading-new">Work With an <em>Advisory Board</em> Focused on <em>Your Family Business</em></h2>
-          <p class="cover-desc-new">Leverage the expertise of a prestigious panel of 10+ industry veterans, committed to guiding your business.</p>
+          <span class="eyebrow">What We Cover</span>
+          <h2 class="sec-title">Share Your Journey and <br>Inspire Others</h2>
+          <p class="sec-desc">We feature conversations focused on growth, innovation, and leadership in today's digital and business landscape.</p>
           <ul class="cover-points-new">
             <li>
               <span class="point-icon-circle">
                 <i class="bi bi-check-lg"></i>
               </span>
-              Tailored advisory board composition for business-specific expertise.
+              Propose custom discussion topics that highlight your expertise and stories
             </li>
             <li>
               <span class="point-icon-circle">
                 <i class="bi bi-check-lg"></i>
               </span>
-              Drive governance, succession, and operational excellence seamlessly.
+              Share actionable advice, lessons learned, and building frameworks
             </li>
           </ul>
-          <a href="#apply" class="cover-btn-new">Learn More</a>
         </div>
 
         <!-- RIGHT COLUMN -->
@@ -362,21 +352,23 @@ $seo = [
           <div class="vertical-marquee-container">
             <div class="vertical-marquee-track">
               <!-- Double entries to enable seamless loop vertical scroll -->
-              <div class="marquee-item">Unlocking Family Wealth</div>
-              <div class="marquee-item">Effective People Management</div>
-              <div class="marquee-item">Digitising your Business</div>
-              <div class="marquee-item">Aligning Business &amp; Family Objectives</div>
-              <div class="marquee-item">Intergenerational Conflict Resolution</div>
-              <div class="marquee-item">Scaling Business with Sustainability</div>
-              <div class="marquee-item">Enhancing Business Operations</div>
+              <div class="marquee-item">How to scale startups and sustain rapid growth</div>
+              <div class="marquee-item">Empowering women to lead in modern industries</div>
+              <div class="marquee-item">Building engaged communities across digital ecosystems</div>
+              <div class="marquee-item">How content creators turn stories into movements</div>
+              <div class="marquee-item">Reimagining EdTech and the future of learning</div>
+              <div class="marquee-item">Navigating emerging technology and digital trends</div>
+              <div class="marquee-item">Driving social impact and community development</div>
+              <div class="marquee-item">The startup fundraising and venture building journey</div>
 
-              <div class="marquee-item">Unlocking Family Wealth</div>
-              <div class="marquee-item">Effective People Management</div>
-              <div class="marquee-item">Digitising your Business</div>
-              <div class="marquee-item">Aligning Business &amp; Family Objectives</div>
-              <div class="marquee-item">Intergenerational Conflict Resolution</div>
-              <div class="marquee-item">Scaling Business with Sustainability</div>
-              <div class="marquee-item">Enhancing Business Operations</div>
+              <div class="marquee-item">How to scale startups and sustain rapid growth</div>
+              <div class="marquee-item">Empowering women to lead in modern industries</div>
+              <div class="marquee-item">Building engaged communities across digital ecosystems</div>
+              <div class="marquee-item">How content creators turn stories into movements</div>
+              <div class="marquee-item">Reimagining EdTech and the future of learning</div>
+              <div class="marquee-item">Navigating emerging technology and digital trends</div>
+              <div class="marquee-item">Driving social impact and community development</div>
+              <div class="marquee-item">The startup fundraising and venture building journey</div>
             </div>
           </div>
         </div>
@@ -387,11 +379,18 @@ $seo = [
   <!-- ============ 5. WHAT YOU GET ============ -->
   <section class="section-pad bg-white-sec">
     <div class="container">
-      <div class="sec-head">
-        <span class="eyebrow">What you get</span>
-        <h2>Everything's handled — you just show up</h2>
+      <!-- 2-column header layout -->
+      <div class="row align-items-end mb-5">
+        <div class="col-lg-6">
+          <span class="eyebrow">What You Gain Beyond the Conversation</span>
+          <h2 class="sec-title love-header-title mb-0">Why You'll Love it</h2>
+        </div>
+        <div class="col-lg-6">
+          <p class="love-header-desc">Getting featured on the YCX Podcast helps you expand your reach, strengthen your personal brand, and build meaningful connections that continue beyond the episode.</p>
+        </div>
       </div>
-      <div class="row align-items-stretch g-4 mb-4">
+
+      <div class="row align-items-stretch g-4 mb-4 mt-5">
         <!-- 1st Row: Column 1 - Image -->
         <div class="col-lg-6">
           <div class="h-100 rounded-4 overflow-hidden">
@@ -404,8 +403,8 @@ $seo = [
             <div class="get-card-icon-wrap">
               <i class="bi bi-mic"></i>
             </div>
-            <h3>Professional recording, zero prep stress</h3>
-            <p>Video or audio, remote or in-studio. Our producer handles the technical side end to end.</p>
+            <h3>Professional Podcast Feature</h3>
+            <p>Get featured on a professionally produced podcast that showcases your story authentically.</p>
           </div>
         </div>
         <!-- 1st Row: Column 3 - Card 2 -->
@@ -414,8 +413,8 @@ $seo = [
             <div class="get-card-icon-wrap">
               <i class="bi bi-broadcast"></i>
             </div>
-            <h3>Distribution across every platform</h3>
-            <p>YouTube, Spotify, Apple Podcasts and Audible — your episode goes out everywhere our audience listens.</p>
+            <h3>Digital Visibility</h3>
+            <p>Reach a wider, diverse audience across YCX's digital channels.</p>
           </div>
         </div>
       </div>
@@ -425,28 +424,19 @@ $seo = [
         <div class="col-lg-3 col-md-6">
           <div class="get-card">
             <div class="get-card-icon-wrap">
-              <i class="bi bi-chat-quote"></i>
+              <i class="bi bi-graph-up-arrow"></i>
             </div>
-            <h3>Social clips and quote cards</h3>
-            <p>Edited highlight clips and shareable quote graphics, ready for your own LinkedIn and company channels.</p>
+            <h3>Personal Brand Growth</h3>
+            <p>Build your professional presence by sharing your unique expertise.</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="get-card">
             <div class="get-card-icon-wrap">
-              <i class="bi bi-person-badge"></i>
+              <i class="bi bi-share"></i>
             </div>
-            <h3>A guest spotlight page</h3>
-            <p>A dedicated page with your bio, headshot and links — built to be shared and to outlast the episode itself.</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="get-card">
-            <div class="get-card-icon-wrap">
-              <i class="bi bi-journal-text"></i>
-            </div>
-            <h3>Narrative Pre-production</h3>
-            <p>Pre-interview prep session to align on your key insights and build a high-impact narrative structure.</p>
+            <h3>Shareable Content</h3>
+            <p>Get ready-to-share social clips and media assets for your channels.</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
@@ -454,8 +444,17 @@ $seo = [
             <div class="get-card-icon-wrap">
               <i class="bi bi-people"></i>
             </div>
-            <h3>Network access</h3>
-            <p>Introductions and networking opportunities with our community of alumni guests, HR executives and leaders.</p>
+            <h3>Valuable Connections</h3>
+            <p>Connect with founders, creators, and mentors in the YCX ecosystem.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="get-card">
+            <div class="get-card-icon-wrap">
+              <i class="bi bi-infinity"></i>
+            </div>
+            <h3>Evergreen Presence</h3>
+            <p>Your insights remain accessible online, creating long-term value.</p>
           </div>
         </div>
       </div>
@@ -466,33 +465,33 @@ $seo = [
   <section class="thought-leadership-section">
     <div class="thought-leadership-container">
       <div class="thought-header">
-        <h2 class="thought-title">Thought Leadership from <em>Our Guests</em></h2>
-        <p class="thought-desc">On The CHRO Mindset, our guests are not just speakers; they are industry leaders driving real-world change.</p>
+        <h2 class="thought-title">Voices of Our Community</h2>
+        <p class="thought-desc">Explore inspiring conversations and deep insights from creators, founders, and leaders featured on the YCX Podcast.</p>
       </div>
 
       <div class="video-grid">
         <div class="video-card">
           <div class="video-thumbnail">
-            <img src="https://images.unsplash.com/photo-1758518727888-ffa196002e59?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="Exploring the Future of AI">
+            <img src="https://images.unsplash.com/photo-1758518727888-ffa196002e59?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="Building Communities That Scale">
             <div class="play-btn-overlay">
               <i class="bi bi-play-fill"></i>
             </div>
           </div>
-          <h3 class="video-card-title">Exploring the Future of AI</h3>
+          <h3 class="video-card-title">Building Communities That Scale</h3>
           <div class="video-card-divider"></div>
-          <p class="video-card-subtext">Dr. Ananya Rao — CHRO, Scale-up, on The CHRO Mindset Podcast</p>
+          <p class="video-card-subtext">Ananya Rao — Community Builder &amp; Creator, on the YCX Podcast</p>
         </div>
 
         <div class="video-card">
           <div class="video-thumbnail">
-            <img src="https://images.unsplash.com/photo-1758518729286-e8d94cc231f5?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="How to Build a Profitable Company">
+            <img src="https://images.unsplash.com/photo-1758518729286-e8d94cc231f5?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="The Future of Digital Entrepreneurship">
             <div class="play-btn-overlay">
               <i class="bi bi-play-fill"></i>
             </div>
           </div>
-          <h3 class="video-card-title">How to Build a Profitable Company</h3>
+          <h3 class="video-card-title">The Future of Digital Entrepreneurship</h3>
           <div class="video-card-divider"></div>
-          <p class="video-card-subtext">Marcus Webb — CPO, Global Manufacturing, on The CHRO Mindset Podcast</p>
+          <p class="video-card-subtext">Marcus Webb — Tech Innovator &amp; Founder, on the YCX Podcast</p>
         </div>
       </div>
     </div>
@@ -538,16 +537,16 @@ $seo = [
           <!-- CONTENT SIDE -->
           <div class="col-lg-6 ms-auto d-flex flex-column order-lg-last">
             <div class="text-wrapper pt-60 pb-60 lg-pb-40 ps-3 ps-xxl-5 pe-3 pe-xxl-5">
-              <div class="eyebrow rv">Why Partner with Us</div>
-              <h2 class="sec-title rv">Structured Collaboration <br>Built for Long-Term Growth</h2>
+              <div class="eyebrow rv">READY TO SHARE YOUR STORY?</div>
+              <h2 class="sec-title rv">Become the Next <br>Featured Guest</h2>
               <p class="sec-desc rv">
-                Young Chanakya X connects partners and creators through meaningful collaboration, engagement, and growth.
+                Every conversation has the potential to inspire, educate, and create opportunities. Apply today and let your journey reach people who can learn from it.
               </p>
               <ul class="style-none connectx-partner-list">
-                <li>Collaboration-first ecosystem approach</li>
-                <li>Content-driven engagement model</li>
-                <li>Cross-industry network access</li>
-                <li>Structured opportunities for co-creation</li>
+                <li>Professionally hosted podcast conversations</li>
+                <li>Reach a growing community across industries</li>
+                <li>Share your story with lasting impact</li>
+                <li>Build meaningful professional connections</li>
               </ul>
             </div>
           </div>
@@ -562,56 +561,56 @@ $seo = [
   </div>
 
   <!-- ============ 9. FAQ ============ -->
-  <section class="faq-section" id="faq">
+  <section class="faq-section pb-5" id="faq">
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">Questions, Answered</span>
         <h2 class="sec-title">Frequently asked questions</h2>
-        <p class="sec-desc">Everything you need to know about the guest application, preparation, recording, and distribution process.</p>
+        <p class="sec-desc">Everything you need to know about preparation, recording, and distribution process.</p>
       </div>
       <div class="faq-grid">
         <div class="faq-col">
           <div class="faq-item">
-            <div class="faq-q"><span>How do I apply to get featured on the podcast?</span><span class="plus">+</span></div>
-            <div class="faq-a"><p>Fill out the application form on this page with details about your background and the topics you want to discuss. Our producers review every submission.</p></div>
+            <div class="faq-q"><span>Who can apply to be featured?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>Anyone with valuable experiences, insights, or stories that can inspire and educate others.</p></div>
           </div>
           <div class="faq-item">
-            <div class="faq-q"><span>Who is the ideal guest for The CHRO Mindset?</span><span class="plus">+</span></div>
-            <div class="faq-a"><p>We look for CHROs, CPOs, Heads of People, and HR Tech founders who have led real transformations, made hard calls, and have specific operating insights to share.</p></div>
+            <div class="faq-q"><span>Is there any fee to participate?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>No. Being featured on the YCX Podcast is completely free for selected guests.</p></div>
           </div>
           <div class="faq-item">
-            <div class="faq-q"><span>Is there any cost or fee to be featured?</span><span class="plus">+</span></div>
-            <div class="faq-a"><p>No. There is absolutely no fee or cost to be a guest. Every slot is editorial, based purely on the value and depth of your professional experience.</p></div>
+            <div class="faq-q"><span>How long does a podcast episode last?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>Most conversations range between 30 and 60 minutes.</p></div>
           </div>
           <div class="faq-item">
-            <div class="faq-q"><span>How long does the recording session take?</span><span class="plus">+</span></div>
-            <div class="faq-a"><p>The recording itself takes about 40–50 minutes. We also schedule a quick 15-minute alignment call a few days prior to shape the conversation outline.</p></div>
+            <div class="faq-q"><span>Is the podcast recorded online or in person?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>Depending on the guest and event, episodes may be recorded online or at a physical location.</p></div>
           </div>
           <div class="faq-item">
-            <div class="faq-q"><span>Where does the recording take place?</span><span class="plus">+</span></div>
-            <div class="faq-a"><p>We support both remote recording (via professional studio-quality web platforms) and in-studio recording depending on your location and preference.</p></div>
+            <div class="faq-q"><span>Can I suggest the discussion topics?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>Yes. We encourage guests to propose topics that reflect their expertise and experiences.</p></div>
           </div>
         </div>
         <div class="faq-col">
           <div class="faq-item">
-            <div class="faq-q"><span>What topics or themes do you cover?</span><span class="plus">+</span></div>
-            <div class="faq-a"><p>We cover a wide range of HR and people topics: Talent Strategy, Workforce Planning, AI in HR, Compensation & Rewards, Culture & Change, Org Design, and more.</p></div>
+            <div class="faq-q"><span>Will my podcast be promoted?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>Yes. Selected episodes are promoted across YCX's website, social media, and digital channels.</p></div>
           </div>
           <div class="faq-item">
-            <div class="faq-q"><span>Do I get to review the episode before it goes live?</span><span class="plus">+</span></div>
-            <div class="faq-a"><p>Yes, our team edits the episode for clarity and flow, and we share the draft and promotional assets with you for review before publication.</p></div>
+            <div class="faq-q"><span>Can I feature my organization or startup?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>Yes. You're welcome to share your journey, mission, and the work you're building as part of the conversation.</p></div>
           </div>
           <div class="faq-item">
-            <div class="faq-q"><span>Where is the podcast distributed?</span><span class="plus">+</span></div>
-            <div class="faq-a"><p>The podcast is distributed on YouTube, Spotify, Apple Podcasts, Audible, and our community platform, reaching over 40,000 HR leaders monthly.</p></div>
+            <div class="faq-q"><span>What languages can I speak in?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>You can apply in your preferred language, subject to our recording and audience requirements.</p></div>
           </div>
           <div class="faq-item">
-            <div class="faq-q"><span>Can I share the promotional clips on my own LinkedIn?</span><span class="plus">+</span></div>
-            <div class="faq-a"><p>Absolutely. We provide you with custom social media clips, audiograms, quote cards, and a dedicated spotlight page to share on your personal and company channels.</p></div>
+            <div class="faq-q"><span>Can I participate more than once?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>Absolutely. You're welcome to return with new stories, milestones, or insights in the future.</p></div>
           </div>
           <div class="faq-item">
-            <div class="faq-q"><span>How long after recording does the episode go live?</span><span class="plus">+</span></div>
-            <div class="faq-a"><p>Typically, it takes about 3 to 5 weeks after recording to edit, package, generate the promotional clips, and release the episode.</p></div>
+            <div class="faq-q"><span>How will I know if I'm selected?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>Our team reviews every application and contacts shortlisted guests with the next steps for recording.</p></div>
           </div>
         </div>
       </div>

@@ -287,8 +287,6 @@ $seo = [
         border-radius: 2px;
     }
     .st-heading {
-        color: #0c3a30;
-        font-weight: 800;
         font-size: clamp(28px, 4vw, 44px);
         line-height: 1.2;
         letter-spacing: -1px;
@@ -303,7 +301,7 @@ $seo = [
     
     /* Cards Style */
     .st-card {
-        background: #ffffff;
+        background: #fffaf4;
         border: 1px solid rgba(12, 58, 48, 0.08);
         border-radius: 20px;
         padding: 36px 30px;
@@ -316,21 +314,17 @@ $seo = [
         border-color: rgba(12, 58, 48, 0.2);
     }
     .st-card-icon {
-        width: 60px;
-        height: 60px;
-        background-color: rgba(255, 210, 177, 0.15);
+        width: 44px;
+        height: 44px;
+        background-color: var(--orange);
         color: #0c3a30;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         border-radius: 15px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         margin-bottom: 24px;
         transition: all 0.3s ease;
-    }
-    .st-card:hover .st-card-icon {
-        background-color: #0c3a30;
-        color: #ffd2b1;
     }
     .st-card-title {
         color: #0c3a30;
@@ -369,48 +363,146 @@ $seo = [
         font-family: 'Fraunces', serif;
     }
 
-    /* FAQ accordion styling */
-    .st-accordion-item {
-        background: #ffffff;
-        border: 1px solid rgba(12, 58, 48, 0.08) !important;
-        border-radius: 16px !important;
-        margin-bottom: 15px;
-        overflow: hidden;
-        transition: all 0.3s ease;
+    /* FAQ styling matching become-a-speaker page */
+    .faq-section {
+        padding: 100px 0;
+        background: #ffffff !important;
     }
-    .st-accordion-item:hover {
-        border-color: rgba(12, 58, 48, 0.2) !important;
+    .faq-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
     }
-    .st-accordion-button {
-        font-weight: 700;
-        font-size: 1.1rem;
-        color: #0c3a30 !important;
-        background-color: #ffffff !important;
-        padding: 22px 28px;
-        border: none !important;
-        box-shadow: none !important;
-        text-align: left;
-        width: 100%;
+    @media (max-width: 768px) {
+        .faq-grid {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+    }
+    .faq-item {
+        border-bottom: 1px solid rgba(12, 58, 48, 0.14);
+    }
+    .faq-q {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 20px;
+        padding: 26px 0;
+        cursor: pointer;
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 18px;
+        font-weight: 700;
+        color: #0c3a30;
+        text-align: left;
     }
-    .st-accordion-button:not(.collapsed) {
-        background-color: #fffcf9 !important;
-        border-bottom: 1px solid rgba(12, 58, 48, 0.08) !important;
-    }
-    .st-accordion-button i {
+    .faq-q .plus {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border: 1.5px solid #0c3a30;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        color: #0c3a30;
         transition: transform 0.3s ease;
     }
-    .st-accordion-button:not(.collapsed) i {
-        transform: rotate(180deg);
+    .faq-item.open .plus {
+        transform: rotate(45deg);
     }
-    .st-accordion-body {
-        padding: 24px 28px;
+    .faq-a {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease-out, padding 0.35s ease;
+    }
+    .faq-item.open .faq-a {
+        max-height: 250px;
+        padding-bottom: 24px;
+    }
+    .faq-a p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.65;
         color: #4d6459;
+    }
+    
+    /* Tick Icons without inline styles */
+    .hero-tick-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        background-color: #ffd2b1;
+        color: #090d16;
+        flex-shrink: 0;
+        border: 1px solid rgba(255,255,255,0.15);
+        margin-right: 16px;
+    }
+    .hero-tick-icon i {
+        font-size: 0.8rem;
+        -webkit-text-stroke: 1px;
+    }
+
+    .lens-tick-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        background-color: var(--orange-deep);
+        color: #ffffff;
+        flex-shrink: 0;
+        border: 1px solid rgba(255,255,255,0.15);
+    }
+    .lens-tick-icon i {
         font-size: 1rem;
-        line-height: 1.6;
-        background-color: #ffffff;
+        -webkit-text-stroke: 1px;
+    }
+    
+    #cta-banner {
+        background: linear-gradient(180deg, rgb(8 40 33 / 73%) 0%, rgba(8, 40, 33, 0.55) 55%, rgba(8, 40, 33, 0.94) 100%), 
+                    url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600') no-repeat center center !important;
+        background-size: cover !important;
+        position: relative;
+        overflow: hidden;
+    }
+    #cta-banner h2 {
+        color: #ffffff !important;
+    }
+    #cta-banner p {
+        color: rgba(255, 255, 255, 0.85) !important;
+    }
+    #cta-banner .st-eyebrow {
+        color: #ffd2b1 !important;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        display: block;
+    }
+    #cta-banner .btn-peach {
+        background-color: #ffd2b1 !important;
+        color: #0c3a30 !important;
+        padding: 14px 36px !important;
+        font-weight: 700 !important;
+        border-radius: 50px !important;
+        font-size: 0.95rem !important;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease !important;
+        text-decoration: none !important;
+        display: inline-block;
+        border: none !important;
+    }
+    #cta-banner .btn-peach:hover {
+        background-color: #ffbe8e !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 25px rgba(255, 210, 177, 0.25) !important;
     }
 
     /* Image Wrapper Styles */
@@ -490,21 +582,20 @@ $seo = [
     }
 
     /* Featured Categories (Horizontal Scroll) from ycx.html.html */
+    /* Featured Categories (Horizontal Scroll) from ycx.html.html */
     #categories {
         --theme-green: #0c3a30;
         --theme-peach: #ffd2b1;
-        --bg-dark: #07221c;
-        --bg-darker: #041411;
+        --bg-dark: #0c3a30;
         --text-main: #f0f5f3;
         --text-muted: #96aca6;
         --accent-peach: #ffd2b1;
         --accent-peach-light: #ffe5d1;
         --accent-gradient: linear-gradient(135deg, var(--theme-peach), var(--accent-peach-light));
-        --glass-border: rgba(255, 210, 177, 0.15);
         --font-head: 'Outfit', sans-serif;
         --font-body: 'Poppins', sans-serif;
 
-        background-color: var(--bg-darker);
+        background-color: var(--bg-dark) !important;
         overflow: hidden;
         padding: 80px 0;
         font-family: var(--font-body);
@@ -544,17 +635,16 @@ $seo = [
 
     .category-panel {
         min-width: 350px;
-        height: 500px;
+        height: 420px;
         border-radius: 30px;
-        padding: 2.5rem 2.5rem 0 2.5rem;
+        padding: 28px 28px;
         display: flex;
         flex-direction: column;
         position: relative;
         transition: all 0.4s ease;
-        border: 1px solid var(--glass-border);
+        border: 1px solid rgba(12, 58, 48, 0.08) !important;
         overflow: hidden;
-        background: linear-gradient(135deg, rgba(12, 58, 48, 0.25) 0%, rgba(7, 34, 28, 0.45) 100%);
-        backdrop-filter: blur(12px);
+        background: #ffffff !important;
     }
 
     .category-panel::before {
@@ -562,19 +652,19 @@ $seo = [
         position: absolute;
         top: 0; left: 0; right: 0; bottom: 0;
         border-radius: 30px;
-        background: var(--accent-gradient);
+        background: #ff7a30;
         opacity: 0;
         z-index: 0;
         transition: opacity 0.5s ease;
     }
 
     .category-panel:hover::before {
-        opacity: 0.1;
+        opacity: 0.04;
     }
 
     .category-panel:hover {
         transform: scale(1.02);
-        border-color: rgba(255, 210, 177, 0.4);
+        border-color: #ff7a30 !important;
     }
 
     .category-panel > * {
@@ -583,22 +673,23 @@ $seo = [
     }
 
     .category-panel h3 {
-        font-size: 2rem;
+        font-size: 22px;
         margin-bottom: 0.5rem;
-        color: var(--text-main);
+        color: #0c3a30 !important;
     }
 
     .cat-number {
-        color: var(--theme-peach);
-        font-weight: 600;
-        letter-spacing: 1px;
-        font-size: 1.1rem;
+        display: none;
+    }
+    .cat-icon-box {
+        color: var(--orange) !important;
+        font-size: 1.8rem;
         display: block;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.8rem;
     }
 
     .cat-desc {
-        color: var(--text-muted);
+        color: #4d6459 !important;
         font-size: 0.95rem;
         line-height: 1.5;
         margin-bottom: 0;
@@ -609,11 +700,11 @@ $seo = [
         right: 0;
         bottom: 0;
         width: 85%;
-        height: 260px;
+        height: 200px;
         border-radius: 24px 0 0 0;
         overflow: hidden;
-        border-left: 2px solid var(--theme-peach);
-        border-top: 2px solid var(--theme-peach);
+        border-left: 2px solid #a1a1a1;
+        border-top: 2px solid #a1a1a1;
         z-index: 1;
     }
 
@@ -654,32 +745,31 @@ $seo = [
             <div class="col-lg-6">
 
                 <div class="trust-badge-pill mb-4">
-                    <i class="bi bi-mic-fill"></i> Share Your Voice & Story
+                    <i class="bi bi-mic-fill"></i> Share Your Story
                 </div>
 
-                <h1 class="trust-headline mb-4">Your Story Our Stage Global Impact</h1>
+                <h1 class="trust-headline mb-4">Every Journey Has the Power to Inspire</h1>
                 <p class="text-white fs-5 mb-4" style="max-width: 600px; line-height: 1.6;">
-                    Young Chanakya X provides a premium platform for visionary builders, ecosystem creators, industry veterans, and passionate leaders to share their transformative ideas, turning points, and actionable knowledge.
-                </p>
+                    Every success, setback, lesson, and milestone has the potential to inspire others. Share your story with the Young Chanakya X community and help people learn through real experiences.</p>
 
                 <ul class="style-none mt-4 text-white" style="list-style: none; padding: 0;">
                     <li class="mb-3 d-flex align-items-center" style="font-size: 0.95rem; line-height: 1.4;">
-                        <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #ffd2b1; color: #090d16; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.15);">
-                            <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
+                        <span class="hero-tick-icon">
+                            <i class="bi bi-check-lg"></i>
                         </span>
-                        Transformative Storytelling & Editorial Support
+                        Inspire through authentic experiences
                     </li>
                     <li class="mb-3 d-flex align-items-center" style="font-size: 0.95rem; line-height: 1.4;">
-                        <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #ffd2b1; color: #090d16; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.15);">
-                            <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
+                        <span class="hero-tick-icon">
+                            <i class="bi bi-check-lg"></i>
                         </span>
-                        Engage with an Elite Audience of Thinkers & Builders
+                        Share lessons that create impact
                     </li>
                     <li class="mb-3 d-flex align-items-center" style="font-size: 0.95rem; line-height: 1.4;">
-                        <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #ffd2b1; color: #090d16; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.15);">
-                            <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
+                        <span class="hero-tick-icon">
+                            <i class="bi bi-check-lg"></i>
                         </span>
-                        Multi-channel Distribution & Global Reach
+                        Become part of the YCX community
                     </li>
                 </ul>
 
@@ -689,50 +779,53 @@ $seo = [
             <div class="col-lg-6">
                 <div class="trust-metric-box">
                     <h4 class="text-white h5 mb-4" style="color: #ffd2b1 !important; border-bottom: 1px solid rgba(255, 210, 177, 0.15); padding-bottom: 15px;">
-                        <i class="bi bi-patch-check-fill me-2"></i> Submit Talk Proposal
+                        <i class="bi bi-patch-check-fill me-2"></i> Share Your Story Application
                     </h4>
 
-                    <form id="speakerTalkForm">
+                    <form id="speakerTalkForm" action="{{ route('story.submit') }}" method="POST">
                         @csrf
                         <div class="row g-3">
+                            {{-- Row 1: Full Name | Phone --}}
                             <div class="col-md-6">
                                 <label class="cx-label">Full Name *</label>
                                 <input type="text" class="form-control cx-input" name="full_name" placeholder="E.g. John Doe" required>
                             </div>
-                            
                             <div class="col-md-6">
                                 <label class="cx-label">Phone Number *</label>
                                 <input type="tel" class="form-control cx-input" name="phone" placeholder="E.g. 9876543210" required>
                             </div>
 
-                            <div class="col-md-6">
+                            {{-- Row 2: Email --}}
+                            <div class="col-12">
                                 <label class="cx-label">Email ID *</label>
                                 <input type="email" class="form-control cx-input" name="email" placeholder="john@company.com" required>
                             </div>
 
-                            <div class="col-md-6">
-                                <label class="cx-label">Social/LinkedIn Profile *</label>
+                            {{-- Row 3: Social Profile --}}
+                            <div class="col-12">
+                                <label class="cx-label">Social / LinkedIn Profile *</label>
                                 <input type="url" class="form-control cx-input" name="social_url" placeholder="https://linkedin.com/in/..." required>
                             </div>
 
+                            {{-- Row 4: Talk Title | Language --}}
                             <div class="col-md-7">
-                                <label class="cx-label">Proposed Talk Title *</label>
-                                <input type="text" class="form-control cx-input" name="talk_title" placeholder="E.g. Scaling Tech Teams in 2026" required>
+                                <label class="cx-label">Core Theme / Focus of Your Story *</label>
+                                <input type="text" class="form-control cx-input" name="talk_title" placeholder="E.g. Overcoming Career Burnout & Building a Tech Startup" required>
                             </div>
-
                             <div class="col-md-5">
-                                <label class="cx-label">Speaking Language *</label>
+                                <label class="cx-label">Preferred Language *</label>
                                 <input type="text" class="form-control cx-input" name="speaking_language" placeholder="E.g. English, Hindi" required>
                             </div>
 
+                            {{-- Row 5: Summary --}}
                             <div class="col-12">
-                                <label class="cx-label">Talk Summary / Core Message *</label>
-                                <textarea class="form-control cx-input" name="talk_summary" rows="3" placeholder="Briefly describe the key lessons or insights the audience will walk away with..." required></textarea>
+                                <label class="cx-label">Describe Your Journey, Lessons & Achievements *</label>
+                                <textarea class="form-control cx-input" name="talk_summary" rows="3" placeholder="Tell us about your background, the key turning points/challenges, and the achievements you want to share..." required></textarea>
                             </div>
 
                             <div class="col-12 mt-3">
-                                <button type="submit" class="btn w-100 py-3 fw-bold text-uppercase application-submit-btn" style="letter-spacing: 1px; font-size: 0.85rem;">
-                                    Submit Proposal <i class="bi bi-arrow-right ms-2"></i>
+                                <button type="submit" id="storySubmitBtn" class="btn w-100 py-3 fw-bold text-uppercase application-submit-btn" style="letter-spacing: 1px; font-size: 0.85rem;">
+                                    Submit Your Story <i class="bi bi-arrow-right ms-2"></i>
                                 </button>
                             </div>
                         </div>
@@ -744,23 +837,77 @@ $seo = [
     </div>
 </div>
 
+<!-- ========== SUCCESS POPUP MODAL ========== -->
+<div id="storySuccessModal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.65); backdrop-filter:blur(4px); align-items:center; justify-content:center;">
+    <div style="background:#fff; border-radius:20px; padding:48px 40px; max-width:480px; width:90%; text-align:center; position:relative; box-shadow:0 20px 60px rgba(0,0,0,0.25); animation:fadeInUp .4s ease;">
+        <div style="width:70px; height:70px; background:linear-gradient(135deg,#0c3a30,#1a6b55); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px;">
+            <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3 style="color:#0c3a30; font-size:1.5rem; font-weight:700; margin-bottom:12px;">Proposal Submitted!</h3>
+        <p style="color:#555; font-size:1rem; line-height:1.6; margin-bottom:28px;">Your talk proposal has been received. Our team will review it and reach out within 5–7 business days if there's a great fit.</p>
+        <button onclick="document.getElementById('storySuccessModal').style.display='none';" style="background:linear-gradient(135deg,#0c3a30,#1a6b55); color:#fff; border:none; border-radius:10px; padding:13px 36px; font-size:0.95rem; font-weight:600; cursor:pointer; letter-spacing:0.5px;">
+            Done <i class="bi bi-check2 ms-1"></i>
+        </button>
+    </div>
+</div>
+
 <!-- ABOUT STORY TALKS -->
-<section class="st-section st-bg-white">
+<section class="st-section st-bg-white" id="great-story">
     <div class="container">
-        <div class="row align-items-center g-5">
+        <!-- Section Title & Description Center Aligned -->
+        <div class="text-center mx-auto mb-5" style="max-width: 800px;">
+            <div class="st-eyebrow">What Makes a Great Story</div>
+            <h2 class="st-heading" style="color: #0c3a30;">Stories That Create Meaningful Impact</h2>
+            <p class="st-subheading mx-auto">The most memorable stories aren't about perfection—they're about honesty, learning, and growth.</p>
+        </div>
+
+        <div class="row g-5 align-items-stretch pt-4">
+            <!-- Left Side Image -->
             <div class="col-lg-6">
-                <div class="st-eyebrow">Introducing YCX Stage</div>
-                <h2 class="st-heading">Raw Journeys. Unfiltered Wisdom. Real Impact.</h2>
-                <p class="mb-4 text-muted" style="font-size: 1.05rem; line-height: 1.7;">
-                    YCX Story Talks is a premium series dedicated to capturing the definitive turning points of ecosystem builders, founders, creators, and professionals. Unlike polished public relations statements, our format delves into the real challenges, early bottlenecks, and critical pivots that defined their trajectories.
-                </p>
-                <p class="mb-4 text-muted" style="font-size: 1.05rem; line-height: 1.7;">
-                    We believe that true insight lies in the details of the climb—not just the view from the summit. Through live keynote stages, professional studio podcasts, and digital distributions, we provide the platform to document your experience for the next generation of builders.
-                </p>
+                <div class="st-image-wrapper" style="height: 100%; max-height: 500px; border-radius: 24px; overflow: hidden;">
+                    <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=1200" alt="YCX Speaker Recording Session" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
             </div>
+
+            <!-- Right Side 4 Cards -->
             <div class="col-lg-6">
-                <div class="st-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=1200" alt="YCX Speaker Recording Session">
+                <div class="row g-4 h-100 align-content-between">
+                    <div class="col-md-6">
+                        <div class="st-card h-100">
+                            <div class="st-card-icon">
+                                <i class="bi bi-bookmark-heart-fill"></i>
+                            </div>
+                            <h3 class="st-card-title" style="font-size: 1.15rem;">Authentic Experiences</h3>
+                            <p class="st-card-text" style="font-size: 0.88rem;">Share genuine moments from your personal or professional journey.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="st-card h-100">
+                            <div class="st-card-icon">
+                                <i class="bi bi-mortarboard-fill"></i>
+                            </div>
+                            <h3 class="st-card-title" style="font-size: 1.15rem;">Valuable Lessons</h3>
+                            <p class="st-card-text" style="font-size: 0.88rem;">Tell us what you learned and how it changed your perspective.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="st-card h-100">
+                            <div class="st-card-icon">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
+                            <h3 class="st-card-title" style="font-size: 1.15rem;">Challenges & Growth</h3>
+                            <p class="st-card-text" style="font-size: 0.88rem;">Every obstacle overcome can inspire someone else's journey.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="st-card h-100">
+                            <div class="st-card-icon">
+                                <i class="bi bi-gem"></i>
+                            </div>
+                            <h3 class="st-card-title" style="font-size: 1.15rem;">Meaningful Takeaways</h3>
+                            <p class="st-card-text" style="font-size: 0.88rem;">Share lessons and insights that others can apply in their own journey.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -770,102 +917,114 @@ $seo = [
 <!-- EXPLORE CONVERSATIONS -->
 <section id="categories">
     <div class="container">
-        <h2 class="reveal" style="font-size: 2.5rem; margin-bottom: 1rem; color: #f0f5f3 !important;">Explore <span class="gradient-text">Conversations</span></h2>
+        <!-- Section Title & Description Center Aligned -->
+        <div class="text-center mx-auto mb-5" style="max-width: 800px;">
+            <div class="st-eyebrow" style="color: #ffd2b1 !important;">WHAT YOU CAN SHARE</div>
+            <h2 class="st-heading" style="color: #ffffff !important;">Every Journey Has Something to Teach</h2>
+            <p class="st-subheading mx-auto" style="color: rgba(255, 255, 255, 0.8) !important;">Whether it's a breakthrough, a challenge, or a life-changing experience, we welcome stories that inspire learning, growth, and meaningful conversations.</p>
+        </div>
         <div class="categories-wrapper reveal">
-            <!-- 01 Career Journey -->
+            <!-- 01 Life Lessons -->
             <div class="category-panel">
                 <div class="cat-content">
-                    <span class="cat-number">01</span>
+                    <div class="cat-icon-box"><i class="bi bi-journals"></i></div>
+                    <h3>Life Lessons</h3>
+                    <p class="cat-desc">Share personal transformations, philosophies, and guiding principles.</p>
+                </div>
+                <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="cat-img-box">
+                    <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=600&q=80" alt="Life Lessons">
+                </div>
+            </div>
+
+            <!-- 02 Failure & Comeback -->
+            <div class="category-panel">
+                <div class="cat-content">
+                    <div class="cat-icon-box"><i class="bi bi-arrow-repeat"></i></div>
+                    <h3>Failure & Comeback</h3>
+                    <p class="cat-desc">Describe setbacks, resilience, and how you rebounded stronger.</p>
+                </div>
+                <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="cat-img-box">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="Failure & Comeback">
+                </div>
+            </div>
+
+            <!-- 03 Entrepreneur Journey -->
+            <div class="category-panel">
+                <div class="cat-content">
+                    <div class="cat-icon-box"><i class="bi bi-briefcase-fill"></i></div>
+                    <h3>Entrepreneur Journey</h3>
+                    <p class="cat-desc">Tell the story of how you started, pivoted, and built your business.</p>
+                </div>
+                <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="cat-img-box">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Entrepreneur Journey">
+                </div>
+            </div>
+
+            <!-- 04 Startup Story -->
+            <div class="category-panel">
+                <div class="cat-content">
+                    <div class="cat-icon-box"><i class="bi bi-rocket-fill"></i></div>
+                    <h3>Startup Story</h3>
+                    <p class="cat-desc">From ideation to launch, share your product breakthroughs and milestones.</p>
+                </div>
+                <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="cat-img-box">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80" alt="Startup Story">
+                </div>
+            </div>
+
+            <!-- 05 Career Journey -->
+            <div class="category-panel">
+                <div class="cat-content">
+                    <div class="cat-icon-box"><i class="bi bi-person-badge-fill"></i></div>
                     <h3>Career Journey</h3>
-                    <p class="cat-desc">Navigating pivots, ladders, and professional evolution.</p>
+                    <p class="cat-desc">Highlight key pivots, climbing the corporate ladder, and lessons learned.</p>
                 </div>
                 <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 <div class="cat-img-box">
                     <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="Career Journey">
                 </div>
             </div>
-            <!-- 02 Startup Stories -->
+
+            <!-- 06 Leadership Experience -->
             <div class="category-panel">
                 <div class="cat-content">
-                    <span class="cat-number">02</span>
-                    <h3>Startup Stories</h3>
-                    <p class="cat-desc">The grit, the funding, and building from zero to one.</p>
+                    <div class="cat-icon-box"><i class="bi bi-award-fill"></i></div>
+                    <h3>Leadership Experience</h3>
+                    <p class="cat-desc">Insights on managing teams, building cultures, and driving visions.</p>
                 </div>
                 <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 <div class="cat-img-box">
-                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80" alt="Startup Stories">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80" alt="Leadership Experience">
                 </div>
             </div>
-            <!-- 03 Leadership -->
+
+            <!-- 07 Business Lessons -->
             <div class="category-panel">
                 <div class="cat-content">
-                    <span class="cat-number">03</span>
-                    <h3>Leadership</h3>
-                    <p class="cat-desc">Managing teams, setting vision, and driving culture.</p>
+                    <div class="cat-icon-box"><i class="bi bi-graph-up-arrow"></i></div>
+                    <h3>Business Lessons</h3>
+                    <p class="cat-desc">Functional strategies, operational insights, and commercial scaling.</p>
                 </div>
                 <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 <div class="cat-img-box">
-                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80" alt="Leadership">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Business Lessons">
                 </div>
             </div>
-            <!-- 04 Innovation -->
+
+            <!-- 08 Personal Growth -->
             <div class="category-panel">
                 <div class="cat-content">
-                    <span class="cat-number">04</span>
-                    <h3>Innovation</h3>
-                    <p class="cat-desc">Breaking norms and creating the technology of tomorrow.</p>
-                </div>
-                <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                <div class="cat-img-box">
-                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80" alt="Innovation">
-                </div>
-            </div>
-            <!-- 05 Personal Growth -->
-            <div class="category-panel">
-                <div class="cat-content">
-                    <span class="cat-number">05</span>
+                    <div class="cat-icon-box"><i class="bi bi-heart-fill"></i></div>
                     <h3>Personal Growth</h3>
-                    <p class="cat-desc">Mental resilience, habit building, and finding purpose.</p>
+                    <p class="cat-desc">Self-improvement milestones, habit transformations, and mental shifts.</p>
                 </div>
                 <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 <div class="cat-img-box">
                     <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=600&q=80" alt="Personal Growth">
-                </div>
-            </div>
-            <!-- 06 Community Impact -->
-            <div class="category-panel">
-                <div class="cat-content">
-                    <span class="cat-number">06</span>
-                    <h3>Community Impact</h3>
-                    <p class="cat-desc">How grassroots movement and collective action reshape industries.</p>
-                </div>
-                <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                <div class="cat-img-box">
-                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80" alt="Community Impact">
-                </div>
-            </div>
-            <!-- 07 Financial Clarity -->
-            <div class="category-panel">
-                <div class="cat-content">
-                    <span class="cat-number">07</span>
-                    <h3>Financial Clarity</h3>
-                    <p class="cat-desc">Mastering money, capital allocation, and wealth-building mindsets.</p>
-                </div>
-                <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                <div class="cat-img-box">
-                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Financial Clarity">
-                </div>
-            </div>
-            <!-- 08 Legacy Building -->
-            <div class="category-panel">
-                <div class="cat-content">
-                    <span class="cat-number">08</span>
-                    <h3>Legacy Building</h3>
-                    <p class="cat-desc">Creating lasting institutions, brands, and cultural contributions.</p>
-                </div>
-                <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                <div class="cat-img-box">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Legacy Building">
                 </div>
             </div>
         </div>
@@ -873,7 +1032,7 @@ $seo = [
 </section>
 
 <!-- WHY STORIES MATTER -->
-<section class="partner-sec st-section st-bg-soft-cream" id="stories-matter" style="padding-left: 32px; padding-right: 32px;">
+{{-- <section class="partner-sec st-section st-bg-soft-cream" id="stories-matter" style="padding-left: 32px; padding-right: 32px;">
     <div class="partner-head text-center mb-5">
         <div class="eyebrow rv" style="margin-bottom: 12px; color: #0c3a30 !important;">The Power of Narrative</div>
         <h2 class="sec-title rv" style="margin-bottom: 16px; color: #0c3a30 !important;">Why Stories Matter</h2>
@@ -947,50 +1106,57 @@ $seo = [
             <div class="p-arrow">↗</div>
         </div>
     </div>
-</section>
+</section> --}}
 
 <!-- EDITORIAL LENS (WHAT MAKES A GREAT STORY) -->
 <section class="st-section st-bg-white">
     <div class="container">
-        <div class="row align-items-center g-5">
+        <div class="row align-items-stretch g-5">
             <div class="col-lg-6 order-lg-2">
-                <div class="st-eyebrow">Our Editorial Lens</div>
-                <h2 class="st-heading">What Makes a Great Story</h2>
+                <div class="st-eyebrow">WHY STORIES MATTER</div>
+                <h2 class="st-heading" style="color: #0c3a30;">Every Story Adds Value to the Community</h2>
                 <p class="mb-4 text-muted" style="font-size: 1.05rem; line-height: 1.7;">
-                    Every narrative we select is carefully analyzed to ensure it contains actionable value. We work with you to shape your talk around four primary inflection points:
-                </p>
-                <div class="d-flex gap-4 mb-4">
-                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style="width: 45px; height: 45px; background: rgba(12, 58, 48, 0.05); color: #0c3a30; font-weight: 700;">1</div>
+                    Your journey can help others learn, build confidence, and discover new possibilities through authentic experiences.</p>
+                <div class="d-flex gap-4 mb-4 align-items-start">
+                    <span class="lens-tick-icon">
+                        <i class="bi bi-check-lg"></i>
+                    </span>
                     <div>
-                        <h4 style="color: #0c3a30; font-weight: 700; font-size: 1.15rem; margin-bottom: 5px;">The Trigger Point</h4>
-                        <p class="text-muted small mb-0">The exact moment, insight, or challenge that set your build in motion.</p>
+                        <h4 style="color: #0c3a30; font-weight: 700; font-size: 1.15rem; margin-bottom: 5px;">Share Real Experiences</h4>
+                        <p class="text-muted small mb-0">Help others learn through your authentic journey and experiences.</p>
                     </div>
                 </div>
-                <div class="d-flex gap-4 mb-4">
-                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style="width: 45px; height: 45px; background: rgba(12, 58, 48, 0.05); color: #0c3a30; font-weight: 700;">2</div>
+                <div class="d-flex gap-4 mb-4 align-items-start">
+                    <span class="lens-tick-icon">
+                        <i class="bi bi-check-lg"></i>
+                    </span>
                     <div>
-                        <h4 style="color: #0c3a30; font-weight: 700; font-size: 1.15rem; margin-bottom: 5px;">The Friction Zone</h4>
-                        <p class="text-muted small mb-0">The unexpected bottleneck or setback that forced you to question the model.</p>
+                        <h4 style="color: #0c3a30; font-weight: 700; font-size: 1.15rem; margin-bottom: 5px;">Preserve Valuable Lessons</h4>
+                        <p class="text-muted small mb-0">Turn your experiences into lessons that continue to create value.</p>
                     </div>
                 </div>
-                <div class="d-flex gap-4 mb-4">
-                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style="width: 45px; height: 45px; background: rgba(12, 58, 48, 0.05); color: #0c3a30; font-weight: 700;">3</div>
+                <div class="d-flex gap-4 mb-4 align-items-start">
+                    <span class="lens-tick-icon">
+                        <i class="bi bi-check-lg"></i>
+                    </span>
                     <div>
-                        <h4 style="color: #0c3a30; font-weight: 700; font-size: 1.15rem; margin-bottom: 5px;">The Breakthrough</h4>
-                        <p class="text-muted small mb-0">The structural solution, mental shift, or process pivot that resolved the issue.</p>
+                        <h4 style="color: #0c3a30; font-weight: 700; font-size: 1.15rem; margin-bottom: 5px;">Strengthen the Community</h4>
+                        <p class="text-muted small mb-0">Every story helps build a stronger and more connected community.</p>
                     </div>
                 </div>
-                <div class="d-flex gap-4">
-                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0" style="width: 45px; height: 45px; background: rgba(12, 58, 48, 0.05); color: #0c3a30; font-weight: 700;">4</div>
+                <div class="d-flex gap-4 align-items-start">
+                    <span class="lens-tick-icon">
+                        <i class="bi bi-check-lg"></i>
+                    </span>
                     <div>
-                        <h4 style="color: #0c3a30; font-weight: 700; font-size: 1.15rem; margin-bottom: 5px;">The Framework</h4>
-                        <p class="text-muted small mb-0">The core takeaway or step-by-step model that the audience can implement.</p>
+                        <h4 style="color: #0c3a30; font-weight: 700; font-size: 1.15rem; margin-bottom: 5px;">Encourage New Perspectives</h4>
+                        <p class="text-muted small mb-0">Inspire fresh ideas through your unique experiences and viewpoints.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <div class="st-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=1200" alt="Mic on stage">
+                <div class="st-image-wrapper" style="height: 100%; min-height: 400px; border-radius: 24px; overflow: hidden;">
+                    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=1200" alt="Mic on stage" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
             </div>
         </div>
@@ -998,7 +1164,7 @@ $seo = [
 </section>
 
 <!-- WHAT MAKES A GREAT STORY (CHECKLIST) -->
-<section class="st-section st-bg-white">
+{{-- <section class="st-section st-bg-white">
     <div class="container">
         <div class="text-center mx-auto mb-5" style="max-width: 800px;">
             <div class="st-eyebrow">The Standard</div>
@@ -1040,10 +1206,10 @@ $seo = [
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 <!-- STORIES WE'RE LOOKING FOR -->
-<section class="st-section st-bg-grey-green">
+{{-- <section class="st-section st-bg-grey-green">
     <div class="container">
         <div class="text-center mx-auto mb-5" style="max-width: 800px;">
             <div class="st-eyebrow">Curated Themes</div>
@@ -1089,51 +1255,51 @@ $seo = [
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 <!-- WHY GET FEATURED -->
 <section class="st-section st-bg-white">
     <div class="container">
         <div class="text-center mx-auto mb-5" style="max-width: 800px;">
-            <div class="st-eyebrow">Speaker Benefits</div>
-            <h2 class="st-heading">Why Get Featured on YCX</h2>
-            <p class="st-subheading mx-auto">We provide premium assets, production value, and ecosystem access to ensure your story reaches the right minds.</p>
+            <div class="st-eyebrow">YOUR STORY, YOUR IMPACT</div>
+            <h2 class="st-heading">Your Story Deserves to Be Shared</h2>
+            <p class="st-subheading mx-auto">When you share your journey with Young Chanakya X, your experiences become a source of learning, inspiration, and encouragement for people from different backgrounds.</p>
         </div>
-        <div class="row g-4">
-            <div class="col-md-6">
+        <div class="row g-4 pt-4">
+            <div class="col-md-3">
                 <div class="st-card">
                     <div class="st-card-icon">
                         <i class="bi bi-camera-reels-fill"></i>
                     </div>
-                    <h3 class="st-card-title">Cinematic Production</h3>
-                    <p class="st-card-text">Every talk is recorded with cinema-grade cameras, professional studio lighting, and high-end audio mastering to create an outstanding digital asset for your portfolio.</p>
+                    <h3 class="st-card-title">Published on YCX</h3>
+                    <p class="st-card-text">Your story is featured on the Young Chanakya X platform for the community to discover.</p>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="st-card">
                     <div class="st-card-icon">
                         <i class="bi bi-people-fill"></i>
                     </div>
-                    <h3 class="st-card-title">Elite Network Access</h3>
-                    <p class="st-card-text">Gain access to YCX's verified members, including venture capital allocators, startup founders, policy makers, and corporate leaders.</p>
+                    <h3 class="st-card-title">Inspire Others</h3>
+                    <p class="st-card-text">Help others learn, grow, and gain confidence through your experiences and lessons</p>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="st-card">
                     <div class="st-card-icon">
                         <i class="bi bi-megaphone-fill"></i>
                     </div>
-                    <h3 class="st-card-title">Amplified Distribution</h3>
-                    <p class="st-card-text">We syndicate your story across audio platforms (Spotify, Apple Podcasts), video channels, newsletter subscribers, and social feeds reaching over 100k+ professionals.</p>
+                    <h3 class="st-card-title">Meaningful Connections</h3>
+                    <p class="st-card-text">Open the door to conversations with people who relate to your journey and perspective.</p>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <div class="st-card">
                     <div class="st-card-icon">
                         <i class="bi bi-pencil-square"></i>
                     </div>
-                    <h3 class="st-card-title">Hands-on Editorial Support</h3>
-                    <p class="st-card-text">Collaborate directly with our speech coaches and story editors to structure, refine, and polish your talk outline and delivery mechanics.</p>
+                    <h3 class="st-card-title">Community Recognition</h3>
+                    <p class="st-card-text">Become part of a community that grows through shared experiences and authentic stories.</p>
                 </div>
             </div>
         </div>
@@ -1141,7 +1307,7 @@ $seo = [
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="st-section st-bg-cream">
+{{-- <section class="st-section st-bg-cream">
     <div class="container">
         <div class="text-center mx-auto mb-5" style="max-width: 800px;">
             <div class="st-eyebrow">The Journey</div>
@@ -1179,104 +1345,76 @@ $seo = [
             </div>
         </div>
     </div>
-</section>
+</section> --}}
+
 
 <!-- SHARE YOUR STORY CTA -->
-<section class="st-section" style="background: linear-gradient(135deg, #fffcf9 0%, #ffd2b1 40%, #ffeada 100%);">
-    <div class="container text-center py-4">
-        <div class="st-eyebrow" style="color: #0c3a30;">Ready to Inspire?</div>
-        <h2 class="st-heading" style="color: #0c3a30; margin-bottom: 20px;">Your Stage Awaits</h2>
-        <p class="mx-auto mb-5" style="color: #12261f; font-size: 1.1rem; line-height: 1.6; max-width: 650px;">
-            Join a premium network of verified ecosystem leaders. Share the raw lessons and frameworks that will shape the builders of tomorrow.
+<section id="cta-banner" class="st-section">
+    <div class="container text-center" style="max-width: 800px; margin: 0 auto; padding: 60px 20px;">
+        <span class="st-eyebrow">— YOUR STORY MATTERS</span>
+        <h2 style="font-family: 'Fraunces', serif; font-weight: 600; font-size: clamp(28px, 3.6vw, 42px); color: #ffffff; letter-spacing: -1px; line-height: 1.16; margin-bottom: 16px;">
+            Turn Your Journey Into <br>Someone Else's Inspiration
+        </h2>
+        <p style="font-size: 15.5px; color: rgba(255, 255, 255, 0.85); line-height: 1.65; margin-bottom: 28px; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Whether you've overcome challenges, built something meaningful, or discovered valuable life lessons, your story deserves to be heard.
         </p>
-        <a href="#speakerTalkForm" class="btn px-5 py-3 fw-bold text-uppercase" style="background-color: #0c3a30; color: #ffd2b1; border-radius: 12px; border: none; font-size: 0.9rem; letter-spacing: 1px; transition: all 0.3s ease; text-decoration: none; display: inline-block;">
-            Share Your Story Proposal <i class="bi bi-arrow-up ms-2"></i>
+        <a href="#speakerTalkForm" class="btn-peach">
+            Share Your Story
         </a>
     </div>
 </section>
 
 <!-- FAQ SECTION -->
-<section class="st-section st-bg-white">
+<section class="faq-section" id="faq">
     <div class="container">
         <div class="text-center mx-auto mb-5" style="max-width: 800px;">
-            <div class="st-eyebrow">Common Queries</div>
-            <h2 class="st-heading">Frequently Asked Questions</h2>
-            <p class="st-subheading mx-auto">Find answers to key logistics, format queries, and eligibility guidelines.</p>
+            <div class="st-eyebrow">Questions, Answered</div>
+            <h2 class="st-heading" style="color: #0c3a30;">Frequently Asked Questions</h2>
+            <p class="st-subheading mx-auto">Find answers to key questions about sharing your story, the process, and what to expect.</p>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-9">
-                <div class="accordion" id="stFaqAccordion">
-                    
-                    <div class="st-accordion-item">
-                        <h3 class="accordion-header" id="faqHeadingOne">
-                            <button class="st-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
-                                Is speaking at YCX free?
-                                <i class="bi bi-chevron-down ms-2"></i>
-                            </button>
-                        </h3>
-                        <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#stFaqAccordion">
-                            <div class="st-accordion-body">
-                                Yes. Speaking at YCX is entirely free. We do not charge speakers to take our stage, nor do we require speakers to pay for recording or production. We invest fully in capturing and polishing narratives worth telling.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="st-accordion-item">
-                        <h3 class="accordion-header" id="faqHeadingTwo">
-                            <button class="st-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
-                                What formats are available for talks?
-                                <i class="bi bi-chevron-down ms-2"></i>
-                            </button>
-                        </h3>
-                        <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#stFaqAccordion">
-                            <div class="st-accordion-body">
-                                We produce talks in multiple formats, depending on the topic depth and audience fit. This includes video podcast sessions (1-on-1 dialogue format), live keynotes on our event stages (12-15 minute structured talks), and focused panel discussions.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="st-accordion-item">
-                        <h3 class="accordion-header" id="faqHeadingThree">
-                            <button class="st-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
-                                What languages can I speak in?
-                                <i class="bi bi-chevron-down ms-2"></i>
-                            </button>
-                        </h3>
-                        <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#stFaqAccordion">
-                            <div class="st-accordion-body">
-                                You can speak in the language you express yourself best in. We currently support and release talks in English, Hindi, Tamil, Telugu, and Kannada, and we are working to expand language access further.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="st-accordion-item">
-                        <h3 class="accordion-header" id="faqHeadingFour">
-                            <button class="st-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
-                                Can I nominate another builder or speaker?
-                                <i class="bi bi-chevron-down ms-2"></i>
-                            </button>
-                        </h3>
-                        <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#stFaqAccordion">
-                            <div class="st-accordion-body">
-                                Yes. You can use the outline form on this page to submit a proposal for someone else. Be sure to provide their correct social media profiles and outline the core message they bring to the ecosystem.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="st-accordion-item">
-                        <h3 class="accordion-header" id="faqHeadingFive">
-                            <button class="st-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
-                                What happens after I submit a proposal?
-                                <i class="bi bi-chevron-down ms-2"></i>
-                            </button>
-                        </h3>
-                        <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#stFaqAccordion">
-                            <div class="st-accordion-body">
-                                Our editorial curators read and evaluate every single proposal. If we identify a fit with our upcoming publication schedule or event theme, we will reach out via email or phone within 5–7 working days to set up a preliminary discovery call.
-                            </div>
-                        </div>
-                    </div>
-
+        <div class="faq-grid">
+            <div class="faq-col">
+                <div class="faq-item">
+                    <div class="faq-q"><span>Who should share their story on YCX?</span><span class="plus">+</span></div>
+                    <div class="faq-a"><p>Anyone with a journey to share—founders, professionals, creators, students, and community builders who have faced challenges, learned valuable lessons, or achieved meaningful goals.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q"><span>What kind of stories are you looking for?</span><span class="plus">+</span></div>
+                    <div class="faq-a"><p>We look for authentic, unfiltered narratives about career pivots, overcoming business failures, leadership triumphs, lessons from building startups, and personal transformations.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q"><span>Is there any fee to submit or publish a story?</span><span class="plus">+</span></div>
+                    <div class="faq-a"><p>No. Sharing your story with YCX is completely free. We cover all production and editorial resources.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q"><span>How long should my story proposal be?</span><span class="plus">+</span></div>
+                    <div class="faq-a"><p>Keep it concise. Focus on the core timeline, the main challenge you faced, and the key lessons you walked away with.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q"><span>What happens after I submit my proposal?</span><span class="plus">+</span></div>
+                    <div class="faq-a"><p>Our editorial curators will review your application. If it matches our upcoming publication schedule, we'll schedule a discovery call with you.</p></div>
+                </div>
+            </div>
+            <div class="faq-col">
+                <div class="faq-item">
+                    <div class="faq-q"><span>Will I receive help preparing my story?</span><span class="plus">+</span></div>
+                    <div class="faq-a"><p>Yes! Our editorial and writing team works closely with you to structure your story, polish the details, and highlight the key takeaways.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q"><span>What format will my story be published in?</span><span class="plus">+</span></div>
+                    <div class="faq-a"><p>We feature stories in written profiles, video podcast episodes, social media features, and occasionally on our live keynote stages.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q"><span>Can I submit a story on behalf of someone else?</span><span class="plus">+</span></div>
+                    <div class="faq-a"><p>Absolutely. You can submit details about another builder or leader's journey, and our team will reach out if there's a fit.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q"><span>How long does the review process take?</span><span class="plus">+</span></div>
+                    <div class="faq-a"><p>Our team reviews every proposal within 5–7 working days and will contact you directly if we're moving forward.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q"><span>Do I need to be a seasoned writer or public speaker?</span><span class="plus">+</span></div>
+                    <div class="faq-a"><p>Not at all. We value raw experiences and authentic wisdom over professional speaking skills. Our curators help you find the best way to tell your story.</p></div>
                 </div>
             </div>
         </div>
@@ -1513,7 +1651,68 @@ $seo = [
             io.observe(section);
         })();
     });
+
+    /* ── AJAX Story Form Submit ───────────────────────── */
+    (function() {
+        const form = document.getElementById('speakerTalkForm');
+        if (!form) return;
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('storySubmitBtn');
+            const origHTML = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span>Submitting...';
+
+            const formData = new FormData(form);
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    headers: { 'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json' },
+                    body: formData
+                });
+                const data = await res.json();
+
+                if (data.type === 'success') {
+                    form.reset();
+                    const modal = document.getElementById('storySuccessModal');
+                    modal.style.display = 'flex';
+                    // Close on backdrop click
+                    modal.addEventListener('click', function(ev) {
+                        if (ev.target === modal) modal.style.display = 'none';
+                    });
+                } else {
+                    alert(data.message || 'Something went wrong. Please try again.');
+                }
+            } catch (err) {
+                alert('Unable to submit. Please check your connection and try again.');
+            }
+
+            btn.disabled = false;
+            btn.innerHTML = origHTML;
+        });
+    })();
+
+    // FAQ Accordion logic
+    document.querySelectorAll('.faq-item').forEach(function(item) {
+        var q = item.querySelector('.faq-q');
+        if (q) {
+            q.addEventListener('click', function() {
+                var isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
+        }
+    });
 </script>
+<style>
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px) scale(0.96); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+</style>
 @endpush
 
 @endsection

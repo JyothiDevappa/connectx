@@ -384,14 +384,19 @@
 
 
                             <li>
-                                <a href="{{ url('/become-a-sponser') }}">
-                                    Become a Sponsor
+                                <a href="{{ url('/share-your-story') }}">
+                                    Share Your Story
                                 </a>
                             </li>
 
                             <li>
                                 <a href="{{ url('/become-a-speaker') }}">
-                                    Become a Speaker
+                                    YCX Talks
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ url('/become-a-feature') }}">
+                                    Get Featured on Our Podcast
                                 </a>
                             </li>
 

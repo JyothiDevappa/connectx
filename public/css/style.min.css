@@ -7884,14 +7884,8 @@ iframe {
     font-size: 25px;
     width: 60px;
     height: 60px;
-    border: 1px solid #19352d;
-    background: #fff;
+    background: var(--orange);
     color: #19352d
-}
-
-.blog-meta-two .post-data .round-btn:hover {
-    background: #cfff45;
-    border-color: #cfff45
 }
 
 .blog-meta-two .post-data .post-info {

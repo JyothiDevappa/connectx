@@ -58,7 +58,7 @@ $seo = [
         </div>
         <div class="col-lg-6">
           <div class="hero-visual">
-            <img class="hero-image" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000" alt="Team collaborating around a table">
+            <img class="hero-image" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=2000" alt="Young professionals collaborating">
           </div>
         </div>
       </div>

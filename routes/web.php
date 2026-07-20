@@ -117,6 +117,7 @@ Route::get('/speaker-talk', function () {
 Route::get('/share-your-story', function () {
     return view('share-your-story');
 })->name('share.your.story');
+Route::post('/share-your-story/submit', [ApplicationController::class, 'submitStory'])->name('story.submit');
 Route::get('/career', [App\Http\Controllers\JobController::class, 'careers'])->name('careers.index');
 Route::get('/internship', [App\Http\Controllers\JobController::class, 'internships'])->name('internships.index');
 Route::get('/career/{slug}', [App\Http\Controllers\JobController::class, 'careerDetail'])->name('careers.detail');
@@ -171,6 +172,10 @@ Route::middleware('admin')->group(function () {
     // Featured Guests API
     Route::get('/admin/api/featured-guests', [AdminDashboardController::class, 'featuredGuests'])->name('admin.api.featured-guests');
     Route::post('/admin/api/featured-guests/{id}', [AdminDashboardController::class, 'updateFeaturedGuest'])->name('admin.api.featured-guests.update');
+
+    // Story Submissions API
+    Route::get('/admin/api/story-submissions', [AdminDashboardController::class, 'storySubmissions'])->name('admin.api.story-submissions');
+    Route::post('/admin/api/story-submissions/{id}', [AdminDashboardController::class, 'updateStorySubmission'])->name('admin.api.story-submissions.update');
 
     // Jobs full page views
     Route::get('/admin/posted-jobs/create', [AdminDashboardController::class, 'createJobPage'])->name('admin.posted-jobs.create-page');

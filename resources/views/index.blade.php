@@ -97,46 +97,44 @@ $seo = [
             <div class="hero-overlay"></div>
             <div class="hero-grain"></div>
             <div class="hero-content">
-                <h1>Partner With the<br><em>Future of Influence</em></h1>
-                <p class="hero-desc">Young Chanakya X collaborates with brands, media platforms, startups, studios,
-                    communities, and ecosystem partners to build one of the world's fastest-growing creator and influencer
-                    networks.
+                <h1>Collaborate & Grow with Young Chanakya X</h1>
+                <p class="hero-desc">Partner with us to leverage our global network or sponsor our initiatives, podcasts, and community events to maximize your brand reach.
                 </p>
                 <div class="hero-btns">
-                    <button class="btn-hero-primary" onclick="window.location.href='/become-a-partner'">Become a Partner →</button>
-                    {{--<button class="btn-hero-outline" onclick="window.location.href='/become-a-partner'">Become a Partner</button> --}}
+                    <button class="btn-hero-primary" onclick="window.location.href='/become-a-partner'">Become a Partner </button>
+                    <button class="btn-hero-outline" onclick="window.location.href='/become-a-sponsor'">Become a Sponsor</button>
                 </div>
             </div>
         </div>
 
         <!-- Slide 2 -->
         <div class="hero-slide">
-            <img src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=1800&q=80" alt="Empower Your Creator Journey">
+            <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1800&q=80" alt="Empower Your Creator Journey">
             <div class="hero-overlay"></div>
             <div class="hero-grain"></div>
             <div class="hero-content">
-                <h1>Empowering the Next<br><em>Generation of Creators</em></h1>
-                <p class="hero-desc">We provide creators with state-of-the-art lounges, professional recording studios, live panel roundtables, and a global network of peers to scale their reach and impact.
+                <h1>Share Your Journey &amp;<br><em>Become a Speaker</em></h1>
+                <p class="hero-desc">Bring your personal story, business insights, or functional expertise to our signature stage and connect with a highly engaged audience.
                 </p>
                 <div class="hero-btns">
-                    <button class="btn-hero-primary" onclick="window.location.href='/connecters-list'">Join the Community →</button>
-                    {{-- <button class="btn-hero-outline" onclick="document.getElementById('events').scrollIntoView({behavior: 'smooth'})">Explore Creator Spaces</button> --}}
+                    <button class="btn-hero-primary" onclick="window.location.href='/share-your-story'">Share Your Story </button>
+                    <button class="btn-hero-outline" onclick="window.location.href='/become-a-speaker'">YCX Talks</button>
                 </div>
             </div>
         </div>
 
         <!-- Slide 3 -->
         <div class="hero-slide">
-            <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1800&q=80" alt="High-Impact Brand Partnerships">
+            <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=1800&q=80" alt="High-Impact Brand Partnerships">
             <div class="hero-overlay"></div>
             <div class="hero-grain"></div>
             <div class="hero-content">
-                <h1>High-Impact Brand<br><em>Partnerships &amp; Events</em></h1>
-                <p class="hero-desc">Connect your brand with highly engaged audiences through curated sponserships, regional creator meetups, annual showcase awards, and co-branded experiences.
+                <h1>Broadcast Your Voice<br><em>to the World</em></h1>
+                <p class="hero-desc">Join us as a guest, record high-impact video podcast episodes, and broadcast your expertise to a global community.
                 </p>
                 <div class="hero-btns">
-                    <button class="btn-hero-primary" onclick="window.location.href='/become-a-sponser'">Become a sponser →</button>
-                    {{-- <button class="btn-hero-outline" onclick="window.location.href='/become-a-sponser'">Become a sponser</button> --}}
+                    <button class="btn-hero-primary" onclick="window.location.href='/become-a-feature'">Get Featured On Podcast </button>
+                    {{-- <button class="btn-hero-outline" onclick="document.getElementById('talks').scrollIntoView({behavior: 'smooth'})">Explore Talks</button> --}}
                 </div>
             </div>
         </div>
@@ -312,16 +310,11 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
                     width: 38px;
                     height: 38px;
                     border-radius: 10px;
-                    background: rgba(71, 85, 105, 0.06);
-                    color: #475569;
+                    background: var(--orange);
+                    color: var(--primary);
                     font-size: 1.2rem;
                     flex-shrink: 0;
                     transition: all 0.3s ease;
-                }
-                .keypoint-item:hover .keypoint-icon-box {
-                    background: #475569;
-                    color: #ffffff !important;
-                    transform: translateY(-2px) scale(1.05);
                 }
                 .keypoint-text-box {
                     display: flex;
@@ -329,14 +322,11 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
                 }
                 .keypoint-title {
                     font-size: 0.9rem;
-                    font-weight: 800;
-                    color: #475569;
+                    font-weight: 500;
+                    color: var(--grey);
                     margin: 0;
                     line-height: 1.2;
                     transition: color 0.3s ease;
-                }
-                .keypoint-item:hover .keypoint-title {
-                    color: var(--primary);
                 }
                 @media (max-width: 576px) {
                     .about-keypoints-grid {
@@ -347,63 +337,63 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
             </style>
 
             <div class="about-keypoints-grid rv">
-                <!-- 1. Digital-First Platform -->
+                <!-- 1. Inspiring Stories -->
                 <div class="keypoint-item">
                     <div class="keypoint-icon-box">
-                        <i class="bi bi-laptop"></i>
+                        <i class="bi bi-bookmark-star"></i>
                     </div>
                     <div class="keypoint-text-box">
-                        <h4 class="keypoint-title">Digital-First Platform</h4>
+                        <h4 class="keypoint-title">Inspiring Stories</h4>
                     </div>
                 </div>
 
-                <!-- 2. Authentic Storytelling -->
+                <!-- 2. Expert Talks -->
                 <div class="keypoint-item">
                     <div class="keypoint-icon-box">
-                        <i class="bi bi-chat-quote"></i>
+                        <i class="bi bi-mic"></i>
                     </div>
                     <div class="keypoint-text-box">
-                        <h4 class="keypoint-title">Authentic Storytelling</h4>
+                        <h4 class="keypoint-title">Expert Talks</h4>
                     </div>
                 </div>
 
-                <!-- 3. Peer-to-Peer Learning -->
+                <!-- 3. Meaningful Podcasts -->
                 <div class="keypoint-item">
                     <div class="keypoint-icon-box">
-                        <i class="bi bi-lightbulb"></i>
+                        <i class="bi bi-headset"></i>
                     </div>
                     <div class="keypoint-text-box">
-                        <h4 class="keypoint-title">Peer-to-Peer Learning</h4>
+                        <h4 class="keypoint-title">Meaningful Podcasts</h4>
                     </div>
                 </div>
 
-                <!-- 4. Relationship-Driven -->
+                <!-- 4. Professional Networking -->
                 <div class="keypoint-item">
                     <div class="keypoint-icon-box">
-                        <i class="bi bi-diagram-3"></i>
+                        <i class="bi bi-people"></i>
                     </div>
                     <div class="keypoint-text-box">
-                        <h4 class="keypoint-title">Relationship-Driven</h4>
+                        <h4 class="keypoint-title">Professional Networking</h4>
                     </div>
                 </div>
 
-                <!-- 5. Ecosystem Collaboration -->
+                <!-- 5. Leadership Insights -->
                 <div class="keypoint-item">
                     <div class="keypoint-icon-box">
-                        <i class="bi bi-intersect"></i>
+                        <i class="bi bi-award"></i>
                     </div>
                     <div class="keypoint-text-box">
-                        <h4 class="keypoint-title">Ecosystem Collaboration</h4>
+                        <h4 class="keypoint-title">Leadership Insights</h4>
                     </div>
                 </div>
 
-                <!-- 6. Mentorship Network -->
+                <!-- 6. Community Initiatives -->
                 <div class="keypoint-item">
                     <div class="keypoint-icon-box">
-                        <i class="bi bi-mortarboard"></i>
+                        <i class="bi bi-heart"></i>
                     </div>
                     <div class="keypoint-text-box">
-                        <h4 class="keypoint-title">Mentorship & Guidance</h4>
+                        <h4 class="keypoint-title">Community Initiatives</h4>
                     </div>
                 </div>
             </div>
@@ -1488,7 +1478,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
 
   
 <!-- COMMUNITY & sponser -->
-<section class="community-sec" id="community">
+{{-- <section class="community-sec" id="community">
     <div class="section-container">
 
         <div class="section-head">
@@ -1531,56 +1521,23 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
 
         </div>
     </div>
-</section>
+</section> --}}
 
-{{-- <section class="membership-section position-relative mt-50 lg-mt-80 mb-50 lg-mb-80" id="membership">
+<section class="membership-section position-relative mt-50 lg-mt-80 mb-50 lg-mb-80" id="membership">
   <div class="container">
     <div class="section-head text-center" style="margin-bottom: 50px;">
-        <div class="eyebrow rv">Membership</div>
+        <div class="eyebrow rv">Get Involved</div>
         <h2 class="sec-title rv" style="color: #0c3a30;">Find Your Role in the Ecosystem</h2>
         <p class="sec-desc rv text-center" style="max-width: 600px; margin: 16px auto 0;">Choose how you want to engage with our community—whether by mentoring others, speaking on record, leading initiatives, or partnering with us.</p>
     </div>
     <div class="mem-grid">
       <div class="mem-card">
         <div>
-          <div class="mem-role">Knowledge Leader</div>
-          <h3>Creator / Mentor</h3>
-          <p class="mem-desc">Share your professional journey, industry insights, and guide the next generation of leaders as a mentor.</p>
-        </div>
-        <a href="#" class="mem-action-link">
-          <span class="btn-text">Become a Mentor</span>
-          <span class="round-btn"><i class="bi bi-arrow-up-right"></i></span>
-        </a>
-      </div>
-      <div class="mem-card">
-        <div>
-          <div class="mem-role">Platform Voice</div>
-          <h3>Speaker</h3>
-          <p class="mem-desc">Participate in podcasts, panel discussions, and webinars to share your expertise.</p>
-        </div>
-        <a href="#" class="mem-action-link">
-          <span class="btn-text">Apply to Speak</span>
-          <span class="round-btn"><i class="bi bi-arrow-up-right"></i></span>
-        </a>
-      </div>
-      <div class="mem-card">
-        <div>
-          <div class="mem-role">Ecosystem Builder</div>
-          <h3>Entrepreneur / Founder</h3>
-          <p class="mem-desc">Share your startup journey, access key resources, collaborate on new ventures, and build growth relations.</p>
-        </div>
-        <a href="#" class="mem-action-link">
-          <span class="btn-text">Join as Founder</span>
-          <span class="round-btn"><i class="bi bi-arrow-up-right"></i></span>
-        </a>
-      </div>
-      <div class="mem-card">
-        <div>
           <div class="mem-role">Organizational</div>
-          <h3>Partner</h3>
+          <h3>Become a Partner</h3>
           <p class="mem-desc">Collaborate through co-branded events, strategic integrations, and collaborative ecosystem initiatives.</p>
         </div>
-        <a href="#" class="mem-action-link">
+        <a href="/become-a-partner" class="mem-action-link">
           <span class="btn-text">Become a Partner</span>
           <span class="round-btn"><i class="bi bi-arrow-up-right"></i></span>
         </a>
@@ -1588,11 +1545,44 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
       <div class="mem-card">
         <div>
           <div class="mem-role">Brand Supporter</div>
-          <h3>sponser</h3>
-          <p class="mem-desc">sponser events, podcast seasons, and community programs to elevate your brand presence.</p>
+          <h3>Become a Sponsor</h3>
+          <p class="mem-desc">Sponsor events, podcast seasons, and community programs to elevate your brand presence.</p>
         </div>
-        <a href="#" class="mem-action-link">
-          <span class="btn-text">Become a sponser</span>
+        <a href="/become-a-sponsor" class="mem-action-link">
+          <span class="btn-text">Become a Sponsor</span>
+          <span class="round-btn"><i class="bi bi-arrow-up-right"></i></span>
+        </a>
+      </div>
+      <div class="mem-card">
+        <div>
+          <div class="mem-role">Platform Voice</div>
+          <h3>Share Your Story</h3>
+          <p class="mem-desc">Apply to share your personal journey, business ventures, or expertise as a guest application.</p>
+        </div>
+        <a href="/share-your-story" class="mem-action-link">
+          <span class="btn-text">Share Your Story</span>
+          <span class="round-btn"><i class="bi bi-arrow-up-right"></i></span>
+        </a>
+      </div>
+      <div class="mem-card">
+        <div>
+          <div class="mem-role">Signature Stage</div>
+          <h3>YCX Talks</h3>
+          <p class="mem-desc">Share your expertise, practical insights, and ideas on our signature stage as a speaker.</p>
+        </div>
+        <a href="/become-a-speaker" class="mem-action-link">
+          <span class="btn-text">Become a Speaker</span>
+          <span class="round-btn"><i class="bi bi-arrow-up-right"></i></span>
+        </a>
+      </div>
+      <div class="mem-card">
+        <div>
+          <div class="mem-role">Broadcast Guest</div>
+          <h3>Get Featured On Podcast</h3>
+          <p class="mem-desc">Pitch your topic, speak on record, and share functional expertise on our podcast episodes.</p>
+        </div>
+        <a href="/become-a-feature" class="mem-action-link">
+          <span class="btn-text">Get Featured</span>
           <span class="round-btn"><i class="bi bi-arrow-up-right"></i></span>
         </a>
       </div>
@@ -1600,13 +1590,13 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
         <div class="cta-card-content">
           <div class="cta-icon">✨</div>
           <h3>Not sure where you fit?</h3>
-          <p class="cta-desc">Join and discover your role within the community.</p>
+          <p class="cta-desc">Reach out to our team directly and let's explore how we can work together.</p>
         </div>
-        <a href="#" class="mem-cta-btn">Get Started</a>
+        <a href="/contact" class="mem-cta-btn">Contact Us</a>
       </div>
     </div>
   </div>
-</section> --}}
+</section>
 
 @push('scripts')
 <script>

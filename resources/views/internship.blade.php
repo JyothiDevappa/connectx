@@ -117,43 +117,43 @@ $seo = [
     <div class="wrap gain-split">
       <div class="gain-visual">
         <div class="gain-photo-main">
-          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="Mentor and intern working through a project together">
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Young professionals collaborating and smiling">
         </div>
       </div>
       <div class="gain-content">
-        <span class="kicker">What You'll Walk Away With</span>
-        <h2>Your Learning Journey</h2>
+        <span class="kicker">YOUR LEARNING JOURNEY</span>
+        <h2>What You'll Walk Away With</h2>
         <p class="gain-intro">Every internship is designed to help you grow personally and professionally through practical learning and real-world experience.</p>
         <div class="gain-items">
           <div class="gain-item">
             <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #ffd2b1; color: #0c3a30; flex-shrink: 0; margin-top: 4px;">
                 <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
             </span>
-            <div><h4>Practical Experience</h4><p>Apply your knowledge to real-world projects</p></div>
+            <div><h4>Practical Experience</h4><p>Work on live, high-impact projects that build your core functional capabilities.</p></div>
           </div>
           <div class="gain-item">
             <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #ffd2b1; color: #0c3a30; flex-shrink: 0; margin-top: 4px;">
                 <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
             </span>
-            <div><h4>Industry Exposure</h4><p>Understand how teams collaborate and deliver meaningful outcomes</p></div>
+            <div><h4>Industry Exposure</h4><p>Collaborate directly with cross-functional teams and understand real-world workflows.</p></div>
           </div>
           <div class="gain-item">
             <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #ffd2b1; color: #0c3a30; flex-shrink: 0; margin-top: 4px;">
                 <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
             </span>
-            <div><h4>Communication Skills</h4><p>Improve your confidence through teamwork, presentations, and discussion</p></div>
+            <div><h4>Mentorship &amp; Guidance</h4><p>Receive personal feedback and support from experienced leaders and mentors.</p></div>
           </div>
           <div class="gain-item">
             <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #ffd2b1; color: #0c3a30; flex-shrink: 0; margin-top: 4px;">
                 <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
             </span>
-            <div><h4>Professional Network</h4><p>Build relationships with mentors, professionals, and fellow interns</p></div>
+            <div><h4>Professional Network</h4><p>Connect with builders, founders, and talented peers in the YCX community.</p></div>
           </div>
           <div class="gain-item">
             <span class="d-inline-flex align-items-center justify-content-center rounded-circle me-3" style="width: 24px; height: 24px; background-color: #ffd2b1; color: #0c3a30; flex-shrink: 0; margin-top: 4px;">
                 <i class="bi bi-check-lg" style="font-size: 0.8rem; -webkit-text-stroke: 1px;"></i>
             </span>
-            <div><h4>Certificate of Completion</h4><p>Receive a certificate upon successfully completing your internship</p></div>
+            <div><h4>Recommendation &amp; Certificate</h4><p>Earn an official certificate of completion and a strong letter of recommendation.</p></div>
           </div>
         </div>
       </div>
@@ -222,7 +222,7 @@ $seo = [
       </div>
       <div class="faq-grid">
         <div class="faq-col">
-          <div class="faq-item open">
+          <div class="faq-item">
             <div class="faq-q"><span>What's the duration of the internship?</span><span class="plus">+</span></div>
             <div class="faq-a"><p>Most internships run 3 to 6 months, with some flexibility around your academic schedule.</p></div>
           </div>

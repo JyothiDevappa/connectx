@@ -10,6 +10,7 @@ use App\Models\Partner;
 use App\Models\Sponsor;
 use App\Models\Speaker;
 use App\Models\FeaturedGuest;
+use App\Models\StorySubmission;
 
 class ApplicationController extends Controller
 {
@@ -545,6 +546,64 @@ class ApplicationController extends Controller
             }
 
             return back()->withInput()->with('error', 'Unable to submit application. Please try again.');
+        }
+    }
+
+    public function submitStory(Request $request)
+    {
+        $validated = $request->validate([
+            'full_name'        => 'required|string|max:255',
+            'phone'            => 'required|string|max:50',
+            'email'            => 'required|email|max:255',
+            'social_url'       => 'required|url|max:255',
+            'talk_title'       => 'required|string|max:255',
+            'speaking_language'=> 'required|string|max:100',
+            'talk_summary'     => 'required|string|max:5000',
+        ]);
+
+        try {
+            \Illuminate\Support\Facades\Log::info('--- STORY SUBMISSION START ---');
+
+            // 1. Save to Database
+            $story = StorySubmission::create([
+                'full_name'         => $validated['full_name'],
+                'phone'             => $validated['phone'],
+                'email'             => $validated['email'],
+                'social_url'        => $validated['social_url'],
+                'talk_title'        => $validated['talk_title'],
+                'speaking_language' => $validated['speaking_language'],
+                'talk_summary'      => $validated['talk_summary'],
+                'status'            => 'pending',
+            ]);
+            \Illuminate\Support\Facades\Log::info('StorySubmission saved. ID: ' . $story->id);
+
+            // 2. Notify Admin
+            Mail::send('emails.story-submission-admin', $validated, function ($message) use ($validated) {
+                $message->to('youngchanakya.x@gmail.com')
+                        ->subject('New Talk Proposal: ' . $validated['talk_title'] . ' by ' . $validated['full_name'])
+                        ->replyTo($validated['email'], $validated['full_name']);
+            });
+
+            // 3. Confirm to User
+            Mail::send('emails.story-submission-confirmation', $validated, function ($message) use ($validated) {
+                $message->to($validated['email'])
+                        ->subject('Your Talk Proposal Received - Young Chanakya X');
+            });
+            \Illuminate\Support\Facades\Log::info('--- STORY SUBMISSION END ---');
+
+            if ($request->ajax()) {
+                return response()->json(['type' => 'success', 'message' => 'Your proposal has been submitted successfully!']);
+            }
+
+            return back()->with('success', 'Your proposal has been submitted successfully!');
+        } catch (\Exception $e) {
+            logger()->error('SMTP Story Submission failure: ' . $e->getMessage());
+
+            if ($request->ajax()) {
+                return response()->json(['type' => 'danger', 'message' => 'Unable to submit proposal. Please try again.'], 500);
+            }
+
+            return back()->withInput()->with('error', 'Unable to submit proposal. Please try again.');
         }
     }
 }

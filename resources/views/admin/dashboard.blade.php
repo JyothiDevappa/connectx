@@ -90,6 +90,12 @@
         Guest Features
         <span class="sb-count" id="sbCount-featured_guests">0</span>
       </a>
+
+      <a href="{{ url('/admin/dashboard/story_submissions') }}" class="nav-link" data-section="story_submissions" id="nav-story_submissions">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        Story Talks
+        <span class="sb-count" id="sbCount-story_submissions">0</span>
+      </a>
     </nav>
 
     {{-- Admin Profile --}}
@@ -233,7 +239,9 @@ const DATA = {
 
   contacts: @json($contacts),
 
-  featured_guests: @json($featuredGuests)
+  featured_guests: @json($featuredGuests),
+
+  story_submissions: @json($storySubmissions)
 };
 
 
@@ -454,6 +462,30 @@ const SECTION_CONFIG = {
       { label:"Pending", fn: d => d.filter(x=>x.status==='pending').length },
       { label:"Declined", fn: d => d.filter(x=>x.status==='declined').length }
     ]
+  },
+  story_submissions: {
+    title: "Story Talk Proposals",
+    subtitle: "Talk proposals submitted via the YCX Share Your Story page.",
+    statusOptions: ["confirmed","pending","declined"],
+    statusLabels: { confirmed:"Confirmed", pending:"Pending", declined:"Declined" },
+    typeField: "speaking_language",
+    typeValues: [],
+    liveApi: "{{ route('admin.api.story-submissions') }}",
+    updateApi: "{{ url('/admin/api/story-submissions') }}",
+    columns: [
+      { key:"person", label:"Applicant" },
+      { key:"talk_title", label:"Talk Title" },
+      { key:"speaking_language", label:"Language" },
+      { key:"submitted", label:"Submitted" },
+      { key:"status", label:"Status" },
+      { key:"action", label:"" }
+    ],
+    stats: [
+      { label:"Total Proposals", fn: d => d.length },
+      { label:"Confirmed", fn: d => d.filter(x=>x.status==='confirmed').length },
+      { label:"Pending", fn: d => d.filter(x=>x.status==='pending').length },
+      { label:"Declined", fn: d => d.filter(x=>x.status==='declined').length }
+    ]
   }
 };
 
@@ -549,18 +581,28 @@ async function updateCounts(){
     console.error("Error loading featured guests from database", e);
   }
 
-  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs','contacts','featured_guests'].forEach(s => {
+  // Load story submissions dynamically from DB
+  try {
+    const res3 = await fetch("{{ route('admin.api.story-submissions') }}");
+    if(res3.ok) {
+      DATA.story_submissions = await res3.json();
+    }
+  } catch(e) {
+    console.error("Error loading story submissions from database", e);
+  }
+
+  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions'].forEach(s => {
     const el = document.getElementById('sbCount-' + s);
     if(el) el.textContent = DATA[s] ? DATA[s].length : 0;
   });
   // Overview panels
-  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs','contacts','featured_guests'].forEach(s => {
+  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions'].forEach(s => {
     const el = document.getElementById('ov-' + s);
     if(el && DATA[s]) el.textContent = DATA[s].length;
   });
 
   // If currently viewing database sections, refresh to show fetched data
-  if(['connectors','partners','sponsers','careers','internships','posted_jobs','contacts','featured_guests','overview'].includes(currentSection)) {
+  if(['connectors','partners','sponsers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions','overview'].includes(currentSection)) {
     if(currentSection === 'overview') renderOverviewStats();
     else renderTable(currentSection);
   }
@@ -943,6 +985,11 @@ function openDrawer(section, id){
     subText = d.email;
     badges  = `<span class="badge badge-platinum">Guest Application</span>`;
     bodyHTML = featuredGuestBody(d);
+  } else if(section === 'story_submissions'){
+    document.getElementById('dName').textContent = d.name;
+    subText = d.talk_title || d.email;
+    badges  = `<span class="badge badge-platinum">Talk Proposal</span>`;
+    bodyHTML = storyBody(d);
   } else if(section === 'posted_jobs'){
     document.getElementById('dName').textContent = d.id ? 'Edit Job Posting' : 'Add New Job';
     subText = d.title || 'New Job Posting';
@@ -1237,6 +1284,37 @@ function featuredGuestBody(d){
       </div>
     </div>` : ''}
     ${adminSection('featured_guests', cfg.statusOptions, cfg.statusLabels, d.status)}
+  `;
+}
+
+function storyBody(d){
+  const cfg = SECTION_CONFIG['story_submissions'];
+  return `
+    <div class="dsection">
+      <h4>Applicant Details</h4>
+      <div class="dgrid">
+        <div class="dfield"><span class="fl">Full Name</span><span class="fv">${d.name}</span></div>
+        <div class="dfield"><span class="fl">Email</span><span class="fv" style="word-break:break-all;">${d.email}</span></div>
+        <div class="dfield"><span class="fl">Phone</span><span class="fv">${d.phone}</span></div>
+        <div class="dfield"><span class="fl">Speaking Language</span><span class="fv">${d.speaking_language}</span></div>
+        <div class="dfield full"><span class="fl">Social / LinkedIn</span><a href="${d.social_url}" target="_blank" class="fv cell-link">${d.social_url}</a></div>
+        <div class="dfield full"><span class="fl">Submitted On</span><span class="fv">${fmtDate(d.submitted)}</span></div>
+      </div>
+    </div>
+    <div class="dsection">
+      <h4>Talk Title</h4>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600;color:var(--ink);">
+        ${d.talk_title}
+      </div>
+    </div>
+    ${d.talk_summary ? `
+    <div class="dsection">
+      <h4>Talk Summary / Core Message</h4>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:16px;font-size:13.5px;line-height:1.65;color:var(--text);white-space:pre-line;">
+        ${d.talk_summary}
+      </div>
+    </div>` : ''}
+    ${adminSection('story_submissions', cfg.statusOptions, cfg.statusLabels, d.status)}
   `;
 }
 
