@@ -108,10 +108,23 @@ $seo = [
               </div>
               <button type="submit" class="application-submit-btn">Submit Application <i class="bi bi-arrow-right ms-2"></i></button>
             </form>
-            <p class="form-note" id="formSuccess" style="display:none;">Thanks — your application is in. We'll be in touch within 5 business days.</p>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- ========== SUCCESS POPUP MODAL ========== -->
+  <div id="featureSuccessModal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.65); backdrop-filter:blur(4px); align-items:center; justify-content:center;">
+    <div style="background:#fff; border-radius:20px; padding:48px 40px; max-width:480px; width:90%; text-align:center; box-shadow:0 20px 60px rgba(0,0,0,0.25); animation:featurePopIn .4s ease;">
+      <div style="width:70px;height:70px;background:linear-gradient(135deg,#0c3a30,#1a6b55);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
+        <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3 style="color:#0c3a30;font-size:1.45rem;font-weight:700;margin-bottom:12px;">Application Received!</h3>
+      <p style="color:#555;font-size:0.97rem;line-height:1.6;margin-bottom:28px;">Thanks — your application is in. We'll be in touch within 5 business days.</p>
+      <button onclick="document.getElementById('featureSuccessModal').style.display='none';" style="background:linear-gradient(135deg,#0c3a30,#1a6b55);color:#fff;border:none;border-radius:10px;padding:13px 36px;font-size:0.95rem;font-weight:600;cursor:pointer;">
+        Done <i class="bi bi-check2 ms-1"></i>
+      </button>
     </div>
   </div>
 
@@ -668,8 +681,10 @@ $seo = [
           });
           const data = await response.json();
           if (data.type === 'success') {
-            featureForm.style.display = 'none';
-            document.getElementById('formSuccess').style.display = 'block';
+            featureForm.reset();
+            const modal = document.getElementById('featureSuccessModal');
+            modal.style.display = 'flex';
+            modal.addEventListener('click', function(ev){ if(ev.target===modal) modal.style.display='none'; });
           } else {
             btn.disabled = false;
             btn.innerHTML = originalText;
@@ -684,4 +699,10 @@ $seo = [
     }
   });
 </script>
+<style>
+@keyframes featurePopIn {
+  from { opacity:0; transform:translateY(24px) scale(.96); }
+  to   { opacity:1; transform:translateY(0) scale(1); }
+}
+</style>
 @endpush

@@ -837,19 +837,7 @@ $seo = [
     </div>
 </div>
 
-<!-- ========== SUCCESS POPUP MODAL ========== -->
-<div id="storySuccessModal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.65); backdrop-filter:blur(4px); align-items:center; justify-content:center;">
-    <div style="background:#fff; border-radius:20px; padding:48px 40px; max-width:480px; width:90%; text-align:center; position:relative; box-shadow:0 20px 60px rgba(0,0,0,0.25); animation:fadeInUp .4s ease;">
-        <div style="width:70px; height:70px; background:linear-gradient(135deg,#0c3a30,#1a6b55); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px;">
-            <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <h3 style="color:#0c3a30; font-size:1.5rem; font-weight:700; margin-bottom:12px;">Proposal Submitted!</h3>
-        <p style="color:#555; font-size:1rem; line-height:1.6; margin-bottom:28px;">Your talk proposal has been received. Our team will review it and reach out within 5–7 business days if there's a great fit.</p>
-        <button onclick="document.getElementById('storySuccessModal').style.display='none';" style="background:linear-gradient(135deg,#0c3a30,#1a6b55); color:#fff; border:none; border-radius:10px; padding:13px 36px; font-size:0.95rem; font-weight:600; cursor:pointer; letter-spacing:0.5px;">
-            Done <i class="bi bi-check2 ms-1"></i>
-        </button>
-    </div>
-</div>
+
 
 <!-- ABOUT STORY TALKS -->
 <section class="st-section st-bg-white" id="great-story">
@@ -1455,27 +1443,7 @@ $seo = [
             });
         }
 
-        var form = document.getElementById('speakerTalkForm');
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Update phone input value with the full international number
-                if (phoneInput && iti) {
-                    phoneInput.value = iti.getNumber();
-                }
 
-                // Show Success Modal
-                var successModalElement = document.getElementById('successModal');
-                if (successModalElement) {
-                    var myModal = new bootstrap.Modal(successModalElement);
-                    myModal.show();
-                }
-
-                // Reset form
-                form.reset();
-            });
-        }
 
         // Scroll Reveal Animations for Explore Conversations
         const revealElements = document.querySelectorAll('#categories .reveal');
@@ -1675,12 +1643,11 @@ $seo = [
 
                 if (data.type === 'success') {
                     form.reset();
-                    const modal = document.getElementById('storySuccessModal');
-                    modal.style.display = 'flex';
-                    // Close on backdrop click
-                    modal.addEventListener('click', function(ev) {
-                        if (ev.target === modal) modal.style.display = 'none';
-                    });
+                    // Use the existing Bootstrap success modal
+                    var successModalEl = document.getElementById('successModal');
+                    if (successModalEl) {
+                        new bootstrap.Modal(successModalEl).show();
+                    }
                 } else {
                     alert(data.message || 'Something went wrong. Please try again.');
                 }
