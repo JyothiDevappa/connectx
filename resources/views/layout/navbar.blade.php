@@ -116,6 +116,11 @@
                     <span class="fs-nav-arrow">→</span>
                 </a>
 
+                <a href="{{ url('/insights') }}" class="fs-nav-item {{ request()->is('insights') || request()->is('insights/*') ? 'active' : '' }}" onclick="toggleMenu()">
+                    <span class="fs-nav-name">Blogs</span>
+                    <span class="fs-nav-arrow">→</span>
+                </a>
+
                 <a href="{{ url('/contact') }}" class="fs-nav-item {{ request()->is('contact') ? 'active' : '' }}" onclick="toggleMenu()">
                     <span class="fs-nav-name">Contact Us</span>
                     <span class="fs-nav-arrow">→</span>

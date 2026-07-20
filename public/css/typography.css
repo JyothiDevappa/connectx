@@ -306,9 +306,9 @@ select::placeholder {
 /* ── 14. Navigation ──────────────────────────────────────── */
 .fs-nav-name {
     font-family: 'Manrope', sans-serif !important;
-    font-size: 15px !important;
-    font-weight: 500 !important;
-    letter-spacing: -0.5px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.2px !important;
 }
 
 .fs-nav-num {
@@ -434,8 +434,8 @@ select::placeholder {
         letter-spacing: -1.5px !important;
     }
     .fs-nav-name {
-        font-size: 10px !important;
-        font-weight: 500 !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
     }
 }
 
@@ -464,8 +464,8 @@ select::placeholder {
         line-height: 1.8 !important;
     }
     .fs-nav-name {
-        font-size: 10px !important;
-        font-weight: 500 !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
     }
     .footer-title {
         font-size: 16px !important;
