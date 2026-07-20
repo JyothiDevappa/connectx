@@ -64,7 +64,7 @@
             id="email"
             name="email"
             value="{{ old('email') }}"
-            placeholder="admin@ycx.com"
+            placeholder="Enter your email address"
             autocomplete="email"
             autofocus
             class="{{ $errors->has('email') ? 'input-error' : '' }}"

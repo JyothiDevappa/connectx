@@ -6,9 +6,9 @@
     <style>
         body { font-family: 'Segoe UI', sans-serif; background:#f4f6f9; color:#333; margin:0; padding:0; }
         .container { max-width:600px; margin:30px auto; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.05); border:1px solid #e1e5eb; }
-        .header { background:#0c3a30; padding:30px 40px; text-align:center; }
-        .header h1 { color:#fff; font-size:24px; margin:0; font-weight:600; }
-        .header p { color:#ffca95; margin:5px 0 0; font-size:14px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700; }
+        .header { background:#0c3a30; padding:24px 40px; text-align:center; }
+        .header img { max-height: 48px; display:inline-block; }
+        .header p { color:#ffca95; margin:8px 0 0; font-size:13px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700; }
         .content { padding:40px; line-height:1.6; }
         .details-box { background:#f7fafc; border:1px solid #edf2f7; border-radius:8px; padding:20px; margin-bottom:30px; }
         .details-box h3 { margin-top:0; color:#0c3a30; font-size:14px; text-transform:uppercase; letter-spacing:1px; margin-bottom:15px; border-bottom:1px solid #edf2f7; padding-bottom:10px; }
@@ -24,7 +24,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Young Chanakya X</h1>
+            <img src="https://connectx.youngchanakya.com/images/logo/logo.png" alt="Young Chanakya X" />
             <p>New Guest Feature Application</p>
         </div>
         <div class="content">

@@ -381,6 +381,11 @@
                                     Become a Partner
                                 </a>
                             </li>
+                             <li>
+                                <a href="{{ url('/become-a-sponsor') }}">
+                                    Become a Sponsor
+                                </a>
+                            </li>
 
 
                             <li>
