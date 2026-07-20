@@ -534,7 +534,7 @@ $seo = [
         gap: 2rem;
         padding: 2rem 0;
         overflow-x: auto;
-        scroll-snap-type: x mandatory;
+        /* No snap — JS handles smooth momentum scrolling */
         scrollbar-width: none; /* Firefox */
     }
 
@@ -546,7 +546,6 @@ $seo = [
         min-width: 350px;
         height: 500px;
         border-radius: 30px;
-        scroll-snap-align: center;
         padding: 2.5rem 2.5rem 0 2.5rem;
         display: flex;
         flex-direction: column;
@@ -831,6 +830,42 @@ $seo = [
                 <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                 <div class="cat-img-box">
                     <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=600&q=80" alt="Personal Growth">
+                </div>
+            </div>
+            <!-- 06 Community Impact -->
+            <div class="category-panel">
+                <div class="cat-content">
+                    <span class="cat-number">06</span>
+                    <h3>Community Impact</h3>
+                    <p class="cat-desc">How grassroots movement and collective action reshape industries.</p>
+                </div>
+                <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="cat-img-box">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80" alt="Community Impact">
+                </div>
+            </div>
+            <!-- 07 Financial Clarity -->
+            <div class="category-panel">
+                <div class="cat-content">
+                    <span class="cat-number">07</span>
+                    <h3>Financial Clarity</h3>
+                    <p class="cat-desc">Mastering money, capital allocation, and wealth-building mindsets.</p>
+                </div>
+                <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="cat-img-box">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Financial Clarity">
+                </div>
+            </div>
+            <!-- 08 Legacy Building -->
+            <div class="category-panel">
+                <div class="cat-content">
+                    <span class="cat-number">08</span>
+                    <h3>Legacy Building</h3>
+                    <p class="cat-desc">Creating lasting institutions, brands, and cultural contributions.</p>
+                </div>
+                <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="cat-img-box">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Legacy Building">
                 </div>
             </div>
         </div>
@@ -1323,6 +1358,160 @@ $seo = [
         revealElements.forEach(el => {
             revealObserver.observe(el);
         });
+
+        // ── Buttery smooth momentum horizontal scroll for #categories ──────────
+        (function () {
+            var section = document.getElementById('categories');
+            var wrapper = section ? section.querySelector('.categories-wrapper') : null;
+            if (!section || !wrapper) return;
+
+            var locked        = false;
+            var frozenScrollY = 0;
+            var allCardsSeen  = false;
+            var touchStartY   = 0;
+            var touchStartX   = 0;
+
+            // Momentum state — velocity accumulates from wheel ticks and decays each frame
+            var scrollPos  = 0;   // actual rendered position (float)
+            var velocity   = 0;   // pixels per frame
+            var friction   = 0.88; // 0–1: higher = glides longer, lower = stops faster
+            var rafId      = null;
+
+            /* ── Main animation loop ──────────────────────────────────────────── */
+            function tick() {
+                velocity *= friction;           // decay velocity each frame
+                scrollPos += velocity;
+
+                // Clamp to valid range
+                var max = wrapper.scrollWidth - wrapper.clientWidth;
+                if (scrollPos < 0) { scrollPos = 0; velocity = 0; }
+                if (scrollPos > max) { scrollPos = max; velocity = 0; }
+
+                wrapper.scrollLeft = scrollPos;
+
+                // Check if last card is now in view
+                if (scrollPos >= max - 2) {
+                    allCardsSeen = true;
+                    releaseLock();
+                }
+
+                // Keep loop alive while there is meaningful movement
+                if (Math.abs(velocity) > 0.3) {
+                    rafId = requestAnimationFrame(tick);
+                } else {
+                    velocity = 0;
+                    rafId = null;
+                }
+            }
+
+            function startTick() {
+                if (!rafId) rafId = requestAnimationFrame(tick);
+            }
+
+            /* ── Check if last card is fully in view ─────────────────────────── */
+            function isLastCardVisible() {
+                var max = wrapper.scrollWidth - wrapper.clientWidth;
+                return scrollPos >= max - 2;
+            }
+
+            /* ── Lock page at current scroll Y ──────────────────────────────── */
+            function engageLock() {
+                if (locked || allCardsSeen) return;
+                frozenScrollY = window.scrollY;
+                scrollPos     = wrapper.scrollLeft;
+                locked = true;
+            }
+
+            /* ── Release page lock ───────────────────────────────────────────── */
+            function releaseLock() {
+                locked = false;
+            }
+
+            /* ── Hold page position while locked ────────────────────────────── */
+            function onPageScroll() {
+                if (!locked) {
+                    var r = section.getBoundingClientRect();
+                    if (r.bottom < 0) {
+                        // Section scrolled out of view going up — full reset
+                        scrollPos    = 0;
+                        velocity     = 0;
+                        wrapper.scrollLeft = 0;
+                        allCardsSeen = false;
+                    }
+                    return;
+                }
+                if (window.scrollY !== frozenScrollY) {
+                    window.scrollTo({ top: frozenScrollY, behavior: 'instant' });
+                }
+            }
+
+            /* ── Wheel handler ───────────────────────────────────────────────── */
+            window.addEventListener('wheel', function (e) {
+                if (allCardsSeen) return;
+
+                var sRect = section.getBoundingClientRect();
+
+                // Engage lock when section top reaches the viewport top
+                if (e.deltaY > 0 && sRect.top <= window.innerHeight && sRect.top > -section.offsetHeight) {
+                    if (sRect.top <= 20) engageLock();
+                }
+
+                if (!locked) return;
+
+                e.preventDefault();
+
+                // Normalise across mouse wheel (deltaMode=0 pixels, mode=1 lines)
+                var raw = e.deltaMode === 1 ? e.deltaY * 30 : e.deltaY;
+
+                // Add a gentle fraction to velocity — keeps it slow & natural
+                velocity += raw * 0.35;
+
+                // Cap maximum speed so it never feels rushed
+                var maxVel = 18;
+                if (velocity >  maxVel) velocity =  maxVel;
+                if (velocity < -maxVel) velocity = -maxVel;
+
+                startTick();
+            }, { passive: false });
+
+            /* ── Page scroll listener ────────────────────────────────────────── */
+            window.addEventListener('scroll', onPageScroll, { passive: false });
+
+            /* ── Touch support ───────────────────────────────────────────────── */
+            section.addEventListener('touchstart', function (e) {
+                touchStartY = e.touches[0].clientY;
+                touchStartX = e.touches[0].clientX;
+                velocity    = 0; // kill any momentum on new touch
+            }, { passive: true });
+
+            section.addEventListener('touchmove', function (e) {
+                if (allCardsSeen) return;
+
+                var dy = touchStartY - e.touches[0].clientY;
+                var dx = Math.abs(e.touches[0].clientX - touchStartX);
+
+                if (Math.abs(dy) < dx) return; // mostly horizontal — native handles
+
+                var sRect = section.getBoundingClientRect();
+                if (sRect.top <= 20) engageLock();
+
+                if (!locked) return;
+                e.preventDefault();
+
+                velocity += dy * 0.6;
+                touchStartY = e.touches[0].clientY;
+                touchStartX = e.touches[0].clientX;
+                startTick();
+            }, { passive: false });
+
+            /* ── Release lock when section fully leaves the viewport ─────────── */
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) releaseLock();
+                });
+            }, { threshold: 0.05 });
+            io.observe(section);
+        })();
     });
 </script>
 @endpush
