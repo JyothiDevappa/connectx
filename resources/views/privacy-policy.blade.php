@@ -159,7 +159,7 @@ $seo = [
 
       <h2>5. Contact Us</h2>
       <p>If you have questions or comments about this Privacy Policy, please contact us at:</p>
-      <p style="font-weight: 700; color: var(--ink);">Email: youngchanakyaconnect@gmail.com</p>
+      <p style="font-weight: 700; color: var(--ink);">Email: youngchanakya.x@gmail.com</p>
     </article>
   </div>
 </div>

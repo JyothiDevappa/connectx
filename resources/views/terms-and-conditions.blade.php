@@ -152,7 +152,7 @@ $seo = [
 
       <h2>6. Contact Us</h2>
       <p>If you have any questions about these Terms & Conditions, please contact us at:</p>
-      <p style="font-weight: 700; color: var(--ink);">Email: youngchanakyaconnect@gmail.com</p>
+      <p style="font-weight: 700; color: var(--ink);">Email: youngchanakya.x@gmail.com</p>
     </article>
   </div>
 </div>
