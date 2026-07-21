@@ -52,6 +52,32 @@ $seo = [
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
 <link rel="stylesheet" href="{{ asset('css/partner-page.css') }}">
 <link rel="stylesheet" href="{{ asset('css/about-us.css') }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/css/intlTelInput.css">
+<style>
+    .iti {
+        width: 100%;
+        display: block;
+    }
+    .iti__country-list {
+        background-color: #ffffff !important;
+        border: 1px solid #cccccc !important;
+        color: #333333 !important;
+    }
+    .iti__search-input {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border: 1px solid #cccccc !important;
+    }
+    .iti__country {
+        padding: 8px 10px !important;
+    }
+    .iti__country:hover, .iti__country.iti__highlight {
+        background-color: #f1ede4 !important;
+    }
+    .iti__selected-dial-code {
+        color: #333333 !important;
+    }
+</style>
 @endpush
 
 @section('content')
@@ -592,6 +618,7 @@ $seo = [
 
                         <div class="row">
 
+                            {{-- 1st Row: Full Name & Phone Number with Country Selection --}}
                             <div class="col-md-6 mb-3">
                                 <label for="partner-name">Full Name <span class="text-danger">*</span></label>
                                 <input type="text"
@@ -606,6 +633,20 @@ $seo = [
                             </div>
 
                             <div class="col-md-6 mb-3">
+                                <label for="partner-phone">Phone / WhatsApp Number <span class="text-danger">*</span></label>
+                                <input type="tel"
+                                    id="partner-phone"
+                                    class="form-control"
+                                    name="phone"
+                                    value="{{ old('phone') }}"
+                                    placeholder="E.g. +91 9876543210" required>
+                                @error('phone')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            {{-- 2nd Row: Email Address --}}
+                            <div class="col-12 mb-3">
                                 <label for="partner-email">Email Address <span class="text-danger">*</span></label>
                                 <input type="email"
                                     id="partner-email"
@@ -618,19 +659,7 @@ $seo = [
                                 @enderror
                             </div>
 
-                            <div class="col-md-6 mb-3">
-                                <label for="partner-phone">Phone / WhatsApp <span class="text-danger">*</span></label>
-                                <input type="text"
-                                    id="partner-phone"
-                                    class="form-control"
-                                    name="phone"
-                                    value="{{ old('phone') }}"
-                                    placeholder="Phone / WhatsApp" required>
-                                @error('phone')
-                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
-                                @enderror
-                            </div>
-
+                            {{-- 3rd Row: Organization / Company Name & Designation / Role --}}
                             <div class="col-md-6 mb-3">
                                 <label for="partner-company">Organization / Company Name <span class="text-danger">*</span></label>
                                 <input type="text"
@@ -657,20 +686,35 @@ $seo = [
                                 @enderror
                             </div>
 
+                            {{-- 4th Row: Social Media Profile & Website URL --}}
                             <div class="col-md-6 mb-3">
-                                <label for="partner-linkedin">LinkedIn Profile <span class="text-danger">*</span></label>
+                                <label for="partner-linkedin">Social Media Profile <span class="text-danger">*</span></label>
                                 <input type="url"
                                     id="partner-linkedin"
                                     class="form-control"
                                     name="linkedin"
                                     value="{{ old('linkedin') }}"
-                                    placeholder="LinkedIn Profile" required>
+                                    placeholder="Social Media Profile" required>
                                 @error('linkedin')
                                     <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
                                 @enderror
                             </div>
 
-                            <div class="col-12 mb-3">
+                            <div class="col-md-6 mb-3">
+                                <label for="partner-website">Website URL (Optional)</label>
+                                <input type="url"
+                                    id="partner-website"
+                                    class="form-control"
+                                    name="website"
+                                    value="{{ old('website') }}"
+                                    placeholder="Website URL">
+                                @error('website')
+                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            {{-- 5th Row: Partnership Type --}}
+                            <div class="col-12 mb-4">
                                 <label for="partner-type">Partnership Type <span class="text-danger">*</span></label>
                                 <select class="form-control"
                                     id="partner-type"
@@ -688,30 +732,12 @@ $seo = [
                                 @error('partnership_type')
                                     <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
                                 @enderror
-
-                            </div>
-
-                            <div class="col-12 mb-4">
-                                <label for="partner-website">Website URL (Optional)</label>
-                                <input type="url"
-                                    id="partner-website"
-                                    class="form-control"
-                                    name="website"
-                                    value="{{ old('website') }}"
-                                    placeholder="Website URL">
-                                @error('website')
-                                    <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
-                                @enderror
-
                             </div>
 
                             <div class="col-12">
-
-                                <button type="submit"
-                                    class="partner-submit-btn">
+                                <button type="submit" class="partner-submit-btn">
                                     Submit
                                 </button>
-
                             </div>
 
                         </div>
@@ -1118,5 +1144,28 @@ function toggleTier(btn) {
     });
 </script>
 @endif
+
+@push('scripts')
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/js/intlTelInput.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var phoneInput = document.querySelector('input[name="phone"]');
+        if (phoneInput) {
+            var iti = window.intlTelInput(phoneInput, {
+                initialCountry: "in",
+                separateDialCode: true,
+                utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/js/utils.js"
+            });
+
+            var form = phoneInput.closest('form');
+            if (form) {
+                form.addEventListener('submit', function() {
+                    phoneInput.value = iti.getNumber();
+                });
+            }
+        }
+    });
+</script>
+@endpush
 
 @endsection

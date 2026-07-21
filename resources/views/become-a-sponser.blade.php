@@ -1192,7 +1192,7 @@ $seo = [
                                        class="form-control"
                                        name="phone"
                                        value="{{ old('phone') }}"
-                                       placeholder="E.g. +91 98765 43210" required>
+                                       placeholder="E.g. +91 9876543210" required>
                                 @error('phone')
                                     <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
                                 @enderror
@@ -1268,7 +1268,7 @@ $seo = [
 
                             <!-- 5. sponser Type -->
                             <div class="col-12 mb-4">
-                                <label for="sponser-level">sponser Type <span class="text-danger">*</span></label>
+                                <label for="sponser-level">Sponsor Type <span class="text-danger">*</span></label>
                                 <select class="form-control form-select" id="sponser-level" name="sponsership_level" required>
                                     <option value="" disabled {{ old('sponsership_level') ? '' : 'selected' }}>
                                         Select sponser Type

@@ -126,16 +126,11 @@
         height: 58px;
         border: none;
         border-radius: 12px;
-        background: #19352d;
+        background: var(--primary);
         color: #fff;
         font-size: 16px;
         font-weight: 600;
         transition: all .3s ease;
-    }
-
-    .partner-submit-btn:hover {
-        background: #5e442d;
-        color: #fff;
     }
 
     /* SHAPE */
