@@ -559,10 +559,16 @@ $seo = [
     <div class="container">
         <div class="row align-items-center gy-5">
             <div class="col-lg-6">
-                <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Partner With Us</div>
-                <h1 style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Build the Future Together</h1>
-                <p class="hero-copy">Join the Young Chanakya X ecosystem to access a premium global network. We foster meaningful content partnerships, brand collaborations, and community connections that drive innovation and long-term value.</p>
+                <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Let's Build a Stronger Ecosystem Together</div>
+                <h1 style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Become a Partner</h1>
+                <p class="hero-copy">Partner with Young Chanakya X to create meaningful experiences, connect communities, and build initiatives that inspire learning, collaboration, and long-term impact.</p>
               
+                <ul class="checklist-style mb-4">
+                    <li><span class="check-icon">✓</span>Co-create impactful community initiatives</li>
+                    <li><span class="check-icon">✓</span>Reach a diverse and engaged audience</li>
+                    <li><span class="check-icon">✓</span>Build long-term strategic collaborations</li>
+                </ul>
+
                 <div class="about-hero-buttons">
                     <a href="#partnership-opportunities" class="about-btn-2">View Partnership Opportunities</a>
                 </div>
@@ -674,7 +680,7 @@ $seo = [
                                         Select Partnership Type
                                     </option>
 
-                                    @foreach(['Content Partnerships', 'Brand Collaborations', 'Media Partnerships', 'Community Partners'] as $type)
+                                    @foreach(['Brand Collaborations', 'Media Partnerships', 'Community Partnerships', 'Knowledge Partnerships', 'Event Partnerships', 'Ecosystem Partnerships'] as $type)
                                         <option value="{{ $type }}" {{ old('partnership_type') == $type ? 'selected' : '' }}>{{ $type }}</option>
                                     @endforeach
 
@@ -725,9 +731,9 @@ $seo = [
     <div class="container">
         <div class="tech-partner-inner">
             <div class="tp-content">
-                <div class="tp-eyebrow">Innovation Partner</div>
-                <h2>Technology Partner</h2>
-                <p>WeGeni powers the Young Chanakya X platform ecosystem, delivering premium software engineering, robust system integrations, and digital infrastructure scaled for high performance.</p>
+                <div class="tp-eyebrow">TECHNOLOGY PARTNER</div>
+                <h2>Powered by WeGeni</h2>
+                <p>Young Chanakya X is proudly powered by WeGeni, delivering the technology, infrastructure, and digital innovation that enable a seamless community experience.</p>
                 <!-- <div class="tp-tags">
                     <span class="tp-tag">System Architecture</span>
                     <span class="tp-tag">Digital Ecosystems</span>
@@ -798,7 +804,7 @@ CONNECTX PARTNERSHIP OPPORTUNITIES
   }
   .tier-btn-outline:hover { background: #0c3a30; color: #ffd2b1; }
 
-  @media(max-width: 991px){
+  @media(max-width: 767px){
       .tier-grid { grid-template-columns: 1fr; }
   }
 </style>
@@ -811,77 +817,113 @@ CONNECTX PARTNERSHIP OPPORTUNITIES
         <p class="sec-desc rv mx-auto" style="margin-top: 16px; max-width: 600px; line-height: 1.6;">Explore our dynamic partnership levels tailored for visibility, networking, and creative collaboration.</p>
     </div>
 
-    <div class="tier-grid-four">
-      <!-- Brand Partners -->
+    <div class="tier-grid">
+      <!-- Brand Collaborations -->
       <div class="tier-card">
-        <div class="tier-name">Engagement</div>
-        <div class="tier-title">Brand Collaborations</div>
-        <div class="tier-tagline">Work with creators and influencers to build narratives.</div>
+        <div class="tier-name">BRAND COLLABORATIONS</div>
+        <div class="tier-title">Brand Collaboration</div>
+        <div class="tier-tagline">Partner with YCX to create authentic brand experiences that connect with our growing community.</div>
         <ul class="tier-list collapsed">
-          <li>Campaign collaborations</li>
-          <li>Product launches and seeding</li>
-          <li>Brand storytelling and narratives</li>
-          <li>Influencer engagement programs</li>
-          <li>Integrated brand experiences</li>
-          <li>Sponsored content tracks</li>
-          <li>Custom experiential events</li>
+          <li>Brand awareness initiatives</li>
+          <li>Co-branded campaigns</li>
+          <li>Community activations</li>
+          <li>Product & service showcases</li>
+          <li>Event branding opportunities</li>
+          <li>Audience engagement programs</li>
+          <li>Long-term brand collaborations</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
         <a href="#partner-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Brand Partner</a>
       </div>
       
-      <!-- Media Partners -->
+      <!-- Media Partnerships -->
       <div class="tier-card">
-        <div class="tier-name">Amplification</div>
-        <div class="tier-title">Media Partnerships</div>
-        <div class="tier-tagline">Amplify visibility through media coverage and content reach.</div>
+        <div class="tier-name">MEDIA PARTNERSHIPS</div>
+        <div class="tier-title">Media Partnership</div>
+        <div class="tier-tagline">Work with us to amplify inspiring stories, community initiatives, and meaningful conversations.</div>
         <ul class="tier-list collapsed">
-          <li>Event coverage and reporting</li>
-          <li>Creator features and spotlights</li>
-          <li>Digital interviews and series</li>
-          <li>Platform visibility across networks</li>
-          <li>Co-branded initiatives</li>
-          <li>Syndicated content opportunities</li>
-          <li>Exclusive access to major launches</li>
+          <li>Event media coverage</li>
+          <li>Podcast & interview features</li>
+          <li>Community stories</li>
+          <li>Content collaborations</li>
+          <li>Digital promotion</li>
+          <li>Cross-platform visibility</li>
+          <li>Exclusive media opportunities</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
         <a href="#partner-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Media Partner</a>
       </div>
 
-      <!-- Community Partners -->
+      <!-- Community Partnerships -->
       <div class="tier-card">
-        <div class="tier-name">Network</div>
-        <div class="tier-title">Community Partners</div>
-        <div class="tier-tagline">Collaborate with communities to expand engagement.</div>
+        <div class="tier-name">COMMUNITY PARTNERSHIPS</div>
+        <div class="tier-title">Community Partnership</div>
+        <div class="tier-tagline">Collaborate with YCX to strengthen communities through networking, learning, and shared experiences.</div>
         <ul class="tier-list collapsed">
-          <li>Community enrichment programs</li>
-          <li>Cross-network collaborations</li>
-          <li>Ecosystem conversations</li>
-          <li>Targeted audience access</li>
-          <li>Joint engagement activities</li>
-          <li>Member-exclusive discounts</li>
-          <li>Co-hosted digital meetups</li>
+          <li>Community initiatives</li>
+          <li>Networking meetups</li>
+          <li>Cross-community collaborations</li>
+          <li>Member engagement</li>
+          <li>Regional community programs</li>
+          <li>Community outreach</li>
+          <li>Shared growth opportunities</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
         <a href="#partner-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Community Partner</a>
       </div>
       
-      <!-- Content Partnerships -->
+      <!-- Knowledge Partnerships -->
       <div class="tier-card">
-        <div class="tier-name">Creation</div>
-        <div class="tier-title">Content Partnerships</div>
-        <div class="tier-tagline">Collaborate on creator-led content formats and storytelling.</div>
+        <div class="tier-name">KNOWLEDGE PARTNERSHIPS</div>
+        <div class="tier-title">Knowledge Partnership</div>
+        <div class="tier-tagline">Share expertise through educational experiences that help people learn, grow, and innovate.</div>
         <ul class="tier-list collapsed">
-          <li>Podcasts and interview series</li>
-          <li>Creator-led storytelling formats</li>
-          <li>Video and digital content production</li>
-          <li>Knowledge-driven content</li>
-          <li>Multi-format collaborations</li>
-          <li>Co-authored reports and insights</li>
-          <li>Educational content creation</li>
+          <li>Expert sessions</li>
+          <li>Workshops & masterclasses</li>
+          <li>Panel discussions</li>
+          <li>Leadership talks</li>
+          <li>Learning resources</li>
+          <li>Educational programs</li>
+          <li>Knowledge-sharing initiatives</li>
         </ul>
         <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
-        <a href="#partner-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Content Partner</a>
+        <a href="#partner-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become a Knowledge Partner</a>
+      </div>
+
+      <!-- Event Partnerships -->
+      <div class="tier-card">
+        <div class="tier-name">EVENT PARTNERSHIPS</div>
+        <div class="tier-title">Event Partnership</div>
+        <div class="tier-tagline">Co-create engaging events that bring together professionals, founders, students, and creators.</div>
+        <ul class="tier-list collapsed">
+          <li>Networking events</li>
+          <li>YCX Talks</li>
+          <li>Community meetups</li>
+          <li>Leadership summits</li>
+          <li>Workshops</li>
+          <li>Roundtable discussions</li>
+          <li>Campus events</li>
+        </ul>
+        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+        <a href="#partner-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become an Event Partner</a>
+      </div>
+
+      <!-- Ecosystem Partnerships -->
+      <div class="tier-card">
+        <div class="tier-name">Ecosystem Partnerships</div>
+        <div class="tier-title">Ecosystem Partnership</div>
+        <div class="tier-tagline">Work together to strengthen the entrepreneurial, professional, and innovation ecosystem through long-term collaborations.</div>
+        <ul class="tier-list collapsed">
+          <li>Strategic collaborations</li>
+          <li>Cross-community initiatives</li>
+          <li>Shared programs</li>
+          <li>Joint events</li>
+          <li>Industry engagement</li>
+          <li>Knowledge exchange</li>
+          <li>Long-term partnerships</li>
+        </ul>
+        <button class="tier-toggle" onclick="toggleTier(this)">Show all benefits</button>
+        <a href="#partner-form" class="tier-btn-outline" style="width:100%; text-align:center;">Become an Ecosystem Partner</a>
       </div>
     </div>
   </div>
@@ -901,87 +943,91 @@ function toggleTier(btn) {
 </script>
 
 
-<!-- second section -->
+<!-- Image Carousel Section -->
+@include('partials.image-carousel')
 
+<!-- =========================
+   WHY PARTNER WITH YCX SECTION 
+   ========================= -->
 <section class="connectx-how-works-section-wrapper pt-70 lg-pt-80 pb-70 lg-pb-80">
     <div class="container">
 
         <div class="text-center mb-70">
-            <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Our Network</div>
-            <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Who We Work With</h2>
-            <p class="sec-desc rv mx-auto" style="margin-top: 16px; max-width: 600px; line-height: 1.6;">We partner with diverse organizations to create value, unlock growth, and empower digital ecosystems.</p>
+            <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">WHY PARTNER WITH YCX</div>
+            <h2 class="sec-title rv" style="color: #0c3a30; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Partnerships That Create Lasting Value</h2>
+            <p class="sec-desc rv mx-auto" style="margin-top: 16px; max-width: 600px; line-height: 1.6;">By partnering with Young Chanakya X, you become part of an ecosystem focused on learning, innovation, and meaningful connections.</p>
         </div>
 
         <div class="row g-0 how-works-section-cards-container">
 
-            <div class="col-lg-4 col-md-6 hw-grid-border-end-md hw-grid-border-bottom-md">
+            <div class="col-md-4 hw-grid-border-end-md hw-grid-border-bottom-md">
                 <div class="how-works-section-card how-works-bg-light">
                     <div class="how-works-header-flex-row">
                         <span class="how-works-badge-num">01</span>
-                        <h4 class="how-works-h4">Content Platforms</h4>
+                        <h4 class="how-works-h4">Grow Together</h4>
                     </div>
                     <p class="how-works-p-desc">
-                        Organizations focused on digital content, publishing, and audience engagement across formats.
+                        Build long-term relationships that benefit both your organization and the community.
                     </p>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 hw-grid-border-end-lg hw-grid-border-bottom-md">
+            <div class="col-md-4 hw-grid-border-end-lg hw-grid-border-bottom-md">
                 <div class="how-works-section-card how-works-bg-tint">
                     <div class="how-works-header-flex-row">
                         <span class="how-works-badge-num">02</span>
-                        <h4 class="how-works-h4">Creator Networks</h4>
+                        <h4 class="how-works-h4">Expand Your Reach</h4>
                     </div>
                     <p class="how-works-p-desc">
-                        Communities and groups working with creators, influencers and digital storytellers.
+                        Connect with students, professionals, founders, creators, and educators.
                     </p>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 hw-grid-border-bottom-md">
+            <div class="col-md-4 hw-grid-border-bottom-md">
                 <div class="how-works-section-card how-works-bg-light">
                     <div class="how-works-header-flex-row">
                         <span class="how-works-badge-num">03</span>
-                        <h4 class="how-works-h4">Media & Production Teams</h4>
+                        <h4 class="how-works-h4">Co-Create Experiences</h4>
                     </div>
                     <p class="how-works-p-desc">
-                        Studios and teams involved in podcasts, video production and content creation.
+                        Collaborate on events, programs, workshops, and community initiatives.
                     </p>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 hw-grid-border-end-md hw-grid-border-bottom-sm">
+            <div class="col-md-4 hw-grid-border-end-md hw-grid-border-bottom-sm">
                 <div class="how-works-section-card how-works-bg-tint">
                     <div class="how-works-header-flex-row">
                         <span class="how-works-badge-num">04</span>
-                        <h4 class="how-works-h4">Community Builders</h4>
+                        <h4 class="how-works-h4">Share Knowledge</h4>
                     </div>
                     <p class="how-works-p-desc">
-                        Groups building active communities, engagement systems and networking ecosystems.
+                        Bring your expertise to a community that values continuous learning.
                     </p>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 hw-grid-border-end-lg">
+            <div class="col-md-4 hw-grid-border-end-lg">
                 <div class="how-works-section-card how-works-bg-light">
                     <div class="how-works-header-flex-row">
                         <span class="how-works-badge-num">05</span>
-                        <h4 class="how-works-h4">Agencies & Growth Teams</h4>
+                        <h4 class="how-works-h4">Strengthen Your Network</h4>
                     </div>
                     <p class="how-works-p-desc">
-                        Teams focused on campaigns, creator partnerships and brand visibility growth.
+                        Build meaningful relationships with industry leaders and ecosystem partners.
                     </p>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6">
+            <div class="col-md-4">
                 <div class="connectx-premium-card how-works-section-card how-works-bg-tint">
                     <div class="how-works-header-flex-row">
                         <span class="how-works-badge-num">06</span>
-                        <h4 class="how-works-h4">Ecosystem Enablers</h4>
+                        <h4 class="how-works-h4">Create Positive Impact</h4>
                     </div>
                     <p class="how-works-p-desc">
-                        Organizations supporting startups, innovation communities and professional networks.
+                        Support initiatives that encourage growth, innovation, and collaboration.
                     </p>
                 </div>
             </div>
@@ -990,73 +1036,10 @@ function toggleTier(btn) {
     </div>
 </section>
 
-<!-- Image Carousel Section -->
-@include('partials.image-carousel')
-
-<div class="text-feature-five position-relative mt-40 lg-mt-80 pb-50">
-
-    <div class="container">
-
-        <div class="bg-wrapper connectx-partner-bg">
-
-            <div class="row">
-
-                <!-- CONTENT SIDE -->
-                <div class="col-lg-6 ms-auto d-flex flex-column order-lg-last">
-
-                    <div class="text-wrapper pt-60 pb-60 lg-pb-40 ps-3 ps-xxl-5 pe-3 pe-xxl-5">
-
-                        <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Why Partner with Us</div>
-                        <h2 class="sec-title rv">Structured Collaboration <br>Built for Long-Term Growth</h2>
-
-                        <p class="sec-desc rv">
-                            Young Chanakya X connects partners and creators through meaningful collaboration, engagement, and growth.
-                        </p>
-
-                        <ul class="style-none connectx-partner-list">
-
-                            <li>Collaboration-first ecosystem approach</li>
-
-                            <li>Content-driven engagement model</li>
-
-                            <li>Cross-industry network access</li>
-
-                            <li>Structured opportunities for co-creation</li>
-
-
-
-                        </ul>
-
-                    </div>
-
-                </div>
-
-                <!-- IMAGE SIDE -->
-
-                <div class="col-lg-6 d-flex order-lg-first">
-
-                    <div class="media-wrapper w-100 d-flex align-items-center justify-content-center position-relative">
-
-                        <img src="images/assets/screen_07.svg"
-                            alt=""
-                            class="lazy-img shapes screen_01">
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
 
 <!-- =========================
-EXPANDING ACROSS INDUSTRIES
-========================= -->
+   CTA SECTION
+   ========================= -->
 <section class="connectx-expand-section pt-30 pb-50" style="background-color: #0c3a30;">
     <div class="container py-5">
         <div class="row align-items-center gy-5">
@@ -1064,11 +1047,11 @@ EXPANDING ACROSS INDUSTRIES
             <!-- CONTENT SIDE -->
             <div class="col-lg-6 order-lg-last wow fadeInRight">
                 <div class="px-lg-4" style="margin-top: -30px;">
-                    <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px; color: #ffd2b1;">Global Reach</div>
-                    <h2 class="sec-title rv" style="color: #ffffff; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15; margin-bottom: 25px;">Expanding Across Industries <br> and Regions</h2>
+                    <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px; color: #ffd2b1;">Creating Value Through Collaboration</div>
+                    <h2 class="sec-title rv" style="color: #ffffff; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15; margin-bottom: 25px;">What We Can Build Together</h2>
 
                     <p class="sec-desc rv" style="margin-bottom: 35px; color: rgba(255, 255, 255, 0.8);">
-                        Young Chanakya X is building a network of creators, voices, and collaborators across industries and geographies, enabling partners to access a diverse and growing ecosystem.
+                        Together, we can develop experiences that benefit communities, organizations, and future leaders.
                     </p>
 
                     <style>
@@ -1082,9 +1065,11 @@ EXPANDING ACROSS INDUSTRIES
                         }
                     </style>
                     <ul class="style-none connectx-expand-points theme-dark">
-                        <li>Multi-industry creator ecosystem</li>
-                        <li>Cross-border collaboration opportunities</li>
-                        <li>Digital-first scalable network</li>
+                        <li>Launch initiatives that bring people together</li>
+                        <li>Create opportunities for professional connections</li>
+                        <li>Develop programs that inspire future leaders</li>
+                        <li>Host expert sessions, workshops, and panel discussions</li>
+                        <li>Collaborate on community-driven awareness initiatives</li>
                     </ul>
                 </div>
             </div>
