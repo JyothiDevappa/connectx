@@ -85,7 +85,7 @@ $seo = [
     .authority-hero-section {
         min-height: 85vh;
         background-image: linear-gradient(180deg, rgba(9, 13, 22, 0.75) 0%, #090d16 100%),
-            url('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=2000');
+            url('{{ asset("images/media/share-your-story-hero banner.png") }}');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;

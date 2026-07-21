@@ -53,7 +53,7 @@ $seo = [
 <div class="blog-body">
 
     <!-- HERO SECTION -->
-    <div class="premium-hero-container d-flex align-items-center position-relative" style="min-height: 70vh; background-image: linear-gradient(180deg, rgba(12, 58, 48, 0.55) 0%, #090d16 100%), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1600'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <div class="premium-hero-container d-flex align-items-center position-relative" style="min-height: 70vh; background-image: linear-gradient(180deg, rgba(12, 58, 48, 0.55) 0%, #090d16 100%), url('{{ asset('images/media/blog.jpg') }}'); background-size: cover; background-position: center; background-attachment: fixed;">
         <div class="container pt-200 pb-100">
             <div class="row align-items-center">
                 <div class="col-xl-8 col-lg-10">

@@ -114,7 +114,7 @@ $seo = [
     .premium-hero-container {
         min-height: 75vh;
         background-image: linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, #090d16 100%), 
-                          url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=2000');
+                          url('{{ asset("images/media/events.png") }}');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
