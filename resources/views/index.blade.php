@@ -93,7 +93,7 @@ $seo = [
     <div class="hero-slides">
         <!-- Slide 1 -->
         <div class="hero-slide active">
-            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1800&q=80" alt="Partner With the Future of Influence">
+            <img src="{{ asset('images/media/index-banner-1.jpg') }}" alt="Partner With the Future of Influence">
             <div class="hero-overlay"></div>
             <div class="hero-grain"></div>
             <div class="hero-content">
@@ -109,7 +109,7 @@ $seo = [
 
         <!-- Slide 2 -->
         <div class="hero-slide">
-            <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1800&q=80" alt="Empower Your Creator Journey">
+            <img src="{{ asset('images/media/index-banner-2.jpg') }}" alt="Empower Your Creator Journey">
             <div class="hero-overlay"></div>
             <div class="hero-grain"></div>
             <div class="hero-content">

@@ -32,7 +32,7 @@ $seo = [
 
   <!-- HERO -->
   <section class="hero">
-    <img src="https://images.unsplash.com/photo-1758873268745-dd2cf0d677b5?auto=format&fit=crop&w=1600&q=80" alt="Interns collaborating around a laptop">
+    <img src="{{ asset('images/media/internship.png') }}" alt="Interns collaborating around a laptop">
     <div class="hero-inner">
       <span class="kicker" style="color:var(--peach);">
         <span style="display:inline-block;width:16px;height:1.5px;background:var(--peach);"></span>

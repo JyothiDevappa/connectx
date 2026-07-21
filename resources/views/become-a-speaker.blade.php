@@ -187,7 +187,7 @@ $seo = [
     padding-top: 180px;
     padding-bottom: 100px;
     background-image: linear-gradient(180deg, rgba(9, 13, 22, 0.7) 0%, #090d16 100%),
-        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000');
+        url('{{ asset("images/media/speaker-hero banner.png") }}');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

@@ -289,7 +289,7 @@ $seo = [
 .premium-hero-container {
     min-height: 75vh;
     background-image: linear-gradient(180deg, rgba(12, 58, 48, 0.55) 0%, #090d16 100%), 
-                      url('{{ asset("images/contact-banner-img.jpg") }}');
+                      url('{{ asset("images/media/contact.png") }}');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
