@@ -254,5 +254,82 @@ $seo = [
     </div>
   </section>
 
+  <!-- FAQ SECTION (10 FAQs using Internship UI design) -->
+  <section class="faq-section" id="faq">
+    <div class="wrap">
+      <div class="section-head text-center mx-auto" style="margin-bottom: 56px; max-width: 900px;">
+        <span class="eyebrow">Questions & Answers</span>
+        <h2 class="sec-title">Frequently Asked Questions</h2>
+        <p class="sec-desc" style="font-size: 16px; color: var(--text-soft); margin-top: 12px; line-height: 1.6;">Find answers to common questions about working at Young Chanakya X, our culture, and application process.</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-col">
+          <div class="faq-item">
+            <div class="faq-q"><span>What is the hiring process like at Young Chanakya X?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>Our process typically includes application review, an introductory conversation, a role-specific skill or task assessment, and a final alignment discussion with the team.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>Are career opportunities at YCX remote or on-site?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>We offer remote, hybrid, and on-site roles depending on the nature of the position and team requirements. Details are specified on each job listing.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>Can I apply for multiple open positions?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>Yes, you may apply for more than one position if your experience aligns. We recommend highlighting your primary area of expertise in your application.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>What qualities does YCX look for in candidates?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>We look for high ownership, initiative, adaptability, curiosity, strong execution capabilities, and a passion for creating impactful work.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>How long does it take to get a response after applying?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>Our talent team reviews applications on a rolling basis. You will typically receive an update within 1 to 2 weeks after submitting your application.</p></div>
+          </div>
+        </div>
+        <div class="faq-col">
+          <div class="faq-item">
+            <div class="faq-q"><span>Does YCX offer career growth and learning opportunities?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>Absolutely. We encourage continuous learning, cross-functional collaboration, leadership growth, and ownership of key initiatives from day one.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>What benefits and work culture can I expect?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>We foster a collaborative, fast-paced environment with flexible work arrangements, mentorship, performance recognition, and meaningful project ownership.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>Are there entry-level or junior positions available?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>Yes, we welcome emerging talent across technical, creative, community, and business functions alongside experienced professionals.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>What happens if there are no open roles matching my profile?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>You can submit your details via our general interest form above. Our team regularly reaches out to candidate talent pools as new opportunities open up.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>Who can I contact for questions regarding my application status?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>You can reach out directly to our hiring team at youngchanakyaconnect@gmail.com with your application name and role details.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </div>
 @endsection
+
+@push('scripts')
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // FAQ Accordion logic
+    document.querySelectorAll('.career-body .faq-item').forEach(item => {
+      const q = item.querySelector('.faq-q');
+      if (q) {
+        q.addEventListener('click', () => {
+          const isOpen = item.classList.contains('open');
+          document.querySelectorAll('.career-body .faq-item').forEach(i => i.classList.remove('open'));
+          if (!isOpen) {
+            item.classList.add('open');
+          }
+        });
+      }
+    });
+  });
+</script>
+@endpush
