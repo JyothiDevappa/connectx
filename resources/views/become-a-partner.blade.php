@@ -728,11 +728,11 @@ $seo = [
                 <div class="tp-eyebrow">Innovation Partner</div>
                 <h2>Technology Partner</h2>
                 <p>WeGeni powers the Young Chanakya X platform ecosystem, delivering premium software engineering, robust system integrations, and digital infrastructure scaled for high performance.</p>
-                <div class="tp-tags">
+                <!-- <div class="tp-tags">
                     <span class="tp-tag">System Architecture</span>
                     <span class="tp-tag">Digital Ecosystems</span>
                     <span class="tp-tag">Tech Consulting</span>
-                </div>
+                </div> -->
             </div>
             <div class="tp-logo-container">
                 <a href="https://wegeni.com" target="_blank" rel="noopener noreferrer" class="tp-logo-card">
