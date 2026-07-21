@@ -116,7 +116,7 @@ Route::get('/speaker-talk', function () {
 
 Route::get('/share-your-story', function () {
     return view('share-your-story');
-})->name('share.your.story');
+})->name('share-your-story');
 Route::post('/share-your-story/submit', [ApplicationController::class, 'submitStory'])->name('story.submit');
 Route::get('/career', [App\Http\Controllers\JobController::class, 'careers'])->name('careers.index');
 Route::get('/internship', [App\Http\Controllers\JobController::class, 'internships'])->name('internships.index');
@@ -182,6 +182,12 @@ Route::middleware('admin')->group(function () {
     Route::post('/admin/api/posts', [AdminDashboardController::class, 'savePost'])->name('admin.api.posts.create');
     Route::post('/admin/api/posts/{id}', [AdminDashboardController::class, 'savePost'])->name('admin.api.posts.update');
     Route::delete('/admin/api/posts/{id}', [AdminDashboardController::class, 'deletePost'])->name('admin.api.posts.delete');
+
+    // Categories API
+    Route::get('/admin/api/categories', [AdminDashboardController::class, 'categories'])->name('admin.api.categories');
+    Route::post('/admin/api/categories', [AdminDashboardController::class, 'saveCategory'])->name('admin.api.categories.create');
+    Route::post('/admin/api/categories/{id}', [AdminDashboardController::class, 'saveCategory'])->name('admin.api.categories.update');
+    Route::delete('/admin/api/categories/{id}', [AdminDashboardController::class, 'deleteCategory'])->name('admin.api.categories.delete');
 
     // Jobs full page views
     Route::get('/admin/posted-jobs/create', [AdminDashboardController::class, 'createJobPage'])->name('admin.posted-jobs.create-page');

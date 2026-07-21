@@ -18,11 +18,33 @@ $seo = [
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
-<link rel="stylesheet" href="{{ asset('css/about-us.css') }}">
 <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
 <style>
   #hdr:not(.scrolled) .hamburger span {
       background: #ffffff !important;
+  }
+  .search-btn-orange {
+      background-color: var(--orange) !important;
+      color: var(--primary) !important;
+      border-radius: 8px !important;
+      padding: 8px 16px !important;
+      border: none !important;
+      transition: all 0.25s ease !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .main-page-wrapper,
+  .blog-body,
+  .blog-content-section {
+      overflow: visible !important;
+  }
+  .insights-sidebar {
+      position: -webkit-sticky !important;
+      position: sticky !important;
+      top: 110px !important;
+      align-self: flex-start !important;
+      z-index: 99 !important;
   }
 </style>
 @endpush
@@ -50,53 +72,92 @@ $seo = [
     </div>
 
     <!-- CONTENT SECTION -->
-    <section class="blog-content-section" style="padding-top: 80px; padding-bottom: 100px; background: #ffffff !important;">
+    <section class="blog-content-section py-5">
         <div class="container">
-            
-            <!-- Category Filter -->
-            <div class="blog-filters">
-                <a href="#" class="filter-btn active" data-filter="All">All Insights</a>
-                <a href="#" class="filter-btn" data-filter="Storytelling">Storytelling</a>
-                <a href="#" class="filter-btn" data-filter="Networking">Networking</a>
-                <a href="#" class="filter-btn" data-filter="Learning">Learning</a>
-                <a href="#" class="filter-btn" data-filter="Personal Branding">Personal Branding</a>
-                <a href="#" class="filter-btn" data-filter="Collaboration">Collaboration</a>
-                <a href="#" class="filter-btn" data-filter="Career Growth">Career Growth</a>
-                <a href="#" class="filter-btn" data-filter="Entrepreneurship">Entrepreneurship</a>
-            </div>
-
-            <!-- Blog Grid -->
-            <div class="blog-grid">
-                @foreach($posts as $item)
-                <!-- Card -->
-                <div class="blog-card" data-category="{{ $item->category }}">
-                    <div class="card-img" style="background-image: url('{{ $item->image }}');"></div>
-                    <div class="card-content">
-                        <div class="post-meta">
-                            <span class="post-category">{{ $item->category }}</span>
-                            <span>{{ $item->created_at->format('M d, Y') }}</span>
-                            <span>•</span>
-                            <span>{{ $item->read_time }}</span>
+            <div class="row g-4 g-lg-5">
+                
+                <div class="col-lg-4 col-xl-3 position-sticky" style="top: 100px; align-self: flex-start; z-index: 90;">
+                    <aside class="insights-sidebar">
+                        <div class="insights-sidebar-card">
+                            <div class="sidebar-header">
+                                <h4 class="sidebar-title">Categories</h4>
+                            </div>
+                            <div class="sidebar-category-list">
+                                <a href="#" class="sidebar-cat-link filter-btn active" data-filter="All">
+                                    All Insights
+                                </a>
+                                @php
+                                    $pubCategories = \App\Models\Category::orderBy('name')->get();
+                                    if ($pubCategories->isEmpty()) {
+                                        $pubCategories = collect(['Storytelling', 'Networking', 'Learning', 'Personal Branding', 'Collaboration', 'Career Growth', 'Entrepreneurship'])->map(fn($c) => (object)['name' => $c]);
+                                    }
+                                @endphp
+                                @foreach($pubCategories as $cat)
+                                    <a href="#" class="sidebar-cat-link filter-btn" data-filter="{{ $cat->name }}">
+                                        {{ $cat->name }}
+                                    </a>
+                                @endforeach
+                            </div>
                         </div>
-                        <a href="{{ route('insights.detail', $item->slug) }}" class="card-title">{{ $item->title }}</a>
-                        <p class="card-excerpt">{{ $item->excerpt }}</p>
-                        
-                        <!-- Author hidden per request -->
-                    </div>
+
+                        <!-- Sidebar CTA Banner -->
+                        <div class="sidebar-cta-card mt-4 text-center">
+                            <div class="cta-icon-box mb-3">
+                                <i class="bi bi-mic-fill"></i>
+                            </div>
+                            <h5 class="cta-title">Share Your Story</h5>
+                            <p class="cta-text">Take the YCX stage and inspire our global community with your lessons & journey.</p>
+                            <a href="{{ url('/share-your-story') }}" class="btn-sidebar-cta">Apply to Share</a>
+                        </div>
+                    </aside>
                 </div>
-                @endforeach
-            </div>
 
-            <!-- Pagination (Shows only if items count is more than 9) -->
-            @if(count($posts) > 9)
-            <div class="blog-pagination mb-3">
-                <a href="#" class="page-link"><i class="bi bi-chevron-left"></i></a>
-                <a href="#" class="page-link active">1</a>
-                <a href="#" class="page-link">2</a>
-                <a href="#" class="page-link"><i class="bi bi-chevron-right"></i></a>
-            </div>
-            @endif
+                <!-- MAIN CONTENT COLUMN -->
+                <div class="col-lg-8 col-xl-9">
+                    <!-- Search Filter Bar (Aligned Right) -->
+                    <div class="d-flex justify-content-end align-items-center mb-4">
+                        <div class="insights-search-box" style="max-width: 450px; width: 100%;">
+                            <div class="input-group align-items-center" style="background: #ffffff; border-radius: 12px; border: 1px solid rgba(12, 58, 48, 0.12); padding: 4px 6px; box-shadow: 0 4px 18px rgba(0,0,0,0.03); transition: all 0.25s ease;">
+                                <input type="text" id="insightSearchInput" class="form-control border-0 ps-3 bg-transparent" placeholder="Search..." style="font-size: 14.5px; color: #0c3a30; box-shadow: none;">
+                                <button class="btn search-btn-orange" type="button" id="insightSearchBtn">
+                                    <i class="bi bi-search" style="font-size: 0.95rem;"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- Blog Grid -->
+                    <div class="blog-grid">
+                        @foreach($posts as $item)
+                        <!-- Card -->
+                        <div class="blog-card" data-category="{{ $item->category }}">
+                            <div class="card-img" style="background-image: url('{{ $item->image }}');"></div>
+                            <div class="card-content">
+                                <div class="post-meta">
+                                    <span class="post-category">{{ $item->category }}</span>
+                                    {{-- <span>{{ $item->created_at->format('M d, Y') }}</span>
+                                    <span>•</span>
+                                    <span>{{ $item->read_time }}</span> --}}
+                                </div>
+                                <a href="{{ route('insights.detail', $item->slug) }}" class="card-title">{{ $item->title }}</a>
+                                <p class="card-excerpt">{{ $item->excerpt }}</p>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+
+                    <!-- Pagination (Shows only if items count is more than 9) -->
+                    @if(count($posts) > 9)
+                    <div class="blog-pagination mb-3">
+                        <a href="#" class="page-link"><i class="bi bi-chevron-left"></i></a>
+                        <a href="#" class="page-link active">1</a>
+                        <a href="#" class="page-link">2</a>
+                        <a href="#" class="page-link"><i class="bi bi-chevron-right"></i></a>
+                    </div>
+                    @endif
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -108,23 +169,44 @@ $seo = [
     document.addEventListener('DOMContentLoaded', function() {
         const filters = document.querySelectorAll('.filter-btn');
         const cards = document.querySelectorAll('.blog-card');
-        
+        const searchInput = document.getElementById('insightSearchInput');
+
+        let currentCat = 'all';
+        let currentSearch = '';
+
+        function filterCards() {
+            cards.forEach(card => {
+                const cardCat = (card.getAttribute('data-category') || '').trim().toLowerCase();
+                const cardText = (card.textContent || '').trim().toLowerCase();
+
+                const matchesCat = (currentCat === 'all' || cardCat === currentCat);
+                const matchesSearch = (!currentSearch || cardText.includes(currentSearch));
+
+                if (matchesCat && matchesSearch) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
         filters.forEach(filter => {
             filter.addEventListener('click', function(e) {
                 e.preventDefault();
                 filters.forEach(f => f.classList.remove('active'));
                 this.classList.add('active');
                 
-                const category = this.getAttribute('data-filter');
-                cards.forEach(card => {
-                    if (category === 'All' || card.getAttribute('data-category') === category) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
+                currentCat = (this.getAttribute('data-filter') || '').trim().toLowerCase();
+                filterCards();
             });
         });
+
+        if (searchInput) {
+            searchInput.addEventListener('input', function() {
+                currentSearch = this.value.trim().toLowerCase();
+                filterCards();
+            });
+        }
     });
 </script>
 @endpush

@@ -117,8 +117,8 @@ $seo = [
                         <li><a href="{{ route('insights.index') }}" class="text-white opacity-60 text-decoration-none hover-opacity-100">Insights</a></li>
                         <li class="text-white opacity-40">/</li>
                         <li><a href="#" class="text-white opacity-60 text-decoration-none hover-opacity-100">{{ $post->category }}</a></li>
-                        <li class="text-white opacity-40">/</li>
-                        <li class="text-white" style="color: #ffd2b1 !important;">{{ Str::limit($post->title, 35) }}</li>
+                        {{-- <li class="text-white opacity-40">/</li>
+                        <li class="text-white" style="color: #ffd2b1 !important;">{{ Str::limit($post->title, 35) }}</li> --}}
                     </ul>
                     <h1 class="text-glow-headline mb-4" style="font-size: clamp(32px, 4.5vw, 56px);">{{ $post->title }}</h1>
                     <div class="d-flex align-items-center gap-3 text-white">

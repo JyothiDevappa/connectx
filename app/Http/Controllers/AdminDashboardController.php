@@ -12,7 +12,7 @@ class AdminDashboardController extends Controller
      */
     public function index($section = 'overview')
     {
-        $allowedSections = ['overview', 'connectors', 'sponsers', 'partners', 'speakers', 'careers', 'internships', 'posted_jobs', 'contacts', 'featured_guests', 'story_submissions', 'posts'];
+        $allowedSections = ['overview', 'connectors', 'sponsers', 'partners', 'speakers', 'careers', 'internships', 'posted_jobs', 'contacts', 'featured_guests', 'story_submissions', 'posts', 'categories'];
         // Also accept 'sponsors' alias and normalise to 'sponsers' for JS compatibility
         if ($section === 'sponsors') $section = 'sponsers';
         if (!in_array($section, $allowedSections)) {
@@ -199,7 +199,21 @@ class AdminDashboardController extends Controller
             ];
         });
 
-        return view('admin.dashboard', compact('section', 'connectors', 'partners', 'sponsers', 'postedJobs', 'careers', 'internships', 'contacts', 'speakers', 'featuredGuests', 'storySubmissions', 'posts'));
+        $categories = \App\Models\Category::orderBy('name')->get()->map(function ($c) {
+            return [
+                'id'        => $c->id,
+                'name'      => $c->name,
+                'slug'      => $c->slug,
+                'submitted' => $c->created_at->format('Y-m-d'),
+            ];
+        });
+
+        $viewName = 'admin.' . ($section === 'sponsers' ? 'sponsors' : $section);
+        if (view()->exists($viewName)) {
+            return view($viewName, compact('section', 'connectors', 'partners', 'sponsers', 'postedJobs', 'careers', 'internships', 'contacts', 'speakers', 'featuredGuests', 'storySubmissions', 'posts', 'categories'));
+        }
+
+        return view('admin.dashboard', compact('section', 'connectors', 'partners', 'sponsers', 'postedJobs', 'careers', 'internships', 'contacts', 'speakers', 'featuredGuests', 'storySubmissions', 'posts', 'categories'));
     }
 
     /**
@@ -750,19 +764,22 @@ class AdminDashboardController extends Controller
     {
         $posts = \App\Models\Post::orderByDesc('created_at')->get()->map(function ($post) {
             return [
-                'id'            => $post->id,
-                'title'         => $post->title,
-                'slug'          => $post->slug,
-                'category'      => $post->category,
-                'read_time'     => $post->read_time,
-                'image'         => $post->image,
-                'excerpt'       => $post->excerpt,
-                'content'       => $post->content,
-                'author_name'   => $post->author_name,
-                'author_role'   => $post->author_role,
-                'author_avatar' => $post->author_avatar,
-                'status'        => $post->status,
-                'submitted'     => $post->created_at->format('Y-m-d'),
+                'id'               => $post->id,
+                'title'            => $post->title,
+                'slug'             => $post->slug,
+                'category'         => $post->category,
+                'read_time'        => $post->read_time,
+                'image'            => $post->image,
+                'excerpt'          => $post->excerpt,
+                'content'          => $post->content,
+                'author_name'      => $post->author_name,
+                'author_role'      => $post->author_role,
+                'author_avatar'    => $post->author_avatar,
+                'status'           => $post->status,
+                'meta_title'       => $post->meta_title,
+                'meta_description' => $post->meta_description,
+                'meta_keywords'    => $post->meta_keywords,
+                'submitted'        => $post->created_at->format('Y-m-d'),
             ];
         });
         return response()->json($posts);
@@ -774,15 +791,18 @@ class AdminDashboardController extends Controller
     public function savePost(Request $request, $id = null)
     {
         $validated = $request->validate([
-            'title'       => 'required|string|max:255',
-            'category'    => 'required|string|max:255',
-            'read_time'   => 'nullable|string|max:255',
-            'image'       => 'nullable|string|max:255',
-            'excerpt'     => 'nullable|string|max:1000',
-            'content'     => 'required|string',
-            'author_name' => 'nullable|string|max:255',
-            'author_role' => 'nullable|string|max:255',
-            'status'      => 'required|string|in:published,draft',
+            'title'            => 'required|string|max:255',
+            'category'         => 'required|string|max:255',
+            'read_time'        => 'nullable|string|max:255',
+            'image'            => 'nullable|string|max:255',
+            'excerpt'          => 'nullable|string|max:1000',
+            'content'          => 'required|string',
+            'author_name'      => 'nullable|string|max:255',
+            'author_role'      => 'nullable|string|max:255',
+            'status'           => 'required|string|in:published,draft',
+            'meta_title'       => 'nullable|string|max:255',
+            'meta_description' => 'nullable|string|max:1000',
+            'meta_keywords'    => 'nullable|string|max:500',
         ]);
 
         if ($id) {
@@ -838,15 +858,18 @@ class AdminDashboardController extends Controller
     public function savePostForm(Request $request)
     {
         $validated = $request->validate([
-            'title'       => 'required|string|max:255',
-            'category'    => 'required|string|max:255',
-            'read_time'   => 'nullable|string|max:255',
-            'image'       => 'nullable|string|max:255',
-            'excerpt'     => 'nullable|string|max:1000',
-            'content'     => 'required|string',
-            'author_name' => 'nullable|string|max:255',
-            'author_role' => 'nullable|string|max:255',
-            'status'      => 'required|string|in:published,draft',
+            'title'            => 'required|string|max:255',
+            'category'         => 'required|string|max:255',
+            'read_time'        => 'nullable|string|max:255',
+            'image'            => 'nullable|string|max:255',
+            'excerpt'          => 'nullable|string|max:1000',
+            'content'          => 'required|string',
+            'author_name'      => 'nullable|string|max:255',
+            'author_role'      => 'nullable|string|max:255',
+            'status'           => 'required|string|in:published,draft',
+            'meta_title'       => 'nullable|string|max:255',
+            'meta_description' => 'nullable|string|max:1000',
+            'meta_keywords'    => 'nullable|string|max:500',
         ]);
 
         $validated['slug'] = \Illuminate\Support\Str::slug($validated['title']);
@@ -870,15 +893,18 @@ class AdminDashboardController extends Controller
         $post = \App\Models\Post::findOrFail($id);
 
         $validated = $request->validate([
-            'title'       => 'required|string|max:255',
-            'category'    => 'required|string|max:255',
-            'read_time'   => 'nullable|string|max:255',
-            'image'       => 'nullable|string|max:255',
-            'excerpt'     => 'nullable|string|max:1000',
-            'content'     => 'required|string',
-            'author_name' => 'nullable|string|max:255',
-            'author_role' => 'nullable|string|max:255',
-            'status'      => 'required|string|in:published,draft',
+            'title'            => 'required|string|max:255',
+            'category'         => 'required|string|max:255',
+            'read_time'        => 'nullable|string|max:255',
+            'image'            => 'nullable|string|max:255',
+            'excerpt'          => 'nullable|string|max:1000',
+            'content'          => 'required|string',
+            'author_name'      => 'nullable|string|max:255',
+            'author_role'      => 'nullable|string|max:255',
+            'status'           => 'required|string|in:published,draft',
+            'meta_title'       => 'nullable|string|max:255',
+            'meta_description' => 'nullable|string|max:1000',
+            'meta_keywords'    => 'nullable|string|max:500',
         ]);
 
         $validated['slug'] = \Illuminate\Support\Str::slug($validated['title']);
@@ -892,5 +918,81 @@ class AdminDashboardController extends Controller
 
         return redirect()->route('admin.dashboard', 'posts')
             ->with('success', 'Article updated successfully.');
+    }
+
+    /**
+     * Return categories as JSON.
+     */
+    public function categories(Request $request)
+    {
+        $cats = \App\Models\Category::orderBy('name')->get();
+        // Seed default categories if table is empty
+        if ($cats->isEmpty()) {
+            $defaults = ['Storytelling', 'Networking', 'Learning', 'Personal Branding', 'Collaboration', 'Career Growth', 'Entrepreneurship'];
+            foreach ($defaults as $d) {
+                \App\Models\Category::create(['name' => $d, 'slug' => \Illuminate\Support\Str::slug($d)]);
+            }
+            $cats = \App\Models\Category::orderBy('name')->get();
+        }
+        return response()->json($cats->map(function ($c) {
+            return [
+                'id'        => $c->id,
+                'name'      => $c->name,
+                'slug'      => $c->slug,
+                'submitted' => $c->created_at ? $c->created_at->format('Y-m-d') : null,
+            ];
+        }));
+    }
+
+    /**
+     * Save or update category.
+     */
+    public function saveCategory(Request $request, $id = null)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255|unique:categories,name' . ($id ? ',' . $id : ''),
+            'slug' => 'nullable|string|max:255|unique:categories,slug' . ($id ? ',' . $id : ''),
+        ], [
+            'name.unique' => 'The category is already existed',
+            'slug.unique' => 'The category is already existed'
+        ]);
+
+        if (empty($validated['slug'])) {
+            $validated['slug'] = \Illuminate\Support\Str::slug($validated['name']);
+        } else {
+            $validated['slug'] = \Illuminate\Support\Str::slug($validated['slug']);
+        }
+
+        if ($id) {
+            $cat = \App\Models\Category::findOrFail($id);
+            $cat->update($validated);
+        } else {
+            $cat = \App\Models\Category::create($validated);
+        }
+
+        return response()->json([
+            'type'    => 'success',
+            'message' => 'Category saved successfully.',
+            'data'    => [
+                'id'        => $cat->id,
+                'name'      => $cat->name,
+                'slug'      => $cat->slug,
+                'submitted' => $cat->created_at ? $cat->created_at->format('Y-m-d') : null,
+            ]
+        ]);
+    }
+
+    /**
+     * Delete category.
+     */
+    public function deleteCategory($id)
+    {
+        $cat = \App\Models\Category::findOrFail($id);
+        $cat->delete();
+
+        return response()->json([
+            'type'    => 'success',
+            'message' => 'Category deleted successfully.'
+        ]);
     }
 }

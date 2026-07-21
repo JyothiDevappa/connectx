@@ -48,7 +48,8 @@
     {{-- ── Global overflow & layout fixes ───────────────────── --}}
     <style>
         html, body {
-            overflow-x: hidden !important;
+            overflow-x: clip !important;
+            overflow-y: visible !important;
             max-width: 100%;
         }
         body > * {

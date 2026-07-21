@@ -194,13 +194,13 @@ button {
 }
 
 .sb-nav a.active {
-  color: var(--ink);
-  background: var(--peach);
+  color: var(--cream);
+  background: rgba(255, 250, 244, 0.07);
   font-weight: 700;
 }
 
 .sb-nav a.active svg {
-  color: var(--ink);
+  color: var(--cream);
 }
 
 .sb-count {

@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard — ConnectX YCX</title>
   <meta name="description" content="Young Chanakya X Admin Dashboard — manage sponsers, partners, speakers, careers and internship submissions.">
-  <link rel="icon" href="{{ asset('images/fav-icon/favicon.ico') }}">
+  <link rel="icon" type="image/png" href="{{ asset('images/fav-icon/icon.png') }}">
+  <link rel="shortcut icon" href="{{ asset('images/fav-icon/icon.png') }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -18,107 +19,7 @@
 <div class="app-shell">
 
   {{-- ==================== SIDEBAR ==================== --}}
-  <aside class="sidebar">
-    {{-- Logo --}}
-    <div class="sb-logo-wrap">
-      <a href="{{ url('/') }}" title="Go to ConnectX site">
-        <img src="{{ asset('images/logo/logo.png') }}" alt="Young Chanakya X" class="sb-logo-img">
-      </a>
-      <span class="sb-badge">Admin Panel</span>
-    </div>
-
-    {{-- Navigation --}}
-    <span class="sb-section-label">Overview</span>
-    <nav class="sb-nav">
-      <a href="{{ url('/admin/dashboard/overview') }}" class="nav-link" data-section="overview" id="nav-overview">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
-        Dashboard
-      </a>
-
-      <span class="sb-section-label" style="margin-top:8px">Applications</span>
-
-      <a href="{{ url('/admin/dashboard/connectors') }}" class="nav-link" data-section="connectors" id="nav-connectors">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
-        Connectors
-        <span class="sb-count" id="sbCount-connectors">0</span>
-      </a>
-
-      <a href="{{ url('/admin/dashboard/sponsers') }}" class="nav-link" data-section="sponsers" id="nav-sponsers">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-        Sponsors
-        <span class="sb-count" id="sbCount-sponsers">0</span>
-      </a>
-
-      <a href="{{ url('/admin/dashboard/partners') }}" class="nav-link" data-section="partners" id="nav-partners">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-        Partners
-        <span class="sb-count" id="sbCount-partners">0</span>
-      </a>
-
-      <a href="{{ url('/admin/dashboard/speakers') }}" class="nav-link" data-section="speakers" id="nav-speakers">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-        Speakers
-        <span class="sb-count" id="sbCount-speakers">0</span>
-      </a>
-
-      <a href="{{ url('/admin/dashboard/careers') }}" class="nav-link" data-section="careers" id="nav-careers">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
-        Careers
-        <span class="sb-count" id="sbCount-careers">0</span>
-      </a>
-
-      <a href="{{ url('/admin/dashboard/internships') }}" class="nav-link" data-section="internships" id="nav-internships">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg>
-        Internships
-        <span class="sb-count" id="sbCount-internships">0</span>
-      </a>
-
-      <a href="{{ url('/admin/dashboard/posted_jobs') }}" class="nav-link" data-section="posted_jobs" id="nav-posted_jobs">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-        Manage Jobs
-        <span class="sb-count" id="sbCount-posted_jobs">0</span>
-      </a>
-
-      <a href="{{ url('/admin/dashboard/contacts') }}" class="nav-link" data-section="contacts" id="nav-contacts">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        Contact Inquiries
-        <span class="sb-count" id="sbCount-contacts">0</span>
-      </a>
-
-      <a href="{{ url('/admin/dashboard/featured_guests') }}" class="nav-link" data-section="featured_guests" id="nav-featured_guests">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/><path d="M12 14v7M9 18l3 3 3-3"/></svg>
-        Guest Features
-        <span class="sb-count" id="sbCount-featured_guests">0</span>
-      </a>
-
-      <a href="{{ url('/admin/dashboard/story_submissions') }}" class="nav-link" data-section="story_submissions" id="nav-story_submissions">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
-        Story Talks
-        <span class="sb-count" id="sbCount-story_submissions">0</span>
-      </a>
-
-      <a href="{{ url('/admin/dashboard/posts') }}" class="nav-link" data-section="posts" id="nav-posts">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/><path d="M4 12h8m-8-4h12m-12 8h4"/></svg>
-        Blog CMS
-        <span class="sb-count" id="sbCount-posts">0</span>
-      </a>
-    </nav>
-
-    {{-- Admin Profile --}}
-    <div class="sb-admin">
-      <span class="av">{{ strtoupper(substr(Auth::user()->name ?? 'A', 0, 2)) }}</span>
-      <div style="flex:1;min-width:0;">
-        <div class="an">{{ Auth::user()->name ?? 'Admin' }}</div>
-        <div class="ar">Super Admin</div>
-      </div>
-      <form method="POST" action="{{ route('admin.logout') }}" style="flex-shrink:0;">
-        @csrf
-        <button type="submit" title="Logout" style="width:30px;height:30px;border-radius:8px;background:rgba(255,250,244,0.08);color:rgba(255,250,244,0.5);display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;transition:all .15s;" onmouseover="this.style.background='rgba(255,100,100,0.2)';this.style.color='#ff9090'" onmouseout="this.style.background='rgba(255,250,244,0.08)';this.style.color='rgba(255,250,244,0.5)'">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
-        </button>
-      </form>
-    </div>
-  </aside>
+  @include('admin.sidebar')
 
   {{-- ==================== MAIN CONTENT ==================== --}}
   <main class="main">
@@ -135,10 +36,16 @@
           Add New Job
         </button>
       </div>
-      <div id="addPostContainer" style="display:none; margin-left: auto; margin-right: 14px;">
-        <button id="addPostBtn" style="background:#0c3a30; color:#fff; border-radius:8px; padding:10px 18px; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:8px; border:none;">
+      <div id="addPostContainer" style="display:none; margin-left: auto; margin-right: 14px; gap: 10px; align-items: center;">
+        <button id="addPostBtn" style="background:#0c3a30; color:#fff; border-radius:8px; padding:10px 18px; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:8px; border:none;">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           Create Post
+        </button>
+      </div>
+      <div id="addCategoryContainer" style="display:none; margin-left: auto; margin-right: 14px;">
+        <button id="openCreateCatBtn" style="background:#0c3a30; color:#fff; border-radius:8px; padding:10px 18px; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:8px; border:none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Create Category
         </button>
       </div>
       <div class="search-box">
@@ -154,28 +61,48 @@
     <div id="overviewPanel" style="display:none;">
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-top:10px;">
         <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px 20px;cursor:pointer;transition:box-shadow .2s;" onclick="switchSection('connectors')" class="overview-card">
-          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-connectors">0</div>
+          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-connectors">{{ count($connectors) }}</div>
           <div style="font-size:12.5px;font-weight:700;color:var(--text-soft);margin-top:4px;">Connector Applications</div>
         </div>
         <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px 20px;cursor:pointer;transition:box-shadow .2s;" onclick="switchSection('sponsers')" class="overview-card">
-          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-sponsers">0</div>
-          <div style="font-size:12.5px;font-weight:700;color:var(--text-soft);margin-top:4px;">sponser Applications</div>
+          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-sponsers">{{ count($sponsers) }}</div>
+          <div style="font-size:12.5px;font-weight:700;color:var(--text-soft);margin-top:4px;">Sponsor Applications</div>
         </div>
         <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px 20px;cursor:pointer;transition:box-shadow .2s;" onclick="switchSection('partners')" class="overview-card">
-          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-partners">0</div>
+          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-partners">{{ count($partners) }}</div>
           <div style="font-size:12.5px;font-weight:700;color:var(--text-soft);margin-top:4px;">Partner Applications</div>
         </div>
         <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px 20px;cursor:pointer;transition:box-shadow .2s;" onclick="switchSection('speakers')" class="overview-card">
-          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-speakers">0</div>
+          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-speakers">{{ count($speakers) }}</div>
           <div style="font-size:12.5px;font-weight:700;color:var(--text-soft);margin-top:4px;">Speaker Applications</div>
         </div>
         <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px 20px;cursor:pointer;transition:box-shadow .2s;" onclick="switchSection('careers')" class="overview-card">
-          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-careers">0</div>
+          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-careers">{{ count($careers) }}</div>
           <div style="font-size:12.5px;font-weight:700;color:var(--text-soft);margin-top:4px;">Career Applications</div>
         </div>
         <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px 20px;cursor:pointer;transition:box-shadow .2s;" onclick="switchSection('internships')" class="overview-card">
-          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-internships">0</div>
+          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-internships">{{ count($internships) }}</div>
           <div style="font-size:12.5px;font-weight:700;color:var(--text-soft);margin-top:4px;">Internship Applications</div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px 20px;cursor:pointer;transition:box-shadow .2s;" onclick="switchSection('posted_jobs')" class="overview-card">
+          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-posted_jobs">{{ count($postedJobs) }}</div>
+          <div style="font-size:12.5px;font-weight:700;color:var(--text-soft);margin-top:4px;">Manage Jobs</div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px 20px;cursor:pointer;transition:box-shadow .2s;" onclick="switchSection('contacts')" class="overview-card">
+          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-contacts">{{ count($contacts) }}</div>
+          <div style="font-size:12.5px;font-weight:700;color:var(--text-soft);margin-top:4px;">Contact Inquiries</div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px 20px;cursor:pointer;transition:box-shadow .2s;" onclick="switchSection('featured_guests')" class="overview-card">
+          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-featured_guests">{{ count($featuredGuests) }}</div>
+          <div style="font-size:12.5px;font-weight:700;color:var(--text-soft);margin-top:4px;">Guest Features</div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px 20px;cursor:pointer;transition:box-shadow .2s;" onclick="switchSection('story_submissions')" class="overview-card">
+          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-story_submissions">{{ count($storySubmissions) }}</div>
+          <div style="font-size:12.5px;font-weight:700;color:var(--text-soft);margin-top:4px;">Story Talks</div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px 20px;cursor:pointer;transition:box-shadow .2s;" onclick="switchSection('posts')" class="overview-card">
+          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-posts">{{ count($posts) }}</div>
+          <div style="font-size:12.5px;font-weight:700;color:var(--text-soft);margin-top:4px;">Insights Articles</div>
         </div>
       </div>
     </div>
@@ -226,6 +153,8 @@
   <div class="drawer-body" id="drawerBody"></div>
 </div>
 
+
+
 <style>
   .overview-card:hover { box-shadow: 0 4px 20px rgba(12,58,48,0.12); transform: translateY(-2px); }
   .overview-card { transition: box-shadow .2s, transform .2s !important; }
@@ -258,7 +187,9 @@ const DATA = {
 
   story_submissions: @json($storySubmissions),
 
-  posts: @json($posts)
+  posts: @json($posts),
+
+  categories: @json($categories)
 };
 
 
@@ -271,7 +202,7 @@ const SECTION_CONFIG = {
     subtitle: "Welcome back, Sangeetha. Here's what's happening today."
   },
   sponsers: {
-    title: "sponser Applications",
+    title: "Sponsor Applications",
     subtitle: "Companies and individuals who applied to sponser Young Chanakya X events.",
     statusOptions: ["confirmed","pending","declined"],
     statusLabels: { confirmed:"Confirmed", pending:"Pending", declined:"Declined" },
@@ -510,7 +441,11 @@ const SECTION_CONFIG = {
     statusOptions: ["published", "draft"],
     statusLabels: { published: "Published", draft: "Draft" },
     typeField: "category",
-    typeValues: ["Storytelling", "Networking", "Learning", "Personal Branding", "Collaboration", "Career Growth", "Entrepreneurship"],
+    get typeValues() {
+      return (DATA && DATA.categories && DATA.categories.length) 
+        ? DATA.categories.map(c => c.name) 
+        : ["Storytelling", "Networking", "Learning", "Personal Branding", "Collaboration", "Career Growth", "Entrepreneurship"];
+    },
     liveApi: "{{ route('admin.api.posts') }}",
     updateApi: "{{ url('/admin/api/posts') }}",
     columns: [
@@ -525,6 +460,25 @@ const SECTION_CONFIG = {
       { label:"Total Articles", fn: d => d.length },
       { label:"Published", fn: d => d.filter(x=>x.status==='published').length },
       { label:"Drafts", fn: d => d.filter(x=>x.status==='draft').length }
+    ]
+  },
+  categories: {
+    title: "Insights Categories",
+    subtitle: "Manage dynamic categories available for insights articles and filtering.",
+    statusOptions: [],
+    statusLabels: {},
+    typeField: "name",
+    typeValues: [],
+    liveApi: "{{ route('admin.api.categories') }}",
+    updateApi: "{{ url('/admin/api/categories') }}",
+    columns: [
+      { key:"name", label:"Category Name" },
+      { key:"slug", label:"Slug" },
+      { key:"submitted", label:"Created Date" },
+      { key:"action", label:"Actions" }
+    ],
+    stats: [
+      { label:"Total Categories", fn: d => d.length }
     ]
   }
 };
@@ -631,6 +585,17 @@ async function updateCounts(){
     console.error("Error loading story submissions from database", e);
   }
 
+  // Load categories dynamically from DB
+  try {
+    const resCat = await fetch("{{ route('admin.api.categories') }}");
+    if(resCat.ok) {
+      DATA.categories = await resCat.json();
+      SECTION_CONFIG.posts.typeValues = DATA.categories.map(c => c.name);
+    }
+  } catch(e) {
+    console.error("Error loading categories from database", e);
+  }
+
   // Load posts dynamically from DB
   try {
     const res4 = await fetch("{{ route('admin.api.posts') }}");
@@ -641,18 +606,18 @@ async function updateCounts(){
     console.error("Error loading posts from database", e);
   }
 
-  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions','posts'].forEach(s => {
+  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions','posts','categories'].forEach(s => {
     const el = document.getElementById('sbCount-' + s);
     if(el) el.textContent = DATA[s] ? DATA[s].length : 0;
   });
   // Overview panels
-  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions','posts'].forEach(s => {
+  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions','posts','categories'].forEach(s => {
     const el = document.getElementById('ov-' + s);
     if(el && DATA[s]) el.textContent = DATA[s].length;
   });
 
   // If currently viewing database sections, refresh to show fetched data
-  if(['connectors','partners','sponsers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions','posts','overview'].includes(currentSection)) {
+  if(['connectors','partners','sponsers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions','posts','categories','overview'].includes(currentSection)) {
     if(currentSection === 'overview') renderOverviewStats();
     else renderTable(currentSection);
   }
@@ -680,7 +645,24 @@ function switchSection(section){
   // Show/Hide Add Post Button
   const addPostCont = document.getElementById('addPostContainer');
   if(addPostCont) {
-    addPostCont.style.display = (section === 'posts') ? 'block' : 'none';
+    addPostCont.style.display = (section === 'posts') ? 'flex' : 'none';
+  }
+
+  // Show/Hide Add Category Button
+  const addCatCont = document.getElementById('addCategoryContainer');
+  if(addCatCont) {
+    addCatCont.style.display = (section === 'categories') ? 'block' : 'none';
+  }
+
+  // Expand Blog dropdown if viewing posts or categories
+  const blogSubmenu = document.getElementById('blogSubmenu');
+  const blogDropdownBtn = document.getElementById('blogDropdownBtn');
+  if (['posts', 'categories'].includes(section)) {
+    if (blogSubmenu) blogSubmenu.style.display = 'flex';
+    if (blogDropdownBtn) {
+      const chevron = blogDropdownBtn.querySelector('.dropdown-chevron');
+      if (chevron) chevron.style.transform = 'rotate(180deg)';
+    }
   }
 
   const cfg = SECTION_CONFIG[section];
@@ -706,8 +688,13 @@ function switchSection(section){
   }
 
   overviewPanel.style.display = 'none';
-  filterBar.style.display     = 'flex';
   tableCard.style.display     = 'block';
+
+  if (section === 'categories') {
+    filterBar.style.display = 'none';
+  } else {
+    filterBar.style.display = 'flex';
+  }
 
   renderStats(section);
   
@@ -897,7 +884,23 @@ function renderCell(col, d, section){
         </select>
       </td>`;
     }
+    case 'name':
+      return `<td><div class="cell-primary" style="font-weight:700; color:#0c3a30;">${d.name || ''}</div></td>`;
+    case 'slug':
+      return `<td><div class="cell-secondary" style="font-family:monospace;">${d.slug || ''}</div></td>`;
     case 'action':
+      if (section === 'categories') {
+        return `<td>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <button type="button" onclick="openCatModalEdit(${d.id}, '${d.name.replace(/'/g, "\\'")}')" class="view-btn" title="Edit category" style="background:#0c3a30; color:#fff; border-color:#0c3a30; display:inline-flex; align-items:center; justify-content:center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 113 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            </button>
+            <button type="button" onclick="deleteCategory(${d.id})" class="view-btn" title="Delete category" style="background:#dc3545; color:#fff; border-color:#dc3545; display:inline-flex; align-items:center; justify-content:center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>
+            </button>
+          </div>
+        </td>`;
+      }
       if (section === 'posted_jobs') {
         return `<td>
           <div style="display:flex; gap:8px; align-items:center;">
@@ -938,10 +941,11 @@ function renderCell(col, d, section){
 function renderTable(section){
   const cfg      = SECTION_CONFIG[section];
   const filtered = getFiltered(section);
-  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const pageSize = (section === 'categories') ? 10 : PAGE_SIZE;
+  const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
   currentPage = Math.min(currentPage, totalPages);
-  const start    = (currentPage - 1) * PAGE_SIZE;
-  const pageItems = filtered.slice(start, start + PAGE_SIZE);
+  const start    = (currentPage - 1) * pageSize;
+  const pageItems = filtered.slice(start, start + pageSize);
 
   // Render thead
   document.getElementById('tableHead').innerHTML = `<tr>${cfg.columns.map(c => `<th>${c.label}</th>`).join('')}</tr>`;
@@ -1037,7 +1041,7 @@ function renderTable(section){
 
   // Pagination
   document.getElementById('pagination').innerHTML = `
-    <span class="p-info">Showing ${filtered.length===0?0:start+1}–${Math.min(start+PAGE_SIZE, filtered.length)} of ${filtered.length} entries</span>
+    <span class="p-info">Showing ${filtered.length===0?0:start+1}–${Math.min(start+pageSize, filtered.length)} of ${filtered.length} entries</span>
     <div class="p-controls">
       <button class="p-btn" id="prevPage" ${currentPage===1?'disabled':''}>&#8592;</button>
       ${Array.from({length: totalPages}, (_,i) => i+1).map(p => `<button class="p-btn ${p===currentPage?'active':''}" data-page="${p}">${p}</button>`).join('')}
@@ -1058,18 +1062,23 @@ function renderTable(section){
 const drawer        = document.getElementById('drawer');
 const drawerOverlay = document.getElementById('drawerOverlay');
 let activeDrawerItem = null;
+let activeDrawerSection = null;
 
 function openDrawer(section, id){
   let d;
-  if (section === 'posted_jobs' && id === null) {
+  const numId = (id !== null && id !== undefined && id !== '') ? String(id) : '0';
+  if (section === 'posted_jobs' && numId === '0') {
     d = { id: null, title: '', category: 'career', department: '', work_mode: 'Remote', experience: '', duration: '', location: '', skills: '', tagline: '', content: '', status: 'active', notes: '' };
-  } else if (section === 'posts' && id === null) {
+  } else if (section === 'posts' && numId === '0') {
     d = { id: null, title: '', category: 'Storytelling', read_time: '', image: '', excerpt: '', content: '', author_name: 'Anjali Sharma', author_role: 'Founder, YCX Insights', status: 'published' };
+  } else if (section === 'categories' && numId === '0') {
+    d = { id: null, name: '', slug: '' };
   } else {
-    d = DATA[section].find(x => x.id === id);
+    d = DATA[section].find(x => String(x.id) === numId);
   }
   if(!d) return;
-  activeDrawerItem = { section, id };
+  activeDrawerItem = d;
+  activeDrawerSection = section;
 
   let subText = '';
   let badges  = '';
@@ -1134,6 +1143,11 @@ function openDrawer(section, id){
     subText = d.title || 'New Blog Post';
     badges  = `<span class="badge badge-platinum">Blog Post</span>`;
     bodyHTML = postBody(d);
+  } else if(section === 'categories'){
+    document.getElementById('dName').textContent = d.id ? 'Edit Category' : 'Create Category';
+    subText = d.name || 'New Category';
+    badges  = `<span class="badge badge-platinum">Category</span>`;
+    bodyHTML = categoryBody(d);
   }
 
   document.getElementById('dSub').textContent  = subText;
@@ -1158,6 +1172,8 @@ function openDrawer(section, id){
       .catch(err => {
         console.error("CKEditor load failed", err);
       });
+  } else if (section === 'categories') {
+    // Category drawer uses its own form — no generic status wiring needed
   } else {
     // Wire save button for regular admin status forms
     const saveBtn = document.getElementById('dSaveBtn');
@@ -1386,7 +1402,7 @@ function connectorBody(d){
 }
 
 function contactBody(d){
-  const section = activeDrawerItem.section;
+  const section = activeDrawerSection;
   const cfg = SECTION_CONFIG[section];
   return `
     <div class="dsection">
@@ -1467,7 +1483,7 @@ function storyBody(d){
 }
 
 function careerBody(d){
-  const section = activeDrawerItem.section;
+  const section = activeDrawerSection;
   const cfg = SECTION_CONFIG[section];
   
   let educationHTML = '';
@@ -1547,6 +1563,37 @@ function careerBody(d){
     </div>
 
     ${adminSection(section, cfg.statusOptions, cfg.statusLabels, d.status)}
+  `;
+}
+
+function categoryBody(d){
+  return `
+    <form id="catDrawerForm" onsubmit="event.preventDefault(); saveCatDrawerData();">
+      <div class="dsection">
+        <h4>Category Information</h4>
+        <div class="dgrid" style="display:grid; grid-template-columns:1fr; gap:14px;">
+          <div class="dfield" style="display:flex; flex-direction:column; gap:4px;">
+            <span class="fl" style="font-weight:700; font-size:12px; color:#0c3a30;">Category Name *</span>
+            <input type="text" id="catDrawer-name" value="${d.name || ''}" required placeholder="e.g. Technology" style="border:1px solid #ccc; padding:10px 14px; border-radius:8px; font-size:13.5px;">
+          </div>
+          <div class="dfield" style="display:flex; flex-direction:column; gap:4px;">
+            <span class="fl" style="font-weight:700; font-size:12px; color:#0c3a30;">Category Slug (optional - auto-generated if left blank)</span>
+            <input type="text" id="catDrawer-slug" value="${d.slug || ''}" placeholder="e.g. technology" style="border:1px solid #ccc; padding:10px 14px; border-radius:8px; font-size:13.5px;">
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:12px; margin-top:24px; padding-top:14px; border-top:1px solid #eee;">
+        <button type="submit" class="status-select confirmed" style="background:#0c3a30; color:#fff; border:none; padding:12px 24px; border-radius:8px; font-weight:700; cursor:pointer;">
+          Save Category
+        </button>
+        ${d.id ? `
+          <button type="button" onclick="deleteCategory(${d.id})" class="status-select declined" style="background:#dc3545; color:#fff; border:none; padding:12px 24px; border-radius:8px; font-weight:700; cursor:pointer;">
+            Delete Category
+          </button>
+        ` : ''}
+      </div>
+    </form>
   `;
 }
 
@@ -1715,6 +1762,99 @@ if (addPostButton) {
   });
 }
 
+// Bind Create Category topbar button
+const openCreateCatBtn = document.getElementById('openCreateCatBtn');
+if (openCreateCatBtn) {
+  openCreateCatBtn.addEventListener('click', () => {
+    openDrawer('categories', 0);
+  });
+}
+
+window.openCatModalEdit = function(id, name) {
+  openDrawer('categories', id);
+};
+
+async function saveCatDrawerData() {
+  const item = activeDrawerItem;
+  const id = item.id;
+  const name = document.getElementById('catDrawer-name').value.trim();
+  const slug = document.getElementById('catDrawer-slug') ? document.getElementById('catDrawer-slug').value.trim() : '';
+  if (!name) return;
+
+  const url = id ? `/admin/api/categories/${id}` : '/admin/api/categories';
+  try {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+      },
+      body: JSON.stringify({ name, slug })
+    });
+    if (res.ok) {
+      const resData = await res.json();
+      if (id) {
+        const index = DATA.categories.findIndex(c => c.id == id);
+        if (index !== -1) DATA.categories[index] = resData.data;
+      } else {
+        DATA.categories.unshift(resData.data);
+      }
+      SECTION_CONFIG.posts.typeValues = DATA.categories.map(c => c.name);
+      closeDrawer();
+      renderStats('categories');
+      const sbCat = document.getElementById('sbCount-categories');
+      if (sbCat) sbCat.textContent = DATA.categories.length;
+      const ovCat = document.getElementById('ov-categories');
+      if (ovCat) ovCat.textContent = DATA.categories.length;
+      renderTable('categories');
+    } else {
+      const err = await res.json();
+      let msg = "The category is already existed";
+      if (err.errors && err.errors.name) {
+        msg = err.errors.name[0];
+      } else if (err.errors && err.errors.slug) {
+        msg = err.errors.slug[0];
+      } else if (err.message && err.message.includes('unique')) {
+        msg = "The category is already existed";
+      } else if (err.message) {
+        msg = err.message;
+      }
+      alert(msg);
+    }
+  } catch(err) {
+    console.error(err);
+    alert("The category is already existed");
+  }
+}
+
+window.deleteCategory = async function(id) {
+  if (!confirm("Are you sure you want to delete this category?")) return;
+  try {
+    const res = await fetch(`/admin/api/categories/${id}`, {
+      method: 'POST',
+      headers: {
+        'X-CSRF-TOKEN': '{{ csrf_token() }}',
+        'X-HTTP-Method-Override': 'DELETE'
+      }
+    });
+    if (res.ok) {
+      DATA.categories = DATA.categories.filter(c => c.id !== id);
+      SECTION_CONFIG.posts.typeValues = DATA.categories.map(c => c.name);
+      closeDrawer();
+      renderStats('categories');
+      const sbCat = document.getElementById('sbCount-categories');
+      if (sbCat) sbCat.textContent = DATA.categories.length;
+      const ovCat = document.getElementById('ov-categories');
+      if (ovCat) ovCat.textContent = DATA.categories.length;
+      renderTable('categories');
+    } else {
+      alert("Failed to delete category.");
+    }
+  } catch (e) {
+    console.error(e);
+  }
+};
+
 async function savePostData() {
   const id = activeDrawerItem.id;
   const title = document.getElementById('postEdit-title').value;
@@ -1842,6 +1982,18 @@ async function saveJobApplicationStatus(id, status, notes) {
   } catch(e) {
     console.error("Failed to update candidate status", e);
   }
+}
+
+// Sidebar Blog dropdown toggle listener
+const blogDropdownBtn = document.getElementById('blogDropdownBtn');
+const blogSubmenu = document.getElementById('blogSubmenu');
+if (blogDropdownBtn && blogSubmenu) {
+  blogDropdownBtn.addEventListener('click', () => {
+    const isVisible = blogSubmenu.style.display === 'flex';
+    blogSubmenu.style.display = isVisible ? 'none' : 'flex';
+    const chevron = blogDropdownBtn.querySelector('.dropdown-chevron');
+    if (chevron) chevron.style.transform = isVisible ? 'rotate(0deg)' : 'rotate(180deg)';
+  });
 }
 
 /* =====================================================

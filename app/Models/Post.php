@@ -22,6 +22,9 @@ class Post extends Model
         'author_role',
         'author_avatar',
         'status',
+        'meta_title',
+        'meta_description',
+        'meta_keywords',
     ];
 
     protected static function boot()
