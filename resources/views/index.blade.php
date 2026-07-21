@@ -1327,7 +1327,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
                         <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
                             <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
                                 style="background-image: url('{{ $event['img'] }}');">
-                                <a href="{{ url('/event-details/' . $slug) }}" class="stretched-link rounded-5 date tran3s">{{ $formattedDate }}</a>
+                                {{-- <a href="{{ url('/event-details/' . $slug) }}" class="stretched-link rounded-5 date tran3s">{{ $formattedDate }}</a> --}}
                             </figure>
                             <div class="post-data">
                                 <div class="d-flex justify-content-between align-items-center flex-wrap">
@@ -1361,7 +1361,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
         {{-- Section Header --}}
         <div class="h2-section-header">
             <div class="h2-eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">The DNA of Young Chanakya X</div>
-            <h2 class="h2-heading rv" style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">What Does "<em>X</em>" Mean?</h2>
+            <h2 class="h2-heading rv" style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">What Does "X" Mean?</h2>
             <p class="h2-desc h2-desc--center rv sec-desc" style="line-height: 1.6;">
                 The letter X represents the point where ideas, people, opportunities, and experiences intersect — creating something greater than the sum of its parts.
             </p>

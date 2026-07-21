@@ -64,8 +64,8 @@ Route::get('/checkout', fn() => view('checkout'));
 // =========================
 // INSIGHTS
 // =========================
-Route::get('/insights', fn() => view('blog'))->name('insights.index');
-Route::get('/insights/{slug?}', fn($slug = null) => view('blog-details', compact('slug')))->name('insights.detail');
+Route::get('/insights', [App\Http\Controllers\BlogController::class, 'index'])->name('insights.index');
+Route::get('/insights/{slug?}', [App\Http\Controllers\BlogController::class, 'show'])->name('insights.detail');
 
 // =========================
 // OTHER PAGES
@@ -177,11 +177,23 @@ Route::middleware('admin')->group(function () {
     Route::get('/admin/api/story-submissions', [AdminDashboardController::class, 'storySubmissions'])->name('admin.api.story-submissions');
     Route::post('/admin/api/story-submissions/{id}', [AdminDashboardController::class, 'updateStorySubmission'])->name('admin.api.story-submissions.update');
 
+    // Posts / Blog CMS API
+    Route::get('/admin/api/posts', [AdminDashboardController::class, 'posts'])->name('admin.api.posts');
+    Route::post('/admin/api/posts', [AdminDashboardController::class, 'savePost'])->name('admin.api.posts.create');
+    Route::post('/admin/api/posts/{id}', [AdminDashboardController::class, 'savePost'])->name('admin.api.posts.update');
+    Route::delete('/admin/api/posts/{id}', [AdminDashboardController::class, 'deletePost'])->name('admin.api.posts.delete');
+
     // Jobs full page views
     Route::get('/admin/posted-jobs/create', [AdminDashboardController::class, 'createJobPage'])->name('admin.posted-jobs.create-page');
     Route::get('/admin/posted-jobs/edit/{id}', [AdminDashboardController::class, 'editJobPage'])->name('admin.posted-jobs.edit-page');
     Route::post('/admin/posted-jobs/save', [AdminDashboardController::class, 'savePostedJobForm'])->name('admin.posted-jobs.save-form');
     Route::post('/admin/posted-jobs/update/{id}', [AdminDashboardController::class, 'updatePostedJobForm'])->name('admin.posted-jobs.update-form');
+
+    // Posts / Blog CMS full page views
+    Route::get('/admin/posts/create', [AdminDashboardController::class, 'createPostPage'])->name('admin.posts.create-page');
+    Route::get('/admin/posts/edit/{id}', [AdminDashboardController::class, 'editPostPage'])->name('admin.posts.edit-page');
+    Route::post('/admin/posts/save', [AdminDashboardController::class, 'savePostForm'])->name('admin.posts.save-form');
+    Route::post('/admin/posts/update/{id}', [AdminDashboardController::class, 'updatePostForm'])->name('admin.posts.update-form');
 });
 
 Route::get('/check-db', function() {

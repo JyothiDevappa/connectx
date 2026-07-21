@@ -96,6 +96,12 @@
         Story Talks
         <span class="sb-count" id="sbCount-story_submissions">0</span>
       </a>
+
+      <a href="{{ url('/admin/dashboard/posts') }}" class="nav-link" data-section="posts" id="nav-posts">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/><path d="M4 12h8m-8-4h12m-12 8h4"/></svg>
+        Blog CMS
+        <span class="sb-count" id="sbCount-posts">0</span>
+      </a>
     </nav>
 
     {{-- Admin Profile --}}
@@ -124,9 +130,15 @@
         <p id="pageSubtitle">Welcome back, Sangeetha. Here's what's happening today.</p>
       </div>
       <div id="addJobContainer" style="display:none; margin-left: auto; margin-right: 14px;">
-        <button id="addJobBtn" style="background:#0c3a30; color:#fff; border:none; border-radius:8px; padding:10px 18px; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:8px;">
+        <button id="addJobBtn" style="background:#0c3a30; color:#fff; border-radius:8px; padding:10px 18px; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:8px; border:none;">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           Add New Job
+        </button>
+      </div>
+      <div id="addPostContainer" style="display:none; margin-left: auto; margin-right: 14px;">
+        <button id="addPostBtn" style="background:#0c3a30; color:#fff; border-radius:8px; padding:10px 18px; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:8px; border:none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Create Post
         </button>
       </div>
       <div class="search-box">
@@ -169,8 +181,11 @@
     </div>
 
     {{-- Filter bar --}}
-    <div class="filter-bar" id="filterBar" style="display:none;">
+    <div class="filter-bar" id="filterBar" style="display:none; gap:12px; align-items:center;">
       <div class="type-chips" id="typeChips"></div>
+      <select id="categoryFilter" style="display:none; font-family:inherit; font-size:13.5px; border:1px solid var(--border); border-radius:8px; padding:10px 14px; background:var(--white); color:var(--ink); outline:none;">
+        <option value="all">All Categories</option>
+      </select>
       <select id="statusFilter">
         <option value="all">All Statuses</option>
       </select>
@@ -241,7 +256,9 @@ const DATA = {
 
   featured_guests: @json($featuredGuests),
 
-  story_submissions: @json($storySubmissions)
+  story_submissions: @json($storySubmissions),
+
+  posts: @json($posts)
 };
 
 
@@ -486,6 +503,29 @@ const SECTION_CONFIG = {
       { label:"Pending", fn: d => d.filter(x=>x.status==='pending').length },
       { label:"Declined", fn: d => d.filter(x=>x.status==='declined').length }
     ]
+  },
+  posts: {
+    title: "Blog & Insights CMS",
+    subtitle: "Create, edit, and manage articles published on the Young Chanakya X Insights section.",
+    statusOptions: ["published", "draft"],
+    statusLabels: { published: "Published", draft: "Draft" },
+    typeField: "category",
+    typeValues: ["Storytelling", "Networking", "Learning", "Personal Branding", "Collaboration", "Career Growth", "Entrepreneurship"],
+    liveApi: "{{ route('admin.api.posts') }}",
+    updateApi: "{{ url('/admin/api/posts') }}",
+    columns: [
+      { key:"title", label:"Insights Title" },
+      { key:"category", label:"Category" },
+      { key:"read_time", label:"Read Time" },
+      { key:"submitted", label:"Date Created" },
+      { key:"status", label:"Status" },
+      { key:"action", label:"" }
+    ],
+    stats: [
+      { label:"Total Articles", fn: d => d.length },
+      { label:"Published", fn: d => d.filter(x=>x.status==='published').length },
+      { label:"Drafts", fn: d => d.filter(x=>x.status==='draft').length }
+    ]
   }
 };
 
@@ -591,18 +631,28 @@ async function updateCounts(){
     console.error("Error loading story submissions from database", e);
   }
 
-  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions'].forEach(s => {
+  // Load posts dynamically from DB
+  try {
+    const res4 = await fetch("{{ route('admin.api.posts') }}");
+    if(res4.ok) {
+      DATA.posts = await res4.json();
+    }
+  } catch(e) {
+    console.error("Error loading posts from database", e);
+  }
+
+  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions','posts'].forEach(s => {
     const el = document.getElementById('sbCount-' + s);
     if(el) el.textContent = DATA[s] ? DATA[s].length : 0;
   });
   // Overview panels
-  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions'].forEach(s => {
+  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions','posts'].forEach(s => {
     const el = document.getElementById('ov-' + s);
     if(el && DATA[s]) el.textContent = DATA[s].length;
   });
 
   // If currently viewing database sections, refresh to show fetched data
-  if(['connectors','partners','sponsers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions','overview'].includes(currentSection)) {
+  if(['connectors','partners','sponsers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions','posts','overview'].includes(currentSection)) {
     if(currentSection === 'overview') renderOverviewStats();
     else renderTable(currentSection);
   }
@@ -625,6 +675,12 @@ function switchSection(section){
   const addJobCont = document.getElementById('addJobContainer');
   if(addJobCont) {
     addJobCont.style.display = (section === 'posted_jobs') ? 'block' : 'none';
+  }
+
+  // Show/Hide Add Post Button
+  const addPostCont = document.getElementById('addPostContainer');
+  if(addPostCont) {
+    addPostCont.style.display = (section === 'posts') ? 'block' : 'none';
   }
 
   const cfg = SECTION_CONFIG[section];
@@ -654,6 +710,23 @@ function switchSection(section){
   tableCard.style.display     = 'block';
 
   renderStats(section);
+  
+  // Show/Hide category select dropdown instead of typeChips pills for posts section
+  const categoryFilter = document.getElementById('categoryFilter');
+  const typeChips = document.getElementById('typeChips');
+  if (section === 'posts') {
+    typeChips.style.display = 'none';
+    categoryFilter.style.display = 'inline-block';
+    
+    // Populate categories
+    categoryFilter.innerHTML = `<option value="all">All Categories</option>` +
+      cfg.typeValues.map(v => `<option value="${v}">${v}</option>`).join('');
+  } else {
+    typeChips.style.display = 'flex';
+    categoryFilter.style.display = 'none';
+    categoryFilter.value = 'all';
+  }
+
   renderTypeChips(section);
   renderStatusFilter(section);
   renderTable(section);
@@ -759,10 +832,20 @@ function getFiltered(section){
   const cfg    = SECTION_CONFIG[section];
   const search = document.getElementById('searchInput').value.trim().toLowerCase();
   const status = document.getElementById('statusFilter').value;
+  const categoryVal = document.getElementById('categoryFilter').value;
   return DATA[section].filter(d => {
-    if(activeType !== 'all' && d[cfg.typeField] !== activeType) return false;
+    if (section === 'posts') {
+      if(categoryVal !== 'all' && d.category !== categoryVal) return false;
+    } else {
+      if(activeType !== 'all' && d[cfg.typeField] !== activeType) return false;
+    }
     if(status !== 'all' && d.status !== status) return false;
-    if(search && !(d.name.toLowerCase().includes(search) || d.email.toLowerCase().includes(search))) return false;
+    if(search) {
+      const matchName = d.name ? d.name.toLowerCase().includes(search) : false;
+      const matchTitle = d.title ? d.title.toLowerCase().includes(search) : false;
+      const matchEmail = d.email ? d.email.toLowerCase().includes(search) : false;
+      if (!(matchName || matchTitle || matchEmail)) return false;
+    }
     return true;
   }).sort((a,b) => new Date(b.submitted) - new Date(a.submitted));
 }
@@ -772,6 +855,8 @@ function getFiltered(section){
    ===================================================== */
 function renderCell(col, d, section){
   switch(col.key){
+    case 'title':
+      return `<td><div class="cell-primary">${d.title || ''}</div><div class="cell-secondary">${d.author_name || ''}</div></td>`;
     case 'person':
       return `<td><div class="cell-primary">${d.name}</div><div class="cell-secondary">${d.email}</div></td>`;
     case 'company':
@@ -789,6 +874,14 @@ function renderCell(col, d, section){
     case 'roleCategory':
       return `<td><span class="badge ${d.category==='Tech'||d.roleCategory==='Tech'?'badge-technology':'badge-strategic'}">${d.category||d.roleCategory}</span></td>`;
     case 'category':
+      if (section === 'posts') {
+        const cfg = SECTION_CONFIG[section];
+        return `<td>
+          <select class="category-select" data-id="${d.id}" style="font-family:inherit; font-size:12.5px; border:1px solid var(--border); border-radius:6px; padding:4px 8px; background:var(--bg); color:var(--ink); outline:none;">
+            ${cfg.typeValues.map(c => `<option value="${c}" ${c===d.category?'selected':''}>${c}</option>`).join('')}
+          </select>
+        </td>`;
+      }
       return `<td><span class="badge ${d.category==='internship'?'badge-internship':'badge-career'}">${d.category}</span></td>`;
     case 'message':
       return `<td><div class="cell-secondary" style="max-width:260px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:13px; color:var(--text);">${d.message||'—'}</div></td>`;
@@ -812,6 +905,18 @@ function renderCell(col, d, section){
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
             </a>
             <a href="/admin/posted-jobs/edit/${d.id}" class="view-btn" title="Edit job" style="background:#0c3a30; color:#fff; border-color:#0c3a30; display:inline-flex; align-items:center; justify-content:center; text-decoration:none;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 113 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            </a>
+          </div>
+        </td>`;
+      }
+      if (section === 'posts') {
+        return `<td>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <a href="/insights/${d.slug}" target="_blank" class="view-btn" title="View on site" style="display:inline-flex; align-items:center; justify-content:center; text-decoration:none;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </a>
+            <a href="/admin/posts/edit/${d.id}" class="view-btn" title="Edit article" style="background:#0c3a30; color:#fff; border-color:#0c3a30; display:inline-flex; align-items:center; justify-content:center; text-decoration:none;">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 113 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
             </a>
           </div>
@@ -860,7 +965,7 @@ function renderTable(section){
   // Wire events
   tbody.querySelectorAll('.view-btn').forEach(btn => {
     btn.addEventListener('click', e => {
-      if(section === 'posted_jobs') return; // Do not open drawer for job links
+      if(section === 'posted_jobs' || section === 'posts') return; // Do not open drawer for job or post links
       e.stopPropagation();
       openDrawer(section, parseInt(btn.dataset.id));
     });
@@ -874,7 +979,7 @@ function renderTable(section){
         this.className = 'status-select ' + statusClass(this.value);
         renderStats(section);
 
-        // If connector/partner/sponser/posted_job, save to DB
+        // If connector/partner/sponser/posted_job/post, save to DB
         if(section === 'connectors') {
           await saveConnectorStatus(idVal, this.value, item.notes);
         } else if(section === 'partners') {
@@ -890,15 +995,42 @@ function renderTable(section){
             },
             body: JSON.stringify({ status: this.value })
           });
+        } else if(section === 'posts') {
+          await fetch(`/admin/api/posts/${idVal}`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            },
+            body: JSON.stringify({ status: this.value, title: item.title, category: item.category, read_time: item.read_time, content: item.content })
+          });
         }
+      }
+    });
+    sel.addEventListener('click', e => e.stopPropagation());
+  });
+  tbody.querySelectorAll('.category-select').forEach(sel => {
+    sel.addEventListener('change', async function(){
+      const idVal = parseInt(this.dataset.id);
+      const item = DATA[section].find(d => d.id === idVal);
+      if(item && section === 'posts') {
+        item.category = this.value;
+        await fetch(`/admin/api/posts/${idVal}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+          },
+          body: JSON.stringify({ status: item.status, title: item.title, category: this.value, read_time: item.read_time, content: item.content })
+        });
       }
     });
     sel.addEventListener('click', e => e.stopPropagation());
   });
   tbody.querySelectorAll('tr').forEach(row => {
     row.addEventListener('click', e => {
-      if(section === 'posted_jobs') return;
-      if(e.target.closest('.status-select') || e.target.closest('.view-btn') || e.target.closest('a')) return;
+      if(section === 'posted_jobs' || section === 'posts') return;
+      if(e.target.closest('.status-select') || e.target.closest('.category-select') || e.target.closest('.view-btn') || e.target.closest('a')) return;
       openDrawer(section, parseInt(row.dataset.id));
     });
   });
@@ -931,6 +1063,8 @@ function openDrawer(section, id){
   let d;
   if (section === 'posted_jobs' && id === null) {
     d = { id: null, title: '', category: 'career', department: '', work_mode: 'Remote', experience: '', duration: '', location: '', skills: '', tagline: '', content: '', status: 'active', notes: '' };
+  } else if (section === 'posts' && id === null) {
+    d = { id: null, title: '', category: 'Storytelling', read_time: '', image: '', excerpt: '', content: '', author_name: 'Anjali Sharma', author_role: 'Founder, YCX Insights', status: 'published' };
   } else {
     d = DATA[section].find(x => x.id === id);
   }
@@ -995,6 +1129,11 @@ function openDrawer(section, id){
     subText = d.title || 'New Job Posting';
     badges  = `<span class="badge badge-platinum">Job Posting</span>`;
     bodyHTML = postedJobBody(d);
+  } else if(section === 'posts'){
+    document.getElementById('dName').textContent = d.id ? 'Edit Blog Post' : 'Create Blog Post';
+    subText = d.title || 'New Blog Post';
+    badges  = `<span class="badge badge-platinum">Blog Post</span>`;
+    bodyHTML = postBody(d);
   }
 
   document.getElementById('dSub').textContent  = subText;
@@ -1004,6 +1143,15 @@ function openDrawer(section, id){
   if (section === 'posted_jobs') {
     // Initialize CKEditor 5
     ClassicEditor.create(document.querySelector('#jobEdit-content'))
+      .then(editor => {
+        window.editorInstance = editor;
+      })
+      .catch(err => {
+        console.error("CKEditor load failed", err);
+      });
+  } else if (section === 'posts') {
+    // Initialize CKEditor 5
+    ClassicEditor.create(document.querySelector('#postEdit-content'))
       .then(editor => {
         window.editorInstance = editor;
       })
@@ -1402,6 +1550,72 @@ function careerBody(d){
   `;
 }
 
+function postBody(d){
+  const cfg = SECTION_CONFIG['posts'];
+  return `
+    <form id="postedPostForm" onsubmit="event.preventDefault(); savePostData();">
+      <div class="dsection">
+        <h4>Post Metadata</h4>
+        <div class="dgrid" style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+          <div class="dfield" style="display:flex; flex-direction:column; gap:4px;">
+            <span class="fl" style="font-weight:700; font-size:12px; color:#0c3a30;">Article Title *</span>
+            <input type="text" id="postEdit-title" value="${d.title}" required style="border:1px solid #ccc; padding:8px; border-radius:6px;">
+          </div>
+          <div class="dfield" style="display:flex; flex-direction:column; gap:4px;">
+            <span class="fl" style="font-weight:700; font-size:12px; color:#0c3a30;">Category *</span>
+            <select id="postEdit-category" required style="border:1px solid #ccc; padding:8px; border-radius:6px;">
+              ${cfg.typeValues.map(v => `<option value="${v}" ${d.category===v?'selected':''}>${v}</option>`).join('')}
+            </select>
+          </div>
+          <div class="dfield" style="display:flex; flex-direction:column; gap:4px;">
+            <span class="fl" style="font-weight:700; font-size:12px; color:#0c3a30;">Read Time (e.g. 5 Min Read) *</span>
+            <input type="text" id="postEdit-read_time" value="${d.read_time || ''}" required placeholder="5 Min Read" style="border:1px solid #ccc; padding:8px; border-radius:6px;">
+          </div>
+          <div class="dfield" style="display:flex; flex-direction:column; gap:4px;">
+            <span class="fl" style="font-weight:700; font-size:12px; color:#0c3a30;">Status *</span>
+            <select id="postEdit-status" required style="border:1px solid #ccc; padding:8px; border-radius:6px;">
+              <option value="published" ${d.status==='published'?'selected':''}>Published</option>
+              <option value="draft" ${d.status==='draft'?'selected':''}>Draft</option>
+            </select>
+          </div>
+          <div class="dfield full" style="display:flex; flex-direction:column; gap:4px; grid-column:span 2;">
+            <span class="fl" style="font-weight:700; font-size:12px; color:#0c3a30;">Featured Image URL *</span>
+            <input type="text" id="postEdit-image" value="${d.image || ''}" required placeholder="https://images.unsplash.com/photo-..." style="border:1px solid #ccc; padding:8px; border-radius:6px; width:100%;">
+          </div>
+          <div class="dfield" style="display:flex; flex-direction:column; gap:4px;">
+            <span class="fl" style="font-weight:700; font-size:12px; color:#0c3a30;">Author Name *</span>
+            <input type="text" id="postEdit-author_name" value="${d.author_name || 'Anjali Sharma'}" required style="border:1px solid #ccc; padding:8px; border-radius:6px;">
+          </div>
+          <div class="dfield" style="display:flex; flex-direction:column; gap:4px;">
+            <span class="fl" style="font-weight:700; font-size:12px; color:#0c3a30;">Author Role *</span>
+            <input type="text" id="postEdit-author_role" value="${d.author_role || 'Founder, YCX Insights'}" required style="border:1px solid #ccc; padding:8px; border-radius:6px;">
+          </div>
+          <div class="dfield full" style="display:flex; flex-direction:column; gap:4px; grid-column:span 2;">
+            <span class="fl" style="font-weight:700; font-size:12px; color:#0c3a30;">Short Excerpt *</span>
+            <input type="text" id="postEdit-excerpt" value="${d.excerpt || ''}" required placeholder="Brief one-sentence summary of the article..." style="border:1px solid #ccc; padding:8px; border-radius:6px; width:100%;">
+          </div>
+        </div>
+      </div>
+      
+      <div class="dsection" style="margin-top:20px;">
+        <h4 style="margin-bottom:8px;">Article Content (CKEditor) *</h4>
+        <textarea id="postEdit-content" style="width:100%; min-height:180px; border:1px solid #ccc; padding:8px; border-radius:6px;">${d.content}</textarea>
+      </div>
+
+      <div style="display:flex; gap:12px; margin-top:24px; padding-top:14px; border-top:1px solid #eee;">
+        <button type="submit" class="status-select confirmed" style="background:#0c3a30; color:#fff; border:none; padding:12px 24px; border-radius:8px; font-weight:700; cursor:pointer;">
+          Save Article
+        </button>
+        ${d.id ? `
+          <button type="button" onclick="deletePostData(${d.id})" class="status-select declined" style="background:#dc3545; color:#fff; border:none; padding:12px 24px; border-radius:8px; font-weight:700; cursor:pointer;">
+            Delete Article
+          </button>
+        ` : ''}
+      </div>
+    </form>
+  `;
+}
+
 function postedJobBody(d){
   return `
     <form id="postedJobForm" onsubmit="event.preventDefault(); savePostedJobData();">
@@ -1467,11 +1681,15 @@ document.getElementById('searchInput').addEventListener('input', () => {
 document.getElementById('statusFilter').addEventListener('change', () => {
   currentPage = 1; renderTable(currentSection);
 });
+document.getElementById('categoryFilter').addEventListener('change', () => {
+  currentPage = 1; renderTable(currentSection);
+});
 document.getElementById('clearFilters').addEventListener('click', clearAllFilters);
 document.getElementById('emptyClearBtn').addEventListener('click', clearAllFilters);
 function clearAllFilters(){
   document.getElementById('searchInput').value = '';
   document.getElementById('statusFilter').value = 'all';
+  document.getElementById('categoryFilter').value = 'all';
   activeType = 'all';
   const chips = document.getElementById('typeChips');
   chips.querySelectorAll('.type-chip').forEach(c => c.classList.remove('active'));
@@ -1487,6 +1705,70 @@ if (addJobButton) {
   addJobButton.addEventListener('click', () => {
     window.location.href = "{{ route('admin.posted-jobs.create-page') }}";
   });
+}
+
+// Bind Create Post Button
+const addPostButton = document.getElementById('addPostBtn');
+if (addPostButton) {
+  addPostButton.addEventListener('click', () => {
+    window.location.href = "{{ route('admin.posts.create-page') }}";
+  });
+}
+
+async function savePostData() {
+  const id = activeDrawerItem.id;
+  const title = document.getElementById('postEdit-title').value;
+  const category = document.getElementById('postEdit-category').value;
+  const read_time = document.getElementById('postEdit-read_time').value;
+  const image = document.getElementById('postEdit-image').value;
+  const excerpt = document.getElementById('postEdit-excerpt').value;
+  const author_name = document.getElementById('postEdit-author_name').value;
+  const author_role = document.getElementById('postEdit-author_role').value;
+  const status = document.getElementById('postEdit-status').value;
+  const content = window.editorInstance ? window.editorInstance.getData() : document.getElementById('postEdit-content').value;
+
+  const url = id ? `/admin/api/posts/${id}` : '/admin/api/posts';
+
+  try {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+      },
+      body: JSON.stringify({ title, category, read_time, image, excerpt, author_name, author_role, status, content })
+    });
+    if (res.ok) {
+      closeDrawer();
+      await updateCounts();
+    } else {
+      alert("Failed to save article. Please check inputs.");
+    }
+  } catch(e) {
+    console.error(e);
+    alert("Error saving article.");
+  }
+}
+
+async function deletePostData(id) {
+  if (!confirm("Are you sure you want to delete this article?")) return;
+  try {
+    const res = await fetch(`/admin/api/posts/${id}`, {
+      method: 'POST',
+      headers: {
+        'X-CSRF-TOKEN': '{{ csrf_token() }}',
+        'X-HTTP-Method-Override': 'DELETE'
+      }
+    });
+    if (res.ok) {
+      closeDrawer();
+      await updateCounts();
+    } else {
+      alert("Failed to delete article.");
+    }
+  } catch(e) {
+    console.error(e);
+  }
 }
 
 async function savePostedJobData() {

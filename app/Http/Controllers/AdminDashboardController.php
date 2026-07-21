@@ -12,7 +12,7 @@ class AdminDashboardController extends Controller
      */
     public function index($section = 'overview')
     {
-        $allowedSections = ['overview', 'connectors', 'sponsers', 'partners', 'speakers', 'careers', 'internships', 'posted_jobs', 'contacts', 'featured_guests', 'story_submissions'];
+        $allowedSections = ['overview', 'connectors', 'sponsers', 'partners', 'speakers', 'careers', 'internships', 'posted_jobs', 'contacts', 'featured_guests', 'story_submissions', 'posts'];
         // Also accept 'sponsors' alias and normalise to 'sponsers' for JS compatibility
         if ($section === 'sponsors') $section = 'sponsers';
         if (!in_array($section, $allowedSections)) {
@@ -181,7 +181,25 @@ class AdminDashboardController extends Controller
             ];
         });
 
-        return view('admin.dashboard', compact('section', 'connectors', 'partners', 'sponsers', 'postedJobs', 'careers', 'internships', 'contacts', 'speakers', 'featuredGuests', 'storySubmissions'));
+        $posts = \App\Models\Post::orderByDesc('created_at')->get()->map(function ($post) {
+            return [
+                'id'            => $post->id,
+                'title'         => $post->title,
+                'slug'          => $post->slug,
+                'category'      => $post->category,
+                'read_time'     => $post->read_time,
+                'image'         => $post->image,
+                'excerpt'       => $post->excerpt,
+                'content'       => $post->content,
+                'author_name'   => $post->author_name,
+                'author_role'   => $post->author_role,
+                'author_avatar' => $post->author_avatar,
+                'status'        => $post->status,
+                'submitted'     => $post->created_at->format('Y-m-d'),
+            ];
+        });
+
+        return view('admin.dashboard', compact('section', 'connectors', 'partners', 'sponsers', 'postedJobs', 'careers', 'internships', 'contacts', 'speakers', 'featuredGuests', 'storySubmissions', 'posts'));
     }
 
     /**
@@ -723,5 +741,156 @@ class AdminDashboardController extends Controller
             'message' => 'Story submission updated successfully.',
             'data'    => $story
         ]);
+    }
+
+    /**
+     * Return posts as JSON.
+     */
+    public function posts(Request $request)
+    {
+        $posts = \App\Models\Post::orderByDesc('created_at')->get()->map(function ($post) {
+            return [
+                'id'            => $post->id,
+                'title'         => $post->title,
+                'slug'          => $post->slug,
+                'category'      => $post->category,
+                'read_time'     => $post->read_time,
+                'image'         => $post->image,
+                'excerpt'       => $post->excerpt,
+                'content'       => $post->content,
+                'author_name'   => $post->author_name,
+                'author_role'   => $post->author_role,
+                'author_avatar' => $post->author_avatar,
+                'status'        => $post->status,
+                'submitted'     => $post->created_at->format('Y-m-d'),
+            ];
+        });
+        return response()->json($posts);
+    }
+
+    /**
+     * Save or update post.
+     */
+    public function savePost(Request $request, $id = null)
+    {
+        $validated = $request->validate([
+            'title'       => 'required|string|max:255',
+            'category'    => 'required|string|max:255',
+            'read_time'   => 'nullable|string|max:255',
+            'image'       => 'nullable|string|max:255',
+            'excerpt'     => 'nullable|string|max:1000',
+            'content'     => 'required|string',
+            'author_name' => 'nullable|string|max:255',
+            'author_role' => 'nullable|string|max:255',
+            'status'      => 'required|string|in:published,draft',
+        ]);
+
+        if ($id) {
+            $post = \App\Models\Post::findOrFail($id);
+            $post->update($validated);
+        } else {
+            $post = \App\Models\Post::create($validated);
+        }
+
+        return response()->json([
+            'type'    => 'success',
+            'message' => 'Post saved successfully.',
+            'data'    => $post
+        ]);
+    }
+
+    /**
+     * Delete post.
+     */
+    public function deletePost($id)
+    {
+        $post = \App\Models\Post::findOrFail($id);
+        $post->delete();
+
+        return response()->json([
+            'type'    => 'success',
+            'message' => 'Post deleted successfully.'
+        ]);
+    }
+
+    /**
+     * Show full-page to create a new blog post article.
+     */
+    public function createPostPage()
+    {
+        return view('admin.posts.form', [
+            'post' => new \App\Models\Post()
+        ]);
+    }
+
+    /**
+     * Show full-page to edit an existing blog post article.
+     */
+    public function editPostPage($id)
+    {
+        $post = \App\Models\Post::findOrFail($id);
+        return view('admin.posts.form', compact('post'));
+    }
+
+    /**
+     * Save a new blog post article from full-page form.
+     */
+    public function savePostForm(Request $request)
+    {
+        $validated = $request->validate([
+            'title'       => 'required|string|max:255',
+            'category'    => 'required|string|max:255',
+            'read_time'   => 'nullable|string|max:255',
+            'image'       => 'nullable|string|max:255',
+            'excerpt'     => 'nullable|string|max:1000',
+            'content'     => 'required|string',
+            'author_name' => 'nullable|string|max:255',
+            'author_role' => 'nullable|string|max:255',
+            'status'      => 'required|string|in:published,draft',
+        ]);
+
+        $validated['slug'] = \Illuminate\Support\Str::slug($validated['title']);
+
+        // Prevent duplicate slugs
+        if (\App\Models\Post::where('slug', $validated['slug'])->exists()) {
+            $validated['slug'] .= '-' . rand(100, 999);
+        }
+
+        \App\Models\Post::create($validated);
+
+        return redirect()->route('admin.dashboard', 'posts')
+            ->with('success', 'Article published successfully.');
+    }
+
+    /**
+     * Update an existing blog post article from full-page form.
+     */
+    public function updatePostForm(Request $request, $id)
+    {
+        $post = \App\Models\Post::findOrFail($id);
+
+        $validated = $request->validate([
+            'title'       => 'required|string|max:255',
+            'category'    => 'required|string|max:255',
+            'read_time'   => 'nullable|string|max:255',
+            'image'       => 'nullable|string|max:255',
+            'excerpt'     => 'nullable|string|max:1000',
+            'content'     => 'required|string',
+            'author_name' => 'nullable|string|max:255',
+            'author_role' => 'nullable|string|max:255',
+            'status'      => 'required|string|in:published,draft',
+        ]);
+
+        $validated['slug'] = \Illuminate\Support\Str::slug($validated['title']);
+
+        // Prevent duplicate slugs except self
+        if (\App\Models\Post::where('slug', $validated['slug'])->where('id', '!=', $id)->exists()) {
+            $validated['slug'] .= '-' . rand(100, 999);
+        }
+
+        $post->update($validated);
+
+        return redirect()->route('admin.dashboard', 'posts')
+            ->with('success', 'Article updated successfully.');
     }
 }
