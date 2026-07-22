@@ -56,6 +56,7 @@ $seo = [
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
 <link rel="stylesheet" href="{{ asset('css/about-us.css') }}">
+<link rel="stylesheet" href="{{ asset('css/home-2.css') }}?v={{ time() }}">
 <style>
     #hdr:not(.scrolled) .hamburger span {
         background: #0c3a30 !important;
@@ -136,6 +137,32 @@ $seo = [
         </div>
     </div>
 </div>
+<section class="py-5 container" id="problem-solution">
+  <div class="wrap ps-grid">
+ 
+    <!-- THE PROBLEM -->
+    <div class="ps-card problem">
+      <span class="dots"></span>
+      <h3>The Problem</h3>
+      <p>Knowledge grows when people share it. Every journey, experience, and conversation has the power to inspire someone else, yet many voices never find the right platform.</p>
+      <p class="highlight">That's the gap Young Chanakya X is building to solve.</p>
+    </div>
+ 
+    <!-- THE SOLUTION -->
+    <div class="ps-card solution">
+      <span class="dots"></span>
+      <h3>The Solution</h3>
+      <p>We're creating a space where creators, speakers, entrepreneurs, educators, professionals, and community builders come together to share experiences, inspire others, and grow together.</p>
+      <div class="brand-badges">
+        <span class="brand-badge b1"><span class="b-icon"><i class="bi bi-star-fill"></i></span>Stories</span>
+        <span class="brand-badge b2"><span class="b-icon"><i class="bi bi-mic-fill"></i></span>YCX Talks</span>
+        <span class="brand-badge b3"><span class="b-icon"><i class="bi bi-mic"></i></span>Podcast</span>
+        <span class="brand-badge b4"><span class="b-icon"><i class="bi bi-people-fill"></i></span>Networking</span>
+      </div>
+    </div>
+ 
+  </div>
+</section>
  
 <!-- FOUNDER STATEMENT -->
 <section class="founder-section">
@@ -379,6 +406,129 @@ $seo = [
     </div>
 
 </div>
+<!-- THE DNA OF CONNECTX -->
+<section class="h2-section h2-section--white h2-xmeaning" id="what-x-means">
+    <div class="container">
+
+        {{-- Section Header --}}
+        <div class="h2-section-header">
+            <div class="h2-eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">The DNA of Young Chanakya X</div>
+            <h2 class="h2-heading rv" style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">What Does "X" Mean?</h2>
+            <p class="h2-desc h2-desc--center rv sec-desc" style="line-height: 1.6;">
+                The letter X represents the point where ideas, people, opportunities, and experiences intersect — creating something greater than the sum of its parts.
+            </p>
+        </div>
+
+        {{-- Constellation Layout --}}
+        <div class="h2-xm__constellation rv">
+
+            {{-- Central X Hub --}}
+            <div class="h2-xm__hub">
+                <div class="h2-xm__hub-ring h2-xm__hub-ring--1"></div>
+                <div class="h2-xm__hub-ring h2-xm__hub-ring--2"></div>
+                <div class="h2-xm__hub-ring h2-xm__hub-ring--3"></div>
+                <div class="h2-xm__hub-letter">X</div>
+                <div class="h2-xm__hub-tagline">Where Everything Intersects</div>
+            </div>
+
+            {{-- Connection Lines (SVG) — x2/y2 targets the center of each node's icon circle --}}
+            <svg class="h2-xm__lines" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                    <marker id="icon-dot-default" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                        <circle cx="3" cy="3" r="2.5" fill="rgba(12,58,48,0.25)"/>
+                    </marker>
+                    <marker id="icon-dot-hover" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                        <circle cx="3" cy="3" r="2.5" fill="rgba(255,210,177,0.9)"/>
+                    </marker>
+                </defs>
+                {{-- explore: node top:40 left:100, icon center = (100+110, 40+34) = (210,74) scaled ~(221,78) --}}
+                <line class="h2-xm__line h2-xm__line--explore"    x1="600" y1="450" x2="221" y2="78"  stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- exchange: node top:40 right:100 → left=820, icon center = (820+110, 74) = (930,74) scaled ~(979,78) --}}
+                <line class="h2-xm__line h2-xm__line--exchange"   x1="600" y1="450" x2="979" y2="78"  stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- express: node top:380 left:20, icon center = (130, 414) scaled ~(135,436) --}}
+                <line class="h2-xm__line h2-xm__line--express"    x1="600" y1="450" x2="135" y2="436" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- experience: node top:380 right:20 → left=900, icon center = (1010,414) scaled ~(1065,436) --}}
+                <line class="h2-xm__line h2-xm__line--experience" x1="600" y1="450" x2="1065" y2="436" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- expand: node bottom:20 left:150, icon center = (260, ~754) scaled ~(274,734) --}}
+                <line class="h2-xm__line h2-xm__line--expand"     x1="600" y1="450" x2="274" y2="734" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+                {{-- excel: node bottom:20 right:150 → left=770, icon center = (880,~754) scaled ~(926,734) --}}
+                <line class="h2-xm__line h2-xm__line--excel"      x1="600" y1="450" x2="926" y2="734" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
+            </svg>
+
+            {{-- Concept Nodes --}}
+            <div class="h2-xm__node h2-xm__node--explore" data-concept="explore">
+                <div class="h2-xm__node-beacon"></div>
+                <div class="h2-xm__node-icon"><i class="bi bi-compass"></i></div>
+                <div class="h2-xm__node-content">
+                    <div class="h2-xm__node-prefix">01</div>
+                    <h3 class="h2-xm__node-title">Explore</h3>
+                    <p class="h2-xm__node-desc">Discover inspiring people, innovative ideas, industries, startups, technologies, careers, and opportunities that broaden your perspective.</p>
+                </div>
+            </div>
+
+            <div class="h2-xm__node h2-xm__node--exchange" data-concept="exchange">
+                <div class="h2-xm__node-beacon"></div>
+                <div class="h2-xm__node-icon"><i class="bi bi-arrow-left-right"></i></div>
+                <div class="h2-xm__node-content">
+                    <div class="h2-xm__node-prefix">02</div>
+                    <h3 class="h2-xm__node-title">Exchange</h3>
+                    <p class="h2-xm__node-desc">Share knowledge, insights, experiences, and practical wisdom with a community that values learning and collaboration.</p>
+                </div>
+            </div>
+
+            <div class="h2-xm__node h2-xm__node--express" data-concept="express">
+                <div class="h2-xm__node-beacon"></div>
+                <div class="h2-xm__node-icon"><i class="bi bi-chat-quote"></i></div>
+                <div class="h2-xm__node-content">
+                    <div class="h2-xm__node-prefix">03</div>
+                    <h3 class="h2-xm__node-title">Express</h3>
+                    <p class="h2-xm__node-desc">Tell your story, communicate your ideas, showcase your expertise, and inspire others through authentic conversations.</p>
+                </div>
+            </div>
+
+            <div class="h2-xm__node h2-xm__node--experience" data-concept="experience">
+                <div class="h2-xm__node-beacon"></div>
+                <div class="h2-xm__node-icon"><i class="bi bi-calendar-event"></i></div>
+                <div class="h2-xm__node-content">
+                    <div class="h2-xm__node-prefix">04</div>
+                    <h3 class="h2-xm__node-title">Experience</h3>
+                    <p class="h2-xm__node-desc">Participate in podcasts, workshops, networking events, live sessions, and real-world interactions that create lasting learning.</p>
+                </div>
+            </div>
+
+            <div class="h2-xm__node h2-xm__node--expand" data-concept="expand">
+                <div class="h2-xm__node-beacon"></div>
+                <div class="h2-xm__node-icon"><i class="bi bi-diagram-3"></i></div>
+                <div class="h2-xm__node-content">
+                    <div class="h2-xm__node-prefix">05</div>
+                    <h3 class="h2-xm__node-title">Expand</h3>
+                    <p class="h2-xm__node-desc">Grow your professional network, discover partnerships, connect with mentors, and unlock new opportunities.</p>
+                </div>
+            </div>
+
+            <div class="h2-xm__node h2-xm__node--excel" data-concept="excel">
+                <div class="h2-xm__node-beacon"></div>
+                <div class="h2-xm__node-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                <div class="h2-xm__node-content">
+                    <div class="h2-xm__node-prefix">06</div>
+                    <h3 class="h2-xm__node-title">Excel</h3>
+                    <p class="h2-xm__node-desc">Continuously improve your skills, leadership, career, and business while contributing to a thriving ecosystem.</p>
+                </div>
+            </div>
+
+        </div>{{-- /.h2-xm__constellation --}}
+
+        {{-- Bottom Statement --}}
+        <div class="h2-xm__bottom rv">
+            <p class="h2-xm__statement">
+                Every interaction within the ecosystem moves you through these six dimensions — creating a continuous cycle of <strong>growth, contribution, and impact.</strong>
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
 
   <!-- CTA -->
   <section class="cta-section">

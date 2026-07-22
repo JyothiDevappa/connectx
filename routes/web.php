@@ -83,7 +83,7 @@ use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\AdminDashboardController;
 
-Route::get('/connectors-list', function () {
+Route::get('/connectors', function () {
     return view('connecters-list');
 })->name('connecters.list');
 

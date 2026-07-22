@@ -119,12 +119,13 @@ $seo = [
                 <div class="hero-btns">
                     <button class="btn-hero-primary" onclick="window.location.href='/share-your-story'">Share Your Story </button>
                     <button class="btn-hero-outline" onclick="window.location.href='/become-a-speaker'">YCX Talks</button>
+                    <button class="btn-hero-secondary" onclick="window.location.href='/become-a-feature'">Feature on YCX Podcast </button>
                 </div>
             </div>
         </div>
 
         <!-- Slide 3 -->
-        <div class="hero-slide">
+        {{-- <div class="hero-slide">
             <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=1800&q=80" alt="High-Impact Brand Partnerships">
             <div class="hero-overlay"></div>
             <div class="hero-grain"></div>
@@ -134,10 +135,10 @@ $seo = [
                 </p>
                 <div class="hero-btns">
                     <button class="btn-hero-primary" onclick="window.location.href='/become-a-feature'">Get Featured On Podcast </button>
-                    {{-- <button class="btn-hero-outline" onclick="document.getElementById('talks').scrollIntoView({behavior: 'smooth'})">Explore Talks</button> --}}
+                    <button class="btn-hero-outline" onclick="document.getElementById('talks').scrollIntoView({behavior: 'smooth'})">Explore Talks</button>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 
     <!-- Navigation Arrows -->
@@ -277,9 +278,352 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
     </div>
 </section>
 --}}
+<style>
+/* =============================================
+   HOW CONNECTX WORKS — RESPONSIVE
+   ============================================= */
+
+.hcw-wrapper {
+    background: #0c3a30;
+    padding: 44px 75px 52px;
+    font-family: var(--font-sans);
+    overflow: hidden;
+}
+
+.hcw-wrapper .eyebrow {
+    color: #ffd2b1 !important;
+}
+
+.hcw-wrapper .eyebrow::before {
+    background: #ffd2b1 !important;
+}
+
+.hcw-wrapper .hcw-heading {
+    color: #ffffff !important;
+    font-size: clamp(28px, 4vw, 45px) !important;
+    font-weight: 400 !important;
+    margin: 0 0 48px;
+    letter-spacing: -0.3px !important;
+}
+
+.hcw-wrapper .hcw-heading span {
+    font-style: italic !important;
+    font-weight: 500 !important;
+    color: #ffd2b1 !important;
+}
+
+.hcw-relative {
+    position: relative;
+}
+
+/* Connector lines — desktop only */
+.hcw-line-bg,
+.hcw-line-anim {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    width: 75%; /* Reaches exactly to the center of the 4th circle (75% across the 4-column grid) */
+    height: 1px;
+    border-radius: 2px;
+}
+.hcw-line-bg  { background: #1f5a45; z-index: 0; }
+.hcw-line-anim {
+    background: #ffd2b1;
+    z-index: 1;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: lineGrow 1.2s cubic-bezier(.4,0,.2,1) 0.2s forwards;
+}
+
+/* Steps grid */
+.hcw-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    position: relative;
+    z-index: 2;
+}
+
+.hcw-step {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hcw-wrapper .hcw-step-title {
+    color: #ffffff !important;
+    font-size: 20px !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    margin: 0 0 8px;
+    line-height: 1.35 !important;
+}
+
+.hcw-wrapper .hcw-step-desc {
+    color: #ffffff !important;
+    font-size: 12.5px !important;
+    line-height: 1.65 !important;
+    margin: 0;
+}
+
+/* ---- Tablet & Mobile: Vertical Timeline (Single Column) ---- */
+@media (max-width: 767px) {
+    .hcw-container {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    .hcw-wrapper {
+        padding: 36px 24px 44px;
+        border-radius: 14px;
+    }
+    .hcw-heading {
+        font-size: clamp(24px, 6vw, 36px);
+        margin: 0 0 36px;
+    }
+    /* Position connector lines vertically through the centers of circles */
+    .hcw-line-bg,
+    .hcw-line-anim {
+        display: block;
+        position: absolute;
+        left: 22px; /* Center of the 44px circle */
+        top: 22px; /* Center of the first circle */
+        bottom: 22px; /* Center of the last circle */
+        right: auto;
+        height: auto;
+        width: 3px;
+        border-radius: 2px;
+        transform: translateX(-50%);
+    }
+    .hcw-line-bg {
+        background: #1f5a45;
+        z-index: 0;
+    }
+    .hcw-line-anim {
+        background: #ffd2b1;
+        z-index: 1;
+        transform-origin: top;
+        transform: translateX(-50%) scaleY(0);
+        animation: lineGrowVertical 1.2s cubic-bezier(.4,0,.2,1) 0.2s forwards;
+    }
+    .hcw-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .hcw-step {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .cx-circle {
+        flex-shrink: 0;
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+        z-index: 2; /* Keep circle above the line */
+    }
+    .hcw-step-title {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+    .hcw-step-desc {
+        font-size: 12.5px;
+    }
+}
+
+/* ---- Mobile: Smaller Vertical Timeline ---- */
+@media (max-width: 480px) {
+    .hcw-container {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+    .hcw-wrapper {
+        padding: 28px 18px 36px;
+        border-radius: 12px;
+    }
+    .hcw-heading {
+        font-size: clamp(22px, 7vw, 30px);
+        margin: 0 0 28px;
+    }
+    .hcw-line-bg,
+    .hcw-line-anim {
+        left: 20px; /* Center of 40px circle */
+        top: 20px;
+        bottom: 20px;
+    }
+    .hcw-grid {
+        gap: 24px;
+    }
+    .hcw-step {
+        gap: 16px;
+    }
+    .cx-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .hcw-step-title {
+        font-size: 14px;
+    }
+    .hcw-step-desc {
+        font-size: 12px;
+    }
+}
+</style>
+
+<h2 class="sr-only">How Young Chanakya X Works — 4 steps to create, access, connect, and grow.</h2>
+
+<div class="mt-4 hcw-wrapper">
+    <div class="container">
+        <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Our Process</div>
+        <p class="cx-heading hcw-heading" style="font-size: clamp(34px, 4vw, 56px) !important; font-weight: 900 !important; line-height: 1.15 !important; letter-spacing: -2px !important;">
+            How <span>Young Chanakya X</span> &nbsp;Works
+        </p>
+        <p class="sec-desc rv" style="color: rgba(255, 255, 255, 0.75) !important; max-width: 600px; margin-top: -20px; margin-bottom: 44px; line-height: 1.6;">
+            Follow these simple steps to join the Young Chanakya X network, access premium lounges, and launch high-impact collaborations.
+        </p>
+    
+        <div class="hcw-relative">
+    
+            <div class="hcw-line-bg"></div>
+            <div class="hcw-line-anim"></div>
+    
+            <div class="hcw-grid">
+    
+                <div class="hcw-step">
+                    <div class="cx-circle cx-c1">1</div>
+                    <div class="cx-text cx-t1">
+                        <p class="hcw-step-title">Create Your Profile</p>
+                        <p class="hcw-step-desc">Create your creator profile and showcase your content within Young Chanakya X.</p>
+                    </div>
+                </div>
+    
+                <div class="hcw-step">
+                    <div class="cx-circle cx-c2">2</div>
+                    <div class="cx-text cx-t2">
+                        <p class="hcw-step-title">Access Creator Spaces</p>
+                        <p class="hcw-step-desc">Access creator lounges, networking spaces, podcasts, and exclusive experiences.</p>
+                    </div>
+                </div>
+    
+                <div class="hcw-step">
+                    <div class="cx-circle cx-c3">3</div>
+                    <div class="cx-text cx-t3">
+                        <p class="hcw-step-title">Connect &amp; Collaborate</p>
+                        <p class="hcw-step-desc">Connect with creators, influencers, brands, and communities worldwide.</p>
+                    </div>
+                </div>
+    
+                <div class="hcw-step">
+                    <div class="cx-circle cx-c4">4</div>
+                    <div class="cx-text cx-t4">
+                        <p class="hcw-step-title">Grow Your Influence</p>
+                        <p class="hcw-step-desc">Grow your visibility through collaborations, events, and creator opportunities.</p>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="membership-section position-relative mt-50 lg-mt-80 mb-50 lg-mb-80" id="membership">
+  <div class="container">
+    <div class="section-head text-center" style="margin-bottom: 50px;">
+        <div class="eyebrow rv">Get Involved</div>
+        <h2 class="sec-title rv" style="color: #0c3a30;">Find Your Role in the Ecosystem</h2>
+        <p class="sec-desc rv text-center" style="max-width: 600px; margin: 16px auto 0;">Choose how you want to engage with our community—whether by mentoring others, speaking on record, leading initiatives, or partnering with us.</p>
+    </div>
+    <div class="mem-grid">
+      <div class="mem-card">
+        <div>
+          <div class="mem-role">Organizational</div>
+          <h3>Become a Partner</h3>
+          <p class="mem-desc">Collaborate through co-branded events, strategic integrations, and collaborative ecosystem initiatives.</p>
+        </div>
+        <a href="/become-a-partner" class="mem-action-link">
+          <span class="btn-text">Become a Partner</span>
+          <span class="round-btn"><i class="bi bi-arrow-up-right"></i></span>
+        </a>
+      </div>
+      <div class="mem-card">
+        <div>
+          <div class="mem-role">Brand Supporter</div>
+          <h3>Become a Sponsor</h3>
+          <p class="mem-desc">Sponsor events, podcast seasons, and community programs to elevate your brand presence.</p>
+        </div>
+        <a href="/become-a-sponsor" class="mem-action-link">
+          <span class="btn-text">Become a Sponsor</span>
+          <span class="round-btn"><i class="bi bi-arrow-up-right"></i></span>
+        </a>
+      </div>
+      <div class="mem-card">
+        <div>
+          <div class="mem-role">Platform Voice</div>
+          <h3>Share Your Story</h3>
+          <p class="mem-desc">Apply to share your personal journey, business ventures, or expertise as a guest application.</p>
+        </div>
+        <a href="/share-your-story" class="mem-action-link">
+          <span class="btn-text">Share Your Story</span>
+          <span class="round-btn"><i class="bi bi-arrow-up-right"></i></span>
+        </a>
+      </div>
+      <div class="mem-card">
+        <div>
+          <div class="mem-role">Signature Stage</div>
+          <h3>YCX Talks</h3>
+          <p class="mem-desc">Share your expertise, practical insights, and ideas on our signature stage as a speaker.</p>
+        </div>
+        <a href="/become-a-speaker" class="mem-action-link">
+          <span class="btn-text">Become a Speaker</span>
+          <span class="round-btn"><i class="bi bi-arrow-up-right"></i></span>
+        </a>
+      </div>
+      <div class="mem-card">
+        <div>
+          <div class="mem-role">Broadcast Guest</div>
+          <h3>Get Featured On Podcast</h3>
+          <p class="mem-desc">Pitch your topic, speak on record, and share functional expertise on our podcast episodes.</p>
+        </div>
+        <a href="/become-a-feature" class="mem-action-link">
+          <span class="btn-text">Get Featured</span>
+          <span class="round-btn"><i class="bi bi-arrow-up-right"></i></span>
+        </a>
+      </div>
+      <div class="mem-card cta-card featured">
+        <div class="cta-card-content">
+          <div class="cta-icon">✨</div>
+          <h3>Not sure where you fit?</h3>
+          <p class="cta-desc">Reach out to our team directly and let's explore how we can work together.</p>
+        </div>
+        <a href="/contact" class="mem-cta-btn">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="container py-4">
+  <div id="join-club">
+    <div class="jc-photo">
+      <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" alt="Members collaborating at the YCX Club">
+    </div>
+    <div class="jc-content">
+      <span class="eyebrow">Join Our Club</b></span>
+      <h2 class="jc-heading">Become Part of a Community That Grows Together</h2>
+      <p class="jc-desc">The Young Chanakya X Club is a space for students, creators, entrepreneurs, professionals, educators, and community builders to connect, collaborate, share experiences, and grow together.</p>
+      <div class="jc-pills">
+        <span class="jc-pill">Connect with like-minded peoples</span>
+        <span class="jc-pill">Share ideas and experiences</span>
+        <span class="jc-pill">Participate in exclusive events</span>
+        <span class="jc-pill">Build meaningful professional relationships</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ABOUT YOUNG CHANAKYA X -->
-<section class="about" id="about-ycx">
+{{-- <section class="about" id="about-ycx">
     <div class="about-inner">
         <div class="about-img-side rv-l">
             <img src="/images/media/about_platform_leaders.png" alt="About Young Chanakya X">
@@ -291,50 +635,6 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
             <p class="sec-desc rv" style="margin-bottom: 28px; font-size: 0.95rem; line-height: 1.6; color: #475569;">
                 Young Chanakya X is a digital-first leadership and community platform connecting ambitious creators, founders, and leaders. We build a dynamic ecosystem where learning happens through people and opportunities are created through collaborative relationships.
             </p>
-            <style>
-                .about-keypoints-grid {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    gap: 20px 24px;
-                    margin-top: 12px;
-                }
-                .keypoint-item {
-                    display: flex;
-                    gap: 12px;
-                    align-items: center;
-                }
-                .keypoint-icon-box {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 38px;
-                    height: 38px;
-                    border-radius: 10px;
-                    background: var(--orange);
-                    color: var(--primary);
-                    font-size: 1.2rem;
-                    flex-shrink: 0;
-                    transition: all 0.3s ease;
-                }
-                .keypoint-text-box {
-                    display: flex;
-                    flex-direction: column;
-                }
-                .keypoint-title {
-                    font-size: 0.9rem;
-                    font-weight: 500;
-                    color: var(--grey);
-                    margin: 0;
-                    line-height: 1.2;
-                    transition: color 0.3s ease;
-                }
-                @media (max-width: 576px) {
-                    .about-keypoints-grid {
-                        grid-template-columns: 1fr;
-                        gap: 16px;
-                    }
-                }
-            </style>
 
             <div class="about-keypoints-grid rv">
                 <!-- 1. Inspiring Stories -->
@@ -399,97 +699,152 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
             </div>
         </div>
     </div>
-</section>
+</section> --}}
+ <style>
+    .about-keypoints-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 24px;
+        margin-top: 12px;
+    }
+    .keypoint-item {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+    .keypoint-icon-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: var(--orange);
+        color: var(--primary);
+        font-size: 1.2rem;
+        flex-shrink: 0;
+        transition: all 0.3s ease;
+    }
+    #about-podcast .keypoint-icon-box {
+        background: transparent;
+        color: var(--orange-warm);
+        width: auto;
+        height: auto;
+        font-size: 1.4rem;
+    }
+    .keypoint-text-box {
+        display: flex;
+        flex-direction: column;
+    }
+    .keypoint-title {
+        font-size: 0.9rem;
+        font-weight: 500 !important;
+        color: var(--grey);
+        margin: 0;
+        line-height: 1.2;
+        transition: color 0.3s ease;
+    }
+    @media (max-width: 576px) {
+        .about-keypoints-grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+    }
+</style>
 
-<!-- EXPERIENCES -->
-<section class="cx-premium-viewport">
-    <div class="cx-custom-cursor"></div>
+<!-- FEATURE IN YCX PODCAST -->
+<section class="about py-5" id="about-podcast">
+    <div class="about-inner">
+        <div class="about-content rv-l">
+            <div class="eyebrow rv">Broadcast Your Story & Brand</div>
+            <h2 class="sec-title rv">Feature on YCX Podcast</h2>
+            <p class="sec-desc rv mb-3">
+                Get featured on the Young Chanakya X Podcast. Join high-impact video podcast episodes, share deep-dive conversations on entrepreneurship, creator economy, and leadership, and expand your digital presence.
+            </p>
+            <div class="about-keypoints-grid rv" style="grid-template-columns: 1fr; gap: 5px;">
+                <!-- 1. Multi-Channel Distribution -->
+                <div class="keypoint-item">
+                    <div class="keypoint-icon-box">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+                    <div class="keypoint-text-box">
+                        <h4 class="keypoint-title">Reach thousands of listeners across YouTube, Spotify &amp; Apple Podcasts</h4>
+                    </div>
+                </div>
 
-    <div class="cx-wrapper">
-        <div class="cx-editorial-header text-center">
-            <div class="eyebrow rv" style="margin-bottom: 12px; font-size: 10px; font-weight: 700; letter-spacing: 3px;">Young Chanakya X Experiences</div>
-            <h2 class="cx-main-heading" style="margin-bottom: 16px; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Creator Spaces & Events</h2>
-            <p class="sec-desc rv mx-auto" style="margin-bottom: 0; line-height: 1.6; max-width: 600px;">We provide professional recording studios, creative lounges, and city meetups to help you create content, meet people, and grow your audience.</p>
+                <!-- 2. High-Production Quality -->
+                <div class="keypoint-item">
+                    <div class="keypoint-icon-box">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+                    <div class="keypoint-text-box">
+                        <h4 class="keypoint-title">Recorded in professional high-definition video &amp; studio audio</h4>
+                    </div>
+                </div>
+
+                <!-- 3. Audience Engagement -->
+                <div class="keypoint-item">
+                    <div class="keypoint-icon-box">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+                    <div class="keypoint-text-box">
+                        <h4 class="keypoint-title">Share deep-dive insights on entrepreneurship, tech, &amp; leadership</h4>
+                    </div>
+                </div>
+
+                <!-- 4. Strategic Positioning -->
+                <div class="keypoint-item">
+                    <div class="keypoint-icon-box">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+                    <div class="keypoint-text-box">
+                        <h4 class="keypoint-title">Amplify your personal brand and authority globally</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-4 rv">
+                <button class="btn-hero-secondary" onclick="window.location.href='/become-a-feature'">Feature on YCX Podcast</button>
+            </div>
         </div>
-
-        <div class="cx-viewport-grid">
-
-            <div class="cx-premium-card cx-col-wide">
-                <div class="cx-img-container">
-                    <img src="{{ asset('images/media/podcast.png') }}" alt="Podcasts" class="cx-surface-img">
-                    <div class="cx-surface-overlay"></div>
-                </div>
-                <div class="cx-premium-body">
-                    <span class="cx-premium-badge">PODCASTS</span>
-                    <h3 class="cx-premium-title">Conversations with founders, CEOs, creators, and innovators.</h3>
-                    <p class="cx-premium-text">Real experiences. Practical lessons. Shared on record.</p>
-                </div>
-            </div>
-
-            <div class="cx-premium-card cx-col-square">
-                <div class="cx-img-container">
-                    <img src="{{ asset('images/media/experience_stories.png') }}" alt="Stories" class="cx-surface-img">
-                    <div class="cx-surface-overlay"></div>
-                </div>
-                <div class="cx-premium-body">
-                    <span class="cx-premium-badge">STORIES</span>
-                    <h3 class="cx-premium-title">Every journey matters.</h3>
-                    <p class="cx-premium-text">Publish startup stories, career experiences, and personal transformations.</p>
-                </div>
-            </div>
-
-            <div class="cx-premium-card cx-col-square">
-                <div class="cx-img-container">
-                    <img src="{{ asset('images/media/network.png') }}" alt="Network" class="cx-surface-img">
-                    <div class="cx-surface-overlay"></div>
-                </div>
-                <div class="cx-premium-body">
-                    <span class="cx-premium-badge">NETWORK</span>
-                    <h3 class="cx-premium-title">Relationships across industries.</h3>
-                    <p class="cx-premium-text">Students, professionals, investors, mentors — all in one space.</p>
-                </div>
-            </div>
-
-            <div class="cx-premium-card cx-col-square">
-                <div class="cx-img-container">
-                    <img src="{{ asset('images/media/experience_mentorship.png') }}" alt="Mentorship" class="cx-surface-img">
-                    <div class="cx-surface-overlay"></div>
-                </div>
-                <div class="cx-premium-body">
-                    <span class="cx-premium-badge">MENTORSHIP</span>
-                    <h3 class="cx-premium-title">The right conversation changes everything.</h3>
-                    <p class="cx-premium-text">Connect with mentors who've navigated the path you're on.</p>
-                </div>
-            </div>
-
-            <div class="cx-premium-card cx-col-square">
-                <div class="cx-img-container">
-                    <img src="{{ asset('images/media/experience_live_events.png') }}" alt="Live Events" class="cx-surface-img">
-                    <div class="cx-surface-overlay"></div>
-                </div>
-                <div class="cx-premium-body">
-                    <span class="cx-premium-badge">LIVE EVENTS</span>
-                    <h3 class="cx-premium-title">Where ideas become action.</h3>
-                    <p class="cx-premium-text">Webinars, summits, roundtables, fireside chats, and meetups.</p>
-                </div>
-            </div>
-
-            <div class="cx-premium-card cx-col-wide">
-                <div class="cx-img-container">
-                    <img src="{{ asset('images/media/collabarate.png') }}" alt="Collaborate" class="cx-surface-img">
-                    <div class="cx-surface-overlay"></div>
-                </div>
-                <div class="cx-premium-body">
-                    <span class="cx-premium-badge">COLLABORATE</span>
-                    <h3 class="cx-premium-title">Build with people who share your vision.</h3>
-                    <p class="cx-premium-text">Partnerships for startups, research, content, and innovation.</p>
-                </div>
-            </div>
-
+        <div class="about-img-side rv-r">
+            <img src="/images/media/about_platform_leaders.png" alt="Feature on YCX Podcast">
+            <div class="about-img-overlay"></div>
         </div>
     </div>
 </section>
 
+
+<section class="community-sec py-5">
+  <div class="engagement-grid container">
+    <!-- Card 1 -->
+    <div class="engagement-card">
+      <div class="engagement-content">
+        <div class="engagement-header">
+          <h3>Become a Partner</h3>
+          <a href="/events" class="btn-hero-primary">Partner with Us</a>
+        </div>
+        <p>Join YCX as a partner and collaborate with a growing network of creators, speakers and communities to create impactful experiences and new opportunities.</p>
+      </div>
+      <div class="engagement-photo">
+        <img src="{{ asset('images/media/collabarate.png') }}" alt="Celebrate Campus Engagements">
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="engagement-card">
+      <div class="engagement-content">
+        <div class="engagement-header">
+          <h3>Become a Sponsor</em></h3>
+          <a href="/become-a-speaker" class="btn-hero-primary">Join as Sponsor</a>
+        </div>
+        <p>Partner with YCX as a sponsor to connect your brand with inspiring conversations, influential voices, and a community that values innovation and collaboration.</p>
+      </div>
+      <div class="engagement-photo">
+        <img src="{{ asset('images/media/experience_live_events.png') }}" alt="Become a Sponor">
+      </div>
+    </div>
+  </div>
+</section>
 
 
 {{-- <!-- WHY YOUNG CHANAKYA X -->
@@ -857,625 +1212,121 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
     }
 </style>
 
-<!-- WAYS TO GET INVOLVED -->
-<section class="ways-to-involve-sec">
-    <div class="container">
-        <div class="section-head text-center" style="margin-bottom: 50px;">
-            <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Ways to Engage</div>
-            <h2 class="sec-title rv" style="color: var(--primary-dark); font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Be Part of the Experience</h2>
-            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">Explore a range of initiatives designed to connect you with industry leaders, ideas, and opportunities.</p>
-        </div>
+
+<!-- EVENT LISTING -->
+{{-- <section class="blog-section-two position-relative mt-70 lg-mt-80" id="events">
+<div class="container">
+    <div class="section-head">
+        <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Event Listing</div>
+        <h2 class="sec-title rv" style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Curated Events for Every Creator Journey</h2>
+        <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-bottom: 0; margin-left: auto; margin-right: auto; line-height: 1.6;">Explore upcoming panels, awards gala ceremonies, regional conferences, and exclusive brand sponsership opportunities.</p>
     </div>
 
-    <div class="marquee-container" style="padding-bottom: 0;">
-        <div class="marquee-track">
+    <div class="position-relative">
+        <div class="row gx-xxl-5">
             @php
-                $marqueeRow1 = [
-                    'Founder Spotlight', 'CEO Conversations', 'Startup Stories', 'Community Podcasts', 
-                    'Student Leadership Series', 'Women in Leadership', 'Creator Sessions'
-                ];
-                $marqueeRow2 = [
-                    'Industry Roundtables', 'Campus Chapters', 'Mentor Connect', 'Innovation Talks', 
-                    'Networking Meetups', 'Fireside Chats', 'Leadership Summit'
+                $homeEvents = [
+                    [
+                        'category' => 'Speakers',
+                        'title' => 'Founder Spotlight Series: Scaling Beyond Series A',
+                        'desc' => 'Deconstructing startup milestones, market entry barriers, and scaling systems for high-growth ventures.',
+                        'date' => 'JUL 18, 2026',
+                        'location' => 'BENGALURU HUB',
+                        'host' => 'Aditya Verma',
+                        'role' => 'Venture Partner',
+                        'img' => 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800'
+                    ],
+                    [
+                        'category' => 'Roundtables',
+                        'title' => 'Creator Connect Sessions: Multi-Platform Monetization',
+                        'desc' => 'Unlocking premium brand sponserships, media kit architectures, and co-branded content monetization loops.',
+                        'date' => 'JUL 24, 2026',
+                        'location' => 'EPISODE 42',
+                        'host' => 'Rohan Sharma',
+                        'role' => 'Growth Lead',
+                        'img' => 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=800'
+                    ],
+                    [
+                        'category' => 'Roundtables',
+                        'title' => 'Women in Leadership Circle: Directing Enterprise Operations',
+                        'desc' => 'A collaborative forum for female business leaders, operational executives, and board candidates.',
+                        'date' => 'AUG 02, 2026',
+                        'location' => 'LEELA PALACE',
+                        'host' => 'Meera Nair',
+                        'role' => 'UI/UX Director',
+                        'img' => 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=800'
+                    ],
+                    [
+                        'category' => 'Speakers',
+                        'title' => 'Mentor Connect Program: Engineering & Architecture Scales',
+                        'desc' => 'Direct technical mapping alongside elite system architects deploying robust enterprise configurations.',
+                        'date' => 'AUG 12, 2026',
+                        'location' => 'VIRTUAL SYMPOSIUM',
+                        'host' => 'Siddharth Rao',
+                        'role' => 'Full Stack Architect',
+                        'img' => 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800'
+                    ],
+                    [
+                        'category' => 'Podcasts',
+                        'title' => 'Fireside Chats: Building Legacy Brand Narratives',
+                        'desc' => 'An intimate, raw conversation with veteran operators detailing brand strategy, pivots, and positioning.',
+                        'date' => 'AUG 29, 2026',
+                        'location' => 'EPISODE 43',
+                        'host' => 'Karan Malhotra',
+                        'role' => 'Principal Architect',
+                        'img' => 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=800'
+                    ],
+                    [
+                        'category' => 'Speakers',
+                        'title' => 'CEO Conversations: Navigating Cross-Border Ventures',
+                        'desc' => 'Closed-door insights on international compliance, currency risk, and building global operating structures.',
+                        'date' => 'SEP 05, 2026',
+                        'location' => 'ITC GARDENIA',
+                        'host' => 'Ananya Rao',
+                        'role' => 'Managing Director',
+                        'img' => 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800'
+                    ]
                 ];
             @endphp
-            @foreach($marqueeRow1 as $item)
-                <div class="marquee-chip">{{ $item }}</div>
-            @endforeach
-            @foreach($marqueeRow1 as $item)
-                <div class="marquee-chip">{{ $item }}</div>
-            @endforeach
-        </div>
-    </div>
-    
-    <div class="marquee-container mt-5">
-        <div class="marquee-track marquee-track-reverse">
-            @foreach($marqueeRow2 as $item)
-                <div class="marquee-chip">{{ $item }}</div>
-            @endforeach
-            @foreach($marqueeRow2 as $item)
-                <div class="marquee-chip">{{ $item }}</div>
-            @endforeach
-        </div>
-    </div>
-</section>
 
-<!-- WHO CAN PARTNER -->
-<section class="partner-sec" id="partner">
-    <div class="partner-head text-center">
-        <div class="eyebrow rv" style="margin-bottom: 12px;">Who Can Join Us</div>
-        <h2 class="sec-title rv" style="margin-bottom: 16px;">A Community for Everyone Who Wants to Grow</h2>
-        <p class="sec-desc rv mx-auto" style="margin-bottom: 0; line-height: 1.6; max-width: 600px;">For people who value collaboration, learning, and building real connections that create long-term impact.</p>
-    </div>
-    <div class="partner-grid">
-        <div class="p-card rv" style="transition-delay:0s">
-            <img src="{{ asset('images/media/index-page/Students.jpg') }}" alt="Students — Young Chanakya X Partner Category" loading="lazy">
-            <div class="p-card-ov">
-                <div class="p-name">Students</div>
-                <div class="p-desc">Connect with peers, build practical skills, and access leadership programs.</div>
-            </div>
-            <div class="p-arrow">↗</div>
-        </div>
-        <div class="p-card rv" style="transition-delay:0.07s">
-            <img src="{{ asset('images/media/index-page/Entrepreneurs.jpg') }}" alt="Entrepreneurs — Young Chanakya X Partner Category" loading="lazy">
-            <div class="p-card-ov">
-                <div class="p-name">Entrepreneurs</div>
-                <div class="p-desc">Network with experts, share your vision, and scale your business ventures.</div>
-            </div>
-            <div class="p-arrow">↗</div>
-        </div>
-        <div class="p-card rv" style="transition-delay:0.14s">
-            <img src="{{ asset('images/media/index-page/founder.jpg') }}" alt="Startup Founders — Young Chanakya X Partner Category" loading="lazy">
-            <div class="p-card-ov">
-                <div class="p-name">Startup Founders</div>
-                <div class="p-desc">Pitch your ideas, collaborate with investors, and accelerate your growth.</div>
-            </div>
-            <div class="p-arrow">↗</div>
-        </div>
-        <div class="p-card rv" style="transition-delay:0.21s">
-            <img src="{{ asset('images/media/index-page/Business Leaders.jpg') }}" alt="Business Leaders — Young Chanakya X Partner Category" loading="lazy">
-            <div class="p-card-ov">
-                <div class="p-name">Business Leaders</div>
-                <div class="p-desc">Guide the ecosystem, sponser programs, and share executive insights.</div>
-            </div>
-            <div class="p-arrow">↗</div>
-        </div>
-        <div class="p-card rv" style="transition-delay:0.28s">
-            <img src="{{ asset('images/media/index-page/Creators -Mentors.jpg') }}" alt="Creators & Mentors — Young Chanakya X Partner Category" loading="lazy">
-            <div class="p-card-ov">
-                <div class="p-name">Creators / Mentors</div>
-                <div class="p-desc">Produce podcasts, write articles, and mentor the next generation.</div>
-            </div>
-            <div class="p-arrow">↗</div>
-        </div>
-        <div class="p-card rv" style="transition-delay:0.35s">
-            <img src="{{ asset('images/media/index-page/Influencers.jpg') }}" alt="Influencers — Young Chanakya X Partner Category" loading="lazy">
-            <div class="p-card-ov">
-                <div class="p-name">Influencers</div>
-                <div class="p-desc">Amplify brand voice, reach active audiences, and host live sessions.</div>
-            </div>
-            <div class="p-arrow">↗</div>
-        </div>
-        <div class="p-card rv" style="transition-delay:0.42s">
-            <img src="{{ asset('images/media/index-page/Investors.jpg') }}" alt="Investors — Young Chanakya X Partner Category" loading="lazy">
-            <div class="p-card-ov">
-                <div class="p-name">Investors</div>
-                <div class="p-desc">Discover vetted startups, back innovators, and shape market trends.</div>
-            </div>
-            <div class="p-arrow">↗</div>
-        </div>
-        <div class="p-card rv" style="transition-delay:0.49s">
-            <img src="{{ asset('images/media/index-page/Educators.jpg') }}" alt="Educators — Young Chanakya X Partner Category" loading="lazy">
-            <div class="p-card-ov">
-                <div class="p-name">Educators</div>
-                <div class="p-desc">Bridge academia with industry, design courses, and lead workshops.</div>
-            </div>
-            <div class="p-arrow">↗</div>
-        </div>
-        <div class="p-card rv" style="transition-delay:0.56s">
-            <img src="{{ asset('images/media/index-page/Community Builders.jpg') }}" alt="Community Builders — Young Chanakya X Partner Category" loading="lazy">
-            <div class="p-card-ov">
-                <div class="p-name">Community Builders</div>
-                <div class="p-desc">Organize local meetups, run regional chapters, and grow active networks.</div>
-            </div>
-            <div class="p-arrow">↗</div>
-        </div>
-        <div class="p-card rv" style="transition-delay:0.63s">
-            <img src="{{ asset('images/media/index-page/Innovators.jpg') }}" alt="Innovators — Young Chanakya X Partner Category" loading="lazy">
-            <div class="p-card-ov">
-                <div class="p-name">Innovators</div>
-                <div class="p-desc">Develop cutting-edge ideas, collaborate on tech, and build future frameworks.</div>
-            </div>
-            <div class="p-arrow">↗</div>
-        </div>
-    </div>
-</section>
-<style>
-/* =============================================
-   HOW CONNECTX WORKS — RESPONSIVE
-   ============================================= */
-
-.hcw-wrapper {
-    background: #0c3a30;
-    padding: 44px 75px 52px;
-    font-family: var(--font-sans);
-    overflow: hidden;
-}
-
-.hcw-wrapper .eyebrow {
-    color: #ffd2b1 !important;
-}
-
-.hcw-wrapper .eyebrow::before {
-    background: #ffd2b1 !important;
-}
-
-.hcw-wrapper .hcw-heading {
-    color: #ffffff !important;
-    font-size: clamp(28px, 4vw, 45px) !important;
-    font-weight: 400 !important;
-    margin: 0 0 48px;
-    letter-spacing: -0.3px !important;
-}
-
-.hcw-wrapper .hcw-heading span {
-    font-style: italic !important;
-    font-weight: 500 !important;
-    color: #ffd2b1 !important;
-}
-
-.hcw-relative {
-    position: relative;
-}
-
-/* Connector lines — desktop only */
-.hcw-line-bg,
-.hcw-line-anim {
-    position: absolute;
-    top: 24px;
-    left: 24px;
-    width: 75%; /* Reaches exactly to the center of the 4th circle (75% across the 4-column grid) */
-    height: 1px;
-    border-radius: 2px;
-}
-.hcw-line-bg  { background: #1f5a45; z-index: 0; }
-.hcw-line-anim {
-    background: #ffd2b1;
-    z-index: 1;
-    transform-origin: left;
-    transform: scaleX(0);
-    animation: lineGrow 1.2s cubic-bezier(.4,0,.2,1) 0.2s forwards;
-}
-
-/* Steps grid */
-.hcw-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 28px;
-    position: relative;
-    z-index: 2;
-}
-
-.hcw-step {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.hcw-wrapper .hcw-step-title {
-    color: #ffffff !important;
-    font-size: 20px !important;
-    font-size: 20px !important;
-    font-weight: 500 !important;
-    margin: 0 0 8px;
-    line-height: 1.35 !important;
-}
-
-.hcw-wrapper .hcw-step-desc {
-    color: #ffffff !important;
-    font-size: 12.5px !important;
-    line-height: 1.65 !important;
-    margin: 0;
-}
-
-/* ---- Tablet & Mobile: Vertical Timeline (Single Column) ---- */
-@media (max-width: 767px) {
-    .hcw-container {
-        margin-top: 60px;
-        margin-bottom: 60px;
-    }
-    .hcw-wrapper {
-        padding: 36px 24px 44px;
-        border-radius: 14px;
-    }
-    .hcw-heading {
-        font-size: clamp(24px, 6vw, 36px);
-        margin: 0 0 36px;
-    }
-    /* Position connector lines vertically through the centers of circles */
-    .hcw-line-bg,
-    .hcw-line-anim {
-        display: block;
-        position: absolute;
-        left: 22px; /* Center of the 44px circle */
-        top: 22px; /* Center of the first circle */
-        bottom: 22px; /* Center of the last circle */
-        right: auto;
-        height: auto;
-        width: 3px;
-        border-radius: 2px;
-        transform: translateX(-50%);
-    }
-    .hcw-line-bg {
-        background: #1f5a45;
-        z-index: 0;
-    }
-    .hcw-line-anim {
-        background: #ffd2b1;
-        z-index: 1;
-        transform-origin: top;
-        transform: translateX(-50%) scaleY(0);
-        animation: lineGrowVertical 1.2s cubic-bezier(.4,0,.2,1) 0.2s forwards;
-    }
-    .hcw-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
-    .hcw-step {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 20px;
-    }
-    .cx-circle {
-        flex-shrink: 0;
-        width: 44px;
-        height: 44px;
-        font-size: 18px;
-        z-index: 2; /* Keep circle above the line */
-    }
-    .hcw-step-title {
-        font-size: 15px;
-        margin-bottom: 6px;
-    }
-    .hcw-step-desc {
-        font-size: 12.5px;
-    }
-}
-
-/* ---- Mobile: Smaller Vertical Timeline ---- */
-@media (max-width: 480px) {
-    .hcw-container {
-        margin-top: 48px;
-        margin-bottom: 48px;
-    }
-    .hcw-wrapper {
-        padding: 28px 18px 36px;
-        border-radius: 12px;
-    }
-    .hcw-heading {
-        font-size: clamp(22px, 7vw, 30px);
-        margin: 0 0 28px;
-    }
-    .hcw-line-bg,
-    .hcw-line-anim {
-        left: 20px; /* Center of 40px circle */
-        top: 20px;
-        bottom: 20px;
-    }
-    .hcw-grid {
-        gap: 24px;
-    }
-    .hcw-step {
-        gap: 16px;
-    }
-    .cx-circle {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-    }
-    .hcw-step-title {
-        font-size: 14px;
-    }
-    .hcw-step-desc {
-        font-size: 12px;
-    }
-}
-</style>
-
-<h2 class="sr-only">How Young Chanakya X Works — 4 steps to create, access, connect, and grow.</h2>
-
-<div class="mt-4">
-    <div class="hcw-wrapper">
-        <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Our Process</div>
-        <p class="cx-heading hcw-heading" style="font-size: clamp(34px, 4vw, 56px) !important; font-weight: 900 !important; line-height: 1.15 !important; letter-spacing: -2px !important;">
-            How <span>Young Chanakya X</span> &nbsp;Works
-        </p>
-        <p class="sec-desc rv" style="color: rgba(255, 255, 255, 0.75) !important; max-width: 600px; margin-top: -20px; margin-bottom: 44px; line-height: 1.6;">
-            Follow these simple steps to join the Young Chanakya X network, access premium lounges, and launch high-impact collaborations.
-        </p>
-    
-        <div class="hcw-relative">
-    
-            <div class="hcw-line-bg"></div>
-            <div class="hcw-line-anim"></div>
-    
-            <div class="hcw-grid">
-    
-                <div class="hcw-step">
-                    <div class="cx-circle cx-c1">1</div>
-                    <div class="cx-text cx-t1">
-                        <p class="hcw-step-title">Create Your Profile</p>
-                        <p class="hcw-step-desc">Create your creator profile and showcase your content within Young Chanakya X.</p>
-                    </div>
+            @foreach($homeEvents as $event)
+                @php
+                    $dateParts = explode(' ', $event['date']);
+                    $day = rtrim($dateParts[1], ',');
+                    $month = $dateParts[0];
+                    $formattedDate = $day . ' ' . $month;
+                    $slug = \Illuminate\Support\Str::slug($event['title']);
+                @endphp
+                <div class="col-lg-4 col-md-6">
+                    <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
+                        <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
+                            style="background-image: url('{{ $event['img'] }}');">
+                            <a href="{{ url('/event-details/' . $slug) }}" class="stretched-link rounded-5 date tran3s">{{ $formattedDate }}</a>
+                        </figure>
+                        <div class="post-data">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                <a href="{{ url('/event-details/' . $slug) }}" class="blog-title" style="width: 80%;">
+                                    <h3 style="font-size: 1.2rem; font-weight: 600; line-height: 1.4; color: #0c3a30; margin-bottom: 0;">{{ $event['title'] }}</h3>
+                                </a>
+                                <a href="{{ url('/event-details/' . $slug) }}" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s" style="width: 45px; height: 45px; font-size: 18px; min-width: 45px;">
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+                                <p class="event-desc mt-2" style="font-size: 0.9rem; color: #475569; line-height: 1.5; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                {{ $event['desc'] }}
+                            </p>
+                            <div class="post-info text-uppercase fw-semibold tracking-wider opacity-75" style="font-size: 0.72rem; color: #ffd2b1; border-top: none; padding-top: 0; margin-top: 0;">
+                                {{ $event['category'] }} • {{ $event['location'] }}
+                            </div>
+                        </div>
+                    </article>
                 </div>
-    
-                <div class="hcw-step">
-                    <div class="cx-circle cx-c2">2</div>
-                    <div class="cx-text cx-t2">
-                        <p class="hcw-step-title">Access Creator Spaces</p>
-                        <p class="hcw-step-desc">Access creator lounges, networking spaces, podcasts, and exclusive experiences.</p>
-                    </div>
-                </div>
-    
-                <div class="hcw-step">
-                    <div class="cx-circle cx-c3">3</div>
-                    <div class="cx-text cx-t3">
-                        <p class="hcw-step-title">Connect &amp; Collaborate</p>
-                        <p class="hcw-step-desc">Connect with creators, influencers, brands, and communities worldwide.</p>
-                    </div>
-                </div>
-    
-                <div class="hcw-step">
-                    <div class="cx-circle cx-c4">4</div>
-                    <div class="cx-text cx-t4">
-                        <p class="hcw-step-title">Grow Your Influence</p>
-                        <p class="hcw-step-desc">Grow your visibility through collaborations, events, and creator opportunities.</p>
-                    </div>
-                </div>
-    
-            </div>
+            @endforeach
+
         </div>
     </div>
 </div>
-
-
-<!-- EVENT LISTING -->
-<section class="blog-section-two position-relative mt-70 lg-mt-80" id="events">
-    <div class="container">
-        <div class="section-head">
-            <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Event Listing</div>
-            <h2 class="sec-title rv" style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Curated Events for Every Creator Journey</h2>
-            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-bottom: 0; margin-left: auto; margin-right: auto; line-height: 1.6;">Explore upcoming panels, awards gala ceremonies, regional conferences, and exclusive brand sponsership opportunities.</p>
-        </div>
-
-        <div class="position-relative">
-            <div class="row gx-xxl-5">
-                @php
-                    $homeEvents = [
-                        [
-                            'category' => 'Speakers',
-                            'title' => 'Founder Spotlight Series: Scaling Beyond Series A',
-                            'desc' => 'Deconstructing startup milestones, market entry barriers, and scaling systems for high-growth ventures.',
-                            'date' => 'JUL 18, 2026',
-                            'location' => 'BENGALURU HUB',
-                            'host' => 'Aditya Verma',
-                            'role' => 'Venture Partner',
-                            'img' => 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800'
-                        ],
-                        [
-                            'category' => 'Roundtables',
-                            'title' => 'Creator Connect Sessions: Multi-Platform Monetization',
-                            'desc' => 'Unlocking premium brand sponserships, media kit architectures, and co-branded content monetization loops.',
-                            'date' => 'JUL 24, 2026',
-                            'location' => 'EPISODE 42',
-                            'host' => 'Rohan Sharma',
-                            'role' => 'Growth Lead',
-                            'img' => 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=800'
-                        ],
-                        [
-                            'category' => 'Roundtables',
-                            'title' => 'Women in Leadership Circle: Directing Enterprise Operations',
-                            'desc' => 'A collaborative forum for female business leaders, operational executives, and board candidates.',
-                            'date' => 'AUG 02, 2026',
-                            'location' => 'LEELA PALACE',
-                            'host' => 'Meera Nair',
-                            'role' => 'UI/UX Director',
-                            'img' => 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=800'
-                        ],
-                        [
-                            'category' => 'Speakers',
-                            'title' => 'Mentor Connect Program: Engineering & Architecture Scales',
-                            'desc' => 'Direct technical mapping alongside elite system architects deploying robust enterprise configurations.',
-                            'date' => 'AUG 12, 2026',
-                            'location' => 'VIRTUAL SYMPOSIUM',
-                            'host' => 'Siddharth Rao',
-                            'role' => 'Full Stack Architect',
-                            'img' => 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800'
-                        ],
-                        [
-                            'category' => 'Podcasts',
-                            'title' => 'Fireside Chats: Building Legacy Brand Narratives',
-                            'desc' => 'An intimate, raw conversation with veteran operators detailing brand strategy, pivots, and positioning.',
-                            'date' => 'AUG 29, 2026',
-                            'location' => 'EPISODE 43',
-                            'host' => 'Karan Malhotra',
-                            'role' => 'Principal Architect',
-                            'img' => 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=800'
-                        ],
-                        [
-                            'category' => 'Speakers',
-                            'title' => 'CEO Conversations: Navigating Cross-Border Ventures',
-                            'desc' => 'Closed-door insights on international compliance, currency risk, and building global operating structures.',
-                            'date' => 'SEP 05, 2026',
-                            'location' => 'ITC GARDENIA',
-                            'host' => 'Ananya Rao',
-                            'role' => 'Managing Director',
-                            'img' => 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800'
-                        ]
-                    ];
-                @endphp
-
-                @foreach($homeEvents as $event)
-                    @php
-                        $dateParts = explode(' ', $event['date']);
-                        $day = rtrim($dateParts[1], ',');
-                        $month = $dateParts[0];
-                        $formattedDate = $day . ' ' . $month;
-                        $slug = \Illuminate\Support\Str::slug($event['title']);
-                    @endphp
-                    <div class="col-lg-4 col-md-6">
-                        <article class="blog-meta-two mb-80 lg-mb-50 wow fadeInUp">
-                            <figure class="post-img rounded-5 position-relative d-flex align-items-end m0"
-                                style="background-image: url('{{ $event['img'] }}');">
-                                {{-- <a href="{{ url('/event-details/' . $slug) }}" class="stretched-link rounded-5 date tran3s">{{ $formattedDate }}</a> --}}
-                            </figure>
-                            <div class="post-data">
-                                <div class="d-flex justify-content-between align-items-center flex-wrap">
-                                    <a href="{{ url('/event-details/' . $slug) }}" class="blog-title" style="width: 80%;">
-                                        <h3 style="font-size: 1.2rem; font-weight: 600; line-height: 1.4; color: #0c3a30; margin-bottom: 0;">{{ $event['title'] }}</h3>
-                                    </a>
-                                    <a href="{{ url('/event-details/' . $slug) }}" class="round-btn rounded-circle d-flex align-items-center justify-content-center tran3s" style="width: 45px; height: 45px; font-size: 18px; min-width: 45px;">
-                                        <i class="bi bi-arrow-up-right"></i>
-                                    </a>
-                                </div>
-                                 <p class="event-desc mt-2" style="font-size: 0.9rem; color: #475569; line-height: 1.5; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                                    {{ $event['desc'] }}
-                                </p>
-                                {{-- <div class="post-info text-uppercase fw-semibold tracking-wider opacity-75" style="font-size: 0.72rem; color: #ffd2b1; border-top: none; padding-top: 0; margin-top: 0;">
-                                    {{ $event['category'] }} • {{ $event['location'] }}
-                                </div> --}}
-                            </div>
-                        </article>
-                    </div>
-                @endforeach
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- THE DNA OF CONNECTX -->
-<section class="h2-section h2-section--white h2-xmeaning" id="what-x-means">
-    <div class="container">
-
-        {{-- Section Header --}}
-        <div class="h2-section-header">
-            <div class="h2-eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">The DNA of Young Chanakya X</div>
-            <h2 class="h2-heading rv" style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">What Does "X" Mean?</h2>
-            <p class="h2-desc h2-desc--center rv sec-desc" style="line-height: 1.6;">
-                The letter X represents the point where ideas, people, opportunities, and experiences intersect — creating something greater than the sum of its parts.
-            </p>
-        </div>
-
-        {{-- Constellation Layout --}}
-        <div class="h2-xm__constellation rv">
-
-            {{-- Central X Hub --}}
-            <div class="h2-xm__hub">
-                <div class="h2-xm__hub-ring h2-xm__hub-ring--1"></div>
-                <div class="h2-xm__hub-ring h2-xm__hub-ring--2"></div>
-                <div class="h2-xm__hub-ring h2-xm__hub-ring--3"></div>
-                <div class="h2-xm__hub-letter">X</div>
-                <div class="h2-xm__hub-tagline">Where Everything Intersects</div>
-            </div>
-
-            {{-- Connection Lines (SVG) — x2/y2 targets the center of each node's icon circle --}}
-            <svg class="h2-xm__lines" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-                <defs>
-                    <marker id="icon-dot-default" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-                        <circle cx="3" cy="3" r="2.5" fill="rgba(12,58,48,0.25)"/>
-                    </marker>
-                    <marker id="icon-dot-hover" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-                        <circle cx="3" cy="3" r="2.5" fill="rgba(255,210,177,0.9)"/>
-                    </marker>
-                </defs>
-                {{-- explore: node top:40 left:100, icon center = (100+110, 40+34) = (210,74) scaled ~(221,78) --}}
-                <line class="h2-xm__line h2-xm__line--explore"    x1="600" y1="450" x2="221" y2="78"  stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
-                {{-- exchange: node top:40 right:100 → left=820, icon center = (820+110, 74) = (930,74) scaled ~(979,78) --}}
-                <line class="h2-xm__line h2-xm__line--exchange"   x1="600" y1="450" x2="979" y2="78"  stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
-                {{-- express: node top:380 left:20, icon center = (130, 414) scaled ~(135,436) --}}
-                <line class="h2-xm__line h2-xm__line--express"    x1="600" y1="450" x2="135" y2="436" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
-                {{-- experience: node top:380 right:20 → left=900, icon center = (1010,414) scaled ~(1065,436) --}}
-                <line class="h2-xm__line h2-xm__line--experience" x1="600" y1="450" x2="1065" y2="436" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
-                {{-- expand: node bottom:20 left:150, icon center = (260, ~754) scaled ~(274,734) --}}
-                <line class="h2-xm__line h2-xm__line--expand"     x1="600" y1="450" x2="274" y2="734" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
-                {{-- excel: node bottom:20 right:150 → left=770, icon center = (880,~754) scaled ~(926,734) --}}
-                <line class="h2-xm__line h2-xm__line--excel"      x1="600" y1="450" x2="926" y2="734" stroke-dasharray="6 4" marker-end="url(#icon-dot-default)"/>
-            </svg>
-
-            {{-- Concept Nodes --}}
-            <div class="h2-xm__node h2-xm__node--explore" data-concept="explore">
-                <div class="h2-xm__node-beacon"></div>
-                <div class="h2-xm__node-icon"><i class="bi bi-compass"></i></div>
-                <div class="h2-xm__node-content">
-                    <div class="h2-xm__node-prefix">01</div>
-                    <h3 class="h2-xm__node-title">Explore</h3>
-                    <p class="h2-xm__node-desc">Discover inspiring people, innovative ideas, industries, startups, technologies, careers, and opportunities that broaden your perspective.</p>
-                </div>
-            </div>
-
-            <div class="h2-xm__node h2-xm__node--exchange" data-concept="exchange">
-                <div class="h2-xm__node-beacon"></div>
-                <div class="h2-xm__node-icon"><i class="bi bi-arrow-left-right"></i></div>
-                <div class="h2-xm__node-content">
-                    <div class="h2-xm__node-prefix">02</div>
-                    <h3 class="h2-xm__node-title">Exchange</h3>
-                    <p class="h2-xm__node-desc">Share knowledge, insights, experiences, and practical wisdom with a community that values learning and collaboration.</p>
-                </div>
-            </div>
-
-            <div class="h2-xm__node h2-xm__node--express" data-concept="express">
-                <div class="h2-xm__node-beacon"></div>
-                <div class="h2-xm__node-icon"><i class="bi bi-chat-quote"></i></div>
-                <div class="h2-xm__node-content">
-                    <div class="h2-xm__node-prefix">03</div>
-                    <h3 class="h2-xm__node-title">Express</h3>
-                    <p class="h2-xm__node-desc">Tell your story, communicate your ideas, showcase your expertise, and inspire others through authentic conversations.</p>
-                </div>
-            </div>
-
-            <div class="h2-xm__node h2-xm__node--experience" data-concept="experience">
-                <div class="h2-xm__node-beacon"></div>
-                <div class="h2-xm__node-icon"><i class="bi bi-calendar-event"></i></div>
-                <div class="h2-xm__node-content">
-                    <div class="h2-xm__node-prefix">04</div>
-                    <h3 class="h2-xm__node-title">Experience</h3>
-                    <p class="h2-xm__node-desc">Participate in podcasts, workshops, networking events, live sessions, and real-world interactions that create lasting learning.</p>
-                </div>
-            </div>
-
-            <div class="h2-xm__node h2-xm__node--expand" data-concept="expand">
-                <div class="h2-xm__node-beacon"></div>
-                <div class="h2-xm__node-icon"><i class="bi bi-diagram-3"></i></div>
-                <div class="h2-xm__node-content">
-                    <div class="h2-xm__node-prefix">05</div>
-                    <h3 class="h2-xm__node-title">Expand</h3>
-                    <p class="h2-xm__node-desc">Grow your professional network, discover partnerships, connect with mentors, and unlock new opportunities.</p>
-                </div>
-            </div>
-
-            <div class="h2-xm__node h2-xm__node--excel" data-concept="excel">
-                <div class="h2-xm__node-beacon"></div>
-                <div class="h2-xm__node-icon"><i class="bi bi-graph-up-arrow"></i></div>
-                <div class="h2-xm__node-content">
-                    <div class="h2-xm__node-prefix">06</div>
-                    <h3 class="h2-xm__node-title">Excel</h3>
-                    <p class="h2-xm__node-desc">Continuously improve your skills, leadership, career, and business while contributing to a thriving ecosystem.</p>
-                </div>
-            </div>
-
-        </div>{{-- /.h2-xm__constellation --}}
-
-        {{-- Bottom Statement --}}
-        <div class="h2-xm__bottom rv">
-            <p class="h2-xm__statement">
-                Every interaction within the ecosystem moves you through these six dimensions — creating a continuous cycle of <strong>growth, contribution, and impact.</strong>
-            </p>
-        </div>
-
-    </div>
-</section>
-
+</section> --}}
   
 <!-- COMMUNITY & sponser -->
 {{-- <section class="community-sec" id="community">
@@ -1523,80 +1374,220 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
     </div>
 </section> --}}
 
-<section class="membership-section position-relative mt-50 lg-mt-80 mb-50 lg-mb-80" id="membership">
-  <div class="container">
-    <div class="section-head text-center" style="margin-bottom: 50px;">
-        <div class="eyebrow rv">Get Involved</div>
-        <h2 class="sec-title rv" style="color: #0c3a30;">Find Your Role in the Ecosystem</h2>
-        <p class="sec-desc rv text-center" style="max-width: 600px; margin: 16px auto 0;">Choose how you want to engage with our community—whether by mentoring others, speaking on record, leading initiatives, or partnering with us.</p>
+<!-- WHO CAN PARTNER -->
+<section class="partner-sec" id="partner">
+    <div class="partner-head text-center">
+        <div class="eyebrow rv" style="margin-bottom: 12px;">Who Can Join Us</div>
+        <h2 class="sec-title rv" style="margin-bottom: 16px;">A Community for Everyone Who Wants to Grow</h2>
+        <p class="sec-desc rv mx-auto" style="margin-bottom: 0; line-height: 1.6; max-width: 600px;">For people who value collaboration, learning, and building real connections that create long-term impact.</p>
     </div>
-    <div class="mem-grid">
-      <div class="mem-card">
-        <div>
-          <div class="mem-role">Organizational</div>
-          <h3>Become a Partner</h3>
-          <p class="mem-desc">Collaborate through co-branded events, strategic integrations, and collaborative ecosystem initiatives.</p>
+    <div class="partner-grid container">
+        <div class="p-card rv" style="transition-delay:0s">
+            <img src="{{ asset('images/media/index-page/Students.jpg') }}" alt="Students — Young Chanakya X Partner Category" loading="lazy">
+            <div class="p-card-ov">
+                <div class="p-name">Students</div>
+                <div class="p-desc">Connect with peers, build practical skills, and access leadership programs.</div>
+            </div>
         </div>
-        <a href="/become-a-partner" class="mem-action-link">
-          <span class="btn-text">Become a Partner</span>
-          <span class="round-btn"><i class="bi bi-arrow-up-right"></i></span>
-        </a>
-      </div>
-      <div class="mem-card">
-        <div>
-          <div class="mem-role">Brand Supporter</div>
-          <h3>Become a Sponsor</h3>
-          <p class="mem-desc">Sponsor events, podcast seasons, and community programs to elevate your brand presence.</p>
+        <div class="p-card rv" style="transition-delay:0.07s">
+            <img src="{{ asset('images/media/index-page/Entrepreneurs.jpg') }}" alt="Entrepreneurs — Young Chanakya X Partner Category" loading="lazy">
+            <div class="p-card-ov">
+                <div class="p-name">Entrepreneurs</div>
+                <div class="p-desc">Network with experts, share your vision, and scale your business ventures.</div>
+            </div>
         </div>
-        <a href="/become-a-sponsor" class="mem-action-link">
-          <span class="btn-text">Become a Sponsor</span>
-          <span class="round-btn"><i class="bi bi-arrow-up-right"></i></span>
-        </a>
-      </div>
-      <div class="mem-card">
-        <div>
-          <div class="mem-role">Platform Voice</div>
-          <h3>Share Your Story</h3>
-          <p class="mem-desc">Apply to share your personal journey, business ventures, or expertise as a guest application.</p>
+        <div class="p-card rv" style="transition-delay:0.14s">
+            <img src="{{ asset('images/media/index-page/founder.jpg') }}" alt="Startup Founders — Young Chanakya X Partner Category" loading="lazy">
+            <div class="p-card-ov">
+                <div class="p-name">Startup Founders</div>
+                <div class="p-desc">Pitch your ideas, collaborate with investors, and accelerate your growth.</div>
+            </div>
         </div>
-        <a href="/share-your-story" class="mem-action-link">
-          <span class="btn-text">Share Your Story</span>
-          <span class="round-btn"><i class="bi bi-arrow-up-right"></i></span>
-        </a>
-      </div>
-      <div class="mem-card">
-        <div>
-          <div class="mem-role">Signature Stage</div>
-          <h3>YCX Talks</h3>
-          <p class="mem-desc">Share your expertise, practical insights, and ideas on our signature stage as a speaker.</p>
+        <div class="p-card rv" style="transition-delay:0.21s">
+            <img src="{{ asset('images/media/index-page/Business Leaders.jpg') }}" alt="Business Leaders — Young Chanakya X Partner Category" loading="lazy">
+            <div class="p-card-ov">
+                <div class="p-name">Business Leaders</div>
+                <div class="p-desc">Guide the ecosystem, sponser programs, and share executive insights.</div>
+            </div>
         </div>
-        <a href="/become-a-speaker" class="mem-action-link">
-          <span class="btn-text">Become a Speaker</span>
-          <span class="round-btn"><i class="bi bi-arrow-up-right"></i></span>
-        </a>
-      </div>
-      <div class="mem-card">
-        <div>
-          <div class="mem-role">Broadcast Guest</div>
-          <h3>Get Featured On Podcast</h3>
-          <p class="mem-desc">Pitch your topic, speak on record, and share functional expertise on our podcast episodes.</p>
+        <div class="p-card rv" style="transition-delay:0.28s">
+            <img src="{{ asset('images/media/index-page/Creators -Mentors.jpg') }}" alt="Creators & Mentors — Young Chanakya X Partner Category" loading="lazy">
+            <div class="p-card-ov">
+                <div class="p-name">Creators / Mentors</div>
+                <div class="p-desc">Produce podcasts, write articles, and mentor the next generation.</div>
+            </div>
         </div>
-        <a href="/become-a-feature" class="mem-action-link">
-          <span class="btn-text">Get Featured</span>
-          <span class="round-btn"><i class="bi bi-arrow-up-right"></i></span>
-        </a>
-      </div>
-      <div class="mem-card cta-card featured">
-        <div class="cta-card-content">
-          <div class="cta-icon">✨</div>
-          <h3>Not sure where you fit?</h3>
-          <p class="cta-desc">Reach out to our team directly and let's explore how we can work together.</p>
+        <div class="p-card rv" style="transition-delay:0.35s">
+            <img src="{{ asset('images/media/index-page/Influencers.jpg') }}" alt="Influencers — Young Chanakya X Partner Category" loading="lazy">
+            <div class="p-card-ov">
+                <div class="p-name">Influencers</div>
+                <div class="p-desc">Amplify brand voice, reach active audiences, and host live sessions.</div>
+            </div>
         </div>
-        <a href="/contact" class="mem-cta-btn">Contact Us</a>
-      </div>
+        <div class="p-card rv" style="transition-delay:0.42s">
+            <img src="{{ asset('images/media/index-page/Investors.jpg') }}" alt="Investors — Young Chanakya X Partner Category" loading="lazy">
+            <div class="p-card-ov">
+                <div class="p-name">Investors</div>
+                <div class="p-desc">Discover vetted startups, back innovators, and shape market trends.</div>
+            </div>
+        </div>
+        <div class="p-card rv" style="transition-delay:0.49s">
+            <img src="{{ asset('images/media/index-page/Educators.jpg') }}" alt="Educators — Young Chanakya X Partner Category" loading="lazy">
+            <div class="p-card-ov">
+                <div class="p-name">Educators</div>
+                <div class="p-desc">Bridge academia with industry, design courses, and lead workshops.</div>
+            </div>
+        </div>
+        <div class="p-card rv" style="transition-delay:0.56s">
+            <img src="{{ asset('images/media/index-page/Community Builders.jpg') }}" alt="Community Builders — Young Chanakya X Partner Category" loading="lazy">
+            <div class="p-card-ov">
+                <div class="p-name">Community Builders</div>
+                <div class="p-desc">Organize local meetups, run regional chapters, and grow active networks.</div>
+            </div>
+        </div>
+        <div class="p-card rv" style="transition-delay:0.63s">
+            <img src="{{ asset('images/media/index-page/Innovators.jpg') }}" alt="Innovators — Young Chanakya X Partner Category" loading="lazy">
+            <div class="p-card-ov">
+                <div class="p-name">Innovators</div>
+                <div class="p-desc">Develop cutting-edge ideas, collaborate on tech, and build future frameworks.</div>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
+
+<!-- WAYS TO GET INVOLVED -->
+<section class="ways-to-involve-sec">
+    <div class="container">
+        <div class="section-head text-center" style="margin-bottom: 50px;">
+            <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Ways to Engage</div>
+            <h2 class="sec-title rv" style="color: var(--primary-dark); font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Be Part of the Experience</h2>
+            <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">Explore a range of initiatives designed to connect you with industry leaders, ideas, and opportunities.</p>
+        </div>
+    </div>
+
+    <div class="marquee-container" style="padding-bottom: 0;">
+        <div class="marquee-track">
+            @php
+                $marqueeRow1 = [
+                    'Founder Spotlight', 'CEO Conversations', 'Startup Stories', 'Community Podcasts', 
+                    'Student Leadership Series', 'Women in Leadership', 'Creator Sessions'
+                ];
+                $marqueeRow2 = [
+                    'Industry Roundtables', 'Campus Chapters', 'Mentor Connect', 'Innovation Talks', 
+                    'Networking Meetups', 'Fireside Chats', 'Leadership Summit'
+                ];
+            @endphp
+            @foreach($marqueeRow1 as $item)
+                <div class="marquee-chip">{{ $item }}</div>
+            @endforeach
+            @foreach($marqueeRow1 as $item)
+                <div class="marquee-chip">{{ $item }}</div>
+            @endforeach
+        </div>
+    </div>
+    
+    <div class="marquee-container mt-5">
+        <div class="marquee-track marquee-track-reverse">
+            @foreach($marqueeRow2 as $item)
+                <div class="marquee-chip">{{ $item }}</div>
+            @endforeach
+            @foreach($marqueeRow2 as $item)
+                <div class="marquee-chip">{{ $item }}</div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCES -->
+<section class="cx-premium-viewport">
+    <div class="cx-custom-cursor"></div>
+
+    <div class="cx-wrapper">
+        <div class="cx-editorial-header text-center">
+            <div class="eyebrow rv" style="margin-bottom: 12px; font-size: 10px; font-weight: 700; letter-spacing: 3px;">Young Chanakya X Experiences</div>
+            <h2 class="cx-main-heading" style="margin-bottom: 16px; font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Creator Spaces & Events</h2>
+            <p class="sec-desc rv mx-auto" style="margin-bottom: 0; line-height: 1.6; max-width: 600px;">We provide professional recording studios, creative lounges, and city meetups to help you create content, meet people, and grow your audience.</p>
+        </div>
+
+        <div class="cx-viewport-grid">
+
+            <div class="cx-premium-card cx-col-wide">
+                <div class="cx-img-container">
+                    <img src="{{ asset('images/media/podcast.png') }}" alt="Podcasts" class="cx-surface-img">
+                    <div class="cx-surface-overlay"></div>
+                </div>
+                <div class="cx-premium-body">
+                    <span class="cx-premium-badge">PODCASTS</span>
+                    <h3 class="cx-premium-title">Conversations with founders, CEOs, creators, and innovators.</h3>
+                    <p class="cx-premium-text">Real experiences. Practical lessons. Shared on record.</p>
+                </div>
+            </div>
+
+            <div class="cx-premium-card cx-col-square">
+                <div class="cx-img-container">
+                    <img src="{{ asset('images/media/experience_stories.png') }}" alt="Stories" class="cx-surface-img">
+                    <div class="cx-surface-overlay"></div>
+                </div>
+                <div class="cx-premium-body">
+                    <span class="cx-premium-badge">STORIES</span>
+                    <h3 class="cx-premium-title">Every journey matters.</h3>
+                    <p class="cx-premium-text">Publish startup stories, career experiences, and personal transformations.</p>
+                </div>
+            </div>
+
+            <div class="cx-premium-card cx-col-square">
+                <div class="cx-img-container">
+                    <img src="{{ asset('images/media/network.png') }}" alt="Network" class="cx-surface-img">
+                    <div class="cx-surface-overlay"></div>
+                </div>
+                <div class="cx-premium-body">
+                    <span class="cx-premium-badge">NETWORK</span>
+                    <h3 class="cx-premium-title">Relationships across industries.</h3>
+                    <p class="cx-premium-text">Students, professionals, investors, mentors — all in one space.</p>
+                </div>
+            </div>
+
+            <div class="cx-premium-card cx-col-square">
+                <div class="cx-img-container">
+                    <img src="{{ asset('images/media/experience_mentorship.png') }}" alt="Mentorship" class="cx-surface-img">
+                    <div class="cx-surface-overlay"></div>
+                </div>
+                <div class="cx-premium-body">
+                    <span class="cx-premium-badge">MENTORSHIP</span>
+                    <h3 class="cx-premium-title">The right conversation changes everything.</h3>
+                    <p class="cx-premium-text">Connect with mentors who've navigated the path you're on.</p>
+                </div>
+            </div>
+
+            <div class="cx-premium-card cx-col-square">
+                <div class="cx-img-container">
+                    <img src="{{ asset('images/media/experience_live_events.png') }}" alt="Live Events" class="cx-surface-img">
+                    <div class="cx-surface-overlay"></div>
+                </div>
+                <div class="cx-premium-body">
+                    <span class="cx-premium-badge">LIVE EVENTS</span>
+                    <h3 class="cx-premium-title">Where ideas become action.</h3>
+                    <p class="cx-premium-text">Webinars, summits, roundtables, fireside chats, and meetups.</p>
+                </div>
+            </div>
+
+            <div class="cx-premium-card cx-col-wide">
+                <div class="cx-img-container">
+                    <img src="{{ asset('images/media/collabarate.png') }}" alt="Collaborate" class="cx-surface-img">
+                    <div class="cx-surface-overlay"></div>
+                </div>
+                <div class="cx-premium-body">
+                    <span class="cx-premium-badge">COLLABORATE</span>
+                    <h3 class="cx-premium-title">Build with people who share your vision.</h3>
+                    <p class="cx-premium-text">Partnerships for startups, research, content, and innovation.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
 
 @push('scripts')
 <script>

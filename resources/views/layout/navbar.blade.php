@@ -92,7 +92,7 @@
                 </a>
 
                 <a href="{{ url('/become-a-feature') }}" class="fs-nav-item {{ request()->is('become-a-feature') ? 'active' : '' }}" onclick="toggleMenu()">
-                    <span class="fs-nav-name">Become Featured on Podcast</span>
+                    <span class="fs-nav-name">Featured on YCX Podcast</span>
                     <span class="fs-nav-arrow">→</span>
                 </a>
 
@@ -117,7 +117,7 @@
                 </a>
 
                 <a href="{{ url('/insights') }}" class="fs-nav-item {{ request()->is('insights') || request()->is('insights/*') ? 'active' : '' }}" onclick="toggleMenu()">
-                    <span class="fs-nav-name">Blogs</span>
+                    <span class="fs-nav-name">Insights</span>
                     <span class="fs-nav-arrow">→</span>
                 </a>
 
@@ -141,7 +141,7 @@
 
     <div class="header-right">
 
-        <button class="btn-join" onclick="window.location.href='/connecters-list'">
+        <button class="btn-join" onclick="window.location.href='/connectors'">
             Connect with Us
         </button>
 

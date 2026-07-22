@@ -402,7 +402,7 @@
                             </li>
                             <li>
                                 <a href="{{ url('/become-a-feature') }}">
-                                    Get Featured on Our Podcast
+                                    Featured on YCX Podcast
                                 </a>
                             </li>
 

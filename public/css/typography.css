@@ -239,7 +239,8 @@ input[type="button"] {
 
 /* Hero buttons keep their larger size */
 .btn-hero-primary,
-.btn-hero-outline {
+.btn-hero-outline,
+.btn-hero-secondary {
     font-size: 15px !important;
     font-weight: 800 !important;
 }
