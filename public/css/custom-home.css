@@ -1070,11 +1070,12 @@ body {
   color: var(--brown-dark);
   display: block;
   padding: 6px 0;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .footer-two .footer-nav-link a:hover {
-  color: var(--brown);
+  color: var(--orange) !important;
+  text-decoration: none !important;
 }
 
 .footer-two .social-icon a {

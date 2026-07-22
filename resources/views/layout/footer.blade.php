@@ -55,12 +55,13 @@
 
 .footer-nav-link a {
     color: #6b7280 !important;
-    text-decoration: none;
+    text-decoration: none !important;
     transition: all 0.3s ease;
 }
 
 .footer-nav-link a:hover {
-    color: #0c3a30 !important;
+    color: #ff7a30 !important;
+    text-decoration: none !important;
 }
 
 @media (max-width: 767px) {

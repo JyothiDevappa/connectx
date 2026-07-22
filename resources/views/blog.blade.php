@@ -99,16 +99,6 @@ $seo = [
                                 @endforeach
                             </div>
                         </div>
-
-                        <!-- Sidebar CTA Banner -->
-                        <div class="sidebar-cta-card mt-4 text-center">
-                            <div class="cta-icon-box mb-3">
-                                <i class="bi bi-mic-fill"></i>
-                            </div>
-                            <h5 class="cta-title">Share Your Story</h5>
-                            <p class="cta-text">Take the YCX stage and inspire our global community with your lessons & journey.</p>
-                            <a href="{{ url('/share-your-story') }}" class="btn-sidebar-cta">Apply to Share</a>
-                        </div>
                     </aside>
                 </div>
 
