@@ -3,9 +3,9 @@
  * Become a Guest / Feature Page SEO Data
  */
 $seo = [
-    'title'       => 'Get Featured — The CHRO Mindset Podcast',
-    'description' => 'Share the frameworks you\'ve built, the calls only a CHRO has to make, and the mistakes that taught you the most with an audience of HR leaders.',
-    'keywords'    => 'CHRO Mindset, get featured, podcast guest, HR leader, Chief Human Resources Officer, people leader podcast',
+    'title'       => 'Get Featured — The CHRO Mindset Podcast | YCX Podcast',
+    'description' => 'Share your frameworks, key leadership decisions, and the lessons you\'ve learned on the YCX Podcast. Apply to be featured as a guest speaker.',
+    'keywords'    => 'YCX Podcast, get featured, podcast guest, guest speaker, Young Chanakya X, CHRO Mindset, business leadership podcast',
     'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];

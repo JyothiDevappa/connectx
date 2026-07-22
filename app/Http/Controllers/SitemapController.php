@@ -46,6 +46,21 @@ class SitemapController extends Controller
             'priority'   => '0.8',
         ],
         [
+            'url'        => '/become-a-speaker',
+            'changefreq' => 'monthly',
+            'priority'   => '0.8',
+        ],
+        [
+            'url'        => '/become-a-feature',
+            'changefreq' => 'monthly',
+            'priority'   => '0.8',
+        ],
+        [
+            'url'        => '/share-your-story',
+            'changefreq' => 'monthly',
+            'priority'   => '0.8',
+        ],
+        [
             'url'        => '/connecters-list',
             'changefreq' => 'weekly',
             'priority'   => '0.8',
@@ -54,6 +69,21 @@ class SitemapController extends Controller
             'url'        => '/events',
             'changefreq' => 'weekly',
             'priority'   => '0.9',
+        ],
+        [
+            'url'        => '/career',
+            'changefreq' => 'weekly',
+            'priority'   => '0.7',
+        ],
+        [
+            'url'        => '/internship',
+            'changefreq' => 'weekly',
+            'priority'   => '0.7',
+        ],
+        [
+            'url'        => '/insights',
+            'changefreq' => 'weekly',
+            'priority'   => '0.8',
         ],
         [
             'url'        => '/contact',

@@ -1066,11 +1066,10 @@ function toggleTier(btn) {
 <!-- =========================
    CTA SECTION
    ========================= -->
-<section class="connectx-expand-section pt-30 pb-50" style="background-color: #0c3a30;">
+<!-- <section class="connectx-expand-section pt-30 pb-50" style="background-color: #0c3a30;">
     <div class="container py-5">
         <div class="row align-items-center gy-5">
 
-            <!-- CONTENT SIDE -->
             <div class="col-lg-6 order-lg-last wow fadeInRight">
                 <div class="px-lg-4" style="margin-top: -30px;">
                     <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px; color: #ffd2b1;">Creating Value Through Collaboration</div>
@@ -1100,7 +1099,6 @@ function toggleTier(btn) {
                 </div>
             </div>
 
-            <!-- IMAGE SIDE -->
             <div class="col-lg-6 col-md-10 m-auto wow fadeInLeft">
                 <div class="media-wrapper px-lg-4">
                     <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80"
@@ -1111,7 +1109,7 @@ function toggleTier(btn) {
 
         </div>
     </div>
-</section>
+</section> -->
 
 @if (session('success'))
 <!-- Success Modal -->

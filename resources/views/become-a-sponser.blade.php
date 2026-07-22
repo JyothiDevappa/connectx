@@ -3,9 +3,9 @@
  * Become a sponsor Page SEO Data
  */
 $seo = [
-    'title'       => 'Become a sponsor — Community & sponsership Opportunities | Young Chanakya X',
-    'description' => 'sponser Young Chanakya X events and creator programs to amplify your brand reach. Access title sponserships, event sponserships, community sponserships, and creator ecosystem packages.',
-    'keywords'    => 'Young Chanakya X sponsership, sponser Young Chanakya X, event sponsership India, brand visibility creator events, community sponser Young Chanakya, creator platform sponsership',
+    'title'       => 'Become a Sponsor — Community & Sponsorship Opportunities | Young Chanakya X',
+    'description' => 'Sponsor Young Chanakya X events and creator programs to amplify your brand reach. Access title sponsorships, event sponsorships, community sponsorships, and creator ecosystem packages.',
+    'keywords'    => 'Young Chanakya X sponsorship, sponsor Young Chanakya X, event sponsorship India, brand visibility creator events, community sponsor Young Chanakya, creator platform sponsorship',
     'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];
