@@ -109,6 +109,10 @@ Route::get('/become-a-feature', function () {
 });
 Route::post('/become-a-feature/apply', [ApplicationController::class, 'submitFeatureGuest'])->name('feature-guest.apply');
 
+Route::get('/masterclass', function () {
+    return view('ycx-masterclass');
+})->name('masterclass');
+
 
 Route::get('/speaker-talk', function () {
     return view('speaker-talk');
