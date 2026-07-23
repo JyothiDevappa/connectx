@@ -407,7 +407,6 @@
   max-width: 720px;
   margin: 0 auto;
 }
-.faq-item { border-top: 1px solid var(--border, rgba(12, 58, 48, 0.08)); }
 .faq-item:last-child { border-bottom: 1px solid var(--border, rgba(12, 58, 48, 0.08)); }
 .faq-q {
   width: 100%;
@@ -592,6 +591,13 @@
 
 .faq-item.open .faq-a {
     max-height: 220px;
+}
+
+@media(max-width: 900px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
 
 

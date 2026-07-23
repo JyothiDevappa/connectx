@@ -606,7 +606,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
 <section class="container py-4">
   <div id="join-club">
     <div class="jc-photo">
-      <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" alt="Members collaborating at the YCX Club">
+      <img src="{{ asset('images/media/club.png') }}" alt="Members collaborating at the YCX Club">
     </div>
     <div class="jc-content">
       <span class="eyebrow">Join Our Club</b></span>
@@ -807,7 +807,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
             </div>
         </div>
         <div class="about-img-side rv-r">
-            <img src="/images/media/about_platform_leaders.png" alt="Feature on YCX Podcast">
+            <img src="{{ asset('images/media/podcast-kishore.png') }}" alt="Feature on YCX Podcast">
             <div class="about-img-overlay"></div>
         </div>
     </div>
@@ -826,7 +826,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
         <p>Join YCX as a partner and collaborate with a growing network of creators, speakers and communities to create impactful experiences and new opportunities.</p>
       </div>
       <div class="engagement-photo">
-        <img src="{{ asset('images/media/collabarate.png') }}" alt="Celebrate Campus Engagements">
+        <img src="{{ asset('images/media/partner.png') }}" alt="Celebrate Campus Engagements">
       </div>
     </div>
 
@@ -840,7 +840,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
         <p>Partner with YCX as a sponsor to connect your brand with inspiring conversations, influential voices, and a community that values innovation and collaboration.</p>
       </div>
       <div class="engagement-photo">
-        <img src="{{ asset('images/media/experience_live_events.png') }}" alt="Become a Sponor">
+        <img src="{{ asset('images/media/sponsor.png') }}" alt="Become a Sponor">
       </div>
     </div>
   </div>

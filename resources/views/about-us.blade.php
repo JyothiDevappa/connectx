@@ -220,8 +220,81 @@ $seo = [
   </div>
 </div>
 
+<!-- ECOSYSTEM SECTION -->
+<section class="ecosystem-dark-section">
+    <div class="container-fluid px-lg-5">
+        <div class="ecosystem-card-container">
+            
+            <!-- Sparkle Star near center top -->
+            <div class="ecosystem-sparkle-star d-none d-lg-block">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="#ffca95" opacity="0.6"/>
+                </svg>
+            </div>
 
-<div class="block-feature-ten position-relative mt-150 lg-mt-80 pb-100 lg-pb-60">
+            <div class="row align-items-center g-0">
+                
+                <!-- LEFT COLUMN -->
+                <div class="col-lg-5 ecosystem-left-col">
+                    <div class="ecosystem-left-content">
+                        <h2 class="ecosystem-title">
+                            Built for 
+                            <span class="text-lime-highlight">Growth-Driven People</span>
+                        </h2>
+                        <p class="ecosystem-subtitle">
+                            Young Chanakya X brings together ambitious creators, speakers, podcasters, and brand leaders into a structured ecosystem to share knowledge, collaborate, and scale influence.
+                        </p>
+
+                        <!-- SPEAKER VISUAL -->
+                        <div class="ecosystem-speaker-visual">
+                            <img src="{{ asset('images/media/about-img.png') }}" alt="Young Chanakya X Speaker" class="ecosystem-speaker-img">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN (Right Aligned List Items with Links) -->
+                <div class="col-lg-7 ecosystem-right-col">
+                    <div class="ecosystem-links-stack">
+                        <a href="/share-your-story" class="ecosystem-link-row">
+                            <span class="ecosystem-row-text">Share Your Story</span>
+                            <span class="ecosystem-arrow-circle">
+                                <i class="bi bi-arrow-up-right"></i>
+                            </span>
+                        </a>
+                        <a href="/become-a-speaker" class="ecosystem-link-row">
+                            <span class="ecosystem-row-text">YCX Talks</span>
+                            <span class="ecosystem-arrow-circle">
+                                <i class="bi bi-arrow-up-right"></i>
+                            </span>
+                        </a>
+                        <a href="/become-a-feature" class="ecosystem-link-row">
+                            <span class="ecosystem-row-text">Featured on YCX Podcast</span>
+                            <span class="ecosystem-arrow-circle">
+                                <i class="bi bi-arrow-up-right"></i>
+                            </span>
+                        </a>
+                        <a href="/become-a-partner" class="ecosystem-link-row">
+                            <span class="ecosystem-row-text">Become a Partner</span>
+                            <span class="ecosystem-arrow-circle">
+                                <i class="bi bi-arrow-up-right"></i>
+                            </span>
+                        </a>
+                        <a href="/become-a-sponsor" class="ecosystem-link-row">
+                            <span class="ecosystem-row-text">Become a Sponsor</span>
+                            <span class="ecosystem-arrow-circle">
+                                <i class="bi bi-arrow-up-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="block-feature-ten position-relative mt-80 lg-mt-80 pb-100 lg-pb-60">
 
     <div class="container">
 
@@ -551,6 +624,23 @@ $seo = [
   </section>
 
 
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const linkRows = document.querySelectorAll('.ecosystem-link-row');
+    if (linkRows.length) {
+        linkRows.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                linkRows.forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    }
+});
+</script>
+@endpush
+
 @endsection
+
 
 

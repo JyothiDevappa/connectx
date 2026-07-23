@@ -1,473 +1,362 @@
 <style>
 /* ==========================================
-   FOOTER — MOBILE RESPONSIVE
-   Breakpoints: 991px (tablet), 767px (mobile), 480px (small mobile)
+   LANDSCAPE MOUNTAIN FOOTER SYSTEM
    ========================================== */
 
-/* ---- Light Copyright Bar ---- */
-.footer-copyright-bar {
-    background: #0c3a30;
-    color: #c5c5c5;
-    border-top: none;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    padding: 24px 0;
-    width: 100%;
+/* Main Footer Container with Dark Mountain Background */
+.footer-landscape-sec {
+    background: linear-gradient(180deg, rgba(8, 38, 31, 0.88) 0%, rgba(6, 28, 23, 0.94) 55%, rgba(4, 18, 15, 0.98) 100%), 
+                url('images/media/footer.png') no-repeat center bottom !important;
+    background-size: cover !important;
+    color: #ffffff;
+    padding: 85px 0 36px;
+    position: relative;
 }
 
-.footer-copyright-bar a {
-    color: #c5c5c5;
+/* Attached Top Tagline Section (Dark Matched Theme) */
+.footer-top-attached {
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 50px;
+    margin-bottom: 60px;
+}
+
+.footer-made-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffd2b1;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.footer-hero-heading {
+    font-size: clamp(30px, 4.2vw, 48px);
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.18;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+}
+
+.footer-hero-highlight {
+    color: #ffd2b1;
+}
+
+.footer-hero-desc {
+    font-size: 15.5px;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.65;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+/* Brand Column (Young Chanakya X) */
+.footer-brand-space {
+    padding-right: 15px;
+}
+
+.footer-logo {
+    max-height: 120px;
+    width: auto;
+    margin-bottom: 18px;
+}
+
+.footer-brand-text {
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.65;
+    margin-bottom: 18px;
+}
+
+.footer-contact-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-contact-box .fc-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-contact-box .fc-item i {
+    color: #ffd2b1;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.footer-contact-box .fc-item a {
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: color 0.25s ease;
 }
 
-.footer-copyright-bar a:hover {
+.footer-contact-box .fc-item a:hover {
     color: #ffffff;
     text-decoration: underline;
 }
 
-.footer-copyright-links {
+/* Link Columns */
+.footer-col-title {
+    font-size: 14.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #ffd2b1;
+    margin-bottom: 20px;
+}
+
+.footer-link-list li {
+    margin-bottom: 11px;
+}
+
+.footer-link-list a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 13.5px;
+    transition: all 0.25s ease;
+}
+
+.footer-link-list a:hover {
+    color: #ffffff;
+    padding-left: 4px;
+    text-decoration: none;
+}
+
+/* Dedicated Young Chanakya (YC) Row */
+.footer-yc-row {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-top: 50px;
+}
+
+.yc-row-logo {
+    max-height: 80px;
+    width: auto;
+}
+
+.yc-row-text {
+    font-size: 13.5px;
+    color: rgb(218 218 218 / 85%);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Social Circles */
+.social-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
     display: flex;
     align-items: center;
-    gap: 15px;
-}
-
-.footer-copyright-links span {
-    color: rgba(255, 255, 255, 0.25);
-}
-
-@media (max-width: 767px) {
-    .footer-copyright-bar {
-        padding: 18px 12px;
-    }
-}
-
-/* ---- Footer brand description ---- */
-.footer-brand-desc {
-    font-size: 14px;
-    line-height: 1.85;
-    color: #6b7280 !important;
-    font-weight: 400;
-    max-width: 320px;
-    margin: 0 0 28px 0;
-}
-
-.footer-nav-link a {
-    color: #6b7280 !important;
-    text-decoration: none !important;
+    justify-content: center;
+    font-size: 15px;
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 
-.footer-nav-link a:hover {
-    color: #ff7a30 !important;
-    text-decoration: none !important;
+.social-circle:hover {
+    background: #ffd2b1;
+    color: #0c3a30;
+    transform: translateY(-3px);
+    text-decoration: none;
 }
 
-@media (max-width: 767px) {
-    .footer-brand-desc {
-        font-size: 13px;
-        max-width: 100%;
-        margin-bottom: 20px;
-        text-align: left;
-    }
+/* Copyright Bar */
+.footer-bottom-bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.65);
 }
 
+.footer-legal-links a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
 
-/* ---- Outer wrapper ---- */
+.footer-legal-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.partners-text a {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.partners-text a:hover {
+    color: #ffd2b1;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
 @media (max-width: 991px) {
-    .footer-two {
-        padding: 40px 0;
+    .footer-landscape-sec {
+        padding: 65px 0 30px;
     }
-    .footer-two .bg-wrapper {
-        padding: 40px 24px 24px !important;
+    .footer-top-attached {
+        padding-bottom: 40px;
+        margin-bottom: 45px;
     }
-    .footer-two .bg-wrapper .shapes {
-        display: none !important;
+    .footer-yc-row {
+        padding: 20px;
     }
 }
 
 @media (max-width: 767px) {
-    .footer-two {
-        padding: 30px 0;
+    .footer-landscape-sec {
+        padding: 50px 0 24px;
     }
-    .footer-two .bg-wrapper {
-        padding: 36px 16px 20px !important;
+    .footer-hero-heading {
+        font-size: 26px;
     }
-}
-
-@media (max-width: 480px) {
-    .footer-two {
-        padding: 24px 0;
+    .footer-brand-space {
+        padding-right: 0;
+        margin-bottom: 24px;
     }
-    .footer-two .bg-wrapper {
-        padding: 28px 12px 16px !important;
-    }
-}
-
-/* ---- Logo / Brand (left column) ---- */
-@media (max-width: 767px) {
-    .footer-two .footer-intro .logo img {
-        max-height: 50px;
-    }
-    .footer-two .footer-intro p.lh-sm {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .footer-two .footer-intro .logo img {
-        max-height: 44px;
-    }
-    .footer-two .footer-intro p.lh-sm {
-        font-size: 13px;
-        margin-bottom: 14px !important;
-    }
-}
-
-/* ---- Footer nav columns ---- */
-@media (max-width: 767px) {
-    #footer-mobile-row {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        flex-direction: row !important;
-    }
-    
-    /* 1. Intro (Full width) */
-    #footer-mobile-row > div:nth-child(1) {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: 0 0 100% !important;
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-        margin-bottom: 32px !important;
-    }
-    
-    /* 2 & 3. Links and Programs (50% side-by-side) */
-    #footer-mobile-row > div:nth-child(2),
-    #footer-mobile-row > div:nth-child(3) {
-        width: 50% !important;
-        max-width: 50% !important;
-        flex: 0 0 50% !important;
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-    }
-    
-    /* 4. Contact Us (Full width) */
-    #footer-mobile-row > div:nth-child(4) {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: 0 0 100% !important;
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-        margin-top: 16px !important;
-    }
-    
-    /* Left-align all elements for clean reading */
-    #footer-mobile-row .footer-intro {
-        text-align: left !important;
-    }
-    #footer-mobile-row .footer-intro .logo {
-        justify-content: flex-start !important;
-        display: flex;
-    }
-    #footer-mobile-row .footer-intro .social-icon {
-        justify-content: flex-start !important;
-    }
-    
-    #footer-mobile-row .footer-title {
-        font-size: 16px !important;
-        margin-bottom: 12px !important;
-    }
-    #footer-mobile-row .footer-nav-link a {
-        font-size: 14px;
-        padding: 4px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    #footer-mobile-row .footer-title {
-        font-size: 15px !important;
-    }
-    #footer-mobile-row .footer-nav-link a {
-        font-size: 13px;
-    }
-    #footer-mobile-row .footer-nav-link li {
-        margin-bottom: 6px;
-    }
-}
-
-/* ---- Social Icons ---- */
-@media (max-width: 767px) {
-    .footer-two .social-icon li a {
-        width: 36px;
-        height: 36px;
-        font-size: 14px;
-    }
-}
-
-/* ---- Copyright inside bg-wrapper ---- */
-@media (max-width: 991px) {
-    .footer-two .copyright {
-        position: static !important;
-        margin-top: 20px;
-        font-size: 13px;
-        padding-top: 16px;
-        border-top: 1px solid rgba(0, 0, 0, 0.07);
-    }
-}
-
-@media (max-width: 480px) {
-    .footer-two .copyright {
-        font-size: 12px;
-        margin-top: 14px;
-        padding-top: 12px;
-    }
-}
-
-
-
-/* ---- Scroll-to-top button ---- */
-@media (max-width: 767px) {
-    .scroll-top {
-        width: 42px;
-        height: 42px;
-        font-size: 22px;
-        right: 16px;
-        bottom: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .scroll-top {
-        width: 38px;
-        height: 38px;
-        font-size: 20px;
-        right: 12px;
-        bottom: 12px;
-    }
-}
-
-/* ---- row gap for the columns ---- */
-@media (max-width: 767px) {
-    #footer-mobile-row {
-        row-gap: 24px !important;
-    }
-}
-
-@media (max-width: 480px) {
-    #footer-mobile-row {
-        row-gap: 20px !important;
+    .footer-yc-row {
+        text-align: center;
     }
 }
 </style>
 
-<!-- Footer Two -->
-
-<div class="footer-two no-bg">
+<!-- LANDSCAPE MOUNTAIN BACKGROUND FOOTER (SEAMLESSLY ATTACHED) -->
+<div class="footer-landscape-sec">
     <div class="container">
-        <div class="bg-wrapper position-relative">
+        
+        <!-- ATTACHED TOP TAGLINE SECTION -->
+        <div class="footer-top-attached">
+            <h2 class="footer-hero-heading">
+                Empowering India's Next Generation<br>
+                <span class="footer-hero-highlight">of Leaders &amp; Creators</span>
+            </h2>
+            <p class="footer-hero-desc">
+                Young Chanakya X is built to bring creators, founders, and innovators together in a structured ecosystem designed for real-world impact.
+            </p>
+        </div>
 
-            <div class="container">
-                <div class="row justify-content-between" id="footer-mobile-row">                    <!-- LEFT -->
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-6 footer-intro mb-30">
-
-                        <div class="logo mb-35 md-mb-20">
-                            <a href="{{ url('/') }}" class="d-flex align-items-center gap-3 text-decoration-none">
-                                <img src="{{ asset('images/logo/logo.png') }}" alt="Young Chanakya X Logo" style="max-height: 50px;">
-                            </a>
-                        </div>
-
-                        <!-- <div class="logo mb-35 md-mb-20">
-    <a href="{{ url('/') }}">
-        <img src="{{ asset('images/logo/connectx1.svg') }}" 
-             alt="Young Chanakya X Logo" 
-             width="40" 
-             height="40" 
-             style="object-fit: contain; display: block;">
-    </a>
-</div> -->
-
-
-                        <p class="footer-brand-desc">Young Chanakya X is a global creator ecosystem connecting creators, influencers, speakers, podcasters &amp; founders through live events, collaborations, and meaningful experiences.</p>
-
-                        <ul class="style-none d-flex align-items-center social-icon">
-                            <li>
-                                <a href="https://www.linkedin.com/showcase/young-chanakya-x/" target="_blank">
-                                    <i class="bi bi-linkedin"></i>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="https://x.com/YoungChanakyaX" target="_blank">
-                                    <i class="bi bi-twitter-x"></i>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="https://www.youtube.com/channel/UCunrW6XIpxgonRXd6CjQ9eQ" target="_blank">
-                                    <i class="bi bi-youtube"></i>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="https://www.facebook.com/youngchanakya/" target="_blank">
-                                    <i class="bi bi-facebook"></i>
-                                </a>
-                            </li>
-                        </ul>
-
-                    </div>
-
-                    <!-- LINKS -->
-                    <div class="col-xl-2 col-lg-2 col-md-3 col-6 mb-20">
-
-                        <h5 class="footer-title">
-                            Links
-                        </h5>
-
-                        <ul class="footer-nav-link style-none">
-
-                            <li>
-                                <a href="{{ url('/') }}">
-                                    Home
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="{{ url('/about') }}">
-                                    About Us
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="{{ url('/events') }}">
-                                    Events
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="{{ url('/connecters-list') }}">
-                                    Connectors
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="{{ url('/career') }}">
-                                    Careers
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="{{ url('/internship') }}">
-                                    Internships
-                                </a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <!-- GET INVOLVED -->
-                    <div class="col-xl-2 col-lg-2 col-md-3 col-6 mb-20">
-
-                        <h5 class="footer-title">
-                            Get Involved
-                        </h5>
-
-                        <ul class="footer-nav-link style-none">
-
-                            <li>
-                                <a href="{{ url('/become-a-partner') }}">
-                                    Become a Partner
-                                </a>
-                            </li>
-                             <li>
-                                <a href="{{ url('/become-a-sponsor') }}">
-                                    Become a Sponsor
-                                </a>
-                            </li>
-
-
-                            <li>
-                                <a href="{{ url('/share-your-story') }}">
-                                    Share Your Story
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="{{ url('/become-a-speaker') }}">
-                                    YCX Talks
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ url('/become-a-feature') }}">
-                                    Featured on YCX Podcast
-                                </a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <!-- CONTACT US -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-6 mb-20">
-
-                        <h5 class="footer-title">
-                            Contact Us
-                        </h5>
-
-                        <ul class="footer-nav-link style-none" style="display: flex; flex-direction: column; gap: 16px;">
-
-                            <li style="display: flex; align-items: flex-start; gap: 12px; color: #6b7280; font-size: 14px; line-height: 1.4;">
-                                <i class="bi bi-geo-alt-fill" style="color: #0c3a30; font-size: 1.1rem; margin-top: 2px;"></i>
-                                <span>Tiruchengode, Tamil Nadu, India</span>
-                            </li>
-
-                            <li style="display: flex; align-items: center; gap: 12px; font-size: 14px;">
-                                <i class="bi bi-telephone-fill" style="color: #0c3a30; font-size: 1.1rem;"></i>
-                                <a href="tel:8667205661">+91 8667205661</a>
-                            </li>
-
-                            <li style="display: flex; align-items: center; gap: 12px; font-size: 14px;">
-                                <i class="bi bi-envelope-fill" style="color: #0c3a30; font-size: 1.1rem;"></i>
-                                <a href="mailto:youngchanakya.x@gmail.com">youngchanakya.x@gmail.com</a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
+        <!-- MAIN 4-COLUMN ROW -->
+        <div class="row gy-4 justify-content-between align-items-start">
+            
+            <!-- COLUMN 1: Young Chanakya X (Primary Platform) -->
+            <div class="col-xl-4 col-lg-4 col-md-6 col-12">
+                <div class="footer-brand-space">
+                    <a href="{{ url('/') }}" class="d-inline-block text-decoration-none">
+                        <img src="{{ asset('images/logo/logo.png') }}" alt="Young Chanakya X Logo" class="footer-logo">
+                    </a>
+                    <p class="footer-brand-text">
+                        A global creator ecosystem connecting creators, influencers, speakers, podcasters &amp; founders through live events, collaborations, and meaningful experiences.
+                    </p>
                 </div>
             </div>
 
-            <!-- SHAPES -->
-            <img src="{{ asset('images/shape/shape_06.svg') }}"
-                alt=""
-                class="lazy-img shapes shape_01">
+            <!-- COLUMN 2: Quick Links -->
+            <div class="col-xl-2 col-lg-2 col-md-4 col-6">
+                <h5 class="footer-col-title">Quick Links</h5>
+                <ul class="footer-link-list style-none">
+                    <li><a href="{{ url('/about') }}">About Us</a></li>
+                    <li><a href="{{ url('/events') }}">Events</a></li>
+                    <li><a href="{{ url('/connectors') }}">Connectors</a></li>
+                    <li><a href="{{ url('/masterclass') }}">Masterclasses</a></li>
+                    <li><a href="{{ url('/career') }}">Careers</a></li>
+                    <li><a href="{{ url('/internship') }}">Internships</a></li>
+                    <li><a href="{{ route('insights.index') }}">Insights</a></li>
+                </ul>
+            </div>
 
-            <img src="{{ asset('images/shape/shape_06.svg') }}"
-                alt=""
-                class="lazy-img shapes shape_02">
+            <!-- COLUMN 3: Get Involved -->
+            <div class="col-xl-3 col-lg-3 col-md-4 col-6">
+                <h5 class="footer-col-title">Get Involved</h5>
+                <ul class="footer-link-list style-none">
+                    <li><a href="{{ url('/share-your-story') }}">Share Your Story</a></li>
+                    <li><a href="{{ url('/become-a-speaker') }}">YCX Talks</a></li>
+                    <li><a href="{{ url('/become-a-feature') }}">Featured on YCX Podcast</a></li>
+                    <li><a href="{{ url('/become-a-partner') }}">Become a Partner</a></li>
+                    <li><a href="{{ url('/become-a-sponsor') }}">Become a Sponsor</a></li>
+                </ul>
+            </div>
+
+            <!-- COLUMN 4: Contact Us (AT THE END COL) -->
+            <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+                <h5 class="footer-col-title">Contact Us</h5>
+                <div class="footer-contact-box">
+                    <div class="fc-item">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Tiruchengode, Tamil Nadu, India</span>
+                    </div>
+                    <div class="fc-item">
+                        <i class="bi bi-envelope-fill"></i>
+                        <a href="mailto:youngchanakya.x@gmail.com">youngchanakya.x@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="ycx-socials d-flex align-items-center gap-2 mt-3">
+                    <a href="https://www.linkedin.com/showcase/young-chanakya-x/" target="_blank" class="social-circle" aria-label="YCX LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://x.com/YoungChanakyaX" target="_blank" class="social-circle" aria-label="YCX Twitter X"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.youtube.com/channel/UCunrW6XIpxgonRXd6CjQ9eQ" target="_blank" class="social-circle" aria-label="YCX YouTube"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.facebook.com/youngchanakya/" target="_blank" class="social-circle" aria-label="YCX Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/youngchanakya/" target="_blank" class="social-circle" aria-label="YCX Instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
 
         </div>
-    </div>
-</div>
 
-<!-- COPYRIGHT BAR -->
-<div class="footer-copyright-bar">
-    <div class="container">
-        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 text-center text-md-start">
-            <div class="copyright-left">
-                Copyright &copy; {{ date('Y') }} Young Chanakya X. All Rights Reserved.
+        <!-- DEDICATED YOUNG CHANAKYA (YC) ROW -->
+        <div class="footer-yc-row">
+            <div class="row align-items-center gy-3 justify-content-between">
+                <!-- Left Logo -->
+                <div class="col-xl-2 col-lg-2 col-md-3 col-12 text-center text-md-start">
+                    <a href="https://youngchanakya.com/" target="_blank" class="d-inline-block text-decoration-none">
+                        <img src="{{ asset('images/logo/yc.png') }}" alt="Young Chanakya Logo" class="yc-row-logo">
+                    </a>
+                </div>
+                <!-- Middle Content -->
+                <div class="col-xl-7 col-lg-7 col-md-6 col-12 text-center text-md-start">
+                    <p class="yc-row-text">
+                        Young Chanakya is a Business Leadership Launchpad dedicated to empowering the next generation of entrepreneurs, innovators, and leaders by bridging education and real-world success.
+                    </p>
+                </div>
+                <!-- Right Social Icons with Website Globe Icon FIRST -->
+                <div class="col-xl-3 col-lg-3 col-md-3 col-12 d-flex justify-content-center justify-content-md-end">
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="https://youngchanakya.com/" target="_blank" class="social-circle" aria-label="YC Website" title="Visit Young Chanakya Website"><i class="bi bi-globe"></i></a>
+                        <a href="https://www.linkedin.com/company/youngchanakya" target="_blank" class="social-circle" aria-label="YC LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://x.com/youngchanakya" target="_blank" class="social-circle" aria-label="YC Twitter X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.instagram.com/youngchanakya/" target="_blank" class="social-circle" aria-label="YC Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.youtube.com/youngchanakya" target="_blank" class="social-circle" aria-label="YC YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="https://www.facebook.com/youngchanakya/" target="_blank" class="social-circle" aria-label="YC Facebook"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="footer-copyright-links justify-content-center">
-                <a href="{{ route('privacy.policy') }}">Privacy Policy</a>
-                <span>|</span>
-                <a href="{{ route('terms.conditions') }}">Terms of Service</a>
-            </div>
-            <div class="copyright-right">
-                Partners : <a href="https://fintechgie.com" target="_blank">FintechGie</a> &amp; <a href="https://wegeni.com" target="_blank">Wegeni</a>
+        </div>
+
+        <!-- COPYRIGHT BAR -->
+        <div class="footer-bottom-bar mt-4 pt-4">
+            <div class="row align-items-center gy-3 text-center text-md-start">
+                <div class="col-md-5 col-12 copyright-text">
+                    Copyright &copy; {{ date('Y') }} Young Chanakya X. All Rights Reserved.
+                </div>
+                <div class="col-md-3 col-12 footer-legal-links text-center">
+                    <a href="{{ route('privacy.policy') }}">Privacy Policy</a>
+                    <span class="mx-2 opacity-50">|</span>
+                    <a href="{{ route('terms.conditions') }}">Terms of Service</a>
+                </div>
+                <div class="col-md-4 col-12 text-md-end partners-text">
+                    Partners: <a href="https://fintechgie.com" target="_blank">FintechGie</a> &amp; <a href="https://wegeni.com" target="_blank">Wegeni</a>
+                </div>
             </div>
         </div>
     </div>

@@ -1265,3 +1265,412 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   ECOSYSTEM DARK SECTION
+   - Background gradient: #092c22 to #59862c
+   - Accent color: #ffca95 (Warm Orange Glow)
+   - Vertical waveform center ornament & 4-point sparkle star
+   ============================================================ */
+
+.ecosystem-dark-section {
+  position: relative;
+  padding: 60px 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+.ecosystem-card-container {
+  position: relative;
+  background: #103f34 url('/images/media/about-bg.svg') center/cover no-repeat;
+  border-radius: 50px;
+  padding: 70px 60px 40px 60px;
+  overflow: hidden;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.4);
+}
+
+/* Subtle noise texture overlay */
+.ecosystem-card-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ecosystem-left-col,
+.ecosystem-right-col {
+  position: relative;
+  z-index: 2;
+}
+
+/* Sparkle Star near center top */
+.ecosystem-sparkle-star {
+  position: absolute;
+  top: 18%;
+  left: 50.8%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Left Content */
+.ecosystem-left-content {
+  max-width: 500px;
+}
+
+.ecosystem-title {
+  font-size: clamp(38px, 4.2vw, 42px);
+  font-weight: 800;
+  line-height: 1.08;
+  color: #ffffff;
+  margin-bottom: 22px;
+  letter-spacing: -0.02em;
+}
+
+.text-lime-highlight {
+  color: #ffca95;
+  display: block;
+}
+
+.ecosystem-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 45px;
+}
+
+/* Features Grid */
+.ecosystem-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  margin-bottom: 30px;
+}
+
+.ecosystem-feature-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.ecosystem-feature-head h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.ecosystem-feature-item p {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+/* Gear Icon & Toggle Icon */
+.ecosystem-icon-gear {
+  width: 26px;
+  height: 26px;
+  color: #ffca95;
+  flex-shrink: 0;
+}
+
+.ecosystem-icon-toggle {
+  width: 38px;
+  height: 22px;
+  background: rgba(255, 202, 149, 0.25);
+  border-radius: 12px;
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.ecosystem-icon-toggle::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  background: #ffca95;
+  border-radius: 50%;
+}
+
+/* Cards Visual Container (Bottom Left) */
+.ecosystem-cards-visual {
+  position: relative;
+  height: 200px;
+  margin-top: 20px;
+}
+
+/* Double Concentric Orbit Orange Lines & Dot */
+.ecosystem-orbit-container {
+  position: absolute;
+  left: -20px;
+  bottom: -30px;
+  width: 320px;
+  height: 260px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ecosystem-cards-visual .card-item {
+  position: absolute;
+  width: 140px;
+  height: 210px;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+}
+
+/* Card 1 (Orange Front Card) */
+.ecosystem-cards-visual .card-lime {
+  bottom: -40px;
+  left: -20px;
+  background: linear-gradient(135deg, #ffd1a4 0%, #ffca95 50%, #f79d52 100%);
+  transform: rotate(-12deg);
+  z-index: 3;
+  color: #111111;
+}
+
+.card-lime .card-mc-logo {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.card-lime .card-mc-logo span {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.card-lime .card-mc-logo span:nth-child(2) {
+  margin-left: -8px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.card-lime .card-chip-box {
+  width: 28px;
+  height: 22px;
+  background: linear-gradient(135deg, #f7d070, #c49a3c);
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+}
+
+.card-lime .card-vert-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: monospace;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: rgba(0, 0, 0, 0.85);
+  position: absolute;
+  bottom: 20px;
+  left: 16px;
+}
+
+.card-lime .card-vert-exp {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  bottom: 20px;
+  right: 16px;
+}
+
+/* Card 2 (Peach Card) */
+.ecosystem-cards-visual .card-peach {
+  bottom: -50px;
+  left: 65px;
+  background: linear-gradient(135deg, #ffa781 0%, #ff8a65 100%);
+  transform: rotate(4deg);
+  z-index: 2;
+}
+
+.card-peach .card-chip-box {
+  width: 26px;
+  height: 20px;
+  background: linear-gradient(135deg, #fff, #d4a373);
+  border-radius: 4px;
+}
+
+.card-peach .card-vert-exp {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  bottom: 20px;
+  right: 14px;
+}
+
+/* Card 3 (Purple Card) */
+.ecosystem-cards-visual .card-purple {
+  bottom: -60px;
+  left: 140px;
+  background: linear-gradient(135deg, #d1c4e9 0%, #b39ddb 100%);
+  transform: rotate(18deg);
+  z-index: 1;
+}
+
+.card-purple .card-chip-box {
+  width: 26px;
+  height: 20px;
+  background: linear-gradient(135deg, #fff, #b39ddb);
+  border-radius: 4px;
+}
+
+/* Speaker Image Container */
+.ecosystem-speaker-visual {
+  position: relative;
+  margin-top: 30px;
+  max-width: 440px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 202, 149, 0.25);
+}
+
+.ecosystem-speaker-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.ecosystem-speaker-visual:hover .ecosystem-speaker-img {
+  transform: scale(1.04);
+}
+
+/* Center Divider (Hidden when attached via border-left) */
+.ecosystem-center-divider {
+  display: none;
+}
+
+/* Right Column & Vertical Line Covering Entire Container */
+.ecosystem-right-col {
+  padding-left: 0;
+  position: relative;
+}
+
+.ecosystem-links-stack {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+/* Single Vertical Line Covering ENTIRE Container Height */
+.ecosystem-links-stack::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  bottom: -50px;
+  left: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.18);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Right Alignment for Text and Arrow */
+.ecosystem-link-row {
+  border-top: 1px solid rgba(255, 255, 255, 0.15); /* Horizontal Lines */
+  padding: 18px 0 18px 30px;
+  text-decoration: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Right alignment */
+  text-align: right;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+/* REMOVE LINE BEFORE FIRST ITEM */
+.ecosystem-link-row:first-child {
+  border-top: none !important;
+}
+
+/* REDUCED FONT SIZE & UNIFORM BASE COLOR FOR ALL ITEMS */
+.ecosystem-row-text {
+  font-size: clamp(22px, 3.1vw, 40px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: rgb(75 137 114 / 84%);
+  transition: all 0.3s ease;
+  text-align: right;
+}
+
+/* UNIFORM HIGHLIGHT COLOR ON HOVER/ACTIVE (#ffca95) */
+.ecosystem-link-row.active .ecosystem-row-text,
+.ecosystem-link-row:hover .ecosystem-row-text {
+  color: #ffca95 !important;
+}
+
+/* CIRCLED TRANSPARENT BG WITH CROSS ARROW ON HOVER */
+.ecosystem-arrow-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 202, 149, 0.4);
+  color: #ffca95;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  opacity: 0;
+  transform: scale(0.6) translateX(-10px);
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-left: 18px;
+  flex-shrink: 0;
+}
+
+.ecosystem-link-row.active .ecosystem-arrow-circle,
+.ecosystem-link-row:hover .ecosystem-arrow-circle {
+  opacity: 1;
+  transform: scale(1) translateX(0);
+}
+
+/* Hover Shift */
+.ecosystem-link-row:hover {
+  transform: translateX(-8px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .ecosystem-card-container {
+    padding: 40px 20px;
+  }
+  .ecosystem-links-stack::before {
+    display: none;
+  }
+  .ecosystem-link-row {
+    padding-left: 0;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .ecosystem-row-text {
+    text-align: left;
+    font-size: clamp(22px, 5vw, 36px);
+  }
+  .ecosystem-right-col {
+    padding-left: 0;
+    margin-top: 40px;
+  }
+}

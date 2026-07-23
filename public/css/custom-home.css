@@ -1809,7 +1809,18 @@ body {
   border-radius: 100px;
   padding: 6px 16px;
   font-size: 12px;
-  font-weight: 700;
+}
+
+@media(max-width: 991px) {
+  .mem-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 768px) {
+  .mem-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* TIERS CSS INJECTED */
