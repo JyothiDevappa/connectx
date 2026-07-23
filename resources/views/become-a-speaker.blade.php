@@ -1206,25 +1206,95 @@ $seo = [
 }
 
 @media (max-width: 991px) {
+  .talks {
+    padding: 70px 0 80px !important;
+  }
+  .talks .section-head {
+    margin-bottom: 40px !important;
+    gap: 24px !important;
+  }
   .talk-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .talk-thumb {
+    height: 200px;
   }
 }
+
 @media (max-width: 768px) {
+  .talks {
+    padding: 50px 0 60px !important;
+  }
   .talks .section-head {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+    margin-bottom: 30px !important;
   }
   .talks .section-head div {
-    max-width: 100%;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  .talks .section-head .sec-desc {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
   }
   .talk-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+  .talk-card {
+    border-radius: 20px;
+  }
+  .talk-thumb {
+    height: 200px;
+  }
+  .talk-body {
+    padding: 22px 20px;
+    gap: 10px;
+  }
+  .talk-body h3 {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .talks {
+    padding: 40px 0 50px !important;
+  }
+  .talks .section-head {
+    margin-bottom: 24px !important;
+    gap: 10px !important;
+  }
+  .talk-grid {
+    gap: 16px;
+  }
+  .talk-card {
+    border-radius: 16px;
+  }
   .talk-thumb {
     height: 180px;
+  }
+  .talk-tag {
+    top: 14px;
+    left: 14px;
+    padding: 4px 10px;
+    font-size: 10px;
+  }
+  .talk-body {
+    padding: 18px 16px;
+  }
+  .talk-body h3 {
+    font-size: 15.5px;
+    line-height: 1.35;
+  }
+  .talk-speaker {
+    font-size: 12.5px;
   }
 }
 

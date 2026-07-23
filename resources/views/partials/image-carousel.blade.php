@@ -2,23 +2,34 @@
     <div class="connectx-gallery-container">
         <div class="connectx-gallery-track">
             <!-- Set 1 -->
-            <div class="connectx-gallery-content">
-                <img src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&q=80&w=800" class="gallery-img wide" alt="Corporate Collaboration">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600" class="gallery-img narrow" alt="Professional Teamwork">
-                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800" class="gallery-img wide" alt="Business Conference">
-                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600" class="gallery-img narrow" alt="Startup Innovation">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" class="gallery-img wide" alt="Creator Ecosystem">
-                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=600" class="gallery-img narrow" alt="Strategic Partnership">
-            </div>
-            <!-- Set 2 (Duplicate for infinite looping) -->
-            <div class="connectx-gallery-content" aria-hidden="true">
-                <img src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&q=80&w=800" class="gallery-img wide" alt="Corporate Collaboration">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600" class="gallery-img narrow" alt="Professional Teamwork">
-                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800" class="gallery-img wide" alt="Business Conference">
-                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600" class="gallery-img narrow" alt="Startup Innovation">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" class="gallery-img wide" alt="Creator Ecosystem">
-                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=600" class="gallery-img narrow" alt="Strategic Partnership">
-            </div>
+         <div class="connectx-gallery-content">
+    <img src="{{ asset('images/media/partner-page-gallery/horizental-1.jpg') }}" class="gallery-img wide" alt="Strategic Partnership Meeting">
+
+    <img src="{{ asset('images/media/partner-page-gallery/square-1.jpg') }}" class="gallery-img narrow" alt="Business Handshake Partnership">
+
+    <img src="{{ asset('images/media/partner-page-gallery/horizental-2.jpg') }}" class="gallery-img wide" alt="Corporate Networking Event">
+
+    <img src="{{ asset('images/media/partner-page-gallery/square-2.jpg') }}" class="gallery-img narrow" alt="Professional Business Collaboration">
+
+    <img src="{{ asset('images/media/partner-page-gallery/horizental-3.jpg') }}" class="gallery-img wide" alt="Innovation & Ecosystem Growth">
+
+    <img src="{{ asset('images/media/partner-page-gallery/square-3.jpg') }}" class="gallery-img narrow" alt="Successful Partnership Discussion">
+</div>
+         
+<!-- Set 2 (Duplicate for infinite looping) -->
+<div class="connectx-gallery-content" aria-hidden="true">
+    <img src="{{ asset('images/media/partner-page-gallery/horizental-1.jpg') }}" class="gallery-img wide" alt="Strategic Partnership Meeting">
+
+    <img src="{{ asset('images/media/partner-page-gallery/square-1.jpg') }}" class="gallery-img narrow" alt="Business Handshake Partnership">
+
+    <img src="{{ asset('images/media/partner-page-gallery/horizental-2.jpg') }}" class="gallery-img wide" alt="Corporate Networking Event">
+
+    <img src="{{ asset('images/media/partner-page-gallery/square-2.jpg') }}" class="gallery-img narrow" alt="Professional Business Collaboration">
+
+    <img src="{{ asset('images/media/partner-page-gallery/horizental-3.jpg') }}" class="gallery-img wide" alt="Innovation & Ecosystem Growth">
+
+    <img src="{{ asset('images/media/partner-page-gallery/square-3.jpg') }}" class="gallery-img narrow" alt="Successful Partnership Discussion">
+</div>
         </div>
     </div>
 </section>

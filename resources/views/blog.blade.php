@@ -62,8 +62,8 @@ $seo = [
                         <li class="text-white opacity-40">/</li>
                         <li class="text-white" style="color: #ffd2b1 !important;">Insights</li>
                     </ul>
-                    <h1 class="text-glow-headline mb-4">Stories, Knowledge & Perspectives</h1>
-                    <p class="fs-5 mb-0" style="max-width: 650px; line-height: 1.6; font-weight: 500; color: #ffffff; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">
+                    <h1 class="hero-heading text-glow-headline mb-4">Stories, Knowledge & Perspectives</h1>
+                    <p class="hero-desc fs-5 mb-0" style="max-width: 650px; line-height: 1.6; font-weight: 500; color: #ffffff; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">
                         Empowering creators, entrepreneurs, and leaders with actionable insights and inspiration to shape a stronger community.
                     </p>
                 </div>
@@ -76,7 +76,7 @@ $seo = [
         <div class="container">
             <div class="row g-4 g-lg-5">
                 
-                <div class="col-lg-4 col-xl-3 position-sticky" style="top: 100px; align-self: flex-start; z-index: 90;">
+                <div class="col-lg-4 col-xl-3 insights-sidebar-col">
                     <aside class="insights-sidebar">
                         <div class="insights-sidebar-card">
                             <div class="sidebar-header">
