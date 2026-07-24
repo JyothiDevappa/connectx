@@ -477,21 +477,21 @@ $seo = [
 							<div class="row">
 								<div class="col-md-4">
 									<div class="address-block-one text-center mb-40 wow fadeInUp">
-										<div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto"><img src="images/lazy.svg" data-src="images/icon/icon_90.svg" alt="" class="lazy-img"></div>
+										<div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto"><i class="bi bi-geo-alt-fill" style="font-size: 26px; color: var(--primary);"></i></div>
 										<h5 class="title">Our Address</h5>
 										<p>Tiruchengode, <br>India</p>
 									</div> <!-- /.address-block-one -->
 								</div>
 								<div class="col-md-4">
 									<div class="address-block-one text-center mb-40 wow fadeInUp">
-										<div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto"><img src="images/lazy.svg" data-src="images/icon/icon_91.svg" alt="" class="lazy-img"></div>
+										<div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto"><i class="bi bi-telephone-fill" style="font-size: 24px; color: var(--primary);"></i></div>
 										<h5 class="title">Contact Info</h5>
 										<p><a href="tel:8667205661" class="call text-lg fw-500">+91 8667205661</a></p>
 									</div> <!-- /.address-block-one -->
 								</div>
 								<div class="col-md-4">
 									<div class="address-block-one text-center mb-40 wow fadeInUp">
-										<div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto"><img src="images/lazy.svg" data-src="images/icon/icon_92.svg" alt="" class="lazy-img"></div>
+										<div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto"><i class="bi bi-envelope-fill" style="font-size: 24px; color: var(--primary);"></i></div>
 										<h5 class="title">Mail Us</h5>
 										<p><a href="mailto:youngchanakya.x@gmail.com" class="webaddress">youngchanakya.x@gmail.com</a></p>
 									</div> <!-- /.address-block-one -->

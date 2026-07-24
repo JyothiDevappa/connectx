@@ -429,7 +429,7 @@ $seo = [
 
             background: #ffbe8e;
 
-            color:#fff;
+            color:var(--primary);
 
             display:flex;
             align-items:center;

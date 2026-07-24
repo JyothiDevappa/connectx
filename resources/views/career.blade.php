@@ -117,7 +117,6 @@ $seo = [
             <div class="p-name">Learn Every Day</div>
             <div class="p-desc">Expand your knowledge by working on real projects and exploring new ideas alongside passionate teammates.</div>
           </div>
-          <div class="p-arrow">↗</div>
         </div>
         <div class="p-card rv">
           <img src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&w=600&q=80" alt="Collaborate with Purpose">
@@ -125,7 +124,6 @@ $seo = [
             <div class="p-name">Collaborate with Purpose</div>
             <div class="p-desc">Work with people who value teamwork, open communication, and shared success.</div>
           </div>
-          <div class="p-arrow">↗</div>
         </div>
         <div class="p-card rv">
           <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Share Your Ideas">
@@ -133,7 +131,6 @@ $seo = [
             <div class="p-name">Share Your Ideas</div>
             <div class="p-desc">Bring fresh perspectives to the table and help shape experiences that inspire our community.</div>
           </div>
-          <div class="p-arrow">↗</div>
         </div>
         <div class="p-card rv">
           <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="Take on New Challenges">
@@ -141,7 +138,6 @@ $seo = [
             <div class="p-name">Take on New Challenges</div>
             <div class="p-desc">Build confidence by solving real problems, developing new skills, and growing through hands-on experience.</div>
           </div>
-          <div class="p-arrow">↗</div>
         </div>
         <div class="p-card rv">
           <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=600&q=80" alt="Celebrate Together">
@@ -149,7 +145,6 @@ $seo = [
             <div class="p-name">Celebrate Together</div>
             <div class="p-desc">From project milestones to community achievements, we celebrate every success as one team.</div>
           </div>
-          <div class="p-arrow">↗</div>
         </div>
         <div class="p-arrow">↗</div>
       </div>

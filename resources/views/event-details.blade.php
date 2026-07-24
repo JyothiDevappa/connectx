@@ -279,6 +279,15 @@
         box-shadow: 0 40px 80px -15px rgba(12, 58, 48, 0.06);
     }
 
+    @media (min-width: 992px) {
+        .event-sidebar-col {
+            position: sticky !important;
+            top: 120px !important;
+            align-self: start !important;
+            z-index: 10;
+        }
+    }
+
     .details-sidebar-card label {
         color: #0c3a30;
     }
@@ -553,8 +562,8 @@
             </div>
 
             <!-- Sidebar Form (Right) -->
-            <div class="col-lg-4 align-self-start">
-                <div class="details-sidebar-card position-sticky" style="top: 130px; z-index: 10;">
+            <div class="col-lg-4 event-sidebar-col">
+                <div class="details-sidebar-card">
                     <h4 class="fw-bold mb-3" style="color: #0c3a30;">Apply for the Event</h4>
                     <p class="small opacity-80 mb-4" style="line-height: 1.5;">
                         Spaces are limited and curated for strategic alignment. Please fill out the form below to register your interest.

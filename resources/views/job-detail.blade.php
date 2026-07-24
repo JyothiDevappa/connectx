@@ -73,6 +73,12 @@ $seo = [
             grid-template-columns: 1fr !important;
         }
     }
+    .detail-layout .sidebar {
+        position: sticky !important;
+        top: 120px !important;
+        align-self: start !important;
+        height: fit-content !important;
+    }
 </style>
 @endpush
 
