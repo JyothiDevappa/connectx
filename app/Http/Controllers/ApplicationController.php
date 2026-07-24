@@ -458,7 +458,15 @@ class ApplicationController extends Controller
                     $jobTitle = $job->title;
                 }
             }
-            $emailData = array_merge($validated, ['job_title' => $jobTitle, 'resume_url' => $resumeUrl]);
+            $nameParts = explode(' ', trim($validated['full_name']), 2);
+            $firstName = $nameParts[0];
+            $lastName = isset($nameParts[1]) ? $nameParts[1] : '';
+            $emailData = array_merge($validated, [
+                'job_title'  => $jobTitle,
+                'resume_url' => $resumeUrl,
+                'first_name' => $firstName,
+                'last_name'  => $lastName
+            ]);
 
             \Illuminate\Support\Facades\Log::info('Sending admin email...');
             // Email to Admin
@@ -589,14 +597,14 @@ class ApplicationController extends Controller
             // 2. Notify Admin
             Mail::send('emails.story-submission-admin', $validated, function ($message) use ($validated) {
                 $message->to('youngchanakya.x@gmail.com')
-                        ->subject('New Talk Proposal: ' . $validated['talk_title'] . ' by ' . $validated['full_name'])
+                        ->subject('New Share Your Story Application: ' . $validated['talk_title'] . ' by ' . $validated['full_name'])
                         ->replyTo($validated['email'], $validated['full_name']);
             });
 
             // 3. Confirm to User
             Mail::send('emails.story-submission-confirmation', $validated, function ($message) use ($validated) {
                 $message->to($validated['email'])
-                        ->subject('Your Talk Proposal Received - Young Chanakya X');
+                        ->subject('Share Your Story Application Received - Young Chanakya X');
             });
             \Illuminate\Support\Facades\Log::info('--- STORY SUBMISSION END ---');
 

@@ -91,7 +91,7 @@ $seo = [
                 </div>
                 <div>
                   <label class="cx-label">Designation / Job Title *</label>
-                  <input type="text" class="form-control cx-input" name="designation" placeholder="E.g. CHRO" required>
+                  <input type="text" class="form-control cx-input" name="designation" placeholder="E.g. Founder" required>
                 </div>
               </div>
 

@@ -1200,7 +1200,7 @@ function toggleTier(btn) {
                 </div>
                 <h3 class="fw-bold mb-3" style="font-size: 1.5rem; line-height: 1.3; color: #0c3a30;">Thank You for Connecting!</h3>
                 <p class="mb-4" style="line-height: 1.6; font-size: 0.95rem; color: #687588;">
-                    Thank you for reaching out. We're excited about the opportunity to partner together and build impactful collaborations.
+                    We're excited about the opportunity to partner together and build impactful collaborations.
                 </p>
                 <a href="{{ request()->url() }}" class="btn px-5 py-3 fw-bold w-100 d-block text-center" style="text-decoration: none; background-color: #0c3a30; color: #ffffff; border-radius: 12px; border: none; transition: all 0.3s ease;">
                     Continue Exploring

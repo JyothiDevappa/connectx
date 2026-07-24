@@ -19,6 +19,7 @@
         <div class="message">
             Thank you for applying to speak at Young Chanakya X! Your story is someone else's turning point, and we appreciate you sharing yours with us.
             Our team is currently reviewing your profile, and we will get in touch with you to discuss the next steps.
+            <br><br>
             <strong>🎤 What You Get as a Speaker</strong>
             <ul style="margin-top: 5px; padding-left: 20px; color: #555555; font-size: 15px;">
                 <li>A platform to share your ideas, experiences, and insights</li>

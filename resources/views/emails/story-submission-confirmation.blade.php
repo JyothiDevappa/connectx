@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Talk Proposal Received - Young Chanakya X</title>
+    <title>Share Your Story Application Received - Young Chanakya X</title>
     <style>
         @include('emails.layout.styles')
     </style>
@@ -17,7 +17,7 @@
     <div class="content">
         <div class="greeting">Hi {{ $full_name }},</div>
         <div class="message">
-            Thank you for submitting your talk proposal to YCX Story Talks! We love what you've shared and our team will review it carefully.
+            Thank you for sharing your story with Young Chanakya X. Stories like yours have the power to inspire, connect, and create real impact.
             Our team is currently reviewing your submission, and we will get in touch with you to take the next steps forward.
             <br><br>
             <strong>🌱 What You Get by Sharing Your Story</strong>
