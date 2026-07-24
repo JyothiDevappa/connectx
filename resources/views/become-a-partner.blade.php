@@ -408,78 +408,107 @@ $seo = [
 
 /* ---- Technology Partner Section ---- */
 .tech-partner-section {
-    background-color: #ffeada;
     padding: 80px 0;
     position: relative;
+    background: linear-gradient(135deg, #fff2e6 0%, #ffffff 50%, #e8f5e9 100%);
     overflow: hidden;
 }
-.tech-partner-section::before {
-    content: '';
+.tech-partner-card {
+    position: relative;
+    background: linear-gradient(135deg, #0c3a30 0%, #082821 60%, #090d16 100%);
+    border: 1px solid rgba(255, 210, 177, 0.25);
+    border-radius: 32px;
+    padding: 60px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(12, 58, 48, 0.2);
+}
+.tech-partner-card .tp-glow-1 {
     position: absolute;
-    top: -50%;
+    top: -40%;
+    left: -10%;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(255, 210, 177, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+}
+.tech-partner-card .tp-glow-2 {
+    position: absolute;
+    bottom: -50%;
     right: -10%;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(12, 58, 48, 0.05) 0%, rgba(255, 234, 218, 0) 70%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(12, 58, 48, 0.5) 0%, rgba(0, 0, 0, 0) 70%);
     pointer-events: none;
 }
 .tech-partner-inner {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1.25fr 0.75fr;
     align-items: center;
-    gap: 60px;
+    gap: 50px;
+    position: relative;
+    z-index: 2;
 }
-.tech-partner-inner .tp-content .tp-eyebrow {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #0c3a30;
-    margin-bottom: 12px;
+.tech-partner-inner .tp-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-}
-.tech-partner-inner .tp-content .tp-eyebrow::after {
-    content: '';
-    width: 32px;
-    height: 1.5px;
-    background: #0c3a30;
+    background: rgba(255, 210, 177, 0.12);
+    border: 1px solid rgba(255, 210, 177, 0.25);
+    color: #ffd2b1;
+    padding: 7px 18px;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    backdrop-filter: blur(8px);
 }
 .tech-partner-inner .tp-content h2 {
-    font-size: clamp(32px, 4vw, 48px);
+    font-size: clamp(34px, 4vw, 48px);
     font-weight: 900;
-    color: #0c3a30;
-    margin: 0 0 20px;
+    color: #ffffff;
+    margin: 0 0 16px;
     line-height: 1.15;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.8px;
+}
+.tech-partner-inner .tp-content h2 .tp-highlight {
+    background: linear-gradient(135deg, #ffffff 30%, #ffd2b1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .tech-partner-inner .tp-content p {
     font-size: 16px;
-    line-height: 1.75;
-    color: #3b4e47;
-    margin-bottom: 24px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.82);
+    margin-bottom: 28px;
     max-width: 600px;
 }
-.tech-partner-inner .tp-tags {
+.tech-partner-inner .tp-feature-pills {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
-.tech-partner-inner .tp-tag {
-    font-size: 12px;
+.tech-partner-inner .tp-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
     font-weight: 700;
-    color: #0c3a30;
-    background: rgba(12, 58, 48, 0.06);
-    padding: 6px 14px;
-    border-radius: 100px;
-    border: 1px solid rgba(12, 58, 48, 0.1);
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(6px);
     transition: all 0.3s ease;
 }
-.tech-partner-inner .tp-tag:hover {
-    background: #0c3a30;
-    color: #ffeada;
-    border-color: #0c3a30;
+.tech-partner-inner .tp-pill i {
+    color: #ffd2b1;
+}
+.tech-partner-inner .tp-pill:hover {
+    background: rgba(255, 210, 177, 0.2);
+    border-color: rgba(255, 210, 177, 0.4);
     transform: translateY(-2px);
 }
 .tech-partner-inner .tp-logo-container {
@@ -488,74 +517,109 @@ $seo = [
     align-items: center;
 }
 .tech-partner-inner .tp-logo-card {
+    width: 100%;
+    max-width: 340px;
     background: #ffffff;
-    padding: 40px;
     border-radius: 24px;
-    box-shadow: 0 20px 40px rgba(12, 58, 48, 0.04);
-    border: 1px solid rgba(12, 58, 48, 0.05);
+    padding: 24px 28px;
+    box-shadow: 0 20px 45px rgba(12, 58, 48, 0.08);
+    border: 1px solid rgba(12, 58, 48, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    text-decoration: none;
+}
+.tech-partner-inner .tp-card-header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 12px;
+}
+.tech-partner-inner .tp-verified-tag {
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: #0c3a30;
+    background: rgba(12, 58, 48, 0.08);
+    padding: 4px 12px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    letter-spacing: 0.5px;
+}
+.tech-partner-inner .tp-logo-wrapper {
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tech-partner-inner .tp-logo-wrapper img {
+    max-height: 80px;
+    width: auto;
+    transition: transform 0.4s ease;
+}
+.tech-partner-inner .tp-card-footer {
+    width: 100%;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(12, 58, 48, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0c3a30;
+    transition: color 0.3s ease;
+}
+.tech-partner-inner .tp-card-footer i {
+    background: #ffca95;
+    color: #0c3a30;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    position: relative;
-    overflow: hidden;
-    text-decoration: none;
-}
-.tech-partner-inner .tp-logo-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(255, 210, 177, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-.tech-partner-inner .tp-logo-card img {
-    max-height: 52px;
-    width: auto;
-    transition: transform 0.4s ease;
-    position: relative;
-    z-index: 2;
+    transition: all 0.3s ease;
 }
 .tech-partner-inner .tp-logo-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 30px 60px rgba(12, 58, 48, 0.08);
-    border-color: rgba(12, 58, 48, 0.15);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(12, 58, 48, 0.12), 0 10px 25px rgba(0, 0, 0, 0.08);
 }
-.tech-partner-inner .tp-logo-card:hover::before {
-    opacity: 1;
+.tech-partner-inner .tp-logo-card:hover .tp-logo-wrapper img {
+    transform: scale(1.05);
 }
-.tech-partner-inner .tp-logo-card:hover img {
-    transform: scale(1.04);
-}
-
 @media (max-width: 991px) {
+    .tech-partner-card {
+        padding: 40px 30px;
+    }
     .tech-partner-inner {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 36px;
     }
     .tech-partner-inner .tp-logo-container {
         justify-content: center;
     }
 }
-
-@media (max-width: 767px) {
-    .tech-partner-section {
-        padding: 60px 0;
-    }
-    .tech-partner-inner {
-        text-align: center;
+@media (max-width: 576px) {
+    .tech-partner-card {
+        padding: 30px 20px;
+        border-radius: 24px;
     }
     .tech-partner-inner .tp-content h2 {
-        font-size: 30px;
+        font-size: 28px;
     }
     .tech-partner-inner .tp-content p {
-        font-size: 15px;
+        font-size: 14.5px;
     }
-    .tech-partner-inner .tp-tags {
+    .tech-partner-inner .tp-feature-pills {
         justify-content: center;
     }
-    .tech-partner-inner .tp-logo-card {
-        padding: 30px;
+    .tech-partner-inner .tp-content {
+        text-align: center;
     }
 }
 
@@ -755,21 +819,35 @@ $seo = [
    ========================= -->
 <section class="tech-partner-section">
     <div class="container">
-        <div class="tech-partner-inner">
-            <div class="tp-content">
-                <div class="tp-eyebrow">TECHNOLOGY PARTNER</div>
-                <h2>Powered by WeGeni</h2>
-                <p>Young Chanakya X is proudly powered by WeGeni, delivering the technology, infrastructure, and digital innovation that enable a seamless community experience.</p>
-                <!-- <div class="tp-tags">
-                    <span class="tp-tag">System Architecture</span>
-                    <span class="tp-tag">Digital Ecosystems</span>
-                    <span class="tp-tag">Tech Consulting</span>
-                </div> -->
-            </div>
-            <div class="tp-logo-container">
-                <a href="https://wegeni.com" target="_blank" rel="noopener noreferrer" class="tp-logo-card">
-                    <img src="{{ asset('images/logo/wegeni-logo.svg') }}" alt="WeGeni - Technology Partner">
-                </a>
+        <div class="tech-partner-card">
+            <!-- Ambient Glowing Lighting Effects -->
+            <div class="tp-glow tp-glow-1"></div>
+            <div class="tp-glow tp-glow-2"></div>
+            
+            <div class="tech-partner-inner">
+                <div class="tp-content">
+                    <div class="tp-badge">
+                        <i class="bi bi-cpu-fill me-1"></i> Technology Partner
+                    </div>
+                    <h2>Powered by <span class="tp-highlight">WeGeni</span></h2>
+                    <p>Young Chanakya X is proudly powered by WeGeni, delivering the technology, infrastructure, and digital innovation that enable a seamless community experience.</p>
+                    
+                </div>
+
+                <div class="tp-logo-container">
+                    <a href="https://wegeni.com" target="_blank" rel="noopener noreferrer" class="tp-logo-card">
+                        <div class="tp-card-header">
+                            <span class="tp-verified-tag"><i class="bi bi-patch-check-fill"></i> Official Partner</span>
+                        </div>
+                        <div class="tp-logo-wrapper">
+                            <img src="{{ asset('images/logo/wegeni-logo.svg') }}" alt="WeGeni - Technology Partner">
+                        </div>
+                        <div class="tp-card-footer">
+                            <span>Explore WeGeni Solutions</span>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -825,7 +903,7 @@ CONNECTX PARTNERSHIP OPPORTUNITIES
   }
   .tier-btn-primary:hover { background: #1a5c48; transform: translateY(-1px); color: #ffd2b1; }
   .tier-btn-outline {
-    border: 1.5px solid #0c3a30; color: #0c3a30; padding: 14px 32px; border-radius: 100px;
+    background: #ffca95; color: #0c3a30; padding: 14px 32px; border-radius: 100px; border: none;
     font-size: 15px; font-weight: 500; text-decoration: none; display: inline-block; transition: all 0.2s;
   }
   .tier-btn-outline:hover { background: #0c3a30; color: #ffd2b1; }

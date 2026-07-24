@@ -861,7 +861,7 @@ class AdminDashboardController extends Controller
             'title'            => 'required|string|max:255',
             'category'         => 'required|string|max:255',
             'read_time'        => 'nullable|string|max:255',
-            'image'            => 'nullable|string|max:255',
+            'image'            => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:4096',
             'excerpt'          => 'nullable|string|max:1000',
             'content'          => 'required|string',
             'author_name'      => 'nullable|string|max:255',
@@ -871,6 +871,13 @@ class AdminDashboardController extends Controller
             'meta_description' => 'nullable|string|max:1000',
             'meta_keywords'    => 'nullable|string|max:500',
         ]);
+
+        if ($request->hasFile('image')) {
+            $imageFile = $request->file('image');
+            $fileName = time() . '_' . uniqid() . '.' . $imageFile->getClientOriginalExtension();
+            $imageFile->move(public_path('uploads/blog'), $fileName);
+            $validated['image'] = 'uploads/blog/' . $fileName;
+        }
 
         $validated['slug'] = \Illuminate\Support\Str::slug($validated['title']);
 
@@ -896,7 +903,7 @@ class AdminDashboardController extends Controller
             'title'            => 'required|string|max:255',
             'category'         => 'required|string|max:255',
             'read_time'        => 'nullable|string|max:255',
-            'image'            => 'nullable|string|max:255',
+            'image'            => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:4096',
             'excerpt'          => 'nullable|string|max:1000',
             'content'          => 'required|string',
             'author_name'      => 'nullable|string|max:255',
@@ -906,6 +913,15 @@ class AdminDashboardController extends Controller
             'meta_description' => 'nullable|string|max:1000',
             'meta_keywords'    => 'nullable|string|max:500',
         ]);
+
+        if ($request->hasFile('image')) {
+            $imageFile = $request->file('image');
+            $fileName = time() . '_' . uniqid() . '.' . $imageFile->getClientOriginalExtension();
+            $imageFile->move(public_path('uploads/blog'), $fileName);
+            $validated['image'] = 'uploads/blog/' . $fileName;
+        } else {
+            unset($validated['image']);
+        }
 
         $validated['slug'] = \Illuminate\Support\Str::slug($validated['title']);
 

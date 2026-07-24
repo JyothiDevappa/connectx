@@ -116,7 +116,7 @@ $seo = [
 <div class="blog-details-body">
 
     <!-- HERO SECTION -->
-    <div class="premium-hero-container d-flex align-items-center position-relative" style="min-height: 75vh; background-image: linear-gradient(180deg, rgba(12, 58, 48, 0.65) 0%, #090d16 100%), url('{{ $post->image }}'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <div class="premium-hero-container d-flex align-items-center position-relative" style="min-height: 75vh; background-image: linear-gradient(180deg, rgba(12, 58, 48, 0.65) 0%, #090d16 100%), url('{{ asset($post->image) }}'); background-size: cover; background-position: center; background-attachment: fixed;">
         <div class="container pt-200 pb-100">
             <div class="row">
                 <div class="col-xl-9 col-lg-11">

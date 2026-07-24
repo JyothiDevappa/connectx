@@ -1342,6 +1342,7 @@ $seo = [
     font-size: 15px; font-weight: 500; text-decoration: none; display: inline-block; transition: all 0.2s;
   }
   .tier-btn-outline:hover { background: #0c3a30; color: #ffd2b1; }
+   .tier-card.featured .tier-btn-outline:hover { border: 1px solid #fff; }
 
   @media(max-width: 991px){
       .tier-grid { grid-template-columns: 1fr; }

@@ -121,7 +121,7 @@ $seo = [
                         @foreach($posts as $item)
                         <!-- Card -->
                         <div class="blog-card" data-category="{{ $item->category }}">
-                            <div class="card-img" style="background-image: url('{{ $item->image }}');"></div>
+                            <div class="card-img" style="background-image: url('{{ asset($item->image) }}');"></div>
                             <div class="card-content">
                                 <div class="post-meta">
                                     <span class="post-category">{{ $item->category }}</span>

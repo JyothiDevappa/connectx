@@ -117,7 +117,7 @@
 
     {{-- Form Body Card --}}
     <div class="form-card">
-      <form method="POST" action="{{ $post->exists ? route('admin.posts.update-form', $post->id) : route('admin.posts.save-form') }}">
+      <form method="POST" action="{{ $post->exists ? route('admin.posts.update-form', $post->id) : route('admin.posts.save-form') }}" enctype="multipart/form-data">
         @csrf
 
         <div class="form-grid">
@@ -155,8 +155,14 @@
           </div>
 
           <div class="form-field full">
-            <label for="image">Featured Image URL *</label>
-            <input type="text" name="image" id="image" value="{{ old('image', $post->image) }}" required placeholder="https://images.unsplash.com/photo-...">
+            <label for="image">Featured Image *</label>
+            <input type="file" name="image" id="image" accept="image/*" {{ $post->exists ? '' : 'required' }}>
+            @if($post->image)
+              <div style="margin-top: 8px;">
+                <span style="font-size: 11px; font-weight: 700; color: #0c3a30; display: block; margin-bottom: 4px;">Current Image Preview:</span>
+                <img src="{{ asset($post->image) }}" alt="Preview" style="max-height: 100px; border-radius: 8px; border: 1px solid var(--border);">
+              </div>
+            @endif
           </div>
 
           <div class="form-field">
