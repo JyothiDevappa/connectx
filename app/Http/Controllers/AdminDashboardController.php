@@ -875,7 +875,11 @@ class AdminDashboardController extends Controller
         if ($request->hasFile('image')) {
             $imageFile = $request->file('image');
             $fileName = time() . '_' . uniqid() . '.' . $imageFile->getClientOriginalExtension();
-            $imageFile->move(public_path('uploads/blog'), $fileName);
+            $uploadPath = public_path('uploads/blog');
+            if (!file_exists($uploadPath)) {
+                mkdir($uploadPath, 0775, true);
+            }
+            $imageFile->move($uploadPath, $fileName);
             $validated['image'] = 'uploads/blog/' . $fileName;
         }
 
@@ -917,7 +921,11 @@ class AdminDashboardController extends Controller
         if ($request->hasFile('image')) {
             $imageFile = $request->file('image');
             $fileName = time() . '_' . uniqid() . '.' . $imageFile->getClientOriginalExtension();
-            $imageFile->move(public_path('uploads/blog'), $fileName);
+            $uploadPath = public_path('uploads/blog');
+            if (!file_exists($uploadPath)) {
+                mkdir($uploadPath, 0775, true);
+            }
+            $imageFile->move($uploadPath, $fileName);
             $validated['image'] = 'uploads/blog/' . $fileName;
         } else {
             unset($validated['image']);
