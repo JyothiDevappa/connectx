@@ -209,6 +209,13 @@
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/custom-home.css') }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/css/intlTelInput.css">
+<style>
+    .iti {
+        display: block;
+        width: 100%;
+    }
+</style>
 @endpush
 
 @section('content')
@@ -582,7 +589,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label small fw-bold opacity-90 tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Phone Number</label>
-                            <input type="tel" name="phone" class="form-control form-control-premium" placeholder="e.g. +91 98765 43210" required>
+                            <input type="tel" id="event-phone" name="phone" class="form-control form-control-premium" placeholder="e.g. +91 98765 43210" required>
                         </div>
                         <div class="mb-4">
                             <label class="form-label small fw-bold opacity-90 tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Social Media URL</label>
@@ -706,4 +713,28 @@
     });
 </script>
 @endif
+
+@push('scripts')
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/js/intlTelInput.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var phoneInput = document.getElementById('event-phone');
+        var iti;
+        if (phoneInput) {
+            iti = window.intlTelInput(phoneInput, {
+                initialCountry: "in",
+                separateDialCode: true,
+                utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.4/build/js/utils.js"
+            });
+
+            var form = document.getElementById('rsvp-premium-form');
+            if (form) {
+                form.addEventListener('submit', function() {
+                    phoneInput.value = iti.getNumber();
+                });
+            }
+        }
+    });
+</script>
+@endpush
 @endsection
