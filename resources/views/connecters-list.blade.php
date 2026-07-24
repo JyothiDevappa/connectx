@@ -250,54 +250,83 @@ $seo = [
 
     @media (max-width: 767px) {
         .showcase-content-wrapper.py-5 {
-            padding-top: 30px !important;
-            padding-bottom: 30px !important;
+            padding-top: 25px !important;
+            padding-bottom: 25px !important;
         }
         .showcase-content-wrapper .container.py-5 {
-            padding-top: 20px !important;
-            padding-bottom: 20px !important;
+            padding-top: 15px !important;
+            padding-bottom: 15px !important;
         }
         .network-cluster-card {
-            padding: 24px 20px !important;
+            padding: 20px 16px !important;
             border-radius: 20px !important;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05) !important;
+            border: 1px solid rgba(12, 58, 48, 0.08) !important;
         }
-        .network-cluster-card .d-flex.align-items-center.gap-3.mb-4 {
-            flex-wrap: wrap;
+        .network-cluster-card .d-flex.align-items-start {
+            gap: 12px !important;
+            margin-bottom: 16px !important;
         }
         .network-cluster-card h2.h4 {
-            font-size: 1.1rem;
+            font-size: 1.1rem !important;
+            line-height: 1.3 !important;
+        }
+        .network-cluster-card p.text-muted {
+            font-size: 0.82rem !important;
+            line-height: 1.4 !important;
         }
         .panel-hero-image {
             height: 160px !important;
+            border-radius: 14px !important;
+            margin-bottom: 16px !important;
         }
         .connector-node-pill {
-            padding: 10px 16px !important;
-            font-size: 0.82rem !important;
+            padding: 8px 14px !important;
+            font-size: 0.8rem !important;
+            border-radius: 50px !important;
         }
         .cluster-title-icon {
-            width: 44px;
-            height: 44px;
-            font-size: 1.2rem;
+            width: 42px !important;
+            height: 42px !important;
+            min-width: 42px !important;
+            font-size: 1.15rem !important;
+            border-radius: 12px !important;
+            flex-shrink: 0 !important;
         }
     }
 
     @media (max-width: 480px) {
         .network-cluster-card {
-            padding: 18px 14px !important;
+            padding: 16px 12px !important;
+            border-radius: 16px !important;
         }
         .panel-hero-image {
-            height: 130px !important;
+            height: 140px !important;
+            border-radius: 12px !important;
+            margin-bottom: 14px !important;
+        }
+        .network-cluster-card .d-flex.align-items-start {
+            gap: 10px !important;
+            margin-bottom: 14px !important;
+        }
+        .cluster-title-icon {
+            width: 38px !important;
+            height: 38px !important;
+            min-width: 38px !important;
+            font-size: 1rem !important;
+            border-radius: 10px !important;
+            flex-shrink: 0 !important;
         }
         .connector-node-pill {
-            padding: 8px 12px !important;
-            font-size: 0.78rem !important;
+            padding: 7px 12px !important;
+            font-size: 0.76rem !important;
         }
         .sidebar-anchor-link {
             padding: 10px 14px !important;
             font-size: 0.72rem !important;
         }
         .network-cluster-card h2.h4 {
-            font-size: 1rem;
+            font-size: 1rem !important;
         }
     }
 </style>
@@ -631,6 +660,7 @@ $seo = [
         align-items: center;
         justify-content: center;
         font-size: 1.5rem;
+        flex-shrink: 0;
     }
 
     .panel-hero-image {

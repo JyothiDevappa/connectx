@@ -30,6 +30,12 @@ $seo = [
       display: grid;
       grid-template-columns: 1.4fr 0.6fr;
       gap: 50px;
+      align-items: start;
+  }
+  .article-sidebar {
+      position: sticky;
+      top: 100px;
+      align-self: start;
   }
   .article-main {
       font-size: 16px;
@@ -98,6 +104,9 @@ $seo = [
       .article-layout {
           grid-template-columns: 1fr;
           gap: 40px;
+      }
+      .article-sidebar {
+          position: static;
       }
   }
 </style>

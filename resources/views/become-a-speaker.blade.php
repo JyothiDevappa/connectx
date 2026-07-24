@@ -1015,7 +1015,8 @@ $seo = [
 
 /* Responsive adjustment */
 @media (max-width: 768px) {
-  .speaker-body .about-hero .row { flex-direction: column-reverse; }
+  .speaker-body .about-hero > .container > .row { flex-direction: column; }
+  .speaker-body .partner-form-box .row { flex-direction: row !important; }
   .button-grid { grid-template-columns: 1fr 1fr; }
 }
 
