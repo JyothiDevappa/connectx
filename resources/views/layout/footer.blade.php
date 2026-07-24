@@ -6,7 +6,7 @@
 /* Main Footer Container with Dark Mountain Background */
 .footer-landscape-sec {
     background: linear-gradient(180deg, rgba(8, 38, 31, 0.88) 0%, rgba(6, 28, 23, 0.94) 55%, rgba(4, 18, 15, 0.98) 100%), 
-                url('images/media/footer.png') no-repeat center bottom !important;
+                url('{{ asset('images/media/footer.png') }}') no-repeat center bottom !important;
     background-size: cover !important;
     color: #ffffff;
     padding: 85px 0 36px;
