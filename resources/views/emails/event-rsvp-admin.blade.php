@@ -18,7 +18,7 @@
         <p class="intro">
                 Hello,
                 <br><br>
-                A new application has been submitted to attend one of the curated events on the Young Chanakya X portal. Below are the candidate details:
+                A new application has been submitted to attend one of the curated events on the Young Chanakya X website. Below are the candidate details:
             </p>
             <table class="details-table">
                 <tr>

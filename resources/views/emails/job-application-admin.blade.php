@@ -15,39 +15,113 @@
     </div>
     
     <div class="content">
-        <h2 style="color: #0c3a30; border-bottom: 1px solid #eeeeee; padding-bottom: 8px;">Role: {{ $job_title }}</h2>
+        <p class="intro">A new application has been submitted for a role at Young Chanakya X.</p>
         
-        <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+        <table class="details-table">
             <tr>
-                <td style="padding: 8px 0; font-weight: bold; width: 140px; border-bottom: 1px solid #f9f9f9;">Applicant:</td>
-                <td style="padding: 8px 0; border-bottom: 1px solid #f9f9f9;">{{ $first_name }} {{ $last_name }}</td>
+                <th>Applied Role / Job</th>
+                <td>{{ $job_title }} ({{ ucfirst($category) }})</td>
             </tr>
             <tr>
-                <td style="padding: 8px 0; font-weight: bold; border-bottom: 1px solid #f9f9f9;">Email:</td>
-                <td style="padding: 8px 0; border-bottom: 1px solid #f9f9f9;"><a href="mailto:{{ $email }}" style="color: #0c3a30; text-decoration: none;">{{ $email }}</a></td>
+                <th>Full Name</th>
+                <td>{{ $full_name }}</td>
             </tr>
             <tr>
-                <td style="padding: 8px 0; font-weight: bold; border-bottom: 1px solid #f9f9f9;">Phone:</td>
-                <td style="padding: 8px 0; border-bottom: 1px solid #f9f9f9;">{{ $phone }}</td>
+                <th>Email ID</th>
+                <td><a href="mailto:{{ $email }}">{{ $email }}</a></td>
             </tr>
-            @if(!empty($linkedin_url))
             <tr>
-                <td style="padding: 8px 0; font-weight: bold; border-bottom: 1px solid #f9f9f9;">LinkedIn Profile:</td>
-                <td style="padding: 8px 0; border-bottom: 1px solid #f9f9f9;"><a href="{{ $linkedin_url }}" target="_blank" style="color: #0c3a30; text-decoration: none;">{{ $linkedin_url }}</a></td>
+                <th>Phone Number</th>
+                <td>{{ $phone }}</td>
+            </tr>
+            <tr>
+                <th>WhatsApp Number</th>
+                <td>{{ $whatsapp_number }}</td>
+            </tr>
+            <tr>
+                <th>Date of Birth</th>
+                <td>{{ $dob }}</td>
+            </tr>
+            <tr>
+                <th>Nationality</th>
+                <td>{{ $nationality }}</td>
+            </tr>
+            <tr>
+                <th>Marital Status</th>
+                <td>{{ $marital_status }}</td>
+            </tr>
+            @if(!empty($emergency_name))
+            <tr>
+                <th>Emergency Contact Name</th>
+                <td>{{ $emergency_name }}</td>
             </tr>
             @endif
+            <tr>
+                <th>Emergency Contact Phone</th>
+                <td>{{ $emergency_phone }}</td>
+            </tr>
+            <tr>
+                <th>Residential Address</th>
+                <td>{{ $residential_address }}</td>
+            </tr>
+            <tr>
+                <th>Pursuing Education?</th>
+                <td>{{ ucfirst($pursuing_education) }}</td>
+            </tr>
+            @if(!empty($college))
+            <tr>
+                <th>College</th>
+                <td>{{ $college }}</td>
+            </tr>
+            @endif
+            @if(!empty($course))
+            <tr>
+                <th>Course</th>
+                <td>{{ $course }}</td>
+            </tr>
+            @endif
+            @if(!empty($semester))
+            <tr>
+                <th>Semester</th>
+                <td>{{ $semester }}</td>
+            </tr>
+            @endif
+            @if(!empty($institution))
+            <tr>
+                <th>Institution</th>
+                <td>{{ $institution }}</td>
+            </tr>
+            @endif
+            @if(!empty($degree))
+            <tr>
+                <th>Degree</th>
+                <td>{{ $degree }}</td>
+            </tr>
+            @endif
+            @if(!empty($year_of_passing))
+            <tr>
+                <th>Year of Passing</th>
+                <td>{{ $year_of_passing }}</td>
+            </tr>
+            @endif
+            <tr>
+                <th>LinkedIn URL</th>
+                <td><a href="{{ $linkedin_url }}" target="_blank">View LinkedIn Profile</a></td>
+            </tr>
             @if(!empty($resume_url))
             <tr>
-                <td style="padding: 8px 0; font-weight: bold; border-bottom: 1px solid #f9f9f9;">Resume Link:</td>
-                <td style="padding: 8px 0; border-bottom: 1px solid #f9f9f9;"><a href="{{ $resume_url }}" target="_blank" style="color: #0c3a30; text-decoration: none; font-weight: bold;">View Resume</a></td>
+                <th>Resume Link</th>
+                <td><a href="{{ $resume_url }}" target="_blank"><strong>View Resume File</strong></a></td>
             </tr>
             @endif
         </table>
         
-        <div style="margin-top: 25px; padding: 15px; background-color: #fcfcfc; border-left: 4px solid #0c3a30; border-radius: 4px;">
-            <h4 style="margin: 0 0 10px 0; color: #0c3a30;">Why YCX & Why this role?</h4>
-            <p style="margin: 0; white-space: pre-line; font-size: 14px; color: #555555;">{{ $cover_letter }}</p>
+        @if(!empty($cover_letter))
+        <div class="bio-section">
+            <h3>Why YCX & Why this role? (Cover Letter)</h3>
+            <p>{{ $cover_letter }}</p>
         </div>
+        @endif
     </div>
     
     @include('emails.layout.footer')

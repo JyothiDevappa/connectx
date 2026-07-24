@@ -17,8 +17,7 @@
     <div class="content">
         <div class="greeting">Hi {{ $full_name }},</div>
             <div class="message">
-                Thank you for applying to attend the <strong>{{ $event_title }}</strong> session. 
-                We have received your details and are currently reviewing applications to ensure strategic alignment for all participants.
+                Thank you for registering for the upcoming <strong>{{ $event_title }}</strong> event. We’re glad to have you join us and be part of this experience.
                 <br><br>
                 Our team will reach out to you shortly via email/phone with verification status and join instructions.
             </div>

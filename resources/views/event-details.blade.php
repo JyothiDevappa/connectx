@@ -585,7 +585,7 @@
                             <input type="tel" name="phone" class="form-control form-control-premium" placeholder="e.g. +91 98765 43210" required>
                         </div>
                         <div class="mb-4">
-                            <label class="form-label small fw-bold opacity-90 tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">LinkedIn URL</label>
+                            <label class="form-label small fw-bold opacity-90 tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Social Media URL</label>
                             <input type="url" name="social_url" class="form-control form-control-premium" placeholder="e.g. instagram.com/username or linkedin.com/in/username" required>
                         </div>
                         <button type="submit" class="btn-premium-action">Submit Now</button>
@@ -656,7 +656,7 @@
                 <p class="mb-4" style="line-height: 1.6; font-size: 0.95rem; color: #687588;">
                     {{ session('success') }}
                 </p>
-                <button type="button" class="btn px-5 py-3 fw-bold text-uppercase w-100" data-bs-dismiss="modal" style="background-color: #0c3a30; color: #ffffff; border-radius: 12px; border: none; transition: all 0.3s ease;">
+                <button type="button" class="btn px-5 py-3 fw-bold w-100" data-bs-dismiss="modal" style="background-color: #0c3a30; color: #ffffff; border-radius: 12px; border: none; transition: all 0.3s ease;">
                     Continue Exploring
                 </button>
             </div>

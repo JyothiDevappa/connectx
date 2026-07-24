@@ -341,7 +341,7 @@ class ApplicationController extends Controller
             // 1. Email to Admin
             Mail::send('emails.event-rsvp-admin', $validated, function ($message) use ($validated) {
                 $message->to('youngchanakya.x@gmail.com')
-                        ->subject('New Event Application: ' . $validated['event_title'] . ' - ' . $validated['full_name'])
+                        ->subject('New Event Application: ' . $validated['event_title'])
                         ->replyTo($validated['email'], $validated['full_name']);
             });
             \Illuminate\Support\Facades\Log::info('Admin email sent.');
@@ -349,8 +349,8 @@ class ApplicationController extends Controller
             // 2. Email to User (Confirmation)
             \Illuminate\Support\Facades\Log::info('Sending user confirmation email to: ' . $validated['email']);
             Mail::send('emails.event-rsvp-user', $validated, function ($message) use ($validated) {
-                $message->to($validated['email'])
-                        ->subject('Application Received: ' . $validated['event_title'] . ' - Young Chanakya X');
+                $message->to($validated['email'])   
+                        ->subject('Thank You for Registering: ' . $validated['event_title']);
             });
             \Illuminate\Support\Facades\Log::info('User email sent.');
             \Illuminate\Support\Facades\Log::info('--- EVENT RSVP SUBMISSION END ---');
@@ -471,8 +471,9 @@ class ApplicationController extends Controller
             \Illuminate\Support\Facades\Log::info('Sending admin email...');
             // Email to Admin
             Mail::send('emails.job-application-admin', $emailData, function ($message) use ($validated, $jobTitle) {
+                $categoryLabel = ucfirst($validated['category']);
                 $message->to('youngchanakya.x@gmail.com')
-                        ->subject('New Job Application: ' . $jobTitle . ' - ' . $validated['full_name'])
+                        ->subject('New Job Application: ' . $jobTitle . ' - Young Chanakya X ' . $categoryLabel . ' (' . $validated['full_name'] . ')')
                         ->replyTo($validated['email'], $validated['full_name']);
             });
             \Illuminate\Support\Facades\Log::info('Admin email sent.');
@@ -480,8 +481,9 @@ class ApplicationController extends Controller
             \Illuminate\Support\Facades\Log::info('Sending user confirmation email to: ' . $validated['email']);
             // Email to User (Confirmation)
             Mail::send('emails.job-application-user', $emailData, function ($message) use ($validated, $jobTitle) {
+                $categoryLabel = ucfirst($validated['category']);
                 $message->to($validated['email'])
-                        ->subject('Application Received: ' . $jobTitle . ' - Young Chanakya X');
+                        ->subject('Thank You for Applying: ' . $jobTitle . ' - Young Chanakya X ' . $categoryLabel);
             });
             \Illuminate\Support\Facades\Log::info('User email sent.');
             \Illuminate\Support\Facades\Log::info('--- JOB APPLICATION SUBMISSION END ---');
