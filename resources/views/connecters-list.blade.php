@@ -412,7 +412,7 @@ $seo = [
                                 @enderror
                             </div>
                             <div class="col-12">
-                                <label class="cx-label">LinkedIn URL *</label>
+                                <label class="cx-label">Social Media URL *</label>
                                 <input type="url" class="form-control cx-input" name="linkedin" value="{{ old('linkedin') }}" placeholder="https://linkedin.com/in/..." required>
                                 @error('linkedin')
                                     <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
@@ -784,11 +784,11 @@ $seo = [
                 <div class="mb-4">
                     <i class="bi bi-check-circle-fill" style="font-size: 4rem; color: #0c3a30;"></i>
                 </div>
-                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; line-height: 1.3; color: #0c3a30;">You're One Step Closer to Meaningful Connections</h3>
+                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; line-height: 1.3; color: #0c3a30;">Thank You for Connecting!</h3>
                 <p class="mb-4" style="line-height: 1.6; font-size: 0.95rem; color: #687588;">
-                    Thank you for reaching out. Your request has been received, and our team will connect with you soon. We're excited to help you explore new conversations, meaningful connections, and opportunities for growth.
+                    We've successfully received your details. We look forward to helping you build meaningful professional connections and explore new opportunities within the YCX community.
                 </p>
-                <a href="{{ url('/') }}" class="btn px-5 py-3 fw-bold text-uppercase w-100 d-block text-center" style="text-decoration: none; background-color: #0c3a30; color: #ffffff; border-radius: 12px; border: none; transition: all 0.3s ease;">
+                <a href="{{ request()->url() }}" class="btn px-5 py-3 fw-bold w-100 d-block text-center" style="text-decoration: none; background-color: #0c3a30; color: #ffffff; border-radius: 12px; border: none; transition: all 0.3s ease;">
                     Continue Exploring
                 </a>
             </div>

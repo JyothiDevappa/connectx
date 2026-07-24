@@ -1417,13 +1417,13 @@ $seo = [
                 <div class="mb-4">
                     <i class="bi bi-check-circle-fill" style="font-size: 4rem; color: #0c3a30;"></i>
                 </div>
-                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; line-height: 1.3; color: #0c3a30;">Proposal Submitted Successfully</h3>
+                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; line-height: 1.3; color: #0c3a30;">Thanks for Sharing Your Journey!</h3>
                 <p class="mb-4" style="line-height: 1.6; font-size: 0.95rem; color: #687588;">
-                    Thank you for sharing your story proposal. Our editorial team will review your proposal and get in touch with you within 5–7 working days to discuss the next steps.
+                    We've successfully received your story. Thank you for contributing your experiences, lessons, and perspectives to the YCX community.
                 </p>
-                <button type="button" class="btn px-5 py-3 fw-bold text-uppercase w-100 d-block text-center" data-bs-dismiss="modal" style="background-color: #0c3a30; color: #ffffff; border-radius: 12px; border: none; transition: all 0.3s ease;">
-                    Continue
-                </button>
+                <a href="{{ request()->url() }}" class="btn px-5 py-3 fw-bold w-100 d-block text-center" style="text-decoration: none; background-color: #0c3a30; color: #ffffff; border-radius: 12px; border: none; transition: all 0.3s ease;">
+                    Continue Exploring
+                </a>
             </div>
         </div>
     </div>

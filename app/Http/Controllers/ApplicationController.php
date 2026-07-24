@@ -46,7 +46,7 @@ class ApplicationController extends Controller
             // 2. Email to Admin
             Mail::send('emails.directory-application', $validated, function ($message) use ($validated) {
                 $message->to('youngchanakya.x@gmail.com')
-                        ->subject('New Directory Application: ' . $validated['full_name'])
+                        ->subject('New Connector Application — ' . $validated['full_name'])
                         ->replyTo($validated['email'], $validated['full_name']);
             });
             \Illuminate\Support\Facades\Log::info('Admin email sent.');
@@ -531,14 +531,14 @@ class ApplicationController extends Controller
             // 2. Notify Admin
             Mail::send('emails.feature-guest-application', $validated, function ($message) use ($validated) {
                 $message->to('youngchanakya.x@gmail.com')
-                        ->subject('New Guest Feature Application: ' . $validated['full_name'])
+                        ->subject('New Podcast Feature Application — ' . $validated['full_name'])
                         ->replyTo($validated['email'], $validated['full_name']);
             });
 
             // 3. Confirm to User
             Mail::send('emails.feature-guest-confirmation', $validated, function ($message) use ($validated) {
                 $message->to($validated['email'])
-                        ->subject('Your Guest Application Received - Young Chanakya X');
+                        ->subject('Application Received — YCX Podcast Feature');
             });
             \Illuminate\Support\Facades\Log::info('--- FEATURE GUEST SUBMISSION END ---');
 

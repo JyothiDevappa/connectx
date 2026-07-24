@@ -1735,12 +1735,12 @@ function toggleTier(btn) {
                 <div class="mb-4">
                     <i class="bi bi-check-circle-fill" style="font-size: 4rem; color: #0c3a30;"></i>
                 </div>
-                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; line-height: 1.3; color: #0c3a30;">Application Received!</h3>
+                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; line-height: 1.3; color: #0c3a30;">Thank You for Connecting!</h3>
                 <p class="mb-4" style="line-height: 1.6; font-size: 0.95rem; color: #687588;">
-                    Your sponsorship application is in. Our team will reach out within 5–7 business days to discuss next steps.
+                    Thank you for reaching out. We're excited about the opportunity to collaborate and create meaningful experiences together.
                 </p>
-                <a href="{{ url('/') }}" class="btn px-5 py-3 fw-bold text-uppercase w-100 d-block text-center" style="text-decoration: none; background-color: #0c3a30; color: #ffffff; border-radius: 12px; border: none; transition: all 0.3s ease;">
-                    Continue
+                <a href="{{ request()->url() }}" class="btn px-5 py-3 fw-bold w-100 d-block text-center" style="text-decoration: none; background-color: #0c3a30; color: #ffffff; border-radius: 12px; border: none; transition: all 0.3s ease;">
+                    Continue Exploring
                 </a>
             </div>
         </div>
