@@ -3,9 +3,9 @@
  * Contact Page SEO Data
  */
 $seo = [
-    'title'       => 'Contact Young Chanakya X — Get in Touch with Our Team',
-    'description' => 'Contact Young Chanakya X to inquire about partnerships, sponsorships, creator collaborations, or any questions about our global creator ecosystem. Email us at youngchanakyaconnect@gmail.com.',
-    'keywords'    => 'contact Young Chanakya X, Young Chanakya X email, Young Chanakya X partnership inquiry, reach Young Chanakya X, Young Chanakya contact, creator platform contact',
+    'title'       => 'Contact Us | Young Chanakya X',
+    'description' => 'Contact Young Chanakya X for partnerships, sponsorships, speaking opportunities, podcasts, community programs, events, or general inquiries.',
+    'keywords'    => 'contact YCX, Young Chanakya X contact, partnership inquiry, sponsorship inquiry, podcast contact, speaker application, community support, event inquiry, connect with YCX, contact us',
     'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
     'robots'      => 'index, follow',
@@ -23,8 +23,8 @@ $seo = [
     "@type": "ContactPage",
     "@id": "https://connectx.youngchanakya.com/contact#webpage",
     "url": "https://connectx.youngchanakya.com/contact",
-    "name": "Contact Young Chanakya X — Get in Touch",
-    "description": "Contact Young Chanakya X for partnership, sponsership, and creator collaboration inquiries.",
+    "name": "Contact Us | Young Chanakya X",
+    "description": "Contact Young Chanakya X for partnerships, sponsorships, speaking opportunities, podcasts, community programs, events, or general inquiries.",
     "inLanguage": "en-IN",
     "isPartOf": {
         "@type": "WebSite",

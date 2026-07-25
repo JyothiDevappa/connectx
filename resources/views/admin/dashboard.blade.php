@@ -1984,17 +1984,7 @@ async function saveJobApplicationStatus(id, status, notes) {
   }
 }
 
-// Sidebar Blog dropdown toggle listener
-const blogDropdownBtn = document.getElementById('blogDropdownBtn');
-const blogSubmenu = document.getElementById('blogSubmenu');
-if (blogDropdownBtn && blogSubmenu) {
-  blogDropdownBtn.addEventListener('click', () => {
-    const isVisible = blogSubmenu.style.display === 'flex';
-    blogSubmenu.style.display = isVisible ? 'none' : 'flex';
-    const chevron = blogDropdownBtn.querySelector('.dropdown-chevron');
-    if (chevron) chevron.style.transform = isVisible ? 'rotate(0deg)' : 'rotate(180deg)';
-  });
-}
+// Sidebar Blog dropdown toggle is handled by sidebar.blade.php script
 
 /* =====================================================
    INIT

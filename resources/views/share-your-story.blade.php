@@ -3,9 +3,9 @@
  * Speaker Talk Page SEO Data
  */
 $seo = [
-    'title'       => 'Submit Your Talk Proposal — Share Your Story | Young Chanakya X',
-    'description' => 'Apply to speak on the Young Chanakya X stage. Share your story, turning points, entrepreneurial insights, and actionable knowledge with our global community.',
-    'keywords'    => 'become a speaker, speaker talk, Young Chanakya X stage, creator ecosystem, business storytelling, share your story, leadership talk',
+    'title'       => 'Share Your Story | Young Chanakya X',
+    'description' => 'Share your personal or professional journey with Young Chanakya X and inspire others through authentic stories, valuable lessons, and real-life experiences.',
+    'keywords'    => 'share your story, inspiring stories, success stories, personal journey, entrepreneur stories, career stories, community stories, life lessons, Young Chanakya X, storytelling platform',
     'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];
@@ -21,8 +21,8 @@ $seo = [
     "@type": "WebPage",
     "@id": "https://connectx.youngchanakya.com/share-your-story#webpage",
     "url": "https://connectx.youngchanakya.com/share-your-story",
-    "name": "Submit Your Talk Proposal — Share Your Story | Young Chanakya X",
-    "description": "Apply to speak on the Young Chanakya X stage and share your story with our global community.",
+    "name": "Share Your Story | Young Chanakya X",
+    "description": "Share your personal or professional journey with Young Chanakya X and inspire others through authentic stories, valuable lessons, and real-life experiences.",
     "inLanguage": "en-IN",
     "isPartOf": {
         "@type": "WebSite",

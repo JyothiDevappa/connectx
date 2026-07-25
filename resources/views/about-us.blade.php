@@ -3,9 +3,9 @@
  * About Page SEO Data
  */
 $seo = [
-    'title'       => 'About Young Chanakya X — Our Vision, Mission & Creator Ecosystem Story',
-    'description' => 'Learn about Young Chanakya X — a premium global creator ecosystem built to connect influencers, podcasters, speakers, and brands. Our mission is structured, scalable influence for every creator.',
-    'keywords'    => 'about Young Chanakya X, Young Chanakya vision, creator ecosystem mission, Young Chanakya X story, who is Young Chanakya X, global creator platform, influencer community India',
+    'title'       => 'About Us | Young Chanakya X',
+    'description' => 'Learn about Young Chanakya X, a community connecting students, professionals, entrepreneurs, creators, and leaders through stories, knowledge, events, and collaboration.',
+    'keywords'    => 'Young Chanakya X, about YCX, YCX community, professional network, knowledge community, networking platform, creator community, entrepreneur network, leadership community, community platform',
     'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];
@@ -21,8 +21,8 @@ $seo = [
     "@type": "AboutPage",
     "@id": "https://connectx.youngchanakya.com/about#webpage",
     "url": "https://connectx.youngchanakya.com/about",
-    "name": "About Young Chanakya X — Our Vision, Mission & Creator Ecosystem Story",
-    "description": "Learn about Young Chanakya X — a premium global creator ecosystem built to connect influencers, podcasters, speakers, and brands.",
+    "name": "About Us | Young Chanakya X",
+    "description": "Learn about Young Chanakya X, a community connecting students, professionals, entrepreneurs, creators, and leaders through stories, knowledge, events, and collaboration.",
     "inLanguage": "en-IN",
     "isPartOf": {
         "@type": "WebSite",

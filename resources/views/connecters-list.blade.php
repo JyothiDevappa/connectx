@@ -3,9 +3,9 @@
  * Connecters Directory Page SEO Data
  */
 $seo = [
-    'title'       => 'Connecters Directory — Verified Ecosystem Leaders & Creators | Young Chanakya X',
-    'description' => 'Browse the Young Chanakya X verified directory of ecosystem leaders, creators, entrepreneurs, innovators, and industry experts across business, tech, finance, media, and social impact sectors.',
-    'keywords'    => 'Young Chanakya X directory, creator directory, influencer list, ecosystem leaders India, verified creators Young Chanakya X, business leaders directory, entrepreneur network India',
+    'title'       => 'Connectors Directory | Young Chanakya X',
+    'description' => 'Explore the Young Chanakya X Connectors Directory to discover professionals, founders, creators, mentors, educators, and community members across diverse industries.',
+    'keywords'    => 'connectors directory, YCX connectors, business directory, mentors, creators, founders, entrepreneurs, professionals, community directory, Young Chanakya X',
     'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];
@@ -21,8 +21,8 @@ $seo = [
     "@type": "CollectionPage",
     "@id": "https://connectx.youngchanakya.com/connecters-list#webpage",
     "url": "https://connectx.youngchanakya.com/connecters-list",
-    "name": "Connecters Directory — Verified Ecosystem Leaders & Creators | Young Chanakya X",
-    "description": "Browse the Young Chanakya X verified directory of ecosystem leaders, creators, entrepreneurs, innovators, and industry experts.",
+    "name": "Connectors Directory | Young Chanakya X",
+    "description": "Explore the Young Chanakya X Connectors Directory to discover professionals, founders, creators, mentors, educators, and community members across diverse industries.",
     "inLanguage": "en-IN",
     "isPartOf": {
         "@type": "WebSite",

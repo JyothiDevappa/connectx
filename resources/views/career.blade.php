@@ -4,11 +4,13 @@
  */
 $isInternship = $isInternship ?? false;
 $seo = [
-    'title'       => $isInternship ? 'Internships — Young Chanakya X' : 'Careers — Young Chanakya X',
+    'title'       => $isInternship ? 'Internship | Young Chanakya X' : 'Careers | Young Chanakya X',
     'description' => $isInternship 
-        ? 'Launch your career with a hands-on internship at Young Chanakya X. Work on real projects in marketing, content, tech, and production.' 
-        : 'Build your future with Young Chanakya X. Join a passionate team that\'s building a community where stories, knowledge, and people come together.',
-    'keywords'    => $isInternship ? 'internships, YCX internship, web developer intern, startup internships' : 'careers, Young Chanakya X, jobs, creator ecosystem, work at YCX',
+        ? 'Start your career with a Young Chanakya X internship. Gain hands-on experience, learn from real projects, and grow with an innovative community.' 
+        : 'Explore career opportunities at Young Chanakya X and build your future with a team passionate about community, innovation, learning, and meaningful impact.',
+    'keywords'    => $isInternship 
+        ? 'YCX internship, internships, student internship, internship program, learning experience, career development, community internship, Young Chanakya X internship, students, training' 
+        : 'YCX careers, jobs at Young Chanakya X, career opportunities, community jobs, startup careers, creative jobs, digital careers, join YCX, careers, hiring',
     'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];
@@ -112,36 +114,35 @@ $seo = [
       </div>
       <div class="partner-grid mt-5">
         <div class="p-card rv">
-          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Learn Every Day">
+<img src="{{ asset('images/media/career/Learn Everyday.jpeg') }}" alt="Learn Everyday">
           <div class="p-card-ov">
             <div class="p-name">Learn Every Day</div>
             <div class="p-desc">Expand your knowledge by working on real projects and exploring new ideas alongside passionate teammates.</div>
           </div>
         </div>
         <div class="p-card rv">
-          <img src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&w=600&q=80" alt="Collaborate with Purpose">
+<img src="{{ asset('images/media/career/Collaborate with Purpose.jpeg') }}" alt="Collaborate with Purpose">
           <div class="p-card-ov">
             <div class="p-name">Collaborate with Purpose</div>
             <div class="p-desc">Work with people who value teamwork, open communication, and shared success.</div>
           </div>
         </div>
         <div class="p-card rv">
-          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Share Your Ideas">
+<img src="{{ asset('images/media/career/Share Your Ideas.jpeg') }}" alt="Share Your Ideas">
           <div class="p-card-ov">
             <div class="p-name">Share Your Ideas</div>
             <div class="p-desc">Bring fresh perspectives to the table and help shape experiences that inspire our community.</div>
           </div>
         </div>
         <div class="p-card rv">
-          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="Take on New Challenges">
+<img src="{{ asset('images/media/career/Take on New Challenges.jpeg') }}" alt="Take on New Challenges">
           <div class="p-card-ov">
             <div class="p-name">Take on New Challenges</div>
             <div class="p-desc">Build confidence by solving real problems, developing new skills, and growing through hands-on experience.</div>
           </div>
         </div>
         <div class="p-card rv">
-          <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=600&q=80" alt="Celebrate Together">
-          <div class="p-card-ov">
+<img src="{{ asset('images/media/career/Celebrate Together.jpeg') }}" alt="Celebrate Together">          <div class="p-card-ov">
             <div class="p-name">Celebrate Together</div>
             <div class="p-desc">From project milestones to community achievements, we celebrate every success as one team.</div>
           </div>

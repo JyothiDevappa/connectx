@@ -3,9 +3,9 @@
  * Internships Page
  */
 $seo = [
-    'title'       => 'Internships — Young Chanakya X',
-    'description' => 'Launch your career with a hands-on internship at Young Chanakya X. Work on real projects in marketing, content, tech, and production.',
-    'keywords'    => 'internships, YCX internship, web developer intern, startup internships',
+    'title'       => 'Internship | Young Chanakya X',
+    'description' => 'Start your career with a Young Chanakya X internship. Gain hands-on experience, learn from real projects, and grow with an innovative community.',
+    'keywords'    => 'YCX internship, internships, student internship, internship program, learning experience, career development, community internship, Young Chanakya X internship, students, training',
     'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];

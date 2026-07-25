@@ -3,9 +3,9 @@
  * Become a Speaker Page SEO Data
  */
 $seo = [
-    'title'       => 'Become a Speaker — Young Chanakya X',
-    'description' => 'Your story is someone else\'s turning point. Apply to speak at Young Chanakya X.',
-    'keywords'    => 'become a speaker, Young Chanakya X, creator ecosystem, business leadership, storytelling',
+    'title'       => 'YCX Talks | Young Chanakya X',
+    'description' => 'Apply to speak at YCX Talks and share your knowledge, expertise, and ideas through live talks, workshops, and community learning sessions.',
+    'keywords'    => 'YCX Talks, become a speaker, public speaking, expert talks, keynote speaker, workshops, knowledge sharing, leadership talks, Young Chanakya X talks, speaker application',
     'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];

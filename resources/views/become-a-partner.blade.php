@@ -3,9 +3,9 @@
  * Become a Partner Page SEO Data
  */
 $seo = [
-    'title'       => 'Become a Partner — Join the Young Chanakya X Creator Ecosystem',
-    'description' => 'Partner with Young Chanakya X to access a premium creator ecosystem. Content partnerships, brand collaborations, media partnerships, and community connections await.',
-    'keywords'    => 'become a Young Chanakya X partner, creator partnership, brand collaboration Young Chanakya X, media partnership India, content creator partner, Young Chanakya partner',
+    'title'       => 'Become a Partner | Young Chanakya X',
+    'description' => 'Partner with Young Chanakya X to co-create events, knowledge initiatives, community programs, and strategic collaborations that drive meaningful impact.',
+    'keywords'    => 'become a partner, YCX partnerships, community partnerships, brand collaboration, knowledge partnership, event partnership, media partnership, technology partner, ecosystem partnership, Young Chanakya X',
     'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];
@@ -19,9 +19,9 @@ $seo = [
 {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Young Chanakya X Partnership Program",
+    "name": "Become a Partner | Young Chanakya X",
     "url": "https://connectx.youngchanakya.com/become-a-partner",
-    "description": "Partner with Young Chanakya X to access a premium global creator ecosystem. Content partnerships, brand collaborations, media partnerships, and community connections.",
+    "description": "Partner with Young Chanakya X to co-create events, knowledge initiatives, community programs, and strategic collaborations that drive meaningful impact.",
     "provider": {
         "@type": "Organization",
         "name": "Young Chanakya X",

@@ -45,23 +45,26 @@ $seo = [
           <span>Real-world case studies</span>
         </div>
       </div>
-      <div class="mentor-carousel-container">
-        <div class="mentor-carousel-track">
-          <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=300&q=80" alt="Masterclass mentor portrait">
-          <img src="https://images.unsplash.com/photo-1758518727888-ffa196002e59?auto=format&fit=crop&w=300&q=80" alt="Masterclass mentor portrait">
-          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=300&q=80" alt="Masterclass mentor portrait">
-          <img src="https://images.unsplash.com/photo-1758873268745-dd2cf0d677b5?auto=format&fit=crop&w=300&q=80" alt="Masterclass mentor portrait">
-          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" alt="Masterclass mentor portrait">
-          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Masterclass mentor portrait">
-          <!-- Duplicated for Infinite Loop -->
-          <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=300&q=80" alt="Masterclass mentor portrait">
-          <img src="https://images.unsplash.com/photo-1758518727888-ffa196002e59?auto=format&fit=crop&w=300&q=80" alt="Masterclass mentor portrait">
-          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=300&q=80" alt="Masterclass mentor portrait">
-          <img src="https://images.unsplash.com/photo-1758873268745-dd2cf0d677b5?auto=format&fit=crop&w=300&q=80" alt="Masterclass mentor portrait">
-          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" alt="Masterclass mentor portrait">
-          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Masterclass mentor portrait">
-        </div>
-      </div>
+     
+    <div class="mentor-carousel-container">
+    <div class="mentor-carousel-track">
+        <img src="{{ asset('images/media/master-classes/card-1.jpeg') }}" alt="Masterclass Card 1">
+        <img src="{{ asset('images/media/master-classes/card-2.jpeg') }}" alt="Masterclass Card 2">
+        <img src="{{ asset('images/media/master-classes/card-3.jpeg') }}" alt="Masterclass Card 3">
+        <img src="{{ asset('images/media/master-classes/card-4.jpeg') }}" alt="Masterclass Card 4">
+        <img src="{{ asset('images/media/master-classes/card-5.jpeg') }}" alt="Masterclass Card 5">
+        <img src="{{ asset('images/media/master-classes/card-6.jpeg') }}" alt="Masterclass Card 6">
+
+        <!-- Duplicated for Infinite Loop -->
+        <img src="{{ asset('images/media/master-classes/card-1.jpeg') }}" alt="Masterclass Card 1">
+        <img src="{{ asset('images/media/master-classes/card-2.jpeg') }}" alt="Masterclass Card 2">
+        <img src="{{ asset('images/media/master-classes/card-3.jpeg') }}" alt="Masterclass Card 3">
+        <img src="{{ asset('images/media/master-classes/card-4.jpeg') }}" alt="Masterclass Card 4">
+        <img src="{{ asset('images/media/master-classes/card-5.jpeg') }}" alt="Masterclass Card 5">
+        <img src="{{ asset('images/media/master-classes/card-6.jpeg') }}" alt="Masterclass Card 6">
+    </div>
+</div>
+
     </div>
   </section>
 
@@ -278,7 +281,7 @@ $seo = [
         We're preparing a series of expert-led learning experiences. Join the waitlist and get notified when registrations open.
       </p>
 
-      <a href="{{ asset('images/media/Masterclasses.jpeg') }}" class="btn-orange">Get Early Access</a>
+      <a href="https://wa.me/9186672056rclasses.%20Please%20notify%20me%20when%20registrations%20open" class="btn-orange">Get Early Access</a>
    
     </div>
   </section>

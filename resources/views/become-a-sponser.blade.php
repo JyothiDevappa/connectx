@@ -3,9 +3,9 @@
  * Become a sponsor Page SEO Data
  */
 $seo = [
-    'title'       => 'Become a Sponsor — Community & Sponsorship Opportunities | Young Chanakya X',
-    'description' => 'Sponsor Young Chanakya X events and creator programs to amplify your brand reach. Access title sponsorships, event sponsorships, community sponsorships, and creator ecosystem packages.',
-    'keywords'    => 'Young Chanakya X sponsorship, sponsor Young Chanakya X, event sponsorship India, brand visibility creator events, community sponsor Young Chanakya, creator platform sponsorship',
+    'title'       => 'Become a Sponsor | Young Chanakya X',
+    'description' => 'Sponsor Young Chanakya X and showcase your brand through events, podcasts, networking, workshops, and community initiatives with meaningful audience engagement.',
+    'keywords'    => 'sponsor YCX, event sponsorship, podcast sponsorship, brand sponsorship, community sponsorship, networking events, sponsor programs, brand visibility, Young Chanakya X sponsor, sponsorship opportunities',
     'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];
@@ -19,9 +19,9 @@ $seo = [
 {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Young Chanakya X sponsership Program",
+    "name": "Become a Sponsor | Young Chanakya X",
     "url": "https://connectx.youngchanakya.com/become-a-sponser",
-    "description": "sponser Young Chanakya X events and creator programs to amplify your brand reach. Access title, event, community, and ecosystem sponsership packages.",
+    "description": "Sponsor Young Chanakya X and showcase your brand through events, podcasts, networking, workshops, and community initiatives with meaningful audience engagement.",
     "provider": {
         "@type": "Organization",
         "name": "Young Chanakya X",

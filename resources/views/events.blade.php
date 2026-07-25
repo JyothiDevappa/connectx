@@ -3,9 +3,9 @@
  * Events Page SEO Data
  */
 $seo = [
-    'title'       => 'Events — Roundtables, Podcasts & Creator Sessions | Young Chanakya X',
-    'description' => 'Explore upcoming Young Chanakya X events — exclusive roundtables, podcast recordings, keynote speakers, and creator networking sessions. Join elite business spaces for market changemakers.',
-    'keywords'    => 'Young Chanakya X events, creator roundtables, podcast sessions, keynote speakers, networking events, creator sessions India, Young Chanakya X sessions 2026',
+    'title'       => 'Events | Young Chanakya X',
+    'description' => 'Discover networking events, YCX Talks, workshops, meetups, podcasts, and community experiences designed for learning, collaboration, and growth.',
+    'keywords'    => 'YCX events, networking events, business meetups, workshops, conferences, community events, YCX Talks, leadership events, professional networking, Young Chanakya X',
     'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];
@@ -19,8 +19,8 @@ $seo = [
 {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Young Chanakya X Upcoming Events 2026",
-    "description": "Exclusive roundtables, podcast sessions, keynote speakers, and creator networking sessions by Young Chanakya X.",
+    "name": "Events | Young Chanakya X",
+    "description": "Discover networking events, YCX Talks, workshops, meetups, podcasts, and community experiences designed for learning, collaboration, and growth.",
     "url": "https://connectx.youngchanakya.com/events",
     "itemListElement": [
         {
@@ -435,7 +435,7 @@ $seo = [
             'location' => 'BENGALURU HUB',
             'host' => 'Aditya Verma',
             'role' => 'Venture Partner',
-            'img' => 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800'
+            'img' => asset('images/media/events/event-1.jpeg')
         ],
         [
             'category' => 'Connect',
@@ -445,8 +445,7 @@ $seo = [
             'location' => 'EPISODE 42',
             'host' => 'Rohan Sharma',
             'role' => 'Growth Lead',
-            'img' => 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=800'
-        ],
+            'img' => asset('images/media/events/event-2.jpeg')        ],
         [
             'category' => 'Leadership',
             'title' => 'Women in Leadership Circle: Directing Enterprise Operations',
@@ -455,7 +454,7 @@ $seo = [
             'location' => 'LEELA PALACE',
             'host' => 'Meera Nair',
             'role' => 'UI/UX Director',
-            'img' => 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=800'
+            'img' => asset('images/media/events/event-3.jpeg')
         ],
         [
             'category' => 'Mentor',
@@ -465,7 +464,7 @@ $seo = [
             'location' => 'VIRTUAL SYMPOSIUM',
             'host' => 'Siddharth Rao',
             'role' => 'Full Stack Architect',
-            'img' => 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800'
+            'img' => asset('images/media/events/event-4.jpeg')
         ],
         [
             'category' => 'Fireside',
@@ -475,7 +474,7 @@ $seo = [
             'location' => 'EPISODE 43',
             'host' => 'Karan Malhotra',
             'role' => 'Principal Architect',
-            'img' => 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=800'
+            'img' => asset('images/media/events/event-5.jpeg')
         ],
         [
             'category' => 'CEO',
@@ -485,7 +484,7 @@ $seo = [
             'location' => 'ITC GARDENIA',
             'host' => 'Ananya Rao',
             'role' => 'Managing Director',
-            'img' => 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800'
+            'img' => asset('images/media/events/event-6.jpeg')
         ]
     ];
 @endphp

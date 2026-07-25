@@ -3,9 +3,9 @@
  * Privacy Policy Page
  */
 $seo = [
-    'title'       => 'Privacy Policy — Young Chanakya X',
-    'description' => 'Learn how Young Chanakya X collects, uses, and protects your personal information when you use our website and services.',
-    'keywords'    => 'privacy policy, YCX privacy, data protection, young chanakya privacy',
+    'title'       => 'Privacy Policy | Young Chanakya X',
+    'description' => 'Read the Young Chanakya X Privacy Policy to understand how we collect, use, store, and protect your personal information while using our platform and services.',
+    'keywords'    => 'Young Chanakya X privacy policy, privacy policy, data protection, personal information, user privacy, data security, privacy practices, YCX privacy, website privacy, information policy',
     'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];

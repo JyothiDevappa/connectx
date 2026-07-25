@@ -92,6 +92,7 @@
         <a href="{{ url('/admin/dashboard/categories') }}" class="nav-link {{ $currentSec==='categories'?'active':'' }}" data-section="categories" id="nav-categories" style="font-size:13px; padding:8px 12px;">
           <span>Insights Categories</span>
         </a>
+      </div>
     </div>
     <script>
       (function() {

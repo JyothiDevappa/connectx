@@ -3,9 +3,9 @@
  * Terms and Conditions Page
  */
 $seo = [
-    'title'       => 'Terms & Conditions — Young Chanakya X',
-    'description' => 'Review the terms and conditions governing the use of the Young Chanakya X website and our community services.',
-    'keywords'    => 'terms and conditions, terms of service, YCX terms, young chanakya terms',
+    'title'       => 'Terms & Conditions | Young Chanakya X',
+    'description' => 'Review the Young Chanakya X Terms & Conditions to understand the rules, responsibilities, and guidelines for accessing and using our platform and services.',
+    'keywords'    => 'Young Chanakya X terms, terms and conditions, website terms, user agreement, legal policy, platform guidelines, terms of service, YCX terms, website policies, user responsibilities',
     'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];

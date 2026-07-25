@@ -3,9 +3,9 @@
  * Insights Listing Page SEO Data
  */
 $seo = [
-    'title'       => 'Insights — Young Chanakya X',
-    'description' => 'Explore the latest insights, strategies, and stories from our community leaders, startup experts, policy designers, and creative minds.',
-    'keywords'    => 'insights, Young Chanakya X, stories, creator insights, startup ideas',
+    'title'       => 'Insights | Young Chanakya X',
+    'description' => 'Read stories, insights, expert perspectives, and community updates from Young Chanakya X on leadership, entrepreneurship, careers, networking, and personal growth.',
+    'keywords'    => 'YCX blog, leadership insights, entrepreneurship, career advice, networking, business stories, community blog, knowledge hub, Young Chanakya X articles, professional growth',
     'image'       => asset('images/assets/seo-share.jpg'),
     'type'        => 'website',
 ];
