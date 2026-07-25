@@ -1616,9 +1616,9 @@ $seo = [
   <div class="wrap">
     <div class="about-layout">
       <!-- Left Column: Image Card -->
-      <div class="about-img-container">
-        <img src="https://images.unsplash.com/photo-1758691737543-09a1b2b715fa?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="YCX community discussing ideas in a meeting">
-      </div>
+    <div class="about-img-container">
+    <img src="{{ asset('images/media/About YCX Talks.png') }}" alt="About YCX Talks">
+</div>
       
       <!-- Right Column: Content -->
       <div>
@@ -1686,10 +1686,12 @@ $seo = [
     <div class="talk-grid">
 
       <div class="talk-card">
-        <div class="talk-thumb">
-          <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Speaker presenting to a small group">
-          <span class="talk-tag">Personal Growth</span>
-        </div>
+       
+      <div class="talk-thumb">
+    <img src="{{ asset('images/media/Personal Growth.png') }}" alt="Personal Growth">
+    <span class="talk-tag">Personal Growth</span>
+</div>
+
         <div class="ticket-perf"></div>
         <div class="talk-body">
           <h3>Small Habits That Create Extraordinary Results</h3>
@@ -1698,10 +1700,13 @@ $seo = [
       </div>
 
       <div class="talk-card">
-        <div class="talk-thumb">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Speaker presenting with a digital screen to colleagues">
-          <span class="talk-tag">Education</span>
-        </div>
+
+      <div class="talk-thumb">
+    <img src="{{ asset('images/media/education.jpg') }}" alt="Education">
+    <span class="talk-tag">Education</span>
+</div>
+
+
         <div class="ticket-perf"></div>
         <div class="talk-body">
           <h3>Rethinking Learning for the Next Generation</h3>
@@ -1710,10 +1715,13 @@ $seo = [
       </div>
 
       <div class="talk-card">
-        <div class="talk-thumb">
-          <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Speaker presenting on stage to a large audience">
-          <span class="talk-tag">Growth</span>
-        </div>
+
+      <div class="talk-thumb">
+    <img src="{{ asset('images/media/Growth.jpg') }}" alt="Business Growth">
+    <span class="talk-tag">Business Growth</span>
+</div>
+
+
         <div class="ticket-perf"></div>
         <div class="talk-body">
           <h3>Creating Brands That People Remember and Trust</h3>
@@ -1735,9 +1743,12 @@ $seo = [
           <p class="description">We're looking for individuals who enjoy sharing practical knowledge, industry expertise, and fresh perspectives that help others learn and grow.</p>
         </div>
         <div class="col-lg-6 mt-4 mt-lg-0">
-          <div class="visual-box" style="height: 300px; overflow: hidden; border-radius: 20px; background: #f4f4f4;">
+          <!-- <div class="visual-box" style="height: 300px; overflow: hidden; border-radius: 20px; background: #f4f4f4;">
             <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80" alt="YCX Ecosystem Visual" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
+          </div> -->
+          <div class="visual-box" style="height: 300px; overflow: hidden; border-radius: 20px; background: #f4f4f4;">
+    <img src="{{ asset('images/media/Who Belongs On This Stage.jpg') }}" alt="YCX Ecosystem Visual" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
         </div>
       </div>
 
@@ -1772,9 +1783,9 @@ $seo = [
         <p class="sec-desc" style="max-width: 720px; margin-left: auto; margin-right: auto;">We're looking for speakers who can share practical knowledge, engage the audience, and create meaningful learning experiences</p>
       </div>
       <div class="elig-layout">
-        <div class="elig-image">
-          <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Speaker presenting on stage to a large audience">
-        </div>
+      <div class="elig-image">
+    <img src="{{ asset('images/media/Before You Apply.jpg') }}" alt="Speaker presenting on stage to a large audience">
+</div>
         <div class="elig-checklist">
           <div class="tick-list-item large-tick ink-text">
             <span class="tick-circle">

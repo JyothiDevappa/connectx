@@ -439,13 +439,13 @@ header.scrolled .hamburger span {
   .fs-nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(6, auto);
+    grid-template-rows: repeat(7, auto);
     grid-auto-flow: column;
     column-gap: 80px;
     max-width: 100%;
   }
 
-  .fs-nav-item:nth-child(7) {
+  .fs-nav-item:nth-child(8) {
     border-top: 1px solid rgba(0, 0, 0, 0.08);
   }
 
@@ -518,6 +518,10 @@ header.scrolled .hamburger span {
 
 .fs-menu.open .fs-nav-item:nth-child(12) {
   transition: opacity 0.4s 0.43s ease, transform 0.4s 0.43s ease, color 0.3s;
+}
+
+.fs-menu.open .fs-nav-item:nth-child(13) {
+  transition: opacity 0.4s 0.46s ease, transform 0.4s 0.46s ease, color 0.3s;
 }
 
 .fs-nav-item:first-child {

@@ -92,9 +92,34 @@
         <a href="{{ url('/admin/dashboard/categories') }}" class="nav-link {{ $currentSec==='categories'?'active':'' }}" data-section="categories" id="nav-categories" style="font-size:13px; padding:8px 12px;">
           <span>Insights Categories</span>
         </a>
-      </div>
     </div>
+    <script>
+      (function() {
+        function initBlogDropdown() {
+          const btn = document.getElementById('blogDropdownBtn');
+          const menu = document.getElementById('blogSubmenu');
+          if (btn && menu && !btn.dataset.dropdownInited) {
+            btn.dataset.dropdownInited = 'true';
+            btn.addEventListener('click', function(e) {
+              e.preventDefault();
+              const isHidden = menu.style.display === 'none' || !menu.style.display;
+              menu.style.display = isHidden ? 'flex' : 'none';
+              const chevron = btn.querySelector('.dropdown-chevron');
+              if (chevron) {
+                chevron.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+              }
+            });
+          }
+        }
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initBlogDropdown);
+        } else {
+          initBlogDropdown();
+        }
+      })();
+    </script>
   </nav>
+
 
   {{-- Admin Profile --}}
   <div class="sb-admin">

@@ -409,7 +409,7 @@ $seo = [
         <!-- 1st Row: Column 1 - Image -->
         <div class="col-lg-6">
           <div class="h-100 rounded-4 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1764664035154-379971f0e936?fm=jpg&q=70&w=1600&auto=format&fit=crop" class="get-image-box" alt="Podcast recording setup">
+            <img src="{{ asset('images/media/Why You Love it.jpeg') }}" class="get-image-box" alt="Podcast recording setup">
           </div>
         </div>
         <!-- 1st Row: Column 2 - Card 1 -->
@@ -487,7 +487,7 @@ $seo = [
       <div class="video-grid">
         <div class="video-card">
           <div class="video-thumbnail">
-            <img src="https://images.unsplash.com/photo-1758518727888-ffa196002e59?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="Building Communities That Scale">
+            <img src="{{ asset('images/media/Building Communities That Scale.jpeg') }}" alt="Building Communities That Scale">
             <div class="play-btn-overlay">
               <i class="bi bi-play-fill"></i>
             </div>
@@ -499,7 +499,7 @@ $seo = [
 
         <div class="video-card">
           <div class="video-thumbnail">
-            <img src="https://images.unsplash.com/photo-1758518729286-e8d94cc231f5?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="The Future of Digital Entrepreneurship">
+            <img src="{{ asset('images/media/The Future of Digital Entrepreneurship.jpeg') }}" alt="The Future of Digital Entrepreneurship">
             <div class="play-btn-overlay">
               <i class="bi bi-play-fill"></i>
             </div>

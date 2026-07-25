@@ -623,7 +623,12 @@ $seo = [
         <span class="pill">Speak & Collaborate</span>
         <span class="pill">Build Beyond Platforms</span>
       </div>
-      <button class="cta-btn" onclick="window.location.href='/connecters-list'">Join Young Chanakya X</button>
+<button 
+    class="cta-btn" 
+    style="background-color: #fff; color: #0c3a30;"
+    onclick="window.location.href='/connecters-list'">
+    Join Young Chanakya X
+</button>
     </div>
   </section>
 

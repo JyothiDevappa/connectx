@@ -463,13 +463,19 @@ $seo = [
         -webkit-text-stroke: 1px;
     }
     
-    #cta-banner {
-        background: linear-gradient(180deg, rgb(8 40 33 / 73%) 0%, rgba(8, 40, 33, 0.55) 55%, rgba(8, 40, 33, 0.94) 100%), 
-                    url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600') no-repeat center center !important;
-        background-size: cover !important;
-        position: relative;
-        overflow: hidden;
-    }
+#cta-banner {
+    background:
+        linear-gradient(
+            180deg,
+            rgb(8 40 33 / 73%) 0%,
+            rgba(8, 40, 33, 0.55) 55%,
+            rgba(8, 40, 33, 0.94) 100%
+        ),
+        url("{{ asset('images/media/your story matter - banner.jpg') }}") no-repeat center center !important;
+    background-size: cover !important;
+    position: relative;
+    overflow: hidden;
+}
     #cta-banner h2 {
         color: #ffffff !important;
     }
@@ -850,12 +856,17 @@ $seo = [
         </div>
 
         <div class="row g-5 align-items-stretch pt-4">
-            <!-- Left Side Image -->
-            <div class="col-lg-6">
-                <div class="st-image-wrapper" style="height: 100%; max-height: 500px; border-radius: 24px; overflow: hidden;">
-                    <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=1200" alt="YCX Speaker Recording Session" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-            </div>
+           
+        <!-- Left Side Image -->
+<div class="col-lg-6">
+    <div class="st-image-wrapper" style="height: 100%; max-height: 500px; border-radius: 24px; overflow: hidden;">
+        <img 
+            src="{{ asset('images/media/share-your-story/What Makes a Great Story.jpg') }}" 
+            alt="What Makes a Great Story" 
+            style="width: 100%; height: 100%; object-fit: cover;"
+        >
+    </div>
+</div>
 
             <!-- Right Side 4 Cards -->
             <div class="col-lg-6">
@@ -920,9 +931,12 @@ $seo = [
                     <p class="cat-desc">Share personal transformations, philosophies, and guiding principles.</p>
                 </div>
                 <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                <div class="cat-img-box">
-                    <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=600&q=80" alt="Life Lessons">
-                </div>
+               
+             <div class="cat-img-box">
+    <img src="{{ asset('images/media/Life Lessons.png') }}" alt="Life Lessons">
+</div>
+
+
             </div>
 
             <!-- 02 Failure & Comeback -->
@@ -933,9 +947,17 @@ $seo = [
                     <p class="cat-desc">Describe setbacks, resilience, and how you rebounded stronger.</p>
                 </div>
                 <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                <div class="cat-img-box">
+              
+                <!-- <div class="cat-img-box">
                     <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="Failure & Comeback">
-                </div>
+                </div> -->
+
+
+                 <div class="cat-img-box">
+    <img src="{{ asset('images/media/failure & Comeback.png') }}" alt="Life Lessons">
+</div>
+
+
             </div>
 
             <!-- 03 Entrepreneur Journey -->
@@ -946,9 +968,16 @@ $seo = [
                     <p class="cat-desc">Tell the story of how you started, pivoted, and built your business.</p>
                 </div>
                 <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                <div class="cat-img-box">
+
+                <!-- <div class="cat-img-box">
                     <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Entrepreneur Journey">
-                </div>
+                </div> -->
+
+                 <div class="cat-img-box">
+    <img src="{{ asset('images/media/Entrepreneur Journey.jpg') }}" alt="Life Lessons">
+</div>
+
+
             </div>
 
             <!-- 04 Startup Story -->
@@ -959,9 +988,15 @@ $seo = [
                     <p class="cat-desc">From ideation to launch, share your product breakthroughs and milestones.</p>
                 </div>
                 <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                <div class="cat-img-box">
+             
+                <!-- <div class="cat-img-box">
                     <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80" alt="Startup Story">
-                </div>
+                </div> -->
+
+                 <div class="cat-img-box">
+    <img src="{{ asset('images/media/Startup Story.jpg') }}" alt="Life Lessons">
+</div>
+
             </div>
 
             <!-- 05 Career Journey -->
@@ -972,9 +1007,16 @@ $seo = [
                     <p class="cat-desc">Highlight key pivots, climbing the corporate ladder, and lessons learned.</p>
                 </div>
                 <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                <div class="cat-img-box">
+              
+                <!-- <div class="cat-img-box">
                     <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="Career Journey">
-                </div>
+                </div> -->
+
+                 <div class="cat-img-box">
+    <img src="{{ asset('images/media/Career Journey.jpg') }}" alt="Life Lessons">
+</div>
+
+
             </div>
 
             <!-- 06 Leadership Experience -->
@@ -985,9 +1027,16 @@ $seo = [
                     <p class="cat-desc">Insights on managing teams, building cultures, and driving visions.</p>
                 </div>
                 <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                <div class="cat-img-box">
+            
+                <!-- <div class="cat-img-box">
                     <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80" alt="Leadership Experience">
-                </div>
+                </div> -->
+
+                 <div class="cat-img-box">
+    <img src="{{ asset('images/media/Leadership Experience.jpg') }}" alt="Life Lessons">
+</div>
+
+                                    
             </div>
 
             <!-- 07 Business Lessons -->
@@ -998,9 +1047,16 @@ $seo = [
                     <p class="cat-desc">Functional strategies, operational insights, and commercial scaling.</p>
                 </div>
                 <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                <div class="cat-img-box">
+            
+                <!-- <div class="cat-img-box">
                     <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Business Lessons">
-                </div>
+                <   /div> -->
+
+                 <div class="cat-img-box">
+    <img src="{{ asset('images/media/Business Lessons.jpg') }}" alt="Life Lessons">
+</div>
+
+                                    
             </div>
 
             <!-- 08 Personal Growth -->
@@ -1011,9 +1067,16 @@ $seo = [
                     <p class="cat-desc">Self-improvement milestones, habit transformations, and mental shifts.</p>
                 </div>
                 <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-                <div class="cat-img-box">
+           
+                <!-- <div class="cat-img-box">
                     <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=600&q=80" alt="Personal Growth">
-                </div>
+                </div> -->
+
+                 <div class="cat-img-box">
+    <img src="{{ asset('images/media/Personal Growth.jpg') }}" alt="Life Lessons">
+</div>
+
+
             </div>
         </div>
     </div>
@@ -1143,9 +1206,11 @@ $seo = [
                 </div>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <div class="st-image-wrapper" style="height: 100%; min-height: 400px; border-radius: 24px; overflow: hidden;">
-                    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=1200" alt="Mic on stage" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
+
+    <div class="st-image-wrapper" style="height: 100%; min-height: 400px; border-radius: 24px; overflow: hidden;">
+    <img src="{{ asset('images/media/share-your-story/Why stories matter.jpg') }}" alt="Why Stories Matter" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+
             </div>
         </div>
     </div>

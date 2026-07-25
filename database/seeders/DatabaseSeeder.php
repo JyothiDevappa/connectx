@@ -15,6 +15,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // No seeders called
+        $this->call([
+            AdminUserSeeder::class,
+            JobSeeder::class,
+        ]);
     }
 }
+

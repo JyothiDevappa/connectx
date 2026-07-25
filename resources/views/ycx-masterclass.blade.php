@@ -277,7 +277,9 @@ $seo = [
       <p>
         We're preparing a series of expert-led learning experiences. Join the waitlist and get notified when registrations open.
       </p>
-      <a href="https://wa.me/918667205661?text=Hi%2C%20I%20would%20like%20to%20join%20your%20upcoming%20masterclasses.%20Please%20notify%20me%20when%20registrations%20open" class="btn-orange">Get Early Access</a>
+
+      <a href="{{ asset('images/media/Masterclasses.jpeg') }}" class="btn-orange">Get Early Access</a>
+   
     </div>
   </section>
 

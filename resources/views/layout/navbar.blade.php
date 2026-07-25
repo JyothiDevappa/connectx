@@ -96,7 +96,12 @@
                     <span class="fs-nav-arrow">→</span>
                 </a>
 
-                <a href="{{ url('/connectors-list') }}" class="fs-nav-item {{ request()->is('connectors-list') || request()->is('connecters-list') ? 'active' : '' }}" onclick="toggleMenu()">
+                <a href="{{ url('/masterclass') }}" class="fs-nav-item {{ request()->is('masterclass') ? 'active' : '' }}" onclick="toggleMenu()">
+                    <span class="fs-nav-name">YCX Masterclass</span>
+                    <span class="fs-nav-arrow">→</span>
+                </a>
+
+                <a href="{{ url('/connectors') }}" class="fs-nav-item {{ request()->is('connectors-list') || request()->is('connecters-list') ? 'active' : '' }}" onclick="toggleMenu()">
                     <span class="fs-nav-name">Connectors Directory</span>
                     <span class="fs-nav-arrow">→</span>
                 </a>
