@@ -265,71 +265,86 @@ $seo = [
     </div>
     <div class="partner-grid">
       <div class="p-card rv" style="transition-delay:0s">
-        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80" alt="Creators" loading="lazy">
+
+<img src="{{ asset('images/media/podcast/creator.png') }}" alt="Creators" loading="lazy">
+
         <div class="p-card-ov">
           <div class="p-name">Creators</div>
           <div class="p-desc">Produce engaging content, tell impactful stories, and share your vision on our podcast platform.</div>
         </div>
       </div>
       <div class="p-card rv" style="transition-delay:0.07s">
-        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80" alt="Women Leaders" loading="lazy">
-        <div class="p-card-ov">
+      
+      <img src="{{ asset('images/media/podcast/women-leaders.png') }}" alt="Women Leaders" loading="lazy">
+      
+      <div class="p-card-ov">
           <div class="p-name">Women Leaders</div>
           <div class="p-desc">Empower others by sharing your leadership journey, key strategies, and industry insights.</div>
         </div>
       </div>
       <div class="p-card rv" style="transition-delay:0.14s">
-        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80" alt="Entrepreneurs" loading="lazy">
+
+        <img src="{{ asset('images/media/podcast/entrepreneur.png') }}" alt="Entrepreneurs" loading="lazy">
+        
         <div class="p-card-ov">
           <div class="p-name">Entrepreneurs</div>
           <div class="p-desc">Share your business venture stories, operational frameworks, and scale-up strategies.</div>
         </div>
       </div>
       <div class="p-card rv" style="transition-delay:0.21s">
-        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80" alt="Startup Founders" loading="lazy">
+        <img src="{{ asset('images/media/podcast/startup-founders.png') }}" alt="Startup Founders" loading="lazy">
         <div class="p-card-ov">
           <div class="p-name">Startup Founders</div>
           <div class="p-desc">Discuss market innovation, venture building lessons, and raising capital.</div>
         </div>
       </div>
       <div class="p-card rv" style="transition-delay:0.28s">
-        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80" alt="Professionals" loading="lazy">
+        <img src="{{ asset('images/media/podcast/professionals.png') }}" alt="Professionals" loading="lazy">
         <div class="p-card-ov">
           <div class="p-name">Professionals</div>
           <div class="p-desc">Explain your functional expertise, corporate milestones, and career growth hacks.</div>
         </div>
       </div>
       <div class="p-card rv" style="transition-delay:0.35s">
-        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80" alt="Educators" loading="lazy">
+      
+      <img src="{{ asset('images/media/podcast/educators.jpg') }}" alt="Educators" loading="lazy">
         <div class="p-card-ov">
           <div class="p-name">Educators</div>
           <div class="p-desc">Bridge theory with practical implementation, detailing the future of teaching and learning.</div>
         </div>
       </div>
       <div class="p-card rv" style="transition-delay:0.42s">
-        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80" alt="Public Speakers" loading="lazy">
-        <div class="p-card-ov">
+      
+      <img src="{{ asset('images/media/podcast/public-speakers.jpg') }}" alt="Public Speakers" loading="lazy">
+       
+      <div class="p-card-ov">
           <div class="p-name">Public Speakers</div>
           <div class="p-desc">Bring your stage presence and talk about the ideas that can challenge and shape opinions.</div>
         </div>
       </div>
       <div class="p-card rv" style="transition-delay:0.49s">
-        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" alt="Innovators" loading="lazy">
-        <div class="p-card-ov">
+       
+      <img src="{{ asset('images/media/podcast/innovators.jpg') }}" alt="Innovators" loading="lazy">
+     
+      <div class="p-card-ov">
           <div class="p-name">Innovators</div>
           <div class="p-desc">Explain emerging technology, digital frameworks, and cutting-edge solutions.</div>
         </div>
       </div>
       <div class="p-card rv" style="transition-delay:0.56s">
-        <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=600&q=80" alt="Community Leaders" loading="lazy">
-        <div class="p-card-ov">
+      
+      <img src="{{ asset('images/media/podcast/community-leaders.jpg') }}" alt="Community Leaders" loading="lazy">
+     
+      <div class="p-card-ov">
           <div class="p-name">Community Leaders</div>
           <div class="p-desc">Discuss strategies for cultivating active, supportive, and highly engaged communities.</div>
         </div>
       </div>
       <div class="p-card rv" style="transition-delay:0.63s">
-        <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=600&q=80" alt="Social Impact Leaders" loading="lazy">
-        <div class="p-card-ov">
+      
+      <img src="{{ asset('images/media/podcast/social-impact-leaders.jpg') }}" alt="Social Impact Leaders" loading="lazy">
+     
+      <div class="p-card-ov">
           <div class="p-name">Social Impact Leaders</div>
           <div class="p-desc">Inspire change by speaking on sustainability, community development, and societal progress.</div>
         </div>
