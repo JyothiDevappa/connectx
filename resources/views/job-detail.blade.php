@@ -399,17 +399,9 @@ $seo = [
     <span class="drawer-note" style="display: block; text-align: center; margin-top: 8px;">We'll only use this to reach out about your application.</span>
   </form>
 
-  <!-- Success State overlay -->
-  <div class="drawer-thanks" id="drawerThanks" style="display: none;">
-    <i class="bi bi-check-circle-fill" style="font-size: 3rem; color: #0c3a30; display: block; margin-bottom: 15px;"></i>
-    <h4>You're in the queue.</h4>
-    <p>Thanks for applying! Our team will review your profile and reach out within 5–7 working days if there is a match.</p>
-    <button class="drawer-submit mt-4" onclick="location.reload();">Done</button>
-  </div>
 </div>
 
-@if (session('success'))
-<!-- Success Modal (Fallback fallback for redirects) -->
+<!-- Success Modal -->
 <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content" style="background: linear-gradient(135deg, #fffcf9 0%, #ffeada 100%); border: 1px solid rgba(12, 58, 48, 0.15); border-radius: 20px;">
@@ -417,17 +409,19 @@ $seo = [
                 <div class="mb-4">
                     <i class="bi bi-check-circle-fill" style="font-size: 4rem; color: #0c3a30;"></i>
                 </div>
-                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; line-height: 1.3; color: #0c3a30;">Application Submitted</h3>
+                <h3 class="fw-bold mb-3" style="font-size: 1.5rem; line-height: 1.3; color: #0c3a30;">Application Submitted Successfully!</h3>
                 <p class="mb-4" style="line-height: 1.6; font-size: 0.95rem; color: #687588;">
-                    Thank you! Your application has been successfully submitted. Our team will review your profile and get back to you shortly.
+                    We've successfully received your application. Our hiring team will review your submission and keep you informed about the next steps in the recruitment process.
                 </p>
-                <a href="{{ route($job->category == 'internship' ? 'internships.index' : 'careers.index') }}" class="btn px-5 py-3 fw-bold text-uppercase w-100 d-block text-center" style="text-decoration: none; background-color: #0c3a30; color: #ffffff; border-radius: 12px; border: none; transition: all 0.3s ease;">
-                    Close
+                <a href="{{ request()->url() }}" class="btn px-5 py-3 fw-bold w-100 d-block text-center" style="text-decoration: none; background-color: #0c3a30; color: #ffffff; border-radius: 12px; border: none; transition: all 0.3s ease;">
+                    Continue Exploring
                 </a>
             </div>
         </div>
     </div>
 </div>
+
+@if (session('success'))
 @push('scripts')
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -540,7 +534,6 @@ $seo = [
 
         // Form submission with ajax
         var form = document.getElementById('jobApplyForm');
-        var thanksBlock = document.getElementById('drawerThanks');
 
         if (form) {
             form.addEventListener('submit', function(e) {
@@ -572,8 +565,12 @@ $seo = [
                 })
                 .then(function(data) {
                     if (data.type === 'success') {
-                        form.style.display = 'none';
-                        thanksBlock.style.display = 'block';
+                        closeDrawer();
+                        var successModalElement = document.getElementById('successModal');
+                        if (successModalElement) {
+                            var myModal = new bootstrap.Modal(successModalElement);
+                            myModal.show();
+                        }
                     } else {
                         alert(data.message || 'Something went wrong. Please try again.');
                     }

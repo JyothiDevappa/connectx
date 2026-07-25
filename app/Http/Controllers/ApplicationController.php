@@ -46,7 +46,7 @@ class ApplicationController extends Controller
             // 2. Email to Admin
             Mail::send('emails.directory-application', $validated, function ($message) use ($validated) {
                 $message->to('youngchanakya.x@gmail.com')
-                        ->subject('New Directory Application: ' . $validated['full_name'])
+                        ->subject('New Connector Application — ' . $validated['full_name'])
                         ->replyTo($validated['email'], $validated['full_name']);
             });
             \Illuminate\Support\Facades\Log::info('Admin email sent.');
@@ -341,7 +341,7 @@ class ApplicationController extends Controller
             // 1. Email to Admin
             Mail::send('emails.event-rsvp-admin', $validated, function ($message) use ($validated) {
                 $message->to('youngchanakya.x@gmail.com')
-                        ->subject('New Event Application: ' . $validated['event_title'] . ' - ' . $validated['full_name'])
+                        ->subject('New Event Application: ' . $validated['event_title'])
                         ->replyTo($validated['email'], $validated['full_name']);
             });
             \Illuminate\Support\Facades\Log::info('Admin email sent.');
@@ -349,8 +349,8 @@ class ApplicationController extends Controller
             // 2. Email to User (Confirmation)
             \Illuminate\Support\Facades\Log::info('Sending user confirmation email to: ' . $validated['email']);
             Mail::send('emails.event-rsvp-user', $validated, function ($message) use ($validated) {
-                $message->to($validated['email'])
-                        ->subject('Application Received: ' . $validated['event_title'] . ' - Young Chanakya X');
+                $message->to($validated['email'])   
+                        ->subject('Thank You for Registering: ' . $validated['event_title']);
             });
             \Illuminate\Support\Facades\Log::info('User email sent.');
             \Illuminate\Support\Facades\Log::info('--- EVENT RSVP SUBMISSION END ---');
@@ -458,13 +458,22 @@ class ApplicationController extends Controller
                     $jobTitle = $job->title;
                 }
             }
-            $emailData = array_merge($validated, ['job_title' => $jobTitle, 'resume_url' => $resumeUrl]);
+            $nameParts = explode(' ', trim($validated['full_name']), 2);
+            $firstName = $nameParts[0];
+            $lastName = isset($nameParts[1]) ? $nameParts[1] : '';
+            $emailData = array_merge($validated, [
+                'job_title'  => $jobTitle,
+                'resume_url' => $resumeUrl,
+                'first_name' => $firstName,
+                'last_name'  => $lastName
+            ]);
 
             \Illuminate\Support\Facades\Log::info('Sending admin email...');
             // Email to Admin
             Mail::send('emails.job-application-admin', $emailData, function ($message) use ($validated, $jobTitle) {
+                $categoryLabel = ucfirst($validated['category']);
                 $message->to('youngchanakya.x@gmail.com')
-                        ->subject('New Job Application: ' . $jobTitle . ' - ' . $validated['full_name'])
+                        ->subject('New Job Application: ' . $jobTitle . ' - Young Chanakya X ' . $categoryLabel . ' (' . $validated['full_name'] . ')')
                         ->replyTo($validated['email'], $validated['full_name']);
             });
             \Illuminate\Support\Facades\Log::info('Admin email sent.');
@@ -472,8 +481,9 @@ class ApplicationController extends Controller
             \Illuminate\Support\Facades\Log::info('Sending user confirmation email to: ' . $validated['email']);
             // Email to User (Confirmation)
             Mail::send('emails.job-application-user', $emailData, function ($message) use ($validated, $jobTitle) {
+                $categoryLabel = ucfirst($validated['category']);
                 $message->to($validated['email'])
-                        ->subject('Application Received: ' . $jobTitle . ' - Young Chanakya X');
+                        ->subject('Thank You for Applying: ' . $jobTitle . ' - Young Chanakya X ' . $categoryLabel);
             });
             \Illuminate\Support\Facades\Log::info('User email sent.');
             \Illuminate\Support\Facades\Log::info('--- JOB APPLICATION SUBMISSION END ---');
@@ -531,14 +541,14 @@ class ApplicationController extends Controller
             // 2. Notify Admin
             Mail::send('emails.feature-guest-application', $validated, function ($message) use ($validated) {
                 $message->to('youngchanakya.x@gmail.com')
-                        ->subject('New Guest Feature Application: ' . $validated['full_name'])
+                        ->subject('New Podcast Feature Application — ' . $validated['full_name'])
                         ->replyTo($validated['email'], $validated['full_name']);
             });
 
             // 3. Confirm to User
             Mail::send('emails.feature-guest-confirmation', $validated, function ($message) use ($validated) {
                 $message->to($validated['email'])
-                        ->subject('Your Guest Application Received - Young Chanakya X');
+                        ->subject('Application Received — YCX Podcast Feature');
             });
             \Illuminate\Support\Facades\Log::info('--- FEATURE GUEST SUBMISSION END ---');
 
@@ -589,14 +599,14 @@ class ApplicationController extends Controller
             // 2. Notify Admin
             Mail::send('emails.story-submission-admin', $validated, function ($message) use ($validated) {
                 $message->to('youngchanakya.x@gmail.com')
-                        ->subject('New Talk Proposal: ' . $validated['talk_title'] . ' by ' . $validated['full_name'])
+                        ->subject('New Share Your Story Application: ' . $validated['talk_title'] . ' by ' . $validated['full_name'])
                         ->replyTo($validated['email'], $validated['full_name']);
             });
 
             // 3. Confirm to User
             Mail::send('emails.story-submission-confirmation', $validated, function ($message) use ($validated) {
                 $message->to($validated['email'])
-                        ->subject('Your Talk Proposal Received - Young Chanakya X');
+                        ->subject('Share Your Story Application Received - Young Chanakya X');
             });
             \Illuminate\Support\Facades\Log::info('--- STORY SUBMISSION END ---');
 
