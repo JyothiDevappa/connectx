@@ -947,14 +947,9 @@ $seo = [
                     <p class="cat-desc">Describe setbacks, resilience, and how you rebounded stronger.</p>
                 </div>
                 <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-              
-                <!-- <div class="cat-img-box">
-                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="Failure & Comeback">
-                </div> -->
-
 
                  <div class="cat-img-box">
-    <img src="{{ asset('images/media/failure & Comeback.png') }}" alt="Life Lessons">
+    <img src="{{ asset('images/media/comeback.webp') }}" alt="Life Lessons">
 </div>
 
 
