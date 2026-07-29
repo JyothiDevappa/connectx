@@ -1383,70 +1383,70 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
     </div>
     <div class="partner-grid container">
         <div class="p-card rv" style="transition-delay:0s">
-            <img src="{{ asset('images/media/index-page/Students.jpg') }}" alt="Students — Young Chanakya X Partner Category" loading="lazy">
+            <img src="{{ asset('images/media/index-page/students.webp') }}" alt="Students — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-name">Students</div>
                 <div class="p-desc">Connect with peers, build practical skills, and access leadership programs.</div>
             </div>
         </div>
         <div class="p-card rv" style="transition-delay:0.07s">
-            <img src="{{ asset('images/media/index-page/Entrepreneurs.jpg') }}" alt="Entrepreneurs — Young Chanakya X Partner Category" loading="lazy">
+            <img src="{{ asset('images/media/index-page/entrepreneurs.webp') }}" alt="Entrepreneurs — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-name">Entrepreneurs</div>
                 <div class="p-desc">Network with experts, share your vision, and scale your business ventures.</div>
             </div>
         </div>
         <div class="p-card rv" style="transition-delay:0.14s">
-            <img src="{{ asset('images/media/index-page/founder.jpg') }}" alt="Startup Founders — Young Chanakya X Partner Category" loading="lazy">
+            <img src="{{ asset('images/media/index-page/founder.webp') }}" alt="Startup Founders — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-name">Startup Founders</div>
                 <div class="p-desc">Pitch your ideas, collaborate with investors, and accelerate your growth.</div>
             </div>
         </div>
         <div class="p-card rv" style="transition-delay:0.21s">
-            <img src="{{ asset('images/media/index-page/Business Leaders.jpg') }}" alt="Business Leaders — Young Chanakya X Partner Category" loading="lazy">
+            <img src="{{ asset('images/media/index-page/business-leaders.webp') }}" alt="Business Leaders — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-name">Business Leaders</div>
                 <div class="p-desc">Guide the ecosystem, sponser programs, and share executive insights.</div>
             </div>
         </div>
         <div class="p-card rv" style="transition-delay:0.28s">
-            <img src="{{ asset('images/media/index-page/Creators -Mentors.jpg') }}" alt="Creators & Mentors — Young Chanakya X Partner Category" loading="lazy">
+            <img src="{{ asset('images/media/index-page/creators-mentors.webp') }}" alt="Creators & Mentors — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-name">Creators / Mentors</div>
                 <div class="p-desc">Produce podcasts, write articles, and mentor the next generation.</div>
             </div>
         </div>
         <div class="p-card rv" style="transition-delay:0.35s">
-            <img src="{{ asset('images/media/index-page/Influencers.jpg') }}" alt="Influencers — Young Chanakya X Partner Category" loading="lazy">
+            <img src="{{ asset('images/media/index-page/influencers.webp') }}" alt="Influencers — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-name">Influencers</div>
                 <div class="p-desc">Amplify brand voice, reach active audiences, and host live sessions.</div>
             </div>
         </div>
         <div class="p-card rv" style="transition-delay:0.42s">
-            <img src="{{ asset('images/media/index-page/Investors.jpg') }}" alt="Investors — Young Chanakya X Partner Category" loading="lazy">
+            <img src="{{ asset('images/media/index-page/investors.webp') }}" alt="Investors — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-name">Investors</div>
                 <div class="p-desc">Discover vetted startups, back innovators, and shape market trends.</div>
             </div>
         </div>
         <div class="p-card rv" style="transition-delay:0.49s">
-            <img src="{{ asset('images/media/index-page/Educators.jpg') }}" alt="Educators — Young Chanakya X Partner Category" loading="lazy">
+            <img src="{{ asset('images/media/index-page/educators.webp') }}" alt="Educators — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-name">Educators</div>
                 <div class="p-desc">Bridge academia with industry, design courses, and lead workshops.</div>
             </div>
         </div>
         <div class="p-card rv" style="transition-delay:0.56s">
-            <img src="{{ asset('images/media/index-page/Community Builders.jpg') }}" alt="Community Builders — Young Chanakya X Partner Category" loading="lazy">
+            <img src="{{ asset('images/media/index-page/community-builders.webp') }}" alt="Community Builders — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-name">Community Builders</div>
                 <div class="p-desc">Organize local meetups, run regional chapters, and grow active networks.</div>
             </div>
         </div>
         <div class="p-card rv" style="transition-delay:0.63s">
-            <img src="{{ asset('images/media/index-page/Innovators.jpg') }}" alt="Innovators — Young Chanakya X Partner Category" loading="lazy">
+            <img src="{{ asset('images/media/index-page/innovators.webp') }}" alt="Innovators — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-name">Innovators</div>
                 <div class="p-desc">Develop cutting-edge ideas, collaborate on tech, and build future frameworks.</div>
