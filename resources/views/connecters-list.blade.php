@@ -491,8 +491,13 @@ $seo = [
 
                     <div class="tab-pane fade show active" id="v-pills-biz" role="tabpanel" aria-labelledby="v-pills-biz-tab">
                         <div class="network-cluster-card">
-                            <div class="panel-hero-image mb-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
 
+<div class="panel-hero-image mb-4 overflow-hidden"
+     style="height: 200px;
+            background:
+            linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
+            url('{{ asset('images/media/connecter/business&entrepreneurship.webp') }}') center/cover;">
+</div>
                             <div class="d-flex align-items-start gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-building-gear"></i></div>
                                 <div>
@@ -512,8 +517,14 @@ $seo = [
 
                     <div class="tab-pane fade" id="v-pills-tech" role="tabpanel" aria-labelledby="v-pills-tech-tab">
                         <div class="network-cluster-card">
-                            <div class="panel-hero-image mb-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
 
+
+                        <div class="panel-hero-image mb-4 overflow-hidden"
+     style="height: 200px;
+            background:
+            linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
+            url('{{ asset('images/media/connecter/innovation-technology.webp') }}') center/cover;">
+</div>
                             <div class="d-flex align-items-start gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-cpu"></i></div>
                                 <div>
@@ -533,8 +544,16 @@ $seo = [
 
                     <div class="tab-pane fade" id="v-pills-fin" role="tabpanel" aria-labelledby="v-pills-fin-tab">
                         <div class="network-cluster-card">
-                            <div class="panel-hero-image mb-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
 
+
+                      <div class="panel-hero-image mb-4 overflow-hidden"
+     style="height: 200px;
+            background:
+            linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
+            url('{{ asset('images/media/connecter/finance.webp') }}') center/cover;">
+</div>
+              
+              
                             <div class="d-flex align-items-start gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-graph-up-arrow"></i></div>
                                 <div>
@@ -554,7 +573,15 @@ $seo = [
 
                     <div class="tab-pane fade" id="v-pills-creative" role="tabpanel" aria-labelledby="v-pills-creative-tab">
                         <div class="network-cluster-card">
-                            <div class="panel-hero-image mb-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
+
+
+                   <div class="panel-hero-image mb-4 overflow-hidden"
+     style="height: 200px;
+            background:
+            linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
+            url('{{ asset('images/media/connecter/creative.webp') }}') center/cover;">
+</div>
+         
 
                             <div class="d-flex align-items-start gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-bezier2"></i></div>
@@ -575,8 +602,13 @@ $seo = [
 
                     <div class="tab-pane fade" id="v-pills-impact" role="tabpanel" aria-labelledby="v-pills-impact-tab">
                         <div class="network-cluster-card">
-                            <div class="panel-hero-image mb-4 overflow-hidden" style="height: 200px; background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1000') center/cover;"></div>
 
+                 <div class="panel-hero-image mb-4 overflow-hidden"
+     style="height: 200px;
+            background:
+            linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
+            url('{{ asset('images/media/connecter/social-impact.webp') }}') center/cover;">
+</div>
                             <div class="d-flex align-items-start gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-globe"></i></div>
                                 <div>
