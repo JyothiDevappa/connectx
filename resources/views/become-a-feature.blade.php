@@ -266,7 +266,7 @@ $seo = [
     <div class="partner-grid">
       <div class="p-card rv" style="transition-delay:0s">
 
-<img src="{{ asset('images/media/podcast/creator.png') }}" alt="Creators" loading="lazy">
+<img src="{{ asset('images/media/podcast/creators.webp') }}" alt="Creators" loading="lazy">
 
         <div class="p-card-ov">
           <div class="p-name">Creators</div>
@@ -275,7 +275,7 @@ $seo = [
       </div>
       <div class="p-card rv" style="transition-delay:0.07s">
       
-      <img src="{{ asset('images/media/podcast/women-leaders.png') }}" alt="Women Leaders" loading="lazy">
+      <img src="{{ asset('images/media/podcast/women-leaders.webp') }}" alt="Women Leaders" loading="lazy">
       
       <div class="p-card-ov">
           <div class="p-name">Women Leaders</div>
@@ -284,7 +284,7 @@ $seo = [
       </div>
       <div class="p-card rv" style="transition-delay:0.14s">
 
-        <img src="{{ asset('images/media/podcast/entrepreneur.png') }}" alt="Entrepreneurs" loading="lazy">
+        <img src="{{ asset('images/media/podcast/entrepreneurs.webp') }}" alt="Entrepreneurs" loading="lazy">
         
         <div class="p-card-ov">
           <div class="p-name">Entrepreneurs</div>
@@ -292,14 +292,14 @@ $seo = [
         </div>
       </div>
       <div class="p-card rv" style="transition-delay:0.21s">
-        <img src="{{ asset('images/media/podcast/startup-founders.png') }}" alt="Startup Founders" loading="lazy">
+        <img src="{{ asset('images/media/podcast/startup-founders.webp') }}" alt="Startup Founders" loading="lazy">
         <div class="p-card-ov">
           <div class="p-name">Startup Founders</div>
           <div class="p-desc">Discuss market innovation, venture building lessons, and raising capital.</div>
         </div>
       </div>
       <div class="p-card rv" style="transition-delay:0.28s">
-        <img src="{{ asset('images/media/podcast/professionals.png') }}" alt="Professionals" loading="lazy">
+        <img src="{{ asset('images/media/podcast/professionals.webp') }}" alt="Professionals" loading="lazy">
         <div class="p-card-ov">
           <div class="p-name">Professionals</div>
           <div class="p-desc">Explain your functional expertise, corporate milestones, and career growth hacks.</div>
@@ -307,7 +307,7 @@ $seo = [
       </div>
       <div class="p-card rv" style="transition-delay:0.35s">
       
-      <img src="{{ asset('images/media/podcast/educators.jpg') }}" alt="Educators" loading="lazy">
+      <img src="{{ asset('images/media/podcast/educators.webp') }}" alt="Educators" loading="lazy">
         <div class="p-card-ov">
           <div class="p-name">Educators</div>
           <div class="p-desc">Bridge theory with practical implementation, detailing the future of teaching and learning.</div>
@@ -315,7 +315,7 @@ $seo = [
       </div>
       <div class="p-card rv" style="transition-delay:0.42s">
       
-      <img src="{{ asset('images/media/podcast/public-speakers.jpg') }}" alt="Public Speakers" loading="lazy">
+      <img src="{{ asset('images/media/podcast/public-speakers.webp') }}" alt="Public Speakers" loading="lazy">
        
       <div class="p-card-ov">
           <div class="p-name">Public Speakers</div>
@@ -324,7 +324,7 @@ $seo = [
       </div>
       <div class="p-card rv" style="transition-delay:0.49s">
        
-      <img src="{{ asset('images/media/podcast/innovators.jpg') }}" alt="Innovators" loading="lazy">
+      <img src="{{ asset('images/media/podcast/innovators.webp') }}" alt="Innovators" loading="lazy">
      
       <div class="p-card-ov">
           <div class="p-name">Innovators</div>
@@ -333,7 +333,7 @@ $seo = [
       </div>
       <div class="p-card rv" style="transition-delay:0.56s">
       
-      <img src="{{ asset('images/media/podcast/community-leaders.jpg') }}" alt="Community Leaders" loading="lazy">
+      <img src="{{ asset('images/media/podcast/community-leaders.webp') }}" alt="Community Leaders" loading="lazy">
      
       <div class="p-card-ov">
           <div class="p-name">Community Leaders</div>
@@ -342,7 +342,7 @@ $seo = [
       </div>
       <div class="p-card rv" style="transition-delay:0.63s">
       
-      <img src="{{ asset('images/media/podcast/social-impact-leaders.jpg') }}" alt="Social Impact Leaders" loading="lazy">
+      <img src="{{ asset('images/media/podcast/social-leaders.webp') }}" alt="Social Impact Leaders" loading="lazy">
      
       <div class="p-card-ov">
           <div class="p-name">Social Impact Leaders</div>
