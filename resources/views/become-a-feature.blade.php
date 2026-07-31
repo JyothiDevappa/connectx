@@ -424,7 +424,7 @@ $seo = [
         <!-- 1st Row: Column 1 - Image -->
         <div class="col-lg-6">
           <div class="h-100 rounded-4 overflow-hidden">
-            <img src="{{ asset('images/media/Why You Love it.jpeg') }}" class="get-image-box" alt="Podcast recording setup">
+            <img src="{{ asset('images/media/podcast/why-you-love-it.webp') }}" class="get-image-box" alt="Podcast recording setup">
           </div>
         </div>
         <!-- 1st Row: Column 2 - Card 1 -->
@@ -502,7 +502,7 @@ $seo = [
       <div class="video-grid">
         <div class="video-card">
           <div class="video-thumbnail">
-            <img src="{{ asset('images/media/Building Communities That Scale.jpeg') }}" alt="Building Communities That Scale">
+            <img src="{{ asset('images/media/podcast/building-communities.webp') }}" alt="Building Communities That Scale">
             <div class="play-btn-overlay">
               <i class="bi bi-play-fill"></i>
             </div>
@@ -514,7 +514,7 @@ $seo = [
 
         <div class="video-card">
           <div class="video-thumbnail">
-            <img src="{{ asset('images/media/The Future of Digital Entrepreneurship.jpeg') }}" alt="The Future of Digital Entrepreneurship">
+            <img src="{{ asset('images/media/podcast/digital-entrepreneurship.webp') }}" alt="The Future of Digital Entrepreneurship">
             <div class="play-btn-overlay">
               <i class="bi bi-play-fill"></i>
             </div>

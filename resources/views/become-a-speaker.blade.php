@@ -187,7 +187,7 @@ $seo = [
     padding-top: 180px;
     padding-bottom: 100px;
     background-image: linear-gradient(180deg, rgba(9, 13, 22, 0.7) 0%, #090d16 100%),
-        url('{{ asset("images/media/speaker-hero banner.png") }}');
+        url('{{ asset("images/media/speaker/hero-banner.webp") }}');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1617,7 +1617,7 @@ $seo = [
     <div class="about-layout">
       <!-- Left Column: Image Card -->
     <div class="about-img-container">
-    <img src="{{ asset('images/media/About YCX Talks.png') }}" alt="About YCX Talks">
+    <img src="{{ asset('images/media/speaker/about-ycx-talks.webp') }}" alt="About YCX Talks">
 </div>
       
       <!-- Right Column: Content -->
@@ -1688,7 +1688,7 @@ $seo = [
       <div class="talk-card">
        
       <div class="talk-thumb">
-    <img src="{{ asset('images/media/Personal Growth.png') }}" alt="Personal Growth">
+    <img src="{{ asset('images/media/speaker/personal-growth.webp') }}" alt="Personal Growth">
     <span class="talk-tag">Personal Growth</span>
 </div>
 
@@ -1702,7 +1702,7 @@ $seo = [
       <div class="talk-card">
 
       <div class="talk-thumb">
-    <img src="{{ asset('images/media/education.jpg') }}" alt="Education">
+    <img src="{{ asset('images/media/speaker/education.webp') }}" alt="Education">
     <span class="talk-tag">Education</span>
 </div>
 
@@ -1717,7 +1717,7 @@ $seo = [
       <div class="talk-card">
 
       <div class="talk-thumb">
-    <img src="{{ asset('images/media/Growth.jpg') }}" alt="Business Growth">
+    <img src="{{ asset('images/media/speaker/business-growth.webp') }}" alt="Business Growth">
     <span class="talk-tag">Business Growth</span>
 </div>
 
@@ -1747,7 +1747,7 @@ $seo = [
             <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80" alt="YCX Ecosystem Visual" style="width: 100%; height: 100%; object-fit: cover;">
           </div> -->
           <div class="visual-box" style="height: 300px; overflow: hidden; border-radius: 20px; background: #f4f4f4;">
-    <img src="{{ asset('images/media/Who Belongs On This Stage.jpg') }}" alt="YCX Ecosystem Visual" style="width: 100%; height: 100%; object-fit: cover;">
+    <img src="{{ asset('images/media/speaker/who-belongs-on this-stage.webp') }}" alt="YCX Ecosystem Visual" style="width: 100%; height: 100%; object-fit: cover;">
 </div>
         </div>
       </div>
@@ -1784,7 +1784,7 @@ $seo = [
       </div>
       <div class="elig-layout">
       <div class="elig-image">
-    <img src="{{ asset('images/media/Before You Apply.jpg') }}" alt="Speaker presenting on stage to a large audience">
+    <img src="{{ asset('images/media/speaker/before-you-apply.webp') }}" alt="Speaker presenting on stage to a large audience">
 </div>
         <div class="elig-checklist">
           <div class="tick-list-item large-tick ink-text">
@@ -2017,7 +2017,7 @@ $seo = [
 
   <!-- CTA BANNER -->
   <section class="cta-banner" style="
-    background-image: url('{{ asset('images/media/speaker-banner-img.png') }}');
+    background-image: url('{{ asset('images/media/speaker/cta-banner.webp') }}');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

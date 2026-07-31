@@ -93,7 +93,7 @@ $seo = [
     <div class="hero-slides">
         <!-- Slide 1 -->
         <div class="hero-slide active">
-            <img src="{{ asset('images/media/index-banner-1.jpg') }}" alt="Partner With the Future of Influence">
+            <img src="{{ asset('images/media/index-page/index-banner-1.webp') }}" alt="Partner With the Future of Influence">
             <div class="hero-overlay"></div>
             <div class="hero-grain"></div>
             <div class="hero-content">
@@ -109,7 +109,7 @@ $seo = [
 
         <!-- Slide 2 -->
         <div class="hero-slide">
-            <img src="{{ asset('images/media/index-banner-2.jpg') }}" alt="Empower Your Creator Journey">
+            <img src="{{ asset('images/media/index-page/index-banner-2.webp') }}" alt="Empower Your Creator Journey">
             <div class="hero-overlay"></div>
             <div class="hero-grain"></div>
             <div class="hero-content">
@@ -606,7 +606,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
 <section class="container py-4">
   <div id="join-club">
     <div class="jc-photo">
-      <img src="{{ asset('images/media/club.png') }}" alt="Members collaborating at the YCX Club">
+      <img src="{{ asset('images/media/index-page/club.webp') }}" alt="Members collaborating at the YCX Club">
     </div>
     <div class="jc-content">
       <span class="eyebrow">Join Our Club</b></span>
@@ -807,7 +807,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
             </div>
         </div>
         <div class="about-img-side rv-r">
-            <img src="{{ asset('images/media/podcast-kishore.png') }}" alt="Feature on YCX Podcast">
+            <img src="{{ asset('images/media/index-page/podcast-kishore.webp') }}" alt="Feature on YCX Podcast">
             <div class="about-img-overlay"></div>
         </div>
     </div>
@@ -826,7 +826,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
         <p>Join YCX as a partner and collaborate with a growing network of creators, speakers and communities to create impactful experiences and new opportunities.</p>
       </div>
       <div class="engagement-photo">
-        <img src="{{ asset('images/media/partner.png') }}" alt="Celebrate Campus Engagements">
+        <img src="{{ asset('images/media/index-page/partner.webp') }}" alt="Celebrate Campus Engagements">
       </div>
     </div>
 
@@ -840,7 +840,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
         <p>Partner with YCX as a sponsor to connect your brand with inspiring conversations, influential voices, and a community that values innovation and collaboration.</p>
       </div>
       <div class="engagement-photo">
-        <img src="{{ asset('images/media/sponsor.png') }}" alt="Become a Sponor">
+        <img src="{{ asset('images/media/index-page/sponsor.webp') }}" alt="Become a Sponor">
       </div>
     </div>
   </div>
@@ -1513,7 +1513,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
 
             <div class="cx-premium-card cx-col-wide">
                 <div class="cx-img-container">
-                    <img src="{{ asset('images/media/podcast.png') }}" alt="Podcasts" class="cx-surface-img">
+                    <img src="{{ asset('images/media/index-page/img-1.webp') }}" alt="Podcasts" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
@@ -1525,7 +1525,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
 
             <div class="cx-premium-card cx-col-square">
                 <div class="cx-img-container">
-                    <img src="{{ asset('images/media/experience_stories.png') }}" alt="Stories" class="cx-surface-img">
+                    <img src="{{ asset('images/media/index-page/img-2.webp') }}" alt="Stories" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
@@ -1537,7 +1537,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
 
             <div class="cx-premium-card cx-col-square">
                 <div class="cx-img-container">
-                    <img src="{{ asset('images/media/network.png') }}" alt="Network" class="cx-surface-img">
+                    <img src="{{ asset('images/media/index-page/img-3.webp') }}" alt="Network" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
@@ -1549,7 +1549,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
 
             <div class="cx-premium-card cx-col-square">
                 <div class="cx-img-container">
-                    <img src="{{ asset('images/media/experience_mentorship.png') }}" alt="Mentorship" class="cx-surface-img">
+                    <img src="{{ asset('images/media/index-page/img-4.webp') }}" alt="Mentorship" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
@@ -1561,7 +1561,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
 
             <div class="cx-premium-card cx-col-square">
                 <div class="cx-img-container">
-                    <img src="{{ asset('images/media/experience_live_events.png') }}" alt="Live Events" class="cx-surface-img">
+                    <img src="{{ asset('images/media/index-page/img-5.webp') }}" alt="Live Events" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">
@@ -1573,7 +1573,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
 
             <div class="cx-premium-card cx-col-wide">
                 <div class="cx-img-container">
-                    <img src="{{ asset('images/media/collabarate.png') }}" alt="Collaborate" class="cx-surface-img">
+                    <img src="{{ asset('images/media/index-page/img-6.webp') }}" alt="Collaborate" class="cx-surface-img">
                     <div class="cx-surface-overlay"></div>
                 </div>
                 <div class="cx-premium-body">

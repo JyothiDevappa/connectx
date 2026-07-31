@@ -129,7 +129,7 @@ $seo = [
                 <div class="hero-visual">
 
 <img class="hero-image"
-     src="{{ asset('images/media/about-hero-banner.jpg') }}"
+     src="{{ asset('images/media/about/about-hero-banner.webp') }}"
      alt="Young Chanakya X premium experience">
      
                     <div class="hero-side-card d-none d-lg-block">
@@ -251,7 +251,7 @@ $seo = [
 
                         <!-- SPEAKER VISUAL -->
                         <div class="ecosystem-speaker-visual">
-                            <img src="{{ asset('images/media/about-img.png') }}" alt="Young Chanakya X Speaker" class="ecosystem-speaker-img">
+                            <img src="{{ asset('images/media/about/about-img.webp') }}" alt="Young Chanakya X Speaker" class="ecosystem-speaker-img">
                         </div>
 
                     </div>

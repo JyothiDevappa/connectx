@@ -45,7 +45,8 @@ class ApplicationController extends Controller
             \Illuminate\Support\Facades\Log::info('Sending admin email...');
             // 2. Email to Admin
             Mail::send('emails.directory-application', $validated, function ($message) use ($validated) {
-                $message->to('youngchanakya.x@gmail.com')
+                $message->from(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
+                        ->to('youngchanakya.x@gmail.com')
                         ->subject('New Connector Application — ' . $validated['full_name'])
                         ->replyTo($validated['email'], $validated['full_name']);
             });
@@ -54,7 +55,9 @@ class ApplicationController extends Controller
             \Illuminate\Support\Facades\Log::info('Sending user email to: '.$validated['email']);
             // 2. Email to User (Confirmation)
             Mail::send('emails.user-confirmation', $validated, function ($message) use ($validated) {
-                $message->to($validated['email'])
+                $message->from(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
+                        ->to($validated['email'])
+                        ->replyTo(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
                         ->subject('Application Received - Young Chanakya X');
             });
             \Illuminate\Support\Facades\Log::info('User email sent.');
@@ -102,7 +105,8 @@ class ApplicationController extends Controller
             \Illuminate\Support\Facades\Log::info('Sending admin email...');
             // 2. Email to Admin
             Mail::send('emails.partner-application', $validated, function ($message) use ($validated) {
-                $message->to('youngchanakya.x@gmail.com')
+                $message->from(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
+                        ->to('youngchanakya.x@gmail.com')
                         ->subject('New Partnership Application: ' . $validated['name'])
                         ->replyTo($validated['email'], $validated['name']);
             });
@@ -111,7 +115,9 @@ class ApplicationController extends Controller
             \Illuminate\Support\Facades\Log::info('Sending user email to: '.$validated['email']);
             // 2. Email to User (Confirmation)
             Mail::send('emails.partner-confirmation', $validated, function ($message) use ($validated) {
-                $message->to($validated['email'])
+                $message->from(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
+                        ->to($validated['email'])
+                        ->replyTo(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
                         ->subject('Partnership Application Received - Young Chanakya X');
             });
             \Illuminate\Support\Facades\Log::info('User email sent.');
@@ -157,7 +163,8 @@ class ApplicationController extends Controller
             // 2. Email to Admin
             \Illuminate\Support\Facades\Log::info('Sending admin email...');
             Mail::send('emails.speaker-application', $validated, function ($message) use ($validated) {
-                $message->to('youngchanakya.x@gmail.com')
+                $message->from(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
+                        ->to('youngchanakya.x@gmail.com')
                         ->subject('New Speaker Application: ' . $validated['full_name']);
                 if (!empty($validated['email'])) {
                     $message->replyTo($validated['email'], $validated['full_name']);
@@ -169,7 +176,9 @@ class ApplicationController extends Controller
             if (!empty($validated['email'])) {
                 \Illuminate\Support\Facades\Log::info('Sending user confirmation email to: ' . $validated['email']);
                 Mail::send('emails.speaker-confirmation', $validated, function ($message) use ($validated) {
-                    $message->to($validated['email'])
+                    $message->from(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
+                            ->to($validated['email'])
+                            ->replyTo(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
                             ->subject('Speaker Application Received - Young Chanakya X');
                 });
                 \Illuminate\Support\Facades\Log::info('User email sent.');
@@ -231,7 +240,8 @@ class ApplicationController extends Controller
             \Illuminate\Support\Facades\Log::info('Sending admin email...');
             // 2. Email to Admin (use correct file name: sponsor-application)
             Mail::send('emails.sponsor-application', $validated, function ($message) use ($validated) {
-                $message->to('youngchanakya.x@gmail.com')
+                $message->from(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
+                        ->to('youngchanakya.x@gmail.com')
                         ->subject('New Sponsorship Application: ' . $validated['name'])
                         ->replyTo($validated['email'], $validated['name']);
             });
@@ -240,7 +250,9 @@ class ApplicationController extends Controller
             \Illuminate\Support\Facades\Log::info('Sending user email to: '.$validated['email']);
             // 3. Email to User (use correct file name: sponsor-confirmation)
             Mail::send('emails.sponsor-confirmation', $validated, function ($message) use ($validated) {
-                $message->to($validated['email'])
+                $message->from(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
+                        ->to($validated['email'])
+                        ->replyTo(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
                         ->subject('Sponsorship Application Received - Young Chanakya X');
             });
             \Illuminate\Support\Facades\Log::info('User email sent.');
@@ -287,7 +299,8 @@ class ApplicationController extends Controller
             unset($mailData['message']);
 
             Mail::send('emails.contact-inquiry', $mailData, function ($message) use ($validated) {
-                $message->to('youngchanakya.x@gmail.com')
+                $message->from(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
+                        ->to('youngchanakya.x@gmail.com')
                         ->subject('New Contact Inquiry: ' . ($validated['subject'] ?? 'General Inquiry'))
                         ->replyTo($validated['email'], $validated['name']);
             });
@@ -296,7 +309,9 @@ class ApplicationController extends Controller
             // 3. Email to User (Confirmation)
             \Illuminate\Support\Facades\Log::info('Sending user confirmation email to: ' . $validated['email']);
             Mail::send('emails.contact-confirmation', $mailData, function ($message) use ($validated) {
-                $message->to($validated['email'])
+                $message->from(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
+                        ->to($validated['email'])
+                        ->replyTo(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
                         ->subject('Contact Inquiry Received - Young Chanakya X');
             });
             \Illuminate\Support\Facades\Log::info('User email sent.');
@@ -340,7 +355,8 @@ class ApplicationController extends Controller
 
             // 1. Email to Admin
             Mail::send('emails.event-rsvp-admin', $validated, function ($message) use ($validated) {
-                $message->to('youngchanakya.x@gmail.com')
+                $message->from(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
+                        ->to('youngchanakya.x@gmail.com')
                         ->subject('New Event Application: ' . $validated['event_title'])
                         ->replyTo($validated['email'], $validated['full_name']);
             });
@@ -349,7 +365,9 @@ class ApplicationController extends Controller
             // 2. Email to User (Confirmation)
             \Illuminate\Support\Facades\Log::info('Sending user confirmation email to: ' . $validated['email']);
             Mail::send('emails.event-rsvp-user', $validated, function ($message) use ($validated) {
-                $message->to($validated['email'])   
+                $message->from(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
+                        ->to($validated['email'])   
+                        ->replyTo(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
                         ->subject('Thank You for Registering: ' . $validated['event_title']);
             });
             \Illuminate\Support\Facades\Log::info('User email sent.');
@@ -472,7 +490,8 @@ class ApplicationController extends Controller
             // Email to Admin
             Mail::send('emails.job-application-admin', $emailData, function ($message) use ($validated, $jobTitle) {
                 $categoryLabel = ucfirst($validated['category']);
-                $message->to('youngchanakya.x@gmail.com')
+                $message->from(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
+                        ->to('youngchanakya.x@gmail.com')
                         ->subject('New Job Application: ' . $jobTitle . ' - Young Chanakya X ' . $categoryLabel . ' (' . $validated['full_name'] . ')')
                         ->replyTo($validated['email'], $validated['full_name']);
             });
@@ -482,7 +501,9 @@ class ApplicationController extends Controller
             // Email to User (Confirmation)
             Mail::send('emails.job-application-user', $emailData, function ($message) use ($validated, $jobTitle) {
                 $categoryLabel = ucfirst($validated['category']);
-                $message->to($validated['email'])
+                $message->from(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
+                        ->to($validated['email'])
+                        ->replyTo(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
                         ->subject('Thank You for Applying: ' . $jobTitle . ' - Young Chanakya X ' . $categoryLabel);
             });
             \Illuminate\Support\Facades\Log::info('User email sent.');
@@ -540,14 +561,17 @@ class ApplicationController extends Controller
 
             // 2. Notify Admin
             Mail::send('emails.feature-guest-application', $validated, function ($message) use ($validated) {
-                $message->to('youngchanakya.x@gmail.com')
+                $message->from(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
+                        ->to('youngchanakya.x@gmail.com')
                         ->subject('New Podcast Feature Application — ' . $validated['full_name'])
                         ->replyTo($validated['email'], $validated['full_name']);
             });
 
             // 3. Confirm to User
             Mail::send('emails.feature-guest-confirmation', $validated, function ($message) use ($validated) {
-                $message->to($validated['email'])
+                $message->from(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
+                        ->to($validated['email'])
+                        ->replyTo(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
                         ->subject('Application Received — YCX Podcast Feature');
             });
             \Illuminate\Support\Facades\Log::info('--- FEATURE GUEST SUBMISSION END ---');
@@ -598,14 +622,17 @@ class ApplicationController extends Controller
 
             // 2. Notify Admin
             Mail::send('emails.story-submission-admin', $validated, function ($message) use ($validated) {
-                $message->to('youngchanakya.x@gmail.com')
+                $message->from(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
+                        ->to('youngchanakya.x@gmail.com')
                         ->subject('New Share Your Story Application: ' . $validated['talk_title'] . ' by ' . $validated['full_name'])
                         ->replyTo($validated['email'], $validated['full_name']);
             });
 
             // 3. Confirm to User
             Mail::send('emails.story-submission-confirmation', $validated, function ($message) use ($validated) {
-                $message->to($validated['email'])
+                $message->from(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
+                        ->to($validated['email'])
+                        ->replyTo(config('mail.from.address', 'youngchanakya.x@gmail.com'), config('mail.from.name', 'Young Chanakya X'))
                         ->subject('Share Your Story Application Received - Young Chanakya X');
             });
             \Illuminate\Support\Facades\Log::info('--- STORY SUBMISSION END ---');

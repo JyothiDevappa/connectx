@@ -32,7 +32,7 @@ $seo = [
 
   <!-- HERO -->
   <section class="hero">
-    <img src="{{ asset('images/media/internship.png') }}" alt="Interns collaborating around a laptop">
+    <img src="{{ asset('images/media/internship/internship-herobanner.webp') }}" alt="Interns collaborating around a laptop">
     <div class="hero-inner">
       <span class="kicker" style="color:var(--peach);">
         <span style="display:inline-block;width:16px;height:1.5px;background:var(--peach);"></span>
@@ -117,7 +117,7 @@ $seo = [
     <div class="wrap gain-split">
       <div class="gain-visual">
         <div class="gain-photo-main">
-          <img src="{{ asset('images/media/internship/internship - What You will Walk Away With.jpeg') }}" alt="Young professionals collaborating and smiling">
+          <img src="{{ asset('images/media/internship/learning-journey.webp') }}" alt="Young professionals collaborating and smiling">
         </div>
       </div>
       <div class="gain-content">

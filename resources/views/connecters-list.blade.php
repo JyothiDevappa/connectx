@@ -82,7 +82,7 @@ $seo = [
     .authority-hero-section {
         min-height: 80vh;
         background-image: linear-gradient(180deg, rgba(9, 13, 22, 0.7) 0%, #090d16 100%),
-            url('{{ asset("images/media/connecter-list.jpg") }}');
+            url('{{ asset("images/media/connecter/connecter-list-herobanner.webp") }}');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
