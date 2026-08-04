@@ -438,7 +438,7 @@ $seo = [
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
     gap: 56px;
-    align-items: stretch;
+    align-items: center;
   }
 
   .speaker-body .elig-image {
@@ -451,12 +451,19 @@ $seo = [
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
   }
 
   .speaker-body .elig-checklist {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 0;
+    height: 100%;
+  }
+
+  .speaker-body .elig-checklist .tick-list-item:last-child {
+    margin-bottom: 0 !important;
   }
 
   .speaker-body .elig-row {
