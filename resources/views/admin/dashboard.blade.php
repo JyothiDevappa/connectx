@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard — ConnectX YCX</title>
-  <meta name="description" content="Young Chanakya X Admin Dashboard — manage sponsers, partners, speakers, careers and internship submissions.">
+  <meta name="description" content="Young Chanakya X Admin Dashboard — manage sponsors, partners, speakers, careers and internship submissions.">
   <link rel="icon" type="image/png" href="{{ asset('images/fav-icon/icon.png') }}">
   <link rel="shortcut icon" href="{{ asset('images/fav-icon/icon.png') }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,8 +64,8 @@
           <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-connectors">{{ count($connectors) }}</div>
           <div style="font-size:12.5px;font-weight:700;color:var(--text-soft);margin-top:4px;">Connector Applications</div>
         </div>
-        <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px 20px;cursor:pointer;transition:box-shadow .2s;" onclick="switchSection('sponsers')" class="overview-card">
-          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-sponsers">{{ count($sponsers) }}</div>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px 20px;cursor:pointer;transition:box-shadow .2s;" onclick="switchSection('sponsors')" class="overview-card">
+          <div style="font-family:'Manrope',sans-serif;font-size:28px;font-weight:600;color:var(--ink);" id="ov-sponsors">{{ count($sponsors) }}</div>
           <div style="font-size:12.5px;font-weight:700;color:var(--text-soft);margin-top:4px;">Sponsor Applications</div>
         </div>
         <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px 20px;cursor:pointer;transition:box-shadow .2s;" onclick="switchSection('partners')" class="overview-card">
@@ -167,7 +167,7 @@
 
 const DATA = {
 
-  sponsers: @json($sponsers),
+  sponsors: @json($sponsors),
 
   partners: @json($partners),
 
@@ -201,19 +201,19 @@ const SECTION_CONFIG = {
     title: "Dashboard",
     subtitle: "Welcome back, Sangeetha. Here's what's happening today."
   },
-  sponsers: {
+  sponsors: {
     title: "Sponsor Applications",
-    subtitle: "Companies and individuals who applied to sponser Young Chanakya X events.",
+    subtitle: "Companies and individuals who applied to sponsor Young Chanakya X events.",
     statusOptions: ["confirmed","pending","declined"],
     statusLabels: { confirmed:"Confirmed", pending:"Pending", declined:"Declined" },
-    typeField: "sponsership_level",
+    typeField: "sponsorship_level",
     typeValues: ["Platinum","Gold","Silver","Title"],
-    liveApi: "{{ route('admin.api.sponsers') }}",
-    updateApi: "{{ url('/admin/api/sponsers') }}",
+    liveApi: "{{ route('admin.api.sponsors') }}",
+    updateApi: "{{ url('/admin/api/sponsors') }}",
     columns: [
       { key:"person", label:"Applicant" },
       { key:"company", label:"Company" },
-      { key:"sponsership_level", label:"Level" },
+      { key:"sponsorship_level", label:"Level" },
       { key:"submitted", label:"Submitted" },
       { key:"status", label:"Status" },
       { key:"action", label:"" }
@@ -533,14 +533,14 @@ async function updateCounts(){
     console.error("Error loading partners from database", e);
   }
 
-  // Load sponsers dynamically from DB
+  // Load sponsors dynamically from DB
   try {
-    const res = await fetch("{{ route('admin.api.sponsers') }}");
+    const res = await fetch("{{ route('admin.api.sponsors') }}");
     if(res.ok) {
-      DATA.sponsers = await res.json();
+      DATA.sponsors = await res.json();
     }
   } catch(e) {
-    console.error("Error loading sponsers from database", e);
+    console.error("Error loading sponsors from database", e);
   }
 
   // Load posted jobs dynamically from DB
@@ -606,18 +606,18 @@ async function updateCounts(){
     console.error("Error loading posts from database", e);
   }
 
-  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions','posts','categories'].forEach(s => {
+  ['connectors','sponsors','partners','speakers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions','posts','categories'].forEach(s => {
     const el = document.getElementById('sbCount-' + s);
     if(el) el.textContent = DATA[s] ? DATA[s].length : 0;
   });
   // Overview panels
-  ['connectors','sponsers','partners','speakers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions','posts','categories'].forEach(s => {
+  ['connectors','sponsors','partners','speakers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions','posts','categories'].forEach(s => {
     const el = document.getElementById('ov-' + s);
     if(el && DATA[s]) el.textContent = DATA[s].length;
   });
 
   // If currently viewing database sections, refresh to show fetched data
-  if(['connectors','partners','sponsers','careers','internships','posted_jobs','contacts','featured_guests','story_submissions','posts','categories','overview'].includes(currentSection)) {
+  if(['connectors','partners','sponsors','careers','internships','posted_jobs','contacts','featured_guests','story_submissions','posts','categories','overview'].includes(currentSection)) {
     if(currentSection === 'overview') renderOverviewStats();
     else renderTable(currentSection);
   }
@@ -723,9 +723,9 @@ function switchSection(section){
    RENDER OVERVIEW STATS (dashboard summary)
    ===================================================== */
 function renderOverviewStats(){
-  const sections = ['connectors','sponsers','partners','speakers','careers','internships'];
+  const sections = ['connectors','sponsors','partners','speakers','careers','internships'];
   const totalAll = sections.reduce((acc,s) => acc + DATA[s].length, 0);
-  const confirmedAll = ['sponsers','partners','speakers'].reduce((acc,s) => acc + DATA[s].filter(x=>x.status==='confirmed').length, 0) +
+  const confirmedAll = ['sponsors','partners','speakers'].reduce((acc,s) => acc + DATA[s].filter(x=>x.status==='confirmed').length, 0) +
                        DATA['connectors'].filter(x=>x.status==='approved').length;
   const pendingAll = sections.reduce((acc,s) => acc + DATA[s].filter(x=>x.status==='pending'||x.status==='new'||x.status==='review').length, 0);
   const hiredAll = ['careers','internships'].reduce((acc,s) => acc + DATA[s].filter(x=>x.status==='hired').length, 0);
@@ -848,8 +848,8 @@ function renderCell(col, d, section){
       return `<td><div class="cell-primary">${d.name}</div><div class="cell-secondary">${d.email}</div></td>`;
     case 'company':
       return `<td><div class="cell-primary">${d.company||'—'}</div><div class="cell-secondary">${d.designation||''}</div></td>`;
-    case 'sponsership_level':
-      return `<td><span class="badge ${levelBadgeClass(d.sponsership_level)}">${d.sponsership_level}</span></td>`;
+    case 'sponsorship_level':
+      return `<td><span class="badge ${levelBadgeClass(d.sponsorship_level)}">${d.sponsorship_level}</span></td>`;
     case 'partnership_type':
       return `<td><span class="badge ${levelBadgeClass(d.partnership_type)}">${d.partnership_type}</span></td>`;
     case 'designation':
@@ -983,13 +983,13 @@ function renderTable(section){
         this.className = 'status-select ' + statusClass(this.value);
         renderStats(section);
 
-        // If connector/partner/sponser/posted_job/post, save to DB
+        // If connector/partner/sponsor/posted_job/post, save to DB
         if(section === 'connectors') {
           await saveConnectorStatus(idVal, this.value, item.notes);
         } else if(section === 'partners') {
           await savePartnerStatus(idVal, this.value, item.notes);
-        } else if(section === 'sponsers') {
-          await savesponserStatus(idVal, this.value, item.notes);
+        } else if(section === 'sponsors') {
+          await savesponsorStatus(idVal, this.value, item.notes);
         } else if(section === 'posted_jobs') {
           await fetch(`/admin/api/posted-jobs/${idVal}`, {
             method: 'POST',
@@ -1084,12 +1084,12 @@ function openDrawer(section, id){
   let badges  = '';
   let bodyHTML = '';
 
-  if(section === 'sponsers'){
+  if(section === 'sponsors'){
     document.getElementById('dName').textContent = d.name;
     subText = d.email;
-    badges  = `<span class="badge ${levelBadgeClass(d.sponsership_level)}">${d.sponsership_level} sponser</span>
+    badges  = `<span class="badge ${levelBadgeClass(d.sponsorship_level)}">${d.sponsorship_level} sponsor</span>
                <span class="badge badge-review">${d.company}</span>`;
-    bodyHTML = sponserBody(d);
+    bodyHTML = sponsorBody(d);
   } else if(section === 'partners'){
     document.getElementById('dName').textContent = d.name;
     subText = d.email;
@@ -1200,8 +1200,8 @@ function openDrawer(section, id){
             await saveConnectorStatus(id, newStatus, newNotes);
           } else if(section === 'partners') {
             await savePartnerStatus(id, newStatus, newNotes);
-          } else if(section === 'sponsers') {
-            await savesponserStatus(id, newStatus, newNotes);
+          } else if(section === 'sponsors') {
+            await savesponsorStatus(id, newStatus, newNotes);
           } else if(section === 'careers' || section === 'internships') {
             await saveJobApplicationStatus(id, newStatus, newNotes);
           }
@@ -1243,9 +1243,9 @@ async function saveConnectorStatus(id, status, notes) {
   }
 }
 
-async function savesponserStatus(id, status, notes) {
+async function savesponsorStatus(id, status, notes) {
   try {
-    await fetch(`/admin/api/sponsers/${id}`, {
+    await fetch(`/admin/api/sponsors/${id}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -1298,8 +1298,8 @@ function adminSection(section, statusOptions, statusLabels, currentStatus){
   `;
 }
 
-function sponserBody(d){
-  const cfg = SECTION_CONFIG['sponsers'];
+function sponsorBody(d){
+  const cfg = SECTION_CONFIG['sponsors'];
   return `
     <div class="dsection">
       <h4>Contact Details</h4>
@@ -1314,13 +1314,13 @@ function sponserBody(d){
       </div>
     </div>
     <div class="dsection">
-      <h4>sponsership Details</h4>
+      <h4>sponsorship Details</h4>
       <div class="dgrid">
-        <div class="dfield"><span class="fl">sponsership Level</span><span class="fv"><span class="badge ${levelBadgeClass(d.sponsership_level)}">${d.sponsership_level}</span></span></div>
+        <div class="dfield"><span class="fl">sponsorship Level</span><span class="fv"><span class="badge ${levelBadgeClass(d.sponsorship_level)}">${d.sponsorship_level}</span></span></div>
         <div class="dfield"><span class="fl">Submitted On</span><span class="fv">${fmtDate(d.submitted)}</span></div>
       </div>
     </div>
-    ${adminSection('sponsers', cfg.statusOptions, cfg.statusLabels, d.status)}
+    ${adminSection('sponsors', cfg.statusOptions, cfg.statusLabels, d.status)}
   `;
 }
 

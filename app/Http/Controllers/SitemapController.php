@@ -41,7 +41,7 @@ class SitemapController extends Controller
             'priority'   => '0.9',
         ],
         [
-            'url'        => '/become-a-sponser',
+            'url'        => '/become-a-sponsor',
             'changefreq' => 'monthly',
             'priority'   => '0.8',
         ],

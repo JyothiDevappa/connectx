@@ -834,13 +834,13 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
     <div class="engagement-card">
       <div class="engagement-content">
         <div class="engagement-header">
-          <h3>Become a Sponsor</em></h3>
-          <a href="/become-a-speaker" class="btn-hero-primary">Join as Sponsor</a>
+          <h3>Become a Sponsor</h3>
+          <a href="/become-a-sponsor" class="btn-hero-primary">Join as Sponsor</a>
         </div>
         <p>Partner with YCX as a sponsor to connect your brand with inspiring conversations, influential voices, and a community that values innovation and collaboration.</p>
       </div>
       <div class="engagement-photo">
-        <img src="{{ asset('images/media/index-page/sponsor.webp') }}" alt="Become a Sponor">
+        <img src="{{ asset('images/media/index-page/sponsor.webp') }}" alt="Become a Sponsor">
       </div>
     </div>
   </div>
@@ -1219,7 +1219,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
     <div class="section-head">
         <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Event Listing</div>
         <h2 class="sec-title rv" style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Curated Events for Every Creator Journey</h2>
-        <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-bottom: 0; margin-left: auto; margin-right: auto; line-height: 1.6;">Explore upcoming panels, awards gala ceremonies, regional conferences, and exclusive brand sponsership opportunities.</p>
+        <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-bottom: 0; margin-left: auto; margin-right: auto; line-height: 1.6;">Explore upcoming panels, awards gala ceremonies, regional conferences, and exclusive brand sponsorship opportunities.</p>
     </div>
 
     <div class="position-relative">
@@ -1239,7 +1239,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
                     [
                         'category' => 'Roundtables',
                         'title' => 'Creator Connect Sessions: Multi-Platform Monetization',
-                        'desc' => 'Unlocking premium brand sponserships, media kit architectures, and co-branded content monetization loops.',
+                        'desc' => 'Unlocking premium brand sponsorships, media kit architectures, and co-branded content monetization loops.',
                         'date' => 'JUL 24, 2026',
                         'location' => 'EPISODE 42',
                         'host' => 'Rohan Sharma',
@@ -1328,13 +1328,13 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
 </div>
 </section> --}}
   
-<!-- COMMUNITY & sponser -->
+<!-- COMMUNITY & sponsor -->
 {{-- <section class="community-sec" id="community">
     <div class="section-container">
 
         <div class="section-head">
             <div class="eyebrow rv" style="font-size: 10px; font-weight: 700; letter-spacing: 3px;">Engage & Support</div>
-            <h2 class="sec-title rv" style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Partner & sponser</h2>
+            <h2 class="sec-title rv" style="font-size: clamp(34px, 4vw, 56px); font-weight: 900; line-height: 1.15;">Partner & sponsor</h2>
             <p class="sec-desc rv" style="margin-top: 16px; max-width: 600px; margin-bottom: 0; margin-left: auto; margin-right: auto; line-height: 1.6;">Join hands with Young Chanakya X to build the premier ecosystem for C-suite leaders, creators, and innovators. Choose how you want to make an impact.</p>
         </div>
 
@@ -1355,17 +1355,17 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
                 </div>
             </article>
 
-            <!-- Card 2: sponser Opportunities -->
+            <!-- Card 2: sponsor Opportunities -->
             <article class="com-card creative-right rv" style="transition-delay:0.08s">
                 <div class="card-meta">
                     <span class="card-num" style="font-size: 2.2rem; margin-bottom: 20px;"><i class="bi bi-briefcase-fill"></i></span>
-                    <h3>Become a sponser</h3>
-                    <p style="margin-bottom: 0;">Elevate your brand presence by sponsering our high-quality recording lounges, podcast seasons, and regional meetups.</p>
-                    <a href="/become-a-sponser" class="com-card-btn btn-orange">Become a sponser</a>
+                    <h3>Become a sponsor</h3>
+                    <p style="margin-bottom: 0;">Elevate your brand presence by sponsoring our high-quality recording lounges, podcast seasons, and regional meetups.</p>
+                    <a href="/become-a-sponsor" class="com-card-btn btn-orange">Become a sponsor</a>
                 </div>
                 <div class="card-visual">
                     <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80" alt="sponsership">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80" alt="sponsorship">
                     </div>
                 </div>
             </article>
@@ -1407,7 +1407,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
             <img src="{{ asset('images/media/index-page/business-leaders.webp') }}" alt="Business Leaders — Young Chanakya X Partner Category" loading="lazy">
             <div class="p-card-ov">
                 <div class="p-name">Business Leaders</div>
-                <div class="p-desc">Guide the ecosystem, sponser programs, and share executive insights.</div>
+                <div class="p-desc">Guide the ecosystem, sponsor programs, and share executive insights.</div>
             </div>
         </div>
         <div class="p-card rv" style="transition-delay:0.28s">

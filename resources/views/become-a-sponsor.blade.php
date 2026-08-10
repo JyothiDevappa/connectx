@@ -20,26 +20,26 @@ $seo = [
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Become a Sponsor | Young Chanakya X",
-    "url": "https://connectx.youngchanakya.com/become-a-sponser",
+    "url": "https://connectx.youngchanakya.com/become-a-sponsor",
     "description": "Sponsor Young Chanakya X and showcase your brand through events, podcasts, networking, workshops, and community initiatives with meaningful audience engagement.",
     "provider": {
         "@type": "Organization",
         "name": "Young Chanakya X",
         "url": "https://connectx.youngchanakya.com/"
     },
-    "serviceType": "Event & Creator Ecosystem sponsership",
+    "serviceType": "Event & Creator Ecosystem sponsorship",
     "areaServed": {
         "@type": "Country",
         "name": "India"
     },
     "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "sponsership Packages",
+        "name": "sponsorship Packages",
         "itemListElement": [
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Title sponsership"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Event sponsership"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Community sponsership"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Creator Ecosystem sponsership"}}
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Title sponsorship"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Event sponsorship"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Community sponsorship"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Creator Ecosystem sponsorship"}}
         ]
     }
 }
@@ -97,10 +97,10 @@ $seo = [
         }
 
         /* =========================================
-        sponser SECTION
+        sponsor SECTION
         ========================================= */
 
-        .sponser-contact-section{
+        .sponsor-contact-section{
             position: relative;
             padding: 180px 0 100px;
             background: #f8f6f2;
@@ -108,22 +108,22 @@ $seo = [
         }
 
         @media (max-width: 991px){
-            .sponser-contact-section{
+            .sponsor-contact-section{
                 padding: 120px 0 70px;
             }
         }
         @media (max-width: 767px){
-            .sponser-contact-section{
+            .sponsor-contact-section{
                 padding: 100px 0 60px;
             }
         }
         @media (max-width: 480px){
-            .sponser-contact-section{
+            .sponsor-contact-section{
                 padding: 90px 0 50px;
             }
         }
 
-        .sponser-content h1{
+        .sponsor-content h1{
             font-size: 52px;
             line-height: 1.15em;
             font-weight: 700;
@@ -132,7 +132,7 @@ $seo = [
             letter-spacing: -1px;
         }
 
-        .sponser-content p{
+        .sponsor-content p{
             font-size: 16px;
             line-height: 1.9em;
             color: #555;
@@ -140,25 +140,25 @@ $seo = [
         }
 
         @media (max-width: 991px){
-            .sponser-content{
+            .sponsor-content{
                 margin-bottom: 40px;
             }
 
-            .sponser-content h1{
+            .sponsor-content h1{
                 font-size: 38px;
                 line-height: 1.25em;
             }
         }
 
         @media (max-width: 576px){
-            .sponser-content h1{
+            .sponsor-content h1{
                 font-size: 30px;
             }
         }
 
         /* FORM BOX */
 
-        .sponser-form-box{
+        .sponsor-form-box{
             background: #fff;
             padding: 40px;
             border-radius: 20px;
@@ -167,15 +167,15 @@ $seo = [
         }
 
         @media (max-width: 576px){
-            .sponser-form-box{
+            .sponsor-form-box{
                 padding: 25px;
             }
         }
 
         /* INPUTS */
 
-        .sponser-form-box .form-control,
-        .sponser-form-box select{
+        .sponsor-form-box .form-control,
+        .sponsor-form-box select{
             height: 58px;
             border: 1px solid #e5e5e5;
             border-radius: 12px;
@@ -187,7 +187,7 @@ $seo = [
             background: #fff;
         }
 
-        .sponser-form-box label {
+        .sponsor-form-box label {
             display: block;
             font-size: 14px;
             font-weight: 600;
@@ -196,24 +196,24 @@ $seo = [
             text-align: left;
         }
 
-        .sponser-form-box .form-control::placeholder {
+        .sponsor-form-box .form-control::placeholder {
             color: #888888 !important;
         }
 
-        .sponser-form-box textarea.form-control{
+        .sponsor-form-box textarea.form-control{
             height: 130px;
             padding-top: 15px;
         }
 
-        .sponser-form-box .form-control:focus,
-        .sponser-form-box select:focus{
+        .sponsor-form-box .form-control:focus,
+        .sponsor-form-box select:focus{
             border-color: #0c3a30;
             box-shadow: 0 0 0 3px rgba(12,58,48,0.12);
         }
 
         /* BUTTON */
 
-        .btn-sponser-submit{
+        .btn-sponsor-submit{
             width: 100%;
             height: 58px;
             border: none;
@@ -225,14 +225,14 @@ $seo = [
             transition: all .3s ease;
         }
 
-        .btn-sponser-submit:hover{
+        .btn-sponsor-submit:hover{
             background: #071f1a;
             color: #fff;
         }
 
         /* OPTIONAL SHAPE */
 
-        .sponser-contact-section::before{
+        .sponsor-contact-section::before{
             content: "";
             position: absolute;
             width: 500px;
@@ -248,16 +248,16 @@ $seo = [
 
 
 
-        /* sponser section */
+        /* sponsor section */
         /* ======================
-        sponser CARDS
+        sponsor CARDS
         ====================== */
 
-        .sponser-category-section{
+        .sponsor-category-section{
             background:#fff;
         }
 
-        .sponser-card{
+        .sponsor-card{
             background:#ffffff;
             padding:40px 30px;
             border-radius:25px;
@@ -270,7 +270,7 @@ $seo = [
 
         /* removed hover */
 
-        .sponser-card .icon{
+        .sponsor-card .icon{
             width:75px;
             height:75px;
 
@@ -289,26 +289,26 @@ $seo = [
             margin-bottom:25px;
         }
 
-        .sponser-card h4{
+        .sponsor-card h4{
             color:#000;
             font-size:24px;
             font-weight:700;
             margin-bottom:15px;
         }
 
-        .sponser-card p{
+        .sponsor-card p{
             color:#555;
             line-height:1.8;
             margin-bottom:20px;
         }
 
-        .sponser-card ul{
+        .sponsor-card ul{
             padding:0;
             margin:0;
             list-style:none;
         }
 
-        .sponser-card ul li{
+        .sponsor-card ul li{
             position:relative;
 
             padding-left:30px;
@@ -320,7 +320,7 @@ $seo = [
             font-size:15px;
         }
 
-        .sponser-card ul li:before{
+        .sponsor-card ul li:before{
             content:"✓";
 
             position:absolute;
@@ -348,11 +348,11 @@ $seo = [
 
         /* CTA BUTTON */
 
-        .sponser-cta{
+        .sponsor-cta{
             margin-top:35px;
         }
 
-        .btn-become-sponser{
+        .btn-become-sponsor{
             display:inline-flex;
             align-items:center;
             justify-content:center;
@@ -375,7 +375,7 @@ $seo = [
             border:1px solid #19352d;
         }
 
-        .btn-become-sponser:hover{
+        .btn-become-sponsor:hover{
             background:transparent;
 
             color:#ffd2b1;
@@ -669,7 +669,7 @@ $seo = [
             }
         }
 
-        /* *4. sponsership Categories* */
+        /* *4. sponsorship Categories* */
 
         .title-style-one .sc-title{
             color:#000;
@@ -799,56 +799,56 @@ $seo = [
 
 
         /* ==========================================
-        BECOME A sponser — MOBILE RESPONSIVE
+        BECOME A sponsor — MOBILE RESPONSIVE
         Breakpoints: 991px (tablet), 767px (mobile), 480px (small mobile)
         ========================================== */
 
-        /* ---- Hero / sponser Contact Section ---- */
+        /* ---- Hero / sponsor Contact Section ---- */
         @media (max-width: 991px) {
-            .sponser-contact-section {
+            .sponsor-contact-section {
                 padding: 130px 0 70px;
             }
-            .sponser-content {
+            .sponsor-content {
                 margin-bottom: 40px;
                 text-align: center;
             }
-            .sponser-content h1 {
+            .sponsor-content h1 {
                 font-size: 36px;
             }
-            .sponser-cta {
+            .sponsor-cta {
                 display: flex;
                 justify-content: center;
             }
         }
 
         @media (max-width: 767px) {
-            .sponser-contact-section {
+            .sponsor-contact-section {
                 padding: 110px 0 60px;
             }
-            .sponser-content h1 {
+            .sponsor-content h1 {
                 font-size: 28px;
             }
-            .sponser-form-box {
+            .sponsor-form-box {
                 padding: 28px 20px;
             }
         }
 
         @media (max-width: 480px) {
-            .sponser-contact-section {
+            .sponsor-contact-section {
                 padding: 100px 0 50px;
             }
-            .sponser-content h1 {
+            .sponsor-content h1 {
                 font-size: 24px;
                 letter-spacing: -0.5px;
             }
-            .sponser-form-box {
+            .sponsor-form-box {
                 padding: 20px 14px;
             }
-            .btn-sponser-submit {
+            .btn-sponsor-submit {
                 height: 52px;
                 font-size: 15px;
             }
-            .btn-become-sponser {
+            .btn-become-sponsor {
                 padding: 13px 24px;
                 font-size: 14px;
             }
@@ -951,15 +951,15 @@ $seo = [
             }
         }
 
-        /* ---- sponsership Categories Section ---- */
+        /* ---- sponsorship Categories Section ---- */
         @media (max-width: 991px) {
-            .sponser-category-section.pt-120 {
+            .sponsor-category-section.pt-120 {
                 padding-top: 70px;
             }
-            .sponser-category-section.pb-120 {
+            .sponsor-category-section.pb-120 {
                 padding-bottom: 70px;
             }
-            .sponser-card {
+            .sponsor-card {
                 padding: 30px 24px;
             }
             .title-style-one .main-title {
@@ -972,13 +972,13 @@ $seo = [
                 font-size: 26px;
                 letter-spacing: -0.5px;
             }
-            .sponser-card {
+            .sponsor-card {
                 padding: 24px 20px;
             }
-            .sponser-card h4 {
+            .sponsor-card h4 {
                 font-size: 20px;
             }
-            .sponser-card .icon {
+            .sponsor-card .icon {
                 width: 60px;
                 height: 60px;
                 font-size: 24px;
@@ -990,10 +990,10 @@ $seo = [
             .title-style-one .main-title {
                 font-size: 22px;
             }
-            .sponser-card {
+            .sponsor-card {
                 padding: 20px 16px;
             }
-            .sponser-card h4 {
+            .sponsor-card h4 {
                 font-size: 18px;
             }
         }
@@ -1149,11 +1149,11 @@ $seo = [
                 </ul>
 
                 <div class="about-hero-buttons">
-                    <a href="#sponsership-categories" class="about-btn-2">View Opportunities</a>
+                    <a href="#sponsorship-categories" class="about-btn-2">View Opportunities</a>
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="sponser-form-box" id="sponsor-form">
+                <div class="sponsor-form-box" id="sponsor-form">
 
                     @if (session('error') || $errors->any())
                         <div class="alert alert-danger mb-4" style="font-weight: 500;">
@@ -1166,16 +1166,16 @@ $seo = [
                         </div>
                     @endif
 
-                    <form action="{{ route('sponser.apply') }}" method="POST">
+                    <form action="{{ route('sponsor.apply') }}" method="POST">
                         @csrf
 
                         <div class="row">
 
                             <!-- 1. Full Name and Phone number -->
                             <div class="col-md-6 mb-3">
-                                <label for="sponser-name">Full Name <span class="text-danger">*</span></label>
+                                <label for="sponsor-name">Full Name <span class="text-danger">*</span></label>
                                 <input type="text"
-                                       id="sponser-name"
+                                       id="sponsor-name"
                                        class="form-control"
                                        name="name"
                                        value="{{ old('name') }}"
@@ -1186,9 +1186,9 @@ $seo = [
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="sponser-phone">Phone / WhatsApp <span class="text-danger">*</span></label>
+                                <label for="sponsor-phone">Phone / WhatsApp <span class="text-danger">*</span></label>
                                 <input type="tel"
-                                       id="sponser-phone"
+                                       id="sponsor-phone"
                                        class="form-control"
                                        name="phone"
                                        value="{{ old('phone') }}"
@@ -1200,9 +1200,9 @@ $seo = [
 
                             <!-- 2. Email -->
                             <div class="col-12 mb-3">
-                                <label for="sponser-email">Email Address <span class="text-danger">*</span></label>
+                                <label for="sponsor-email">Email Address <span class="text-danger">*</span></label>
                                 <input type="email"
-                                       id="sponser-email"
+                                       id="sponsor-email"
                                        class="form-control"
                                        name="email"
                                        value="{{ old('email') }}"
@@ -1214,9 +1214,9 @@ $seo = [
 
                             <!-- 3. Company Name, Designation -->
                             <div class="col-md-6 mb-3">
-                                <label for="sponser-company">Company Name <span class="text-danger">*</span></label>
+                                <label for="sponsor-company">Company Name <span class="text-danger">*</span></label>
                                 <input type="text"
-                                       id="sponser-company"
+                                       id="sponsor-company"
                                        class="form-control"
                                        name="company"
                                        value="{{ old('company') }}"
@@ -1227,9 +1227,9 @@ $seo = [
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="sponser-designation">Designation / Role <span class="text-danger">*</span></label>
+                                <label for="sponsor-designation">Designation / Role <span class="text-danger">*</span></label>
                                 <input type="text"
-                                       id="sponser-designation"
+                                       id="sponsor-designation"
                                        class="form-control"
                                        name="designation"
                                        value="{{ old('designation') }}"
@@ -1241,9 +1241,9 @@ $seo = [
 
                             <!-- 4. LinkedIn and website url -->
                             <div class="col-md-6 mb-3">
-                                <label for="sponser-linkedin">Social Media Profile <span class="text-danger">*</span></label>
+                                <label for="sponsor-linkedin">Social Media Profile <span class="text-danger">*</span></label>
                                 <input type="url"
-                                       id="sponser-linkedin"
+                                       id="sponsor-linkedin"
                                        class="form-control"
                                        name="linkedin"
                                        value="{{ old('linkedin') }}"
@@ -1254,9 +1254,9 @@ $seo = [
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="sponser-website">Website URL (Optional)</label>
+                                <label for="sponsor-website">Website URL (Optional)</label>
                                 <input type="url"
-                                       id="sponser-website"
+                                       id="sponsor-website"
                                        class="form-control"
                                        name="website"
                                        value="{{ old('website') }}"
@@ -1266,24 +1266,24 @@ $seo = [
                                 @enderror
                             </div>
 
-                            <!-- 5. sponser Type -->
+                            <!-- 5. sponsor Type -->
                             <div class="col-12 mb-4">
-                                <label for="sponser-level">Sponsor Type <span class="text-danger">*</span></label>
-                                <select class="form-control form-select" id="sponser-level" name="sponsership_level" required>
-                                    <option value="" disabled {{ old('sponsership_level') ? '' : 'selected' }}>
-                                        Select sponser Type
+                                <label for="sponsor-level">Sponsor Type <span class="text-danger">*</span></label>
+                                <select class="form-control form-select" id="sponsor-level" name="sponsorship_level" required>
+                                    <option value="" disabled {{ old('sponsorship_level') ? '' : 'selected' }}>
+                                        Select sponsor Type
                                     </option>
                                     @foreach(['Title Sponsor', 'Powered By Sponsor', 'Co-Sponsor', 'Platinum Sponsor', 'Gold Sponsor', 'Silver Sponsor', 'Ticket Sponsor', 'Beverage Sponsor', 'Podcast Sponsor'] as $type)
-                                        <option value="{{ $type }}" {{ old('sponsership_level') == $type ? 'selected' : '' }}>{{ $type }}</option>
+                                        <option value="{{ $type }}" {{ old('sponsorship_level') == $type ? 'selected' : '' }}>{{ $type }}</option>
                                     @endforeach
                                 </select>
-                                @error('sponsership_level')
+                                @error('sponsorship_level')
                                     <div class="text-danger small mt-1" style="font-size: 0.75rem; font-weight: 600;">{{ $message }}</div>
                                 @enderror
                             </div>
 
                             <div class="col-12">
-                                <button type="submit" class="btn-sponser-submit">
+                                <button type="submit" class="btn-sponsor-submit">
                                     Submit
                                 </button>
                             </div>
@@ -1299,7 +1299,7 @@ $seo = [
 
 
 <style>
-  /* TIERS UI FROM sponser PAGE */
+  /* TIERS UI FROM sponsor PAGE */
   .tiers-section { max-width: 1300px; margin: 0 auto; padding: 100px 5vw; }
   .tiers-header { text-align: center; margin-bottom: 56px; }
   .tiers-header .section-title { max-width: 600px; margin: 0 auto 16px; }
@@ -1349,7 +1349,7 @@ $seo = [
   }
 </style>
 
-<section class="tiers-section position-relative pt-120 pb-120" id="sponsership-categories">
+<section class="tiers-section position-relative pt-120 pb-120" id="sponsorship-categories">
   <div class="container">
     <div class="section-head text-center" style="margin-bottom: 50px;">
         <div class="eyebrow rv" style="color: #0c3a30; font-size: 10px; font-weight: 700; letter-spacing: 3px;">Young Chanakya X</div>
@@ -1362,7 +1362,7 @@ $seo = [
       <div class="tier-card featured">
         <div class="tier-badge">Flagship</div>
         <div class="tier-name">Top Tier</div>
-        <div class="tier-title">Title sponser</div>
+        <div class="tier-title">Title sponsor</div>
         <div class="tier-tagline">Primary brand visibility across major ConnectX initiatives</div>
         <ul class="tier-list collapsed">
           <li>Naming rights across flagship events and properties</li>
@@ -1383,7 +1383,7 @@ $seo = [
       <!-- Card 2 -->
       <div class="tier-card">
         <div class="tier-name">Secondary Tier</div>
-        <div class="tier-title">Powered By sponser</div>
+        <div class="tier-title">Powered By sponsor</div>
         <div class="tier-tagline">Secondary headline branding with strong ecosystem presence</div>
         <ul class="tier-list collapsed">
           <li>"Powered By" branding across key initiatives</li>
@@ -1404,11 +1404,11 @@ $seo = [
       <!-- Card 3 -->
       <div class="tier-card">
         <div class="tier-name">Shared Tier</div>
-        <div class="tier-title">Co-sponser</div>
+        <div class="tier-title">Co-sponsor</div>
         <div class="tier-tagline">Supporting partner across shared initiatives</div>
         <ul class="tier-list collapsed">
           <li>Shared branding across events and activities</li>
-          <li>Logo placement alongside other sponsers</li>
+          <li>Logo placement alongside other sponsors</li>
           <li>Participation in collaborative campaigns</li>
           <li>Visibility in selected content formats</li>
           <li>Access to networking opportunities</li>
@@ -1427,7 +1427,7 @@ $seo = [
       <!-- Card 4 -->
       <div class="tier-card">
         <div class="tier-name">Premium Tier</div>
-        <div class="tier-title">Platinum sponser</div>
+        <div class="tier-title">Platinum sponsor</div>
         <div class="tier-tagline">High-level presence across multiple formats and touchpoints</div>
         <ul class="tier-list collapsed">
           <li>High-visibility branding across events and content</li>
@@ -1448,7 +1448,7 @@ $seo = [
       <!-- Card 5 -->
       <div class="tier-card">
         <div class="tier-name">Mid Tier</div>
-        <div class="tier-title">Gold sponser</div>
+        <div class="tier-title">Gold sponsor</div>
         <div class="tier-tagline">Strong visibility in selected events and content formats</div>
         <ul class="tier-list collapsed">
           <li>Branding across selected events and sessions</li>
@@ -1469,7 +1469,7 @@ $seo = [
       <!-- Card 6 -->
       <div class="tier-card">
         <div class="tier-name">Entry Tier</div>
-        <div class="tier-title">Silver sponser</div>
+        <div class="tier-title">Silver sponsor</div>
         <div class="tier-tagline">Focused exposure in specific programs or segments</div>
         <ul class="tier-list collapsed">
           <li>Branding in selected programs or sessions</li>
@@ -1682,7 +1682,7 @@ WHY CONNECT WITH CONNECTX
                     </div>
 
                     <a href="#sponsor-form" class="tier-btn-primary">
-                        Explore sponsership Packages
+                        Explore sponsorship Packages
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>

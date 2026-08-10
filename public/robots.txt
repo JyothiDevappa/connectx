@@ -8,7 +8,7 @@ User-agent: *
 Allow: /
 Allow: /about
 Allow: /become-a-partner
-Allow: /become-a-sponser
+Allow: /become-a-sponsor
 Allow: /connecters-list
 Allow: /events
 Allow: /contact

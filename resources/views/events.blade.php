@@ -440,7 +440,7 @@ $seo = [
         [
             'category' => 'Connect',
             'title' => 'Creator Connect Sessions: Multi-Platform Monetization',
-            'desc' => 'Unlocking premium brand sponserships, media kit architectures, and co-branded content monetization loops.',
+            'desc' => 'Unlocking premium brand sponsorships, media kit architectures, and co-branded content monetization loops.',
             'date' => 'JUL 24, 2026',
             'location' => 'EPISODE 42',
             'host' => 'Rohan Sharma',
@@ -495,7 +495,7 @@ $seo = [
             <div class="col-xl-8 col-lg-10">
                 
                 <ul class="style-none d-flex align-items-center gap-2 p-0 mb-4 text-uppercase tracking-wider" style="font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; list-style: none;">
-                    <li><a href="#" class="text-white opacity-60 text-decoration-none hover-opacity-100">Home</a></li>
+                    <li><a href="{{ url('/') }}" class="text-white opacity-60 text-decoration-none hover-opacity-100">Home</a></li>
                     <li class="text-white opacity-40">/</li>
                     <li class="text-white" style="color: #ffd2b1 !important;">Young Chanakya X Sessions</li>
                 </ul>
@@ -515,13 +515,13 @@ $seo = [
             Browse Upcoming Events
         </span>
         <div class="custom-pill-nav">
-            <a href="#" class="nav-link-item filter-btn active" data-filter="all">All</a>
-            <a href="#" class="nav-link-item filter-btn" data-filter="spotlight">Spotlight</a>
-            <a href="#" class="nav-link-item filter-btn" data-filter="connect">Connect</a>
-            <a href="#" class="nav-link-item filter-btn" data-filter="leadership">Leadership</a>
-            <a href="#" class="nav-link-item filter-btn" data-filter="mentor">Mentor</a>
-            <a href="#" class="nav-link-item filter-btn" data-filter="fireside">Fireside</a>
-            <a href="#" class="nav-link-item filter-btn" data-filter="ceo">CEO</a>
+            <a href="javascript:void(0)" class="nav-link-item filter-btn active" data-filter="all">All</a>
+            <a href="javascript:void(0)" class="nav-link-item filter-btn" data-filter="spotlight">Spotlight</a>
+            <a href="javascript:void(0)" class="nav-link-item filter-btn" data-filter="connect">Connect</a>
+            <a href="javascript:void(0)" class="nav-link-item filter-btn" data-filter="leadership">Leadership</a>
+            <a href="javascript:void(0)" class="nav-link-item filter-btn" data-filter="mentor">Mentor</a>
+            <a href="javascript:void(0)" class="nav-link-item filter-btn" data-filter="fireside">Fireside</a>
+            <a href="javascript:void(0)" class="nav-link-item filter-btn" data-filter="ceo">CEO</a>
         </div>
     </div>
 </div>

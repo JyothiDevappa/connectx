@@ -445,9 +445,8 @@ $seo = [
                                 </button>
                             </div>
                         </div>
-                    </form>
-                </div>
-            </div> -->
+            </div>
+        </div>
 
 
 
@@ -509,7 +508,7 @@ $seo = [
                             <div class="d-flex flex-wrap gap-2">
                                 @php $biz = ['Startup Founders', 'Women Entrepreneurs', 'Business Strategists', 'Family Business Owners', 'MSME Leaders', 'Franchisors & Consultants', 'D2C Brand Founders', 'Retail & E-commerce Leaders', 'Export-Import Specialists', 'Industrialists', 'Manufacturing Innovators', 'FMCG Leaders', 'Corporate CXOs', 'Billionaires', 'Business Coaches', 'Entrepreneurs in Residence']; @endphp
                                 @foreach($biz as $index => $item)
-                                <a href="#" class="connector-node-pill">{{ $item }}</a>
+                                <a href="javascript:void(0)" class="connector-node-pill">{{ $item }}</a>
                                 @endforeach
                             </div>
                         </div>
@@ -536,7 +535,7 @@ $seo = [
                             <div class="d-flex flex-wrap gap-2">
                                 @php $tech = ['Technology Innovators', 'AI & Data Science Experts', 'Cybersecurity Specialists', 'Blockchain & Web3 Founders', 'FinTech Founders', 'SaaS Entrepreneurs', 'HealthTech Innovators', 'EdTech Founders', 'AgriTech Leaders', 'DeepTech Researchers', 'Product Managers', 'Robotics & Automation Experts', 'IoT Innovators']; @endphp
                                 @foreach($tech as $index => $item)
-                                <a href="#" class="connector-node-pill">{{ $item }}</a>
+                                <a href="javascript:void(0)" class="connector-node-pill">{{ $item }}</a>
                                 @endforeach
                             </div>
                         </div>
@@ -565,7 +564,7 @@ $seo = [
                             <div class="d-flex flex-wrap gap-2">
                                 @php $fin = ['Investors & Venture Capitalists', 'Angel Investors', 'Wealth Managers', 'Chartered Accountants', 'Taxation Experts', 'Stock Market Architects', 'Banking Leaders', 'Corporate Lawyers', 'Policy Makers & Bureaucrats', 'Government Advisors', 'Legal & Compliance Specialists']; @endphp
                                 @foreach($fin as $index => $item)
-                                <a href="#" class="connector-node-pill">{{ $item }}</a>
+                                <a href="javascript:void(0)" class="connector-node-pill">{{ $item }}</a>
                                 @endforeach
                             </div>
                         </div>
@@ -594,7 +593,7 @@ $seo = [
                             <div class="d-flex flex-wrap gap-2">
                                 @php $media = ['Marketing Gurus', 'Branding Experts', 'PR & Communications Specialists', 'Content Creators & Influencers', 'Authors & Business Writers', 'Design Thinkers & UX Experts', 'Advertising Leaders', 'Podcast Hosts & Storytellers', 'Trend Analysts & Futurists', 'Community Builders']; @endphp
                                 @foreach($media as $index => $item)
-                                <a href="#" class="connector-node-pill">{{ $item }}</a>
+                                <a href="javascript:void(0)" class="connector-node-pill">{{ $item }}</a>
                                 @endforeach
                             </div>
                         </div>
@@ -620,7 +619,7 @@ $seo = [
                             <div class="d-flex flex-wrap gap-2">
                                 @php $social = ['Social Entrepreneurs', 'Sustainability Champions', 'Philanthropists', 'Impact Investors', 'Non-Profit Leaders', 'CSR Heads', 'Academic Experts & Educators', 'Professors & Scholars', 'Researchers & Innovators', 'Global Education Advisors']; @endphp
                                 @foreach($social as $index => $item)
-                                <a href="#" class="connector-node-pill">{{ $item }}</a>
+                                <a href="javascript:void(0)" class="connector-node-pill">{{ $item }}</a>
                                 @endforeach
                             </div>
                         </div>
@@ -720,11 +719,16 @@ $seo = [
         gap: 10px;
         transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         text-decoration: none;
+        cursor: pointer;
     }
 
-    .connector-node-pill:hover {
+    .connector-node-pill:hover,
+    .connector-node-pill.active {
         transform: translateY(-3px);
-        box-shadow: 0 10px 20px -5px rgba(12, 58, 48, 0.1);
+        background: #0c3a30 !important;
+        color: #ffd2b1 !important;
+        border-color: #0c3a30 !important;
+        box-shadow: 0 10px 20px -5px rgba(12, 58, 48, 0.25);
     }
 
     .node-index {
@@ -860,6 +864,15 @@ $seo = [
                 });
             }
         }
+
+        // Connector node pills active state toggle
+        var nodePills = document.querySelectorAll('.connector-node-pill');
+        nodePills.forEach(function(pill) {
+            pill.addEventListener('click', function(e) {
+                e.preventDefault();
+                pill.classList.toggle('active');
+            });
+        });
     });
 </script>
 

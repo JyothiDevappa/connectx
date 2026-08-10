@@ -207,8 +207,10 @@ class ApplicationController extends Controller
         }
     }
 
-    public function submitsponser(Request $request)
+    public function submitsponsor(Request $request)
     {
+        $sponsorshipLevel = $request->input('sponsorship_level') ?? $request->input('sponsership_level');
+
         $validated = $request->validate([
             'name'              => 'required|string|max:255',
             'email'             => 'required|email|max:255',
@@ -216,12 +218,17 @@ class ApplicationController extends Controller
             'company'           => 'required|string|max:255',
             'designation'       => 'required|string|max:255',
             'linkedin'          => 'required|url|max:255',
-            'sponsership_level' => 'required|string|max:255',
+            'sponsorship_level' => 'nullable|string|max:255',
+            'sponsership_level' => 'nullable|string|max:255',
             'website'           => 'nullable|url|max:255',
         ]);
 
+        $level = $sponsorshipLevel ?? 'Title Sponsor';
+        $validated['sponsorship_level'] = $level;
+        $validated['sponsership_level'] = $level;
+
         try {
-            \Illuminate\Support\Facades\Log::info('--- sponser SUBMISSION START ---');
+            \Illuminate\Support\Facades\Log::info('--- SPONSOR SUBMISSION START ---');
 
             // 1. Save to Database
             Sponsor::create([
@@ -232,10 +239,11 @@ class ApplicationController extends Controller
                 'designation'       => $validated['designation'],
                 'linkedin'          => $validated['linkedin'],
                 'website'           => $validated['website'] ?? null,
-                'sponsership_level' => $validated['sponsership_level'],
+                'sponsorship_level' => $level,
+                'sponsership_level' => $level,
                 'status'            => 'pending',
             ]);
-            \Illuminate\Support\Facades\Log::info('sponser saved to database.');
+            \Illuminate\Support\Facades\Log::info('Sponsor saved to database.');
 
             \Illuminate\Support\Facades\Log::info('Sending admin email...');
             // 2. Email to Admin (use correct file name: sponsor-application)
@@ -256,7 +264,7 @@ class ApplicationController extends Controller
                         ->subject('Sponsorship Application Received - Young Chanakya X');
             });
             \Illuminate\Support\Facades\Log::info('User email sent.');
-            \Illuminate\Support\Facades\Log::info('--- sponser SUBMISSION END ---');
+            \Illuminate\Support\Facades\Log::info('--- SPONSOR SUBMISSION END ---');
 
             if ($request->ajax()) {
                 return response()->json(['type' => 'success', 'message' => 'Your sponsorship application has been submitted successfully!']);

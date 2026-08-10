@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>New sponsership Application</title>
+    <title>New sponsorship Application</title>
     <style>
         @include('emails.layout.styles')
     </style>
@@ -16,7 +16,7 @@
     
     <div class="content">
         <p class="intro">
-            A new application has been submitted for a <strong>Young Chanakya X sponsership</strong>. Below are the details provided by the applicant:
+            A new application has been submitted for a <strong>Young Chanakya X sponsorship</strong>. Below are the details provided by the applicant:
         </p>
         
         <table class="details-table">
@@ -45,8 +45,8 @@
                 <td><a href="{{ $linkedin }}" target="_blank">View LinkedIn Profile</a></td>
             </tr>
             <tr>
-                <th>sponsership Level</th>
-                <td>{{ $sponsership_level }}</td>
+                <th>sponsorship Level</th>
+                <td>{{ $sponsorship_level }}</td>
             </tr>
             @if(!empty($website))
             <tr>

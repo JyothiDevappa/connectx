@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>sponsership Application Received - Young Chanakya X</title>
+    <title>sponsorship Application Received - Young Chanakya X</title>
     <style>
         @include('emails.layout.styles')
     </style>
@@ -18,9 +18,9 @@
         <div class="greeting">Hello {{ $name }},</div>
         
         <div class="message">
-            Thank you for your interest in becoming a <strong>Young Chanakya X sponser</strong>.
+            Thank you for your interest in becoming a <strong>Young Chanakya X sponsor</strong>.
             <br><br>
-            Our team has received your sponsership inquiry. We appreciate your support for our ecosystem. Our sponsership team will review your details and contact you shortly with customized opportunities and next steps.
+            Our team has received your sponsorship inquiry. We appreciate your support for our ecosystem. Our sponsorship team will review your details and contact you shortly with customized opportunities and next steps.
         </div>
         
         <table class="details-table">
@@ -50,7 +50,7 @@
             </tr>
             <tr>
                 <th>Sponsorship Level</th>
-                <td>{{ $sponsership_level }}</td>
+                <td>{{ $sponsorship_level }}</td>
             </tr>
             @if(!empty($website))
             <tr>

@@ -453,7 +453,7 @@ $seo = [
 
 						<h1 class="text-glow-headline mb-4">Let's Build the Future of Influence Together.</h1>
 						<p class="fs-5 mb-0" style="max-width: 650px; line-height: 1.6; font-weight: 500; color: #ffffff; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">
-							Have questions about partnerships, sponserships, or joining the ecosystem? Reach out and start a conversation.
+							Have questions about partnerships, sponsorships, or joining the ecosystem? Reach out and start a conversation.
 						</p>
 					</div>
 				</div>

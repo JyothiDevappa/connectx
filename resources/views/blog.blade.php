@@ -83,7 +83,7 @@ $seo = [
                                 <h4 class="sidebar-title">Categories</h4>
                             </div>
                             <div class="sidebar-category-list">
-                                <a href="#" class="sidebar-cat-link filter-btn active" data-filter="All">
+                                <a href="javascript:void(0)" class="sidebar-cat-link filter-btn active" data-filter="All">
                                     All Insights
                                 </a>
                                 @php
@@ -93,7 +93,7 @@ $seo = [
                                     }
                                 @endphp
                                 @foreach($pubCategories as $cat)
-                                    <a href="#" class="sidebar-cat-link filter-btn" data-filter="{{ $cat->name }}">
+                                    <a href="javascript:void(0)" class="sidebar-cat-link filter-btn" data-filter="{{ $cat->name }}">
                                         {{ $cat->name }}
                                     </a>
                                 @endforeach

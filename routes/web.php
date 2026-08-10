@@ -90,9 +90,13 @@ Route::get('/connectors', function () {
 Route::post('/connecters-list/apply', [ApplicationController::class, 'submit'])->name('connecters.apply');
 
 Route::get('/become-a-sponsor', function () {
-    return view('become-a-sponser');
+    return view('become-a-sponsor');
+})->name('become-a-sponsor');
+Route::get('/become-a-sponser', function () {
+    return redirect('/become-a-sponsor', 301);
 });
-Route::post('/become-a-sponser/apply', [ApplicationController::class, 'submitsponser'])->name('sponser.apply');
+Route::post('/become-a-sponsor/apply', [ApplicationController::class, 'submitsponsor'])->name('sponsor.apply');
+Route::post('/become-a-sponser/apply', [ApplicationController::class, 'submitsponsor']);
 
 Route::get('/become-a-partner', function () {
     return view('become-a-partner');
@@ -157,9 +161,11 @@ Route::middleware('admin')->group(function () {
     Route::get('/admin/api/speakers', [AdminDashboardController::class, 'speakers'])->name('admin.api.speakers');
     Route::post('/admin/api/speakers/{id}', [AdminDashboardController::class, 'updateSpeaker'])->name('admin.api.speakers.update');
 
-    // sponsers API (real DB)
-    Route::get('/admin/api/sponsers', [AdminDashboardController::class, 'sponsers'])->name('admin.api.sponsers');
-    Route::post('/admin/api/sponsers/{id}', [AdminDashboardController::class, 'updatesponser'])->name('admin.api.sponsers.update');
+    // Sponsors API (real DB)
+    Route::get('/admin/api/sponsors', [AdminDashboardController::class, 'sponsors'])->name('admin.api.sponsors');
+    Route::post('/admin/api/sponsors/{id}', [AdminDashboardController::class, 'updatesponsor'])->name('admin.api.sponsors.update');
+    Route::get('/admin/api/sponsers', [AdminDashboardController::class, 'sponsors'])->name('admin.api.sponsers');
+    Route::post('/admin/api/sponsers/{id}', [AdminDashboardController::class, 'updatesponsor'])->name('admin.api.sponsers.update');
 
     // Jobs & Applications API (real DB)
     Route::get('/admin/api/posted-jobs', [AdminDashboardController::class, 'postedJobs'])->name('admin.api.posted-jobs');

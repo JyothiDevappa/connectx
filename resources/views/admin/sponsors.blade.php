@@ -64,21 +64,21 @@
 const PAGE_SIZE = 10;
 let currentPage = 1;
 let activeType = 'all';
-let DATA = { sponsers: @json($sponsers) };
+let DATA = { sponsors: @json($sponsors) };
 
 const SECTION_CONFIG = {
-  sponsers: {
+  sponsors: {
     title: "Sponsors",
     subtitle: "Manage sponsorship inquiries, tier details, and partnership status.",
     statusOptions: ["pending", "confirmed", "declined"],
     statusLabels: { pending: "Pending Review", confirmed: "Confirmed", declined: "Declined" },
-    typeField: "sponsership_level",
+    typeField: "sponsorship_level",
     typeValues: [],
     columns: [
       { key:"person", label:"Contact Name & Email" },
       { key:"company", label:"Company & Title" },
       { key:"phone", label:"Phone" },
-      { key:"sponsership_level", label:"Sponsorship Level" },
+      { key:"sponsorship_level", label:"Sponsorship Level" },
       { key:"submitted", label:"Submitted Date" },
       { key:"status", label:"Status" },
       { key:"action", label:"Actions" }
@@ -117,8 +117,8 @@ function fmtDate(ds){
 function getFiltered(){
   const search = document.getElementById('searchInput').value.trim().toLowerCase();
   const status = document.getElementById('statusFilter').value;
-  return DATA.sponsers.filter(d => {
-    if(activeType !== 'all' && d.sponsership_level !== activeType) return false;
+  return DATA.sponsors.filter(d => {
+    if(activeType !== 'all' && d.sponsorship_level !== activeType) return false;
     if(status !== 'all' && d.status !== status) return false;
     if(search) {
       const matchName = d.name ? d.name.toLowerCase().includes(search) : false;
@@ -131,8 +131,8 @@ function getFiltered(){
 }
 
 function renderStats(){
-  const cfg = SECTION_CONFIG.sponsers;
-  const data = DATA.sponsers;
+  const cfg = SECTION_CONFIG.sponsors;
+  const data = DATA.sponsors;
   const STAT_ICONS = [
     `<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/>`,
     `<path d="M20 6L9 17l-5-5"/>`,
@@ -153,14 +153,14 @@ function renderStats(){
 
 function renderLevelFilter(){
   const sel = document.getElementById('levelFilter');
-  const values = [...new Set(DATA.sponsers.map(d => d.sponsership_level))].filter(Boolean);
+  const values = [...new Set(DATA.sponsors.map(d => d.sponsorship_level))].filter(Boolean);
   sel.innerHTML = `<option value="all">All Sponsorship Levels</option>` +
     values.map(v => `<option value="${v}">${v}</option>`).join('');
   sel.value = activeType;
 }
 
 function renderStatusFilter(){
-  const cfg = SECTION_CONFIG.sponsers;
+  const cfg = SECTION_CONFIG.sponsors;
   const sel = document.getElementById('statusFilter');
   sel.innerHTML = `<option value="all">All Statuses</option>` +
     cfg.statusOptions.map(s => `<option value="${s}">${cfg.statusLabels[s]}</option>`).join('');
@@ -172,12 +172,12 @@ function renderCell(col, d){
       return `<td><div class="cell-primary">${d.name}</div><div class="cell-secondary">${d.email}</div></td>`;
     case 'company':
       return `<td><div class="cell-primary">${d.company||'—'}</div><div class="cell-secondary">${d.designation||''}</div></td>`;
-    case 'sponsership_level':
-      return `<td><span class="badge ${levelBadgeClass(d.sponsership_level)}">${d.sponsership_level}</span></td>`;
+    case 'sponsorship_level':
+      return `<td><span class="badge ${levelBadgeClass(d.sponsorship_level)}">${d.sponsorship_level}</span></td>`;
     case 'submitted':
       return `<td class="cell-meta">${fmtDate(d.submitted)}</td>`;
     case 'status':
-      const cfg = SECTION_CONFIG.sponsers;
+      const cfg = SECTION_CONFIG.sponsors;
       return `<td>
         <select class="status-select ${statusClass(d.status)}" data-id="${d.id}">
           ${cfg.statusOptions.map(s => `<option value="${s}" ${s===d.status?'selected':''}>${cfg.statusLabels[s]}</option>`).join('')}
@@ -195,7 +195,7 @@ function renderCell(col, d){
 }
 
 function renderTable(){
-  const cfg = SECTION_CONFIG.sponsers;
+  const cfg = SECTION_CONFIG.sponsors;
   const filtered = getFiltered();
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   currentPage = Math.min(currentPage, totalPages);
@@ -222,12 +222,12 @@ function renderTable(){
     sel.addEventListener('change', async function(e){
       e.stopPropagation();
       const idVal = parseInt(this.dataset.id);
-      const item = DATA.sponsers.find(x => x.id === idVal);
+      const item = DATA.sponsors.find(x => x.id === idVal);
       if(item){
         item.status = this.value;
         this.className = `status-select ${statusClass(this.value)}`;
         renderStats();
-        await fetch(`/admin/api/sponsers/${idVal}`, {
+        await fetch(`/admin/api/sponsors/${idVal}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': '{{ csrf_token() }}' },
           body: JSON.stringify({ status: item.status, notes: item.notes })
@@ -261,7 +261,7 @@ function renderTable(){
   });
 }
 
-function sponserBody(d){
+function sponsorBody(d){
   return `
     <div class="dsection">
       <h4>Company & Contact Info</h4>
@@ -272,7 +272,7 @@ function sponserBody(d){
         <div class="dfield"><span class="fl">Email Address</span><span class="fv" style="word-break:break-all;">${d.email}</span></div>
         <div class="dfield"><span class="fl">Phone Number</span><span class="fv">${d.phone}</span></div>
         <div class="dfield"><span class="fl">Submitted On</span><span class="fv">${fmtDate(d.submitted)}</span></div>
-        <div class="dfield full"><span class="fl">Sponsorship Tier</span><span class="fv"><span class="badge ${levelBadgeClass(d.sponsership_level)}">${d.sponsership_level}</span></span></div>
+        <div class="dfield full"><span class="fl">Sponsorship Tier</span><span class="fv"><span class="badge ${levelBadgeClass(d.sponsorship_level)}">${d.sponsorship_level}</span></span></div>
       </div>
     </div>
     <div class="dsection">
@@ -299,13 +299,13 @@ function sponserBody(d){
 }
 
 function openDrawer(id){
-  const d = DATA.sponsers.find(x => x.id === id);
+  const d = DATA.sponsors.find(x => x.id === id);
   if(!d) return;
 
   document.getElementById('dName').textContent = d.name;
   document.getElementById('dSub').textContent = d.email;
-  document.getElementById('dBadges').innerHTML = `<span class="badge ${levelBadgeClass(d.sponsership_level)}">${d.sponsership_level} Sponsor</span>`;
-  document.getElementById('drawerBody').innerHTML = sponserBody(d);
+  document.getElementById('dBadges').innerHTML = `<span class="badge ${levelBadgeClass(d.sponsorship_level)}">${d.sponsorship_level} Sponsor</span>`;
+  document.getElementById('drawerBody').innerHTML = sponsorBody(d);
 
   const saveBtn = document.getElementById('dSaveBtn');
   if(saveBtn){
@@ -314,7 +314,7 @@ function openDrawer(id){
       d.notes = document.getElementById('dNotes').value;
       renderStats();
       renderTable();
-      await fetch(`/admin/api/sponsers/${id}`, {
+      await fetch(`/admin/api/sponsors/${id}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': '{{ csrf_token() }}' },
         body: JSON.stringify({ status: d.status, notes: d.notes })
@@ -349,8 +349,8 @@ document.getElementById('clearFilters').onclick = () => {
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-    const res = await fetch("{{ route('admin.api.sponsers') }}");
-    if(res.ok) { DATA.sponsers = await res.json(); }
+    const res = await fetch("{{ route('admin.api.sponsors') }}");
+    if(res.ok) { DATA.sponsors = await res.json(); }
   } catch(e){}
   renderStats();
   renderLevelFilter();

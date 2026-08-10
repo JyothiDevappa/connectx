@@ -217,7 +217,7 @@
 
   // Load counts dynamically in the sidebar navigation
   async function loadSidebarCounts() {
-    const sections = ['connectors', 'sponsers', 'partners', 'speakers', 'posted_jobs'];
+    const sections = ['connectors', 'sponsors', 'sponsers', 'partners', 'speakers', 'posted_jobs'];
     for (const s of sections) {
       try {
         let url = `/admin/api/${s.replace('_', '-')}`;
