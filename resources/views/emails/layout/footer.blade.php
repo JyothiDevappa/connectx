@@ -3,9 +3,6 @@
         <a href="https://www.linkedin.com/company/youngchanakyax/" target="_blank" style="display: inline-block; width: 36px; height: 36px; background-color: #ffeada; border-radius: 50%; text-align: center; margin: 0 4px; vertical-align: middle;">
             <img src="https://img.icons8.com/ios-filled/50/0c3a30/linkedin.png" alt="IN" style="width: 18px; height: 18px; margin-top: 9px; display: inline-block;">
         </a>
-        <a href="https://x.com/YoungChanakyaX" target="_blank" style="display: inline-block; width: 36px; height: 36px; background-color: #ffeada; border-radius: 50%; text-align: center; margin: 0 4px; vertical-align: middle;">
-            <img src="https://img.icons8.com/ios-filled/50/0c3a30/twitterx.png" alt="X" style="width: 16px; height: 16px; margin-top: 10px; display: inline-block;">
-        </a>
         <a href="https://www.youtube.com/channel/UCunrW6XIpxgonRXd6CjQ9eQ" target="_blank" style="display: inline-block; width: 36px; height: 36px; background-color: #ffeada; border-radius: 50%; text-align: center; margin: 0 4px; vertical-align: middle;">
             <img src="https://img.icons8.com/ios-filled/50/0c3a30/youtube-play.png" alt="YT" style="width: 18px; height: 18px; margin-top: 9px; display: inline-block;">
         </a>
