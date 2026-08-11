@@ -1,6 +1,6 @@
 <div class="footer" style="background-color: #0c3a30; padding: 40px 20px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); color: #ffffff; font-family: sans-serif;">
     <div style="margin-bottom: 25px; text-align: center;">
-        <a href="https://www.linkedin.com/showcase/young-chanakya-x/" target="_blank" style="display: inline-block; width: 36px; height: 36px; background-color: #ffeada; border-radius: 50%; text-align: center; margin: 0 4px; vertical-align: middle;">
+        <a href="https://www.linkedin.com/company/youngchanakyax/" target="_blank" style="display: inline-block; width: 36px; height: 36px; background-color: #ffeada; border-radius: 50%; text-align: center; margin: 0 4px; vertical-align: middle;">
             <img src="https://img.icons8.com/ios-filled/50/0c3a30/linkedin.png" alt="IN" style="width: 18px; height: 18px; margin-top: 9px; display: inline-block;">
         </a>
         <a href="https://x.com/YoungChanakyaX" target="_blank" style="display: inline-block; width: 36px; height: 36px; background-color: #ffeada; border-radius: 50%; text-align: center; margin: 0 4px; vertical-align: middle;">
@@ -9,11 +9,14 @@
         <a href="https://www.youtube.com/channel/UCunrW6XIpxgonRXd6CjQ9eQ" target="_blank" style="display: inline-block; width: 36px; height: 36px; background-color: #ffeada; border-radius: 50%; text-align: center; margin: 0 4px; vertical-align: middle;">
             <img src="https://img.icons8.com/ios-filled/50/0c3a30/youtube-play.png" alt="YT" style="width: 18px; height: 18px; margin-top: 9px; display: inline-block;">
         </a>
-        <a href="https://www.facebook.com/YoungChanakyaX/" target="_blank" style="display: inline-block; width: 36px; height: 36px; background-color: #ffeada; border-radius: 50%; text-align: center; margin: 0 4px; vertical-align: middle;">
+        <a href="https://www.facebook.com/YoungChanakyaX" target="_blank" style="display: inline-block; width: 36px; height: 36px; background-color: #ffeada; border-radius: 50%; text-align: center; margin: 0 4px; vertical-align: middle;">
             <img src="https://img.icons8.com/ios-filled/50/0c3a30/facebook-new.png" alt="FB" style="width: 18px; height: 18px; margin-top: 9px; display: inline-block;">
         </a>
         <a href="https://www.instagram.com/youngchanakyax/" target="_blank" style="display: inline-block; width: 36px; height: 36px; background-color: #ffeada; border-radius: 50%; text-align: center; margin: 0 4px; vertical-align: middle;">
             <img src="https://img.icons8.com/ios-filled/50/0c3a30/instagram-new.png" alt="IG" style="width: 18px; height: 18px; margin-top: 9px; display: inline-block;">
+        </a>
+        <a href="https://www.threads.com/@youngchanakyax" target="_blank" style="display: inline-block; width: 36px; height: 36px; background-color: #ffeada; border-radius: 50%; text-align: center; margin: 0 4px; vertical-align: middle;">
+            <img src="https://img.icons8.com/ios-filled/50/0c3a30/threads.png" alt="TH" style="width: 18px; height: 18px; margin-top: 9px; display: inline-block;">
         </a>
     </div>
     

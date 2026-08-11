@@ -281,7 +281,7 @@ $seo = [
         We're preparing a series of expert-led learning experiences. Join the waitlist and get notified when registrations open.
       </p>
 
-      <a href="https://wa.me/9186672056rclasses.%20Please%20notify%20me%20when%20registrations%20open" class="btn-orange">Get Early Access</a>
+      <a href="https://wa.me/918667205661?text=Hi%2C%20I%20am%20interested%20in%20YCX%20Masterclasses.%20Please%20notify%20me%20when%20registrations%20open" class="btn-orange" target="_blank">Get Early Access</a>
    
     </div>
   </section>
@@ -324,7 +324,7 @@ $seo = [
           </div>
           <div class="faq-item">
             <div class="faq-q"><span>Where should I seek assistance before/after registering?</span><span class="plus">+</span></div>
-            <div class="faq-a"><p>Email us anytime at support@youngchanakyax.com from your registered email ID and our team will help you right away.</p></div>
+            <div class="faq-a"><p>Email us anytime at youngchanakya.x@gmail.com from your registered email ID and our team will help you right away.</p></div>
           </div>
           <div class="faq-item">
             <div class="faq-q"><span>Can I change my batch or slot after registering?</span><span class="plus">+</span></div>

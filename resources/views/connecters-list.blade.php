@@ -19,8 +19,8 @@ $seo = [
 {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "@id": "https://connectx.youngchanakya.com/connecters-list#webpage",
-    "url": "https://connectx.youngchanakya.com/connecters-list",
+    "@id": "https://connectx.youngchanakya.com/connectors#webpage",
+    "url": "https://connectx.youngchanakya.com/connectors",
     "name": "Connectors Directory | Young Chanakya X",
     "description": "Explore the Young Chanakya X Connectors Directory to discover professionals, founders, creators, mentors, educators, and community members across diverse industries.",
     "inLanguage": "en-IN",
@@ -495,7 +495,7 @@ $seo = [
      style="height: 200px;
             background:
             linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
-            url('{{ asset('images/media/connecter/business&entrepreneurship.webp') }}') center/cover;">
+            url('{{ asset('images/media/connecter/img-1.webp') }}') center/cover;">
 </div>
                             <div class="d-flex align-items-start gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-building-gear"></i></div>
@@ -522,7 +522,7 @@ $seo = [
      style="height: 200px;
             background:
             linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
-            url('{{ asset('images/media/connecter/innovation-technology.webp') }}') center/cover;">
+            url('{{ asset('images/media/connecter/img-2.webp') }}') center/cover;">
 </div>
                             <div class="d-flex align-items-start gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-cpu"></i></div>
@@ -549,7 +549,7 @@ $seo = [
      style="height: 200px;
             background:
             linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
-            url('{{ asset('images/media/connecter/finance.webp') }}') center/cover;">
+            url('{{ asset('images/media/connecter/img-3.webp') }}') center/cover;">
 </div>
               
               
@@ -578,7 +578,7 @@ $seo = [
      style="height: 200px;
             background:
             linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
-            url('{{ asset('images/media/connecter/creative.webp') }}') center/cover;">
+            url('{{ asset('images/media/connecter/img-4.webp') }}') center/cover;">
 </div>
          
 
@@ -606,7 +606,7 @@ $seo = [
      style="height: 200px;
             background:
             linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
-            url('{{ asset('images/media/connecter/social-impact.webp') }}') center/cover;">
+            url('{{ asset('images/media/connecter/img-5.webp') }}') center/cover;">
 </div>
                             <div class="d-flex align-items-start gap-3 mb-4">
                                 <div class="cluster-title-icon"><i class="bi bi-globe"></i></div>

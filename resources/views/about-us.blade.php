@@ -626,7 +626,7 @@ $seo = [
 <button 
     class="cta-btn" 
     style="background-color: #fff; color: #0c3a30;"
-    onclick="window.location.href='/connecters-list'">
+    onclick="window.location.href='/connectors'">
     Join Young Chanakya X
 </button>
     </div>

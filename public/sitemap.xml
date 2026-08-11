@@ -65,9 +65,9 @@
         <priority>0.8</priority>
     </url>
 
-    <!-- Connecters Directory -->
+    <!-- Connectors Directory -->
     <url>
-        <loc>https://connectx.youngchanakya.com/connecters-list</loc>
+        <loc>https://connectx.youngchanakya.com/connectors</loc>
         <lastmod>2026-07-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -111,6 +111,30 @@
         <lastmod>2026-07-21</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
+    </url>
+
+    <!-- YCX Masterclass -->
+    <url>
+        <loc>https://connectx.youngchanakya.com/masterclass</loc>
+        <lastmod>2026-07-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Privacy Policy -->
+    <url>
+        <loc>https://connectx.youngchanakya.com/privacy-policy</loc>
+        <lastmod>2026-07-21</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <!-- Terms & Conditions -->
+    <url>
+        <loc>https://connectx.youngchanakya.com/terms-and-conditions</loc>
+        <lastmod>2026-07-21</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
     </url>
 
 </urlset>

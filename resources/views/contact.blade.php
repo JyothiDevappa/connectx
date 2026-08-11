@@ -34,18 +34,18 @@ $seo = [
         "@type": "Organization",
         "name": "Young Chanakya X",
         "url": "https://connectx.youngchanakya.com/",
-        "email": "youngchanakyaconnect@gmail.com",
+        "email": "youngchanakya.x@gmail.com",
         "contactPoint": [
             {
                 "@type": "ContactPoint",
                 "contactType": "customer service",
-                "email": "youngchanakyaconnect@gmail.com",
+                "email": "youngchanakya.x@gmail.com",
                 "availableLanguage": ["English", "Hindi"]
             },
             {
                 "@type": "ContactPoint",
                 "contactType": "sales",
-                "email": "youngchanakyaconnect@gmail.com",
+                "email": "youngchanakya.x@gmail.com",
                 "contactOption": "TollFree",
                 "availableLanguage": ["English", "Hindi"]
             }

@@ -580,20 +580,21 @@
                         @csrf
                         <input type="hidden" name="event_title" value="{{ $currentEvent['title'] }}">
                         <div class="mb-3">
-                            <label class="form-label small fw-bold opacity-90 tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Full Name</label>
+                            <label class="form-label small fw-bold opacity-90 tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Full Name <span class="text-danger">*</span></label>
                             <input type="text" name="full_name" class="form-control form-control-premium" placeholder="e.g. John Doe" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label small fw-bold opacity-90 tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Email Address</label>
+                            <label class="form-label small fw-bold opacity-90 tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Email Address <span class="text-danger">*</span></label>
                             <input type="email" name="email" class="form-control form-control-premium" placeholder="e.g. john@company.com" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label small fw-bold opacity-90 tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Phone Number</label>
+                            <label class="form-label small fw-bold opacity-90 tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Phone Number <span class="text-danger">*</span></label>
                             <input type="tel" id="event-phone" name="phone" class="form-control form-control-premium" placeholder="e.g. +91 98765 43210" required>
+                            <div id="event-phone-error" class="text-danger small mt-1" style="display:none; font-size: 0.75rem; font-weight: 600;">Please enter a valid phone number.</div>
                         </div>
                         <div class="mb-4">
-                            <label class="form-label small fw-bold opacity-90 tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Social Media URL</label>
-                            <input type="url" name="social_url" class="form-control form-control-premium" placeholder="e.g. instagram.com/username or linkedin.com/in/username" required>
+                            <label class="form-label small fw-bold opacity-90 tracking-wider" style="font-size: 0.65rem; letter-spacing: 0.5px;">Social Media URL <span class="text-danger">*</span></label>
+                            <input type="text" id="event-social-url" name="social_url" class="form-control form-control-premium" placeholder="e.g. https://linkedin.com/in/username or https://instagram.com/username" required>
                         </div>
                         <button type="submit" class="btn-premium-action">Submit Now</button>
                     </form>
@@ -719,7 +720,10 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         var phoneInput = document.getElementById('event-phone');
+        var phoneError = document.getElementById('event-phone-error');
+        var socialInput = document.getElementById('event-social-url');
         var iti;
+
         if (phoneInput) {
             iti = window.intlTelInput(phoneInput, {
                 initialCountry: "in",
@@ -729,8 +733,24 @@
 
             var form = document.getElementById('rsvp-premium-form');
             if (form) {
-                form.addEventListener('submit', function() {
+                form.addEventListener('submit', function(e) {
+                    if (phoneError) phoneError.style.display = 'none';
+
+                    if (iti && !iti.isValidNumber()) {
+                        e.preventDefault();
+                        if (phoneError) phoneError.style.display = 'block';
+                        phoneInput.focus();
+                        return false;
+                    }
                     phoneInput.value = iti.getNumber();
+
+                    // Format social URL if missing scheme
+                    if (socialInput && socialInput.value.trim() !== '') {
+                        var val = socialInput.value.trim();
+                        if (!/^https?:\/\//i.test(val)) {
+                            socialInput.value = 'https://' + val;
+                        }
+                    }
                 });
             }
         }

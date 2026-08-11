@@ -1,7 +1,7 @@
 // js Document
 
 // Created on   : 15/09/2023.
-// Theme Name   : Babun - Business & Finance HTML5 Template
+// Theme Name   : Young Chanakya X
 // Version      : 1.0.
 // Developed by : (me@heloshape.com) / (www.me.heloshape.com)
 
@@ -23,7 +23,7 @@
       });
 
       // --------------------- Add .active class to current navigation based on URL
-      var pgurl = window.location.href.substr(window.location.href.lastIndexOf("https://html.creativegigstf.com/")+1);
+      var pgurl = window.location.pathname;
       $(".navbar-nav > li  a").each(function(){
       if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
       $(this).addClass("active");

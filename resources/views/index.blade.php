@@ -33,7 +33,7 @@ $seo = [
                 "@type": "SearchAction",
                 "target": {
                     "@type": "EntryPoint",
-                    "urlTemplate": "https://connectx.youngchanakya.com/connecters-list?q={search_term_string}"
+                    "urlTemplate": "https://connectx.youngchanakya.com/connectors?q={search_term_string}"
                 },
                 "query-input": "required name=search_term_string"
             }
@@ -59,7 +59,7 @@ $seo = [
             },
             "contactPoint": {
                 "@type": "ContactPoint",
-                "email": "youngchanakyaconnect@gmail.com",
+                "email": "youngchanakya.x@gmail.com",
                 "contactType": "customer service",
                 "availableLanguage": ["English", "Hindi"]
             },
@@ -821,7 +821,7 @@ Shaping the Next Generation of Future Leaders</h2>                <p class="sec-
       <div class="engagement-content">
         <div class="engagement-header">
           <h3>Become a Partner</h3>
-          <a href="/events" class="btn-hero-primary">Partner with Us</a>
+          <a href="/become-a-partner" class="btn-hero-primary">Partner with Us</a>
         </div>
         <p>Join YCX as a partner and collaborate with a growing network of creators, speakers and communities to create impactful experiences and new opportunities.</p>
       </div>

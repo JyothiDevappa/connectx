@@ -244,7 +244,7 @@ $seo = [
       <p style="font-size: 15.5px; color: var(--text-soft); line-height: 1.65; margin-bottom: 28px; max-width: 600px; margin-left: auto; margin-right: auto;">
         Even if there isn't a role that matches your skills today, we'd still love to hear from you. Share your profile, and we'll reach out when a suitable opportunity becomes available.
       </p>
-      <a href="mailto:youngchanakyaconnect@gmail.com?subject=General Career Application - Young Chanakya X" class="btn-orange" id="ctaApplyBtn" style="text-decoration: none;">
+      <a href="mailto:youngchanakya.x@gmail.com?subject=General Career Application - Young Chanakya X" class="btn-orange" id="ctaApplyBtn" style="text-decoration: none;">
         Tell Us About Yourself
       </a>
     </div>
@@ -300,7 +300,7 @@ $seo = [
           </div>
           <div class="faq-item">
             <div class="faq-q"><span>Who can I contact for questions regarding my application status?</span><span class="plus">+</span></div>
-            <div class="faq-a"><p>You can reach out directly to our hiring team at youngchanakyaconnect@gmail.com with your application name and role details.</p></div>
+            <div class="faq-a"><p>You can reach out directly to our hiring team at youngchanakya.x@gmail.com with your application name and role details.</p></div>
           </div>
         </div>
       </div>

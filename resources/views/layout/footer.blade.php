@@ -304,11 +304,12 @@
                 </div>
 
                 <div class="ycx-socials d-flex align-items-center gap-2 mt-3">
-                    <a href="https://www.linkedin.com/showcase/young-chanakya-x/" target="_blank" class="social-circle" aria-label="YCX LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/company/youngchanakyax/" target="_blank" class="social-circle" aria-label="YCX LinkedIn"><i class="bi bi-linkedin"></i></a>
                     <a href="https://x.com/YoungChanakyaX" target="_blank" class="social-circle" aria-label="YCX Twitter X"><i class="bi bi-twitter-x"></i></a>
                     <a href="https://www.youtube.com/channel/UCunrW6XIpxgonRXd6CjQ9eQ" target="_blank" class="social-circle" aria-label="YCX YouTube"><i class="bi bi-youtube"></i></a>
-                    <a href="https://www.facebook.com/YoungChanakyaX/" target="_blank" class="social-circle" aria-label="YCX Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.facebook.com/YoungChanakyaX" target="_blank" class="social-circle" aria-label="YCX Facebook"><i class="bi bi-facebook"></i></a>
                     <a href="https://www.instagram.com/youngchanakyax/" target="_blank" class="social-circle" aria-label="YCX Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.threads.com/@youngchanakyax" target="_blank" class="social-circle" aria-label="YCX Threads"><i class="bi bi-threads"></i></a>
                 </div>
             </div>
 
