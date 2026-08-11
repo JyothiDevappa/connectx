@@ -54,6 +54,10 @@ $seo = [
         <img src="{{ asset('images/media/master-classes/card-4.jpeg') }}" alt="Masterclass Card 4">
         <img src="{{ asset('images/media/master-classes/card-5.jpeg') }}" alt="Masterclass Card 5">
         <img src="{{ asset('images/media/master-classes/card-6.jpeg') }}" alt="Masterclass Card 6">
+        <img src="{{ asset('images/media/master-classes/card-7.webp') }}" alt="Masterclass Card 7">
+        <img src="{{ asset('images/media/master-classes/card-8.webp') }}" alt="Masterclass Card 8">
+        <img src="{{ asset('images/media/master-classes/card-9.webp') }}" alt="Masterclass Card 9">
+        <img src="{{ asset('images/media/master-classes/card-10.webp') }}" alt="Masterclass Card 10">
 
         <!-- Duplicated for Infinite Loop -->
         <img src="{{ asset('images/media/master-classes/card-1.jpeg') }}" alt="Masterclass Card 1">
@@ -62,6 +66,10 @@ $seo = [
         <img src="{{ asset('images/media/master-classes/card-4.jpeg') }}" alt="Masterclass Card 4">
         <img src="{{ asset('images/media/master-classes/card-5.jpeg') }}" alt="Masterclass Card 5">
         <img src="{{ asset('images/media/master-classes/card-6.jpeg') }}" alt="Masterclass Card 6">
+        <img src="{{ asset('images/media/master-classes/card-7.webp') }}" alt="Masterclass Card 7">
+        <img src="{{ asset('images/media/master-classes/card-8.webp') }}" alt="Masterclass Card 8">
+        <img src="{{ asset('images/media/master-classes/card-9.webp') }}" alt="Masterclass Card 9">
+        <img src="{{ asset('images/media/master-classes/card-10.webp') }}" alt="Masterclass Card 10">
     </div>
 </div>
 
